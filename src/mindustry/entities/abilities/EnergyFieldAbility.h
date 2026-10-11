@@ -1,0 +1,119 @@
+#ifndef HEADER_mindustry_entities_abilities_EnergyFieldAbility
+#define HEADER_mindustry_entities_abilities_EnergyFieldAbility
+
+#include "Clearwing.h"
+#include "mindustry/entities/abilities/Ability.h"
+
+#ifdef __cplusplus
+extern "C" {
+#endif
+
+typedef struct mindustry_entities_abilities_EnergyFieldAbility {
+	mindustry_entities_abilities_Ability parent;
+	jfloat F_damage;
+	jfloat F_reload;
+	jfloat F_range;
+	jref F_healEffect;
+	jref F_hitEffect;
+	jref F_damageEffect;
+	jref F_status;
+	jref F_shootSound;
+	jfloat F_statusDuration;
+	jfloat F_x;
+	jfloat F_y;
+	jbool F_targetGround;
+	jbool F_targetAir;
+	jbool F_hitBuildings;
+	jbool F_hitUnits;
+	jint F_maxTargets;
+	jfloat F_healPercent;
+	jfloat F_sameTypeHealMult;
+	jbool F_displayHeal;
+	jfloat F_layer;
+	jfloat F_blinkScl;
+	jfloat F_blinkSize;
+	jfloat F_effectRadius;
+	jfloat F_sectorRad;
+	jfloat F_rotateSpeed;
+	jint F_sectors;
+	jref F_color;
+	jbool F_useAmmo;
+	jfloat F_timer;
+	jfloat F_curStroke;
+	jbool F_anyNearby;
+} mindustry_entities_abilities_EnergyFieldAbility;
+
+extern Class class_mindustry_entities_abilities_EnergyFieldAbility;
+
+extern jobject SF_mindustry_entities_abilities_EnergyFieldAbility_all;
+
+#define VTABLE_mindustry_entities_abilities_EnergyFieldAbility_hashCode_R_int 0
+typedef jint (*func_mindustry_entities_abilities_EnergyFieldAbility_hashCode_R_int)(jcontext ctx, jobject self);
+#define VTABLE_mindustry_entities_abilities_EnergyFieldAbility_equals_java_lang_Object_R_boolean 1
+typedef jbool (*func_mindustry_entities_abilities_EnergyFieldAbility_equals_java_lang_Object_R_boolean)(jcontext ctx, jobject self, jobject param0);
+#define VTABLE_mindustry_entities_abilities_EnergyFieldAbility_clone_R_java_lang_Object 2
+typedef jobject (*func_mindustry_entities_abilities_EnergyFieldAbility_clone_R_java_lang_Object)(jcontext ctx, jobject self);
+#define VTABLE_mindustry_entities_abilities_EnergyFieldAbility_getClass_R_java_lang_Class 3
+typedef jobject (*func_mindustry_entities_abilities_EnergyFieldAbility_getClass_R_java_lang_Class)(jcontext ctx, jobject self);
+#define VTABLE_mindustry_entities_abilities_EnergyFieldAbility_toString_R_java_lang_String 4
+typedef jobject (*func_mindustry_entities_abilities_EnergyFieldAbility_toString_R_java_lang_String)(jcontext ctx, jobject self);
+#define VTABLE_mindustry_entities_abilities_EnergyFieldAbility_finalize 5
+typedef void (*func_mindustry_entities_abilities_EnergyFieldAbility_finalize)(jcontext ctx, jobject self);
+#define VTABLE_mindustry_entities_abilities_EnergyFieldAbility_notify 6
+typedef void (*func_mindustry_entities_abilities_EnergyFieldAbility_notify)(jcontext ctx, jobject self);
+#define VTABLE_mindustry_entities_abilities_EnergyFieldAbility_notifyAll 7
+typedef void (*func_mindustry_entities_abilities_EnergyFieldAbility_notifyAll)(jcontext ctx, jobject self);
+#define VTABLE_mindustry_entities_abilities_EnergyFieldAbility_wait 8
+typedef void (*func_mindustry_entities_abilities_EnergyFieldAbility_wait)(jcontext ctx, jobject self);
+#define VTABLE_mindustry_entities_abilities_EnergyFieldAbility_wait_long 9
+typedef void (*func_mindustry_entities_abilities_EnergyFieldAbility_wait_long)(jcontext ctx, jobject self, jlong param0);
+#define VTABLE_mindustry_entities_abilities_EnergyFieldAbility_wait_long_int 10
+typedef void (*func_mindustry_entities_abilities_EnergyFieldAbility_wait_long_int)(jcontext ctx, jobject self, jlong param0, jint param1);
+#define VTABLE_mindustry_entities_abilities_EnergyFieldAbility_update_mindustry_gen_Unit 11
+typedef void (*func_mindustry_entities_abilities_EnergyFieldAbility_update_mindustry_gen_Unit)(jcontext ctx, jobject self, jobject param0);
+#define VTABLE_mindustry_entities_abilities_EnergyFieldAbility_draw_mindustry_gen_Unit 12
+typedef void (*func_mindustry_entities_abilities_EnergyFieldAbility_draw_mindustry_gen_Unit)(jcontext ctx, jobject self, jobject param0);
+#define VTABLE_mindustry_entities_abilities_EnergyFieldAbility_death_mindustry_gen_Unit 13
+typedef void (*func_mindustry_entities_abilities_EnergyFieldAbility_death_mindustry_gen_Unit)(jcontext ctx, jobject self, jobject param0);
+#define VTABLE_mindustry_entities_abilities_EnergyFieldAbility_created_mindustry_gen_Unit 14
+typedef void (*func_mindustry_entities_abilities_EnergyFieldAbility_created_mindustry_gen_Unit)(jcontext ctx, jobject self, jobject param0);
+#define VTABLE_mindustry_entities_abilities_EnergyFieldAbility_init_mindustry_type_UnitType 15
+typedef void (*func_mindustry_entities_abilities_EnergyFieldAbility_init_mindustry_type_UnitType)(jcontext ctx, jobject self, jobject param0);
+#define VTABLE_mindustry_entities_abilities_EnergyFieldAbility_displayBars_mindustry_gen_Unit_arc_scene_ui_layout_Table 16
+typedef void (*func_mindustry_entities_abilities_EnergyFieldAbility_displayBars_mindustry_gen_Unit_arc_scene_ui_layout_Table)(jcontext ctx, jobject self, jobject param0, jobject param1);
+#define VTABLE_mindustry_entities_abilities_EnergyFieldAbility_display_arc_scene_ui_layout_Table 17
+typedef void (*func_mindustry_entities_abilities_EnergyFieldAbility_display_arc_scene_ui_layout_Table)(jcontext ctx, jobject self, jobject param0);
+#define VTABLE_mindustry_entities_abilities_EnergyFieldAbility_addStats_arc_scene_ui_layout_Table 18
+typedef void (*func_mindustry_entities_abilities_EnergyFieldAbility_addStats_arc_scene_ui_layout_Table)(jcontext ctx, jobject self, jobject param0);
+#define VTABLE_mindustry_entities_abilities_EnergyFieldAbility_abilityStat_java_lang_String_Array1_java_lang_Object_R_java_lang_String 19
+typedef jobject (*func_mindustry_entities_abilities_EnergyFieldAbility_abilityStat_java_lang_String_Array1_java_lang_Object_R_java_lang_String)(jcontext ctx, jobject self, jobject param0, jobject param1);
+#define VTABLE_mindustry_entities_abilities_EnergyFieldAbility_copy_R_mindustry_entities_abilities_Ability 20
+typedef jobject (*func_mindustry_entities_abilities_EnergyFieldAbility_copy_R_mindustry_entities_abilities_Ability)(jcontext ctx, jobject self);
+#define VTABLE_mindustry_entities_abilities_EnergyFieldAbility_localized_R_java_lang_String 21
+typedef jobject (*func_mindustry_entities_abilities_EnergyFieldAbility_localized_R_java_lang_String)(jcontext ctx, jobject self);
+#define VTABLE_mindustry_entities_abilities_EnergyFieldAbility_getBundle_R_java_lang_String 22
+typedef jobject (*func_mindustry_entities_abilities_EnergyFieldAbility_getBundle_R_java_lang_String)(jcontext ctx, jobject self);
+#define VTABLE_mindustry_entities_abilities_EnergyFieldAbility_lambda$display$0_arc_scene_ui_layout_Table 23
+typedef void (*func_mindustry_entities_abilities_EnergyFieldAbility_lambda$display$0_arc_scene_ui_layout_Table)(jcontext ctx, jobject self, jobject param0);
+#define VTABLE_mindustry_entities_abilities_EnergyFieldAbility_lambda$update$0_mindustry_gen_Unit_mindustry_gen_Unit 24
+typedef void (*func_mindustry_entities_abilities_EnergyFieldAbility_lambda$update$0_mindustry_gen_Unit_mindustry_gen_Unit)(jcontext ctx, jobject self, jobject param0, jobject param1);
+#define VTABLE_mindustry_entities_abilities_EnergyFieldAbility_lambda$addStats$0_arc_scene_ui_Label 25
+typedef void (*func_mindustry_entities_abilities_EnergyFieldAbility_lambda$addStats$0_arc_scene_ui_Label)(jcontext ctx, jobject self, jobject param0);
+
+void mark_mindustry_entities_abilities_EnergyFieldAbility(jobject object, jint mark, jint depth);
+void clinit_mindustry_entities_abilities_EnergyFieldAbility(jcontext ctx);
+void init_mindustry_entities_abilities_EnergyFieldAbility(jcontext ctx, jobject self);
+void init_mindustry_entities_abilities_EnergyFieldAbility_float_float_float(jcontext ctx, jobject self, jfloat param0, jfloat param1, jfloat param2);
+void M_mindustry_entities_abilities_EnergyFieldAbility_addStats_arc_scene_ui_layout_Table(jcontext ctx, jobject self, jobject param0);
+void M_mindustry_entities_abilities_EnergyFieldAbility_draw_mindustry_gen_Unit(jcontext ctx, jobject self, jobject param0);
+void M_mindustry_entities_abilities_EnergyFieldAbility_update_mindustry_gen_Unit(jcontext ctx, jobject self, jobject param0);
+jfloat SM_mindustry_entities_abilities_EnergyFieldAbility_lambda$update$2_float_float_mindustry_gen_Healthc_R_float(jcontext ctx, jfloat param0, jfloat param1, jobject param2);
+void SM_mindustry_entities_abilities_EnergyFieldAbility_lambda$update$1_mindustry_gen_Unit_mindustry_gen_Building(jcontext ctx, jobject param0, jobject param1);
+void M_mindustry_entities_abilities_EnergyFieldAbility_lambda$update$0_mindustry_gen_Unit_mindustry_gen_Unit(jcontext ctx, jobject self, jobject param0, jobject param1);
+void M_mindustry_entities_abilities_EnergyFieldAbility_lambda$addStats$0_arc_scene_ui_Label(jcontext ctx, jobject self, jobject param0);
+
+#ifdef __cplusplus
+}
+#endif
+
+#endif

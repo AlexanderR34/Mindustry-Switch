@@ -1,0 +1,104 @@
+#ifndef HEADER_java_util_Collections
+#define HEADER_java_util_Collections
+
+#include "Clearwing.h"
+#include "java/lang/Object.h"
+
+#ifdef __cplusplus
+extern "C" {
+#endif
+
+typedef struct java_util_Collections {
+	java_lang_Object parent;
+} java_util_Collections;
+
+extern Class class_java_util_Collections;
+
+extern jobject SF_java_util_Collections_EMPTY_ITERATOR;
+extern jobject SF_java_util_Collections_EMPTY_ENUMERATION;
+extern jobject SF_java_util_Collections_EMPTY_LIST;
+extern jobject SF_java_util_Collections_EMPTY_SET;
+extern jobject SF_java_util_Collections_EMPTY_MAP;
+
+#define VTABLE_java_util_Collections_hashCode_R_int 0
+typedef jint (*func_java_util_Collections_hashCode_R_int)(jcontext ctx, jobject self);
+#define VTABLE_java_util_Collections_equals_java_lang_Object_R_boolean 1
+typedef jbool (*func_java_util_Collections_equals_java_lang_Object_R_boolean)(jcontext ctx, jobject self, jobject param0);
+#define VTABLE_java_util_Collections_clone_R_java_lang_Object 2
+typedef jobject (*func_java_util_Collections_clone_R_java_lang_Object)(jcontext ctx, jobject self);
+#define VTABLE_java_util_Collections_getClass_R_java_lang_Class 3
+typedef jobject (*func_java_util_Collections_getClass_R_java_lang_Class)(jcontext ctx, jobject self);
+#define VTABLE_java_util_Collections_toString_R_java_lang_String 4
+typedef jobject (*func_java_util_Collections_toString_R_java_lang_String)(jcontext ctx, jobject self);
+#define VTABLE_java_util_Collections_finalize 5
+typedef void (*func_java_util_Collections_finalize)(jcontext ctx, jobject self);
+#define VTABLE_java_util_Collections_notify 6
+typedef void (*func_java_util_Collections_notify)(jcontext ctx, jobject self);
+#define VTABLE_java_util_Collections_notifyAll 7
+typedef void (*func_java_util_Collections_notifyAll)(jcontext ctx, jobject self);
+#define VTABLE_java_util_Collections_wait 8
+typedef void (*func_java_util_Collections_wait)(jcontext ctx, jobject self);
+#define VTABLE_java_util_Collections_wait_long 9
+typedef void (*func_java_util_Collections_wait_long)(jcontext ctx, jobject self, jlong param0);
+#define VTABLE_java_util_Collections_wait_long_int 10
+typedef void (*func_java_util_Collections_wait_long_int)(jcontext ctx, jobject self, jlong param0, jint param1);
+
+void mark_java_util_Collections(jobject object, jint mark, jint depth);
+void clinit_java_util_Collections(jcontext ctx);
+void init_java_util_Collections(jcontext ctx, jobject self);
+jint SM_java_util_Collections_binarySearch_java_util_List_java_lang_Object_R_int(jcontext ctx, jobject param0, jobject param1);
+jint SM_java_util_Collections_binarySearch_java_util_List_java_lang_Object_java_util_Comparator_R_int(jcontext ctx, jobject param0, jobject param1, jobject param2);
+void SM_java_util_Collections_copy_java_util_List_java_util_List(jcontext ctx, jobject param0, jobject param1);
+jobject SM_java_util_Collections_enumeration_java_util_Collection_R_java_util_Enumeration(jcontext ctx, jobject param0);
+void SM_java_util_Collections_fill_java_util_List_java_lang_Object(jcontext ctx, jobject param0, jobject param1);
+jobject SM_java_util_Collections_max_java_util_Collection_R_java_lang_Object(jcontext ctx, jobject param0);
+jobject SM_java_util_Collections_max_java_util_Collection_java_util_Comparator_R_java_lang_Object(jcontext ctx, jobject param0, jobject param1);
+jobject SM_java_util_Collections_min_java_util_Collection_R_java_lang_Object(jcontext ctx, jobject param0);
+jobject SM_java_util_Collections_min_java_util_Collection_java_util_Comparator_R_java_lang_Object(jcontext ctx, jobject param0, jobject param1);
+jobject SM_java_util_Collections_nCopies_int_java_lang_Object_R_java_util_List(jcontext ctx, jint param0, jobject param1);
+void SM_java_util_Collections_reverse_java_util_List(jcontext ctx, jobject param0);
+jobject SM_java_util_Collections_reverseOrder_R_java_util_Comparator(jcontext ctx);
+jobject SM_java_util_Collections_reverseOrder_java_util_Comparator_R_java_util_Comparator(jcontext ctx, jobject param0);
+void SM_java_util_Collections_shuffle_java_util_List(jcontext ctx, jobject param0);
+void SM_java_util_Collections_shuffle_java_util_List_java_util_Random(jcontext ctx, jobject param0, jobject param1);
+jobject SM_java_util_Collections_singleton_java_lang_Object_R_java_util_Set(jcontext ctx, jobject param0);
+jobject SM_java_util_Collections_singletonList_java_lang_Object_R_java_util_List(jcontext ctx, jobject param0);
+jobject SM_java_util_Collections_singletonMap_java_lang_Object_java_lang_Object_R_java_util_Map(jcontext ctx, jobject param0, jobject param1);
+void SM_java_util_Collections_sort_java_util_List(jcontext ctx, jobject param0);
+void SM_java_util_Collections_sort_java_util_List_java_util_Comparator(jcontext ctx, jobject param0, jobject param1);
+void SM_java_util_Collections_swap_java_util_List_int_int(jcontext ctx, jobject param0, jint param1, jint param2);
+jbool SM_java_util_Collections_replaceAll_java_util_List_java_lang_Object_java_lang_Object_R_boolean(jcontext ctx, jobject param0, jobject param1, jobject param2);
+void SM_java_util_Collections_rotate_java_util_List_int(jcontext ctx, jobject param0, jint param1);
+jint SM_java_util_Collections_indexOfSubList_java_util_List_java_util_List_R_int(jcontext ctx, jobject param0, jobject param1);
+jint SM_java_util_Collections_lastIndexOfSubList_java_util_List_java_util_List_R_int(jcontext ctx, jobject param0, jobject param1);
+jobject SM_java_util_Collections_list_java_util_Enumeration_R_java_util_ArrayList(jcontext ctx, jobject param0);
+jobject SM_java_util_Collections_synchronizedCollection_java_util_Collection_R_java_util_Collection(jcontext ctx, jobject param0);
+jobject SM_java_util_Collections_synchronizedList_java_util_List_R_java_util_List(jcontext ctx, jobject param0);
+jobject SM_java_util_Collections_synchronizedMap_java_util_Map_R_java_util_Map(jcontext ctx, jobject param0);
+jobject SM_java_util_Collections_synchronizedSet_java_util_Set_R_java_util_Set(jcontext ctx, jobject param0);
+jobject SM_java_util_Collections_synchronizedSortedMap_java_util_SortedMap_R_java_util_SortedMap(jcontext ctx, jobject param0);
+jobject SM_java_util_Collections_synchronizedSortedSet_java_util_SortedSet_R_java_util_SortedSet(jcontext ctx, jobject param0);
+jobject SM_java_util_Collections_unmodifiableCollection_java_util_Collection_R_java_util_Collection(jcontext ctx, jobject param0);
+jobject SM_java_util_Collections_unmodifiableList_java_util_List_R_java_util_List(jcontext ctx, jobject param0);
+jobject SM_java_util_Collections_unmodifiableMap_java_util_Map_R_java_util_Map(jcontext ctx, jobject param0);
+jobject SM_java_util_Collections_unmodifiableSet_java_util_Set_R_java_util_Set(jcontext ctx, jobject param0);
+jobject SM_java_util_Collections_unmodifiableSortedMap_java_util_SortedMap_R_java_util_SortedMap(jcontext ctx, jobject param0);
+jobject SM_java_util_Collections_unmodifiableSortedSet_java_util_SortedSet_R_java_util_SortedSet(jcontext ctx, jobject param0);
+jint SM_java_util_Collections_frequency_java_util_Collection_java_lang_Object_R_int(jcontext ctx, jobject param0, jobject param1);
+jobject SM_java_util_Collections_emptyList_R_java_util_List(jcontext ctx);
+jobject SM_java_util_Collections_emptySet_R_java_util_Set(jcontext ctx);
+jobject SM_java_util_Collections_emptyMap_R_java_util_Map(jcontext ctx);
+jobject SM_java_util_Collections_emptyEnumeration_R_java_util_Enumeration(jcontext ctx);
+jobject SM_java_util_Collections_emptyIterator_R_java_util_Iterator(jcontext ctx);
+jobject SM_java_util_Collections_checkedCollection_java_util_Collection_java_lang_Class_R_java_util_Collection(jcontext ctx, jobject param0, jobject param1);
+jbool SM_java_util_Collections_addAll_java_util_Collection_Array1_java_lang_Object_R_boolean(jcontext ctx, jobject param0, jobject param1);
+jbool SM_java_util_Collections_disjoint_java_util_Collection_java_util_Collection_R_boolean(jcontext ctx, jobject param0, jobject param1);
+jobject SM_java_util_Collections_checkType_java_lang_Object_java_lang_Class_R_java_lang_Object(jcontext ctx, jobject param0, jobject param1);
+jobject SM_java_util_Collections_newSetFromMap_java_util_Map_R_java_util_Set(jcontext ctx, jobject param0);
+jobject SM_java_util_Collections_asLifoQueue_java_util_Deque_R_java_util_Queue(jcontext ctx, jobject param0);
+
+#ifdef __cplusplus
+}
+#endif
+
+#endif

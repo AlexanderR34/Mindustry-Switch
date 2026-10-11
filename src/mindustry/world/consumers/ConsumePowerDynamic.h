@@ -1,0 +1,78 @@
+#ifndef HEADER_mindustry_world_consumers_ConsumePowerDynamic
+#define HEADER_mindustry_world_consumers_ConsumePowerDynamic
+
+#include "Clearwing.h"
+#include "mindustry/world/consumers/ConsumePower.h"
+
+#ifdef __cplusplus
+extern "C" {
+#endif
+
+typedef struct mindustry_world_consumers_ConsumePowerDynamic {
+	mindustry_world_consumers_ConsumePower parent;
+	jref F_usage;
+	jfloat F_displayedPowerUsage;
+} mindustry_world_consumers_ConsumePowerDynamic;
+
+extern Class class_mindustry_world_consumers_ConsumePowerDynamic;
+
+
+#define VTABLE_mindustry_world_consumers_ConsumePowerDynamic_hashCode_R_int 0
+typedef jint (*func_mindustry_world_consumers_ConsumePowerDynamic_hashCode_R_int)(jcontext ctx, jobject self);
+#define VTABLE_mindustry_world_consumers_ConsumePowerDynamic_equals_java_lang_Object_R_boolean 1
+typedef jbool (*func_mindustry_world_consumers_ConsumePowerDynamic_equals_java_lang_Object_R_boolean)(jcontext ctx, jobject self, jobject param0);
+#define VTABLE_mindustry_world_consumers_ConsumePowerDynamic_clone_R_java_lang_Object 2
+typedef jobject (*func_mindustry_world_consumers_ConsumePowerDynamic_clone_R_java_lang_Object)(jcontext ctx, jobject self);
+#define VTABLE_mindustry_world_consumers_ConsumePowerDynamic_getClass_R_java_lang_Class 3
+typedef jobject (*func_mindustry_world_consumers_ConsumePowerDynamic_getClass_R_java_lang_Class)(jcontext ctx, jobject self);
+#define VTABLE_mindustry_world_consumers_ConsumePowerDynamic_toString_R_java_lang_String 4
+typedef jobject (*func_mindustry_world_consumers_ConsumePowerDynamic_toString_R_java_lang_String)(jcontext ctx, jobject self);
+#define VTABLE_mindustry_world_consumers_ConsumePowerDynamic_finalize 5
+typedef void (*func_mindustry_world_consumers_ConsumePowerDynamic_finalize)(jcontext ctx, jobject self);
+#define VTABLE_mindustry_world_consumers_ConsumePowerDynamic_notify 6
+typedef void (*func_mindustry_world_consumers_ConsumePowerDynamic_notify)(jcontext ctx, jobject self);
+#define VTABLE_mindustry_world_consumers_ConsumePowerDynamic_notifyAll 7
+typedef void (*func_mindustry_world_consumers_ConsumePowerDynamic_notifyAll)(jcontext ctx, jobject self);
+#define VTABLE_mindustry_world_consumers_ConsumePowerDynamic_wait 8
+typedef void (*func_mindustry_world_consumers_ConsumePowerDynamic_wait)(jcontext ctx, jobject self);
+#define VTABLE_mindustry_world_consumers_ConsumePowerDynamic_wait_long 9
+typedef void (*func_mindustry_world_consumers_ConsumePowerDynamic_wait_long)(jcontext ctx, jobject self, jlong param0);
+#define VTABLE_mindustry_world_consumers_ConsumePowerDynamic_wait_long_int 10
+typedef void (*func_mindustry_world_consumers_ConsumePowerDynamic_wait_long_int)(jcontext ctx, jobject self, jlong param0, jint param1);
+#define VTABLE_mindustry_world_consumers_ConsumePowerDynamic_apply_mindustry_world_Block 11
+typedef void (*func_mindustry_world_consumers_ConsumePowerDynamic_apply_mindustry_world_Block)(jcontext ctx, jobject self, jobject param0);
+#define VTABLE_mindustry_world_consumers_ConsumePowerDynamic_optional_boolean_boolean_R_mindustry_world_consumers_Consume 12
+typedef jobject (*func_mindustry_world_consumers_ConsumePowerDynamic_optional_boolean_boolean_R_mindustry_world_consumers_Consume)(jcontext ctx, jobject self, jbool param0, jbool param1);
+#define VTABLE_mindustry_world_consumers_ConsumePowerDynamic_boost_R_mindustry_world_consumers_Consume 13
+typedef jobject (*func_mindustry_world_consumers_ConsumePowerDynamic_boost_R_mindustry_world_consumers_Consume)(jcontext ctx, jobject self);
+#define VTABLE_mindustry_world_consumers_ConsumePowerDynamic_update_boolean_R_mindustry_world_consumers_Consume 14
+typedef jobject (*func_mindustry_world_consumers_ConsumePowerDynamic_update_boolean_R_mindustry_world_consumers_Consume)(jcontext ctx, jobject self, jbool param0);
+#define VTABLE_mindustry_world_consumers_ConsumePowerDynamic_ignore_R_boolean 15
+typedef jbool (*func_mindustry_world_consumers_ConsumePowerDynamic_ignore_R_boolean)(jcontext ctx, jobject self);
+#define VTABLE_mindustry_world_consumers_ConsumePowerDynamic_build_mindustry_gen_Building_arc_scene_ui_layout_Table 16
+typedef void (*func_mindustry_world_consumers_ConsumePowerDynamic_build_mindustry_gen_Building_arc_scene_ui_layout_Table)(jcontext ctx, jobject self, jobject param0, jobject param1);
+#define VTABLE_mindustry_world_consumers_ConsumePowerDynamic_trigger_mindustry_gen_Building 17
+typedef void (*func_mindustry_world_consumers_ConsumePowerDynamic_trigger_mindustry_gen_Building)(jcontext ctx, jobject self, jobject param0);
+#define VTABLE_mindustry_world_consumers_ConsumePowerDynamic_update_mindustry_gen_Building 18
+typedef void (*func_mindustry_world_consumers_ConsumePowerDynamic_update_mindustry_gen_Building)(jcontext ctx, jobject self, jobject param0);
+#define VTABLE_mindustry_world_consumers_ConsumePowerDynamic_efficiency_mindustry_gen_Building_R_float 19
+typedef jfloat (*func_mindustry_world_consumers_ConsumePowerDynamic_efficiency_mindustry_gen_Building_R_float)(jcontext ctx, jobject self, jobject param0);
+#define VTABLE_mindustry_world_consumers_ConsumePowerDynamic_efficiencyMultiplier_mindustry_gen_Building_R_float 20
+typedef jfloat (*func_mindustry_world_consumers_ConsumePowerDynamic_efficiencyMultiplier_mindustry_gen_Building_R_float)(jcontext ctx, jobject self, jobject param0);
+#define VTABLE_mindustry_world_consumers_ConsumePowerDynamic_display_mindustry_world_meta_Stats 21
+typedef void (*func_mindustry_world_consumers_ConsumePowerDynamic_display_mindustry_world_meta_Stats)(jcontext ctx, jobject self, jobject param0);
+#define VTABLE_mindustry_world_consumers_ConsumePowerDynamic_requestedPower_mindustry_gen_Building_R_float 22
+typedef jfloat (*func_mindustry_world_consumers_ConsumePowerDynamic_requestedPower_mindustry_gen_Building_R_float)(jcontext ctx, jobject self, jobject param0);
+
+void mark_mindustry_world_consumers_ConsumePowerDynamic(jobject object, jint mark, jint depth);
+void clinit_mindustry_world_consumers_ConsumePowerDynamic(jcontext ctx);
+void init_mindustry_world_consumers_ConsumePowerDynamic_arc_func_Floatf(jcontext ctx, jobject self, jobject param0);
+void init_mindustry_world_consumers_ConsumePowerDynamic_float_arc_func_Floatf(jcontext ctx, jobject self, jfloat param0, jobject param1);
+jfloat M_mindustry_world_consumers_ConsumePowerDynamic_requestedPower_mindustry_gen_Building_R_float(jcontext ctx, jobject self, jobject param0);
+void M_mindustry_world_consumers_ConsumePowerDynamic_display_mindustry_world_meta_Stats(jcontext ctx, jobject self, jobject param0);
+
+#ifdef __cplusplus
+}
+#endif
+
+#endif

@@ -1,0 +1,121 @@
+#ifndef HEADER_mindustry_entities_abilities_ShieldArcAbility
+#define HEADER_mindustry_entities_abilities_ShieldArcAbility
+
+#include "Clearwing.h"
+#include "mindustry/entities/abilities/Ability.h"
+
+#ifdef __cplusplus
+extern "C" {
+#endif
+
+typedef struct mindustry_entities_abilities_ShieldArcAbility {
+	mindustry_entities_abilities_Ability parent;
+	jfloat F_radius;
+	jfloat F_regen;
+	jfloat F_max;
+	jfloat F_cooldown;
+	jfloat F_angle;
+	jfloat F_angleOffset;
+	jfloat F_x;
+	jfloat F_y;
+	jbool F_whenShooting;
+	jfloat F_width;
+	jfloat F_chanceDeflect;
+	jfloat F_reflectBuildingDamage;
+	jfloat F_reflectVel;
+	jfloat F_reflectTime;
+	jref F_deflectSound;
+	jref F_breakSound;
+	jref F_hitSound;
+	jfloat F_hitSoundVolume;
+	jfloat F_missileUnitMultiplier;
+	jbool F_drawArc;
+	jref F_region;
+	jref F_color;
+	jbool F_offsetRegion;
+	jbool F_pushUnits;
+	jbool F_pushDiffLayer;
+	jref F_pushEffect;
+	jfloat F_widthScale;
+	jfloat F_alpha;
+} mindustry_entities_abilities_ShieldArcAbility;
+
+extern Class class_mindustry_entities_abilities_ShieldArcAbility;
+
+extern jobject SF_mindustry_entities_abilities_ShieldArcAbility_paramUnit;
+extern jobject SF_mindustry_entities_abilities_ShieldArcAbility_paramField;
+extern jobject SF_mindustry_entities_abilities_ShieldArcAbility_paramPos;
+extern jobject SF_mindustry_entities_abilities_ShieldArcAbility_shieldConsumer;
+extern jobject SF_mindustry_entities_abilities_ShieldArcAbility_unitConsumer;
+
+#define VTABLE_mindustry_entities_abilities_ShieldArcAbility_hashCode_R_int 0
+typedef jint (*func_mindustry_entities_abilities_ShieldArcAbility_hashCode_R_int)(jcontext ctx, jobject self);
+#define VTABLE_mindustry_entities_abilities_ShieldArcAbility_equals_java_lang_Object_R_boolean 1
+typedef jbool (*func_mindustry_entities_abilities_ShieldArcAbility_equals_java_lang_Object_R_boolean)(jcontext ctx, jobject self, jobject param0);
+#define VTABLE_mindustry_entities_abilities_ShieldArcAbility_clone_R_java_lang_Object 2
+typedef jobject (*func_mindustry_entities_abilities_ShieldArcAbility_clone_R_java_lang_Object)(jcontext ctx, jobject self);
+#define VTABLE_mindustry_entities_abilities_ShieldArcAbility_getClass_R_java_lang_Class 3
+typedef jobject (*func_mindustry_entities_abilities_ShieldArcAbility_getClass_R_java_lang_Class)(jcontext ctx, jobject self);
+#define VTABLE_mindustry_entities_abilities_ShieldArcAbility_toString_R_java_lang_String 4
+typedef jobject (*func_mindustry_entities_abilities_ShieldArcAbility_toString_R_java_lang_String)(jcontext ctx, jobject self);
+#define VTABLE_mindustry_entities_abilities_ShieldArcAbility_finalize 5
+typedef void (*func_mindustry_entities_abilities_ShieldArcAbility_finalize)(jcontext ctx, jobject self);
+#define VTABLE_mindustry_entities_abilities_ShieldArcAbility_notify 6
+typedef void (*func_mindustry_entities_abilities_ShieldArcAbility_notify)(jcontext ctx, jobject self);
+#define VTABLE_mindustry_entities_abilities_ShieldArcAbility_notifyAll 7
+typedef void (*func_mindustry_entities_abilities_ShieldArcAbility_notifyAll)(jcontext ctx, jobject self);
+#define VTABLE_mindustry_entities_abilities_ShieldArcAbility_wait 8
+typedef void (*func_mindustry_entities_abilities_ShieldArcAbility_wait)(jcontext ctx, jobject self);
+#define VTABLE_mindustry_entities_abilities_ShieldArcAbility_wait_long 9
+typedef void (*func_mindustry_entities_abilities_ShieldArcAbility_wait_long)(jcontext ctx, jobject self, jlong param0);
+#define VTABLE_mindustry_entities_abilities_ShieldArcAbility_wait_long_int 10
+typedef void (*func_mindustry_entities_abilities_ShieldArcAbility_wait_long_int)(jcontext ctx, jobject self, jlong param0, jint param1);
+#define VTABLE_mindustry_entities_abilities_ShieldArcAbility_update_mindustry_gen_Unit 11
+typedef void (*func_mindustry_entities_abilities_ShieldArcAbility_update_mindustry_gen_Unit)(jcontext ctx, jobject self, jobject param0);
+#define VTABLE_mindustry_entities_abilities_ShieldArcAbility_draw_mindustry_gen_Unit 12
+typedef void (*func_mindustry_entities_abilities_ShieldArcAbility_draw_mindustry_gen_Unit)(jcontext ctx, jobject self, jobject param0);
+#define VTABLE_mindustry_entities_abilities_ShieldArcAbility_death_mindustry_gen_Unit 13
+typedef void (*func_mindustry_entities_abilities_ShieldArcAbility_death_mindustry_gen_Unit)(jcontext ctx, jobject self, jobject param0);
+#define VTABLE_mindustry_entities_abilities_ShieldArcAbility_created_mindustry_gen_Unit 14
+typedef void (*func_mindustry_entities_abilities_ShieldArcAbility_created_mindustry_gen_Unit)(jcontext ctx, jobject self, jobject param0);
+#define VTABLE_mindustry_entities_abilities_ShieldArcAbility_init_mindustry_type_UnitType 15
+typedef void (*func_mindustry_entities_abilities_ShieldArcAbility_init_mindustry_type_UnitType)(jcontext ctx, jobject self, jobject param0);
+#define VTABLE_mindustry_entities_abilities_ShieldArcAbility_displayBars_mindustry_gen_Unit_arc_scene_ui_layout_Table 16
+typedef void (*func_mindustry_entities_abilities_ShieldArcAbility_displayBars_mindustry_gen_Unit_arc_scene_ui_layout_Table)(jcontext ctx, jobject self, jobject param0, jobject param1);
+#define VTABLE_mindustry_entities_abilities_ShieldArcAbility_display_arc_scene_ui_layout_Table 17
+typedef void (*func_mindustry_entities_abilities_ShieldArcAbility_display_arc_scene_ui_layout_Table)(jcontext ctx, jobject self, jobject param0);
+#define VTABLE_mindustry_entities_abilities_ShieldArcAbility_addStats_arc_scene_ui_layout_Table 18
+typedef void (*func_mindustry_entities_abilities_ShieldArcAbility_addStats_arc_scene_ui_layout_Table)(jcontext ctx, jobject self, jobject param0);
+#define VTABLE_mindustry_entities_abilities_ShieldArcAbility_abilityStat_java_lang_String_Array1_java_lang_Object_R_java_lang_String 19
+typedef jobject (*func_mindustry_entities_abilities_ShieldArcAbility_abilityStat_java_lang_String_Array1_java_lang_Object_R_java_lang_String)(jcontext ctx, jobject self, jobject param0, jobject param1);
+#define VTABLE_mindustry_entities_abilities_ShieldArcAbility_copy_R_mindustry_entities_abilities_Ability 20
+typedef jobject (*func_mindustry_entities_abilities_ShieldArcAbility_copy_R_mindustry_entities_abilities_Ability)(jcontext ctx, jobject self);
+#define VTABLE_mindustry_entities_abilities_ShieldArcAbility_localized_R_java_lang_String 21
+typedef jobject (*func_mindustry_entities_abilities_ShieldArcAbility_localized_R_java_lang_String)(jcontext ctx, jobject self);
+#define VTABLE_mindustry_entities_abilities_ShieldArcAbility_getBundle_R_java_lang_String 22
+typedef jobject (*func_mindustry_entities_abilities_ShieldArcAbility_getBundle_R_java_lang_String)(jcontext ctx, jobject self);
+#define VTABLE_mindustry_entities_abilities_ShieldArcAbility_lambda$display$0_arc_scene_ui_layout_Table 23
+typedef void (*func_mindustry_entities_abilities_ShieldArcAbility_lambda$display$0_arc_scene_ui_layout_Table)(jcontext ctx, jobject self, jobject param0);
+#define VTABLE_mindustry_entities_abilities_ShieldArcAbility_scaledMax_mindustry_gen_Unit_R_float 24
+typedef jfloat (*func_mindustry_entities_abilities_ShieldArcAbility_scaledMax_mindustry_gen_Unit_R_float)(jcontext ctx, jobject self, jobject param0);
+#define VTABLE_mindustry_entities_abilities_ShieldArcAbility_lambda$displayBars$0_mindustry_gen_Unit_R_float 25
+typedef jfloat (*func_mindustry_entities_abilities_ShieldArcAbility_lambda$displayBars$0_mindustry_gen_Unit_R_float)(jcontext ctx, jobject self, jobject param0);
+
+void mark_mindustry_entities_abilities_ShieldArcAbility(jobject object, jint mark, jint depth);
+void clinit_mindustry_entities_abilities_ShieldArcAbility(jcontext ctx);
+void init_mindustry_entities_abilities_ShieldArcAbility(jcontext ctx, jobject self);
+jfloat M_mindustry_entities_abilities_ShieldArcAbility_scaledMax_mindustry_gen_Unit_R_float(jcontext ctx, jobject self, jobject param0);
+void M_mindustry_entities_abilities_ShieldArcAbility_addStats_arc_scene_ui_layout_Table(jcontext ctx, jobject self, jobject param0);
+void M_mindustry_entities_abilities_ShieldArcAbility_update_mindustry_gen_Unit(jcontext ctx, jobject self, jobject param0);
+void M_mindustry_entities_abilities_ShieldArcAbility_created_mindustry_gen_Unit(jcontext ctx, jobject self, jobject param0);
+void M_mindustry_entities_abilities_ShieldArcAbility_draw_mindustry_gen_Unit(jcontext ctx, jobject self, jobject param0);
+void M_mindustry_entities_abilities_ShieldArcAbility_displayBars_mindustry_gen_Unit_arc_scene_ui_layout_Table(jcontext ctx, jobject self, jobject param0, jobject param1);
+jfloat M_mindustry_entities_abilities_ShieldArcAbility_lambda$displayBars$0_mindustry_gen_Unit_R_float(jcontext ctx, jobject self, jobject param0);
+void SM_mindustry_entities_abilities_ShieldArcAbility_lambda$static$1_mindustry_gen_Unit(jcontext ctx, jobject param0);
+void SM_mindustry_entities_abilities_ShieldArcAbility_lambda$static$0_mindustry_gen_Bullet(jcontext ctx, jobject param0);
+
+#ifdef __cplusplus
+}
+#endif
+
+#endif

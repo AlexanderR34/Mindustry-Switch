@@ -1,0 +1,151 @@
+#ifndef HEADER_mindustry_world_blocks_power_PowerGraph
+#define HEADER_mindustry_world_blocks_power_PowerGraph
+
+#include "Clearwing.h"
+#include "java/lang/Object.h"
+
+#ifdef __cplusplus
+extern "C" {
+#endif
+
+typedef struct mindustry_world_blocks_power_PowerGraph {
+	java_lang_Object parent;
+	jref F_producers;
+	jref F_consumers;
+	jref F_batteries;
+	jref F_all;
+	jref F_entity;
+	jref F_powerBalance;
+	jfloat F_lastPowerProduced;
+	jfloat F_lastPowerNeeded;
+	jfloat F_lastPowerStored;
+	jfloat F_lastScaledPowerIn;
+	jfloat F_lastScaledPowerOut;
+	jfloat F_lastCapacity;
+	jfloat F_energyDelta;
+	jint F_graphID;
+} mindustry_world_blocks_power_PowerGraph;
+
+extern Class class_mindustry_world_blocks_power_PowerGraph;
+
+extern jobject SF_mindustry_world_blocks_power_PowerGraph_queue;
+extern jobject SF_mindustry_world_blocks_power_PowerGraph_outArray1;
+extern jobject SF_mindustry_world_blocks_power_PowerGraph_outArray2;
+extern jobject SF_mindustry_world_blocks_power_PowerGraph_closedSet;
+extern jint SF_mindustry_world_blocks_power_PowerGraph_lastGraphID;
+
+#define VTABLE_mindustry_world_blocks_power_PowerGraph_hashCode_R_int 0
+typedef jint (*func_mindustry_world_blocks_power_PowerGraph_hashCode_R_int)(jcontext ctx, jobject self);
+#define VTABLE_mindustry_world_blocks_power_PowerGraph_equals_java_lang_Object_R_boolean 1
+typedef jbool (*func_mindustry_world_blocks_power_PowerGraph_equals_java_lang_Object_R_boolean)(jcontext ctx, jobject self, jobject param0);
+#define VTABLE_mindustry_world_blocks_power_PowerGraph_clone_R_java_lang_Object 2
+typedef jobject (*func_mindustry_world_blocks_power_PowerGraph_clone_R_java_lang_Object)(jcontext ctx, jobject self);
+#define VTABLE_mindustry_world_blocks_power_PowerGraph_getClass_R_java_lang_Class 3
+typedef jobject (*func_mindustry_world_blocks_power_PowerGraph_getClass_R_java_lang_Class)(jcontext ctx, jobject self);
+#define VTABLE_mindustry_world_blocks_power_PowerGraph_toString_R_java_lang_String 4
+typedef jobject (*func_mindustry_world_blocks_power_PowerGraph_toString_R_java_lang_String)(jcontext ctx, jobject self);
+#define VTABLE_mindustry_world_blocks_power_PowerGraph_finalize 5
+typedef void (*func_mindustry_world_blocks_power_PowerGraph_finalize)(jcontext ctx, jobject self);
+#define VTABLE_mindustry_world_blocks_power_PowerGraph_notify 6
+typedef void (*func_mindustry_world_blocks_power_PowerGraph_notify)(jcontext ctx, jobject self);
+#define VTABLE_mindustry_world_blocks_power_PowerGraph_notifyAll 7
+typedef void (*func_mindustry_world_blocks_power_PowerGraph_notifyAll)(jcontext ctx, jobject self);
+#define VTABLE_mindustry_world_blocks_power_PowerGraph_wait 8
+typedef void (*func_mindustry_world_blocks_power_PowerGraph_wait)(jcontext ctx, jobject self);
+#define VTABLE_mindustry_world_blocks_power_PowerGraph_wait_long 9
+typedef void (*func_mindustry_world_blocks_power_PowerGraph_wait_long)(jcontext ctx, jobject self, jlong param0);
+#define VTABLE_mindustry_world_blocks_power_PowerGraph_wait_long_int 10
+typedef void (*func_mindustry_world_blocks_power_PowerGraph_wait_long_int)(jcontext ctx, jobject self, jlong param0, jint param1);
+#define VTABLE_mindustry_world_blocks_power_PowerGraph_getID_R_int 11
+typedef jint (*func_mindustry_world_blocks_power_PowerGraph_getID_R_int)(jcontext ctx, jobject self);
+#define VTABLE_mindustry_world_blocks_power_PowerGraph_getLastScaledPowerIn_R_float 12
+typedef jfloat (*func_mindustry_world_blocks_power_PowerGraph_getLastScaledPowerIn_R_float)(jcontext ctx, jobject self);
+#define VTABLE_mindustry_world_blocks_power_PowerGraph_getLastScaledPowerOut_R_float 13
+typedef jfloat (*func_mindustry_world_blocks_power_PowerGraph_getLastScaledPowerOut_R_float)(jcontext ctx, jobject self);
+#define VTABLE_mindustry_world_blocks_power_PowerGraph_getLastCapacity_R_float 14
+typedef jfloat (*func_mindustry_world_blocks_power_PowerGraph_getLastCapacity_R_float)(jcontext ctx, jobject self);
+#define VTABLE_mindustry_world_blocks_power_PowerGraph_getPowerBalance_R_float 15
+typedef jfloat (*func_mindustry_world_blocks_power_PowerGraph_getPowerBalance_R_float)(jcontext ctx, jobject self);
+#define VTABLE_mindustry_world_blocks_power_PowerGraph_hasPowerBalanceSamples_R_boolean 16
+typedef jbool (*func_mindustry_world_blocks_power_PowerGraph_hasPowerBalanceSamples_R_boolean)(jcontext ctx, jobject self);
+#define VTABLE_mindustry_world_blocks_power_PowerGraph_getLastPowerNeeded_R_float 17
+typedef jfloat (*func_mindustry_world_blocks_power_PowerGraph_getLastPowerNeeded_R_float)(jcontext ctx, jobject self);
+#define VTABLE_mindustry_world_blocks_power_PowerGraph_getLastPowerProduced_R_float 18
+typedef jfloat (*func_mindustry_world_blocks_power_PowerGraph_getLastPowerProduced_R_float)(jcontext ctx, jobject self);
+#define VTABLE_mindustry_world_blocks_power_PowerGraph_getLastPowerStored_R_float 19
+typedef jfloat (*func_mindustry_world_blocks_power_PowerGraph_getLastPowerStored_R_float)(jcontext ctx, jobject self);
+#define VTABLE_mindustry_world_blocks_power_PowerGraph_transferPower_float 20
+typedef void (*func_mindustry_world_blocks_power_PowerGraph_transferPower_float)(jcontext ctx, jobject self, jfloat param0);
+#define VTABLE_mindustry_world_blocks_power_PowerGraph_getSatisfaction_R_float 21
+typedef jfloat (*func_mindustry_world_blocks_power_PowerGraph_getSatisfaction_R_float)(jcontext ctx, jobject self);
+#define VTABLE_mindustry_world_blocks_power_PowerGraph_getPowerProduced_R_float 22
+typedef jfloat (*func_mindustry_world_blocks_power_PowerGraph_getPowerProduced_R_float)(jcontext ctx, jobject self);
+#define VTABLE_mindustry_world_blocks_power_PowerGraph_getPowerNeeded_R_float 23
+typedef jfloat (*func_mindustry_world_blocks_power_PowerGraph_getPowerNeeded_R_float)(jcontext ctx, jobject self);
+#define VTABLE_mindustry_world_blocks_power_PowerGraph_getBatteryStored_R_float 24
+typedef jfloat (*func_mindustry_world_blocks_power_PowerGraph_getBatteryStored_R_float)(jcontext ctx, jobject self);
+#define VTABLE_mindustry_world_blocks_power_PowerGraph_getBatteryCapacity_R_float 25
+typedef jfloat (*func_mindustry_world_blocks_power_PowerGraph_getBatteryCapacity_R_float)(jcontext ctx, jobject self);
+#define VTABLE_mindustry_world_blocks_power_PowerGraph_getTotalBatteryCapacity_R_float 26
+typedef jfloat (*func_mindustry_world_blocks_power_PowerGraph_getTotalBatteryCapacity_R_float)(jcontext ctx, jobject self);
+#define VTABLE_mindustry_world_blocks_power_PowerGraph_useBatteries_float_R_float 27
+typedef jfloat (*func_mindustry_world_blocks_power_PowerGraph_useBatteries_float_R_float)(jcontext ctx, jobject self, jfloat param0);
+#define VTABLE_mindustry_world_blocks_power_PowerGraph_chargeBatteries_float_R_float 28
+typedef jfloat (*func_mindustry_world_blocks_power_PowerGraph_chargeBatteries_float_R_float)(jcontext ctx, jobject self, jfloat param0);
+#define VTABLE_mindustry_world_blocks_power_PowerGraph_distributePower_float_float_boolean 29
+typedef void (*func_mindustry_world_blocks_power_PowerGraph_distributePower_float_float_boolean)(jcontext ctx, jobject self, jfloat param0, jfloat param1, jbool param2);
+#define VTABLE_mindustry_world_blocks_power_PowerGraph_update 30
+typedef void (*func_mindustry_world_blocks_power_PowerGraph_update)(jcontext ctx, jobject self);
+#define VTABLE_mindustry_world_blocks_power_PowerGraph_addGraph_mindustry_world_blocks_power_PowerGraph 31
+typedef void (*func_mindustry_world_blocks_power_PowerGraph_addGraph_mindustry_world_blocks_power_PowerGraph)(jcontext ctx, jobject self, jobject param0);
+#define VTABLE_mindustry_world_blocks_power_PowerGraph_add_mindustry_gen_Building 32
+typedef void (*func_mindustry_world_blocks_power_PowerGraph_add_mindustry_gen_Building)(jcontext ctx, jobject self, jobject param0);
+#define VTABLE_mindustry_world_blocks_power_PowerGraph_checkAdd 33
+typedef void (*func_mindustry_world_blocks_power_PowerGraph_checkAdd)(jcontext ctx, jobject self);
+#define VTABLE_mindustry_world_blocks_power_PowerGraph_clear 34
+typedef void (*func_mindustry_world_blocks_power_PowerGraph_clear)(jcontext ctx, jobject self);
+#define VTABLE_mindustry_world_blocks_power_PowerGraph_reflow_mindustry_gen_Building 35
+typedef void (*func_mindustry_world_blocks_power_PowerGraph_reflow_mindustry_gen_Building)(jcontext ctx, jobject self, jobject param0);
+#define VTABLE_mindustry_world_blocks_power_PowerGraph_removeList_mindustry_gen_Building 36
+typedef void (*func_mindustry_world_blocks_power_PowerGraph_removeList_mindustry_gen_Building)(jcontext ctx, jobject self, jobject param0);
+#define VTABLE_mindustry_world_blocks_power_PowerGraph_remove_mindustry_gen_Building 37
+typedef void (*func_mindustry_world_blocks_power_PowerGraph_remove_mindustry_gen_Building)(jcontext ctx, jobject self, jobject param0);
+
+void mark_mindustry_world_blocks_power_PowerGraph(jobject object, jint mark, jint depth);
+void clinit_mindustry_world_blocks_power_PowerGraph(jcontext ctx);
+void init_mindustry_world_blocks_power_PowerGraph(jcontext ctx, jobject self);
+void init_mindustry_world_blocks_power_PowerGraph_boolean(jcontext ctx, jobject self, jbool param0);
+jint M_mindustry_world_blocks_power_PowerGraph_getID_R_int(jcontext ctx, jobject self);
+jfloat M_mindustry_world_blocks_power_PowerGraph_getLastScaledPowerIn_R_float(jcontext ctx, jobject self);
+jfloat M_mindustry_world_blocks_power_PowerGraph_getLastScaledPowerOut_R_float(jcontext ctx, jobject self);
+jfloat M_mindustry_world_blocks_power_PowerGraph_getLastCapacity_R_float(jcontext ctx, jobject self);
+jfloat M_mindustry_world_blocks_power_PowerGraph_getPowerBalance_R_float(jcontext ctx, jobject self);
+jbool M_mindustry_world_blocks_power_PowerGraph_hasPowerBalanceSamples_R_boolean(jcontext ctx, jobject self);
+jfloat M_mindustry_world_blocks_power_PowerGraph_getLastPowerNeeded_R_float(jcontext ctx, jobject self);
+jfloat M_mindustry_world_blocks_power_PowerGraph_getLastPowerProduced_R_float(jcontext ctx, jobject self);
+jfloat M_mindustry_world_blocks_power_PowerGraph_getLastPowerStored_R_float(jcontext ctx, jobject self);
+void M_mindustry_world_blocks_power_PowerGraph_transferPower_float(jcontext ctx, jobject self, jfloat param0);
+jfloat M_mindustry_world_blocks_power_PowerGraph_getSatisfaction_R_float(jcontext ctx, jobject self);
+jfloat M_mindustry_world_blocks_power_PowerGraph_getPowerProduced_R_float(jcontext ctx, jobject self);
+jfloat M_mindustry_world_blocks_power_PowerGraph_getPowerNeeded_R_float(jcontext ctx, jobject self);
+jfloat M_mindustry_world_blocks_power_PowerGraph_getBatteryStored_R_float(jcontext ctx, jobject self);
+jfloat M_mindustry_world_blocks_power_PowerGraph_getBatteryCapacity_R_float(jcontext ctx, jobject self);
+jfloat M_mindustry_world_blocks_power_PowerGraph_getTotalBatteryCapacity_R_float(jcontext ctx, jobject self);
+jfloat M_mindustry_world_blocks_power_PowerGraph_useBatteries_float_R_float(jcontext ctx, jobject self, jfloat param0);
+jfloat M_mindustry_world_blocks_power_PowerGraph_chargeBatteries_float_R_float(jcontext ctx, jobject self, jfloat param0);
+void M_mindustry_world_blocks_power_PowerGraph_distributePower_float_float_boolean(jcontext ctx, jobject self, jfloat param0, jfloat param1, jbool param2);
+void M_mindustry_world_blocks_power_PowerGraph_update(jcontext ctx, jobject self);
+void M_mindustry_world_blocks_power_PowerGraph_addGraph_mindustry_world_blocks_power_PowerGraph(jcontext ctx, jobject self, jobject param0);
+void M_mindustry_world_blocks_power_PowerGraph_add_mindustry_gen_Building(jcontext ctx, jobject self, jobject param0);
+void M_mindustry_world_blocks_power_PowerGraph_checkAdd(jcontext ctx, jobject self);
+void M_mindustry_world_blocks_power_PowerGraph_clear(jcontext ctx, jobject self);
+void M_mindustry_world_blocks_power_PowerGraph_reflow_mindustry_gen_Building(jcontext ctx, jobject self, jobject param0);
+void M_mindustry_world_blocks_power_PowerGraph_removeList_mindustry_gen_Building(jcontext ctx, jobject self, jobject param0);
+void M_mindustry_world_blocks_power_PowerGraph_remove_mindustry_gen_Building(jcontext ctx, jobject self, jobject param0);
+jobject M_mindustry_world_blocks_power_PowerGraph_toString_R_java_lang_String(jcontext ctx, jobject self);
+
+#ifdef __cplusplus
+}
+#endif
+
+#endif

@@ -1,0 +1,66 @@
+#ifndef HEADER_java_util_zip_ZipConstants
+#define HEADER_java_util_zip_ZipConstants
+
+#include "Clearwing.h"
+#include "java/lang/Object.h"
+
+#ifdef __cplusplus
+extern "C" {
+#endif
+
+typedef struct java_util_zip_ZipConstants {
+	java_lang_Object parent;
+} java_util_zip_ZipConstants;
+
+extern Class class_java_util_zip_ZipConstants;
+
+extern jlong SF_java_util_zip_ZipConstants_LOCSIG;
+extern jlong SF_java_util_zip_ZipConstants_EXTSIG;
+extern jlong SF_java_util_zip_ZipConstants_CENSIG;
+extern jlong SF_java_util_zip_ZipConstants_ENDSIG;
+extern jint SF_java_util_zip_ZipConstants_LOCHDR;
+extern jint SF_java_util_zip_ZipConstants_EXTHDR;
+extern jint SF_java_util_zip_ZipConstants_CENHDR;
+extern jint SF_java_util_zip_ZipConstants_ENDHDR;
+extern jint SF_java_util_zip_ZipConstants_LOCVER;
+extern jint SF_java_util_zip_ZipConstants_LOCFLG;
+extern jint SF_java_util_zip_ZipConstants_LOCHOW;
+extern jint SF_java_util_zip_ZipConstants_LOCTIM;
+extern jint SF_java_util_zip_ZipConstants_LOCCRC;
+extern jint SF_java_util_zip_ZipConstants_LOCSIZ;
+extern jint SF_java_util_zip_ZipConstants_LOCLEN;
+extern jint SF_java_util_zip_ZipConstants_LOCNAM;
+extern jint SF_java_util_zip_ZipConstants_LOCEXT;
+extern jint SF_java_util_zip_ZipConstants_EXTCRC;
+extern jint SF_java_util_zip_ZipConstants_EXTSIZ;
+extern jint SF_java_util_zip_ZipConstants_EXTLEN;
+extern jint SF_java_util_zip_ZipConstants_CENVEM;
+extern jint SF_java_util_zip_ZipConstants_CENVER;
+extern jint SF_java_util_zip_ZipConstants_CENFLG;
+extern jint SF_java_util_zip_ZipConstants_CENHOW;
+extern jint SF_java_util_zip_ZipConstants_CENTIM;
+extern jint SF_java_util_zip_ZipConstants_CENCRC;
+extern jint SF_java_util_zip_ZipConstants_CENSIZ;
+extern jint SF_java_util_zip_ZipConstants_CENLEN;
+extern jint SF_java_util_zip_ZipConstants_CENNAM;
+extern jint SF_java_util_zip_ZipConstants_CENEXT;
+extern jint SF_java_util_zip_ZipConstants_CENCOM;
+extern jint SF_java_util_zip_ZipConstants_CENDSK;
+extern jint SF_java_util_zip_ZipConstants_CENATT;
+extern jint SF_java_util_zip_ZipConstants_CENATX;
+extern jint SF_java_util_zip_ZipConstants_CENOFF;
+extern jint SF_java_util_zip_ZipConstants_ENDSUB;
+extern jint SF_java_util_zip_ZipConstants_ENDTOT;
+extern jint SF_java_util_zip_ZipConstants_ENDSIZ;
+extern jint SF_java_util_zip_ZipConstants_ENDOFF;
+extern jint SF_java_util_zip_ZipConstants_ENDCOM;
+
+
+void mark_java_util_zip_ZipConstants(jobject object, jint mark, jint depth);
+void clinit_java_util_zip_ZipConstants(jcontext ctx);
+
+#ifdef __cplusplus
+}
+#endif
+
+#endif

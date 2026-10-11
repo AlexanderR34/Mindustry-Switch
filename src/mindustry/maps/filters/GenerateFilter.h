@@ -1,0 +1,105 @@
+#ifndef HEADER_mindustry_maps_filters_GenerateFilter
+#define HEADER_mindustry_maps_filters_GenerateFilter
+
+#include "Clearwing.h"
+#include "java/lang/Object.h"
+#include "java/lang/Cloneable.h"
+#include "arc/util/serialization/AllowSerialization.h"
+
+#ifdef __cplusplus
+extern "C" {
+#endif
+
+typedef struct mindustry_maps_filters_GenerateFilter {
+	java_lang_Object parent;
+	jint F_seed;
+} mindustry_maps_filters_GenerateFilter;
+
+extern Class class_mindustry_maps_filters_GenerateFilter;
+
+
+#define VTABLE_mindustry_maps_filters_GenerateFilter_hashCode_R_int 0
+typedef jint (*func_mindustry_maps_filters_GenerateFilter_hashCode_R_int)(jcontext ctx, jobject self);
+#define VTABLE_mindustry_maps_filters_GenerateFilter_equals_java_lang_Object_R_boolean 1
+typedef jbool (*func_mindustry_maps_filters_GenerateFilter_equals_java_lang_Object_R_boolean)(jcontext ctx, jobject self, jobject param0);
+#define VTABLE_mindustry_maps_filters_GenerateFilter_clone_R_java_lang_Object 2
+typedef jobject (*func_mindustry_maps_filters_GenerateFilter_clone_R_java_lang_Object)(jcontext ctx, jobject self);
+#define VTABLE_mindustry_maps_filters_GenerateFilter_getClass_R_java_lang_Class 3
+typedef jobject (*func_mindustry_maps_filters_GenerateFilter_getClass_R_java_lang_Class)(jcontext ctx, jobject self);
+#define VTABLE_mindustry_maps_filters_GenerateFilter_toString_R_java_lang_String 4
+typedef jobject (*func_mindustry_maps_filters_GenerateFilter_toString_R_java_lang_String)(jcontext ctx, jobject self);
+#define VTABLE_mindustry_maps_filters_GenerateFilter_finalize 5
+typedef void (*func_mindustry_maps_filters_GenerateFilter_finalize)(jcontext ctx, jobject self);
+#define VTABLE_mindustry_maps_filters_GenerateFilter_notify 6
+typedef void (*func_mindustry_maps_filters_GenerateFilter_notify)(jcontext ctx, jobject self);
+#define VTABLE_mindustry_maps_filters_GenerateFilter_notifyAll 7
+typedef void (*func_mindustry_maps_filters_GenerateFilter_notifyAll)(jcontext ctx, jobject self);
+#define VTABLE_mindustry_maps_filters_GenerateFilter_wait 8
+typedef void (*func_mindustry_maps_filters_GenerateFilter_wait)(jcontext ctx, jobject self);
+#define VTABLE_mindustry_maps_filters_GenerateFilter_wait_long 9
+typedef void (*func_mindustry_maps_filters_GenerateFilter_wait_long)(jcontext ctx, jobject self, jlong param0);
+#define VTABLE_mindustry_maps_filters_GenerateFilter_wait_long_int 10
+typedef void (*func_mindustry_maps_filters_GenerateFilter_wait_long_int)(jcontext ctx, jobject self, jlong param0, jint param1);
+#define VTABLE_mindustry_maps_filters_GenerateFilter_apply_mindustry_world_Tiles_mindustry_maps_filters_GenerateFilter$GenerateInput 11
+typedef void (*func_mindustry_maps_filters_GenerateFilter_apply_mindustry_world_Tiles_mindustry_maps_filters_GenerateFilter$GenerateInput)(jcontext ctx, jobject self, jobject param0, jobject param1);
+#define VTABLE_mindustry_maps_filters_GenerateFilter_options_R_Array1_mindustry_maps_filters_FilterOption 12
+typedef jobject (*func_mindustry_maps_filters_GenerateFilter_options_R_Array1_mindustry_maps_filters_FilterOption)(jcontext ctx, jobject self);
+#define VTABLE_mindustry_maps_filters_GenerateFilter_apply_mindustry_maps_filters_GenerateFilter$GenerateInput 13
+typedef void (*func_mindustry_maps_filters_GenerateFilter_apply_mindustry_maps_filters_GenerateFilter$GenerateInput)(jcontext ctx, jobject self, jobject param0);
+#define VTABLE_mindustry_maps_filters_GenerateFilter_draw_arc_scene_ui_Image 14
+typedef void (*func_mindustry_maps_filters_GenerateFilter_draw_arc_scene_ui_Image)(jcontext ctx, jobject self, jobject param0);
+#define VTABLE_mindustry_maps_filters_GenerateFilter_simpleName_R_java_lang_String 15
+typedef jobject (*func_mindustry_maps_filters_GenerateFilter_simpleName_R_java_lang_String)(jcontext ctx, jobject self);
+#define VTABLE_mindustry_maps_filters_GenerateFilter_name_R_java_lang_String 16
+typedef jobject (*func_mindustry_maps_filters_GenerateFilter_name_R_java_lang_String)(jcontext ctx, jobject self);
+#define VTABLE_mindustry_maps_filters_GenerateFilter_icon_R_char 17
+typedef jchar (*func_mindustry_maps_filters_GenerateFilter_icon_R_char)(jcontext ctx, jobject self);
+#define VTABLE_mindustry_maps_filters_GenerateFilter_randomize 18
+typedef void (*func_mindustry_maps_filters_GenerateFilter_randomize)(jcontext ctx, jobject self);
+#define VTABLE_mindustry_maps_filters_GenerateFilter_isBuffered_R_boolean 19
+typedef jbool (*func_mindustry_maps_filters_GenerateFilter_isBuffered_R_boolean)(jcontext ctx, jobject self);
+#define VTABLE_mindustry_maps_filters_GenerateFilter_isPost_R_boolean 20
+typedef jbool (*func_mindustry_maps_filters_GenerateFilter_isPost_R_boolean)(jcontext ctx, jobject self);
+#define VTABLE_mindustry_maps_filters_GenerateFilter_noise_int_mindustry_maps_filters_GenerateFilter$GenerateInput_float_float_R_float 21
+typedef jfloat (*func_mindustry_maps_filters_GenerateFilter_noise_int_mindustry_maps_filters_GenerateFilter$GenerateInput_float_float_R_float)(jcontext ctx, jobject self, jint param0, jobject param1, jfloat param2, jfloat param3);
+#define VTABLE_mindustry_maps_filters_GenerateFilter_noise_mindustry_maps_filters_GenerateFilter$GenerateInput_float_float_R_float 22
+typedef jfloat (*func_mindustry_maps_filters_GenerateFilter_noise_mindustry_maps_filters_GenerateFilter$GenerateInput_float_float_R_float)(jcontext ctx, jobject self, jobject param0, jfloat param1, jfloat param2);
+#define VTABLE_mindustry_maps_filters_GenerateFilter_noise_mindustry_maps_filters_GenerateFilter$GenerateInput_float_float_float_float_R_float 23
+typedef jfloat (*func_mindustry_maps_filters_GenerateFilter_noise_mindustry_maps_filters_GenerateFilter$GenerateInput_float_float_float_float_R_float)(jcontext ctx, jobject self, jobject param0, jfloat param1, jfloat param2, jfloat param3, jfloat param4);
+#define VTABLE_mindustry_maps_filters_GenerateFilter_noise_float_float_float_float_float_float_R_float 24
+typedef jfloat (*func_mindustry_maps_filters_GenerateFilter_noise_float_float_float_float_float_float_R_float)(jcontext ctx, jobject self, jfloat param0, jfloat param1, jfloat param2, jfloat param3, jfloat param4, jfloat param5);
+#define VTABLE_mindustry_maps_filters_GenerateFilter_rnoise_float_float_float_float_R_float 25
+typedef jfloat (*func_mindustry_maps_filters_GenerateFilter_rnoise_float_float_float_float_R_float)(jcontext ctx, jobject self, jfloat param0, jfloat param1, jfloat param2, jfloat param3);
+#define VTABLE_mindustry_maps_filters_GenerateFilter_rnoise_float_float_int_float_float_float_R_float 26
+typedef jfloat (*func_mindustry_maps_filters_GenerateFilter_rnoise_float_float_int_float_float_float_R_float)(jcontext ctx, jobject self, jfloat param0, jfloat param1, jint param2, jfloat param3, jfloat param4, jfloat param5);
+#define VTABLE_mindustry_maps_filters_GenerateFilter_chance_int_int_R_float 27
+typedef jfloat (*func_mindustry_maps_filters_GenerateFilter_chance_int_int_R_float)(jcontext ctx, jobject self, jint param0, jint param1);
+#define VTABLE_mindustry_maps_filters_GenerateFilter_copy_R_mindustry_maps_filters_GenerateFilter 28
+typedef jobject (*func_mindustry_maps_filters_GenerateFilter_copy_R_mindustry_maps_filters_GenerateFilter)(jcontext ctx, jobject self);
+
+void mark_mindustry_maps_filters_GenerateFilter(jobject object, jint mark, jint depth);
+void clinit_mindustry_maps_filters_GenerateFilter(jcontext ctx);
+void init_mindustry_maps_filters_GenerateFilter(jcontext ctx, jobject self);
+void M_mindustry_maps_filters_GenerateFilter_apply_mindustry_world_Tiles_mindustry_maps_filters_GenerateFilter$GenerateInput(jcontext ctx, jobject self, jobject param0, jobject param1);
+void M_mindustry_maps_filters_GenerateFilter_apply_mindustry_maps_filters_GenerateFilter$GenerateInput(jcontext ctx, jobject self, jobject param0);
+void M_mindustry_maps_filters_GenerateFilter_draw_arc_scene_ui_Image(jcontext ctx, jobject self, jobject param0);
+jobject M_mindustry_maps_filters_GenerateFilter_simpleName_R_java_lang_String(jcontext ctx, jobject self);
+jobject M_mindustry_maps_filters_GenerateFilter_name_R_java_lang_String(jcontext ctx, jobject self);
+jchar M_mindustry_maps_filters_GenerateFilter_icon_R_char(jcontext ctx, jobject self);
+void M_mindustry_maps_filters_GenerateFilter_randomize(jcontext ctx, jobject self);
+jbool M_mindustry_maps_filters_GenerateFilter_isBuffered_R_boolean(jcontext ctx, jobject self);
+jbool M_mindustry_maps_filters_GenerateFilter_isPost_R_boolean(jcontext ctx, jobject self);
+jfloat M_mindustry_maps_filters_GenerateFilter_noise_int_mindustry_maps_filters_GenerateFilter$GenerateInput_float_float_R_float(jcontext ctx, jobject self, jint param0, jobject param1, jfloat param2, jfloat param3);
+jfloat M_mindustry_maps_filters_GenerateFilter_noise_mindustry_maps_filters_GenerateFilter$GenerateInput_float_float_R_float(jcontext ctx, jobject self, jobject param0, jfloat param1, jfloat param2);
+jfloat M_mindustry_maps_filters_GenerateFilter_noise_mindustry_maps_filters_GenerateFilter$GenerateInput_float_float_float_float_R_float(jcontext ctx, jobject self, jobject param0, jfloat param1, jfloat param2, jfloat param3, jfloat param4);
+jfloat M_mindustry_maps_filters_GenerateFilter_noise_float_float_float_float_float_float_R_float(jcontext ctx, jobject self, jfloat param0, jfloat param1, jfloat param2, jfloat param3, jfloat param4, jfloat param5);
+jfloat M_mindustry_maps_filters_GenerateFilter_rnoise_float_float_float_float_R_float(jcontext ctx, jobject self, jfloat param0, jfloat param1, jfloat param2, jfloat param3);
+jfloat M_mindustry_maps_filters_GenerateFilter_rnoise_float_float_int_float_float_float_R_float(jcontext ctx, jobject self, jfloat param0, jfloat param1, jint param2, jfloat param3, jfloat param4, jfloat param5);
+jfloat M_mindustry_maps_filters_GenerateFilter_chance_int_int_R_float(jcontext ctx, jobject self, jint param0, jint param1);
+jobject M_mindustry_maps_filters_GenerateFilter_copy_R_mindustry_maps_filters_GenerateFilter(jcontext ctx, jobject self);
+
+#ifdef __cplusplus
+}
+#endif
+
+#endif

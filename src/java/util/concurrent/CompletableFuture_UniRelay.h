@@ -1,0 +1,140 @@
+#ifndef HEADER_java_util_concurrent_CompletableFuture$UniRelay
+#define HEADER_java_util_concurrent_CompletableFuture$UniRelay
+
+#include "Clearwing.h"
+#include "java/util/concurrent/CompletableFuture_UniCompletion.h"
+
+#ifdef __cplusplus
+extern "C" {
+#endif
+
+typedef struct java_util_concurrent_CompletableFuture$UniRelay {
+	java_util_concurrent_CompletableFuture$UniCompletion parent;
+} java_util_concurrent_CompletableFuture$UniRelay;
+
+extern Class class_java_util_concurrent_CompletableFuture$UniRelay;
+
+
+#define VTABLE_java_util_concurrent_CompletableFuture$UniRelay_hashCode_R_int 0
+typedef jint (*func_java_util_concurrent_CompletableFuture$UniRelay_hashCode_R_int)(jcontext ctx, jobject self);
+#define VTABLE_java_util_concurrent_CompletableFuture$UniRelay_equals_java_lang_Object_R_boolean 1
+typedef jbool (*func_java_util_concurrent_CompletableFuture$UniRelay_equals_java_lang_Object_R_boolean)(jcontext ctx, jobject self, jobject param0);
+#define VTABLE_java_util_concurrent_CompletableFuture$UniRelay_clone_R_java_lang_Object 2
+typedef jobject (*func_java_util_concurrent_CompletableFuture$UniRelay_clone_R_java_lang_Object)(jcontext ctx, jobject self);
+#define VTABLE_java_util_concurrent_CompletableFuture$UniRelay_getClass_R_java_lang_Class 3
+typedef jobject (*func_java_util_concurrent_CompletableFuture$UniRelay_getClass_R_java_lang_Class)(jcontext ctx, jobject self);
+#define VTABLE_java_util_concurrent_CompletableFuture$UniRelay_toString_R_java_lang_String 4
+typedef jobject (*func_java_util_concurrent_CompletableFuture$UniRelay_toString_R_java_lang_String)(jcontext ctx, jobject self);
+#define VTABLE_java_util_concurrent_CompletableFuture$UniRelay_finalize 5
+typedef void (*func_java_util_concurrent_CompletableFuture$UniRelay_finalize)(jcontext ctx, jobject self);
+#define VTABLE_java_util_concurrent_CompletableFuture$UniRelay_notify 6
+typedef void (*func_java_util_concurrent_CompletableFuture$UniRelay_notify)(jcontext ctx, jobject self);
+#define VTABLE_java_util_concurrent_CompletableFuture$UniRelay_notifyAll 7
+typedef void (*func_java_util_concurrent_CompletableFuture$UniRelay_notifyAll)(jcontext ctx, jobject self);
+#define VTABLE_java_util_concurrent_CompletableFuture$UniRelay_wait 8
+typedef void (*func_java_util_concurrent_CompletableFuture$UniRelay_wait)(jcontext ctx, jobject self);
+#define VTABLE_java_util_concurrent_CompletableFuture$UniRelay_wait_long 9
+typedef void (*func_java_util_concurrent_CompletableFuture$UniRelay_wait_long)(jcontext ctx, jobject self, jlong param0);
+#define VTABLE_java_util_concurrent_CompletableFuture$UniRelay_wait_long_int 10
+typedef void (*func_java_util_concurrent_CompletableFuture$UniRelay_wait_long_int)(jcontext ctx, jobject self, jlong param0, jint param1);
+#define VTABLE_java_util_concurrent_CompletableFuture$UniRelay_cancel_boolean_R_boolean 11
+typedef jbool (*func_java_util_concurrent_CompletableFuture$UniRelay_cancel_boolean_R_boolean)(jcontext ctx, jobject self, jbool param0);
+#define VTABLE_java_util_concurrent_CompletableFuture$UniRelay_isCancelled_R_boolean 12
+typedef jbool (*func_java_util_concurrent_CompletableFuture$UniRelay_isCancelled_R_boolean)(jcontext ctx, jobject self);
+#define VTABLE_java_util_concurrent_CompletableFuture$UniRelay_isDone_R_boolean 13
+typedef jbool (*func_java_util_concurrent_CompletableFuture$UniRelay_isDone_R_boolean)(jcontext ctx, jobject self);
+#define VTABLE_java_util_concurrent_CompletableFuture$UniRelay_get_R_java_lang_Object 14
+typedef jobject (*func_java_util_concurrent_CompletableFuture$UniRelay_get_R_java_lang_Object)(jcontext ctx, jobject self);
+#define VTABLE_java_util_concurrent_CompletableFuture$UniRelay_get_long_java_util_concurrent_TimeUnit_R_java_lang_Object 15
+typedef jobject (*func_java_util_concurrent_CompletableFuture$UniRelay_get_long_java_util_concurrent_TimeUnit_R_java_lang_Object)(jcontext ctx, jobject self, jlong param0, jobject param1);
+#define VTABLE_java_util_concurrent_CompletableFuture$UniRelay_setCompletion_int_R_int 16
+typedef jint (*func_java_util_concurrent_CompletableFuture$UniRelay_setCompletion_int_R_int)(jcontext ctx, jobject self, jint param0);
+#define VTABLE_java_util_concurrent_CompletableFuture$UniRelay_doExec_R_int 17
+typedef jint (*func_java_util_concurrent_CompletableFuture$UniRelay_doExec_R_int)(jcontext ctx, jobject self);
+#define VTABLE_java_util_concurrent_CompletableFuture$UniRelay_internalWait_long 18
+typedef void (*func_java_util_concurrent_CompletableFuture$UniRelay_internalWait_long)(jcontext ctx, jobject self, jlong param0);
+#define VTABLE_java_util_concurrent_CompletableFuture$UniRelay_externalAwaitDone_R_int 19
+typedef jint (*func_java_util_concurrent_CompletableFuture$UniRelay_externalAwaitDone_R_int)(jcontext ctx, jobject self);
+#define VTABLE_java_util_concurrent_CompletableFuture$UniRelay_externalInterruptibleAwaitDone_R_int 20
+typedef jint (*func_java_util_concurrent_CompletableFuture$UniRelay_externalInterruptibleAwaitDone_R_int)(jcontext ctx, jobject self);
+#define VTABLE_java_util_concurrent_CompletableFuture$UniRelay_doJoin_R_int 21
+typedef jint (*func_java_util_concurrent_CompletableFuture$UniRelay_doJoin_R_int)(jcontext ctx, jobject self);
+#define VTABLE_java_util_concurrent_CompletableFuture$UniRelay_doInvoke_R_int 22
+typedef jint (*func_java_util_concurrent_CompletableFuture$UniRelay_doInvoke_R_int)(jcontext ctx, jobject self);
+#define VTABLE_java_util_concurrent_CompletableFuture$UniRelay_recordExceptionalCompletion_java_lang_Throwable_R_int 23
+typedef jint (*func_java_util_concurrent_CompletableFuture$UniRelay_recordExceptionalCompletion_java_lang_Throwable_R_int)(jcontext ctx, jobject self, jobject param0);
+#define VTABLE_java_util_concurrent_CompletableFuture$UniRelay_setExceptionalCompletion_java_lang_Throwable_R_int 24
+typedef jint (*func_java_util_concurrent_CompletableFuture$UniRelay_setExceptionalCompletion_java_lang_Throwable_R_int)(jcontext ctx, jobject self, jobject param0);
+#define VTABLE_java_util_concurrent_CompletableFuture$UniRelay_internalPropagateException_java_lang_Throwable 25
+typedef void (*func_java_util_concurrent_CompletableFuture$UniRelay_internalPropagateException_java_lang_Throwable)(jcontext ctx, jobject self, jobject param0);
+#define VTABLE_java_util_concurrent_CompletableFuture$UniRelay_clearExceptionalCompletion 26
+typedef void (*func_java_util_concurrent_CompletableFuture$UniRelay_clearExceptionalCompletion)(jcontext ctx, jobject self);
+#define VTABLE_java_util_concurrent_CompletableFuture$UniRelay_getThrowableException_R_java_lang_Throwable 27
+typedef jobject (*func_java_util_concurrent_CompletableFuture$UniRelay_getThrowableException_R_java_lang_Throwable)(jcontext ctx, jobject self);
+#define VTABLE_java_util_concurrent_CompletableFuture$UniRelay_reportException_int 28
+typedef void (*func_java_util_concurrent_CompletableFuture$UniRelay_reportException_int)(jcontext ctx, jobject self, jint param0);
+#define VTABLE_java_util_concurrent_CompletableFuture$UniRelay_fork_R_java_util_concurrent_ForkJoinTask 29
+typedef jobject (*func_java_util_concurrent_CompletableFuture$UniRelay_fork_R_java_util_concurrent_ForkJoinTask)(jcontext ctx, jobject self);
+#define VTABLE_java_util_concurrent_CompletableFuture$UniRelay_join_R_java_lang_Object 30
+typedef jobject (*func_java_util_concurrent_CompletableFuture$UniRelay_join_R_java_lang_Object)(jcontext ctx, jobject self);
+#define VTABLE_java_util_concurrent_CompletableFuture$UniRelay_invoke_R_java_lang_Object 31
+typedef jobject (*func_java_util_concurrent_CompletableFuture$UniRelay_invoke_R_java_lang_Object)(jcontext ctx, jobject self);
+#define VTABLE_java_util_concurrent_CompletableFuture$UniRelay_isCompletedAbnormally_R_boolean 32
+typedef jbool (*func_java_util_concurrent_CompletableFuture$UniRelay_isCompletedAbnormally_R_boolean)(jcontext ctx, jobject self);
+#define VTABLE_java_util_concurrent_CompletableFuture$UniRelay_isCompletedNormally_R_boolean 33
+typedef jbool (*func_java_util_concurrent_CompletableFuture$UniRelay_isCompletedNormally_R_boolean)(jcontext ctx, jobject self);
+#define VTABLE_java_util_concurrent_CompletableFuture$UniRelay_getException_R_java_lang_Throwable 34
+typedef jobject (*func_java_util_concurrent_CompletableFuture$UniRelay_getException_R_java_lang_Throwable)(jcontext ctx, jobject self);
+#define VTABLE_java_util_concurrent_CompletableFuture$UniRelay_completeExceptionally_java_lang_Throwable 35
+typedef void (*func_java_util_concurrent_CompletableFuture$UniRelay_completeExceptionally_java_lang_Throwable)(jcontext ctx, jobject self, jobject param0);
+#define VTABLE_java_util_concurrent_CompletableFuture$UniRelay_complete_java_lang_Object 36
+typedef void (*func_java_util_concurrent_CompletableFuture$UniRelay_complete_java_lang_Object)(jcontext ctx, jobject self, jobject param0);
+#define VTABLE_java_util_concurrent_CompletableFuture$UniRelay_quietlyComplete 37
+typedef void (*func_java_util_concurrent_CompletableFuture$UniRelay_quietlyComplete)(jcontext ctx, jobject self);
+#define VTABLE_java_util_concurrent_CompletableFuture$UniRelay_quietlyJoin 38
+typedef void (*func_java_util_concurrent_CompletableFuture$UniRelay_quietlyJoin)(jcontext ctx, jobject self);
+#define VTABLE_java_util_concurrent_CompletableFuture$UniRelay_quietlyInvoke 39
+typedef void (*func_java_util_concurrent_CompletableFuture$UniRelay_quietlyInvoke)(jcontext ctx, jobject self);
+#define VTABLE_java_util_concurrent_CompletableFuture$UniRelay_reinitialize 40
+typedef void (*func_java_util_concurrent_CompletableFuture$UniRelay_reinitialize)(jcontext ctx, jobject self);
+#define VTABLE_java_util_concurrent_CompletableFuture$UniRelay_tryUnfork_R_boolean 41
+typedef jbool (*func_java_util_concurrent_CompletableFuture$UniRelay_tryUnfork_R_boolean)(jcontext ctx, jobject self);
+#define VTABLE_java_util_concurrent_CompletableFuture$UniRelay_getRawResult_R_java_lang_Object 42
+typedef jobject (*func_java_util_concurrent_CompletableFuture$UniRelay_getRawResult_R_java_lang_Object)(jcontext ctx, jobject self);
+#define VTABLE_java_util_concurrent_CompletableFuture$UniRelay_setRawResult_java_lang_Object 43
+typedef void (*func_java_util_concurrent_CompletableFuture$UniRelay_setRawResult_java_lang_Object)(jcontext ctx, jobject self, jobject param0);
+#define VTABLE_java_util_concurrent_CompletableFuture$UniRelay_exec_R_boolean 44
+typedef jbool (*func_java_util_concurrent_CompletableFuture$UniRelay_exec_R_boolean)(jcontext ctx, jobject self);
+#define VTABLE_java_util_concurrent_CompletableFuture$UniRelay_getForkJoinTaskTag_R_short 45
+typedef jshort (*func_java_util_concurrent_CompletableFuture$UniRelay_getForkJoinTaskTag_R_short)(jcontext ctx, jobject self);
+#define VTABLE_java_util_concurrent_CompletableFuture$UniRelay_setForkJoinTaskTag_short_R_short 46
+typedef jshort (*func_java_util_concurrent_CompletableFuture$UniRelay_setForkJoinTaskTag_short_R_short)(jcontext ctx, jobject self, jshort param0);
+#define VTABLE_java_util_concurrent_CompletableFuture$UniRelay_compareAndSetForkJoinTaskTag_short_short_R_boolean 47
+typedef jbool (*func_java_util_concurrent_CompletableFuture$UniRelay_compareAndSetForkJoinTaskTag_short_short_R_boolean)(jcontext ctx, jobject self, jshort param0, jshort param1);
+#define VTABLE_java_util_concurrent_CompletableFuture$UniRelay_writeObject_java_io_ObjectOutputStream 48
+typedef void (*func_java_util_concurrent_CompletableFuture$UniRelay_writeObject_java_io_ObjectOutputStream)(jcontext ctx, jobject self, jobject param0);
+#define VTABLE_java_util_concurrent_CompletableFuture$UniRelay_readObject_java_io_ObjectInputStream 49
+typedef void (*func_java_util_concurrent_CompletableFuture$UniRelay_readObject_java_io_ObjectInputStream)(jcontext ctx, jobject self, jobject param0);
+#define VTABLE_java_util_concurrent_CompletableFuture$UniRelay_run 50
+typedef void (*func_java_util_concurrent_CompletableFuture$UniRelay_run)(jcontext ctx, jobject self);
+#define VTABLE_java_util_concurrent_CompletableFuture$UniRelay_tryFire_int_R_java_util_concurrent_CompletableFuture 51
+typedef jobject (*func_java_util_concurrent_CompletableFuture$UniRelay_tryFire_int_R_java_util_concurrent_CompletableFuture)(jcontext ctx, jobject self, jint param0);
+#define VTABLE_java_util_concurrent_CompletableFuture$UniRelay_isLive_R_boolean 52
+typedef jbool (*func_java_util_concurrent_CompletableFuture$UniRelay_isLive_R_boolean)(jcontext ctx, jobject self);
+#define VTABLE_java_util_concurrent_CompletableFuture$UniRelay_getRawResult_R_java_lang_Void 53
+typedef jobject (*func_java_util_concurrent_CompletableFuture$UniRelay_getRawResult_R_java_lang_Void)(jcontext ctx, jobject self);
+#define VTABLE_java_util_concurrent_CompletableFuture$UniRelay_setRawResult_java_lang_Void 54
+typedef void (*func_java_util_concurrent_CompletableFuture$UniRelay_setRawResult_java_lang_Void)(jcontext ctx, jobject self, jobject param0);
+#define VTABLE_java_util_concurrent_CompletableFuture$UniRelay_claim_R_boolean 55
+typedef jbool (*func_java_util_concurrent_CompletableFuture$UniRelay_claim_R_boolean)(jcontext ctx, jobject self);
+
+void mark_java_util_concurrent_CompletableFuture$UniRelay(jobject object, jint mark, jint depth);
+void clinit_java_util_concurrent_CompletableFuture$UniRelay(jcontext ctx);
+void init_java_util_concurrent_CompletableFuture$UniRelay_java_util_concurrent_CompletableFuture_java_util_concurrent_CompletableFuture(jcontext ctx, jobject self, jobject param0, jobject param1);
+jobject M_java_util_concurrent_CompletableFuture$UniRelay_tryFire_int_R_java_util_concurrent_CompletableFuture(jcontext ctx, jobject self, jint param0);
+
+#ifdef __cplusplus
+}
+#endif
+
+#endif

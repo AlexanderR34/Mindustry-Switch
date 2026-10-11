@@ -1,0 +1,64 @@
+#ifndef HEADER_java_nio_channels_Channels
+#define HEADER_java_nio_channels_Channels
+
+#include "Clearwing.h"
+#include "java/lang/Object.h"
+
+#ifdef __cplusplus
+extern "C" {
+#endif
+
+typedef struct java_nio_channels_Channels {
+	java_lang_Object parent;
+} java_nio_channels_Channels;
+
+extern Class class_java_nio_channels_Channels;
+
+
+#define VTABLE_java_nio_channels_Channels_hashCode_R_int 0
+typedef jint (*func_java_nio_channels_Channels_hashCode_R_int)(jcontext ctx, jobject self);
+#define VTABLE_java_nio_channels_Channels_equals_java_lang_Object_R_boolean 1
+typedef jbool (*func_java_nio_channels_Channels_equals_java_lang_Object_R_boolean)(jcontext ctx, jobject self, jobject param0);
+#define VTABLE_java_nio_channels_Channels_clone_R_java_lang_Object 2
+typedef jobject (*func_java_nio_channels_Channels_clone_R_java_lang_Object)(jcontext ctx, jobject self);
+#define VTABLE_java_nio_channels_Channels_getClass_R_java_lang_Class 3
+typedef jobject (*func_java_nio_channels_Channels_getClass_R_java_lang_Class)(jcontext ctx, jobject self);
+#define VTABLE_java_nio_channels_Channels_toString_R_java_lang_String 4
+typedef jobject (*func_java_nio_channels_Channels_toString_R_java_lang_String)(jcontext ctx, jobject self);
+#define VTABLE_java_nio_channels_Channels_finalize 5
+typedef void (*func_java_nio_channels_Channels_finalize)(jcontext ctx, jobject self);
+#define VTABLE_java_nio_channels_Channels_notify 6
+typedef void (*func_java_nio_channels_Channels_notify)(jcontext ctx, jobject self);
+#define VTABLE_java_nio_channels_Channels_notifyAll 7
+typedef void (*func_java_nio_channels_Channels_notifyAll)(jcontext ctx, jobject self);
+#define VTABLE_java_nio_channels_Channels_wait 8
+typedef void (*func_java_nio_channels_Channels_wait)(jcontext ctx, jobject self);
+#define VTABLE_java_nio_channels_Channels_wait_long 9
+typedef void (*func_java_nio_channels_Channels_wait_long)(jcontext ctx, jobject self, jlong param0);
+#define VTABLE_java_nio_channels_Channels_wait_long_int 10
+typedef void (*func_java_nio_channels_Channels_wait_long_int)(jcontext ctx, jobject self, jlong param0, jint param1);
+
+void mark_java_nio_channels_Channels(jobject object, jint mark, jint depth);
+void clinit_java_nio_channels_Channels(jcontext ctx);
+void init_java_nio_channels_Channels(jcontext ctx, jobject self);
+void SM_java_nio_channels_Channels_writeFullyImpl_java_nio_channels_WritableByteChannel_java_nio_ByteBuffer(jcontext ctx, jobject param0, jobject param1);
+void SM_java_nio_channels_Channels_writeFully_java_nio_channels_WritableByteChannel_java_nio_ByteBuffer(jcontext ctx, jobject param0, jobject param1);
+jobject SM_java_nio_channels_Channels_newInputStream_java_nio_channels_ReadableByteChannel_R_java_io_InputStream(jcontext ctx, jobject param0);
+jobject SM_java_nio_channels_Channels_newOutputStream_java_nio_channels_WritableByteChannel_R_java_io_OutputStream(jcontext ctx, jobject param0);
+jobject SM_java_nio_channels_Channels_newInputStream_java_nio_channels_AsynchronousByteChannel_R_java_io_InputStream(jcontext ctx, jobject param0);
+jobject SM_java_nio_channels_Channels_newOutputStream_java_nio_channels_AsynchronousByteChannel_R_java_io_OutputStream(jcontext ctx, jobject param0);
+jobject SM_java_nio_channels_Channels_newChannel_java_io_InputStream_R_java_nio_channels_ReadableByteChannel(jcontext ctx, jobject param0);
+jobject SM_java_nio_channels_Channels_newChannel_java_io_OutputStream_R_java_nio_channels_WritableByteChannel(jcontext ctx, jobject param0);
+jobject SM_java_nio_channels_Channels_newReader_java_nio_channels_ReadableByteChannel_java_nio_charset_CharsetDecoder_int_R_java_io_Reader(jcontext ctx, jobject param0, jobject param1, jint param2);
+jobject SM_java_nio_channels_Channels_newReader_java_nio_channels_ReadableByteChannel_java_lang_String_R_java_io_Reader(jcontext ctx, jobject param0, jobject param1);
+jobject SM_java_nio_channels_Channels_newReader_java_nio_channels_ReadableByteChannel_java_nio_charset_Charset_R_java_io_Reader(jcontext ctx, jobject param0, jobject param1);
+jobject SM_java_nio_channels_Channels_newWriter_java_nio_channels_WritableByteChannel_java_nio_charset_CharsetEncoder_int_R_java_io_Writer(jcontext ctx, jobject param0, jobject param1, jint param2);
+jobject SM_java_nio_channels_Channels_newWriter_java_nio_channels_WritableByteChannel_java_lang_String_R_java_io_Writer(jcontext ctx, jobject param0, jobject param1);
+jobject SM_java_nio_channels_Channels_newWriter_java_nio_channels_WritableByteChannel_java_nio_charset_Charset_R_java_io_Writer(jcontext ctx, jobject param0, jobject param1);
+void SM_java_nio_channels_Channels_access$000_java_nio_channels_WritableByteChannel_java_nio_ByteBuffer(jcontext ctx, jobject param0, jobject param1);
+
+#ifdef __cplusplus
+}
+#endif
+
+#endif

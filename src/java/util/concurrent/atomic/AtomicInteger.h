@@ -1,0 +1,105 @@
+#ifndef HEADER_java_util_concurrent_atomic_AtomicInteger
+#define HEADER_java_util_concurrent_atomic_AtomicInteger
+
+#include "Clearwing.h"
+#include "java/lang/Number.h"
+#include "java/io/Serializable.h"
+
+#ifdef __cplusplus
+extern "C" {
+#endif
+
+typedef struct java_util_concurrent_atomic_AtomicInteger {
+	java_lang_Number parent;
+	volatile jint F_value;
+} java_util_concurrent_atomic_AtomicInteger;
+
+extern Class class_java_util_concurrent_atomic_AtomicInteger;
+
+
+#define VTABLE_java_util_concurrent_atomic_AtomicInteger_hashCode_R_int 0
+typedef jint (*func_java_util_concurrent_atomic_AtomicInteger_hashCode_R_int)(jcontext ctx, jobject self);
+#define VTABLE_java_util_concurrent_atomic_AtomicInteger_equals_java_lang_Object_R_boolean 1
+typedef jbool (*func_java_util_concurrent_atomic_AtomicInteger_equals_java_lang_Object_R_boolean)(jcontext ctx, jobject self, jobject param0);
+#define VTABLE_java_util_concurrent_atomic_AtomicInteger_clone_R_java_lang_Object 2
+typedef jobject (*func_java_util_concurrent_atomic_AtomicInteger_clone_R_java_lang_Object)(jcontext ctx, jobject self);
+#define VTABLE_java_util_concurrent_atomic_AtomicInteger_getClass_R_java_lang_Class 3
+typedef jobject (*func_java_util_concurrent_atomic_AtomicInteger_getClass_R_java_lang_Class)(jcontext ctx, jobject self);
+#define VTABLE_java_util_concurrent_atomic_AtomicInteger_toString_R_java_lang_String 4
+typedef jobject (*func_java_util_concurrent_atomic_AtomicInteger_toString_R_java_lang_String)(jcontext ctx, jobject self);
+#define VTABLE_java_util_concurrent_atomic_AtomicInteger_finalize 5
+typedef void (*func_java_util_concurrent_atomic_AtomicInteger_finalize)(jcontext ctx, jobject self);
+#define VTABLE_java_util_concurrent_atomic_AtomicInteger_notify 6
+typedef void (*func_java_util_concurrent_atomic_AtomicInteger_notify)(jcontext ctx, jobject self);
+#define VTABLE_java_util_concurrent_atomic_AtomicInteger_notifyAll 7
+typedef void (*func_java_util_concurrent_atomic_AtomicInteger_notifyAll)(jcontext ctx, jobject self);
+#define VTABLE_java_util_concurrent_atomic_AtomicInteger_wait 8
+typedef void (*func_java_util_concurrent_atomic_AtomicInteger_wait)(jcontext ctx, jobject self);
+#define VTABLE_java_util_concurrent_atomic_AtomicInteger_wait_long 9
+typedef void (*func_java_util_concurrent_atomic_AtomicInteger_wait_long)(jcontext ctx, jobject self, jlong param0);
+#define VTABLE_java_util_concurrent_atomic_AtomicInteger_wait_long_int 10
+typedef void (*func_java_util_concurrent_atomic_AtomicInteger_wait_long_int)(jcontext ctx, jobject self, jlong param0, jint param1);
+#define VTABLE_java_util_concurrent_atomic_AtomicInteger_intValue_R_int 11
+typedef jint (*func_java_util_concurrent_atomic_AtomicInteger_intValue_R_int)(jcontext ctx, jobject self);
+#define VTABLE_java_util_concurrent_atomic_AtomicInteger_byteValue_R_byte 12
+typedef jbyte (*func_java_util_concurrent_atomic_AtomicInteger_byteValue_R_byte)(jcontext ctx, jobject self);
+#define VTABLE_java_util_concurrent_atomic_AtomicInteger_longValue_R_long 13
+typedef jlong (*func_java_util_concurrent_atomic_AtomicInteger_longValue_R_long)(jcontext ctx, jobject self);
+#define VTABLE_java_util_concurrent_atomic_AtomicInteger_floatValue_R_float 14
+typedef jfloat (*func_java_util_concurrent_atomic_AtomicInteger_floatValue_R_float)(jcontext ctx, jobject self);
+#define VTABLE_java_util_concurrent_atomic_AtomicInteger_doubleValue_R_double 15
+typedef jdouble (*func_java_util_concurrent_atomic_AtomicInteger_doubleValue_R_double)(jcontext ctx, jobject self);
+#define VTABLE_java_util_concurrent_atomic_AtomicInteger_shortValue_R_short 16
+typedef jshort (*func_java_util_concurrent_atomic_AtomicInteger_shortValue_R_short)(jcontext ctx, jobject self);
+#define VTABLE_java_util_concurrent_atomic_AtomicInteger_get_R_int 17
+typedef jint (*func_java_util_concurrent_atomic_AtomicInteger_get_R_int)(jcontext ctx, jobject self);
+#define VTABLE_java_util_concurrent_atomic_AtomicInteger_set_int 18
+typedef void (*func_java_util_concurrent_atomic_AtomicInteger_set_int)(jcontext ctx, jobject self, jint param0);
+#define VTABLE_java_util_concurrent_atomic_AtomicInteger_lazySet_int 19
+typedef void (*func_java_util_concurrent_atomic_AtomicInteger_lazySet_int)(jcontext ctx, jobject self, jint param0);
+#define VTABLE_java_util_concurrent_atomic_AtomicInteger_getAndSet_int_R_int 20
+typedef jint (*func_java_util_concurrent_atomic_AtomicInteger_getAndSet_int_R_int)(jcontext ctx, jobject self, jint param0);
+#define VTABLE_java_util_concurrent_atomic_AtomicInteger_compareAndSet_int_int_R_boolean 21
+typedef jbool (*func_java_util_concurrent_atomic_AtomicInteger_compareAndSet_int_int_R_boolean)(jcontext ctx, jobject self, jint param0, jint param1);
+#define VTABLE_java_util_concurrent_atomic_AtomicInteger_weakCompareAndSet_int_int_R_boolean 22
+typedef jbool (*func_java_util_concurrent_atomic_AtomicInteger_weakCompareAndSet_int_int_R_boolean)(jcontext ctx, jobject self, jint param0, jint param1);
+#define VTABLE_java_util_concurrent_atomic_AtomicInteger_getAndIncrement_R_int 23
+typedef jint (*func_java_util_concurrent_atomic_AtomicInteger_getAndIncrement_R_int)(jcontext ctx, jobject self);
+#define VTABLE_java_util_concurrent_atomic_AtomicInteger_getAndDecrement_R_int 24
+typedef jint (*func_java_util_concurrent_atomic_AtomicInteger_getAndDecrement_R_int)(jcontext ctx, jobject self);
+#define VTABLE_java_util_concurrent_atomic_AtomicInteger_getAndAdd_int_R_int 25
+typedef jint (*func_java_util_concurrent_atomic_AtomicInteger_getAndAdd_int_R_int)(jcontext ctx, jobject self, jint param0);
+#define VTABLE_java_util_concurrent_atomic_AtomicInteger_incrementAndGet_R_int 26
+typedef jint (*func_java_util_concurrent_atomic_AtomicInteger_incrementAndGet_R_int)(jcontext ctx, jobject self);
+#define VTABLE_java_util_concurrent_atomic_AtomicInteger_decrementAndGet_R_int 27
+typedef jint (*func_java_util_concurrent_atomic_AtomicInteger_decrementAndGet_R_int)(jcontext ctx, jobject self);
+#define VTABLE_java_util_concurrent_atomic_AtomicInteger_addAndGet_int_R_int 28
+typedef jint (*func_java_util_concurrent_atomic_AtomicInteger_addAndGet_int_R_int)(jcontext ctx, jobject self, jint param0);
+
+void mark_java_util_concurrent_atomic_AtomicInteger(jobject object, jint mark, jint depth);
+void clinit_java_util_concurrent_atomic_AtomicInteger(jcontext ctx);
+void init_java_util_concurrent_atomic_AtomicInteger_int(jcontext ctx, jobject self, jint param0);
+void init_java_util_concurrent_atomic_AtomicInteger(jcontext ctx, jobject self);
+jint M_java_util_concurrent_atomic_AtomicInteger_get_R_int(jcontext ctx, jobject self);
+void M_java_util_concurrent_atomic_AtomicInteger_set_int(jcontext ctx, jobject self, jint param0);
+void M_java_util_concurrent_atomic_AtomicInteger_lazySet_int(jcontext ctx, jobject self, jint param0);
+jint M_java_util_concurrent_atomic_AtomicInteger_getAndSet_int_R_int(jcontext ctx, jobject self, jint param0);
+jbool M_java_util_concurrent_atomic_AtomicInteger_compareAndSet_int_int_R_boolean(jcontext ctx, jobject self, jint param0, jint param1);
+jbool M_java_util_concurrent_atomic_AtomicInteger_weakCompareAndSet_int_int_R_boolean(jcontext ctx, jobject self, jint param0, jint param1);
+jint M_java_util_concurrent_atomic_AtomicInteger_getAndIncrement_R_int(jcontext ctx, jobject self);
+jint M_java_util_concurrent_atomic_AtomicInteger_getAndDecrement_R_int(jcontext ctx, jobject self);
+jint M_java_util_concurrent_atomic_AtomicInteger_getAndAdd_int_R_int(jcontext ctx, jobject self, jint param0);
+jint M_java_util_concurrent_atomic_AtomicInteger_incrementAndGet_R_int(jcontext ctx, jobject self);
+jint M_java_util_concurrent_atomic_AtomicInteger_decrementAndGet_R_int(jcontext ctx, jobject self);
+jint M_java_util_concurrent_atomic_AtomicInteger_addAndGet_int_R_int(jcontext ctx, jobject self, jint param0);
+jobject M_java_util_concurrent_atomic_AtomicInteger_toString_R_java_lang_String(jcontext ctx, jobject self);
+jint M_java_util_concurrent_atomic_AtomicInteger_intValue_R_int(jcontext ctx, jobject self);
+jlong M_java_util_concurrent_atomic_AtomicInteger_longValue_R_long(jcontext ctx, jobject self);
+jfloat M_java_util_concurrent_atomic_AtomicInteger_floatValue_R_float(jcontext ctx, jobject self);
+jdouble M_java_util_concurrent_atomic_AtomicInteger_doubleValue_R_double(jcontext ctx, jobject self);
+
+#ifdef __cplusplus
+}
+#endif
+
+#endif

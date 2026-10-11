@@ -1,0 +1,52 @@
+#ifndef HEADER_mindustry_ai_Pathfinder_invoke_mindustry_ai_Pathfinder$PathCost_2
+#define HEADER_mindustry_ai_Pathfinder_invoke_mindustry_ai_Pathfinder$PathCost_2
+
+#include "Clearwing.h"
+#include "java/lang/Object.h"
+#include "mindustry/ai/Pathfinder_PathCost.h"
+
+#ifdef __cplusplus
+extern "C" {
+#endif
+
+typedef struct mindustry_ai_Pathfinder_invoke_mindustry_ai_Pathfinder$PathCost_2 {
+	java_lang_Object parent;
+} mindustry_ai_Pathfinder_invoke_mindustry_ai_Pathfinder$PathCost_2;
+
+extern Class class_mindustry_ai_Pathfinder_invoke_mindustry_ai_Pathfinder$PathCost_2;
+
+
+#define VTABLE_mindustry_ai_Pathfinder_invoke_mindustry_ai_Pathfinder$PathCost_2_hashCode_R_int 0
+typedef jint (*func_mindustry_ai_Pathfinder_invoke_mindustry_ai_Pathfinder$PathCost_2_hashCode_R_int)(jcontext ctx, jobject self);
+#define VTABLE_mindustry_ai_Pathfinder_invoke_mindustry_ai_Pathfinder$PathCost_2_equals_java_lang_Object_R_boolean 1
+typedef jbool (*func_mindustry_ai_Pathfinder_invoke_mindustry_ai_Pathfinder$PathCost_2_equals_java_lang_Object_R_boolean)(jcontext ctx, jobject self, jobject param0);
+#define VTABLE_mindustry_ai_Pathfinder_invoke_mindustry_ai_Pathfinder$PathCost_2_clone_R_java_lang_Object 2
+typedef jobject (*func_mindustry_ai_Pathfinder_invoke_mindustry_ai_Pathfinder$PathCost_2_clone_R_java_lang_Object)(jcontext ctx, jobject self);
+#define VTABLE_mindustry_ai_Pathfinder_invoke_mindustry_ai_Pathfinder$PathCost_2_getClass_R_java_lang_Class 3
+typedef jobject (*func_mindustry_ai_Pathfinder_invoke_mindustry_ai_Pathfinder$PathCost_2_getClass_R_java_lang_Class)(jcontext ctx, jobject self);
+#define VTABLE_mindustry_ai_Pathfinder_invoke_mindustry_ai_Pathfinder$PathCost_2_toString_R_java_lang_String 4
+typedef jobject (*func_mindustry_ai_Pathfinder_invoke_mindustry_ai_Pathfinder$PathCost_2_toString_R_java_lang_String)(jcontext ctx, jobject self);
+#define VTABLE_mindustry_ai_Pathfinder_invoke_mindustry_ai_Pathfinder$PathCost_2_finalize 5
+typedef void (*func_mindustry_ai_Pathfinder_invoke_mindustry_ai_Pathfinder$PathCost_2_finalize)(jcontext ctx, jobject self);
+#define VTABLE_mindustry_ai_Pathfinder_invoke_mindustry_ai_Pathfinder$PathCost_2_notify 6
+typedef void (*func_mindustry_ai_Pathfinder_invoke_mindustry_ai_Pathfinder$PathCost_2_notify)(jcontext ctx, jobject self);
+#define VTABLE_mindustry_ai_Pathfinder_invoke_mindustry_ai_Pathfinder$PathCost_2_notifyAll 7
+typedef void (*func_mindustry_ai_Pathfinder_invoke_mindustry_ai_Pathfinder$PathCost_2_notifyAll)(jcontext ctx, jobject self);
+#define VTABLE_mindustry_ai_Pathfinder_invoke_mindustry_ai_Pathfinder$PathCost_2_wait 8
+typedef void (*func_mindustry_ai_Pathfinder_invoke_mindustry_ai_Pathfinder$PathCost_2_wait)(jcontext ctx, jobject self);
+#define VTABLE_mindustry_ai_Pathfinder_invoke_mindustry_ai_Pathfinder$PathCost_2_wait_long 9
+typedef void (*func_mindustry_ai_Pathfinder_invoke_mindustry_ai_Pathfinder$PathCost_2_wait_long)(jcontext ctx, jobject self, jlong param0);
+#define VTABLE_mindustry_ai_Pathfinder_invoke_mindustry_ai_Pathfinder$PathCost_2_wait_long_int 10
+typedef void (*func_mindustry_ai_Pathfinder_invoke_mindustry_ai_Pathfinder$PathCost_2_wait_long_int)(jcontext ctx, jobject self, jlong param0, jint param1);
+#define VTABLE_mindustry_ai_Pathfinder_invoke_mindustry_ai_Pathfinder$PathCost_2_getCost_int_int_R_int 11
+typedef jint (*func_mindustry_ai_Pathfinder_invoke_mindustry_ai_Pathfinder$PathCost_2_getCost_int_int_R_int)(jcontext ctx, jobject self, jint param0, jint param1);
+
+void mark_mindustry_ai_Pathfinder_invoke_mindustry_ai_Pathfinder$PathCost_2(jobject object, jint mark, jint depth);
+void clinit_mindustry_ai_Pathfinder_invoke_mindustry_ai_Pathfinder$PathCost_2(jcontext ctx);
+jint M_mindustry_ai_Pathfinder_invoke_mindustry_ai_Pathfinder$PathCost_2_getCost_int_int_R_int(jcontext ctx, jobject self, jint param0, jint param1);
+
+#ifdef __cplusplus
+}
+#endif
+
+#endif

@@ -1,0 +1,108 @@
+#ifndef HEADER_arc_scene_style_TextureRegionDrawable
+#define HEADER_arc_scene_style_TextureRegionDrawable
+
+#include "Clearwing.h"
+#include "arc/scene/style/BaseDrawable.h"
+#include "arc/scene/style/TransformDrawable.h"
+
+#ifdef __cplusplus
+extern "C" {
+#endif
+
+typedef struct arc_scene_style_TextureRegionDrawable {
+	arc_scene_style_BaseDrawable parent;
+	jref F_region;
+	jref F_tint;
+	jfloat F_scale;
+} arc_scene_style_TextureRegionDrawable;
+
+extern Class class_arc_scene_style_TextureRegionDrawable;
+
+
+#define VTABLE_arc_scene_style_TextureRegionDrawable_hashCode_R_int 0
+typedef jint (*func_arc_scene_style_TextureRegionDrawable_hashCode_R_int)(jcontext ctx, jobject self);
+#define VTABLE_arc_scene_style_TextureRegionDrawable_equals_java_lang_Object_R_boolean 1
+typedef jbool (*func_arc_scene_style_TextureRegionDrawable_equals_java_lang_Object_R_boolean)(jcontext ctx, jobject self, jobject param0);
+#define VTABLE_arc_scene_style_TextureRegionDrawable_clone_R_java_lang_Object 2
+typedef jobject (*func_arc_scene_style_TextureRegionDrawable_clone_R_java_lang_Object)(jcontext ctx, jobject self);
+#define VTABLE_arc_scene_style_TextureRegionDrawable_getClass_R_java_lang_Class 3
+typedef jobject (*func_arc_scene_style_TextureRegionDrawable_getClass_R_java_lang_Class)(jcontext ctx, jobject self);
+#define VTABLE_arc_scene_style_TextureRegionDrawable_toString_R_java_lang_String 4
+typedef jobject (*func_arc_scene_style_TextureRegionDrawable_toString_R_java_lang_String)(jcontext ctx, jobject self);
+#define VTABLE_arc_scene_style_TextureRegionDrawable_finalize 5
+typedef void (*func_arc_scene_style_TextureRegionDrawable_finalize)(jcontext ctx, jobject self);
+#define VTABLE_arc_scene_style_TextureRegionDrawable_notify 6
+typedef void (*func_arc_scene_style_TextureRegionDrawable_notify)(jcontext ctx, jobject self);
+#define VTABLE_arc_scene_style_TextureRegionDrawable_notifyAll 7
+typedef void (*func_arc_scene_style_TextureRegionDrawable_notifyAll)(jcontext ctx, jobject self);
+#define VTABLE_arc_scene_style_TextureRegionDrawable_wait 8
+typedef void (*func_arc_scene_style_TextureRegionDrawable_wait)(jcontext ctx, jobject self);
+#define VTABLE_arc_scene_style_TextureRegionDrawable_wait_long 9
+typedef void (*func_arc_scene_style_TextureRegionDrawable_wait_long)(jcontext ctx, jobject self, jlong param0);
+#define VTABLE_arc_scene_style_TextureRegionDrawable_wait_long_int 10
+typedef void (*func_arc_scene_style_TextureRegionDrawable_wait_long_int)(jcontext ctx, jobject self, jlong param0, jint param1);
+#define VTABLE_arc_scene_style_TextureRegionDrawable_draw_float_float_float_float 11
+typedef void (*func_arc_scene_style_TextureRegionDrawable_draw_float_float_float_float)(jcontext ctx, jobject self, jfloat param0, jfloat param1, jfloat param2, jfloat param3);
+#define VTABLE_arc_scene_style_TextureRegionDrawable_draw_float_float_float_float_float_float_float_float_float 12
+typedef void (*func_arc_scene_style_TextureRegionDrawable_draw_float_float_float_float_float_float_float_float_float)(jcontext ctx, jobject self, jfloat param0, jfloat param1, jfloat param2, jfloat param3, jfloat param4, jfloat param5, jfloat param6, jfloat param7, jfloat param8);
+#define VTABLE_arc_scene_style_TextureRegionDrawable_getLeftWidth_R_float 13
+typedef jfloat (*func_arc_scene_style_TextureRegionDrawable_getLeftWidth_R_float)(jcontext ctx, jobject self);
+#define VTABLE_arc_scene_style_TextureRegionDrawable_setLeftWidth_float 14
+typedef void (*func_arc_scene_style_TextureRegionDrawable_setLeftWidth_float)(jcontext ctx, jobject self, jfloat param0);
+#define VTABLE_arc_scene_style_TextureRegionDrawable_getRightWidth_R_float 15
+typedef jfloat (*func_arc_scene_style_TextureRegionDrawable_getRightWidth_R_float)(jcontext ctx, jobject self);
+#define VTABLE_arc_scene_style_TextureRegionDrawable_setRightWidth_float 16
+typedef void (*func_arc_scene_style_TextureRegionDrawable_setRightWidth_float)(jcontext ctx, jobject self, jfloat param0);
+#define VTABLE_arc_scene_style_TextureRegionDrawable_getTopHeight_R_float 17
+typedef jfloat (*func_arc_scene_style_TextureRegionDrawable_getTopHeight_R_float)(jcontext ctx, jobject self);
+#define VTABLE_arc_scene_style_TextureRegionDrawable_setTopHeight_float 18
+typedef void (*func_arc_scene_style_TextureRegionDrawable_setTopHeight_float)(jcontext ctx, jobject self, jfloat param0);
+#define VTABLE_arc_scene_style_TextureRegionDrawable_getBottomHeight_R_float 19
+typedef jfloat (*func_arc_scene_style_TextureRegionDrawable_getBottomHeight_R_float)(jcontext ctx, jobject self);
+#define VTABLE_arc_scene_style_TextureRegionDrawable_setBottomHeight_float 20
+typedef void (*func_arc_scene_style_TextureRegionDrawable_setBottomHeight_float)(jcontext ctx, jobject self, jfloat param0);
+#define VTABLE_arc_scene_style_TextureRegionDrawable_getMinWidth_R_float 21
+typedef jfloat (*func_arc_scene_style_TextureRegionDrawable_getMinWidth_R_float)(jcontext ctx, jobject self);
+#define VTABLE_arc_scene_style_TextureRegionDrawable_setMinWidth_float 22
+typedef void (*func_arc_scene_style_TextureRegionDrawable_setMinWidth_float)(jcontext ctx, jobject self, jfloat param0);
+#define VTABLE_arc_scene_style_TextureRegionDrawable_getMinHeight_R_float 23
+typedef jfloat (*func_arc_scene_style_TextureRegionDrawable_getMinHeight_R_float)(jcontext ctx, jobject self);
+#define VTABLE_arc_scene_style_TextureRegionDrawable_setMinHeight_float 24
+typedef void (*func_arc_scene_style_TextureRegionDrawable_setMinHeight_float)(jcontext ctx, jobject self, jfloat param0);
+#define VTABLE_arc_scene_style_TextureRegionDrawable_imageSize_R_float 25
+typedef jfloat (*func_arc_scene_style_TextureRegionDrawable_imageSize_R_float)(jcontext ctx, jobject self);
+#define VTABLE_arc_scene_style_TextureRegionDrawable_getName_R_java_lang_String 26
+typedef jobject (*func_arc_scene_style_TextureRegionDrawable_getName_R_java_lang_String)(jcontext ctx, jobject self);
+#define VTABLE_arc_scene_style_TextureRegionDrawable_setName_java_lang_String 27
+typedef void (*func_arc_scene_style_TextureRegionDrawable_setName_java_lang_String)(jcontext ctx, jobject self, jobject param0);
+#define VTABLE_arc_scene_style_TextureRegionDrawable_set_arc_graphics_g2d_TextureRegion_R_arc_scene_style_TextureRegionDrawable 28
+typedef jobject (*func_arc_scene_style_TextureRegionDrawable_set_arc_graphics_g2d_TextureRegion_R_arc_scene_style_TextureRegionDrawable)(jcontext ctx, jobject self, jobject param0);
+#define VTABLE_arc_scene_style_TextureRegionDrawable_getRegion_R_arc_graphics_g2d_TextureRegion 29
+typedef jobject (*func_arc_scene_style_TextureRegionDrawable_getRegion_R_arc_graphics_g2d_TextureRegion)(jcontext ctx, jobject self);
+#define VTABLE_arc_scene_style_TextureRegionDrawable_setRegion_arc_graphics_g2d_TextureRegion 30
+typedef void (*func_arc_scene_style_TextureRegionDrawable_setRegion_arc_graphics_g2d_TextureRegion)(jcontext ctx, jobject self, jobject param0);
+#define VTABLE_arc_scene_style_TextureRegionDrawable_tint_float_float_float_float_R_arc_scene_style_Drawable 31
+typedef jobject (*func_arc_scene_style_TextureRegionDrawable_tint_float_float_float_float_R_arc_scene_style_Drawable)(jcontext ctx, jobject self, jfloat param0, jfloat param1, jfloat param2, jfloat param3);
+#define VTABLE_arc_scene_style_TextureRegionDrawable_tint_arc_graphics_Color_R_arc_scene_style_Drawable 32
+typedef jobject (*func_arc_scene_style_TextureRegionDrawable_tint_arc_graphics_Color_R_arc_scene_style_Drawable)(jcontext ctx, jobject self, jobject param0);
+
+void mark_arc_scene_style_TextureRegionDrawable(jobject object, jint mark, jint depth);
+void clinit_arc_scene_style_TextureRegionDrawable(jcontext ctx);
+void init_arc_scene_style_TextureRegionDrawable(jcontext ctx, jobject self);
+void init_arc_scene_style_TextureRegionDrawable_arc_graphics_g2d_TextureRegion(jcontext ctx, jobject self, jobject param0);
+void init_arc_scene_style_TextureRegionDrawable_arc_graphics_g2d_TextureRegion_float(jcontext ctx, jobject self, jobject param0, jfloat param1);
+void init_arc_scene_style_TextureRegionDrawable_arc_scene_style_TextureRegionDrawable(jcontext ctx, jobject self, jobject param0);
+jfloat M_arc_scene_style_TextureRegionDrawable_imageSize_R_float(jcontext ctx, jobject self);
+void M_arc_scene_style_TextureRegionDrawable_draw_float_float_float_float(jcontext ctx, jobject self, jfloat param0, jfloat param1, jfloat param2, jfloat param3);
+void M_arc_scene_style_TextureRegionDrawable_draw_float_float_float_float_float_float_float_float_float(jcontext ctx, jobject self, jfloat param0, jfloat param1, jfloat param2, jfloat param3, jfloat param4, jfloat param5, jfloat param6, jfloat param7, jfloat param8);
+jobject M_arc_scene_style_TextureRegionDrawable_set_arc_graphics_g2d_TextureRegion_R_arc_scene_style_TextureRegionDrawable(jcontext ctx, jobject self, jobject param0);
+jobject M_arc_scene_style_TextureRegionDrawable_getRegion_R_arc_graphics_g2d_TextureRegion(jcontext ctx, jobject self);
+void M_arc_scene_style_TextureRegionDrawable_setRegion_arc_graphics_g2d_TextureRegion(jcontext ctx, jobject self, jobject param0);
+jobject M_arc_scene_style_TextureRegionDrawable_tint_float_float_float_float_R_arc_scene_style_Drawable(jcontext ctx, jobject self, jfloat param0, jfloat param1, jfloat param2, jfloat param3);
+jobject M_arc_scene_style_TextureRegionDrawable_tint_arc_graphics_Color_R_arc_scene_style_Drawable(jcontext ctx, jobject self, jobject param0);
+
+#ifdef __cplusplus
+}
+#endif
+
+#endif

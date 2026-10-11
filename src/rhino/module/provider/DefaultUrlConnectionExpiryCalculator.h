@@ -1,0 +1,55 @@
+#ifndef HEADER_rhino_module_provider_DefaultUrlConnectionExpiryCalculator
+#define HEADER_rhino_module_provider_DefaultUrlConnectionExpiryCalculator
+
+#include "Clearwing.h"
+#include "java/lang/Object.h"
+#include "rhino/module/provider/UrlConnectionExpiryCalculator.h"
+
+#ifdef __cplusplus
+extern "C" {
+#endif
+
+typedef struct rhino_module_provider_DefaultUrlConnectionExpiryCalculator {
+	java_lang_Object parent;
+	jlong F_relativeExpiry;
+} rhino_module_provider_DefaultUrlConnectionExpiryCalculator;
+
+extern Class class_rhino_module_provider_DefaultUrlConnectionExpiryCalculator;
+
+
+#define VTABLE_rhino_module_provider_DefaultUrlConnectionExpiryCalculator_hashCode_R_int 0
+typedef jint (*func_rhino_module_provider_DefaultUrlConnectionExpiryCalculator_hashCode_R_int)(jcontext ctx, jobject self);
+#define VTABLE_rhino_module_provider_DefaultUrlConnectionExpiryCalculator_equals_java_lang_Object_R_boolean 1
+typedef jbool (*func_rhino_module_provider_DefaultUrlConnectionExpiryCalculator_equals_java_lang_Object_R_boolean)(jcontext ctx, jobject self, jobject param0);
+#define VTABLE_rhino_module_provider_DefaultUrlConnectionExpiryCalculator_clone_R_java_lang_Object 2
+typedef jobject (*func_rhino_module_provider_DefaultUrlConnectionExpiryCalculator_clone_R_java_lang_Object)(jcontext ctx, jobject self);
+#define VTABLE_rhino_module_provider_DefaultUrlConnectionExpiryCalculator_getClass_R_java_lang_Class 3
+typedef jobject (*func_rhino_module_provider_DefaultUrlConnectionExpiryCalculator_getClass_R_java_lang_Class)(jcontext ctx, jobject self);
+#define VTABLE_rhino_module_provider_DefaultUrlConnectionExpiryCalculator_toString_R_java_lang_String 4
+typedef jobject (*func_rhino_module_provider_DefaultUrlConnectionExpiryCalculator_toString_R_java_lang_String)(jcontext ctx, jobject self);
+#define VTABLE_rhino_module_provider_DefaultUrlConnectionExpiryCalculator_finalize 5
+typedef void (*func_rhino_module_provider_DefaultUrlConnectionExpiryCalculator_finalize)(jcontext ctx, jobject self);
+#define VTABLE_rhino_module_provider_DefaultUrlConnectionExpiryCalculator_notify 6
+typedef void (*func_rhino_module_provider_DefaultUrlConnectionExpiryCalculator_notify)(jcontext ctx, jobject self);
+#define VTABLE_rhino_module_provider_DefaultUrlConnectionExpiryCalculator_notifyAll 7
+typedef void (*func_rhino_module_provider_DefaultUrlConnectionExpiryCalculator_notifyAll)(jcontext ctx, jobject self);
+#define VTABLE_rhino_module_provider_DefaultUrlConnectionExpiryCalculator_wait 8
+typedef void (*func_rhino_module_provider_DefaultUrlConnectionExpiryCalculator_wait)(jcontext ctx, jobject self);
+#define VTABLE_rhino_module_provider_DefaultUrlConnectionExpiryCalculator_wait_long 9
+typedef void (*func_rhino_module_provider_DefaultUrlConnectionExpiryCalculator_wait_long)(jcontext ctx, jobject self, jlong param0);
+#define VTABLE_rhino_module_provider_DefaultUrlConnectionExpiryCalculator_wait_long_int 10
+typedef void (*func_rhino_module_provider_DefaultUrlConnectionExpiryCalculator_wait_long_int)(jcontext ctx, jobject self, jlong param0, jint param1);
+#define VTABLE_rhino_module_provider_DefaultUrlConnectionExpiryCalculator_calculateExpiry_java_net_URLConnection_R_long 11
+typedef jlong (*func_rhino_module_provider_DefaultUrlConnectionExpiryCalculator_calculateExpiry_java_net_URLConnection_R_long)(jcontext ctx, jobject self, jobject param0);
+
+void mark_rhino_module_provider_DefaultUrlConnectionExpiryCalculator(jobject object, jint mark, jint depth);
+void clinit_rhino_module_provider_DefaultUrlConnectionExpiryCalculator(jcontext ctx);
+void init_rhino_module_provider_DefaultUrlConnectionExpiryCalculator(jcontext ctx, jobject self);
+void init_rhino_module_provider_DefaultUrlConnectionExpiryCalculator_long(jcontext ctx, jobject self, jlong param0);
+jlong M_rhino_module_provider_DefaultUrlConnectionExpiryCalculator_calculateExpiry_java_net_URLConnection_R_long(jcontext ctx, jobject self, jobject param0);
+
+#ifdef __cplusplus
+}
+#endif
+
+#endif

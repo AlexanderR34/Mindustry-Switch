@@ -1,0 +1,65 @@
+#ifndef HEADER_mindustry_ui_builder_UiTreeBuilder
+#define HEADER_mindustry_ui_builder_UiTreeBuilder
+
+#include "Clearwing.h"
+#include "java/lang/Object.h"
+
+#ifdef __cplusplus
+extern "C" {
+#endif
+
+typedef struct mindustry_ui_builder_UiTreeBuilder {
+	java_lang_Object parent;
+} mindustry_ui_builder_UiTreeBuilder;
+
+extern Class class_mindustry_ui_builder_UiTreeBuilder;
+
+
+#define VTABLE_mindustry_ui_builder_UiTreeBuilder_hashCode_R_int 0
+typedef jint (*func_mindustry_ui_builder_UiTreeBuilder_hashCode_R_int)(jcontext ctx, jobject self);
+#define VTABLE_mindustry_ui_builder_UiTreeBuilder_equals_java_lang_Object_R_boolean 1
+typedef jbool (*func_mindustry_ui_builder_UiTreeBuilder_equals_java_lang_Object_R_boolean)(jcontext ctx, jobject self, jobject param0);
+#define VTABLE_mindustry_ui_builder_UiTreeBuilder_clone_R_java_lang_Object 2
+typedef jobject (*func_mindustry_ui_builder_UiTreeBuilder_clone_R_java_lang_Object)(jcontext ctx, jobject self);
+#define VTABLE_mindustry_ui_builder_UiTreeBuilder_getClass_R_java_lang_Class 3
+typedef jobject (*func_mindustry_ui_builder_UiTreeBuilder_getClass_R_java_lang_Class)(jcontext ctx, jobject self);
+#define VTABLE_mindustry_ui_builder_UiTreeBuilder_toString_R_java_lang_String 4
+typedef jobject (*func_mindustry_ui_builder_UiTreeBuilder_toString_R_java_lang_String)(jcontext ctx, jobject self);
+#define VTABLE_mindustry_ui_builder_UiTreeBuilder_finalize 5
+typedef void (*func_mindustry_ui_builder_UiTreeBuilder_finalize)(jcontext ctx, jobject self);
+#define VTABLE_mindustry_ui_builder_UiTreeBuilder_notify 6
+typedef void (*func_mindustry_ui_builder_UiTreeBuilder_notify)(jcontext ctx, jobject self);
+#define VTABLE_mindustry_ui_builder_UiTreeBuilder_notifyAll 7
+typedef void (*func_mindustry_ui_builder_UiTreeBuilder_notifyAll)(jcontext ctx, jobject self);
+#define VTABLE_mindustry_ui_builder_UiTreeBuilder_wait 8
+typedef void (*func_mindustry_ui_builder_UiTreeBuilder_wait)(jcontext ctx, jobject self);
+#define VTABLE_mindustry_ui_builder_UiTreeBuilder_wait_long 9
+typedef void (*func_mindustry_ui_builder_UiTreeBuilder_wait_long)(jcontext ctx, jobject self, jlong param0);
+#define VTABLE_mindustry_ui_builder_UiTreeBuilder_wait_long_int 10
+typedef void (*func_mindustry_ui_builder_UiTreeBuilder_wait_long_int)(jcontext ctx, jobject self, jlong param0, jint param1);
+
+void mark_mindustry_ui_builder_UiTreeBuilder(jobject object, jint mark, jint depth);
+void clinit_mindustry_ui_builder_UiTreeBuilder(jcontext ctx);
+void init_mindustry_ui_builder_UiTreeBuilder(jcontext ctx, jobject self);
+jobject SM_mindustry_ui_builder_UiTreeBuilder_build_arc_scene_ui_layout_Table_mindustry_ui_builder_UiBuilder$NodeBuilder_R_mindustry_ui_builder_UiTreeBuilder$BuildResult(jcontext ctx, jobject param0, jobject param1);
+jobject SM_mindustry_ui_builder_UiTreeBuilder_build_arc_scene_ui_layout_Table_mindustry_ui_builder_UiBuilder$NodeBuilder_arc_func_Cons_R_mindustry_ui_builder_UiTreeBuilder$BuildResult(jcontext ctx, jobject param0, jobject param1, jobject param2);
+void SM_mindustry_ui_builder_UiTreeBuilder_buildInto_arc_scene_ui_layout_Table_arc_struct_Seq_mindustry_ui_builder_UiTreeBuilder$BuildContext(jcontext ctx, jobject param0, jobject param1, jobject param2);
+jobject SM_mindustry_ui_builder_UiTreeBuilder_addNode_mindustry_ui_builder_UiKey_mindustry_ui_builder_UiBuilder$NodeBuilder_mindustry_ui_builder_UiTreeBuilder$BuildContext_R_arc_scene_Element(jcontext ctx, jobject param0, jobject param1, jobject param2);
+jbool SM_mindustry_ui_builder_UiTreeBuilder_applyStyle_mindustry_ui_builder_UiBuilder$NodeBuilder_java_lang_Class_arc_func_Cons_R_boolean(jcontext ctx, jobject param0, jobject param1, jobject param2);
+void SM_mindustry_ui_builder_UiTreeBuilder_wireButton_arc_scene_ui_Button_mindustry_ui_builder_UiBuilder$NodeBuilder_mindustry_ui_builder_UiTreeBuilder$BuildContext(jcontext ctx, jobject param0, jobject param1, jobject param2);
+void SM_mindustry_ui_builder_UiTreeBuilder_fireResult_mindustry_ui_builder_UiTreeBuilder$BuildContext_java_lang_String(jcontext ctx, jobject param0, jobject param1);
+void SM_mindustry_ui_builder_UiTreeBuilder_applyTableProp_arc_scene_ui_layout_Table_mindustry_ui_builder_UiKey_java_lang_Object(jcontext ctx, jobject param0, jobject param1, jobject param2);
+void SM_mindustry_ui_builder_UiTreeBuilder_applyCellProp_arc_scene_ui_layout_Cell_mindustry_ui_builder_UiKey_java_lang_Object(jcontext ctx, jobject param0, jobject param1, jobject param2);
+jobject SM_mindustry_ui_builder_UiTreeBuilder_findDrawable_java_lang_String_R_arc_scene_style_Drawable(jcontext ctx, jobject param0);
+jobject SM_mindustry_ui_builder_UiTreeBuilder_findDrawable_java_lang_String_java_lang_String_R_arc_scene_style_Drawable(jcontext ctx, jobject param0, jobject param1);
+jbool SM_mindustry_ui_builder_UiTreeBuilder_evalCondition_java_lang_String_R_boolean(jcontext ctx, jobject param0);
+jint SM_mindustry_ui_builder_UiTreeBuilder_parseAlign_java_lang_String_R_int(jcontext ctx, jobject param0);
+void SM_mindustry_ui_builder_UiTreeBuilder_lambda$wireButton$0_mindustry_ui_builder_UiTreeBuilder$BuildContext_java_lang_String(jcontext ctx, jobject param0, jobject param1);
+jobject SM_mindustry_ui_builder_UiTreeBuilder_lambda$addNode$1_arc_scene_ui_Slider_java_lang_String_java_lang_String_R_java_lang_CharSequence(jcontext ctx, jobject param0, jobject param1, jobject param2);
+void SM_mindustry_ui_builder_UiTreeBuilder_lambda$addNode$0_mindustry_ui_builder_UiTreeBuilder$BuildContext_java_lang_String(jcontext ctx, jobject param0, jobject param1);
+
+#ifdef __cplusplus
+}
+#endif
+
+#endif

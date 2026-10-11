@@ -1,0 +1,138 @@
+#ifndef HEADER_arc_graphics_g2d_PixmapPacker$PixmapPackerRect
+#define HEADER_arc_graphics_g2d_PixmapPacker$PixmapPackerRect
+
+#include "Clearwing.h"
+#include "arc/math/geom/Rect.h"
+
+#ifdef __cplusplus
+extern "C" {
+#endif
+
+typedef struct arc_graphics_g2d_PixmapPacker$PixmapPackerRect {
+	arc_math_geom_Rect parent;
+	jref F_splits;
+	jref F_pads;
+	jint F_offsetX;
+	jint F_offsetY;
+	jint F_originalWidth;
+	jint F_originalHeight;
+} arc_graphics_g2d_PixmapPacker$PixmapPackerRect;
+
+extern Class class_arc_graphics_g2d_PixmapPacker$PixmapPackerRect;
+
+
+#define VTABLE_arc_graphics_g2d_PixmapPacker$PixmapPackerRect_hashCode_R_int 0
+typedef jint (*func_arc_graphics_g2d_PixmapPacker$PixmapPackerRect_hashCode_R_int)(jcontext ctx, jobject self);
+#define VTABLE_arc_graphics_g2d_PixmapPacker$PixmapPackerRect_equals_java_lang_Object_R_boolean 1
+typedef jbool (*func_arc_graphics_g2d_PixmapPacker$PixmapPackerRect_equals_java_lang_Object_R_boolean)(jcontext ctx, jobject self, jobject param0);
+#define VTABLE_arc_graphics_g2d_PixmapPacker$PixmapPackerRect_clone_R_java_lang_Object 2
+typedef jobject (*func_arc_graphics_g2d_PixmapPacker$PixmapPackerRect_clone_R_java_lang_Object)(jcontext ctx, jobject self);
+#define VTABLE_arc_graphics_g2d_PixmapPacker$PixmapPackerRect_getClass_R_java_lang_Class 3
+typedef jobject (*func_arc_graphics_g2d_PixmapPacker$PixmapPackerRect_getClass_R_java_lang_Class)(jcontext ctx, jobject self);
+#define VTABLE_arc_graphics_g2d_PixmapPacker$PixmapPackerRect_toString_R_java_lang_String 4
+typedef jobject (*func_arc_graphics_g2d_PixmapPacker$PixmapPackerRect_toString_R_java_lang_String)(jcontext ctx, jobject self);
+#define VTABLE_arc_graphics_g2d_PixmapPacker$PixmapPackerRect_finalize 5
+typedef void (*func_arc_graphics_g2d_PixmapPacker$PixmapPackerRect_finalize)(jcontext ctx, jobject self);
+#define VTABLE_arc_graphics_g2d_PixmapPacker$PixmapPackerRect_notify 6
+typedef void (*func_arc_graphics_g2d_PixmapPacker$PixmapPackerRect_notify)(jcontext ctx, jobject self);
+#define VTABLE_arc_graphics_g2d_PixmapPacker$PixmapPackerRect_notifyAll 7
+typedef void (*func_arc_graphics_g2d_PixmapPacker$PixmapPackerRect_notifyAll)(jcontext ctx, jobject self);
+#define VTABLE_arc_graphics_g2d_PixmapPacker$PixmapPackerRect_wait 8
+typedef void (*func_arc_graphics_g2d_PixmapPacker$PixmapPackerRect_wait)(jcontext ctx, jobject self);
+#define VTABLE_arc_graphics_g2d_PixmapPacker$PixmapPackerRect_wait_long 9
+typedef void (*func_arc_graphics_g2d_PixmapPacker$PixmapPackerRect_wait_long)(jcontext ctx, jobject self, jlong param0);
+#define VTABLE_arc_graphics_g2d_PixmapPacker$PixmapPackerRect_wait_long_int 10
+typedef void (*func_arc_graphics_g2d_PixmapPacker$PixmapPackerRect_wait_long_int)(jcontext ctx, jobject self, jlong param0, jint param1);
+#define VTABLE_arc_graphics_g2d_PixmapPacker$PixmapPackerRect_contains_arc_math_geom_Vec2_R_boolean 11
+typedef jbool (*func_arc_graphics_g2d_PixmapPacker$PixmapPackerRect_contains_arc_math_geom_Vec2_R_boolean)(jcontext ctx, jobject self, jobject param0);
+#define VTABLE_arc_graphics_g2d_PixmapPacker$PixmapPackerRect_contains_float_float_R_boolean 12
+typedef jbool (*func_arc_graphics_g2d_PixmapPacker$PixmapPackerRect_contains_float_float_R_boolean)(jcontext ctx, jobject self, jfloat param0, jfloat param1);
+#define VTABLE_arc_graphics_g2d_PixmapPacker$PixmapPackerRect_setCentered_float_float_float_R_arc_math_geom_Rect 13
+typedef jobject (*func_arc_graphics_g2d_PixmapPacker$PixmapPackerRect_setCentered_float_float_float_R_arc_math_geom_Rect)(jcontext ctx, jobject self, jfloat param0, jfloat param1, jfloat param2);
+#define VTABLE_arc_graphics_g2d_PixmapPacker$PixmapPackerRect_setCentered_float_float_float_float_R_arc_math_geom_Rect 14
+typedef jobject (*func_arc_graphics_g2d_PixmapPacker$PixmapPackerRect_setCentered_float_float_float_float_R_arc_math_geom_Rect)(jcontext ctx, jobject self, jfloat param0, jfloat param1, jfloat param2, jfloat param3);
+#define VTABLE_arc_graphics_g2d_PixmapPacker$PixmapPackerRect_set_float_float_float_float_R_arc_math_geom_Rect 15
+typedef jobject (*func_arc_graphics_g2d_PixmapPacker$PixmapPackerRect_set_float_float_float_float_R_arc_math_geom_Rect)(jcontext ctx, jobject self, jfloat param0, jfloat param1, jfloat param2, jfloat param3);
+#define VTABLE_arc_graphics_g2d_PixmapPacker$PixmapPackerRect_getX_R_float 16
+typedef jfloat (*func_arc_graphics_g2d_PixmapPacker$PixmapPackerRect_getX_R_float)(jcontext ctx, jobject self);
+#define VTABLE_arc_graphics_g2d_PixmapPacker$PixmapPackerRect_setX_float_R_arc_math_geom_Rect 17
+typedef jobject (*func_arc_graphics_g2d_PixmapPacker$PixmapPackerRect_setX_float_R_arc_math_geom_Rect)(jcontext ctx, jobject self, jfloat param0);
+#define VTABLE_arc_graphics_g2d_PixmapPacker$PixmapPackerRect_getY_R_float 18
+typedef jfloat (*func_arc_graphics_g2d_PixmapPacker$PixmapPackerRect_getY_R_float)(jcontext ctx, jobject self);
+#define VTABLE_arc_graphics_g2d_PixmapPacker$PixmapPackerRect_setY_float_R_arc_math_geom_Rect 19
+typedef jobject (*func_arc_graphics_g2d_PixmapPacker$PixmapPackerRect_setY_float_R_arc_math_geom_Rect)(jcontext ctx, jobject self, jfloat param0);
+#define VTABLE_arc_graphics_g2d_PixmapPacker$PixmapPackerRect_getWidth_R_float 20
+typedef jfloat (*func_arc_graphics_g2d_PixmapPacker$PixmapPackerRect_getWidth_R_float)(jcontext ctx, jobject self);
+#define VTABLE_arc_graphics_g2d_PixmapPacker$PixmapPackerRect_setWidth_float_R_arc_math_geom_Rect 21
+typedef jobject (*func_arc_graphics_g2d_PixmapPacker$PixmapPackerRect_setWidth_float_R_arc_math_geom_Rect)(jcontext ctx, jobject self, jfloat param0);
+#define VTABLE_arc_graphics_g2d_PixmapPacker$PixmapPackerRect_getHeight_R_float 22
+typedef jfloat (*func_arc_graphics_g2d_PixmapPacker$PixmapPackerRect_getHeight_R_float)(jcontext ctx, jobject self);
+#define VTABLE_arc_graphics_g2d_PixmapPacker$PixmapPackerRect_setHeight_float_R_arc_math_geom_Rect 23
+typedef jobject (*func_arc_graphics_g2d_PixmapPacker$PixmapPackerRect_setHeight_float_R_arc_math_geom_Rect)(jcontext ctx, jobject self, jfloat param0);
+#define VTABLE_arc_graphics_g2d_PixmapPacker$PixmapPackerRect_getPosition_arc_math_geom_Vec2_R_arc_math_geom_Vec2 24
+typedef jobject (*func_arc_graphics_g2d_PixmapPacker$PixmapPackerRect_getPosition_arc_math_geom_Vec2_R_arc_math_geom_Vec2)(jcontext ctx, jobject self, jobject param0);
+#define VTABLE_arc_graphics_g2d_PixmapPacker$PixmapPackerRect_setPosition_arc_math_geom_Vec2_R_arc_math_geom_Rect 25
+typedef jobject (*func_arc_graphics_g2d_PixmapPacker$PixmapPackerRect_setPosition_arc_math_geom_Vec2_R_arc_math_geom_Rect)(jcontext ctx, jobject self, jobject param0);
+#define VTABLE_arc_graphics_g2d_PixmapPacker$PixmapPackerRect_setPosition_float_float_R_arc_math_geom_Rect 26
+typedef jobject (*func_arc_graphics_g2d_PixmapPacker$PixmapPackerRect_setPosition_float_float_R_arc_math_geom_Rect)(jcontext ctx, jobject self, jfloat param0, jfloat param1);
+#define VTABLE_arc_graphics_g2d_PixmapPacker$PixmapPackerRect_move_float_float_R_arc_math_geom_Rect 27
+typedef jobject (*func_arc_graphics_g2d_PixmapPacker$PixmapPackerRect_move_float_float_R_arc_math_geom_Rect)(jcontext ctx, jobject self, jfloat param0, jfloat param1);
+#define VTABLE_arc_graphics_g2d_PixmapPacker$PixmapPackerRect_setSize_float_float_R_arc_math_geom_Rect 28
+typedef jobject (*func_arc_graphics_g2d_PixmapPacker$PixmapPackerRect_setSize_float_float_R_arc_math_geom_Rect)(jcontext ctx, jobject self, jfloat param0, jfloat param1);
+#define VTABLE_arc_graphics_g2d_PixmapPacker$PixmapPackerRect_setSize_float_R_arc_math_geom_Rect 29
+typedef jobject (*func_arc_graphics_g2d_PixmapPacker$PixmapPackerRect_setSize_float_R_arc_math_geom_Rect)(jcontext ctx, jobject self, jfloat param0);
+#define VTABLE_arc_graphics_g2d_PixmapPacker$PixmapPackerRect_getSize_arc_math_geom_Vec2_R_arc_math_geom_Vec2 30
+typedef jobject (*func_arc_graphics_g2d_PixmapPacker$PixmapPackerRect_getSize_arc_math_geom_Vec2_R_arc_math_geom_Vec2)(jcontext ctx, jobject self, jobject param0);
+#define VTABLE_arc_graphics_g2d_PixmapPacker$PixmapPackerRect_contains_arc_math_geom_Circle_R_boolean 31
+typedef jbool (*func_arc_graphics_g2d_PixmapPacker$PixmapPackerRect_contains_arc_math_geom_Circle_R_boolean)(jcontext ctx, jobject self, jobject param0);
+#define VTABLE_arc_graphics_g2d_PixmapPacker$PixmapPackerRect_contains_arc_math_geom_Rect_R_boolean 32
+typedef jbool (*func_arc_graphics_g2d_PixmapPacker$PixmapPackerRect_contains_arc_math_geom_Rect_R_boolean)(jcontext ctx, jobject self, jobject param0);
+#define VTABLE_arc_graphics_g2d_PixmapPacker$PixmapPackerRect_overlaps_arc_math_geom_Rect_R_boolean 33
+typedef jbool (*func_arc_graphics_g2d_PixmapPacker$PixmapPackerRect_overlaps_arc_math_geom_Rect_R_boolean)(jcontext ctx, jobject self, jobject param0);
+#define VTABLE_arc_graphics_g2d_PixmapPacker$PixmapPackerRect_overlaps_float_float_float_float_R_boolean 34
+typedef jbool (*func_arc_graphics_g2d_PixmapPacker$PixmapPackerRect_overlaps_float_float_float_float_R_boolean)(jcontext ctx, jobject self, jfloat param0, jfloat param1, jfloat param2, jfloat param3);
+#define VTABLE_arc_graphics_g2d_PixmapPacker$PixmapPackerRect_set_arc_math_geom_Rect_R_arc_math_geom_Rect 35
+typedef jobject (*func_arc_graphics_g2d_PixmapPacker$PixmapPackerRect_set_arc_math_geom_Rect_R_arc_math_geom_Rect)(jcontext ctx, jobject self, jobject param0);
+#define VTABLE_arc_graphics_g2d_PixmapPacker$PixmapPackerRect_grow_float_R_arc_math_geom_Rect 36
+typedef jobject (*func_arc_graphics_g2d_PixmapPacker$PixmapPackerRect_grow_float_R_arc_math_geom_Rect)(jcontext ctx, jobject self, jfloat param0);
+#define VTABLE_arc_graphics_g2d_PixmapPacker$PixmapPackerRect_grow_float_float_R_arc_math_geom_Rect 37
+typedef jobject (*func_arc_graphics_g2d_PixmapPacker$PixmapPackerRect_grow_float_float_R_arc_math_geom_Rect)(jcontext ctx, jobject self, jfloat param0, jfloat param1);
+#define VTABLE_arc_graphics_g2d_PixmapPacker$PixmapPackerRect_merge_arc_math_geom_Rect_R_arc_math_geom_Rect 38
+typedef jobject (*func_arc_graphics_g2d_PixmapPacker$PixmapPackerRect_merge_arc_math_geom_Rect_R_arc_math_geom_Rect)(jcontext ctx, jobject self, jobject param0);
+#define VTABLE_arc_graphics_g2d_PixmapPacker$PixmapPackerRect_normalize_R_arc_math_geom_Rect 39
+typedef jobject (*func_arc_graphics_g2d_PixmapPacker$PixmapPackerRect_normalize_R_arc_math_geom_Rect)(jcontext ctx, jobject self);
+#define VTABLE_arc_graphics_g2d_PixmapPacker$PixmapPackerRect_merge_float_float_R_arc_math_geom_Rect 40
+typedef jobject (*func_arc_graphics_g2d_PixmapPacker$PixmapPackerRect_merge_float_float_R_arc_math_geom_Rect)(jcontext ctx, jobject self, jfloat param0, jfloat param1);
+#define VTABLE_arc_graphics_g2d_PixmapPacker$PixmapPackerRect_merge_arc_math_geom_Vec2_R_arc_math_geom_Rect 41
+typedef jobject (*func_arc_graphics_g2d_PixmapPacker$PixmapPackerRect_merge_arc_math_geom_Vec2_R_arc_math_geom_Rect)(jcontext ctx, jobject self, jobject param0);
+#define VTABLE_arc_graphics_g2d_PixmapPacker$PixmapPackerRect_merge_Array1_arc_math_geom_Vec2_R_arc_math_geom_Rect 42
+typedef jobject (*func_arc_graphics_g2d_PixmapPacker$PixmapPackerRect_merge_Array1_arc_math_geom_Vec2_R_arc_math_geom_Rect)(jcontext ctx, jobject self, jobject param0);
+#define VTABLE_arc_graphics_g2d_PixmapPacker$PixmapPackerRect_getAspectRatio_R_float 43
+typedef jfloat (*func_arc_graphics_g2d_PixmapPacker$PixmapPackerRect_getAspectRatio_R_float)(jcontext ctx, jobject self);
+#define VTABLE_arc_graphics_g2d_PixmapPacker$PixmapPackerRect_getCenter_arc_math_geom_Vec2_R_arc_math_geom_Vec2 44
+typedef jobject (*func_arc_graphics_g2d_PixmapPacker$PixmapPackerRect_getCenter_arc_math_geom_Vec2_R_arc_math_geom_Vec2)(jcontext ctx, jobject self, jobject param0);
+#define VTABLE_arc_graphics_g2d_PixmapPacker$PixmapPackerRect_setCenter_float_float_R_arc_math_geom_Rect 45
+typedef jobject (*func_arc_graphics_g2d_PixmapPacker$PixmapPackerRect_setCenter_float_float_R_arc_math_geom_Rect)(jcontext ctx, jobject self, jfloat param0, jfloat param1);
+#define VTABLE_arc_graphics_g2d_PixmapPacker$PixmapPackerRect_setCenter_arc_math_geom_Vec2_R_arc_math_geom_Rect 46
+typedef jobject (*func_arc_graphics_g2d_PixmapPacker$PixmapPackerRect_setCenter_arc_math_geom_Vec2_R_arc_math_geom_Rect)(jcontext ctx, jobject self, jobject param0);
+#define VTABLE_arc_graphics_g2d_PixmapPacker$PixmapPackerRect_fitOutside_arc_math_geom_Rect_R_arc_math_geom_Rect 47
+typedef jobject (*func_arc_graphics_g2d_PixmapPacker$PixmapPackerRect_fitOutside_arc_math_geom_Rect_R_arc_math_geom_Rect)(jcontext ctx, jobject self, jobject param0);
+#define VTABLE_arc_graphics_g2d_PixmapPacker$PixmapPackerRect_fitInside_arc_math_geom_Rect_R_arc_math_geom_Rect 48
+typedef jobject (*func_arc_graphics_g2d_PixmapPacker$PixmapPackerRect_fitInside_arc_math_geom_Rect_R_arc_math_geom_Rect)(jcontext ctx, jobject self, jobject param0);
+#define VTABLE_arc_graphics_g2d_PixmapPacker$PixmapPackerRect_fromString_java_lang_String_R_arc_math_geom_Rect 49
+typedef jobject (*func_arc_graphics_g2d_PixmapPacker$PixmapPackerRect_fromString_java_lang_String_R_arc_math_geom_Rect)(jcontext ctx, jobject self, jobject param0);
+#define VTABLE_arc_graphics_g2d_PixmapPacker$PixmapPackerRect_area_R_float 50
+typedef jfloat (*func_arc_graphics_g2d_PixmapPacker$PixmapPackerRect_area_R_float)(jcontext ctx, jobject self);
+#define VTABLE_arc_graphics_g2d_PixmapPacker$PixmapPackerRect_perimeter_R_float 51
+typedef jfloat (*func_arc_graphics_g2d_PixmapPacker$PixmapPackerRect_perimeter_R_float)(jcontext ctx, jobject self);
+
+void mark_arc_graphics_g2d_PixmapPacker$PixmapPackerRect(jobject object, jint mark, jint depth);
+void clinit_arc_graphics_g2d_PixmapPacker$PixmapPackerRect(jcontext ctx);
+void init_arc_graphics_g2d_PixmapPacker$PixmapPackerRect_int_int_int_int(jcontext ctx, jobject self, jint param0, jint param1, jint param2, jint param3);
+void init_arc_graphics_g2d_PixmapPacker$PixmapPackerRect_int_int_int_int_int_int_int_int(jcontext ctx, jobject self, jint param0, jint param1, jint param2, jint param3, jint param4, jint param5, jint param6, jint param7);
+
+#ifdef __cplusplus
+}
+#endif
+
+#endif

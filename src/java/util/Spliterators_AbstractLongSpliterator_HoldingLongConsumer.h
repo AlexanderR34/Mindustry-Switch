@@ -1,0 +1,58 @@
+#ifndef HEADER_java_util_Spliterators$AbstractLongSpliterator$HoldingLongConsumer
+#define HEADER_java_util_Spliterators$AbstractLongSpliterator$HoldingLongConsumer
+
+#include "Clearwing.h"
+#include "java/lang/Object.h"
+#include "java/util/function/LongConsumer.h"
+
+#ifdef __cplusplus
+extern "C" {
+#endif
+
+typedef struct java_util_Spliterators$AbstractLongSpliterator$HoldingLongConsumer {
+	java_lang_Object parent;
+	jlong F_value;
+} java_util_Spliterators$AbstractLongSpliterator$HoldingLongConsumer;
+
+extern Class class_java_util_Spliterators$AbstractLongSpliterator$HoldingLongConsumer;
+
+
+#define VTABLE_java_util_Spliterators$AbstractLongSpliterator$HoldingLongConsumer_hashCode_R_int 0
+typedef jint (*func_java_util_Spliterators$AbstractLongSpliterator$HoldingLongConsumer_hashCode_R_int)(jcontext ctx, jobject self);
+#define VTABLE_java_util_Spliterators$AbstractLongSpliterator$HoldingLongConsumer_equals_java_lang_Object_R_boolean 1
+typedef jbool (*func_java_util_Spliterators$AbstractLongSpliterator$HoldingLongConsumer_equals_java_lang_Object_R_boolean)(jcontext ctx, jobject self, jobject param0);
+#define VTABLE_java_util_Spliterators$AbstractLongSpliterator$HoldingLongConsumer_clone_R_java_lang_Object 2
+typedef jobject (*func_java_util_Spliterators$AbstractLongSpliterator$HoldingLongConsumer_clone_R_java_lang_Object)(jcontext ctx, jobject self);
+#define VTABLE_java_util_Spliterators$AbstractLongSpliterator$HoldingLongConsumer_getClass_R_java_lang_Class 3
+typedef jobject (*func_java_util_Spliterators$AbstractLongSpliterator$HoldingLongConsumer_getClass_R_java_lang_Class)(jcontext ctx, jobject self);
+#define VTABLE_java_util_Spliterators$AbstractLongSpliterator$HoldingLongConsumer_toString_R_java_lang_String 4
+typedef jobject (*func_java_util_Spliterators$AbstractLongSpliterator$HoldingLongConsumer_toString_R_java_lang_String)(jcontext ctx, jobject self);
+#define VTABLE_java_util_Spliterators$AbstractLongSpliterator$HoldingLongConsumer_finalize 5
+typedef void (*func_java_util_Spliterators$AbstractLongSpliterator$HoldingLongConsumer_finalize)(jcontext ctx, jobject self);
+#define VTABLE_java_util_Spliterators$AbstractLongSpliterator$HoldingLongConsumer_notify 6
+typedef void (*func_java_util_Spliterators$AbstractLongSpliterator$HoldingLongConsumer_notify)(jcontext ctx, jobject self);
+#define VTABLE_java_util_Spliterators$AbstractLongSpliterator$HoldingLongConsumer_notifyAll 7
+typedef void (*func_java_util_Spliterators$AbstractLongSpliterator$HoldingLongConsumer_notifyAll)(jcontext ctx, jobject self);
+#define VTABLE_java_util_Spliterators$AbstractLongSpliterator$HoldingLongConsumer_wait 8
+typedef void (*func_java_util_Spliterators$AbstractLongSpliterator$HoldingLongConsumer_wait)(jcontext ctx, jobject self);
+#define VTABLE_java_util_Spliterators$AbstractLongSpliterator$HoldingLongConsumer_wait_long 9
+typedef void (*func_java_util_Spliterators$AbstractLongSpliterator$HoldingLongConsumer_wait_long)(jcontext ctx, jobject self, jlong param0);
+#define VTABLE_java_util_Spliterators$AbstractLongSpliterator$HoldingLongConsumer_wait_long_int 10
+typedef void (*func_java_util_Spliterators$AbstractLongSpliterator$HoldingLongConsumer_wait_long_int)(jcontext ctx, jobject self, jlong param0, jint param1);
+#define VTABLE_java_util_Spliterators$AbstractLongSpliterator$HoldingLongConsumer_accept_long 11
+typedef void (*func_java_util_Spliterators$AbstractLongSpliterator$HoldingLongConsumer_accept_long)(jcontext ctx, jobject self, jlong param0);
+#define VTABLE_java_util_Spliterators$AbstractLongSpliterator$HoldingLongConsumer_andThen_java_util_function_LongConsumer_R_java_util_function_LongConsumer 12
+typedef jobject (*func_java_util_Spliterators$AbstractLongSpliterator$HoldingLongConsumer_andThen_java_util_function_LongConsumer_R_java_util_function_LongConsumer)(jcontext ctx, jobject self, jobject param0);
+#define VTABLE_java_util_Spliterators$AbstractLongSpliterator$HoldingLongConsumer_lambda$andThen$0_java_util_function_LongConsumer_long 13
+typedef void (*func_java_util_Spliterators$AbstractLongSpliterator$HoldingLongConsumer_lambda$andThen$0_java_util_function_LongConsumer_long)(jcontext ctx, jobject self, jobject param0, jlong param1);
+
+void mark_java_util_Spliterators$AbstractLongSpliterator$HoldingLongConsumer(jobject object, jint mark, jint depth);
+void clinit_java_util_Spliterators$AbstractLongSpliterator$HoldingLongConsumer(jcontext ctx);
+void init_java_util_Spliterators$AbstractLongSpliterator$HoldingLongConsumer(jcontext ctx, jobject self);
+void M_java_util_Spliterators$AbstractLongSpliterator$HoldingLongConsumer_accept_long(jcontext ctx, jobject self, jlong param0);
+
+#ifdef __cplusplus
+}
+#endif
+
+#endif

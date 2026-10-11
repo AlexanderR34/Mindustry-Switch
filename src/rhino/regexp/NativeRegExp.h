@@ -1,0 +1,400 @@
+#ifndef HEADER_rhino_regexp_NativeRegExp
+#define HEADER_rhino_regexp_NativeRegExp
+
+#include "Clearwing.h"
+#include "rhino/IdScriptableObject.h"
+#include "rhino/Function.h"
+
+#ifdef __cplusplus
+extern "C" {
+#endif
+
+typedef struct rhino_regexp_NativeRegExp {
+	rhino_IdScriptableObject parent;
+	jref F_re;
+	jref F_lastIndex;
+	jint F_lastIndexAttr;
+} rhino_regexp_NativeRegExp;
+
+extern Class class_rhino_regexp_NativeRegExp;
+
+extern jobject SF_rhino_regexp_NativeRegExp_REGEXP_TAG;
+extern jint SF_rhino_regexp_NativeRegExp_JSREG_GLOB;
+extern jint SF_rhino_regexp_NativeRegExp_JSREG_FOLD;
+extern jint SF_rhino_regexp_NativeRegExp_JSREG_MULTILINE;
+extern jint SF_rhino_regexp_NativeRegExp_TEST;
+extern jint SF_rhino_regexp_NativeRegExp_MATCH;
+extern jint SF_rhino_regexp_NativeRegExp_PREFIX;
+extern jbool SF_rhino_regexp_NativeRegExp_debug;
+extern jbyte SF_rhino_regexp_NativeRegExp_REOP_SIMPLE_START;
+extern jbyte SF_rhino_regexp_NativeRegExp_REOP_EMPTY;
+extern jbyte SF_rhino_regexp_NativeRegExp_REOP_BOL;
+extern jbyte SF_rhino_regexp_NativeRegExp_REOP_EOL;
+extern jbyte SF_rhino_regexp_NativeRegExp_REOP_WBDRY;
+extern jbyte SF_rhino_regexp_NativeRegExp_REOP_WNONBDRY;
+extern jbyte SF_rhino_regexp_NativeRegExp_REOP_DOT;
+extern jbyte SF_rhino_regexp_NativeRegExp_REOP_DIGIT;
+extern jbyte SF_rhino_regexp_NativeRegExp_REOP_NONDIGIT;
+extern jbyte SF_rhino_regexp_NativeRegExp_REOP_ALNUM;
+extern jbyte SF_rhino_regexp_NativeRegExp_REOP_NONALNUM;
+extern jbyte SF_rhino_regexp_NativeRegExp_REOP_SPACE;
+extern jbyte SF_rhino_regexp_NativeRegExp_REOP_NONSPACE;
+extern jbyte SF_rhino_regexp_NativeRegExp_REOP_BACKREF;
+extern jbyte SF_rhino_regexp_NativeRegExp_REOP_FLAT;
+extern jbyte SF_rhino_regexp_NativeRegExp_REOP_FLAT1;
+extern jbyte SF_rhino_regexp_NativeRegExp_REOP_FLATi;
+extern jbyte SF_rhino_regexp_NativeRegExp_REOP_FLAT1i;
+extern jbyte SF_rhino_regexp_NativeRegExp_REOP_UCFLAT1;
+extern jbyte SF_rhino_regexp_NativeRegExp_REOP_UCFLAT1i;
+extern jbyte SF_rhino_regexp_NativeRegExp_REOP_CLASS;
+extern jbyte SF_rhino_regexp_NativeRegExp_REOP_NCLASS;
+extern jbyte SF_rhino_regexp_NativeRegExp_REOP_SIMPLE_END;
+extern jbyte SF_rhino_regexp_NativeRegExp_REOP_QUANT;
+extern jbyte SF_rhino_regexp_NativeRegExp_REOP_STAR;
+extern jbyte SF_rhino_regexp_NativeRegExp_REOP_PLUS;
+extern jbyte SF_rhino_regexp_NativeRegExp_REOP_OPT;
+extern jbyte SF_rhino_regexp_NativeRegExp_REOP_LPAREN;
+extern jbyte SF_rhino_regexp_NativeRegExp_REOP_RPAREN;
+extern jbyte SF_rhino_regexp_NativeRegExp_REOP_ALT;
+extern jbyte SF_rhino_regexp_NativeRegExp_REOP_JUMP;
+extern jbyte SF_rhino_regexp_NativeRegExp_REOP_ASSERT;
+extern jbyte SF_rhino_regexp_NativeRegExp_REOP_ASSERT_NOT;
+extern jbyte SF_rhino_regexp_NativeRegExp_REOP_ASSERTTEST;
+extern jbyte SF_rhino_regexp_NativeRegExp_REOP_ASSERTNOTTEST;
+extern jbyte SF_rhino_regexp_NativeRegExp_REOP_MINIMALSTAR;
+extern jbyte SF_rhino_regexp_NativeRegExp_REOP_MINIMALPLUS;
+extern jbyte SF_rhino_regexp_NativeRegExp_REOP_MINIMALOPT;
+extern jbyte SF_rhino_regexp_NativeRegExp_REOP_MINIMALQUANT;
+extern jbyte SF_rhino_regexp_NativeRegExp_REOP_ENDCHILD;
+extern jbyte SF_rhino_regexp_NativeRegExp_REOP_REPEAT;
+extern jbyte SF_rhino_regexp_NativeRegExp_REOP_MINIMALREPEAT;
+extern jbyte SF_rhino_regexp_NativeRegExp_REOP_ALTPREREQ;
+extern jbyte SF_rhino_regexp_NativeRegExp_REOP_ALTPREREQi;
+extern jbyte SF_rhino_regexp_NativeRegExp_REOP_ALTPREREQ2;
+extern jbyte SF_rhino_regexp_NativeRegExp_REOP_END;
+extern jint SF_rhino_regexp_NativeRegExp_ANCHOR_BOL;
+extern jint SF_rhino_regexp_NativeRegExp_INDEX_LEN;
+extern jint SF_rhino_regexp_NativeRegExp_Id_lastIndex;
+extern jint SF_rhino_regexp_NativeRegExp_Id_source;
+extern jint SF_rhino_regexp_NativeRegExp_Id_global;
+extern jint SF_rhino_regexp_NativeRegExp_Id_ignoreCase;
+extern jint SF_rhino_regexp_NativeRegExp_Id_multiline;
+extern jint SF_rhino_regexp_NativeRegExp_MAX_INSTANCE_ID;
+extern jint SF_rhino_regexp_NativeRegExp_Id_compile;
+extern jint SF_rhino_regexp_NativeRegExp_Id_toString;
+extern jint SF_rhino_regexp_NativeRegExp_Id_toSource;
+extern jint SF_rhino_regexp_NativeRegExp_Id_exec;
+extern jint SF_rhino_regexp_NativeRegExp_Id_test;
+extern jint SF_rhino_regexp_NativeRegExp_Id_prefix;
+extern jint SF_rhino_regexp_NativeRegExp_MAX_PROTOTYPE_ID;
+extern jbool SF_rhino_regexp_NativeRegExp_$assertionsDisabled;
+
+#define VTABLE_rhino_regexp_NativeRegExp_hashCode_R_int 0
+typedef jint (*func_rhino_regexp_NativeRegExp_hashCode_R_int)(jcontext ctx, jobject self);
+#define VTABLE_rhino_regexp_NativeRegExp_equals_java_lang_Object_R_boolean 1
+typedef jbool (*func_rhino_regexp_NativeRegExp_equals_java_lang_Object_R_boolean)(jcontext ctx, jobject self, jobject param0);
+#define VTABLE_rhino_regexp_NativeRegExp_clone_R_java_lang_Object 2
+typedef jobject (*func_rhino_regexp_NativeRegExp_clone_R_java_lang_Object)(jcontext ctx, jobject self);
+#define VTABLE_rhino_regexp_NativeRegExp_getClass_R_java_lang_Class 3
+typedef jobject (*func_rhino_regexp_NativeRegExp_getClass_R_java_lang_Class)(jcontext ctx, jobject self);
+#define VTABLE_rhino_regexp_NativeRegExp_toString_R_java_lang_String 4
+typedef jobject (*func_rhino_regexp_NativeRegExp_toString_R_java_lang_String)(jcontext ctx, jobject self);
+#define VTABLE_rhino_regexp_NativeRegExp_finalize 5
+typedef void (*func_rhino_regexp_NativeRegExp_finalize)(jcontext ctx, jobject self);
+#define VTABLE_rhino_regexp_NativeRegExp_notify 6
+typedef void (*func_rhino_regexp_NativeRegExp_notify)(jcontext ctx, jobject self);
+#define VTABLE_rhino_regexp_NativeRegExp_notifyAll 7
+typedef void (*func_rhino_regexp_NativeRegExp_notifyAll)(jcontext ctx, jobject self);
+#define VTABLE_rhino_regexp_NativeRegExp_wait 8
+typedef void (*func_rhino_regexp_NativeRegExp_wait)(jcontext ctx, jobject self);
+#define VTABLE_rhino_regexp_NativeRegExp_wait_long 9
+typedef void (*func_rhino_regexp_NativeRegExp_wait_long)(jcontext ctx, jobject self, jlong param0);
+#define VTABLE_rhino_regexp_NativeRegExp_wait_long_int 10
+typedef void (*func_rhino_regexp_NativeRegExp_wait_long_int)(jcontext ctx, jobject self, jlong param0, jint param1);
+#define VTABLE_rhino_regexp_NativeRegExp_getClassName_R_java_lang_String 11
+typedef jobject (*func_rhino_regexp_NativeRegExp_getClassName_R_java_lang_String)(jcontext ctx, jobject self);
+#define VTABLE_rhino_regexp_NativeRegExp_get_java_lang_String_rhino_Scriptable_R_java_lang_Object 12
+typedef jobject (*func_rhino_regexp_NativeRegExp_get_java_lang_String_rhino_Scriptable_R_java_lang_Object)(jcontext ctx, jobject self, jobject param0, jobject param1);
+#define VTABLE_rhino_regexp_NativeRegExp_get_int_rhino_Scriptable_R_java_lang_Object 13
+typedef jobject (*func_rhino_regexp_NativeRegExp_get_int_rhino_Scriptable_R_java_lang_Object)(jcontext ctx, jobject self, jint param0, jobject param1);
+#define VTABLE_rhino_regexp_NativeRegExp_has_java_lang_String_rhino_Scriptable_R_boolean 14
+typedef jbool (*func_rhino_regexp_NativeRegExp_has_java_lang_String_rhino_Scriptable_R_boolean)(jcontext ctx, jobject self, jobject param0, jobject param1);
+#define VTABLE_rhino_regexp_NativeRegExp_has_int_rhino_Scriptable_R_boolean 15
+typedef jbool (*func_rhino_regexp_NativeRegExp_has_int_rhino_Scriptable_R_boolean)(jcontext ctx, jobject self, jint param0, jobject param1);
+#define VTABLE_rhino_regexp_NativeRegExp_put_java_lang_String_rhino_Scriptable_java_lang_Object 16
+typedef void (*func_rhino_regexp_NativeRegExp_put_java_lang_String_rhino_Scriptable_java_lang_Object)(jcontext ctx, jobject self, jobject param0, jobject param1, jobject param2);
+#define VTABLE_rhino_regexp_NativeRegExp_put_int_rhino_Scriptable_java_lang_Object 17
+typedef void (*func_rhino_regexp_NativeRegExp_put_int_rhino_Scriptable_java_lang_Object)(jcontext ctx, jobject self, jint param0, jobject param1, jobject param2);
+#define VTABLE_rhino_regexp_NativeRegExp_delete_java_lang_String 18
+typedef void (*func_rhino_regexp_NativeRegExp_delete_java_lang_String)(jcontext ctx, jobject self, jobject param0);
+#define VTABLE_rhino_regexp_NativeRegExp_delete_int 19
+typedef void (*func_rhino_regexp_NativeRegExp_delete_int)(jcontext ctx, jobject self, jint param0);
+#define VTABLE_rhino_regexp_NativeRegExp_getPrototype_R_rhino_Scriptable 20
+typedef jobject (*func_rhino_regexp_NativeRegExp_getPrototype_R_rhino_Scriptable)(jcontext ctx, jobject self);
+#define VTABLE_rhino_regexp_NativeRegExp_setPrototype_rhino_Scriptable 21
+typedef void (*func_rhino_regexp_NativeRegExp_setPrototype_rhino_Scriptable)(jcontext ctx, jobject self, jobject param0);
+#define VTABLE_rhino_regexp_NativeRegExp_getParentScope_R_rhino_Scriptable 22
+typedef jobject (*func_rhino_regexp_NativeRegExp_getParentScope_R_rhino_Scriptable)(jcontext ctx, jobject self);
+#define VTABLE_rhino_regexp_NativeRegExp_setParentScope_rhino_Scriptable 23
+typedef void (*func_rhino_regexp_NativeRegExp_setParentScope_rhino_Scriptable)(jcontext ctx, jobject self, jobject param0);
+#define VTABLE_rhino_regexp_NativeRegExp_getIds_R_Array1_java_lang_Object 24
+typedef jobject (*func_rhino_regexp_NativeRegExp_getIds_R_Array1_java_lang_Object)(jcontext ctx, jobject self);
+#define VTABLE_rhino_regexp_NativeRegExp_getDefaultValue_java_lang_Class_R_java_lang_Object 25
+typedef jobject (*func_rhino_regexp_NativeRegExp_getDefaultValue_java_lang_Class_R_java_lang_Object)(jcontext ctx, jobject self, jobject param0);
+#define VTABLE_rhino_regexp_NativeRegExp_hasInstance_rhino_Scriptable_R_boolean 26
+typedef jbool (*func_rhino_regexp_NativeRegExp_hasInstance_rhino_Scriptable_R_boolean)(jcontext ctx, jobject self, jobject param0);
+#define VTABLE_rhino_regexp_NativeRegExp_get_rhino_Symbol_rhino_Scriptable_R_java_lang_Object 27
+typedef jobject (*func_rhino_regexp_NativeRegExp_get_rhino_Symbol_rhino_Scriptable_R_java_lang_Object)(jcontext ctx, jobject self, jobject param0, jobject param1);
+#define VTABLE_rhino_regexp_NativeRegExp_has_rhino_Symbol_rhino_Scriptable_R_boolean 28
+typedef jbool (*func_rhino_regexp_NativeRegExp_has_rhino_Symbol_rhino_Scriptable_R_boolean)(jcontext ctx, jobject self, jobject param0, jobject param1);
+#define VTABLE_rhino_regexp_NativeRegExp_put_rhino_Symbol_rhino_Scriptable_java_lang_Object 29
+typedef void (*func_rhino_regexp_NativeRegExp_put_rhino_Symbol_rhino_Scriptable_java_lang_Object)(jcontext ctx, jobject self, jobject param0, jobject param1, jobject param2);
+#define VTABLE_rhino_regexp_NativeRegExp_delete_rhino_Symbol 30
+typedef void (*func_rhino_regexp_NativeRegExp_delete_rhino_Symbol)(jcontext ctx, jobject self, jobject param0);
+#define VTABLE_rhino_regexp_NativeRegExp_getAllIds_R_Array1_java_lang_Object 31
+typedef jobject (*func_rhino_regexp_NativeRegExp_getAllIds_R_Array1_java_lang_Object)(jcontext ctx, jobject self);
+#define VTABLE_rhino_regexp_NativeRegExp_putConst_java_lang_String_rhino_Scriptable_java_lang_Object 32
+typedef void (*func_rhino_regexp_NativeRegExp_putConst_java_lang_String_rhino_Scriptable_java_lang_Object)(jcontext ctx, jobject self, jobject param0, jobject param1, jobject param2);
+#define VTABLE_rhino_regexp_NativeRegExp_defineConst_java_lang_String_rhino_Scriptable 33
+typedef void (*func_rhino_regexp_NativeRegExp_defineConst_java_lang_String_rhino_Scriptable)(jcontext ctx, jobject self, jobject param0, jobject param1);
+#define VTABLE_rhino_regexp_NativeRegExp_isConst_java_lang_String_R_boolean 34
+typedef jbool (*func_rhino_regexp_NativeRegExp_isConst_java_lang_String_R_boolean)(jcontext ctx, jobject self, jobject param0);
+#define VTABLE_rhino_regexp_NativeRegExp_createSlotMap_int_R_rhino_SlotMapContainer 35
+typedef jobject (*func_rhino_regexp_NativeRegExp_createSlotMap_int_R_rhino_SlotMapContainer)(jcontext ctx, jobject self, jint param0);
+#define VTABLE_rhino_regexp_NativeRegExp_getTypeOf_R_java_lang_String 36
+typedef jobject (*func_rhino_regexp_NativeRegExp_getTypeOf_R_java_lang_String)(jcontext ctx, jobject self);
+#define VTABLE_rhino_regexp_NativeRegExp_getAttributes_java_lang_String_R_int 37
+typedef jint (*func_rhino_regexp_NativeRegExp_getAttributes_java_lang_String_R_int)(jcontext ctx, jobject self, jobject param0);
+#define VTABLE_rhino_regexp_NativeRegExp_getAttributes_int_R_int 38
+typedef jint (*func_rhino_regexp_NativeRegExp_getAttributes_int_R_int)(jcontext ctx, jobject self, jint param0);
+#define VTABLE_rhino_regexp_NativeRegExp_getAttributes_rhino_Symbol_R_int 39
+typedef jint (*func_rhino_regexp_NativeRegExp_getAttributes_rhino_Symbol_R_int)(jcontext ctx, jobject self, jobject param0);
+#define VTABLE_rhino_regexp_NativeRegExp_setAttributes_java_lang_String_int 40
+typedef void (*func_rhino_regexp_NativeRegExp_setAttributes_java_lang_String_int)(jcontext ctx, jobject self, jobject param0, jint param1);
+#define VTABLE_rhino_regexp_NativeRegExp_setAttributes_int_int 41
+typedef void (*func_rhino_regexp_NativeRegExp_setAttributes_int_int)(jcontext ctx, jobject self, jint param0, jint param1);
+#define VTABLE_rhino_regexp_NativeRegExp_setAttributes_rhino_Symbol_int 42
+typedef void (*func_rhino_regexp_NativeRegExp_setAttributes_rhino_Symbol_int)(jcontext ctx, jobject self, jobject param0, jint param1);
+#define VTABLE_rhino_regexp_NativeRegExp_setGetterOrSetter_java_lang_String_int_rhino_Callable_boolean 43
+typedef void (*func_rhino_regexp_NativeRegExp_setGetterOrSetter_java_lang_String_int_rhino_Callable_boolean)(jcontext ctx, jobject self, jobject param0, jint param1, jobject param2, jbool param3);
+#define VTABLE_rhino_regexp_NativeRegExp_setGetterOrSetter_java_lang_String_int_rhino_Callable_boolean_boolean 44
+typedef void (*func_rhino_regexp_NativeRegExp_setGetterOrSetter_java_lang_String_int_rhino_Callable_boolean_boolean)(jcontext ctx, jobject self, jobject param0, jint param1, jobject param2, jbool param3, jbool param4);
+#define VTABLE_rhino_regexp_NativeRegExp_getGetterOrSetter_java_lang_String_int_boolean_R_java_lang_Object 45
+typedef jobject (*func_rhino_regexp_NativeRegExp_getGetterOrSetter_java_lang_String_int_boolean_R_java_lang_Object)(jcontext ctx, jobject self, jobject param0, jint param1, jbool param2);
+#define VTABLE_rhino_regexp_NativeRegExp_isGetterOrSetter_java_lang_String_int_boolean_R_boolean 46
+typedef jbool (*func_rhino_regexp_NativeRegExp_isGetterOrSetter_java_lang_String_int_boolean_R_boolean)(jcontext ctx, jobject self, jobject param0, jint param1, jbool param2);
+#define VTABLE_rhino_regexp_NativeRegExp_addLazilyInitializedValue_java_lang_String_int_rhino_LazilyLoadedCtor_int 47
+typedef void (*func_rhino_regexp_NativeRegExp_addLazilyInitializedValue_java_lang_String_int_rhino_LazilyLoadedCtor_int)(jcontext ctx, jobject self, jobject param0, jint param1, jobject param2, jint param3);
+#define VTABLE_rhino_regexp_NativeRegExp_setExternalArrayData_rhino_ExternalArrayData 48
+typedef void (*func_rhino_regexp_NativeRegExp_setExternalArrayData_rhino_ExternalArrayData)(jcontext ctx, jobject self, jobject param0);
+#define VTABLE_rhino_regexp_NativeRegExp_getExternalArrayData_R_rhino_ExternalArrayData 49
+typedef jobject (*func_rhino_regexp_NativeRegExp_getExternalArrayData_R_rhino_ExternalArrayData)(jcontext ctx, jobject self);
+#define VTABLE_rhino_regexp_NativeRegExp_getExternalArrayLength_R_java_lang_Object 50
+typedef jobject (*func_rhino_regexp_NativeRegExp_getExternalArrayLength_R_java_lang_Object)(jcontext ctx, jobject self);
+#define VTABLE_rhino_regexp_NativeRegExp_avoidObjectDetection_R_boolean 51
+typedef jbool (*func_rhino_regexp_NativeRegExp_avoidObjectDetection_R_boolean)(jcontext ctx, jobject self);
+#define VTABLE_rhino_regexp_NativeRegExp_equivalentValues_java_lang_Object_R_java_lang_Object 52
+typedef jobject (*func_rhino_regexp_NativeRegExp_equivalentValues_java_lang_Object_R_java_lang_Object)(jcontext ctx, jobject self, jobject param0);
+#define VTABLE_rhino_regexp_NativeRegExp_defineProperty_java_lang_String_java_lang_Object_int 53
+typedef void (*func_rhino_regexp_NativeRegExp_defineProperty_java_lang_String_java_lang_Object_int)(jcontext ctx, jobject self, jobject param0, jobject param1, jint param2);
+#define VTABLE_rhino_regexp_NativeRegExp_defineProperty_rhino_Symbol_java_lang_Object_int 54
+typedef void (*func_rhino_regexp_NativeRegExp_defineProperty_rhino_Symbol_java_lang_Object_int)(jcontext ctx, jobject self, jobject param0, jobject param1, jint param2);
+#define VTABLE_rhino_regexp_NativeRegExp_defineProperty_java_lang_String_java_lang_Class_int 55
+typedef void (*func_rhino_regexp_NativeRegExp_defineProperty_java_lang_String_java_lang_Class_int)(jcontext ctx, jobject self, jobject param0, jobject param1, jint param2);
+#define VTABLE_rhino_regexp_NativeRegExp_defineProperty_java_lang_String_java_lang_Object_java_lang_reflect_Method_java_lang_reflect_Method_int 56
+typedef void (*func_rhino_regexp_NativeRegExp_defineProperty_java_lang_String_java_lang_Object_java_lang_reflect_Method_java_lang_reflect_Method_int)(jcontext ctx, jobject self, jobject param0, jobject param1, jobject param2, jobject param3, jint param4);
+#define VTABLE_rhino_regexp_NativeRegExp_defineOwnProperties_rhino_Context_rhino_ScriptableObject 57
+typedef void (*func_rhino_regexp_NativeRegExp_defineOwnProperties_rhino_Context_rhino_ScriptableObject)(jcontext ctx, jobject self, jobject param0, jobject param1);
+#define VTABLE_rhino_regexp_NativeRegExp_defineOwnProperty_rhino_Context_java_lang_Object_rhino_ScriptableObject 58
+typedef void (*func_rhino_regexp_NativeRegExp_defineOwnProperty_rhino_Context_java_lang_Object_rhino_ScriptableObject)(jcontext ctx, jobject self, jobject param0, jobject param1, jobject param2);
+#define VTABLE_rhino_regexp_NativeRegExp_defineOwnProperty_rhino_Context_java_lang_Object_rhino_ScriptableObject_boolean 59
+typedef void (*func_rhino_regexp_NativeRegExp_defineOwnProperty_rhino_Context_java_lang_Object_rhino_ScriptableObject_boolean)(jcontext ctx, jobject self, jobject param0, jobject param1, jobject param2, jbool param3);
+#define VTABLE_rhino_regexp_NativeRegExp_checkPropertyDefinition_rhino_ScriptableObject 60
+typedef void (*func_rhino_regexp_NativeRegExp_checkPropertyDefinition_rhino_ScriptableObject)(jcontext ctx, jobject self, jobject param0);
+#define VTABLE_rhino_regexp_NativeRegExp_checkPropertyChange_java_lang_Object_rhino_ScriptableObject_rhino_ScriptableObject 61
+typedef void (*func_rhino_regexp_NativeRegExp_checkPropertyChange_java_lang_Object_rhino_ScriptableObject_rhino_ScriptableObject)(jcontext ctx, jobject self, jobject param0, jobject param1, jobject param2);
+#define VTABLE_rhino_regexp_NativeRegExp_sameValue_java_lang_Object_java_lang_Object_R_boolean 62
+typedef jbool (*func_rhino_regexp_NativeRegExp_sameValue_java_lang_Object_java_lang_Object_R_boolean)(jcontext ctx, jobject self, jobject param0, jobject param1);
+#define VTABLE_rhino_regexp_NativeRegExp_applyDescriptorToAttributeBitset_int_rhino_ScriptableObject_R_int 63
+typedef jint (*func_rhino_regexp_NativeRegExp_applyDescriptorToAttributeBitset_int_rhino_ScriptableObject_R_int)(jcontext ctx, jobject self, jint param0, jobject param1);
+#define VTABLE_rhino_regexp_NativeRegExp_isDataDescriptor_rhino_ScriptableObject_R_boolean 64
+typedef jbool (*func_rhino_regexp_NativeRegExp_isDataDescriptor_rhino_ScriptableObject_R_boolean)(jcontext ctx, jobject self, jobject param0);
+#define VTABLE_rhino_regexp_NativeRegExp_isAccessorDescriptor_rhino_ScriptableObject_R_boolean 65
+typedef jbool (*func_rhino_regexp_NativeRegExp_isAccessorDescriptor_rhino_ScriptableObject_R_boolean)(jcontext ctx, jobject self, jobject param0);
+#define VTABLE_rhino_regexp_NativeRegExp_isGenericDescriptor_rhino_ScriptableObject_R_boolean 66
+typedef jbool (*func_rhino_regexp_NativeRegExp_isGenericDescriptor_rhino_ScriptableObject_R_boolean)(jcontext ctx, jobject self, jobject param0);
+#define VTABLE_rhino_regexp_NativeRegExp_defineFunctionProperties_Array1_java_lang_String_java_lang_Class_int 67
+typedef void (*func_rhino_regexp_NativeRegExp_defineFunctionProperties_Array1_java_lang_String_java_lang_Class_int)(jcontext ctx, jobject self, jobject param0, jobject param1, jint param2);
+#define VTABLE_rhino_regexp_NativeRegExp_isExtensible_R_boolean 68
+typedef jbool (*func_rhino_regexp_NativeRegExp_isExtensible_R_boolean)(jcontext ctx, jobject self);
+#define VTABLE_rhino_regexp_NativeRegExp_preventExtensions 69
+typedef void (*func_rhino_regexp_NativeRegExp_preventExtensions)(jcontext ctx, jobject self);
+#define VTABLE_rhino_regexp_NativeRegExp_sealObject 70
+typedef void (*func_rhino_regexp_NativeRegExp_sealObject)(jcontext ctx, jobject self);
+#define VTABLE_rhino_regexp_NativeRegExp_isSealed_R_boolean 71
+typedef jbool (*func_rhino_regexp_NativeRegExp_isSealed_R_boolean)(jcontext ctx, jobject self);
+#define VTABLE_rhino_regexp_NativeRegExp_checkNotSealed_java_lang_Object_int 72
+typedef void (*func_rhino_regexp_NativeRegExp_checkNotSealed_java_lang_Object_int)(jcontext ctx, jobject self, jobject param0, jint param1);
+#define VTABLE_rhino_regexp_NativeRegExp_getAssociatedValue_java_lang_Object_R_java_lang_Object 73
+typedef jobject (*func_rhino_regexp_NativeRegExp_getAssociatedValue_java_lang_Object_R_java_lang_Object)(jcontext ctx, jobject self, jobject param0);
+#define VTABLE_rhino_regexp_NativeRegExp_associateValue_java_lang_Object_java_lang_Object_R_java_lang_Object 74
+typedef jobject (*func_rhino_regexp_NativeRegExp_associateValue_java_lang_Object_java_lang_Object_R_java_lang_Object)(jcontext ctx, jobject self, jobject param0, jobject param1);
+#define VTABLE_rhino_regexp_NativeRegExp_putImpl_java_lang_Object_int_rhino_Scriptable_java_lang_Object_R_boolean 75
+typedef jbool (*func_rhino_regexp_NativeRegExp_putImpl_java_lang_Object_int_rhino_Scriptable_java_lang_Object_R_boolean)(jcontext ctx, jobject self, jobject param0, jint param1, jobject param2, jobject param3);
+#define VTABLE_rhino_regexp_NativeRegExp_putConstImpl_java_lang_String_int_rhino_Scriptable_java_lang_Object_int_R_boolean 76
+typedef jbool (*func_rhino_regexp_NativeRegExp_putConstImpl_java_lang_String_int_rhino_Scriptable_java_lang_Object_int_R_boolean)(jcontext ctx, jobject self, jobject param0, jint param1, jobject param2, jobject param3, jint param4);
+#define VTABLE_rhino_regexp_NativeRegExp_findAttributeSlot_java_lang_String_int_rhino_ScriptableObject$SlotAccess_R_rhino_ScriptableObject$Slot 77
+typedef jobject (*func_rhino_regexp_NativeRegExp_findAttributeSlot_java_lang_String_int_rhino_ScriptableObject$SlotAccess_R_rhino_ScriptableObject$Slot)(jcontext ctx, jobject self, jobject param0, jint param1, jobject param2);
+#define VTABLE_rhino_regexp_NativeRegExp_findAttributeSlot_rhino_Symbol_rhino_ScriptableObject$SlotAccess_R_rhino_ScriptableObject$Slot 78
+typedef jobject (*func_rhino_regexp_NativeRegExp_findAttributeSlot_rhino_Symbol_rhino_ScriptableObject$SlotAccess_R_rhino_ScriptableObject$Slot)(jcontext ctx, jobject self, jobject param0, jobject param1);
+#define VTABLE_rhino_regexp_NativeRegExp_getIds_boolean_boolean_R_Array1_java_lang_Object 79
+typedef jobject (*func_rhino_regexp_NativeRegExp_getIds_boolean_boolean_R_Array1_java_lang_Object)(jcontext ctx, jobject self, jbool param0, jbool param1);
+#define VTABLE_rhino_regexp_NativeRegExp_getOwnPropertyDescriptor_rhino_Context_java_lang_Object_R_rhino_ScriptableObject 80
+typedef jobject (*func_rhino_regexp_NativeRegExp_getOwnPropertyDescriptor_rhino_Context_java_lang_Object_R_rhino_ScriptableObject)(jcontext ctx, jobject self, jobject param0, jobject param1);
+#define VTABLE_rhino_regexp_NativeRegExp_getSlot_rhino_Context_java_lang_Object_rhino_ScriptableObject$SlotAccess_R_rhino_ScriptableObject$Slot 81
+typedef jobject (*func_rhino_regexp_NativeRegExp_getSlot_rhino_Context_java_lang_Object_rhino_ScriptableObject$SlotAccess_R_rhino_ScriptableObject$Slot)(jcontext ctx, jobject self, jobject param0, jobject param1, jobject param2);
+#define VTABLE_rhino_regexp_NativeRegExp_size_R_int 82
+typedef jint (*func_rhino_regexp_NativeRegExp_size_R_int)(jcontext ctx, jobject self);
+#define VTABLE_rhino_regexp_NativeRegExp_isEmpty_R_boolean 83
+typedef jbool (*func_rhino_regexp_NativeRegExp_isEmpty_R_boolean)(jcontext ctx, jobject self);
+#define VTABLE_rhino_regexp_NativeRegExp_get_java_lang_Object_R_java_lang_Object 84
+typedef jobject (*func_rhino_regexp_NativeRegExp_get_java_lang_Object_R_java_lang_Object)(jcontext ctx, jobject self, jobject param0);
+#define VTABLE_rhino_regexp_NativeRegExp_execIdCall_rhino_IdFunctionObject_rhino_Context_rhino_Scriptable_rhino_Scriptable_Array1_java_lang_Object_R_java_lang_Object 85
+typedef jobject (*func_rhino_regexp_NativeRegExp_execIdCall_rhino_IdFunctionObject_rhino_Context_rhino_Scriptable_rhino_Scriptable_Array1_java_lang_Object_R_java_lang_Object)(jcontext ctx, jobject self, jobject param0, jobject param1, jobject param2, jobject param3, jobject param4);
+#define VTABLE_rhino_regexp_NativeRegExp_defaultHas_java_lang_String_R_boolean 86
+typedef jbool (*func_rhino_regexp_NativeRegExp_defaultHas_java_lang_String_R_boolean)(jcontext ctx, jobject self, jobject param0);
+#define VTABLE_rhino_regexp_NativeRegExp_defaultGet_java_lang_String_R_java_lang_Object 87
+typedef jobject (*func_rhino_regexp_NativeRegExp_defaultGet_java_lang_String_R_java_lang_Object)(jcontext ctx, jobject self, jobject param0);
+#define VTABLE_rhino_regexp_NativeRegExp_defaultPut_java_lang_String_java_lang_Object 88
+typedef void (*func_rhino_regexp_NativeRegExp_defaultPut_java_lang_String_java_lang_Object)(jcontext ctx, jobject self, jobject param0, jobject param1);
+#define VTABLE_rhino_regexp_NativeRegExp_getMaxInstanceId_R_int 89
+typedef jint (*func_rhino_regexp_NativeRegExp_getMaxInstanceId_R_int)(jcontext ctx, jobject self);
+#define VTABLE_rhino_regexp_NativeRegExp_findInstanceIdInfo_java_lang_String_R_int 90
+typedef jint (*func_rhino_regexp_NativeRegExp_findInstanceIdInfo_java_lang_String_R_int)(jcontext ctx, jobject self, jobject param0);
+#define VTABLE_rhino_regexp_NativeRegExp_findInstanceIdInfo_rhino_Symbol_R_int 91
+typedef jint (*func_rhino_regexp_NativeRegExp_findInstanceIdInfo_rhino_Symbol_R_int)(jcontext ctx, jobject self, jobject param0);
+#define VTABLE_rhino_regexp_NativeRegExp_getInstanceIdName_int_R_java_lang_String 92
+typedef jobject (*func_rhino_regexp_NativeRegExp_getInstanceIdName_int_R_java_lang_String)(jcontext ctx, jobject self, jint param0);
+#define VTABLE_rhino_regexp_NativeRegExp_getInstanceIdValue_int_R_java_lang_Object 93
+typedef jobject (*func_rhino_regexp_NativeRegExp_getInstanceIdValue_int_R_java_lang_Object)(jcontext ctx, jobject self, jint param0);
+#define VTABLE_rhino_regexp_NativeRegExp_setInstanceIdValue_int_java_lang_Object 94
+typedef void (*func_rhino_regexp_NativeRegExp_setInstanceIdValue_int_java_lang_Object)(jcontext ctx, jobject self, jint param0, jobject param1);
+#define VTABLE_rhino_regexp_NativeRegExp_setInstanceIdAttributes_int_int 95
+typedef void (*func_rhino_regexp_NativeRegExp_setInstanceIdAttributes_int_int)(jcontext ctx, jobject self, jint param0, jint param1);
+#define VTABLE_rhino_regexp_NativeRegExp_exportAsJSClass_int_rhino_Scriptable_boolean_R_rhino_IdFunctionObject 96
+typedef jobject (*func_rhino_regexp_NativeRegExp_exportAsJSClass_int_rhino_Scriptable_boolean_R_rhino_IdFunctionObject)(jcontext ctx, jobject self, jint param0, jobject param1, jbool param2);
+#define VTABLE_rhino_regexp_NativeRegExp_hasPrototypeMap_R_boolean 97
+typedef jbool (*func_rhino_regexp_NativeRegExp_hasPrototypeMap_R_boolean)(jcontext ctx, jobject self);
+#define VTABLE_rhino_regexp_NativeRegExp_activatePrototypeMap_int 98
+typedef void (*func_rhino_regexp_NativeRegExp_activatePrototypeMap_int)(jcontext ctx, jobject self, jint param0);
+#define VTABLE_rhino_regexp_NativeRegExp_initPrototypeMethod_java_lang_Object_int_java_lang_String_int_R_rhino_IdFunctionObject 99
+typedef jobject (*func_rhino_regexp_NativeRegExp_initPrototypeMethod_java_lang_Object_int_java_lang_String_int_R_rhino_IdFunctionObject)(jcontext ctx, jobject self, jobject param0, jint param1, jobject param2, jint param3);
+#define VTABLE_rhino_regexp_NativeRegExp_initPrototypeMethod_java_lang_Object_int_java_lang_String_java_lang_String_int_R_rhino_IdFunctionObject 100
+typedef jobject (*func_rhino_regexp_NativeRegExp_initPrototypeMethod_java_lang_Object_int_java_lang_String_java_lang_String_int_R_rhino_IdFunctionObject)(jcontext ctx, jobject self, jobject param0, jint param1, jobject param2, jobject param3, jint param4);
+#define VTABLE_rhino_regexp_NativeRegExp_initPrototypeMethod_java_lang_Object_int_rhino_Symbol_java_lang_String_int_R_rhino_IdFunctionObject 101
+typedef jobject (*func_rhino_regexp_NativeRegExp_initPrototypeMethod_java_lang_Object_int_rhino_Symbol_java_lang_String_int_R_rhino_IdFunctionObject)(jcontext ctx, jobject self, jobject param0, jint param1, jobject param2, jobject param3, jint param4);
+#define VTABLE_rhino_regexp_NativeRegExp_initPrototypeConstructor_rhino_IdFunctionObject 102
+typedef void (*func_rhino_regexp_NativeRegExp_initPrototypeConstructor_rhino_IdFunctionObject)(jcontext ctx, jobject self, jobject param0);
+#define VTABLE_rhino_regexp_NativeRegExp_initPrototypeValue_int_java_lang_String_java_lang_Object_int 103
+typedef void (*func_rhino_regexp_NativeRegExp_initPrototypeValue_int_java_lang_String_java_lang_Object_int)(jcontext ctx, jobject self, jint param0, jobject param1, jobject param2, jint param3);
+#define VTABLE_rhino_regexp_NativeRegExp_initPrototypeValue_int_rhino_Symbol_java_lang_Object_int 104
+typedef void (*func_rhino_regexp_NativeRegExp_initPrototypeValue_int_rhino_Symbol_java_lang_Object_int)(jcontext ctx, jobject self, jint param0, jobject param1, jobject param2, jint param3);
+#define VTABLE_rhino_regexp_NativeRegExp_initPrototypeId_int 105
+typedef void (*func_rhino_regexp_NativeRegExp_initPrototypeId_int)(jcontext ctx, jobject self, jint param0);
+#define VTABLE_rhino_regexp_NativeRegExp_findPrototypeId_java_lang_String_R_int 106
+typedef jint (*func_rhino_regexp_NativeRegExp_findPrototypeId_java_lang_String_R_int)(jcontext ctx, jobject self, jobject param0);
+#define VTABLE_rhino_regexp_NativeRegExp_findPrototypeId_rhino_Symbol_R_int 107
+typedef jint (*func_rhino_regexp_NativeRegExp_findPrototypeId_rhino_Symbol_R_int)(jcontext ctx, jobject self, jobject param0);
+#define VTABLE_rhino_regexp_NativeRegExp_fillConstructorProperties_rhino_IdFunctionObject 108
+typedef void (*func_rhino_regexp_NativeRegExp_fillConstructorProperties_rhino_IdFunctionObject)(jcontext ctx, jobject self, jobject param0);
+#define VTABLE_rhino_regexp_NativeRegExp_addIdFunctionProperty_rhino_Scriptable_java_lang_Object_int_java_lang_String_int 109
+typedef void (*func_rhino_regexp_NativeRegExp_addIdFunctionProperty_rhino_Scriptable_java_lang_Object_int_java_lang_String_int)(jcontext ctx, jobject self, jobject param0, jobject param1, jint param2, jobject param3, jint param4);
+#define VTABLE_rhino_regexp_NativeRegExp_newIdFunction_java_lang_Object_int_java_lang_String_int_rhino_Scriptable_R_rhino_IdFunctionObject 110
+typedef jobject (*func_rhino_regexp_NativeRegExp_newIdFunction_java_lang_Object_int_java_lang_String_int_rhino_Scriptable_R_rhino_IdFunctionObject)(jcontext ctx, jobject self, jobject param0, jint param1, jobject param2, jint param3, jobject param4);
+#define VTABLE_rhino_regexp_NativeRegExp_getBuiltInDescriptor_java_lang_String_R_rhino_ScriptableObject 111
+typedef jobject (*func_rhino_regexp_NativeRegExp_getBuiltInDescriptor_java_lang_String_R_rhino_ScriptableObject)(jcontext ctx, jobject self, jobject param0);
+#define VTABLE_rhino_regexp_NativeRegExp_getBuiltInDescriptor_rhino_Symbol_R_rhino_ScriptableObject 112
+typedef jobject (*func_rhino_regexp_NativeRegExp_getBuiltInDescriptor_rhino_Symbol_R_rhino_ScriptableObject)(jcontext ctx, jobject self, jobject param0);
+#define VTABLE_rhino_regexp_NativeRegExp_call_rhino_Context_rhino_Scriptable_rhino_Scriptable_Array1_java_lang_Object_R_java_lang_Object 113
+typedef jobject (*func_rhino_regexp_NativeRegExp_call_rhino_Context_rhino_Scriptable_rhino_Scriptable_Array1_java_lang_Object_R_java_lang_Object)(jcontext ctx, jobject self, jobject param0, jobject param1, jobject param2, jobject param3);
+#define VTABLE_rhino_regexp_NativeRegExp_construct_rhino_Context_rhino_Scriptable_Array1_java_lang_Object_R_rhino_Scriptable 114
+typedef jobject (*func_rhino_regexp_NativeRegExp_construct_rhino_Context_rhino_Scriptable_Array1_java_lang_Object_R_rhino_Scriptable)(jcontext ctx, jobject self, jobject param0, jobject param1, jobject param2);
+#define VTABLE_rhino_regexp_NativeRegExp_compile_rhino_Context_rhino_Scriptable_Array1_java_lang_Object_R_rhino_Scriptable 115
+typedef jobject (*func_rhino_regexp_NativeRegExp_compile_rhino_Context_rhino_Scriptable_Array1_java_lang_Object_R_rhino_Scriptable)(jcontext ctx, jobject self, jobject param0, jobject param1, jobject param2);
+#define VTABLE_rhino_regexp_NativeRegExp_execSub_rhino_Context_rhino_Scriptable_Array1_java_lang_Object_int_R_java_lang_Object 116
+typedef jobject (*func_rhino_regexp_NativeRegExp_execSub_rhino_Context_rhino_Scriptable_Array1_java_lang_Object_int_R_java_lang_Object)(jcontext ctx, jobject self, jobject param0, jobject param1, jobject param2, jint param3);
+#define VTABLE_rhino_regexp_NativeRegExp_executeRegExp_rhino_Context_rhino_Scriptable_rhino_regexp_RegExpImpl_java_lang_String_Array1_int_int_R_java_lang_Object 117
+typedef jobject (*func_rhino_regexp_NativeRegExp_executeRegExp_rhino_Context_rhino_Scriptable_rhino_regexp_RegExpImpl_java_lang_String_Array1_int_int_R_java_lang_Object)(jcontext ctx, jobject self, jobject param0, jobject param1, jobject param2, jobject param3, jobject param4, jint param5);
+#define VTABLE_rhino_regexp_NativeRegExp_getFlags_R_int 118
+typedef jint (*func_rhino_regexp_NativeRegExp_getFlags_R_int)(jcontext ctx, jobject self);
+
+void mark_rhino_regexp_NativeRegExp(jobject object, jint mark, jint depth);
+void clinit_rhino_regexp_NativeRegExp(jcontext ctx);
+void SM_rhino_regexp_NativeRegExp_init_rhino_Context_rhino_Scriptable_boolean(jcontext ctx, jobject param0, jobject param1, jbool param2);
+void init_rhino_regexp_NativeRegExp_rhino_Scriptable_rhino_regexp_RECompiled(jcontext ctx, jobject self, jobject param0, jobject param1);
+jobject M_rhino_regexp_NativeRegExp_getClassName_R_java_lang_String(jcontext ctx, jobject self);
+jobject M_rhino_regexp_NativeRegExp_getTypeOf_R_java_lang_String(jcontext ctx, jobject self);
+jobject M_rhino_regexp_NativeRegExp_call_rhino_Context_rhino_Scriptable_rhino_Scriptable_Array1_java_lang_Object_R_java_lang_Object(jcontext ctx, jobject self, jobject param0, jobject param1, jobject param2, jobject param3);
+jobject M_rhino_regexp_NativeRegExp_construct_rhino_Context_rhino_Scriptable_Array1_java_lang_Object_R_rhino_Scriptable(jcontext ctx, jobject self, jobject param0, jobject param1, jobject param2);
+jobject M_rhino_regexp_NativeRegExp_compile_rhino_Context_rhino_Scriptable_Array1_java_lang_Object_R_rhino_Scriptable(jcontext ctx, jobject self, jobject param0, jobject param1, jobject param2);
+jobject M_rhino_regexp_NativeRegExp_toString_R_java_lang_String(jcontext ctx, jobject self);
+void init_rhino_regexp_NativeRegExp(jcontext ctx, jobject self);
+jobject SM_rhino_regexp_NativeRegExp_getImpl_rhino_Context_R_rhino_regexp_RegExpImpl(jcontext ctx, jobject param0);
+jobject SM_rhino_regexp_NativeRegExp_escapeRegExp_java_lang_Object_R_java_lang_String(jcontext ctx, jobject param0);
+jobject M_rhino_regexp_NativeRegExp_execSub_rhino_Context_rhino_Scriptable_Array1_java_lang_Object_int_R_java_lang_Object(jcontext ctx, jobject self, jobject param0, jobject param1, jobject param2, jint param3);
+jobject SM_rhino_regexp_NativeRegExp_compileRE_rhino_Context_java_lang_String_java_lang_String_boolean_R_rhino_regexp_RECompiled(jcontext ctx, jobject param0, jobject param1, jobject param2, jbool param3);
+jbool SM_rhino_regexp_NativeRegExp_isDigit_char_R_boolean(jcontext ctx, jchar param0);
+jbool SM_rhino_regexp_NativeRegExp_isWord_char_R_boolean(jcontext ctx, jchar param0);
+jbool SM_rhino_regexp_NativeRegExp_isControlLetter_char_R_boolean(jcontext ctx, jchar param0);
+jbool SM_rhino_regexp_NativeRegExp_isLineTerm_char_R_boolean(jcontext ctx, jchar param0);
+jbool SM_rhino_regexp_NativeRegExp_isREWhiteSpace_int_R_boolean(jcontext ctx, jint param0);
+jchar SM_rhino_regexp_NativeRegExp_upcase_char_R_char(jcontext ctx, jchar param0);
+jchar SM_rhino_regexp_NativeRegExp_downcase_char_R_char(jcontext ctx, jchar param0);
+jint SM_rhino_regexp_NativeRegExp_toASCIIHexDigit_int_R_int(jcontext ctx, jint param0);
+jbool SM_rhino_regexp_NativeRegExp_parseDisjunction_rhino_regexp_CompilerState_R_boolean(jcontext ctx, jobject param0);
+jbool SM_rhino_regexp_NativeRegExp_parseAlternative_rhino_regexp_CompilerState_R_boolean(jcontext ctx, jobject param0);
+jbool SM_rhino_regexp_NativeRegExp_calculateBitmapSize_rhino_regexp_CompilerState_rhino_regexp_RENode_Array1_char_int_int_R_boolean(jcontext ctx, jobject param0, jobject param1, jobject param2, jint param3, jint param4);
+void SM_rhino_regexp_NativeRegExp_doFlat_rhino_regexp_CompilerState_char(jcontext ctx, jobject param0, jchar param1);
+jint SM_rhino_regexp_NativeRegExp_getDecimalValue_char_rhino_regexp_CompilerState_int_java_lang_String_R_int(jcontext ctx, jchar param0, jobject param1, jint param2, jobject param3);
+jbool SM_rhino_regexp_NativeRegExp_parseTerm_rhino_regexp_CompilerState_R_boolean(jcontext ctx, jobject param0);
+void SM_rhino_regexp_NativeRegExp_resolveForwardJump_Array1_byte_int_int(jcontext ctx, jobject param0, jint param1, jint param2);
+jint SM_rhino_regexp_NativeRegExp_getOffset_Array1_byte_int_R_int(jcontext ctx, jobject param0, jint param1);
+jint SM_rhino_regexp_NativeRegExp_addIndex_Array1_byte_int_int_R_int(jcontext ctx, jobject param0, jint param1, jint param2);
+jint SM_rhino_regexp_NativeRegExp_getIndex_Array1_byte_int_R_int(jcontext ctx, jobject param0, jint param1);
+jint SM_rhino_regexp_NativeRegExp_emitREBytecode_rhino_regexp_CompilerState_rhino_regexp_RECompiled_int_rhino_regexp_RENode_R_int(jcontext ctx, jobject param0, jobject param1, jint param2, jobject param3);
+void SM_rhino_regexp_NativeRegExp_pushProgState_rhino_regexp_REGlobalData_int_int_int_rhino_regexp_REBackTrackData_int_int(jcontext ctx, jobject param0, jint param1, jint param2, jint param3, jobject param4, jint param5, jint param6);
+jobject SM_rhino_regexp_NativeRegExp_popProgState_rhino_regexp_REGlobalData_R_rhino_regexp_REProgState(jcontext ctx, jobject param0);
+void SM_rhino_regexp_NativeRegExp_pushBackTrackState_rhino_regexp_REGlobalData_byte_int(jcontext ctx, jobject param0, jbyte param1, jint param2);
+void SM_rhino_regexp_NativeRegExp_pushBackTrackState_rhino_regexp_REGlobalData_byte_int_int_int_int(jcontext ctx, jobject param0, jbyte param1, jint param2, jint param3, jint param4, jint param5);
+jbool SM_rhino_regexp_NativeRegExp_flatNMatcher_rhino_regexp_REGlobalData_int_int_java_lang_String_int_R_boolean(jcontext ctx, jobject param0, jint param1, jint param2, jobject param3, jint param4);
+jbool SM_rhino_regexp_NativeRegExp_flatNIMatcher_rhino_regexp_REGlobalData_int_int_java_lang_String_int_R_boolean(jcontext ctx, jobject param0, jint param1, jint param2, jobject param3, jint param4);
+jbool SM_rhino_regexp_NativeRegExp_backrefMatcher_rhino_regexp_REGlobalData_int_java_lang_String_int_R_boolean(jcontext ctx, jobject param0, jint param1, jobject param2, jint param3);
+void SM_rhino_regexp_NativeRegExp_addCharacterToCharSet_rhino_regexp_RECharSet_char(jcontext ctx, jobject param0, jchar param1);
+void SM_rhino_regexp_NativeRegExp_addCharacterRangeToCharSet_rhino_regexp_RECharSet_char_char(jcontext ctx, jobject param0, jchar param1, jchar param2);
+void SM_rhino_regexp_NativeRegExp_processCharSet_rhino_regexp_REGlobalData_rhino_regexp_RECharSet(jcontext ctx, jobject param0, jobject param1);
+void SM_rhino_regexp_NativeRegExp_processCharSetImpl_rhino_regexp_REGlobalData_rhino_regexp_RECharSet(jcontext ctx, jobject param0, jobject param1);
+jbool SM_rhino_regexp_NativeRegExp_classMatcher_rhino_regexp_REGlobalData_rhino_regexp_RECharSet_char_R_boolean(jcontext ctx, jobject param0, jobject param1, jchar param2);
+jbool SM_rhino_regexp_NativeRegExp_reopIsSimple_int_R_boolean(jcontext ctx, jint param0);
+jint SM_rhino_regexp_NativeRegExp_simpleMatch_rhino_regexp_REGlobalData_java_lang_String_int_Array1_byte_int_int_boolean_R_int(jcontext ctx, jobject param0, jobject param1, jint param2, jobject param3, jint param4, jint param5, jbool param6);
+jbool SM_rhino_regexp_NativeRegExp_executeREBytecode_rhino_regexp_REGlobalData_java_lang_String_int_R_boolean(jcontext ctx, jobject param0, jobject param1, jint param2);
+jbool SM_rhino_regexp_NativeRegExp_matchRegExp_rhino_regexp_REGlobalData_rhino_regexp_RECompiled_java_lang_String_int_int_boolean_R_boolean(jcontext ctx, jobject param0, jobject param1, jobject param2, jint param3, jint param4, jbool param5);
+jobject M_rhino_regexp_NativeRegExp_executeRegExp_rhino_Context_rhino_Scriptable_rhino_regexp_RegExpImpl_java_lang_String_Array1_int_int_R_java_lang_Object(jcontext ctx, jobject self, jobject param0, jobject param1, jobject param2, jobject param3, jobject param4, jint param5);
+jint M_rhino_regexp_NativeRegExp_getFlags_R_int(jcontext ctx, jobject self);
+void SM_rhino_regexp_NativeRegExp_reportWarning_rhino_Context_java_lang_String_java_lang_String(jcontext ctx, jobject param0, jobject param1, jobject param2);
+void SM_rhino_regexp_NativeRegExp_reportError_java_lang_String_java_lang_String(jcontext ctx, jobject param0, jobject param1);
+jint M_rhino_regexp_NativeRegExp_getMaxInstanceId_R_int(jcontext ctx, jobject self);
+jint M_rhino_regexp_NativeRegExp_findInstanceIdInfo_java_lang_String_R_int(jcontext ctx, jobject self, jobject param0);
+jobject M_rhino_regexp_NativeRegExp_getInstanceIdName_int_R_java_lang_String(jcontext ctx, jobject self, jint param0);
+jobject M_rhino_regexp_NativeRegExp_getInstanceIdValue_int_R_java_lang_Object(jcontext ctx, jobject self, jint param0);
+void M_rhino_regexp_NativeRegExp_setInstanceIdValue_int_java_lang_Object(jcontext ctx, jobject self, jint param0, jobject param1);
+void M_rhino_regexp_NativeRegExp_setInstanceIdAttributes_int_int(jcontext ctx, jobject self, jint param0, jint param1);
+void M_rhino_regexp_NativeRegExp_initPrototypeId_int(jcontext ctx, jobject self, jint param0);
+jobject M_rhino_regexp_NativeRegExp_execIdCall_rhino_IdFunctionObject_rhino_Context_rhino_Scriptable_rhino_Scriptable_Array1_java_lang_Object_R_java_lang_Object(jcontext ctx, jobject self, jobject param0, jobject param1, jobject param2, jobject param3, jobject param4);
+jobject SM_rhino_regexp_NativeRegExp_realThis_rhino_Scriptable_rhino_IdFunctionObject_R_rhino_regexp_NativeRegExp(jcontext ctx, jobject param0, jobject param1);
+jint M_rhino_regexp_NativeRegExp_findPrototypeId_java_lang_String_R_int(jcontext ctx, jobject self, jobject param0);
+
+#ifdef __cplusplus
+}
+#endif
+
+#endif

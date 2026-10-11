@@ -1,0 +1,122 @@
+#ifndef HEADER_arc_util_serialization_JsonReader
+#define HEADER_arc_util_serialization_JsonReader
+
+#include "Clearwing.h"
+#include "java/lang/Object.h"
+#include "arc/util/serialization/BaseJsonReader.h"
+
+#ifdef __cplusplus
+extern "C" {
+#endif
+
+typedef struct arc_util_serialization_JsonReader {
+	java_lang_Object parent;
+	jref F_elements;
+	jref F_lastChild;
+	jref F_root;
+	jref F_current;
+} arc_util_serialization_JsonReader;
+
+extern Class class_arc_util_serialization_JsonReader;
+
+extern jint SF_arc_util_serialization_JsonReader_json_start;
+extern jint SF_arc_util_serialization_JsonReader_json_first_final;
+extern jint SF_arc_util_serialization_JsonReader_json_error;
+extern jint SF_arc_util_serialization_JsonReader_json_en_object;
+extern jint SF_arc_util_serialization_JsonReader_json_en_array;
+extern jint SF_arc_util_serialization_JsonReader_json_en_main;
+extern jobject SF_arc_util_serialization_JsonReader__json_actions;
+extern jobject SF_arc_util_serialization_JsonReader__json_key_offsets;
+extern jobject SF_arc_util_serialization_JsonReader__json_trans_keys;
+extern jobject SF_arc_util_serialization_JsonReader__json_single_lengths;
+extern jobject SF_arc_util_serialization_JsonReader__json_range_lengths;
+extern jobject SF_arc_util_serialization_JsonReader__json_index_offsets;
+extern jobject SF_arc_util_serialization_JsonReader__json_indicies;
+extern jobject SF_arc_util_serialization_JsonReader__json_trans_targs;
+extern jobject SF_arc_util_serialization_JsonReader__json_trans_actions;
+extern jobject SF_arc_util_serialization_JsonReader__json_eof_actions;
+
+#define VTABLE_arc_util_serialization_JsonReader_hashCode_R_int 0
+typedef jint (*func_arc_util_serialization_JsonReader_hashCode_R_int)(jcontext ctx, jobject self);
+#define VTABLE_arc_util_serialization_JsonReader_equals_java_lang_Object_R_boolean 1
+typedef jbool (*func_arc_util_serialization_JsonReader_equals_java_lang_Object_R_boolean)(jcontext ctx, jobject self, jobject param0);
+#define VTABLE_arc_util_serialization_JsonReader_clone_R_java_lang_Object 2
+typedef jobject (*func_arc_util_serialization_JsonReader_clone_R_java_lang_Object)(jcontext ctx, jobject self);
+#define VTABLE_arc_util_serialization_JsonReader_getClass_R_java_lang_Class 3
+typedef jobject (*func_arc_util_serialization_JsonReader_getClass_R_java_lang_Class)(jcontext ctx, jobject self);
+#define VTABLE_arc_util_serialization_JsonReader_toString_R_java_lang_String 4
+typedef jobject (*func_arc_util_serialization_JsonReader_toString_R_java_lang_String)(jcontext ctx, jobject self);
+#define VTABLE_arc_util_serialization_JsonReader_finalize 5
+typedef void (*func_arc_util_serialization_JsonReader_finalize)(jcontext ctx, jobject self);
+#define VTABLE_arc_util_serialization_JsonReader_notify 6
+typedef void (*func_arc_util_serialization_JsonReader_notify)(jcontext ctx, jobject self);
+#define VTABLE_arc_util_serialization_JsonReader_notifyAll 7
+typedef void (*func_arc_util_serialization_JsonReader_notifyAll)(jcontext ctx, jobject self);
+#define VTABLE_arc_util_serialization_JsonReader_wait 8
+typedef void (*func_arc_util_serialization_JsonReader_wait)(jcontext ctx, jobject self);
+#define VTABLE_arc_util_serialization_JsonReader_wait_long 9
+typedef void (*func_arc_util_serialization_JsonReader_wait_long)(jcontext ctx, jobject self, jlong param0);
+#define VTABLE_arc_util_serialization_JsonReader_wait_long_int 10
+typedef void (*func_arc_util_serialization_JsonReader_wait_long_int)(jcontext ctx, jobject self, jlong param0, jint param1);
+#define VTABLE_arc_util_serialization_JsonReader_parse_java_io_InputStream_R_arc_util_serialization_JsonValue 11
+typedef jobject (*func_arc_util_serialization_JsonReader_parse_java_io_InputStream_R_arc_util_serialization_JsonValue)(jcontext ctx, jobject self, jobject param0);
+#define VTABLE_arc_util_serialization_JsonReader_parse_arc_files_Fi_R_arc_util_serialization_JsonValue 12
+typedef jobject (*func_arc_util_serialization_JsonReader_parse_arc_files_Fi_R_arc_util_serialization_JsonValue)(jcontext ctx, jobject self, jobject param0);
+#define VTABLE_arc_util_serialization_JsonReader_parse_java_lang_String_R_arc_util_serialization_JsonValue 13
+typedef jobject (*func_arc_util_serialization_JsonReader_parse_java_lang_String_R_arc_util_serialization_JsonValue)(jcontext ctx, jobject self, jobject param0);
+#define VTABLE_arc_util_serialization_JsonReader_parse_java_io_Reader_R_arc_util_serialization_JsonValue 14
+typedef jobject (*func_arc_util_serialization_JsonReader_parse_java_io_Reader_R_arc_util_serialization_JsonValue)(jcontext ctx, jobject self, jobject param0);
+#define VTABLE_arc_util_serialization_JsonReader_parse_Array1_char_int_int_R_arc_util_serialization_JsonValue 15
+typedef jobject (*func_arc_util_serialization_JsonReader_parse_Array1_char_int_int_R_arc_util_serialization_JsonValue)(jcontext ctx, jobject self, jobject param0, jint param1, jint param2);
+#define VTABLE_arc_util_serialization_JsonReader_addChild_java_lang_String_arc_util_serialization_JsonValue 16
+typedef void (*func_arc_util_serialization_JsonReader_addChild_java_lang_String_arc_util_serialization_JsonValue)(jcontext ctx, jobject self, jobject param0, jobject param1);
+#define VTABLE_arc_util_serialization_JsonReader_startObject_java_lang_String 17
+typedef void (*func_arc_util_serialization_JsonReader_startObject_java_lang_String)(jcontext ctx, jobject self, jobject param0);
+#define VTABLE_arc_util_serialization_JsonReader_startArray_java_lang_String 18
+typedef void (*func_arc_util_serialization_JsonReader_startArray_java_lang_String)(jcontext ctx, jobject self, jobject param0);
+#define VTABLE_arc_util_serialization_JsonReader_pop 19
+typedef void (*func_arc_util_serialization_JsonReader_pop)(jcontext ctx, jobject self);
+#define VTABLE_arc_util_serialization_JsonReader_string_java_lang_String_java_lang_String 20
+typedef void (*func_arc_util_serialization_JsonReader_string_java_lang_String_java_lang_String)(jcontext ctx, jobject self, jobject param0, jobject param1);
+#define VTABLE_arc_util_serialization_JsonReader_number_java_lang_String_double_java_lang_String 21
+typedef void (*func_arc_util_serialization_JsonReader_number_java_lang_String_double_java_lang_String)(jcontext ctx, jobject self, jobject param0, jdouble param1, jobject param2);
+#define VTABLE_arc_util_serialization_JsonReader_number_java_lang_String_long_java_lang_String 22
+typedef void (*func_arc_util_serialization_JsonReader_number_java_lang_String_long_java_lang_String)(jcontext ctx, jobject self, jobject param0, jlong param1, jobject param2);
+#define VTABLE_arc_util_serialization_JsonReader_bool_java_lang_String_boolean 23
+typedef void (*func_arc_util_serialization_JsonReader_bool_java_lang_String_boolean)(jcontext ctx, jobject self, jobject param0, jbool param1);
+#define VTABLE_arc_util_serialization_JsonReader_unescape_java_lang_String_R_java_lang_String 24
+typedef jobject (*func_arc_util_serialization_JsonReader_unescape_java_lang_String_R_java_lang_String)(jcontext ctx, jobject self, jobject param0);
+
+void mark_arc_util_serialization_JsonReader(jobject object, jint mark, jint depth);
+void clinit_arc_util_serialization_JsonReader(jcontext ctx);
+void init_arc_util_serialization_JsonReader(jcontext ctx, jobject self);
+jobject SM_arc_util_serialization_JsonReader_init__json_actions_0_R_Array1_byte(jcontext ctx);
+jobject SM_arc_util_serialization_JsonReader_init__json_key_offsets_0_R_Array1_short(jcontext ctx);
+jobject SM_arc_util_serialization_JsonReader_init__json_trans_keys_0_R_Array1_char(jcontext ctx);
+jobject SM_arc_util_serialization_JsonReader_init__json_single_lengths_0_R_Array1_byte(jcontext ctx);
+jobject SM_arc_util_serialization_JsonReader_init__json_range_lengths_0_R_Array1_byte(jcontext ctx);
+jobject SM_arc_util_serialization_JsonReader_init__json_index_offsets_0_R_Array1_short(jcontext ctx);
+jobject SM_arc_util_serialization_JsonReader_init__json_indicies_0_R_Array1_byte(jcontext ctx);
+jobject SM_arc_util_serialization_JsonReader_init__json_trans_targs_0_R_Array1_byte(jcontext ctx);
+jobject SM_arc_util_serialization_JsonReader_init__json_trans_actions_0_R_Array1_byte(jcontext ctx);
+jobject SM_arc_util_serialization_JsonReader_init__json_eof_actions_0_R_Array1_byte(jcontext ctx);
+jobject M_arc_util_serialization_JsonReader_parse_java_lang_String_R_arc_util_serialization_JsonValue(jcontext ctx, jobject self, jobject param0);
+jobject M_arc_util_serialization_JsonReader_parse_java_io_Reader_R_arc_util_serialization_JsonValue(jcontext ctx, jobject self, jobject param0);
+jobject M_arc_util_serialization_JsonReader_parse_java_io_InputStream_R_arc_util_serialization_JsonValue(jcontext ctx, jobject self, jobject param0);
+jobject M_arc_util_serialization_JsonReader_parse_arc_files_Fi_R_arc_util_serialization_JsonValue(jcontext ctx, jobject self, jobject param0);
+jobject M_arc_util_serialization_JsonReader_parse_Array1_char_int_int_R_arc_util_serialization_JsonValue(jcontext ctx, jobject self, jobject param0, jint param1, jint param2);
+void M_arc_util_serialization_JsonReader_addChild_java_lang_String_arc_util_serialization_JsonValue(jcontext ctx, jobject self, jobject param0, jobject param1);
+void M_arc_util_serialization_JsonReader_startObject_java_lang_String(jcontext ctx, jobject self, jobject param0);
+void M_arc_util_serialization_JsonReader_startArray_java_lang_String(jcontext ctx, jobject self, jobject param0);
+void M_arc_util_serialization_JsonReader_pop(jcontext ctx, jobject self);
+void M_arc_util_serialization_JsonReader_string_java_lang_String_java_lang_String(jcontext ctx, jobject self, jobject param0, jobject param1);
+void M_arc_util_serialization_JsonReader_number_java_lang_String_double_java_lang_String(jcontext ctx, jobject self, jobject param0, jdouble param1, jobject param2);
+void M_arc_util_serialization_JsonReader_number_java_lang_String_long_java_lang_String(jcontext ctx, jobject self, jobject param0, jlong param1, jobject param2);
+void M_arc_util_serialization_JsonReader_bool_java_lang_String_boolean(jcontext ctx, jobject self, jobject param0, jbool param1);
+jobject M_arc_util_serialization_JsonReader_unescape_java_lang_String_R_java_lang_String(jcontext ctx, jobject self, jobject param0);
+
+#ifdef __cplusplus
+}
+#endif
+
+#endif

@@ -1,0 +1,83 @@
+#ifndef HEADER_mindustry_world_meta_BlockFlag
+#define HEADER_mindustry_world_meta_BlockFlag
+
+#include "Clearwing.h"
+#include "java/lang/Enum.h"
+
+#ifdef __cplusplus
+extern "C" {
+#endif
+
+typedef struct mindustry_world_meta_BlockFlag {
+	java_lang_Enum parent;
+} mindustry_world_meta_BlockFlag;
+
+extern Class class_mindustry_world_meta_BlockFlag;
+
+extern jobject SF_mindustry_world_meta_BlockFlag_core;
+extern jobject SF_mindustry_world_meta_BlockFlag_storage;
+extern jobject SF_mindustry_world_meta_BlockFlag_generator;
+extern jobject SF_mindustry_world_meta_BlockFlag_turret;
+extern jobject SF_mindustry_world_meta_BlockFlag_factory;
+extern jobject SF_mindustry_world_meta_BlockFlag_repair;
+extern jobject SF_mindustry_world_meta_BlockFlag_battery;
+extern jobject SF_mindustry_world_meta_BlockFlag_reactor;
+extern jobject SF_mindustry_world_meta_BlockFlag_extinguisher;
+extern jobject SF_mindustry_world_meta_BlockFlag_drill;
+extern jobject SF_mindustry_world_meta_BlockFlag_shield;
+extern jobject SF_mindustry_world_meta_BlockFlag_launchPad;
+extern jobject SF_mindustry_world_meta_BlockFlag_unitCargoUnloadPoint;
+extern jobject SF_mindustry_world_meta_BlockFlag_unitAssembler;
+extern jobject SF_mindustry_world_meta_BlockFlag_hasFogRadius;
+extern jobject SF_mindustry_world_meta_BlockFlag_steamVent;
+extern jobject SF_mindustry_world_meta_BlockFlag_blockRepair;
+extern jobject SF_mindustry_world_meta_BlockFlag_synced;
+extern jobject SF_mindustry_world_meta_BlockFlag_all;
+extern jobject SF_mindustry_world_meta_BlockFlag_allLogic;
+extern jobject SF_mindustry_world_meta_BlockFlag_$VALUES;
+
+#define VTABLE_mindustry_world_meta_BlockFlag_hashCode_R_int 0
+typedef jint (*func_mindustry_world_meta_BlockFlag_hashCode_R_int)(jcontext ctx, jobject self);
+#define VTABLE_mindustry_world_meta_BlockFlag_equals_java_lang_Object_R_boolean 1
+typedef jbool (*func_mindustry_world_meta_BlockFlag_equals_java_lang_Object_R_boolean)(jcontext ctx, jobject self, jobject param0);
+#define VTABLE_mindustry_world_meta_BlockFlag_clone_R_java_lang_Object 2
+typedef jobject (*func_mindustry_world_meta_BlockFlag_clone_R_java_lang_Object)(jcontext ctx, jobject self);
+#define VTABLE_mindustry_world_meta_BlockFlag_getClass_R_java_lang_Class 3
+typedef jobject (*func_mindustry_world_meta_BlockFlag_getClass_R_java_lang_Class)(jcontext ctx, jobject self);
+#define VTABLE_mindustry_world_meta_BlockFlag_toString_R_java_lang_String 4
+typedef jobject (*func_mindustry_world_meta_BlockFlag_toString_R_java_lang_String)(jcontext ctx, jobject self);
+#define VTABLE_mindustry_world_meta_BlockFlag_finalize 5
+typedef void (*func_mindustry_world_meta_BlockFlag_finalize)(jcontext ctx, jobject self);
+#define VTABLE_mindustry_world_meta_BlockFlag_notify 6
+typedef void (*func_mindustry_world_meta_BlockFlag_notify)(jcontext ctx, jobject self);
+#define VTABLE_mindustry_world_meta_BlockFlag_notifyAll 7
+typedef void (*func_mindustry_world_meta_BlockFlag_notifyAll)(jcontext ctx, jobject self);
+#define VTABLE_mindustry_world_meta_BlockFlag_wait 8
+typedef void (*func_mindustry_world_meta_BlockFlag_wait)(jcontext ctx, jobject self);
+#define VTABLE_mindustry_world_meta_BlockFlag_wait_long 9
+typedef void (*func_mindustry_world_meta_BlockFlag_wait_long)(jcontext ctx, jobject self, jlong param0);
+#define VTABLE_mindustry_world_meta_BlockFlag_wait_long_int 10
+typedef void (*func_mindustry_world_meta_BlockFlag_wait_long_int)(jcontext ctx, jobject self, jlong param0, jint param1);
+#define VTABLE_mindustry_world_meta_BlockFlag_compareTo_java_lang_Object_R_int 11
+typedef jint (*func_mindustry_world_meta_BlockFlag_compareTo_java_lang_Object_R_int)(jcontext ctx, jobject self, jobject param0);
+#define VTABLE_mindustry_world_meta_BlockFlag_compareTo_java_lang_Enum_R_int 12
+typedef jint (*func_mindustry_world_meta_BlockFlag_compareTo_java_lang_Enum_R_int)(jcontext ctx, jobject self, jobject param0);
+#define VTABLE_mindustry_world_meta_BlockFlag_name_R_java_lang_String 13
+typedef jobject (*func_mindustry_world_meta_BlockFlag_name_R_java_lang_String)(jcontext ctx, jobject self);
+#define VTABLE_mindustry_world_meta_BlockFlag_ordinal_R_int 14
+typedef jint (*func_mindustry_world_meta_BlockFlag_ordinal_R_int)(jcontext ctx, jobject self);
+#define VTABLE_mindustry_world_meta_BlockFlag_getDeclaringClass_R_java_lang_Class 15
+typedef jobject (*func_mindustry_world_meta_BlockFlag_getDeclaringClass_R_java_lang_Class)(jcontext ctx, jobject self);
+
+void mark_mindustry_world_meta_BlockFlag(jobject object, jint mark, jint depth);
+void clinit_mindustry_world_meta_BlockFlag(jcontext ctx);
+jobject SM_mindustry_world_meta_BlockFlag_values_R_Array1_mindustry_world_meta_BlockFlag(jcontext ctx);
+jobject SM_mindustry_world_meta_BlockFlag_valueOf_java_lang_String_R_mindustry_world_meta_BlockFlag(jcontext ctx, jobject param0);
+void init_mindustry_world_meta_BlockFlag_java_lang_String_int(jcontext ctx, jobject self, jobject param0, jint param1);
+jobject SM_mindustry_world_meta_BlockFlag_$values_R_Array1_mindustry_world_meta_BlockFlag(jcontext ctx);
+
+#ifdef __cplusplus
+}
+#endif
+
+#endif

@@ -1,0 +1,101 @@
+#ifndef HEADER_mindustry_ui_fragments_BlockInventoryFragment
+#define HEADER_mindustry_ui_fragments_BlockInventoryFragment
+
+#include "Clearwing.h"
+#include "java/lang/Object.h"
+
+#ifdef __cplusplus
+extern "C" {
+#endif
+
+typedef struct mindustry_ui_fragments_BlockInventoryFragment {
+	java_lang_Object parent;
+	jref F_table;
+	jref F_build;
+	jfloat F_holdTime;
+	jfloat F_emptyTime;
+	jbool F_holding;
+	jbool F_held;
+	jref F_shrinkHoldTimes;
+	jref F_lastItem;
+} mindustry_ui_fragments_BlockInventoryFragment;
+
+extern Class class_mindustry_ui_fragments_BlockInventoryFragment;
+
+extern jfloat SF_mindustry_ui_fragments_BlockInventoryFragment_holdWithdraw;
+extern jfloat SF_mindustry_ui_fragments_BlockInventoryFragment_holdShrink;
+
+#define VTABLE_mindustry_ui_fragments_BlockInventoryFragment_hashCode_R_int 0
+typedef jint (*func_mindustry_ui_fragments_BlockInventoryFragment_hashCode_R_int)(jcontext ctx, jobject self);
+#define VTABLE_mindustry_ui_fragments_BlockInventoryFragment_equals_java_lang_Object_R_boolean 1
+typedef jbool (*func_mindustry_ui_fragments_BlockInventoryFragment_equals_java_lang_Object_R_boolean)(jcontext ctx, jobject self, jobject param0);
+#define VTABLE_mindustry_ui_fragments_BlockInventoryFragment_clone_R_java_lang_Object 2
+typedef jobject (*func_mindustry_ui_fragments_BlockInventoryFragment_clone_R_java_lang_Object)(jcontext ctx, jobject self);
+#define VTABLE_mindustry_ui_fragments_BlockInventoryFragment_getClass_R_java_lang_Class 3
+typedef jobject (*func_mindustry_ui_fragments_BlockInventoryFragment_getClass_R_java_lang_Class)(jcontext ctx, jobject self);
+#define VTABLE_mindustry_ui_fragments_BlockInventoryFragment_toString_R_java_lang_String 4
+typedef jobject (*func_mindustry_ui_fragments_BlockInventoryFragment_toString_R_java_lang_String)(jcontext ctx, jobject self);
+#define VTABLE_mindustry_ui_fragments_BlockInventoryFragment_finalize 5
+typedef void (*func_mindustry_ui_fragments_BlockInventoryFragment_finalize)(jcontext ctx, jobject self);
+#define VTABLE_mindustry_ui_fragments_BlockInventoryFragment_notify 6
+typedef void (*func_mindustry_ui_fragments_BlockInventoryFragment_notify)(jcontext ctx, jobject self);
+#define VTABLE_mindustry_ui_fragments_BlockInventoryFragment_notifyAll 7
+typedef void (*func_mindustry_ui_fragments_BlockInventoryFragment_notifyAll)(jcontext ctx, jobject self);
+#define VTABLE_mindustry_ui_fragments_BlockInventoryFragment_wait 8
+typedef void (*func_mindustry_ui_fragments_BlockInventoryFragment_wait)(jcontext ctx, jobject self);
+#define VTABLE_mindustry_ui_fragments_BlockInventoryFragment_wait_long 9
+typedef void (*func_mindustry_ui_fragments_BlockInventoryFragment_wait_long)(jcontext ctx, jobject self, jlong param0);
+#define VTABLE_mindustry_ui_fragments_BlockInventoryFragment_wait_long_int 10
+typedef void (*func_mindustry_ui_fragments_BlockInventoryFragment_wait_long_int)(jcontext ctx, jobject self, jlong param0, jint param1);
+#define VTABLE_mindustry_ui_fragments_BlockInventoryFragment_build_arc_scene_Group 11
+typedef void (*func_mindustry_ui_fragments_BlockInventoryFragment_build_arc_scene_Group)(jcontext ctx, jobject self, jobject param0);
+#define VTABLE_mindustry_ui_fragments_BlockInventoryFragment_showFor_mindustry_gen_Building 12
+typedef void (*func_mindustry_ui_fragments_BlockInventoryFragment_showFor_mindustry_gen_Building)(jcontext ctx, jobject self, jobject param0);
+#define VTABLE_mindustry_ui_fragments_BlockInventoryFragment_hide 13
+typedef void (*func_mindustry_ui_fragments_BlockInventoryFragment_hide)(jcontext ctx, jobject self);
+#define VTABLE_mindustry_ui_fragments_BlockInventoryFragment_takeItem_int 14
+typedef void (*func_mindustry_ui_fragments_BlockInventoryFragment_takeItem_int)(jcontext ctx, jobject self, jint param0);
+#define VTABLE_mindustry_ui_fragments_BlockInventoryFragment_rebuild_boolean 15
+typedef void (*func_mindustry_ui_fragments_BlockInventoryFragment_rebuild_boolean)(jcontext ctx, jobject self, jbool param0);
+#define VTABLE_mindustry_ui_fragments_BlockInventoryFragment_round_float_R_java_lang_String 16
+typedef jobject (*func_mindustry_ui_fragments_BlockInventoryFragment_round_float_R_java_lang_String)(jcontext ctx, jobject self, jfloat param0);
+#define VTABLE_mindustry_ui_fragments_BlockInventoryFragment_updateTablePosition 17
+typedef void (*func_mindustry_ui_fragments_BlockInventoryFragment_updateTablePosition)(jcontext ctx, jobject self);
+#define VTABLE_mindustry_ui_fragments_BlockInventoryFragment_itemImage_arc_graphics_g2d_TextureRegion_arc_func_Prov_R_arc_scene_Element 18
+typedef jobject (*func_mindustry_ui_fragments_BlockInventoryFragment_itemImage_arc_graphics_g2d_TextureRegion_arc_func_Prov_R_arc_scene_Element)(jcontext ctx, jobject self, jobject param0, jobject param1);
+#define VTABLE_mindustry_ui_fragments_BlockInventoryFragment_lambda$rebuild$3_arc_func_Boolp_mindustry_type_Item_R_boolean 19
+typedef jbool (*func_mindustry_ui_fragments_BlockInventoryFragment_lambda$rebuild$3_arc_func_Boolp_mindustry_type_Item_R_boolean)(jcontext ctx, jobject self, jobject param0, jobject param1);
+#define VTABLE_mindustry_ui_fragments_BlockInventoryFragment_lambda$rebuild$2_mindustry_type_Item_R_java_lang_CharSequence 20
+typedef jobject (*func_mindustry_ui_fragments_BlockInventoryFragment_lambda$rebuild$2_mindustry_type_Item_R_java_lang_CharSequence)(jcontext ctx, jobject self, jobject param0);
+#define VTABLE_mindustry_ui_fragments_BlockInventoryFragment_lambda$rebuild$1_mindustry_type_Item_R_boolean 21
+typedef jbool (*func_mindustry_ui_fragments_BlockInventoryFragment_lambda$rebuild$1_mindustry_type_Item_R_boolean)(jcontext ctx, jobject self, jobject param0);
+#define VTABLE_mindustry_ui_fragments_BlockInventoryFragment_lambda$rebuild$0_arc_struct_IntSet 22
+typedef void (*func_mindustry_ui_fragments_BlockInventoryFragment_lambda$rebuild$0_arc_struct_IntSet)(jcontext ctx, jobject self, jobject param0);
+#define VTABLE_mindustry_ui_fragments_BlockInventoryFragment_lambda$hide$0 23
+typedef void (*func_mindustry_ui_fragments_BlockInventoryFragment_lambda$hide$0)(jcontext ctx, jobject self);
+#define VTABLE_mindustry_ui_fragments_BlockInventoryFragment_lambda$new$0_mindustry_game_EventType$WorldLoadEvent 24
+typedef void (*func_mindustry_ui_fragments_BlockInventoryFragment_lambda$new$0_mindustry_game_EventType$WorldLoadEvent)(jcontext ctx, jobject self, jobject param0);
+
+void mark_mindustry_ui_fragments_BlockInventoryFragment(jobject object, jint mark, jint depth);
+void clinit_mindustry_ui_fragments_BlockInventoryFragment(jcontext ctx);
+void init_mindustry_ui_fragments_BlockInventoryFragment(jcontext ctx, jobject self);
+void M_mindustry_ui_fragments_BlockInventoryFragment_build_arc_scene_Group(jcontext ctx, jobject self, jobject param0);
+void M_mindustry_ui_fragments_BlockInventoryFragment_showFor_mindustry_gen_Building(jcontext ctx, jobject self, jobject param0);
+void M_mindustry_ui_fragments_BlockInventoryFragment_hide(jcontext ctx, jobject self);
+void M_mindustry_ui_fragments_BlockInventoryFragment_takeItem_int(jcontext ctx, jobject self, jint param0);
+void M_mindustry_ui_fragments_BlockInventoryFragment_rebuild_boolean(jcontext ctx, jobject self, jbool param0);
+jobject M_mindustry_ui_fragments_BlockInventoryFragment_round_float_R_java_lang_String(jcontext ctx, jobject self, jfloat param0);
+void M_mindustry_ui_fragments_BlockInventoryFragment_updateTablePosition(jcontext ctx, jobject self);
+jobject M_mindustry_ui_fragments_BlockInventoryFragment_itemImage_arc_graphics_g2d_TextureRegion_arc_func_Prov_R_arc_scene_Element(jcontext ctx, jobject self, jobject param0, jobject param1);
+jbool M_mindustry_ui_fragments_BlockInventoryFragment_lambda$rebuild$3_arc_func_Boolp_mindustry_type_Item_R_boolean(jcontext ctx, jobject self, jobject param0, jobject param1);
+jobject M_mindustry_ui_fragments_BlockInventoryFragment_lambda$rebuild$2_mindustry_type_Item_R_java_lang_CharSequence(jcontext ctx, jobject self, jobject param0);
+jbool M_mindustry_ui_fragments_BlockInventoryFragment_lambda$rebuild$1_mindustry_type_Item_R_boolean(jcontext ctx, jobject self, jobject param0);
+void M_mindustry_ui_fragments_BlockInventoryFragment_lambda$rebuild$0_arc_struct_IntSet(jcontext ctx, jobject self, jobject param0);
+void M_mindustry_ui_fragments_BlockInventoryFragment_lambda$hide$0(jcontext ctx, jobject self);
+void M_mindustry_ui_fragments_BlockInventoryFragment_lambda$new$0_mindustry_game_EventType$WorldLoadEvent(jcontext ctx, jobject self, jobject param0);
+
+#ifdef __cplusplus
+}
+#endif
+
+#endif

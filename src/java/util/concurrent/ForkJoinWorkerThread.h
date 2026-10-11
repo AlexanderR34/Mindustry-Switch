@@ -1,0 +1,119 @@
+#ifndef HEADER_java_util_concurrent_ForkJoinWorkerThread
+#define HEADER_java_util_concurrent_ForkJoinWorkerThread
+
+#include "Clearwing.h"
+#include "java/lang/Thread.h"
+
+#ifdef __cplusplus
+extern "C" {
+#endif
+
+typedef struct java_util_concurrent_ForkJoinWorkerThread {
+	java_lang_Thread parent;
+	jref F_pool;
+	jref F_workQueue;
+} java_util_concurrent_ForkJoinWorkerThread;
+
+extern Class class_java_util_concurrent_ForkJoinWorkerThread;
+
+
+#define VTABLE_java_util_concurrent_ForkJoinWorkerThread_hashCode_R_int 0
+typedef jint (*func_java_util_concurrent_ForkJoinWorkerThread_hashCode_R_int)(jcontext ctx, jobject self);
+#define VTABLE_java_util_concurrent_ForkJoinWorkerThread_equals_java_lang_Object_R_boolean 1
+typedef jbool (*func_java_util_concurrent_ForkJoinWorkerThread_equals_java_lang_Object_R_boolean)(jcontext ctx, jobject self, jobject param0);
+#define VTABLE_java_util_concurrent_ForkJoinWorkerThread_clone_R_java_lang_Object 2
+typedef jobject (*func_java_util_concurrent_ForkJoinWorkerThread_clone_R_java_lang_Object)(jcontext ctx, jobject self);
+#define VTABLE_java_util_concurrent_ForkJoinWorkerThread_getClass_R_java_lang_Class 3
+typedef jobject (*func_java_util_concurrent_ForkJoinWorkerThread_getClass_R_java_lang_Class)(jcontext ctx, jobject self);
+#define VTABLE_java_util_concurrent_ForkJoinWorkerThread_toString_R_java_lang_String 4
+typedef jobject (*func_java_util_concurrent_ForkJoinWorkerThread_toString_R_java_lang_String)(jcontext ctx, jobject self);
+#define VTABLE_java_util_concurrent_ForkJoinWorkerThread_finalize 5
+typedef void (*func_java_util_concurrent_ForkJoinWorkerThread_finalize)(jcontext ctx, jobject self);
+#define VTABLE_java_util_concurrent_ForkJoinWorkerThread_notify 6
+typedef void (*func_java_util_concurrent_ForkJoinWorkerThread_notify)(jcontext ctx, jobject self);
+#define VTABLE_java_util_concurrent_ForkJoinWorkerThread_notifyAll 7
+typedef void (*func_java_util_concurrent_ForkJoinWorkerThread_notifyAll)(jcontext ctx, jobject self);
+#define VTABLE_java_util_concurrent_ForkJoinWorkerThread_wait 8
+typedef void (*func_java_util_concurrent_ForkJoinWorkerThread_wait)(jcontext ctx, jobject self);
+#define VTABLE_java_util_concurrent_ForkJoinWorkerThread_wait_long 9
+typedef void (*func_java_util_concurrent_ForkJoinWorkerThread_wait_long)(jcontext ctx, jobject self, jlong param0);
+#define VTABLE_java_util_concurrent_ForkJoinWorkerThread_wait_long_int 10
+typedef void (*func_java_util_concurrent_ForkJoinWorkerThread_wait_long_int)(jcontext ctx, jobject self, jlong param0, jint param1);
+#define VTABLE_java_util_concurrent_ForkJoinWorkerThread_run 11
+typedef void (*func_java_util_concurrent_ForkJoinWorkerThread_run)(jcontext ctx, jobject self);
+#define VTABLE_java_util_concurrent_ForkJoinWorkerThread_getId_R_long 12
+typedef jlong (*func_java_util_concurrent_ForkJoinWorkerThread_getId_R_long)(jcontext ctx, jobject self);
+#define VTABLE_java_util_concurrent_ForkJoinWorkerThread_getName_R_java_lang_String 13
+typedef jobject (*func_java_util_concurrent_ForkJoinWorkerThread_getName_R_java_lang_String)(jcontext ctx, jobject self);
+#define VTABLE_java_util_concurrent_ForkJoinWorkerThread_setName_java_lang_String 14
+typedef void (*func_java_util_concurrent_ForkJoinWorkerThread_setName_java_lang_String)(jcontext ctx, jobject self, jobject param0);
+#define VTABLE_java_util_concurrent_ForkJoinWorkerThread_getPriority_R_int 15
+typedef jint (*func_java_util_concurrent_ForkJoinWorkerThread_getPriority_R_int)(jcontext ctx, jobject self);
+#define VTABLE_java_util_concurrent_ForkJoinWorkerThread_interrupt 16
+typedef void (*func_java_util_concurrent_ForkJoinWorkerThread_interrupt)(jcontext ctx, jobject self);
+#define VTABLE_java_util_concurrent_ForkJoinWorkerThread_isAlive_R_boolean 17
+typedef jbool (*func_java_util_concurrent_ForkJoinWorkerThread_isAlive_R_boolean)(jcontext ctx, jobject self);
+#define VTABLE_java_util_concurrent_ForkJoinWorkerThread_isInterrupted_R_boolean 18
+typedef jbool (*func_java_util_concurrent_ForkJoinWorkerThread_isInterrupted_R_boolean)(jcontext ctx, jobject self);
+#define VTABLE_java_util_concurrent_ForkJoinWorkerThread_isDaemon_R_boolean 19
+typedef jbool (*func_java_util_concurrent_ForkJoinWorkerThread_isDaemon_R_boolean)(jcontext ctx, jobject self);
+#define VTABLE_java_util_concurrent_ForkJoinWorkerThread_setDaemon_boolean 20
+typedef void (*func_java_util_concurrent_ForkJoinWorkerThread_setDaemon_boolean)(jcontext ctx, jobject self, jbool param0);
+#define VTABLE_java_util_concurrent_ForkJoinWorkerThread_join 21
+typedef void (*func_java_util_concurrent_ForkJoinWorkerThread_join)(jcontext ctx, jobject self);
+#define VTABLE_java_util_concurrent_ForkJoinWorkerThread_join_long 22
+typedef void (*func_java_util_concurrent_ForkJoinWorkerThread_join_long)(jcontext ctx, jobject self, jlong param0);
+#define VTABLE_java_util_concurrent_ForkJoinWorkerThread_join_long_int 23
+typedef void (*func_java_util_concurrent_ForkJoinWorkerThread_join_long_int)(jcontext ctx, jobject self, jlong param0, jint param1);
+#define VTABLE_java_util_concurrent_ForkJoinWorkerThread_setPriority_int 24
+typedef void (*func_java_util_concurrent_ForkJoinWorkerThread_setPriority_int)(jcontext ctx, jobject self, jint param0);
+#define VTABLE_java_util_concurrent_ForkJoinWorkerThread_start 25
+typedef void (*func_java_util_concurrent_ForkJoinWorkerThread_start)(jcontext ctx, jobject self);
+#define VTABLE_java_util_concurrent_ForkJoinWorkerThread_stop 26
+typedef void (*func_java_util_concurrent_ForkJoinWorkerThread_stop)(jcontext ctx, jobject self);
+#define VTABLE_java_util_concurrent_ForkJoinWorkerThread_suspend 27
+typedef void (*func_java_util_concurrent_ForkJoinWorkerThread_suspend)(jcontext ctx, jobject self);
+#define VTABLE_java_util_concurrent_ForkJoinWorkerThread_resume 28
+typedef void (*func_java_util_concurrent_ForkJoinWorkerThread_resume)(jcontext ctx, jobject self);
+#define VTABLE_java_util_concurrent_ForkJoinWorkerThread_getStackTrace_R_Array1_java_lang_StackTraceElement 29
+typedef jobject (*func_java_util_concurrent_ForkJoinWorkerThread_getStackTrace_R_Array1_java_lang_StackTraceElement)(jcontext ctx, jobject self);
+#define VTABLE_java_util_concurrent_ForkJoinWorkerThread_setContextClassLoader_java_lang_ClassLoader 30
+typedef void (*func_java_util_concurrent_ForkJoinWorkerThread_setContextClassLoader_java_lang_ClassLoader)(jcontext ctx, jobject self, jobject param0);
+#define VTABLE_java_util_concurrent_ForkJoinWorkerThread_getContextClassLoader_R_java_lang_ClassLoader 31
+typedef jobject (*func_java_util_concurrent_ForkJoinWorkerThread_getContextClassLoader_R_java_lang_ClassLoader)(jcontext ctx, jobject self);
+#define VTABLE_java_util_concurrent_ForkJoinWorkerThread_setUncaughtExceptionHandler_java_lang_Thread$UncaughtExceptionHandler 32
+typedef void (*func_java_util_concurrent_ForkJoinWorkerThread_setUncaughtExceptionHandler_java_lang_Thread$UncaughtExceptionHandler)(jcontext ctx, jobject self, jobject param0);
+#define VTABLE_java_util_concurrent_ForkJoinWorkerThread_getUncaughtExceptionHandler_R_java_lang_Thread$UncaughtExceptionHandler 33
+typedef jobject (*func_java_util_concurrent_ForkJoinWorkerThread_getUncaughtExceptionHandler_R_java_lang_Thread$UncaughtExceptionHandler)(jcontext ctx, jobject self);
+#define VTABLE_java_util_concurrent_ForkJoinWorkerThread_getState_R_java_lang_Thread$State 34
+typedef jobject (*func_java_util_concurrent_ForkJoinWorkerThread_getState_R_java_lang_Thread$State)(jcontext ctx, jobject self);
+#define VTABLE_java_util_concurrent_ForkJoinWorkerThread_getThreadGroup_R_java_lang_ThreadGroup 35
+typedef jobject (*func_java_util_concurrent_ForkJoinWorkerThread_getThreadGroup_R_java_lang_ThreadGroup)(jcontext ctx, jobject self);
+#define VTABLE_java_util_concurrent_ForkJoinWorkerThread_getPool_R_java_util_concurrent_ForkJoinPool 36
+typedef jobject (*func_java_util_concurrent_ForkJoinWorkerThread_getPool_R_java_util_concurrent_ForkJoinPool)(jcontext ctx, jobject self);
+#define VTABLE_java_util_concurrent_ForkJoinWorkerThread_getPoolIndex_R_int 37
+typedef jint (*func_java_util_concurrent_ForkJoinWorkerThread_getPoolIndex_R_int)(jcontext ctx, jobject self);
+#define VTABLE_java_util_concurrent_ForkJoinWorkerThread_onStart 38
+typedef void (*func_java_util_concurrent_ForkJoinWorkerThread_onStart)(jcontext ctx, jobject self);
+#define VTABLE_java_util_concurrent_ForkJoinWorkerThread_onTermination_java_lang_Throwable 39
+typedef void (*func_java_util_concurrent_ForkJoinWorkerThread_onTermination_java_lang_Throwable)(jcontext ctx, jobject self, jobject param0);
+#define VTABLE_java_util_concurrent_ForkJoinWorkerThread_afterTopLevelExec 40
+typedef void (*func_java_util_concurrent_ForkJoinWorkerThread_afterTopLevelExec)(jcontext ctx, jobject self);
+
+void mark_java_util_concurrent_ForkJoinWorkerThread(jobject object, jint mark, jint depth);
+void clinit_java_util_concurrent_ForkJoinWorkerThread(jcontext ctx);
+void init_java_util_concurrent_ForkJoinWorkerThread_java_util_concurrent_ForkJoinPool(jcontext ctx, jobject self, jobject param0);
+void init_java_util_concurrent_ForkJoinWorkerThread_java_util_concurrent_ForkJoinPool_java_lang_ClassLoader(jcontext ctx, jobject self, jobject param0, jobject param1);
+void init_java_util_concurrent_ForkJoinWorkerThread_java_util_concurrent_ForkJoinPool_java_lang_ClassLoader_java_lang_ThreadGroup(jcontext ctx, jobject self, jobject param0, jobject param1, jobject param2);
+jobject M_java_util_concurrent_ForkJoinWorkerThread_getPool_R_java_util_concurrent_ForkJoinPool(jcontext ctx, jobject self);
+jint M_java_util_concurrent_ForkJoinWorkerThread_getPoolIndex_R_int(jcontext ctx, jobject self);
+void M_java_util_concurrent_ForkJoinWorkerThread_onStart(jcontext ctx, jobject self);
+void M_java_util_concurrent_ForkJoinWorkerThread_onTermination_java_lang_Throwable(jcontext ctx, jobject self, jobject param0);
+void M_java_util_concurrent_ForkJoinWorkerThread_run(jcontext ctx, jobject self);
+void M_java_util_concurrent_ForkJoinWorkerThread_afterTopLevelExec(jcontext ctx, jobject self);
+
+#ifdef __cplusplus
+}
+#endif
+
+#endif

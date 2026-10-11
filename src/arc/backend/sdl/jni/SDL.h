@@ -1,0 +1,182 @@
+#ifndef HEADER_arc_backend_sdl_jni_SDL
+#define HEADER_arc_backend_sdl_jni_SDL
+
+#include "Clearwing.h"
+#include "java/lang/Object.h"
+
+#ifdef __cplusplus
+extern "C" {
+#endif
+
+typedef struct arc_backend_sdl_jni_SDL {
+	java_lang_Object parent;
+} arc_backend_sdl_jni_SDL;
+
+extern Class class_arc_backend_sdl_jni_SDL;
+
+extern jint SF_arc_backend_sdl_jni_SDL_SDL_INIT_TIMER;
+extern jint SF_arc_backend_sdl_jni_SDL_SDL_INIT_AUDIO;
+extern jint SF_arc_backend_sdl_jni_SDL_SDL_INIT_VIDEO;
+extern jint SF_arc_backend_sdl_jni_SDL_SDL_INIT_JOYSTICK;
+extern jint SF_arc_backend_sdl_jni_SDL_SDL_INIT_HAPTIC;
+extern jint SF_arc_backend_sdl_jni_SDL_SDL_INIT_GAMECONTROLLER;
+extern jint SF_arc_backend_sdl_jni_SDL_SDL_INIT_EVENTS;
+extern jint SF_arc_backend_sdl_jni_SDL_SDL_INIT_NOPARACHUTE;
+extern jint SF_arc_backend_sdl_jni_SDL_SDL_INIT_EVERYTHING;
+extern jint SF_arc_backend_sdl_jni_SDL_SDL_WINDOW_FULLSCREEN;
+extern jint SF_arc_backend_sdl_jni_SDL_SDL_WINDOW_OPENGL;
+extern jint SF_arc_backend_sdl_jni_SDL_SDL_WINDOW_SHOWN;
+extern jint SF_arc_backend_sdl_jni_SDL_SDL_WINDOW_HIDDEN;
+extern jint SF_arc_backend_sdl_jni_SDL_SDL_WINDOW_BORDERLESS;
+extern jint SF_arc_backend_sdl_jni_SDL_SDL_WINDOW_RESIZABLE;
+extern jint SF_arc_backend_sdl_jni_SDL_SDL_WINDOW_MINIMIZED;
+extern jint SF_arc_backend_sdl_jni_SDL_SDL_WINDOW_MAXIMIZED;
+extern jint SF_arc_backend_sdl_jni_SDL_SDL_WINDOW_INPUT_GRABBED;
+extern jint SF_arc_backend_sdl_jni_SDL_SDL_WINDOW_INPUT_FOCUS;
+extern jint SF_arc_backend_sdl_jni_SDL_SDL_WINDOW_MOUSE_FOCUS;
+extern jint SF_arc_backend_sdl_jni_SDL_SDL_WINDOW_FULLSCREEN_DESKTOP;
+extern jint SF_arc_backend_sdl_jni_SDL_SDL_WINDOW_FOREIGN;
+extern jint SF_arc_backend_sdl_jni_SDL_SDL_WINDOW_ALLOW_HIGHDPI;
+extern jint SF_arc_backend_sdl_jni_SDL_SDL_WINDOW_MOUSE_CAPTURE;
+extern jint SF_arc_backend_sdl_jni_SDL_SDL_WINDOWEVENT_NONE;
+extern jint SF_arc_backend_sdl_jni_SDL_SDL_WINDOWEVENT_SHOWN;
+extern jint SF_arc_backend_sdl_jni_SDL_SDL_WINDOWEVENT_HIDDEN;
+extern jint SF_arc_backend_sdl_jni_SDL_SDL_WINDOWEVENT_EXPOSED;
+extern jint SF_arc_backend_sdl_jni_SDL_SDL_WINDOWEVENT_MOVED;
+extern jint SF_arc_backend_sdl_jni_SDL_SDL_WINDOWEVENT_RESIZED;
+extern jint SF_arc_backend_sdl_jni_SDL_SDL_WINDOWEVENT_SIZE_CHANGED;
+extern jint SF_arc_backend_sdl_jni_SDL_SDL_WINDOWEVENT_MINIMIZED;
+extern jint SF_arc_backend_sdl_jni_SDL_SDL_WINDOWEVENT_MAXIMIZED;
+extern jint SF_arc_backend_sdl_jni_SDL_SDL_WINDOWEVENT_RESTORED;
+extern jint SF_arc_backend_sdl_jni_SDL_SDL_WINDOWEVENT_ENTER;
+extern jint SF_arc_backend_sdl_jni_SDL_SDL_WINDOWEVENT_LEAVE;
+extern jint SF_arc_backend_sdl_jni_SDL_SDL_WINDOWEVENT_FOCUS_GAINED;
+extern jint SF_arc_backend_sdl_jni_SDL_SDL_WINDOWEVENT_FOCUS_LOST;
+extern jint SF_arc_backend_sdl_jni_SDL_SDL_WINDOWEVENT_CLOSE;
+extern jint SF_arc_backend_sdl_jni_SDL_SDL_SYSTEM_CURSOR_ARROW;
+extern jint SF_arc_backend_sdl_jni_SDL_SDL_SYSTEM_CURSOR_IBEAM;
+extern jint SF_arc_backend_sdl_jni_SDL_SDL_SYSTEM_CURSOR_WAIT;
+extern jint SF_arc_backend_sdl_jni_SDL_SDL_SYSTEM_CURSOR_CROSSHAIR;
+extern jint SF_arc_backend_sdl_jni_SDL_SDL_SYSTEM_CURSOR_WAITARROW;
+extern jint SF_arc_backend_sdl_jni_SDL_SDL_SYSTEM_CURSOR_SIZENWSE;
+extern jint SF_arc_backend_sdl_jni_SDL_SDL_SYSTEM_CURSOR_SIZENESW;
+extern jint SF_arc_backend_sdl_jni_SDL_SDL_SYSTEM_CURSOR_SIZEWE;
+extern jint SF_arc_backend_sdl_jni_SDL_SDL_SYSTEM_CURSOR_SIZENS;
+extern jint SF_arc_backend_sdl_jni_SDL_SDL_SYSTEM_CURSOR_SIZEALL;
+extern jint SF_arc_backend_sdl_jni_SDL_SDL_SYSTEM_CURSOR_NO;
+extern jint SF_arc_backend_sdl_jni_SDL_SDL_SYSTEM_CURSOR_HAND;
+extern jint SF_arc_backend_sdl_jni_SDL_SDL_NUM_SYSTEM_CURSORS;
+extern jint SF_arc_backend_sdl_jni_SDL_SDL_MESSAGEBOX_ERROR;
+extern jint SF_arc_backend_sdl_jni_SDL_SDL_MESSAGEBOX_WARNING;
+extern jint SF_arc_backend_sdl_jni_SDL_SDL_MESSAGEBOX_INFORMATION;
+extern jint SF_arc_backend_sdl_jni_SDL_SDL_BUTTON_LEFT;
+extern jint SF_arc_backend_sdl_jni_SDL_SDL_BUTTON_MIDDLE;
+extern jint SF_arc_backend_sdl_jni_SDL_SDL_BUTTON_RIGHT;
+extern jint SF_arc_backend_sdl_jni_SDL_SDL_BUTTON_X1;
+extern jint SF_arc_backend_sdl_jni_SDL_SDL_BUTTON_X2;
+extern jint SF_arc_backend_sdl_jni_SDL_SDL_EVENT_QUIT;
+extern jint SF_arc_backend_sdl_jni_SDL_SDL_EVENT_WINDOW;
+extern jint SF_arc_backend_sdl_jni_SDL_SDL_EVENT_MOUSE_MOTION;
+extern jint SF_arc_backend_sdl_jni_SDL_SDL_EVENT_MOUSE_BUTTON;
+extern jint SF_arc_backend_sdl_jni_SDL_SDL_EVENT_MOUSE_WHEEL;
+extern jint SF_arc_backend_sdl_jni_SDL_SDL_EVENT_KEYBOARD;
+extern jint SF_arc_backend_sdl_jni_SDL_SDL_EVENT_TEXT_INPUT;
+extern jint SF_arc_backend_sdl_jni_SDL_SDL_EVENT_TEXT_EDIT;
+extern jint SF_arc_backend_sdl_jni_SDL_SDL_EVENT_OTHER;
+extern jint SF_arc_backend_sdl_jni_SDL_SDL_GL_RED_SIZE;
+extern jint SF_arc_backend_sdl_jni_SDL_SDL_GL_GREEN_SIZE;
+extern jint SF_arc_backend_sdl_jni_SDL_SDL_GL_BLUE_SIZE;
+extern jint SF_arc_backend_sdl_jni_SDL_SDL_GL_ALPHA_SIZE;
+extern jint SF_arc_backend_sdl_jni_SDL_SDL_GL_BUFFER_SIZE;
+extern jint SF_arc_backend_sdl_jni_SDL_SDL_GL_DOUBLEBUFFER;
+extern jint SF_arc_backend_sdl_jni_SDL_SDL_GL_DEPTH_SIZE;
+extern jint SF_arc_backend_sdl_jni_SDL_SDL_GL_STENCIL_SIZE;
+extern jint SF_arc_backend_sdl_jni_SDL_SDL_GL_CONTEXT_MAJOR_VERSION;
+extern jint SF_arc_backend_sdl_jni_SDL_SDL_GL_CONTEXT_MINOR_VERSION;
+extern jint SF_arc_backend_sdl_jni_SDL_SDL_GL_MULTISAMPLEBUFFERS;
+extern jint SF_arc_backend_sdl_jni_SDL_SDL_GL_MULTISAMPLESAMPLES;
+extern jint SF_arc_backend_sdl_jni_SDL_SDL_GL_CONTEXT_PROFILE_CORE;
+extern jint SF_arc_backend_sdl_jni_SDL_SDL_GL_CONTEXT_PROFILE_COMPATIBILITY;
+extern jint SF_arc_backend_sdl_jni_SDL_SDL_GL_CONTEXT_PROFILE_MASK;
+extern jint SF_arc_backend_sdl_jni_SDL_SDL_GL_CONTEXT_FLAGS;
+
+#define VTABLE_arc_backend_sdl_jni_SDL_hashCode_R_int 0
+typedef jint (*func_arc_backend_sdl_jni_SDL_hashCode_R_int)(jcontext ctx, jobject self);
+#define VTABLE_arc_backend_sdl_jni_SDL_equals_java_lang_Object_R_boolean 1
+typedef jbool (*func_arc_backend_sdl_jni_SDL_equals_java_lang_Object_R_boolean)(jcontext ctx, jobject self, jobject param0);
+#define VTABLE_arc_backend_sdl_jni_SDL_clone_R_java_lang_Object 2
+typedef jobject (*func_arc_backend_sdl_jni_SDL_clone_R_java_lang_Object)(jcontext ctx, jobject self);
+#define VTABLE_arc_backend_sdl_jni_SDL_getClass_R_java_lang_Class 3
+typedef jobject (*func_arc_backend_sdl_jni_SDL_getClass_R_java_lang_Class)(jcontext ctx, jobject self);
+#define VTABLE_arc_backend_sdl_jni_SDL_toString_R_java_lang_String 4
+typedef jobject (*func_arc_backend_sdl_jni_SDL_toString_R_java_lang_String)(jcontext ctx, jobject self);
+#define VTABLE_arc_backend_sdl_jni_SDL_finalize 5
+typedef void (*func_arc_backend_sdl_jni_SDL_finalize)(jcontext ctx, jobject self);
+#define VTABLE_arc_backend_sdl_jni_SDL_notify 6
+typedef void (*func_arc_backend_sdl_jni_SDL_notify)(jcontext ctx, jobject self);
+#define VTABLE_arc_backend_sdl_jni_SDL_notifyAll 7
+typedef void (*func_arc_backend_sdl_jni_SDL_notifyAll)(jcontext ctx, jobject self);
+#define VTABLE_arc_backend_sdl_jni_SDL_wait 8
+typedef void (*func_arc_backend_sdl_jni_SDL_wait)(jcontext ctx, jobject self);
+#define VTABLE_arc_backend_sdl_jni_SDL_wait_long 9
+typedef void (*func_arc_backend_sdl_jni_SDL_wait_long)(jcontext ctx, jobject self, jlong param0);
+#define VTABLE_arc_backend_sdl_jni_SDL_wait_long_int 10
+typedef void (*func_arc_backend_sdl_jni_SDL_wait_long_int)(jcontext ctx, jobject self, jlong param0, jint param1);
+
+void mark_arc_backend_sdl_jni_SDL(jobject object, jint mark, jint depth);
+void clinit_arc_backend_sdl_jni_SDL(jcontext ctx);
+void init_arc_backend_sdl_jni_SDL(jcontext ctx, jobject self);
+jint SM_arc_backend_sdl_jni_SDL_SDL_Init_int_R_int(jcontext ctx, jint param0);
+jint SM_arc_backend_sdl_jni_SDL_SDL_InitSubSystem_int_R_int(jcontext ctx, jint param0);
+void SM_arc_backend_sdl_jni_SDL_SDL_QuitSubSystem_int(jcontext ctx, jint param0);
+jint SM_arc_backend_sdl_jni_SDL_SDL_WasInit_int_R_int(jcontext ctx, jint param0);
+void SM_arc_backend_sdl_jni_SDL_SDL_Quit(jcontext ctx);
+jbool SM_arc_backend_sdl_jni_SDL_SDL_SetHint_java_lang_String_java_lang_String_R_boolean(jcontext ctx, jobject param0, jobject param1);
+void SM_arc_backend_sdl_jni_SDL_SDL_GetCompiledVersion_Array1_int(jcontext ctx, jobject param0);
+void SM_arc_backend_sdl_jni_SDL_SDL_GetVersion_Array1_int(jcontext ctx, jobject param0);
+jobject SM_arc_backend_sdl_jni_SDL_SDL_GetError_R_java_lang_String(jcontext ctx);
+jint SM_arc_backend_sdl_jni_SDL_SDL_SetClipboardText_java_lang_String_R_int(jcontext ctx, jobject param0);
+jobject SM_arc_backend_sdl_jni_SDL_SDL_GetClipboardText_R_java_lang_String(jcontext ctx);
+jlong SM_arc_backend_sdl_jni_SDL_SDL_CreateWindow_java_lang_String_int_int_int_R_long(jcontext ctx, jobject param0, jint param1, jint param2, jint param3);
+void SM_arc_backend_sdl_jni_SDL_SDL_DestroyWindow_long(jcontext ctx, jlong param0);
+void SM_arc_backend_sdl_jni_SDL_SDL_SetWindowIcon_long_long(jcontext ctx, jlong param0, jlong param1);
+void SM_arc_backend_sdl_jni_SDL_SDL_RestoreWindow_long(jcontext ctx, jlong param0);
+void SM_arc_backend_sdl_jni_SDL_SDL_MaximizeWindow_long(jcontext ctx, jlong param0);
+void SM_arc_backend_sdl_jni_SDL_SDL_MinimizeWindow_long(jcontext ctx, jlong param0);
+jint SM_arc_backend_sdl_jni_SDL_SDL_SetWindowFullscreen_long_int_R_int(jcontext ctx, jlong param0, jint param1);
+void SM_arc_backend_sdl_jni_SDL_SDL_SetWindowBordered_long_boolean(jcontext ctx, jlong param0, jbool param1);
+void SM_arc_backend_sdl_jni_SDL_SDL_SetWindowSize_long_int_int(jcontext ctx, jlong param0, jint param1, jint param2);
+void SM_arc_backend_sdl_jni_SDL_SDL_SetWindowPosition_long_int_int(jcontext ctx, jlong param0, jint param1, jint param2);
+jint SM_arc_backend_sdl_jni_SDL_SDL_GetWindowDisplayIndex_long_R_int(jcontext ctx, jlong param0);
+jint SM_arc_backend_sdl_jni_SDL_SDL_GetDisplayUsableBounds_int_Array1_int_R_int(jcontext ctx, jint param0, jobject param1);
+jint SM_arc_backend_sdl_jni_SDL_SDL_GetDisplayBounds_int_Array1_int_R_int(jcontext ctx, jint param0, jobject param1);
+jint SM_arc_backend_sdl_jni_SDL_SDL_GetCurrentDisplayMode_int_Array1_int_R_int(jcontext ctx, jint param0, jobject param1);
+jint SM_arc_backend_sdl_jni_SDL_SDL_GetDesktopDisplayMode_int_Array1_int_R_int(jcontext ctx, jint param0, jobject param1);
+void SM_arc_backend_sdl_jni_SDL_SDL_SetWindowAlwaysOnTop_long_boolean(jcontext ctx, jlong param0, jbool param1);
+jint SM_arc_backend_sdl_jni_SDL_SDL_GetNumVideoDisplays_R_int(jcontext ctx);
+jint SM_arc_backend_sdl_jni_SDL_SDL_GetWindowFlags_long_R_int(jcontext ctx, jlong param0);
+void SM_arc_backend_sdl_jni_SDL_SDL_SetWindowTitle_long_java_lang_String(jcontext ctx, jlong param0, jobject param1);
+jlong SM_arc_backend_sdl_jni_SDL_SDL_CreateRGBSurfaceFrom_java_nio_ByteBuffer_int_int_R_long(jcontext ctx, jobject param0, jint param1, jint param2);
+jlong SM_arc_backend_sdl_jni_SDL_SDL_CreateColorCursor_long_int_int_R_long(jcontext ctx, jlong param0, jint param1, jint param2);
+jlong SM_arc_backend_sdl_jni_SDL_SDL_CreateSystemCursor_int_R_long(jcontext ctx, jint param0);
+void SM_arc_backend_sdl_jni_SDL_SDL_SetCursor_long(jcontext ctx, jlong param0);
+void SM_arc_backend_sdl_jni_SDL_SDL_FreeCursor_long(jcontext ctx, jlong param0);
+void SM_arc_backend_sdl_jni_SDL_SDL_FreeSurface_long(jcontext ctx, jlong param0);
+jint SM_arc_backend_sdl_jni_SDL_SDL_ShowSimpleMessageBox_int_java_lang_String_java_lang_String_R_int(jcontext ctx, jint param0, jobject param1, jobject param2);
+void SM_arc_backend_sdl_jni_SDL_SDL_StartTextInput(jcontext ctx);
+void SM_arc_backend_sdl_jni_SDL_SDL_StopTextInput(jcontext ctx);
+void SM_arc_backend_sdl_jni_SDL_SDL_SetTextInputRect_int_int_int_int(jcontext ctx, jint param0, jint param1, jint param2, jint param3);
+jbool SM_arc_backend_sdl_jni_SDL_SDL_IsTextInputActive_R_boolean(jcontext ctx);
+jbool SM_arc_backend_sdl_jni_SDL_SDL_PollEvent_Array1_int_R_boolean(jcontext ctx, jobject param0);
+jint SM_arc_backend_sdl_jni_SDL_SDL_GL_SetAttribute_int_int_R_int(jcontext ctx, jint param0, jint param1);
+jbool SM_arc_backend_sdl_jni_SDL_SDL_GL_ExtensionSupported_java_lang_String_R_boolean(jcontext ctx, jobject param0);
+jlong SM_arc_backend_sdl_jni_SDL_SDL_GL_CreateContext_long_R_long(jcontext ctx, jlong param0);
+jint SM_arc_backend_sdl_jni_SDL_SDL_GL_SetSwapInterval_int_R_int(jcontext ctx, jint param0);
+void SM_arc_backend_sdl_jni_SDL_SDL_GL_SwapWindow_long(jcontext ctx, jlong param0);
+void SM_arc_backend_sdl_jni_SDL_SDL_GL_GetDrawableSize_long_Array1_int(jcontext ctx, jlong param0, jobject param1);
+
+#ifdef __cplusplus
+}
+#endif
+
+#endif

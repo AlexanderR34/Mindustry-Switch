@@ -1,0 +1,109 @@
+#ifndef HEADER_mindustry_entities_abilities_RepairFieldAbility
+#define HEADER_mindustry_entities_abilities_RepairFieldAbility
+
+#include "Clearwing.h"
+#include "mindustry/entities/abilities/Ability.h"
+
+#ifdef __cplusplus
+extern "C" {
+#endif
+
+typedef struct mindustry_entities_abilities_RepairFieldAbility {
+	mindustry_entities_abilities_Ability parent;
+	jfloat F_amount;
+	jfloat F_reload;
+	jfloat F_range;
+	jfloat F_healPercent;
+	jref F_healEffect;
+	jref F_activeEffect;
+	jref F_sound;
+	jfloat F_soundVolume;
+	jbool F_parentizeEffects;
+	jfloat F_sameTypeHealMult;
+	jint F_maxTargets;
+	jbool F_smartHeal;
+	jfloat F_smartHealPercent;
+	jfloat F_smartHealStrength;
+	jfloat F_smartDowntime;
+	jfloat F_smartInterval;
+	jfloat F_randDesync;
+	jfloat F_healTimer;
+	jfloat F_downTimer;
+	jfloat F_healthMissing;
+	jfloat F_sumMaxHealth;
+	jfloat F_sumTypeMult;
+	jfloat F_healthChange;
+	jbool F_hasHealed;
+	jbool F_healNow;
+} mindustry_entities_abilities_RepairFieldAbility;
+
+extern Class class_mindustry_entities_abilities_RepairFieldAbility;
+
+extern jobject SF_mindustry_entities_abilities_RepairFieldAbility_targets;
+
+#define VTABLE_mindustry_entities_abilities_RepairFieldAbility_hashCode_R_int 0
+typedef jint (*func_mindustry_entities_abilities_RepairFieldAbility_hashCode_R_int)(jcontext ctx, jobject self);
+#define VTABLE_mindustry_entities_abilities_RepairFieldAbility_equals_java_lang_Object_R_boolean 1
+typedef jbool (*func_mindustry_entities_abilities_RepairFieldAbility_equals_java_lang_Object_R_boolean)(jcontext ctx, jobject self, jobject param0);
+#define VTABLE_mindustry_entities_abilities_RepairFieldAbility_clone_R_java_lang_Object 2
+typedef jobject (*func_mindustry_entities_abilities_RepairFieldAbility_clone_R_java_lang_Object)(jcontext ctx, jobject self);
+#define VTABLE_mindustry_entities_abilities_RepairFieldAbility_getClass_R_java_lang_Class 3
+typedef jobject (*func_mindustry_entities_abilities_RepairFieldAbility_getClass_R_java_lang_Class)(jcontext ctx, jobject self);
+#define VTABLE_mindustry_entities_abilities_RepairFieldAbility_toString_R_java_lang_String 4
+typedef jobject (*func_mindustry_entities_abilities_RepairFieldAbility_toString_R_java_lang_String)(jcontext ctx, jobject self);
+#define VTABLE_mindustry_entities_abilities_RepairFieldAbility_finalize 5
+typedef void (*func_mindustry_entities_abilities_RepairFieldAbility_finalize)(jcontext ctx, jobject self);
+#define VTABLE_mindustry_entities_abilities_RepairFieldAbility_notify 6
+typedef void (*func_mindustry_entities_abilities_RepairFieldAbility_notify)(jcontext ctx, jobject self);
+#define VTABLE_mindustry_entities_abilities_RepairFieldAbility_notifyAll 7
+typedef void (*func_mindustry_entities_abilities_RepairFieldAbility_notifyAll)(jcontext ctx, jobject self);
+#define VTABLE_mindustry_entities_abilities_RepairFieldAbility_wait 8
+typedef void (*func_mindustry_entities_abilities_RepairFieldAbility_wait)(jcontext ctx, jobject self);
+#define VTABLE_mindustry_entities_abilities_RepairFieldAbility_wait_long 9
+typedef void (*func_mindustry_entities_abilities_RepairFieldAbility_wait_long)(jcontext ctx, jobject self, jlong param0);
+#define VTABLE_mindustry_entities_abilities_RepairFieldAbility_wait_long_int 10
+typedef void (*func_mindustry_entities_abilities_RepairFieldAbility_wait_long_int)(jcontext ctx, jobject self, jlong param0, jint param1);
+#define VTABLE_mindustry_entities_abilities_RepairFieldAbility_update_mindustry_gen_Unit 11
+typedef void (*func_mindustry_entities_abilities_RepairFieldAbility_update_mindustry_gen_Unit)(jcontext ctx, jobject self, jobject param0);
+#define VTABLE_mindustry_entities_abilities_RepairFieldAbility_draw_mindustry_gen_Unit 12
+typedef void (*func_mindustry_entities_abilities_RepairFieldAbility_draw_mindustry_gen_Unit)(jcontext ctx, jobject self, jobject param0);
+#define VTABLE_mindustry_entities_abilities_RepairFieldAbility_death_mindustry_gen_Unit 13
+typedef void (*func_mindustry_entities_abilities_RepairFieldAbility_death_mindustry_gen_Unit)(jcontext ctx, jobject self, jobject param0);
+#define VTABLE_mindustry_entities_abilities_RepairFieldAbility_created_mindustry_gen_Unit 14
+typedef void (*func_mindustry_entities_abilities_RepairFieldAbility_created_mindustry_gen_Unit)(jcontext ctx, jobject self, jobject param0);
+#define VTABLE_mindustry_entities_abilities_RepairFieldAbility_init_mindustry_type_UnitType 15
+typedef void (*func_mindustry_entities_abilities_RepairFieldAbility_init_mindustry_type_UnitType)(jcontext ctx, jobject self, jobject param0);
+#define VTABLE_mindustry_entities_abilities_RepairFieldAbility_displayBars_mindustry_gen_Unit_arc_scene_ui_layout_Table 16
+typedef void (*func_mindustry_entities_abilities_RepairFieldAbility_displayBars_mindustry_gen_Unit_arc_scene_ui_layout_Table)(jcontext ctx, jobject self, jobject param0, jobject param1);
+#define VTABLE_mindustry_entities_abilities_RepairFieldAbility_display_arc_scene_ui_layout_Table 17
+typedef void (*func_mindustry_entities_abilities_RepairFieldAbility_display_arc_scene_ui_layout_Table)(jcontext ctx, jobject self, jobject param0);
+#define VTABLE_mindustry_entities_abilities_RepairFieldAbility_addStats_arc_scene_ui_layout_Table 18
+typedef void (*func_mindustry_entities_abilities_RepairFieldAbility_addStats_arc_scene_ui_layout_Table)(jcontext ctx, jobject self, jobject param0);
+#define VTABLE_mindustry_entities_abilities_RepairFieldAbility_abilityStat_java_lang_String_Array1_java_lang_Object_R_java_lang_String 19
+typedef jobject (*func_mindustry_entities_abilities_RepairFieldAbility_abilityStat_java_lang_String_Array1_java_lang_Object_R_java_lang_String)(jcontext ctx, jobject self, jobject param0, jobject param1);
+#define VTABLE_mindustry_entities_abilities_RepairFieldAbility_copy_R_mindustry_entities_abilities_Ability 20
+typedef jobject (*func_mindustry_entities_abilities_RepairFieldAbility_copy_R_mindustry_entities_abilities_Ability)(jcontext ctx, jobject self);
+#define VTABLE_mindustry_entities_abilities_RepairFieldAbility_localized_R_java_lang_String 21
+typedef jobject (*func_mindustry_entities_abilities_RepairFieldAbility_localized_R_java_lang_String)(jcontext ctx, jobject self);
+#define VTABLE_mindustry_entities_abilities_RepairFieldAbility_getBundle_R_java_lang_String 22
+typedef jobject (*func_mindustry_entities_abilities_RepairFieldAbility_getBundle_R_java_lang_String)(jcontext ctx, jobject self);
+#define VTABLE_mindustry_entities_abilities_RepairFieldAbility_lambda$display$0_arc_scene_ui_layout_Table 23
+typedef void (*func_mindustry_entities_abilities_RepairFieldAbility_lambda$display$0_arc_scene_ui_layout_Table)(jcontext ctx, jobject self, jobject param0);
+#define VTABLE_mindustry_entities_abilities_RepairFieldAbility_lambda$update$0_boolean_mindustry_gen_Unit_mindustry_gen_Unit 24
+typedef void (*func_mindustry_entities_abilities_RepairFieldAbility_lambda$update$0_boolean_mindustry_gen_Unit_mindustry_gen_Unit)(jcontext ctx, jobject self, jbool param0, jobject param1, jobject param2);
+
+void mark_mindustry_entities_abilities_RepairFieldAbility(jobject object, jint mark, jint depth);
+void clinit_mindustry_entities_abilities_RepairFieldAbility(jcontext ctx);
+void init_mindustry_entities_abilities_RepairFieldAbility(jcontext ctx, jobject self);
+void init_mindustry_entities_abilities_RepairFieldAbility_float_float_float(jcontext ctx, jobject self, jfloat param0, jfloat param1, jfloat param2);
+void init_mindustry_entities_abilities_RepairFieldAbility_float_float_float_float(jcontext ctx, jobject self, jfloat param0, jfloat param1, jfloat param2, jfloat param3);
+void M_mindustry_entities_abilities_RepairFieldAbility_addStats_arc_scene_ui_layout_Table(jcontext ctx, jobject self, jobject param0);
+void M_mindustry_entities_abilities_RepairFieldAbility_update_mindustry_gen_Unit(jcontext ctx, jobject self, jobject param0);
+jfloat SM_mindustry_entities_abilities_RepairFieldAbility_lambda$update$1_mindustry_gen_Unit_boolean_mindustry_gen_Unit_R_float(jcontext ctx, jobject param0, jbool param1, jobject param2);
+void M_mindustry_entities_abilities_RepairFieldAbility_lambda$update$0_boolean_mindustry_gen_Unit_mindustry_gen_Unit(jcontext ctx, jobject self, jbool param0, jobject param1, jobject param2);
+
+#ifdef __cplusplus
+}
+#endif
+
+#endif

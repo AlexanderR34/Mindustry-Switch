@@ -1,0 +1,82 @@
+#ifndef HEADER_mindustry_world_blocks_payloads_Payload
+#define HEADER_mindustry_world_blocks_payloads_Payload
+
+#include "Clearwing.h"
+#include "java/lang/Object.h"
+#include "arc/math/geom/Position.h"
+
+#ifdef __cplusplus
+extern "C" {
+#endif
+
+typedef struct mindustry_world_blocks_payloads_Payload {
+	java_lang_Object parent;
+} mindustry_world_blocks_payloads_Payload;
+
+extern Class class_mindustry_world_blocks_payloads_Payload;
+
+extern jint SF_mindustry_world_blocks_payloads_Payload_payloadUnit;
+extern jint SF_mindustry_world_blocks_payloads_Payload_payloadBlock;
+
+#define INDEX_mindustry_world_blocks_payloads_Payload_set_float_float_float 0
+typedef void (*func_mindustry_world_blocks_payloads_Payload_set_float_float_float)(jcontext ctx, jobject self, jfloat param0, jfloat param1, jfloat param2);
+#define INDEX_mindustry_world_blocks_payloads_Payload_draw 1
+typedef void (*func_mindustry_world_blocks_payloads_Payload_draw)(jcontext ctx, jobject self);
+#define INDEX_mindustry_world_blocks_payloads_Payload_drawShadow_float 2
+typedef void (*func_mindustry_world_blocks_payloads_Payload_drawShadow_float)(jcontext ctx, jobject self, jfloat param0);
+#define INDEX_mindustry_world_blocks_payloads_Payload_size_R_float 3
+typedef jfloat (*func_mindustry_world_blocks_payloads_Payload_size_R_float)(jcontext ctx, jobject self);
+#define INDEX_mindustry_world_blocks_payloads_Payload_x_R_float 4
+typedef jfloat (*func_mindustry_world_blocks_payloads_Payload_x_R_float)(jcontext ctx, jobject self);
+#define INDEX_mindustry_world_blocks_payloads_Payload_y_R_float 5
+typedef jfloat (*func_mindustry_world_blocks_payloads_Payload_y_R_float)(jcontext ctx, jobject self);
+#define INDEX_mindustry_world_blocks_payloads_Payload_requirements_R_Array1_mindustry_type_ItemStack 6
+typedef jobject (*func_mindustry_world_blocks_payloads_Payload_requirements_R_Array1_mindustry_type_ItemStack)(jcontext ctx, jobject self);
+#define INDEX_mindustry_world_blocks_payloads_Payload_buildTime_R_float 7
+typedef jfloat (*func_mindustry_world_blocks_payloads_Payload_buildTime_R_float)(jcontext ctx, jobject self);
+#define INDEX_mindustry_world_blocks_payloads_Payload_contentEquals_mindustry_world_blocks_payloads_Payload_R_boolean 8
+typedef jbool (*func_mindustry_world_blocks_payloads_Payload_contentEquals_mindustry_world_blocks_payloads_Payload_R_boolean)(jcontext ctx, jobject self, jobject param0);
+#define INDEX_mindustry_world_blocks_payloads_Payload_update_mindustry_gen_Unit_mindustry_gen_Building 9
+typedef void (*func_mindustry_world_blocks_payloads_Payload_update_mindustry_gen_Unit_mindustry_gen_Building)(jcontext ctx, jobject self, jobject param0, jobject param1);
+#define INDEX_mindustry_world_blocks_payloads_Payload_isDead_R_boolean 10
+typedef jbool (*func_mindustry_world_blocks_payloads_Payload_isDead_R_boolean)(jcontext ctx, jobject self);
+#define INDEX_mindustry_world_blocks_payloads_Payload_dump_R_boolean 11
+typedef jbool (*func_mindustry_world_blocks_payloads_Payload_dump_R_boolean)(jcontext ctx, jobject self);
+#define INDEX_mindustry_world_blocks_payloads_Payload_fits_float_R_boolean 12
+typedef jbool (*func_mindustry_world_blocks_payloads_Payload_fits_float_R_boolean)(jcontext ctx, jobject self, jfloat param0);
+#define INDEX_mindustry_world_blocks_payloads_Payload_rotation_R_float 13
+typedef jfloat (*func_mindustry_world_blocks_payloads_Payload_rotation_R_float)(jcontext ctx, jobject self);
+#define INDEX_mindustry_world_blocks_payloads_Payload_destroyed 14
+typedef void (*func_mindustry_world_blocks_payloads_Payload_destroyed)(jcontext ctx, jobject self);
+#define INDEX_mindustry_world_blocks_payloads_Payload_write_arc_util_io_Writes 15
+typedef void (*func_mindustry_world_blocks_payloads_Payload_write_arc_util_io_Writes)(jcontext ctx, jobject self, jobject param0);
+#define INDEX_mindustry_world_blocks_payloads_Payload_icon_R_arc_graphics_g2d_TextureRegion 16
+typedef jobject (*func_mindustry_world_blocks_payloads_Payload_icon_R_arc_graphics_g2d_TextureRegion)(jcontext ctx, jobject self);
+#define INDEX_mindustry_world_blocks_payloads_Payload_content_R_mindustry_ctype_UnlockableContent 17
+typedef jobject (*func_mindustry_world_blocks_payloads_Payload_content_R_mindustry_ctype_UnlockableContent)(jcontext ctx, jobject self);
+#define INDEX_mindustry_world_blocks_payloads_Payload_getX_R_float 18
+typedef jfloat (*func_mindustry_world_blocks_payloads_Payload_getX_R_float)(jcontext ctx, jobject self);
+#define INDEX_mindustry_world_blocks_payloads_Payload_getY_R_float 19
+typedef jfloat (*func_mindustry_world_blocks_payloads_Payload_getY_R_float)(jcontext ctx, jobject self);
+#define INDEX_mindustry_world_blocks_payloads_Payload_remove 20
+typedef void (*func_mindustry_world_blocks_payloads_Payload_remove)(jcontext ctx, jobject self);
+
+void mark_mindustry_world_blocks_payloads_Payload(jobject object, jint mark, jint depth);
+void clinit_mindustry_world_blocks_payloads_Payload(jcontext ctx);
+void M_mindustry_world_blocks_payloads_Payload_update_mindustry_gen_Unit_mindustry_gen_Building(jcontext ctx, jobject self, jobject param0, jobject param1);
+jbool M_mindustry_world_blocks_payloads_Payload_isDead_R_boolean(jcontext ctx, jobject self);
+jbool M_mindustry_world_blocks_payloads_Payload_dump_R_boolean(jcontext ctx, jobject self);
+jbool M_mindustry_world_blocks_payloads_Payload_fits_float_R_boolean(jcontext ctx, jobject self, jfloat param0);
+jfloat M_mindustry_world_blocks_payloads_Payload_rotation_R_float(jcontext ctx, jobject self);
+void M_mindustry_world_blocks_payloads_Payload_destroyed(jcontext ctx, jobject self);
+jfloat M_mindustry_world_blocks_payloads_Payload_getX_R_float(jcontext ctx, jobject self);
+jfloat M_mindustry_world_blocks_payloads_Payload_getY_R_float(jcontext ctx, jobject self);
+void M_mindustry_world_blocks_payloads_Payload_remove(jcontext ctx, jobject self);
+void SM_mindustry_world_blocks_payloads_Payload_write_mindustry_world_blocks_payloads_Payload_arc_util_io_Writes(jcontext ctx, jobject param0, jobject param1);
+jobject SM_mindustry_world_blocks_payloads_Payload_read_arc_util_io_Reads_R_mindustry_world_blocks_payloads_Payload(jcontext ctx, jobject param0);
+
+#ifdef __cplusplus
+}
+#endif
+
+#endif

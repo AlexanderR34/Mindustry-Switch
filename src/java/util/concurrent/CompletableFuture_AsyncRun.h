@@ -1,0 +1,143 @@
+#ifndef HEADER_java_util_concurrent_CompletableFuture$AsyncRun
+#define HEADER_java_util_concurrent_CompletableFuture$AsyncRun
+
+#include "Clearwing.h"
+#include "java/util/concurrent/ForkJoinTask.h"
+#include "java/lang/Runnable.h"
+#include "java/util/concurrent/CompletableFuture_AsynchronousCompletionTask.h"
+
+#ifdef __cplusplus
+extern "C" {
+#endif
+
+typedef struct java_util_concurrent_CompletableFuture$AsyncRun {
+	java_util_concurrent_ForkJoinTask parent;
+	jref F_dep;
+	jref F_fn;
+} java_util_concurrent_CompletableFuture$AsyncRun;
+
+extern Class class_java_util_concurrent_CompletableFuture$AsyncRun;
+
+
+#define VTABLE_java_util_concurrent_CompletableFuture$AsyncRun_hashCode_R_int 0
+typedef jint (*func_java_util_concurrent_CompletableFuture$AsyncRun_hashCode_R_int)(jcontext ctx, jobject self);
+#define VTABLE_java_util_concurrent_CompletableFuture$AsyncRun_equals_java_lang_Object_R_boolean 1
+typedef jbool (*func_java_util_concurrent_CompletableFuture$AsyncRun_equals_java_lang_Object_R_boolean)(jcontext ctx, jobject self, jobject param0);
+#define VTABLE_java_util_concurrent_CompletableFuture$AsyncRun_clone_R_java_lang_Object 2
+typedef jobject (*func_java_util_concurrent_CompletableFuture$AsyncRun_clone_R_java_lang_Object)(jcontext ctx, jobject self);
+#define VTABLE_java_util_concurrent_CompletableFuture$AsyncRun_getClass_R_java_lang_Class 3
+typedef jobject (*func_java_util_concurrent_CompletableFuture$AsyncRun_getClass_R_java_lang_Class)(jcontext ctx, jobject self);
+#define VTABLE_java_util_concurrent_CompletableFuture$AsyncRun_toString_R_java_lang_String 4
+typedef jobject (*func_java_util_concurrent_CompletableFuture$AsyncRun_toString_R_java_lang_String)(jcontext ctx, jobject self);
+#define VTABLE_java_util_concurrent_CompletableFuture$AsyncRun_finalize 5
+typedef void (*func_java_util_concurrent_CompletableFuture$AsyncRun_finalize)(jcontext ctx, jobject self);
+#define VTABLE_java_util_concurrent_CompletableFuture$AsyncRun_notify 6
+typedef void (*func_java_util_concurrent_CompletableFuture$AsyncRun_notify)(jcontext ctx, jobject self);
+#define VTABLE_java_util_concurrent_CompletableFuture$AsyncRun_notifyAll 7
+typedef void (*func_java_util_concurrent_CompletableFuture$AsyncRun_notifyAll)(jcontext ctx, jobject self);
+#define VTABLE_java_util_concurrent_CompletableFuture$AsyncRun_wait 8
+typedef void (*func_java_util_concurrent_CompletableFuture$AsyncRun_wait)(jcontext ctx, jobject self);
+#define VTABLE_java_util_concurrent_CompletableFuture$AsyncRun_wait_long 9
+typedef void (*func_java_util_concurrent_CompletableFuture$AsyncRun_wait_long)(jcontext ctx, jobject self, jlong param0);
+#define VTABLE_java_util_concurrent_CompletableFuture$AsyncRun_wait_long_int 10
+typedef void (*func_java_util_concurrent_CompletableFuture$AsyncRun_wait_long_int)(jcontext ctx, jobject self, jlong param0, jint param1);
+#define VTABLE_java_util_concurrent_CompletableFuture$AsyncRun_cancel_boolean_R_boolean 11
+typedef jbool (*func_java_util_concurrent_CompletableFuture$AsyncRun_cancel_boolean_R_boolean)(jcontext ctx, jobject self, jbool param0);
+#define VTABLE_java_util_concurrent_CompletableFuture$AsyncRun_isCancelled_R_boolean 12
+typedef jbool (*func_java_util_concurrent_CompletableFuture$AsyncRun_isCancelled_R_boolean)(jcontext ctx, jobject self);
+#define VTABLE_java_util_concurrent_CompletableFuture$AsyncRun_isDone_R_boolean 13
+typedef jbool (*func_java_util_concurrent_CompletableFuture$AsyncRun_isDone_R_boolean)(jcontext ctx, jobject self);
+#define VTABLE_java_util_concurrent_CompletableFuture$AsyncRun_get_R_java_lang_Object 14
+typedef jobject (*func_java_util_concurrent_CompletableFuture$AsyncRun_get_R_java_lang_Object)(jcontext ctx, jobject self);
+#define VTABLE_java_util_concurrent_CompletableFuture$AsyncRun_get_long_java_util_concurrent_TimeUnit_R_java_lang_Object 15
+typedef jobject (*func_java_util_concurrent_CompletableFuture$AsyncRun_get_long_java_util_concurrent_TimeUnit_R_java_lang_Object)(jcontext ctx, jobject self, jlong param0, jobject param1);
+#define VTABLE_java_util_concurrent_CompletableFuture$AsyncRun_setCompletion_int_R_int 16
+typedef jint (*func_java_util_concurrent_CompletableFuture$AsyncRun_setCompletion_int_R_int)(jcontext ctx, jobject self, jint param0);
+#define VTABLE_java_util_concurrent_CompletableFuture$AsyncRun_doExec_R_int 17
+typedef jint (*func_java_util_concurrent_CompletableFuture$AsyncRun_doExec_R_int)(jcontext ctx, jobject self);
+#define VTABLE_java_util_concurrent_CompletableFuture$AsyncRun_internalWait_long 18
+typedef void (*func_java_util_concurrent_CompletableFuture$AsyncRun_internalWait_long)(jcontext ctx, jobject self, jlong param0);
+#define VTABLE_java_util_concurrent_CompletableFuture$AsyncRun_externalAwaitDone_R_int 19
+typedef jint (*func_java_util_concurrent_CompletableFuture$AsyncRun_externalAwaitDone_R_int)(jcontext ctx, jobject self);
+#define VTABLE_java_util_concurrent_CompletableFuture$AsyncRun_externalInterruptibleAwaitDone_R_int 20
+typedef jint (*func_java_util_concurrent_CompletableFuture$AsyncRun_externalInterruptibleAwaitDone_R_int)(jcontext ctx, jobject self);
+#define VTABLE_java_util_concurrent_CompletableFuture$AsyncRun_doJoin_R_int 21
+typedef jint (*func_java_util_concurrent_CompletableFuture$AsyncRun_doJoin_R_int)(jcontext ctx, jobject self);
+#define VTABLE_java_util_concurrent_CompletableFuture$AsyncRun_doInvoke_R_int 22
+typedef jint (*func_java_util_concurrent_CompletableFuture$AsyncRun_doInvoke_R_int)(jcontext ctx, jobject self);
+#define VTABLE_java_util_concurrent_CompletableFuture$AsyncRun_recordExceptionalCompletion_java_lang_Throwable_R_int 23
+typedef jint (*func_java_util_concurrent_CompletableFuture$AsyncRun_recordExceptionalCompletion_java_lang_Throwable_R_int)(jcontext ctx, jobject self, jobject param0);
+#define VTABLE_java_util_concurrent_CompletableFuture$AsyncRun_setExceptionalCompletion_java_lang_Throwable_R_int 24
+typedef jint (*func_java_util_concurrent_CompletableFuture$AsyncRun_setExceptionalCompletion_java_lang_Throwable_R_int)(jcontext ctx, jobject self, jobject param0);
+#define VTABLE_java_util_concurrent_CompletableFuture$AsyncRun_internalPropagateException_java_lang_Throwable 25
+typedef void (*func_java_util_concurrent_CompletableFuture$AsyncRun_internalPropagateException_java_lang_Throwable)(jcontext ctx, jobject self, jobject param0);
+#define VTABLE_java_util_concurrent_CompletableFuture$AsyncRun_clearExceptionalCompletion 26
+typedef void (*func_java_util_concurrent_CompletableFuture$AsyncRun_clearExceptionalCompletion)(jcontext ctx, jobject self);
+#define VTABLE_java_util_concurrent_CompletableFuture$AsyncRun_getThrowableException_R_java_lang_Throwable 27
+typedef jobject (*func_java_util_concurrent_CompletableFuture$AsyncRun_getThrowableException_R_java_lang_Throwable)(jcontext ctx, jobject self);
+#define VTABLE_java_util_concurrent_CompletableFuture$AsyncRun_reportException_int 28
+typedef void (*func_java_util_concurrent_CompletableFuture$AsyncRun_reportException_int)(jcontext ctx, jobject self, jint param0);
+#define VTABLE_java_util_concurrent_CompletableFuture$AsyncRun_fork_R_java_util_concurrent_ForkJoinTask 29
+typedef jobject (*func_java_util_concurrent_CompletableFuture$AsyncRun_fork_R_java_util_concurrent_ForkJoinTask)(jcontext ctx, jobject self);
+#define VTABLE_java_util_concurrent_CompletableFuture$AsyncRun_join_R_java_lang_Object 30
+typedef jobject (*func_java_util_concurrent_CompletableFuture$AsyncRun_join_R_java_lang_Object)(jcontext ctx, jobject self);
+#define VTABLE_java_util_concurrent_CompletableFuture$AsyncRun_invoke_R_java_lang_Object 31
+typedef jobject (*func_java_util_concurrent_CompletableFuture$AsyncRun_invoke_R_java_lang_Object)(jcontext ctx, jobject self);
+#define VTABLE_java_util_concurrent_CompletableFuture$AsyncRun_isCompletedAbnormally_R_boolean 32
+typedef jbool (*func_java_util_concurrent_CompletableFuture$AsyncRun_isCompletedAbnormally_R_boolean)(jcontext ctx, jobject self);
+#define VTABLE_java_util_concurrent_CompletableFuture$AsyncRun_isCompletedNormally_R_boolean 33
+typedef jbool (*func_java_util_concurrent_CompletableFuture$AsyncRun_isCompletedNormally_R_boolean)(jcontext ctx, jobject self);
+#define VTABLE_java_util_concurrent_CompletableFuture$AsyncRun_getException_R_java_lang_Throwable 34
+typedef jobject (*func_java_util_concurrent_CompletableFuture$AsyncRun_getException_R_java_lang_Throwable)(jcontext ctx, jobject self);
+#define VTABLE_java_util_concurrent_CompletableFuture$AsyncRun_completeExceptionally_java_lang_Throwable 35
+typedef void (*func_java_util_concurrent_CompletableFuture$AsyncRun_completeExceptionally_java_lang_Throwable)(jcontext ctx, jobject self, jobject param0);
+#define VTABLE_java_util_concurrent_CompletableFuture$AsyncRun_complete_java_lang_Object 36
+typedef void (*func_java_util_concurrent_CompletableFuture$AsyncRun_complete_java_lang_Object)(jcontext ctx, jobject self, jobject param0);
+#define VTABLE_java_util_concurrent_CompletableFuture$AsyncRun_quietlyComplete 37
+typedef void (*func_java_util_concurrent_CompletableFuture$AsyncRun_quietlyComplete)(jcontext ctx, jobject self);
+#define VTABLE_java_util_concurrent_CompletableFuture$AsyncRun_quietlyJoin 38
+typedef void (*func_java_util_concurrent_CompletableFuture$AsyncRun_quietlyJoin)(jcontext ctx, jobject self);
+#define VTABLE_java_util_concurrent_CompletableFuture$AsyncRun_quietlyInvoke 39
+typedef void (*func_java_util_concurrent_CompletableFuture$AsyncRun_quietlyInvoke)(jcontext ctx, jobject self);
+#define VTABLE_java_util_concurrent_CompletableFuture$AsyncRun_reinitialize 40
+typedef void (*func_java_util_concurrent_CompletableFuture$AsyncRun_reinitialize)(jcontext ctx, jobject self);
+#define VTABLE_java_util_concurrent_CompletableFuture$AsyncRun_tryUnfork_R_boolean 41
+typedef jbool (*func_java_util_concurrent_CompletableFuture$AsyncRun_tryUnfork_R_boolean)(jcontext ctx, jobject self);
+#define VTABLE_java_util_concurrent_CompletableFuture$AsyncRun_getRawResult_R_java_lang_Object 42
+typedef jobject (*func_java_util_concurrent_CompletableFuture$AsyncRun_getRawResult_R_java_lang_Object)(jcontext ctx, jobject self);
+#define VTABLE_java_util_concurrent_CompletableFuture$AsyncRun_setRawResult_java_lang_Object 43
+typedef void (*func_java_util_concurrent_CompletableFuture$AsyncRun_setRawResult_java_lang_Object)(jcontext ctx, jobject self, jobject param0);
+#define VTABLE_java_util_concurrent_CompletableFuture$AsyncRun_exec_R_boolean 44
+typedef jbool (*func_java_util_concurrent_CompletableFuture$AsyncRun_exec_R_boolean)(jcontext ctx, jobject self);
+#define VTABLE_java_util_concurrent_CompletableFuture$AsyncRun_getForkJoinTaskTag_R_short 45
+typedef jshort (*func_java_util_concurrent_CompletableFuture$AsyncRun_getForkJoinTaskTag_R_short)(jcontext ctx, jobject self);
+#define VTABLE_java_util_concurrent_CompletableFuture$AsyncRun_setForkJoinTaskTag_short_R_short 46
+typedef jshort (*func_java_util_concurrent_CompletableFuture$AsyncRun_setForkJoinTaskTag_short_R_short)(jcontext ctx, jobject self, jshort param0);
+#define VTABLE_java_util_concurrent_CompletableFuture$AsyncRun_compareAndSetForkJoinTaskTag_short_short_R_boolean 47
+typedef jbool (*func_java_util_concurrent_CompletableFuture$AsyncRun_compareAndSetForkJoinTaskTag_short_short_R_boolean)(jcontext ctx, jobject self, jshort param0, jshort param1);
+#define VTABLE_java_util_concurrent_CompletableFuture$AsyncRun_writeObject_java_io_ObjectOutputStream 48
+typedef void (*func_java_util_concurrent_CompletableFuture$AsyncRun_writeObject_java_io_ObjectOutputStream)(jcontext ctx, jobject self, jobject param0);
+#define VTABLE_java_util_concurrent_CompletableFuture$AsyncRun_readObject_java_io_ObjectInputStream 49
+typedef void (*func_java_util_concurrent_CompletableFuture$AsyncRun_readObject_java_io_ObjectInputStream)(jcontext ctx, jobject self, jobject param0);
+#define VTABLE_java_util_concurrent_CompletableFuture$AsyncRun_run 50
+typedef void (*func_java_util_concurrent_CompletableFuture$AsyncRun_run)(jcontext ctx, jobject self);
+#define VTABLE_java_util_concurrent_CompletableFuture$AsyncRun_getRawResult_R_java_lang_Void 51
+typedef jobject (*func_java_util_concurrent_CompletableFuture$AsyncRun_getRawResult_R_java_lang_Void)(jcontext ctx, jobject self);
+#define VTABLE_java_util_concurrent_CompletableFuture$AsyncRun_setRawResult_java_lang_Void 52
+typedef void (*func_java_util_concurrent_CompletableFuture$AsyncRun_setRawResult_java_lang_Void)(jcontext ctx, jobject self, jobject param0);
+
+void mark_java_util_concurrent_CompletableFuture$AsyncRun(jobject object, jint mark, jint depth);
+void clinit_java_util_concurrent_CompletableFuture$AsyncRun(jcontext ctx);
+void init_java_util_concurrent_CompletableFuture$AsyncRun_java_util_concurrent_CompletableFuture_java_lang_Runnable(jcontext ctx, jobject self, jobject param0, jobject param1);
+jobject M_java_util_concurrent_CompletableFuture$AsyncRun_getRawResult_R_java_lang_Void(jcontext ctx, jobject self);
+void M_java_util_concurrent_CompletableFuture$AsyncRun_setRawResult_java_lang_Void(jcontext ctx, jobject self, jobject param0);
+jbool M_java_util_concurrent_CompletableFuture$AsyncRun_exec_R_boolean(jcontext ctx, jobject self);
+void M_java_util_concurrent_CompletableFuture$AsyncRun_run(jcontext ctx, jobject self);
+void M_java_util_concurrent_CompletableFuture$AsyncRun_setRawResult_java_lang_Object(jcontext ctx, jobject self, jobject param0);
+jobject M_java_util_concurrent_CompletableFuture$AsyncRun_getRawResult_R_java_lang_Object(jcontext ctx, jobject self);
+
+#ifdef __cplusplus
+}
+#endif
+
+#endif

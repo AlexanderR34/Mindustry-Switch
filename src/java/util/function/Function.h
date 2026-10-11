@@ -1,0 +1,42 @@
+#ifndef HEADER_java_util_function_Function
+#define HEADER_java_util_function_Function
+
+#include "Clearwing.h"
+#include "java/lang/Object.h"
+
+#ifdef __cplusplus
+extern "C" {
+#endif
+
+typedef struct java_util_function_Function {
+	java_lang_Object parent;
+} java_util_function_Function;
+
+extern Class class_java_util_function_Function;
+
+
+#define INDEX_java_util_function_Function_apply_java_lang_Object_R_java_lang_Object 0
+typedef jobject (*func_java_util_function_Function_apply_java_lang_Object_R_java_lang_Object)(jcontext ctx, jobject self, jobject param0);
+#define INDEX_java_util_function_Function_compose_java_util_function_Function_R_java_util_function_Function 1
+typedef jobject (*func_java_util_function_Function_compose_java_util_function_Function_R_java_util_function_Function)(jcontext ctx, jobject self, jobject param0);
+#define INDEX_java_util_function_Function_andThen_java_util_function_Function_R_java_util_function_Function 2
+typedef jobject (*func_java_util_function_Function_andThen_java_util_function_Function_R_java_util_function_Function)(jcontext ctx, jobject self, jobject param0);
+#define INDEX_java_util_function_Function_lambda$andThen$1_java_util_function_Function_java_lang_Object_R_java_lang_Object 5
+typedef jobject (*func_java_util_function_Function_lambda$andThen$1_java_util_function_Function_java_lang_Object_R_java_lang_Object)(jcontext ctx, jobject self, jobject param0, jobject param1);
+#define INDEX_java_util_function_Function_lambda$compose$0_java_util_function_Function_java_lang_Object_R_java_lang_Object 6
+typedef jobject (*func_java_util_function_Function_lambda$compose$0_java_util_function_Function_java_lang_Object_R_java_lang_Object)(jcontext ctx, jobject self, jobject param0, jobject param1);
+
+void mark_java_util_function_Function(jobject object, jint mark, jint depth);
+void clinit_java_util_function_Function(jcontext ctx);
+jobject M_java_util_function_Function_compose_java_util_function_Function_R_java_util_function_Function(jcontext ctx, jobject self, jobject param0);
+jobject M_java_util_function_Function_andThen_java_util_function_Function_R_java_util_function_Function(jcontext ctx, jobject self, jobject param0);
+jobject SM_java_util_function_Function_identity_R_java_util_function_Function(jcontext ctx);
+jobject SM_java_util_function_Function_lambda$identity$2_java_lang_Object_R_java_lang_Object(jcontext ctx, jobject param0);
+jobject M_java_util_function_Function_lambda$andThen$1_java_util_function_Function_java_lang_Object_R_java_lang_Object(jcontext ctx, jobject self, jobject param0, jobject param1);
+jobject M_java_util_function_Function_lambda$compose$0_java_util_function_Function_java_lang_Object_R_java_lang_Object(jcontext ctx, jobject self, jobject param0, jobject param1);
+
+#ifdef __cplusplus
+}
+#endif
+
+#endif

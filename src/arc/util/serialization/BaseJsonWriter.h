@@ -1,0 +1,47 @@
+#ifndef HEADER_arc_util_serialization_BaseJsonWriter
+#define HEADER_arc_util_serialization_BaseJsonWriter
+
+#include "Clearwing.h"
+#include "java/lang/Object.h"
+#include "java/io/Closeable.h"
+
+#ifdef __cplusplus
+extern "C" {
+#endif
+
+typedef struct arc_util_serialization_BaseJsonWriter {
+	java_lang_Object parent;
+} arc_util_serialization_BaseJsonWriter;
+
+extern Class class_arc_util_serialization_BaseJsonWriter;
+
+
+#define INDEX_arc_util_serialization_BaseJsonWriter_setOutputType_arc_util_serialization_JsonWriter$OutputType 0
+typedef void (*func_arc_util_serialization_BaseJsonWriter_setOutputType_arc_util_serialization_JsonWriter$OutputType)(jcontext ctx, jobject self, jobject param0);
+#define INDEX_arc_util_serialization_BaseJsonWriter_setQuoteLongValues_boolean 1
+typedef void (*func_arc_util_serialization_BaseJsonWriter_setQuoteLongValues_boolean)(jcontext ctx, jobject self, jbool param0);
+#define INDEX_arc_util_serialization_BaseJsonWriter_name_java_lang_String_R_arc_util_serialization_BaseJsonWriter 2
+typedef jobject (*func_arc_util_serialization_BaseJsonWriter_name_java_lang_String_R_arc_util_serialization_BaseJsonWriter)(jcontext ctx, jobject self, jobject param0);
+#define INDEX_arc_util_serialization_BaseJsonWriter_object_R_arc_util_serialization_BaseJsonWriter 3
+typedef jobject (*func_arc_util_serialization_BaseJsonWriter_object_R_arc_util_serialization_BaseJsonWriter)(jcontext ctx, jobject self);
+#define INDEX_arc_util_serialization_BaseJsonWriter_array_R_arc_util_serialization_BaseJsonWriter 4
+typedef jobject (*func_arc_util_serialization_BaseJsonWriter_array_R_arc_util_serialization_BaseJsonWriter)(jcontext ctx, jobject self);
+#define INDEX_arc_util_serialization_BaseJsonWriter_value_java_lang_Object_R_arc_util_serialization_BaseJsonWriter 5
+typedef jobject (*func_arc_util_serialization_BaseJsonWriter_value_java_lang_Object_R_arc_util_serialization_BaseJsonWriter)(jcontext ctx, jobject self, jobject param0);
+#define INDEX_arc_util_serialization_BaseJsonWriter_object_java_lang_String_R_arc_util_serialization_BaseJsonWriter 6
+typedef jobject (*func_arc_util_serialization_BaseJsonWriter_object_java_lang_String_R_arc_util_serialization_BaseJsonWriter)(jcontext ctx, jobject self, jobject param0);
+#define INDEX_arc_util_serialization_BaseJsonWriter_array_java_lang_String_R_arc_util_serialization_BaseJsonWriter 7
+typedef jobject (*func_arc_util_serialization_BaseJsonWriter_array_java_lang_String_R_arc_util_serialization_BaseJsonWriter)(jcontext ctx, jobject self, jobject param0);
+#define INDEX_arc_util_serialization_BaseJsonWriter_set_java_lang_String_java_lang_Object_R_arc_util_serialization_BaseJsonWriter 8
+typedef jobject (*func_arc_util_serialization_BaseJsonWriter_set_java_lang_String_java_lang_Object_R_arc_util_serialization_BaseJsonWriter)(jcontext ctx, jobject self, jobject param0, jobject param1);
+#define INDEX_arc_util_serialization_BaseJsonWriter_pop_R_arc_util_serialization_BaseJsonWriter 9
+typedef jobject (*func_arc_util_serialization_BaseJsonWriter_pop_R_arc_util_serialization_BaseJsonWriter)(jcontext ctx, jobject self);
+
+void mark_arc_util_serialization_BaseJsonWriter(jobject object, jint mark, jint depth);
+void clinit_arc_util_serialization_BaseJsonWriter(jcontext ctx);
+
+#ifdef __cplusplus
+}
+#endif
+
+#endif

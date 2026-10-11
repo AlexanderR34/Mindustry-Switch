@@ -1,0 +1,118 @@
+#ifndef HEADER_java_util_concurrent_ForkJoinPool$WorkQueue
+#define HEADER_java_util_concurrent_ForkJoinPool$WorkQueue
+
+#include "Clearwing.h"
+#include "java/lang/Object.h"
+
+#ifdef __cplusplus
+extern "C" {
+#endif
+
+typedef struct java_util_concurrent_ForkJoinPool$WorkQueue {
+	java_lang_Object parent;
+	volatile jint F_phase;
+	jint F_stackPred;
+	jint F_nsteals;
+	jint F_id;
+	volatile jint F_source;
+	volatile jint F_base;
+	jint F_top;
+	jref F_array;
+	jref F_pool;
+	jref F_owner;
+} java_util_concurrent_ForkJoinPool$WorkQueue;
+
+extern Class class_java_util_concurrent_ForkJoinPool$WorkQueue;
+
+extern jint SF_java_util_concurrent_ForkJoinPool$WorkQueue_INITIAL_QUEUE_CAPACITY;
+extern jint SF_java_util_concurrent_ForkJoinPool$WorkQueue_MAXIMUM_QUEUE_CAPACITY;
+
+#define VTABLE_java_util_concurrent_ForkJoinPool$WorkQueue_hashCode_R_int 0
+typedef jint (*func_java_util_concurrent_ForkJoinPool$WorkQueue_hashCode_R_int)(jcontext ctx, jobject self);
+#define VTABLE_java_util_concurrent_ForkJoinPool$WorkQueue_equals_java_lang_Object_R_boolean 1
+typedef jbool (*func_java_util_concurrent_ForkJoinPool$WorkQueue_equals_java_lang_Object_R_boolean)(jcontext ctx, jobject self, jobject param0);
+#define VTABLE_java_util_concurrent_ForkJoinPool$WorkQueue_clone_R_java_lang_Object 2
+typedef jobject (*func_java_util_concurrent_ForkJoinPool$WorkQueue_clone_R_java_lang_Object)(jcontext ctx, jobject self);
+#define VTABLE_java_util_concurrent_ForkJoinPool$WorkQueue_getClass_R_java_lang_Class 3
+typedef jobject (*func_java_util_concurrent_ForkJoinPool$WorkQueue_getClass_R_java_lang_Class)(jcontext ctx, jobject self);
+#define VTABLE_java_util_concurrent_ForkJoinPool$WorkQueue_toString_R_java_lang_String 4
+typedef jobject (*func_java_util_concurrent_ForkJoinPool$WorkQueue_toString_R_java_lang_String)(jcontext ctx, jobject self);
+#define VTABLE_java_util_concurrent_ForkJoinPool$WorkQueue_finalize 5
+typedef void (*func_java_util_concurrent_ForkJoinPool$WorkQueue_finalize)(jcontext ctx, jobject self);
+#define VTABLE_java_util_concurrent_ForkJoinPool$WorkQueue_notify 6
+typedef void (*func_java_util_concurrent_ForkJoinPool$WorkQueue_notify)(jcontext ctx, jobject self);
+#define VTABLE_java_util_concurrent_ForkJoinPool$WorkQueue_notifyAll 7
+typedef void (*func_java_util_concurrent_ForkJoinPool$WorkQueue_notifyAll)(jcontext ctx, jobject self);
+#define VTABLE_java_util_concurrent_ForkJoinPool$WorkQueue_wait 8
+typedef void (*func_java_util_concurrent_ForkJoinPool$WorkQueue_wait)(jcontext ctx, jobject self);
+#define VTABLE_java_util_concurrent_ForkJoinPool$WorkQueue_wait_long 9
+typedef void (*func_java_util_concurrent_ForkJoinPool$WorkQueue_wait_long)(jcontext ctx, jobject self, jlong param0);
+#define VTABLE_java_util_concurrent_ForkJoinPool$WorkQueue_wait_long_int 10
+typedef void (*func_java_util_concurrent_ForkJoinPool$WorkQueue_wait_long_int)(jcontext ctx, jobject self, jlong param0, jint param1);
+#define VTABLE_java_util_concurrent_ForkJoinPool$WorkQueue_getPoolIndex_R_int 11
+typedef jint (*func_java_util_concurrent_ForkJoinPool$WorkQueue_getPoolIndex_R_int)(jcontext ctx, jobject self);
+#define VTABLE_java_util_concurrent_ForkJoinPool$WorkQueue_queueSize_R_int 12
+typedef jint (*func_java_util_concurrent_ForkJoinPool$WorkQueue_queueSize_R_int)(jcontext ctx, jobject self);
+#define VTABLE_java_util_concurrent_ForkJoinPool$WorkQueue_isEmpty_R_boolean 13
+typedef jbool (*func_java_util_concurrent_ForkJoinPool$WorkQueue_isEmpty_R_boolean)(jcontext ctx, jobject self);
+#define VTABLE_java_util_concurrent_ForkJoinPool$WorkQueue_push_java_util_concurrent_ForkJoinTask 14
+typedef void (*func_java_util_concurrent_ForkJoinPool$WorkQueue_push_java_util_concurrent_ForkJoinTask)(jcontext ctx, jobject self, jobject param0);
+#define VTABLE_java_util_concurrent_ForkJoinPool$WorkQueue_growArray_R_Array1_java_util_concurrent_ForkJoinTask 15
+typedef jobject (*func_java_util_concurrent_ForkJoinPool$WorkQueue_growArray_R_Array1_java_util_concurrent_ForkJoinTask)(jcontext ctx, jobject self);
+#define VTABLE_java_util_concurrent_ForkJoinPool$WorkQueue_pop_R_java_util_concurrent_ForkJoinTask 16
+typedef jobject (*func_java_util_concurrent_ForkJoinPool$WorkQueue_pop_R_java_util_concurrent_ForkJoinTask)(jcontext ctx, jobject self);
+#define VTABLE_java_util_concurrent_ForkJoinPool$WorkQueue_poll_R_java_util_concurrent_ForkJoinTask 17
+typedef jobject (*func_java_util_concurrent_ForkJoinPool$WorkQueue_poll_R_java_util_concurrent_ForkJoinTask)(jcontext ctx, jobject self);
+#define VTABLE_java_util_concurrent_ForkJoinPool$WorkQueue_nextLocalTask_R_java_util_concurrent_ForkJoinTask 18
+typedef jobject (*func_java_util_concurrent_ForkJoinPool$WorkQueue_nextLocalTask_R_java_util_concurrent_ForkJoinTask)(jcontext ctx, jobject self);
+#define VTABLE_java_util_concurrent_ForkJoinPool$WorkQueue_peek_R_java_util_concurrent_ForkJoinTask 19
+typedef jobject (*func_java_util_concurrent_ForkJoinPool$WorkQueue_peek_R_java_util_concurrent_ForkJoinTask)(jcontext ctx, jobject self);
+#define VTABLE_java_util_concurrent_ForkJoinPool$WorkQueue_tryUnpush_java_util_concurrent_ForkJoinTask_R_boolean 20
+typedef jbool (*func_java_util_concurrent_ForkJoinPool$WorkQueue_tryUnpush_java_util_concurrent_ForkJoinTask_R_boolean)(jcontext ctx, jobject self, jobject param0);
+#define VTABLE_java_util_concurrent_ForkJoinPool$WorkQueue_cancelAll 21
+typedef void (*func_java_util_concurrent_ForkJoinPool$WorkQueue_cancelAll)(jcontext ctx, jobject self);
+#define VTABLE_java_util_concurrent_ForkJoinPool$WorkQueue_localPopAndExec_int 22
+typedef void (*func_java_util_concurrent_ForkJoinPool$WorkQueue_localPopAndExec_int)(jcontext ctx, jobject self, jint param0);
+#define VTABLE_java_util_concurrent_ForkJoinPool$WorkQueue_localPollAndExec_int 23
+typedef void (*func_java_util_concurrent_ForkJoinPool$WorkQueue_localPollAndExec_int)(jcontext ctx, jobject self, jint param0);
+#define VTABLE_java_util_concurrent_ForkJoinPool$WorkQueue_tryRemoveAndExec_java_util_concurrent_ForkJoinTask 24
+typedef void (*func_java_util_concurrent_ForkJoinPool$WorkQueue_tryRemoveAndExec_java_util_concurrent_ForkJoinTask)(jcontext ctx, jobject self, jobject param0);
+#define VTABLE_java_util_concurrent_ForkJoinPool$WorkQueue_localHelpCC_java_util_concurrent_CountedCompleter_int_R_int 25
+typedef jint (*func_java_util_concurrent_ForkJoinPool$WorkQueue_localHelpCC_java_util_concurrent_CountedCompleter_int_R_int)(jcontext ctx, jobject self, jobject param0, jint param1);
+#define VTABLE_java_util_concurrent_ForkJoinPool$WorkQueue_tryLockSharedQueue_R_boolean 26
+typedef jbool (*func_java_util_concurrent_ForkJoinPool$WorkQueue_tryLockSharedQueue_R_boolean)(jcontext ctx, jobject self);
+#define VTABLE_java_util_concurrent_ForkJoinPool$WorkQueue_trySharedUnpush_java_util_concurrent_ForkJoinTask_R_boolean 27
+typedef jbool (*func_java_util_concurrent_ForkJoinPool$WorkQueue_trySharedUnpush_java_util_concurrent_ForkJoinTask_R_boolean)(jcontext ctx, jobject self, jobject param0);
+#define VTABLE_java_util_concurrent_ForkJoinPool$WorkQueue_sharedHelpCC_java_util_concurrent_CountedCompleter_int_R_int 28
+typedef jint (*func_java_util_concurrent_ForkJoinPool$WorkQueue_sharedHelpCC_java_util_concurrent_CountedCompleter_int_R_int)(jcontext ctx, jobject self, jobject param0, jint param1);
+#define VTABLE_java_util_concurrent_ForkJoinPool$WorkQueue_isApparentlyUnblocked_R_boolean 29
+typedef jbool (*func_java_util_concurrent_ForkJoinPool$WorkQueue_isApparentlyUnblocked_R_boolean)(jcontext ctx, jobject self);
+
+void mark_java_util_concurrent_ForkJoinPool$WorkQueue(jobject object, jint mark, jint depth);
+void clinit_java_util_concurrent_ForkJoinPool$WorkQueue(jcontext ctx);
+void init_java_util_concurrent_ForkJoinPool$WorkQueue_java_util_concurrent_ForkJoinPool_java_util_concurrent_ForkJoinWorkerThread(jcontext ctx, jobject self, jobject param0, jobject param1);
+jint M_java_util_concurrent_ForkJoinPool$WorkQueue_getPoolIndex_R_int(jcontext ctx, jobject self);
+jint M_java_util_concurrent_ForkJoinPool$WorkQueue_queueSize_R_int(jcontext ctx, jobject self);
+jbool M_java_util_concurrent_ForkJoinPool$WorkQueue_isEmpty_R_boolean(jcontext ctx, jobject self);
+void M_java_util_concurrent_ForkJoinPool$WorkQueue_push_java_util_concurrent_ForkJoinTask(jcontext ctx, jobject self, jobject param0);
+jobject M_java_util_concurrent_ForkJoinPool$WorkQueue_growArray_R_Array1_java_util_concurrent_ForkJoinTask(jcontext ctx, jobject self);
+jobject M_java_util_concurrent_ForkJoinPool$WorkQueue_pop_R_java_util_concurrent_ForkJoinTask(jcontext ctx, jobject self);
+jobject M_java_util_concurrent_ForkJoinPool$WorkQueue_poll_R_java_util_concurrent_ForkJoinTask(jcontext ctx, jobject self);
+jobject M_java_util_concurrent_ForkJoinPool$WorkQueue_nextLocalTask_R_java_util_concurrent_ForkJoinTask(jcontext ctx, jobject self);
+jobject M_java_util_concurrent_ForkJoinPool$WorkQueue_peek_R_java_util_concurrent_ForkJoinTask(jcontext ctx, jobject self);
+jbool M_java_util_concurrent_ForkJoinPool$WorkQueue_tryUnpush_java_util_concurrent_ForkJoinTask_R_boolean(jcontext ctx, jobject self, jobject param0);
+void M_java_util_concurrent_ForkJoinPool$WorkQueue_cancelAll(jcontext ctx, jobject self);
+void M_java_util_concurrent_ForkJoinPool$WorkQueue_localPopAndExec_int(jcontext ctx, jobject self, jint param0);
+void M_java_util_concurrent_ForkJoinPool$WorkQueue_localPollAndExec_int(jcontext ctx, jobject self, jint param0);
+void M_java_util_concurrent_ForkJoinPool$WorkQueue_tryRemoveAndExec_java_util_concurrent_ForkJoinTask(jcontext ctx, jobject self, jobject param0);
+jint M_java_util_concurrent_ForkJoinPool$WorkQueue_localHelpCC_java_util_concurrent_CountedCompleter_int_R_int(jcontext ctx, jobject self, jobject param0, jint param1);
+jbool M_java_util_concurrent_ForkJoinPool$WorkQueue_tryLockSharedQueue_R_boolean(jcontext ctx, jobject self);
+jbool M_java_util_concurrent_ForkJoinPool$WorkQueue_trySharedUnpush_java_util_concurrent_ForkJoinTask_R_boolean(jcontext ctx, jobject self, jobject param0);
+jint M_java_util_concurrent_ForkJoinPool$WorkQueue_sharedHelpCC_java_util_concurrent_CountedCompleter_int_R_int(jcontext ctx, jobject self, jobject param0, jint param1);
+jbool M_java_util_concurrent_ForkJoinPool$WorkQueue_isApparentlyUnblocked_R_boolean(jcontext ctx, jobject self);
+
+#ifdef __cplusplus
+}
+#endif
+
+#endif

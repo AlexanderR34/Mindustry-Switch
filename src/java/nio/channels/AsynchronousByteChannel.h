@@ -1,0 +1,35 @@
+#ifndef HEADER_java_nio_channels_AsynchronousByteChannel
+#define HEADER_java_nio_channels_AsynchronousByteChannel
+
+#include "Clearwing.h"
+#include "java/lang/Object.h"
+#include "java/nio/channels/AsynchronousChannel.h"
+
+#ifdef __cplusplus
+extern "C" {
+#endif
+
+typedef struct java_nio_channels_AsynchronousByteChannel {
+	java_lang_Object parent;
+} java_nio_channels_AsynchronousByteChannel;
+
+extern Class class_java_nio_channels_AsynchronousByteChannel;
+
+
+#define INDEX_java_nio_channels_AsynchronousByteChannel_read_java_nio_ByteBuffer_java_lang_Object_java_nio_channels_CompletionHandler 0
+typedef void (*func_java_nio_channels_AsynchronousByteChannel_read_java_nio_ByteBuffer_java_lang_Object_java_nio_channels_CompletionHandler)(jcontext ctx, jobject self, jobject param0, jobject param1, jobject param2);
+#define INDEX_java_nio_channels_AsynchronousByteChannel_read_java_nio_ByteBuffer_R_java_util_concurrent_Future 1
+typedef jobject (*func_java_nio_channels_AsynchronousByteChannel_read_java_nio_ByteBuffer_R_java_util_concurrent_Future)(jcontext ctx, jobject self, jobject param0);
+#define INDEX_java_nio_channels_AsynchronousByteChannel_write_java_nio_ByteBuffer_java_lang_Object_java_nio_channels_CompletionHandler 2
+typedef void (*func_java_nio_channels_AsynchronousByteChannel_write_java_nio_ByteBuffer_java_lang_Object_java_nio_channels_CompletionHandler)(jcontext ctx, jobject self, jobject param0, jobject param1, jobject param2);
+#define INDEX_java_nio_channels_AsynchronousByteChannel_write_java_nio_ByteBuffer_R_java_util_concurrent_Future 3
+typedef jobject (*func_java_nio_channels_AsynchronousByteChannel_write_java_nio_ByteBuffer_R_java_util_concurrent_Future)(jcontext ctx, jobject self, jobject param0);
+
+void mark_java_nio_channels_AsynchronousByteChannel(jobject object, jint mark, jint depth);
+void clinit_java_nio_channels_AsynchronousByteChannel(jcontext ctx);
+
+#ifdef __cplusplus
+}
+#endif
+
+#endif

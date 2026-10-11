@@ -1,0 +1,69 @@
+#ifndef HEADER_mindustry_maps_filters_FilterOption
+#define HEADER_mindustry_maps_filters_FilterOption
+
+#include "Clearwing.h"
+#include "java/lang/Object.h"
+
+#ifdef __cplusplus
+extern "C" {
+#endif
+
+typedef struct mindustry_maps_filters_FilterOption {
+	java_lang_Object parent;
+	jref F_changed;
+} mindustry_maps_filters_FilterOption;
+
+extern Class class_mindustry_maps_filters_FilterOption;
+
+extern jobject SF_mindustry_maps_filters_FilterOption_floorsOnly;
+extern jobject SF_mindustry_maps_filters_FilterOption_wallsOnly;
+extern jobject SF_mindustry_maps_filters_FilterOption_floorsOptional;
+extern jobject SF_mindustry_maps_filters_FilterOption_wallsOptional;
+extern jobject SF_mindustry_maps_filters_FilterOption_wallsOresOptional;
+extern jobject SF_mindustry_maps_filters_FilterOption_oresOnly;
+extern jobject SF_mindustry_maps_filters_FilterOption_oresFloorsOptional;
+extern jobject SF_mindustry_maps_filters_FilterOption_anyOptional;
+
+#define VTABLE_mindustry_maps_filters_FilterOption_hashCode_R_int 0
+typedef jint (*func_mindustry_maps_filters_FilterOption_hashCode_R_int)(jcontext ctx, jobject self);
+#define VTABLE_mindustry_maps_filters_FilterOption_equals_java_lang_Object_R_boolean 1
+typedef jbool (*func_mindustry_maps_filters_FilterOption_equals_java_lang_Object_R_boolean)(jcontext ctx, jobject self, jobject param0);
+#define VTABLE_mindustry_maps_filters_FilterOption_clone_R_java_lang_Object 2
+typedef jobject (*func_mindustry_maps_filters_FilterOption_clone_R_java_lang_Object)(jcontext ctx, jobject self);
+#define VTABLE_mindustry_maps_filters_FilterOption_getClass_R_java_lang_Class 3
+typedef jobject (*func_mindustry_maps_filters_FilterOption_getClass_R_java_lang_Class)(jcontext ctx, jobject self);
+#define VTABLE_mindustry_maps_filters_FilterOption_toString_R_java_lang_String 4
+typedef jobject (*func_mindustry_maps_filters_FilterOption_toString_R_java_lang_String)(jcontext ctx, jobject self);
+#define VTABLE_mindustry_maps_filters_FilterOption_finalize 5
+typedef void (*func_mindustry_maps_filters_FilterOption_finalize)(jcontext ctx, jobject self);
+#define VTABLE_mindustry_maps_filters_FilterOption_notify 6
+typedef void (*func_mindustry_maps_filters_FilterOption_notify)(jcontext ctx, jobject self);
+#define VTABLE_mindustry_maps_filters_FilterOption_notifyAll 7
+typedef void (*func_mindustry_maps_filters_FilterOption_notifyAll)(jcontext ctx, jobject self);
+#define VTABLE_mindustry_maps_filters_FilterOption_wait 8
+typedef void (*func_mindustry_maps_filters_FilterOption_wait)(jcontext ctx, jobject self);
+#define VTABLE_mindustry_maps_filters_FilterOption_wait_long 9
+typedef void (*func_mindustry_maps_filters_FilterOption_wait_long)(jcontext ctx, jobject self, jlong param0);
+#define VTABLE_mindustry_maps_filters_FilterOption_wait_long_int 10
+typedef void (*func_mindustry_maps_filters_FilterOption_wait_long_int)(jcontext ctx, jobject self, jlong param0, jint param1);
+#define VTABLE_mindustry_maps_filters_FilterOption_build_arc_scene_ui_layout_Table 11
+typedef void (*func_mindustry_maps_filters_FilterOption_build_arc_scene_ui_layout_Table)(jcontext ctx, jobject self, jobject param0);
+
+void mark_mindustry_maps_filters_FilterOption(jobject object, jint mark, jint depth);
+void clinit_mindustry_maps_filters_FilterOption(jcontext ctx);
+void init_mindustry_maps_filters_FilterOption(jcontext ctx, jobject self);
+void SM_mindustry_maps_filters_FilterOption_lambda$new$0(jcontext ctx);
+jbool SM_mindustry_maps_filters_FilterOption_lambda$static$7_mindustry_world_Block_R_boolean(jcontext ctx, jobject param0);
+jbool SM_mindustry_maps_filters_FilterOption_lambda$static$6_mindustry_world_Block_R_boolean(jcontext ctx, jobject param0);
+jbool SM_mindustry_maps_filters_FilterOption_lambda$static$5_mindustry_world_Block_R_boolean(jcontext ctx, jobject param0);
+jbool SM_mindustry_maps_filters_FilterOption_lambda$static$4_mindustry_world_Block_R_boolean(jcontext ctx, jobject param0);
+jbool SM_mindustry_maps_filters_FilterOption_lambda$static$3_mindustry_world_Block_R_boolean(jcontext ctx, jobject param0);
+jbool SM_mindustry_maps_filters_FilterOption_lambda$static$2_mindustry_world_Block_R_boolean(jcontext ctx, jobject param0);
+jbool SM_mindustry_maps_filters_FilterOption_lambda$static$1_mindustry_world_Block_R_boolean(jcontext ctx, jobject param0);
+jbool SM_mindustry_maps_filters_FilterOption_lambda$static$0_mindustry_world_Block_R_boolean(jcontext ctx, jobject param0);
+
+#ifdef __cplusplus
+}
+#endif
+
+#endif

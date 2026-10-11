@@ -1,0 +1,116 @@
+#ifndef HEADER_mindustry_world_modules_LiquidModule
+#define HEADER_mindustry_world_modules_LiquidModule
+
+#include "Clearwing.h"
+#include "mindustry/world/modules/BlockModule.h"
+
+#ifdef __cplusplus
+extern "C" {
+#endif
+
+typedef struct mindustry_world_modules_LiquidModule {
+	mindustry_world_modules_BlockModule parent;
+	jref F_liquids;
+	jref F_current;
+	jref F_flow;
+} mindustry_world_modules_LiquidModule;
+
+extern Class class_mindustry_world_modules_LiquidModule;
+
+extern jint SF_mindustry_world_modules_LiquidModule_flowWindowSize;
+extern jfloat SF_mindustry_world_modules_LiquidModule_flowPollInterval;
+extern jfloat SF_mindustry_world_modules_LiquidModule_flowVisualRefreshInterval;
+extern jobject SF_mindustry_world_modules_LiquidModule_flowTimer;
+extern jobject SF_mindustry_world_modules_LiquidModule_cacheFlow;
+extern jobject SF_mindustry_world_modules_LiquidModule_cacheSums;
+extern jobject SF_mindustry_world_modules_LiquidModule_displayFlow;
+extern jobject SF_mindustry_world_modules_LiquidModule_cacheBits;
+
+#define VTABLE_mindustry_world_modules_LiquidModule_hashCode_R_int 0
+typedef jint (*func_mindustry_world_modules_LiquidModule_hashCode_R_int)(jcontext ctx, jobject self);
+#define VTABLE_mindustry_world_modules_LiquidModule_equals_java_lang_Object_R_boolean 1
+typedef jbool (*func_mindustry_world_modules_LiquidModule_equals_java_lang_Object_R_boolean)(jcontext ctx, jobject self, jobject param0);
+#define VTABLE_mindustry_world_modules_LiquidModule_clone_R_java_lang_Object 2
+typedef jobject (*func_mindustry_world_modules_LiquidModule_clone_R_java_lang_Object)(jcontext ctx, jobject self);
+#define VTABLE_mindustry_world_modules_LiquidModule_getClass_R_java_lang_Class 3
+typedef jobject (*func_mindustry_world_modules_LiquidModule_getClass_R_java_lang_Class)(jcontext ctx, jobject self);
+#define VTABLE_mindustry_world_modules_LiquidModule_toString_R_java_lang_String 4
+typedef jobject (*func_mindustry_world_modules_LiquidModule_toString_R_java_lang_String)(jcontext ctx, jobject self);
+#define VTABLE_mindustry_world_modules_LiquidModule_finalize 5
+typedef void (*func_mindustry_world_modules_LiquidModule_finalize)(jcontext ctx, jobject self);
+#define VTABLE_mindustry_world_modules_LiquidModule_notify 6
+typedef void (*func_mindustry_world_modules_LiquidModule_notify)(jcontext ctx, jobject self);
+#define VTABLE_mindustry_world_modules_LiquidModule_notifyAll 7
+typedef void (*func_mindustry_world_modules_LiquidModule_notifyAll)(jcontext ctx, jobject self);
+#define VTABLE_mindustry_world_modules_LiquidModule_wait 8
+typedef void (*func_mindustry_world_modules_LiquidModule_wait)(jcontext ctx, jobject self);
+#define VTABLE_mindustry_world_modules_LiquidModule_wait_long 9
+typedef void (*func_mindustry_world_modules_LiquidModule_wait_long)(jcontext ctx, jobject self, jlong param0);
+#define VTABLE_mindustry_world_modules_LiquidModule_wait_long_int 10
+typedef void (*func_mindustry_world_modules_LiquidModule_wait_long_int)(jcontext ctx, jobject self, jlong param0, jint param1);
+#define VTABLE_mindustry_world_modules_LiquidModule_write_arc_util_io_Writes 11
+typedef void (*func_mindustry_world_modules_LiquidModule_write_arc_util_io_Writes)(jcontext ctx, jobject self, jobject param0);
+#define VTABLE_mindustry_world_modules_LiquidModule_read_arc_util_io_Reads_boolean 12
+typedef void (*func_mindustry_world_modules_LiquidModule_read_arc_util_io_Reads_boolean)(jcontext ctx, jobject self, jobject param0, jbool param1);
+#define VTABLE_mindustry_world_modules_LiquidModule_read_arc_util_io_Reads 13
+typedef void (*func_mindustry_world_modules_LiquidModule_read_arc_util_io_Reads)(jcontext ctx, jobject self, jobject param0);
+#define VTABLE_mindustry_world_modules_LiquidModule_updateFlow 14
+typedef void (*func_mindustry_world_modules_LiquidModule_updateFlow)(jcontext ctx, jobject self);
+#define VTABLE_mindustry_world_modules_LiquidModule_stopFlow 15
+typedef void (*func_mindustry_world_modules_LiquidModule_stopFlow)(jcontext ctx, jobject self);
+#define VTABLE_mindustry_world_modules_LiquidModule_getFlowRate_mindustry_type_Liquid_R_float 16
+typedef jfloat (*func_mindustry_world_modules_LiquidModule_getFlowRate_mindustry_type_Liquid_R_float)(jcontext ctx, jobject self, jobject param0);
+#define VTABLE_mindustry_world_modules_LiquidModule_hasFlowLiquid_mindustry_type_Liquid_R_boolean 17
+typedef jbool (*func_mindustry_world_modules_LiquidModule_hasFlowLiquid_mindustry_type_Liquid_R_boolean)(jcontext ctx, jobject self, jobject param0);
+#define VTABLE_mindustry_world_modules_LiquidModule_current_R_mindustry_type_Liquid 18
+typedef jobject (*func_mindustry_world_modules_LiquidModule_current_R_mindustry_type_Liquid)(jcontext ctx, jobject self);
+#define VTABLE_mindustry_world_modules_LiquidModule_reset_mindustry_type_Liquid_float 19
+typedef void (*func_mindustry_world_modules_LiquidModule_reset_mindustry_type_Liquid_float)(jcontext ctx, jobject self, jobject param0, jfloat param1);
+#define VTABLE_mindustry_world_modules_LiquidModule_set_mindustry_type_Liquid_float 20
+typedef void (*func_mindustry_world_modules_LiquidModule_set_mindustry_type_Liquid_float)(jcontext ctx, jobject self, jobject param0, jfloat param1);
+#define VTABLE_mindustry_world_modules_LiquidModule_currentAmount_R_float 21
+typedef jfloat (*func_mindustry_world_modules_LiquidModule_currentAmount_R_float)(jcontext ctx, jobject self);
+#define VTABLE_mindustry_world_modules_LiquidModule_get_mindustry_type_Liquid_R_float 22
+typedef jfloat (*func_mindustry_world_modules_LiquidModule_get_mindustry_type_Liquid_R_float)(jcontext ctx, jobject self, jobject param0);
+#define VTABLE_mindustry_world_modules_LiquidModule_clear 23
+typedef void (*func_mindustry_world_modules_LiquidModule_clear)(jcontext ctx, jobject self);
+#define VTABLE_mindustry_world_modules_LiquidModule_add_mindustry_type_Liquid_float 24
+typedef void (*func_mindustry_world_modules_LiquidModule_add_mindustry_type_Liquid_float)(jcontext ctx, jobject self, jobject param0, jfloat param1);
+#define VTABLE_mindustry_world_modules_LiquidModule_handleFlow_mindustry_type_Liquid_float 25
+typedef void (*func_mindustry_world_modules_LiquidModule_handleFlow_mindustry_type_Liquid_float)(jcontext ctx, jobject self, jobject param0, jfloat param1);
+#define VTABLE_mindustry_world_modules_LiquidModule_remove_mindustry_type_Liquid_float 26
+typedef void (*func_mindustry_world_modules_LiquidModule_remove_mindustry_type_Liquid_float)(jcontext ctx, jobject self, jobject param0, jfloat param1);
+#define VTABLE_mindustry_world_modules_LiquidModule_each_mindustry_world_modules_LiquidModule$LiquidConsumer 27
+typedef void (*func_mindustry_world_modules_LiquidModule_each_mindustry_world_modules_LiquidModule$LiquidConsumer)(jcontext ctx, jobject self, jobject param0);
+#define VTABLE_mindustry_world_modules_LiquidModule_sum_mindustry_world_modules_LiquidModule$LiquidCalculator_R_float 28
+typedef jfloat (*func_mindustry_world_modules_LiquidModule_sum_mindustry_world_modules_LiquidModule$LiquidCalculator_R_float)(jcontext ctx, jobject self, jobject param0);
+#define VTABLE_mindustry_world_modules_LiquidModule_checkArrayCapacity_int 29
+typedef void (*func_mindustry_world_modules_LiquidModule_checkArrayCapacity_int)(jcontext ctx, jobject self, jint param0);
+
+void mark_mindustry_world_modules_LiquidModule(jobject object, jint mark, jint depth);
+void clinit_mindustry_world_modules_LiquidModule(jcontext ctx);
+void init_mindustry_world_modules_LiquidModule(jcontext ctx, jobject self);
+void M_mindustry_world_modules_LiquidModule_updateFlow(jcontext ctx, jobject self);
+void M_mindustry_world_modules_LiquidModule_stopFlow(jcontext ctx, jobject self);
+jfloat M_mindustry_world_modules_LiquidModule_getFlowRate_mindustry_type_Liquid_R_float(jcontext ctx, jobject self, jobject param0);
+jbool M_mindustry_world_modules_LiquidModule_hasFlowLiquid_mindustry_type_Liquid_R_boolean(jcontext ctx, jobject self, jobject param0);
+jobject M_mindustry_world_modules_LiquidModule_current_R_mindustry_type_Liquid(jcontext ctx, jobject self);
+void M_mindustry_world_modules_LiquidModule_reset_mindustry_type_Liquid_float(jcontext ctx, jobject self, jobject param0, jfloat param1);
+void M_mindustry_world_modules_LiquidModule_set_mindustry_type_Liquid_float(jcontext ctx, jobject self, jobject param0, jfloat param1);
+jfloat M_mindustry_world_modules_LiquidModule_currentAmount_R_float(jcontext ctx, jobject self);
+jfloat M_mindustry_world_modules_LiquidModule_get_mindustry_type_Liquid_R_float(jcontext ctx, jobject self, jobject param0);
+void M_mindustry_world_modules_LiquidModule_clear(jcontext ctx, jobject self);
+void M_mindustry_world_modules_LiquidModule_add_mindustry_type_Liquid_float(jcontext ctx, jobject self, jobject param0, jfloat param1);
+void M_mindustry_world_modules_LiquidModule_handleFlow_mindustry_type_Liquid_float(jcontext ctx, jobject self, jobject param0, jfloat param1);
+void M_mindustry_world_modules_LiquidModule_remove_mindustry_type_Liquid_float(jcontext ctx, jobject self, jobject param0, jfloat param1);
+void M_mindustry_world_modules_LiquidModule_each_mindustry_world_modules_LiquidModule$LiquidConsumer(jcontext ctx, jobject self, jobject param0);
+jfloat M_mindustry_world_modules_LiquidModule_sum_mindustry_world_modules_LiquidModule$LiquidCalculator_R_float(jcontext ctx, jobject self, jobject param0);
+void M_mindustry_world_modules_LiquidModule_checkArrayCapacity_int(jcontext ctx, jobject self, jint param0);
+void M_mindustry_world_modules_LiquidModule_write_arc_util_io_Writes(jcontext ctx, jobject self, jobject param0);
+void M_mindustry_world_modules_LiquidModule_read_arc_util_io_Reads_boolean(jcontext ctx, jobject self, jobject param0, jbool param1);
+
+#ifdef __cplusplus
+}
+#endif
+
+#endif

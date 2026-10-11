@@ -1,0 +1,147 @@
+#ifndef HEADER_java_util_concurrent_ArrayBlockingQueue
+#define HEADER_java_util_concurrent_ArrayBlockingQueue
+
+#include "Clearwing.h"
+#include "java/util/AbstractQueue.h"
+#include "java/util/concurrent/BlockingQueue.h"
+#include "java/io/Serializable.h"
+
+#ifdef __cplusplus
+extern "C" {
+#endif
+
+typedef struct java_util_concurrent_ArrayBlockingQueue {
+	java_util_AbstractQueue parent;
+	jref F_items;
+	volatile jint F_takeIndex;
+	volatile jint F_putIndex;
+	volatile jint F_count;
+} java_util_concurrent_ArrayBlockingQueue;
+
+extern Class class_java_util_concurrent_ArrayBlockingQueue;
+
+extern jlong SF_java_util_concurrent_ArrayBlockingQueue_serialVersionUID;
+
+#define VTABLE_java_util_concurrent_ArrayBlockingQueue_hashCode_R_int 0
+typedef jint (*func_java_util_concurrent_ArrayBlockingQueue_hashCode_R_int)(jcontext ctx, jobject self);
+#define VTABLE_java_util_concurrent_ArrayBlockingQueue_equals_java_lang_Object_R_boolean 1
+typedef jbool (*func_java_util_concurrent_ArrayBlockingQueue_equals_java_lang_Object_R_boolean)(jcontext ctx, jobject self, jobject param0);
+#define VTABLE_java_util_concurrent_ArrayBlockingQueue_clone_R_java_lang_Object 2
+typedef jobject (*func_java_util_concurrent_ArrayBlockingQueue_clone_R_java_lang_Object)(jcontext ctx, jobject self);
+#define VTABLE_java_util_concurrent_ArrayBlockingQueue_getClass_R_java_lang_Class 3
+typedef jobject (*func_java_util_concurrent_ArrayBlockingQueue_getClass_R_java_lang_Class)(jcontext ctx, jobject self);
+#define VTABLE_java_util_concurrent_ArrayBlockingQueue_toString_R_java_lang_String 4
+typedef jobject (*func_java_util_concurrent_ArrayBlockingQueue_toString_R_java_lang_String)(jcontext ctx, jobject self);
+#define VTABLE_java_util_concurrent_ArrayBlockingQueue_finalize 5
+typedef void (*func_java_util_concurrent_ArrayBlockingQueue_finalize)(jcontext ctx, jobject self);
+#define VTABLE_java_util_concurrent_ArrayBlockingQueue_notify 6
+typedef void (*func_java_util_concurrent_ArrayBlockingQueue_notify)(jcontext ctx, jobject self);
+#define VTABLE_java_util_concurrent_ArrayBlockingQueue_notifyAll 7
+typedef void (*func_java_util_concurrent_ArrayBlockingQueue_notifyAll)(jcontext ctx, jobject self);
+#define VTABLE_java_util_concurrent_ArrayBlockingQueue_wait 8
+typedef void (*func_java_util_concurrent_ArrayBlockingQueue_wait)(jcontext ctx, jobject self);
+#define VTABLE_java_util_concurrent_ArrayBlockingQueue_wait_long 9
+typedef void (*func_java_util_concurrent_ArrayBlockingQueue_wait_long)(jcontext ctx, jobject self, jlong param0);
+#define VTABLE_java_util_concurrent_ArrayBlockingQueue_wait_long_int 10
+typedef void (*func_java_util_concurrent_ArrayBlockingQueue_wait_long_int)(jcontext ctx, jobject self, jlong param0, jint param1);
+#define VTABLE_java_util_concurrent_ArrayBlockingQueue_iterator_R_java_util_Iterator 11
+typedef jobject (*func_java_util_concurrent_ArrayBlockingQueue_iterator_R_java_util_Iterator)(jcontext ctx, jobject self);
+#define VTABLE_java_util_concurrent_ArrayBlockingQueue_forEach_java_util_function_Consumer 12
+typedef void (*func_java_util_concurrent_ArrayBlockingQueue_forEach_java_util_function_Consumer)(jcontext ctx, jobject self, jobject param0);
+#define VTABLE_java_util_concurrent_ArrayBlockingQueue_spliterator_R_java_util_Spliterator 13
+typedef jobject (*func_java_util_concurrent_ArrayBlockingQueue_spliterator_R_java_util_Spliterator)(jcontext ctx, jobject self);
+#define VTABLE_java_util_concurrent_ArrayBlockingQueue_add_java_lang_Object_R_boolean 14
+typedef jbool (*func_java_util_concurrent_ArrayBlockingQueue_add_java_lang_Object_R_boolean)(jcontext ctx, jobject self, jobject param0);
+#define VTABLE_java_util_concurrent_ArrayBlockingQueue_addAll_java_util_Collection_R_boolean 15
+typedef jbool (*func_java_util_concurrent_ArrayBlockingQueue_addAll_java_util_Collection_R_boolean)(jcontext ctx, jobject self, jobject param0);
+#define VTABLE_java_util_concurrent_ArrayBlockingQueue_clear 16
+typedef void (*func_java_util_concurrent_ArrayBlockingQueue_clear)(jcontext ctx, jobject self);
+#define VTABLE_java_util_concurrent_ArrayBlockingQueue_contains_java_lang_Object_R_boolean 17
+typedef jbool (*func_java_util_concurrent_ArrayBlockingQueue_contains_java_lang_Object_R_boolean)(jcontext ctx, jobject self, jobject param0);
+#define VTABLE_java_util_concurrent_ArrayBlockingQueue_containsAll_java_util_Collection_R_boolean 18
+typedef jbool (*func_java_util_concurrent_ArrayBlockingQueue_containsAll_java_util_Collection_R_boolean)(jcontext ctx, jobject self, jobject param0);
+#define VTABLE_java_util_concurrent_ArrayBlockingQueue_isEmpty_R_boolean 19
+typedef jbool (*func_java_util_concurrent_ArrayBlockingQueue_isEmpty_R_boolean)(jcontext ctx, jobject self);
+#define VTABLE_java_util_concurrent_ArrayBlockingQueue_remove_java_lang_Object_R_boolean 20
+typedef jbool (*func_java_util_concurrent_ArrayBlockingQueue_remove_java_lang_Object_R_boolean)(jcontext ctx, jobject self, jobject param0);
+#define VTABLE_java_util_concurrent_ArrayBlockingQueue_removeAll_java_util_Collection_R_boolean 21
+typedef jbool (*func_java_util_concurrent_ArrayBlockingQueue_removeAll_java_util_Collection_R_boolean)(jcontext ctx, jobject self, jobject param0);
+#define VTABLE_java_util_concurrent_ArrayBlockingQueue_retainAll_java_util_Collection_R_boolean 22
+typedef jbool (*func_java_util_concurrent_ArrayBlockingQueue_retainAll_java_util_Collection_R_boolean)(jcontext ctx, jobject self, jobject param0);
+#define VTABLE_java_util_concurrent_ArrayBlockingQueue_size_R_int 23
+typedef jint (*func_java_util_concurrent_ArrayBlockingQueue_size_R_int)(jcontext ctx, jobject self);
+#define VTABLE_java_util_concurrent_ArrayBlockingQueue_toArray_R_Array1_java_lang_Object 24
+typedef jobject (*func_java_util_concurrent_ArrayBlockingQueue_toArray_R_Array1_java_lang_Object)(jcontext ctx, jobject self);
+#define VTABLE_java_util_concurrent_ArrayBlockingQueue_toArray_Array1_java_lang_Object_R_Array1_java_lang_Object 25
+typedef jobject (*func_java_util_concurrent_ArrayBlockingQueue_toArray_Array1_java_lang_Object_R_Array1_java_lang_Object)(jcontext ctx, jobject self, jobject param0);
+#define VTABLE_java_util_concurrent_ArrayBlockingQueue_offer_java_lang_Object_R_boolean 26
+typedef jbool (*func_java_util_concurrent_ArrayBlockingQueue_offer_java_lang_Object_R_boolean)(jcontext ctx, jobject self, jobject param0);
+#define VTABLE_java_util_concurrent_ArrayBlockingQueue_poll_R_java_lang_Object 27
+typedef jobject (*func_java_util_concurrent_ArrayBlockingQueue_poll_R_java_lang_Object)(jcontext ctx, jobject self);
+#define VTABLE_java_util_concurrent_ArrayBlockingQueue_remove_R_java_lang_Object 28
+typedef jobject (*func_java_util_concurrent_ArrayBlockingQueue_remove_R_java_lang_Object)(jcontext ctx, jobject self);
+#define VTABLE_java_util_concurrent_ArrayBlockingQueue_peek_R_java_lang_Object 29
+typedef jobject (*func_java_util_concurrent_ArrayBlockingQueue_peek_R_java_lang_Object)(jcontext ctx, jobject self);
+#define VTABLE_java_util_concurrent_ArrayBlockingQueue_element_R_java_lang_Object 30
+typedef jobject (*func_java_util_concurrent_ArrayBlockingQueue_element_R_java_lang_Object)(jcontext ctx, jobject self);
+#define VTABLE_java_util_concurrent_ArrayBlockingQueue_put_java_lang_Object 31
+typedef void (*func_java_util_concurrent_ArrayBlockingQueue_put_java_lang_Object)(jcontext ctx, jobject self, jobject param0);
+#define VTABLE_java_util_concurrent_ArrayBlockingQueue_offer_java_lang_Object_long_java_util_concurrent_TimeUnit_R_boolean 32
+typedef jbool (*func_java_util_concurrent_ArrayBlockingQueue_offer_java_lang_Object_long_java_util_concurrent_TimeUnit_R_boolean)(jcontext ctx, jobject self, jobject param0, jlong param1, jobject param2);
+#define VTABLE_java_util_concurrent_ArrayBlockingQueue_take_R_java_lang_Object 33
+typedef jobject (*func_java_util_concurrent_ArrayBlockingQueue_take_R_java_lang_Object)(jcontext ctx, jobject self);
+#define VTABLE_java_util_concurrent_ArrayBlockingQueue_poll_long_java_util_concurrent_TimeUnit_R_java_lang_Object 34
+typedef jobject (*func_java_util_concurrent_ArrayBlockingQueue_poll_long_java_util_concurrent_TimeUnit_R_java_lang_Object)(jcontext ctx, jobject self, jlong param0, jobject param1);
+#define VTABLE_java_util_concurrent_ArrayBlockingQueue_remainingCapacity_R_int 35
+typedef jint (*func_java_util_concurrent_ArrayBlockingQueue_remainingCapacity_R_int)(jcontext ctx, jobject self);
+#define VTABLE_java_util_concurrent_ArrayBlockingQueue_drainTo_java_util_Collection_R_int 36
+typedef jint (*func_java_util_concurrent_ArrayBlockingQueue_drainTo_java_util_Collection_R_int)(jcontext ctx, jobject self, jobject param0);
+#define VTABLE_java_util_concurrent_ArrayBlockingQueue_drainTo_java_util_Collection_int_R_int 37
+typedef jint (*func_java_util_concurrent_ArrayBlockingQueue_drainTo_java_util_Collection_int_R_int)(jcontext ctx, jobject self, jobject param0, jint param1);
+#define VTABLE_java_util_concurrent_ArrayBlockingQueue_dec_int_R_int 38
+typedef jint (*func_java_util_concurrent_ArrayBlockingQueue_dec_int_R_int)(jcontext ctx, jobject self, jint param0);
+#define VTABLE_java_util_concurrent_ArrayBlockingQueue_itemAt_int_R_java_lang_Object 39
+typedef jobject (*func_java_util_concurrent_ArrayBlockingQueue_itemAt_int_R_java_lang_Object)(jcontext ctx, jobject self, jint param0);
+#define VTABLE_java_util_concurrent_ArrayBlockingQueue_enqueue_java_lang_Object 40
+typedef void (*func_java_util_concurrent_ArrayBlockingQueue_enqueue_java_lang_Object)(jcontext ctx, jobject self, jobject param0);
+#define VTABLE_java_util_concurrent_ArrayBlockingQueue_dequeue_R_java_lang_Object 41
+typedef jobject (*func_java_util_concurrent_ArrayBlockingQueue_dequeue_R_java_lang_Object)(jcontext ctx, jobject self);
+#define VTABLE_java_util_concurrent_ArrayBlockingQueue_removeAt_int 42
+typedef void (*func_java_util_concurrent_ArrayBlockingQueue_removeAt_int)(jcontext ctx, jobject self, jint param0);
+
+void mark_java_util_concurrent_ArrayBlockingQueue(jobject object, jint mark, jint depth);
+void clinit_java_util_concurrent_ArrayBlockingQueue(jcontext ctx);
+jint M_java_util_concurrent_ArrayBlockingQueue_dec_int_R_int(jcontext ctx, jobject self, jint param0);
+jobject M_java_util_concurrent_ArrayBlockingQueue_itemAt_int_R_java_lang_Object(jcontext ctx, jobject self, jint param0);
+void SM_java_util_concurrent_ArrayBlockingQueue_checkNotNull_java_lang_Object(jcontext ctx, jobject param0);
+void M_java_util_concurrent_ArrayBlockingQueue_enqueue_java_lang_Object(jcontext ctx, jobject self, jobject param0);
+jobject M_java_util_concurrent_ArrayBlockingQueue_dequeue_R_java_lang_Object(jcontext ctx, jobject self);
+void M_java_util_concurrent_ArrayBlockingQueue_removeAt_int(jcontext ctx, jobject self, jint param0);
+void init_java_util_concurrent_ArrayBlockingQueue_int(jcontext ctx, jobject self, jint param0);
+void init_java_util_concurrent_ArrayBlockingQueue_int_boolean(jcontext ctx, jobject self, jint param0, jbool param1);
+void init_java_util_concurrent_ArrayBlockingQueue_int_boolean_java_util_Collection(jcontext ctx, jobject self, jint param0, jbool param1, jobject param2);
+jbool M_java_util_concurrent_ArrayBlockingQueue_add_java_lang_Object_R_boolean(jcontext ctx, jobject self, jobject param0);
+jbool M_java_util_concurrent_ArrayBlockingQueue_offer_java_lang_Object_R_boolean(jcontext ctx, jobject self, jobject param0);
+void M_java_util_concurrent_ArrayBlockingQueue_put_java_lang_Object(jcontext ctx, jobject self, jobject param0);
+jbool M_java_util_concurrent_ArrayBlockingQueue_offer_java_lang_Object_long_java_util_concurrent_TimeUnit_R_boolean(jcontext ctx, jobject self, jobject param0, jlong param1, jobject param2);
+jobject M_java_util_concurrent_ArrayBlockingQueue_poll_R_java_lang_Object(jcontext ctx, jobject self);
+jobject M_java_util_concurrent_ArrayBlockingQueue_take_R_java_lang_Object(jcontext ctx, jobject self);
+jobject M_java_util_concurrent_ArrayBlockingQueue_poll_long_java_util_concurrent_TimeUnit_R_java_lang_Object(jcontext ctx, jobject self, jlong param0, jobject param1);
+jobject M_java_util_concurrent_ArrayBlockingQueue_peek_R_java_lang_Object(jcontext ctx, jobject self);
+jint M_java_util_concurrent_ArrayBlockingQueue_size_R_int(jcontext ctx, jobject self);
+jint M_java_util_concurrent_ArrayBlockingQueue_remainingCapacity_R_int(jcontext ctx, jobject self);
+jbool M_java_util_concurrent_ArrayBlockingQueue_remove_java_lang_Object_R_boolean(jcontext ctx, jobject self, jobject param0);
+jbool M_java_util_concurrent_ArrayBlockingQueue_contains_java_lang_Object_R_boolean(jcontext ctx, jobject self, jobject param0);
+jobject M_java_util_concurrent_ArrayBlockingQueue_toArray_R_Array1_java_lang_Object(jcontext ctx, jobject self);
+jobject M_java_util_concurrent_ArrayBlockingQueue_toArray_Array1_java_lang_Object_R_Array1_java_lang_Object(jcontext ctx, jobject self, jobject param0);
+jobject M_java_util_concurrent_ArrayBlockingQueue_toString_R_java_lang_String(jcontext ctx, jobject self);
+void M_java_util_concurrent_ArrayBlockingQueue_clear(jcontext ctx, jobject self);
+jint M_java_util_concurrent_ArrayBlockingQueue_drainTo_java_util_Collection_R_int(jcontext ctx, jobject self, jobject param0);
+jint M_java_util_concurrent_ArrayBlockingQueue_drainTo_java_util_Collection_int_R_int(jcontext ctx, jobject self, jobject param0, jint param1);
+jobject M_java_util_concurrent_ArrayBlockingQueue_iterator_R_java_util_Iterator(jcontext ctx, jobject self);
+
+#ifdef __cplusplus
+}
+#endif
+
+#endif

@@ -1,0 +1,184 @@
+#ifndef HEADER_java_util_concurrent_CountedCompleter
+#define HEADER_java_util_concurrent_CountedCompleter
+
+#include "Clearwing.h"
+#include "java/util/concurrent/ForkJoinTask.h"
+
+#ifdef __cplusplus
+extern "C" {
+#endif
+
+typedef struct java_util_concurrent_CountedCompleter {
+	java_util_concurrent_ForkJoinTask parent;
+	jref F_completer;
+	volatile jint F_pending;
+} java_util_concurrent_CountedCompleter;
+
+extern Class class_java_util_concurrent_CountedCompleter;
+
+extern jlong SF_java_util_concurrent_CountedCompleter_serialVersionUID;
+
+#define VTABLE_java_util_concurrent_CountedCompleter_hashCode_R_int 0
+typedef jint (*func_java_util_concurrent_CountedCompleter_hashCode_R_int)(jcontext ctx, jobject self);
+#define VTABLE_java_util_concurrent_CountedCompleter_equals_java_lang_Object_R_boolean 1
+typedef jbool (*func_java_util_concurrent_CountedCompleter_equals_java_lang_Object_R_boolean)(jcontext ctx, jobject self, jobject param0);
+#define VTABLE_java_util_concurrent_CountedCompleter_clone_R_java_lang_Object 2
+typedef jobject (*func_java_util_concurrent_CountedCompleter_clone_R_java_lang_Object)(jcontext ctx, jobject self);
+#define VTABLE_java_util_concurrent_CountedCompleter_getClass_R_java_lang_Class 3
+typedef jobject (*func_java_util_concurrent_CountedCompleter_getClass_R_java_lang_Class)(jcontext ctx, jobject self);
+#define VTABLE_java_util_concurrent_CountedCompleter_toString_R_java_lang_String 4
+typedef jobject (*func_java_util_concurrent_CountedCompleter_toString_R_java_lang_String)(jcontext ctx, jobject self);
+#define VTABLE_java_util_concurrent_CountedCompleter_finalize 5
+typedef void (*func_java_util_concurrent_CountedCompleter_finalize)(jcontext ctx, jobject self);
+#define VTABLE_java_util_concurrent_CountedCompleter_notify 6
+typedef void (*func_java_util_concurrent_CountedCompleter_notify)(jcontext ctx, jobject self);
+#define VTABLE_java_util_concurrent_CountedCompleter_notifyAll 7
+typedef void (*func_java_util_concurrent_CountedCompleter_notifyAll)(jcontext ctx, jobject self);
+#define VTABLE_java_util_concurrent_CountedCompleter_wait 8
+typedef void (*func_java_util_concurrent_CountedCompleter_wait)(jcontext ctx, jobject self);
+#define VTABLE_java_util_concurrent_CountedCompleter_wait_long 9
+typedef void (*func_java_util_concurrent_CountedCompleter_wait_long)(jcontext ctx, jobject self, jlong param0);
+#define VTABLE_java_util_concurrent_CountedCompleter_wait_long_int 10
+typedef void (*func_java_util_concurrent_CountedCompleter_wait_long_int)(jcontext ctx, jobject self, jlong param0, jint param1);
+#define VTABLE_java_util_concurrent_CountedCompleter_cancel_boolean_R_boolean 11
+typedef jbool (*func_java_util_concurrent_CountedCompleter_cancel_boolean_R_boolean)(jcontext ctx, jobject self, jbool param0);
+#define VTABLE_java_util_concurrent_CountedCompleter_isCancelled_R_boolean 12
+typedef jbool (*func_java_util_concurrent_CountedCompleter_isCancelled_R_boolean)(jcontext ctx, jobject self);
+#define VTABLE_java_util_concurrent_CountedCompleter_isDone_R_boolean 13
+typedef jbool (*func_java_util_concurrent_CountedCompleter_isDone_R_boolean)(jcontext ctx, jobject self);
+#define VTABLE_java_util_concurrent_CountedCompleter_get_R_java_lang_Object 14
+typedef jobject (*func_java_util_concurrent_CountedCompleter_get_R_java_lang_Object)(jcontext ctx, jobject self);
+#define VTABLE_java_util_concurrent_CountedCompleter_get_long_java_util_concurrent_TimeUnit_R_java_lang_Object 15
+typedef jobject (*func_java_util_concurrent_CountedCompleter_get_long_java_util_concurrent_TimeUnit_R_java_lang_Object)(jcontext ctx, jobject self, jlong param0, jobject param1);
+#define VTABLE_java_util_concurrent_CountedCompleter_setCompletion_int_R_int 16
+typedef jint (*func_java_util_concurrent_CountedCompleter_setCompletion_int_R_int)(jcontext ctx, jobject self, jint param0);
+#define VTABLE_java_util_concurrent_CountedCompleter_doExec_R_int 17
+typedef jint (*func_java_util_concurrent_CountedCompleter_doExec_R_int)(jcontext ctx, jobject self);
+#define VTABLE_java_util_concurrent_CountedCompleter_internalWait_long 18
+typedef void (*func_java_util_concurrent_CountedCompleter_internalWait_long)(jcontext ctx, jobject self, jlong param0);
+#define VTABLE_java_util_concurrent_CountedCompleter_externalAwaitDone_R_int 19
+typedef jint (*func_java_util_concurrent_CountedCompleter_externalAwaitDone_R_int)(jcontext ctx, jobject self);
+#define VTABLE_java_util_concurrent_CountedCompleter_externalInterruptibleAwaitDone_R_int 20
+typedef jint (*func_java_util_concurrent_CountedCompleter_externalInterruptibleAwaitDone_R_int)(jcontext ctx, jobject self);
+#define VTABLE_java_util_concurrent_CountedCompleter_doJoin_R_int 21
+typedef jint (*func_java_util_concurrent_CountedCompleter_doJoin_R_int)(jcontext ctx, jobject self);
+#define VTABLE_java_util_concurrent_CountedCompleter_doInvoke_R_int 22
+typedef jint (*func_java_util_concurrent_CountedCompleter_doInvoke_R_int)(jcontext ctx, jobject self);
+#define VTABLE_java_util_concurrent_CountedCompleter_recordExceptionalCompletion_java_lang_Throwable_R_int 23
+typedef jint (*func_java_util_concurrent_CountedCompleter_recordExceptionalCompletion_java_lang_Throwable_R_int)(jcontext ctx, jobject self, jobject param0);
+#define VTABLE_java_util_concurrent_CountedCompleter_setExceptionalCompletion_java_lang_Throwable_R_int 24
+typedef jint (*func_java_util_concurrent_CountedCompleter_setExceptionalCompletion_java_lang_Throwable_R_int)(jcontext ctx, jobject self, jobject param0);
+#define VTABLE_java_util_concurrent_CountedCompleter_internalPropagateException_java_lang_Throwable 25
+typedef void (*func_java_util_concurrent_CountedCompleter_internalPropagateException_java_lang_Throwable)(jcontext ctx, jobject self, jobject param0);
+#define VTABLE_java_util_concurrent_CountedCompleter_clearExceptionalCompletion 26
+typedef void (*func_java_util_concurrent_CountedCompleter_clearExceptionalCompletion)(jcontext ctx, jobject self);
+#define VTABLE_java_util_concurrent_CountedCompleter_getThrowableException_R_java_lang_Throwable 27
+typedef jobject (*func_java_util_concurrent_CountedCompleter_getThrowableException_R_java_lang_Throwable)(jcontext ctx, jobject self);
+#define VTABLE_java_util_concurrent_CountedCompleter_reportException_int 28
+typedef void (*func_java_util_concurrent_CountedCompleter_reportException_int)(jcontext ctx, jobject self, jint param0);
+#define VTABLE_java_util_concurrent_CountedCompleter_fork_R_java_util_concurrent_ForkJoinTask 29
+typedef jobject (*func_java_util_concurrent_CountedCompleter_fork_R_java_util_concurrent_ForkJoinTask)(jcontext ctx, jobject self);
+#define VTABLE_java_util_concurrent_CountedCompleter_join_R_java_lang_Object 30
+typedef jobject (*func_java_util_concurrent_CountedCompleter_join_R_java_lang_Object)(jcontext ctx, jobject self);
+#define VTABLE_java_util_concurrent_CountedCompleter_invoke_R_java_lang_Object 31
+typedef jobject (*func_java_util_concurrent_CountedCompleter_invoke_R_java_lang_Object)(jcontext ctx, jobject self);
+#define VTABLE_java_util_concurrent_CountedCompleter_isCompletedAbnormally_R_boolean 32
+typedef jbool (*func_java_util_concurrent_CountedCompleter_isCompletedAbnormally_R_boolean)(jcontext ctx, jobject self);
+#define VTABLE_java_util_concurrent_CountedCompleter_isCompletedNormally_R_boolean 33
+typedef jbool (*func_java_util_concurrent_CountedCompleter_isCompletedNormally_R_boolean)(jcontext ctx, jobject self);
+#define VTABLE_java_util_concurrent_CountedCompleter_getException_R_java_lang_Throwable 34
+typedef jobject (*func_java_util_concurrent_CountedCompleter_getException_R_java_lang_Throwable)(jcontext ctx, jobject self);
+#define VTABLE_java_util_concurrent_CountedCompleter_completeExceptionally_java_lang_Throwable 35
+typedef void (*func_java_util_concurrent_CountedCompleter_completeExceptionally_java_lang_Throwable)(jcontext ctx, jobject self, jobject param0);
+#define VTABLE_java_util_concurrent_CountedCompleter_complete_java_lang_Object 36
+typedef void (*func_java_util_concurrent_CountedCompleter_complete_java_lang_Object)(jcontext ctx, jobject self, jobject param0);
+#define VTABLE_java_util_concurrent_CountedCompleter_quietlyComplete 37
+typedef void (*func_java_util_concurrent_CountedCompleter_quietlyComplete)(jcontext ctx, jobject self);
+#define VTABLE_java_util_concurrent_CountedCompleter_quietlyJoin 38
+typedef void (*func_java_util_concurrent_CountedCompleter_quietlyJoin)(jcontext ctx, jobject self);
+#define VTABLE_java_util_concurrent_CountedCompleter_quietlyInvoke 39
+typedef void (*func_java_util_concurrent_CountedCompleter_quietlyInvoke)(jcontext ctx, jobject self);
+#define VTABLE_java_util_concurrent_CountedCompleter_reinitialize 40
+typedef void (*func_java_util_concurrent_CountedCompleter_reinitialize)(jcontext ctx, jobject self);
+#define VTABLE_java_util_concurrent_CountedCompleter_tryUnfork_R_boolean 41
+typedef jbool (*func_java_util_concurrent_CountedCompleter_tryUnfork_R_boolean)(jcontext ctx, jobject self);
+#define VTABLE_java_util_concurrent_CountedCompleter_getRawResult_R_java_lang_Object 42
+typedef jobject (*func_java_util_concurrent_CountedCompleter_getRawResult_R_java_lang_Object)(jcontext ctx, jobject self);
+#define VTABLE_java_util_concurrent_CountedCompleter_setRawResult_java_lang_Object 43
+typedef void (*func_java_util_concurrent_CountedCompleter_setRawResult_java_lang_Object)(jcontext ctx, jobject self, jobject param0);
+#define VTABLE_java_util_concurrent_CountedCompleter_exec_R_boolean 44
+typedef jbool (*func_java_util_concurrent_CountedCompleter_exec_R_boolean)(jcontext ctx, jobject self);
+#define VTABLE_java_util_concurrent_CountedCompleter_getForkJoinTaskTag_R_short 45
+typedef jshort (*func_java_util_concurrent_CountedCompleter_getForkJoinTaskTag_R_short)(jcontext ctx, jobject self);
+#define VTABLE_java_util_concurrent_CountedCompleter_setForkJoinTaskTag_short_R_short 46
+typedef jshort (*func_java_util_concurrent_CountedCompleter_setForkJoinTaskTag_short_R_short)(jcontext ctx, jobject self, jshort param0);
+#define VTABLE_java_util_concurrent_CountedCompleter_compareAndSetForkJoinTaskTag_short_short_R_boolean 47
+typedef jbool (*func_java_util_concurrent_CountedCompleter_compareAndSetForkJoinTaskTag_short_short_R_boolean)(jcontext ctx, jobject self, jshort param0, jshort param1);
+#define VTABLE_java_util_concurrent_CountedCompleter_writeObject_java_io_ObjectOutputStream 48
+typedef void (*func_java_util_concurrent_CountedCompleter_writeObject_java_io_ObjectOutputStream)(jcontext ctx, jobject self, jobject param0);
+#define VTABLE_java_util_concurrent_CountedCompleter_readObject_java_io_ObjectInputStream 49
+typedef void (*func_java_util_concurrent_CountedCompleter_readObject_java_io_ObjectInputStream)(jcontext ctx, jobject self, jobject param0);
+#define VTABLE_java_util_concurrent_CountedCompleter_compute 50
+typedef void (*func_java_util_concurrent_CountedCompleter_compute)(jcontext ctx, jobject self);
+#define VTABLE_java_util_concurrent_CountedCompleter_onCompletion_java_util_concurrent_CountedCompleter 51
+typedef void (*func_java_util_concurrent_CountedCompleter_onCompletion_java_util_concurrent_CountedCompleter)(jcontext ctx, jobject self, jobject param0);
+#define VTABLE_java_util_concurrent_CountedCompleter_onExceptionalCompletion_java_lang_Throwable_java_util_concurrent_CountedCompleter_R_boolean 52
+typedef jbool (*func_java_util_concurrent_CountedCompleter_onExceptionalCompletion_java_lang_Throwable_java_util_concurrent_CountedCompleter_R_boolean)(jcontext ctx, jobject self, jobject param0, jobject param1);
+#define VTABLE_java_util_concurrent_CountedCompleter_getCompleter_R_java_util_concurrent_CountedCompleter 53
+typedef jobject (*func_java_util_concurrent_CountedCompleter_getCompleter_R_java_util_concurrent_CountedCompleter)(jcontext ctx, jobject self);
+#define VTABLE_java_util_concurrent_CountedCompleter_getPendingCount_R_int 54
+typedef jint (*func_java_util_concurrent_CountedCompleter_getPendingCount_R_int)(jcontext ctx, jobject self);
+#define VTABLE_java_util_concurrent_CountedCompleter_setPendingCount_int 55
+typedef void (*func_java_util_concurrent_CountedCompleter_setPendingCount_int)(jcontext ctx, jobject self, jint param0);
+#define VTABLE_java_util_concurrent_CountedCompleter_addToPendingCount_int 56
+typedef void (*func_java_util_concurrent_CountedCompleter_addToPendingCount_int)(jcontext ctx, jobject self, jint param0);
+#define VTABLE_java_util_concurrent_CountedCompleter_compareAndSetPendingCount_int_int_R_boolean 57
+typedef jbool (*func_java_util_concurrent_CountedCompleter_compareAndSetPendingCount_int_int_R_boolean)(jcontext ctx, jobject self, jint param0, jint param1);
+#define VTABLE_java_util_concurrent_CountedCompleter_decrementPendingCountUnlessZero_R_int 58
+typedef jint (*func_java_util_concurrent_CountedCompleter_decrementPendingCountUnlessZero_R_int)(jcontext ctx, jobject self);
+#define VTABLE_java_util_concurrent_CountedCompleter_getRoot_R_java_util_concurrent_CountedCompleter 59
+typedef jobject (*func_java_util_concurrent_CountedCompleter_getRoot_R_java_util_concurrent_CountedCompleter)(jcontext ctx, jobject self);
+#define VTABLE_java_util_concurrent_CountedCompleter_tryComplete 60
+typedef void (*func_java_util_concurrent_CountedCompleter_tryComplete)(jcontext ctx, jobject self);
+#define VTABLE_java_util_concurrent_CountedCompleter_propagateCompletion 61
+typedef void (*func_java_util_concurrent_CountedCompleter_propagateCompletion)(jcontext ctx, jobject self);
+#define VTABLE_java_util_concurrent_CountedCompleter_firstComplete_R_java_util_concurrent_CountedCompleter 62
+typedef jobject (*func_java_util_concurrent_CountedCompleter_firstComplete_R_java_util_concurrent_CountedCompleter)(jcontext ctx, jobject self);
+#define VTABLE_java_util_concurrent_CountedCompleter_nextComplete_R_java_util_concurrent_CountedCompleter 63
+typedef jobject (*func_java_util_concurrent_CountedCompleter_nextComplete_R_java_util_concurrent_CountedCompleter)(jcontext ctx, jobject self);
+#define VTABLE_java_util_concurrent_CountedCompleter_quietlyCompleteRoot 64
+typedef void (*func_java_util_concurrent_CountedCompleter_quietlyCompleteRoot)(jcontext ctx, jobject self);
+#define VTABLE_java_util_concurrent_CountedCompleter_helpComplete_int 65
+typedef void (*func_java_util_concurrent_CountedCompleter_helpComplete_int)(jcontext ctx, jobject self, jint param0);
+
+void mark_java_util_concurrent_CountedCompleter(jobject object, jint mark, jint depth);
+void clinit_java_util_concurrent_CountedCompleter(jcontext ctx);
+void init_java_util_concurrent_CountedCompleter_java_util_concurrent_CountedCompleter_int(jcontext ctx, jobject self, jobject param0, jint param1);
+void init_java_util_concurrent_CountedCompleter_java_util_concurrent_CountedCompleter(jcontext ctx, jobject self, jobject param0);
+void init_java_util_concurrent_CountedCompleter(jcontext ctx, jobject self);
+void M_java_util_concurrent_CountedCompleter_onCompletion_java_util_concurrent_CountedCompleter(jcontext ctx, jobject self, jobject param0);
+jbool M_java_util_concurrent_CountedCompleter_onExceptionalCompletion_java_lang_Throwable_java_util_concurrent_CountedCompleter_R_boolean(jcontext ctx, jobject self, jobject param0, jobject param1);
+jobject M_java_util_concurrent_CountedCompleter_getCompleter_R_java_util_concurrent_CountedCompleter(jcontext ctx, jobject self);
+jint M_java_util_concurrent_CountedCompleter_getPendingCount_R_int(jcontext ctx, jobject self);
+void M_java_util_concurrent_CountedCompleter_setPendingCount_int(jcontext ctx, jobject self, jint param0);
+void M_java_util_concurrent_CountedCompleter_addToPendingCount_int(jcontext ctx, jobject self, jint param0);
+jbool M_java_util_concurrent_CountedCompleter_compareAndSetPendingCount_int_int_R_boolean(jcontext ctx, jobject self, jint param0, jint param1);
+jint M_java_util_concurrent_CountedCompleter_decrementPendingCountUnlessZero_R_int(jcontext ctx, jobject self);
+jobject M_java_util_concurrent_CountedCompleter_getRoot_R_java_util_concurrent_CountedCompleter(jcontext ctx, jobject self);
+void M_java_util_concurrent_CountedCompleter_tryComplete(jcontext ctx, jobject self);
+void M_java_util_concurrent_CountedCompleter_propagateCompletion(jcontext ctx, jobject self);
+void M_java_util_concurrent_CountedCompleter_complete_java_lang_Object(jcontext ctx, jobject self, jobject param0);
+jobject M_java_util_concurrent_CountedCompleter_firstComplete_R_java_util_concurrent_CountedCompleter(jcontext ctx, jobject self);
+jobject M_java_util_concurrent_CountedCompleter_nextComplete_R_java_util_concurrent_CountedCompleter(jcontext ctx, jobject self);
+void M_java_util_concurrent_CountedCompleter_quietlyCompleteRoot(jcontext ctx, jobject self);
+void M_java_util_concurrent_CountedCompleter_helpComplete_int(jcontext ctx, jobject self, jint param0);
+void M_java_util_concurrent_CountedCompleter_internalPropagateException_java_lang_Throwable(jcontext ctx, jobject self, jobject param0);
+jbool M_java_util_concurrent_CountedCompleter_exec_R_boolean(jcontext ctx, jobject self);
+jobject M_java_util_concurrent_CountedCompleter_getRawResult_R_java_lang_Object(jcontext ctx, jobject self);
+void M_java_util_concurrent_CountedCompleter_setRawResult_java_lang_Object(jcontext ctx, jobject self, jobject param0);
+
+#ifdef __cplusplus
+}
+#endif
+
+#endif

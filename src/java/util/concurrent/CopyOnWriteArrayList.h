@@ -1,0 +1,203 @@
+#ifndef HEADER_java_util_concurrent_CopyOnWriteArrayList
+#define HEADER_java_util_concurrent_CopyOnWriteArrayList
+
+#include "Clearwing.h"
+#include "java/lang/Object.h"
+#include "java/util/List.h"
+#include "java/util/RandomAccess.h"
+#include "java/lang/Cloneable.h"
+#include "java/io/Serializable.h"
+
+#ifdef __cplusplus
+extern "C" {
+#endif
+
+typedef struct java_util_concurrent_CopyOnWriteArrayList {
+	java_lang_Object parent;
+	jref F_lock;
+	volatile jref F_array;
+} java_util_concurrent_CopyOnWriteArrayList;
+
+extern Class class_java_util_concurrent_CopyOnWriteArrayList;
+
+extern jlong SF_java_util_concurrent_CopyOnWriteArrayList_serialVersionUID;
+
+#define VTABLE_java_util_concurrent_CopyOnWriteArrayList_hashCode_R_int 0
+typedef jint (*func_java_util_concurrent_CopyOnWriteArrayList_hashCode_R_int)(jcontext ctx, jobject self);
+#define VTABLE_java_util_concurrent_CopyOnWriteArrayList_equals_java_lang_Object_R_boolean 1
+typedef jbool (*func_java_util_concurrent_CopyOnWriteArrayList_equals_java_lang_Object_R_boolean)(jcontext ctx, jobject self, jobject param0);
+#define VTABLE_java_util_concurrent_CopyOnWriteArrayList_clone_R_java_lang_Object 2
+typedef jobject (*func_java_util_concurrent_CopyOnWriteArrayList_clone_R_java_lang_Object)(jcontext ctx, jobject self);
+#define VTABLE_java_util_concurrent_CopyOnWriteArrayList_getClass_R_java_lang_Class 3
+typedef jobject (*func_java_util_concurrent_CopyOnWriteArrayList_getClass_R_java_lang_Class)(jcontext ctx, jobject self);
+#define VTABLE_java_util_concurrent_CopyOnWriteArrayList_toString_R_java_lang_String 4
+typedef jobject (*func_java_util_concurrent_CopyOnWriteArrayList_toString_R_java_lang_String)(jcontext ctx, jobject self);
+#define VTABLE_java_util_concurrent_CopyOnWriteArrayList_finalize 5
+typedef void (*func_java_util_concurrent_CopyOnWriteArrayList_finalize)(jcontext ctx, jobject self);
+#define VTABLE_java_util_concurrent_CopyOnWriteArrayList_notify 6
+typedef void (*func_java_util_concurrent_CopyOnWriteArrayList_notify)(jcontext ctx, jobject self);
+#define VTABLE_java_util_concurrent_CopyOnWriteArrayList_notifyAll 7
+typedef void (*func_java_util_concurrent_CopyOnWriteArrayList_notifyAll)(jcontext ctx, jobject self);
+#define VTABLE_java_util_concurrent_CopyOnWriteArrayList_wait 8
+typedef void (*func_java_util_concurrent_CopyOnWriteArrayList_wait)(jcontext ctx, jobject self);
+#define VTABLE_java_util_concurrent_CopyOnWriteArrayList_wait_long 9
+typedef void (*func_java_util_concurrent_CopyOnWriteArrayList_wait_long)(jcontext ctx, jobject self, jlong param0);
+#define VTABLE_java_util_concurrent_CopyOnWriteArrayList_wait_long_int 10
+typedef void (*func_java_util_concurrent_CopyOnWriteArrayList_wait_long_int)(jcontext ctx, jobject self, jlong param0, jint param1);
+#define VTABLE_java_util_concurrent_CopyOnWriteArrayList_iterator_R_java_util_Iterator 11
+typedef jobject (*func_java_util_concurrent_CopyOnWriteArrayList_iterator_R_java_util_Iterator)(jcontext ctx, jobject self);
+#define VTABLE_java_util_concurrent_CopyOnWriteArrayList_forEach_java_util_function_Consumer 12
+typedef void (*func_java_util_concurrent_CopyOnWriteArrayList_forEach_java_util_function_Consumer)(jcontext ctx, jobject self, jobject param0);
+#define VTABLE_java_util_concurrent_CopyOnWriteArrayList_spliterator_R_java_util_Spliterator 13
+typedef jobject (*func_java_util_concurrent_CopyOnWriteArrayList_spliterator_R_java_util_Spliterator)(jcontext ctx, jobject self);
+#define VTABLE_java_util_concurrent_CopyOnWriteArrayList_add_java_lang_Object_R_boolean 14
+typedef jbool (*func_java_util_concurrent_CopyOnWriteArrayList_add_java_lang_Object_R_boolean)(jcontext ctx, jobject self, jobject param0);
+#define VTABLE_java_util_concurrent_CopyOnWriteArrayList_addAll_java_util_Collection_R_boolean 15
+typedef jbool (*func_java_util_concurrent_CopyOnWriteArrayList_addAll_java_util_Collection_R_boolean)(jcontext ctx, jobject self, jobject param0);
+#define VTABLE_java_util_concurrent_CopyOnWriteArrayList_clear 16
+typedef void (*func_java_util_concurrent_CopyOnWriteArrayList_clear)(jcontext ctx, jobject self);
+#define VTABLE_java_util_concurrent_CopyOnWriteArrayList_contains_java_lang_Object_R_boolean 17
+typedef jbool (*func_java_util_concurrent_CopyOnWriteArrayList_contains_java_lang_Object_R_boolean)(jcontext ctx, jobject self, jobject param0);
+#define VTABLE_java_util_concurrent_CopyOnWriteArrayList_containsAll_java_util_Collection_R_boolean 18
+typedef jbool (*func_java_util_concurrent_CopyOnWriteArrayList_containsAll_java_util_Collection_R_boolean)(jcontext ctx, jobject self, jobject param0);
+#define VTABLE_java_util_concurrent_CopyOnWriteArrayList_isEmpty_R_boolean 19
+typedef jbool (*func_java_util_concurrent_CopyOnWriteArrayList_isEmpty_R_boolean)(jcontext ctx, jobject self);
+#define VTABLE_java_util_concurrent_CopyOnWriteArrayList_remove_java_lang_Object_R_boolean 20
+typedef jbool (*func_java_util_concurrent_CopyOnWriteArrayList_remove_java_lang_Object_R_boolean)(jcontext ctx, jobject self, jobject param0);
+#define VTABLE_java_util_concurrent_CopyOnWriteArrayList_removeAll_java_util_Collection_R_boolean 21
+typedef jbool (*func_java_util_concurrent_CopyOnWriteArrayList_removeAll_java_util_Collection_R_boolean)(jcontext ctx, jobject self, jobject param0);
+#define VTABLE_java_util_concurrent_CopyOnWriteArrayList_retainAll_java_util_Collection_R_boolean 22
+typedef jbool (*func_java_util_concurrent_CopyOnWriteArrayList_retainAll_java_util_Collection_R_boolean)(jcontext ctx, jobject self, jobject param0);
+#define VTABLE_java_util_concurrent_CopyOnWriteArrayList_size_R_int 23
+typedef jint (*func_java_util_concurrent_CopyOnWriteArrayList_size_R_int)(jcontext ctx, jobject self);
+#define VTABLE_java_util_concurrent_CopyOnWriteArrayList_toArray_R_Array1_java_lang_Object 24
+typedef jobject (*func_java_util_concurrent_CopyOnWriteArrayList_toArray_R_Array1_java_lang_Object)(jcontext ctx, jobject self);
+#define VTABLE_java_util_concurrent_CopyOnWriteArrayList_toArray_Array1_java_lang_Object_R_Array1_java_lang_Object 25
+typedef jobject (*func_java_util_concurrent_CopyOnWriteArrayList_toArray_Array1_java_lang_Object_R_Array1_java_lang_Object)(jcontext ctx, jobject self, jobject param0);
+#define VTABLE_java_util_concurrent_CopyOnWriteArrayList_add_int_java_lang_Object 26
+typedef void (*func_java_util_concurrent_CopyOnWriteArrayList_add_int_java_lang_Object)(jcontext ctx, jobject self, jint param0, jobject param1);
+#define VTABLE_java_util_concurrent_CopyOnWriteArrayList_addAll_int_java_util_Collection_R_boolean 27
+typedef jbool (*func_java_util_concurrent_CopyOnWriteArrayList_addAll_int_java_util_Collection_R_boolean)(jcontext ctx, jobject self, jint param0, jobject param1);
+#define VTABLE_java_util_concurrent_CopyOnWriteArrayList_get_int_R_java_lang_Object 28
+typedef jobject (*func_java_util_concurrent_CopyOnWriteArrayList_get_int_R_java_lang_Object)(jcontext ctx, jobject self, jint param0);
+#define VTABLE_java_util_concurrent_CopyOnWriteArrayList_indexOf_java_lang_Object_R_int 29
+typedef jint (*func_java_util_concurrent_CopyOnWriteArrayList_indexOf_java_lang_Object_R_int)(jcontext ctx, jobject self, jobject param0);
+#define VTABLE_java_util_concurrent_CopyOnWriteArrayList_lastIndexOf_java_lang_Object_R_int 30
+typedef jint (*func_java_util_concurrent_CopyOnWriteArrayList_lastIndexOf_java_lang_Object_R_int)(jcontext ctx, jobject self, jobject param0);
+#define VTABLE_java_util_concurrent_CopyOnWriteArrayList_listIterator_R_java_util_ListIterator 31
+typedef jobject (*func_java_util_concurrent_CopyOnWriteArrayList_listIterator_R_java_util_ListIterator)(jcontext ctx, jobject self);
+#define VTABLE_java_util_concurrent_CopyOnWriteArrayList_listIterator_int_R_java_util_ListIterator 32
+typedef jobject (*func_java_util_concurrent_CopyOnWriteArrayList_listIterator_int_R_java_util_ListIterator)(jcontext ctx, jobject self, jint param0);
+#define VTABLE_java_util_concurrent_CopyOnWriteArrayList_sort_java_util_Comparator 33
+typedef void (*func_java_util_concurrent_CopyOnWriteArrayList_sort_java_util_Comparator)(jcontext ctx, jobject self, jobject param0);
+#define VTABLE_java_util_concurrent_CopyOnWriteArrayList_remove_int_R_java_lang_Object 34
+typedef jobject (*func_java_util_concurrent_CopyOnWriteArrayList_remove_int_R_java_lang_Object)(jcontext ctx, jobject self, jint param0);
+#define VTABLE_java_util_concurrent_CopyOnWriteArrayList_set_int_java_lang_Object_R_java_lang_Object 35
+typedef jobject (*func_java_util_concurrent_CopyOnWriteArrayList_set_int_java_lang_Object_R_java_lang_Object)(jcontext ctx, jobject self, jint param0, jobject param1);
+#define VTABLE_java_util_concurrent_CopyOnWriteArrayList_subList_int_int_R_java_util_List 36
+typedef jobject (*func_java_util_concurrent_CopyOnWriteArrayList_subList_int_int_R_java_util_List)(jcontext ctx, jobject self, jint param0, jint param1);
+#define VTABLE_java_util_concurrent_CopyOnWriteArrayList_getArray_R_Array1_java_lang_Object 37
+typedef jobject (*func_java_util_concurrent_CopyOnWriteArrayList_getArray_R_Array1_java_lang_Object)(jcontext ctx, jobject self);
+#define VTABLE_java_util_concurrent_CopyOnWriteArrayList_setArray_Array1_java_lang_Object 38
+typedef void (*func_java_util_concurrent_CopyOnWriteArrayList_setArray_Array1_java_lang_Object)(jcontext ctx, jobject self, jobject param0);
+#define VTABLE_java_util_concurrent_CopyOnWriteArrayList_indexOf_java_lang_Object_int_R_int 39
+typedef jint (*func_java_util_concurrent_CopyOnWriteArrayList_indexOf_java_lang_Object_int_R_int)(jcontext ctx, jobject self, jobject param0, jint param1);
+#define VTABLE_java_util_concurrent_CopyOnWriteArrayList_lastIndexOf_java_lang_Object_int_R_int 40
+typedef jint (*func_java_util_concurrent_CopyOnWriteArrayList_lastIndexOf_java_lang_Object_int_R_int)(jcontext ctx, jobject self, jobject param0, jint param1);
+#define VTABLE_java_util_concurrent_CopyOnWriteArrayList_remove_java_lang_Object_Array1_java_lang_Object_int_R_boolean 41
+typedef jbool (*func_java_util_concurrent_CopyOnWriteArrayList_remove_java_lang_Object_Array1_java_lang_Object_int_R_boolean)(jcontext ctx, jobject self, jobject param0, jobject param1, jint param2);
+#define VTABLE_java_util_concurrent_CopyOnWriteArrayList_removeRange_int_int 42
+typedef void (*func_java_util_concurrent_CopyOnWriteArrayList_removeRange_int_int)(jcontext ctx, jobject self, jint param0, jint param1);
+#define VTABLE_java_util_concurrent_CopyOnWriteArrayList_addIfAbsent_java_lang_Object_R_boolean 43
+typedef jbool (*func_java_util_concurrent_CopyOnWriteArrayList_addIfAbsent_java_lang_Object_R_boolean)(jcontext ctx, jobject self, jobject param0);
+#define VTABLE_java_util_concurrent_CopyOnWriteArrayList_addIfAbsent_java_lang_Object_Array1_java_lang_Object_R_boolean 44
+typedef jbool (*func_java_util_concurrent_CopyOnWriteArrayList_addIfAbsent_java_lang_Object_Array1_java_lang_Object_R_boolean)(jcontext ctx, jobject self, jobject param0, jobject param1);
+#define VTABLE_java_util_concurrent_CopyOnWriteArrayList_addAllAbsent_java_util_Collection_R_int 45
+typedef jint (*func_java_util_concurrent_CopyOnWriteArrayList_addAllAbsent_java_util_Collection_R_int)(jcontext ctx, jobject self, jobject param0);
+#define VTABLE_java_util_concurrent_CopyOnWriteArrayList_removeIf_java_util_function_Predicate_R_boolean 46
+typedef jbool (*func_java_util_concurrent_CopyOnWriteArrayList_removeIf_java_util_function_Predicate_R_boolean)(jcontext ctx, jobject self, jobject param0);
+#define VTABLE_java_util_concurrent_CopyOnWriteArrayList_bulkRemove_java_util_function_Predicate_R_boolean 47
+typedef jbool (*func_java_util_concurrent_CopyOnWriteArrayList_bulkRemove_java_util_function_Predicate_R_boolean)(jcontext ctx, jobject self, jobject param0);
+#define VTABLE_java_util_concurrent_CopyOnWriteArrayList_bulkRemove_java_util_function_Predicate_int_int_R_boolean 48
+typedef jbool (*func_java_util_concurrent_CopyOnWriteArrayList_bulkRemove_java_util_function_Predicate_int_int_R_boolean)(jcontext ctx, jobject self, jobject param0, jint param1, jint param2);
+#define VTABLE_java_util_concurrent_CopyOnWriteArrayList_replaceAll_java_util_function_UnaryOperator 49
+typedef void (*func_java_util_concurrent_CopyOnWriteArrayList_replaceAll_java_util_function_UnaryOperator)(jcontext ctx, jobject self, jobject param0);
+#define VTABLE_java_util_concurrent_CopyOnWriteArrayList_replaceAllRange_java_util_function_UnaryOperator_int_int 50
+typedef void (*func_java_util_concurrent_CopyOnWriteArrayList_replaceAllRange_java_util_function_UnaryOperator_int_int)(jcontext ctx, jobject self, jobject param0, jint param1, jint param2);
+#define VTABLE_java_util_concurrent_CopyOnWriteArrayList_sortRange_java_util_Comparator_int_int 51
+typedef void (*func_java_util_concurrent_CopyOnWriteArrayList_sortRange_java_util_Comparator_int_int)(jcontext ctx, jobject self, jobject param0, jint param1, jint param2);
+#define VTABLE_java_util_concurrent_CopyOnWriteArrayList_writeObject_java_io_ObjectOutputStream 52
+typedef void (*func_java_util_concurrent_CopyOnWriteArrayList_writeObject_java_io_ObjectOutputStream)(jcontext ctx, jobject self, jobject param0);
+#define VTABLE_java_util_concurrent_CopyOnWriteArrayList_readObject_java_io_ObjectInputStream 53
+typedef void (*func_java_util_concurrent_CopyOnWriteArrayList_readObject_java_io_ObjectInputStream)(jcontext ctx, jobject self, jobject param0);
+
+void mark_java_util_concurrent_CopyOnWriteArrayList(jobject object, jint mark, jint depth);
+void clinit_java_util_concurrent_CopyOnWriteArrayList(jcontext ctx);
+jobject M_java_util_concurrent_CopyOnWriteArrayList_getArray_R_Array1_java_lang_Object(jcontext ctx, jobject self);
+void M_java_util_concurrent_CopyOnWriteArrayList_setArray_Array1_java_lang_Object(jcontext ctx, jobject self, jobject param0);
+void init_java_util_concurrent_CopyOnWriteArrayList(jcontext ctx, jobject self);
+void init_java_util_concurrent_CopyOnWriteArrayList_java_util_Collection(jcontext ctx, jobject self, jobject param0);
+void init_java_util_concurrent_CopyOnWriteArrayList_Array1_java_lang_Object(jcontext ctx, jobject self, jobject param0);
+jint M_java_util_concurrent_CopyOnWriteArrayList_size_R_int(jcontext ctx, jobject self);
+jbool M_java_util_concurrent_CopyOnWriteArrayList_isEmpty_R_boolean(jcontext ctx, jobject self);
+jint SM_java_util_concurrent_CopyOnWriteArrayList_indexOfRange_java_lang_Object_Array1_java_lang_Object_int_int_R_int(jcontext ctx, jobject param0, jobject param1, jint param2, jint param3);
+jint SM_java_util_concurrent_CopyOnWriteArrayList_lastIndexOfRange_java_lang_Object_Array1_java_lang_Object_int_int_R_int(jcontext ctx, jobject param0, jobject param1, jint param2, jint param3);
+jbool M_java_util_concurrent_CopyOnWriteArrayList_contains_java_lang_Object_R_boolean(jcontext ctx, jobject self, jobject param0);
+jint M_java_util_concurrent_CopyOnWriteArrayList_indexOf_java_lang_Object_R_int(jcontext ctx, jobject self, jobject param0);
+jint M_java_util_concurrent_CopyOnWriteArrayList_indexOf_java_lang_Object_int_R_int(jcontext ctx, jobject self, jobject param0, jint param1);
+jint M_java_util_concurrent_CopyOnWriteArrayList_lastIndexOf_java_lang_Object_R_int(jcontext ctx, jobject self, jobject param0);
+jint M_java_util_concurrent_CopyOnWriteArrayList_lastIndexOf_java_lang_Object_int_R_int(jcontext ctx, jobject self, jobject param0, jint param1);
+jobject M_java_util_concurrent_CopyOnWriteArrayList_clone_R_java_lang_Object(jcontext ctx, jobject self);
+jobject M_java_util_concurrent_CopyOnWriteArrayList_toArray_R_Array1_java_lang_Object(jcontext ctx, jobject self);
+jobject M_java_util_concurrent_CopyOnWriteArrayList_toArray_Array1_java_lang_Object_R_Array1_java_lang_Object(jcontext ctx, jobject self, jobject param0);
+jobject SM_java_util_concurrent_CopyOnWriteArrayList_elementAt_Array1_java_lang_Object_int_R_java_lang_Object(jcontext ctx, jobject param0, jint param1);
+jobject SM_java_util_concurrent_CopyOnWriteArrayList_outOfBounds_int_int_R_java_lang_String(jcontext ctx, jint param0, jint param1);
+jobject M_java_util_concurrent_CopyOnWriteArrayList_get_int_R_java_lang_Object(jcontext ctx, jobject self, jint param0);
+jobject M_java_util_concurrent_CopyOnWriteArrayList_set_int_java_lang_Object_R_java_lang_Object(jcontext ctx, jobject self, jint param0, jobject param1);
+jbool M_java_util_concurrent_CopyOnWriteArrayList_add_java_lang_Object_R_boolean(jcontext ctx, jobject self, jobject param0);
+void M_java_util_concurrent_CopyOnWriteArrayList_add_int_java_lang_Object(jcontext ctx, jobject self, jint param0, jobject param1);
+jobject M_java_util_concurrent_CopyOnWriteArrayList_remove_int_R_java_lang_Object(jcontext ctx, jobject self, jint param0);
+jbool M_java_util_concurrent_CopyOnWriteArrayList_remove_java_lang_Object_R_boolean(jcontext ctx, jobject self, jobject param0);
+jbool M_java_util_concurrent_CopyOnWriteArrayList_remove_java_lang_Object_Array1_java_lang_Object_int_R_boolean(jcontext ctx, jobject self, jobject param0, jobject param1, jint param2);
+void M_java_util_concurrent_CopyOnWriteArrayList_removeRange_int_int(jcontext ctx, jobject self, jint param0, jint param1);
+jbool M_java_util_concurrent_CopyOnWriteArrayList_addIfAbsent_java_lang_Object_R_boolean(jcontext ctx, jobject self, jobject param0);
+jbool M_java_util_concurrent_CopyOnWriteArrayList_addIfAbsent_java_lang_Object_Array1_java_lang_Object_R_boolean(jcontext ctx, jobject self, jobject param0, jobject param1);
+jbool M_java_util_concurrent_CopyOnWriteArrayList_containsAll_java_util_Collection_R_boolean(jcontext ctx, jobject self, jobject param0);
+jbool M_java_util_concurrent_CopyOnWriteArrayList_removeAll_java_util_Collection_R_boolean(jcontext ctx, jobject self, jobject param0);
+jbool M_java_util_concurrent_CopyOnWriteArrayList_retainAll_java_util_Collection_R_boolean(jcontext ctx, jobject self, jobject param0);
+jint M_java_util_concurrent_CopyOnWriteArrayList_addAllAbsent_java_util_Collection_R_int(jcontext ctx, jobject self, jobject param0);
+void M_java_util_concurrent_CopyOnWriteArrayList_clear(jcontext ctx, jobject self);
+jbool M_java_util_concurrent_CopyOnWriteArrayList_addAll_java_util_Collection_R_boolean(jcontext ctx, jobject self, jobject param0);
+jbool M_java_util_concurrent_CopyOnWriteArrayList_addAll_int_java_util_Collection_R_boolean(jcontext ctx, jobject self, jint param0, jobject param1);
+void M_java_util_concurrent_CopyOnWriteArrayList_forEach_java_util_function_Consumer(jcontext ctx, jobject self, jobject param0);
+jbool M_java_util_concurrent_CopyOnWriteArrayList_removeIf_java_util_function_Predicate_R_boolean(jcontext ctx, jobject self, jobject param0);
+jobject SM_java_util_concurrent_CopyOnWriteArrayList_nBits_int_R_Array1_long(jcontext ctx, jint param0);
+void SM_java_util_concurrent_CopyOnWriteArrayList_setBit_Array1_long_int(jcontext ctx, jobject param0, jint param1);
+jbool SM_java_util_concurrent_CopyOnWriteArrayList_isClear_Array1_long_int_R_boolean(jcontext ctx, jobject param0, jint param1);
+jbool M_java_util_concurrent_CopyOnWriteArrayList_bulkRemove_java_util_function_Predicate_R_boolean(jcontext ctx, jobject self, jobject param0);
+jbool M_java_util_concurrent_CopyOnWriteArrayList_bulkRemove_java_util_function_Predicate_int_int_R_boolean(jcontext ctx, jobject self, jobject param0, jint param1, jint param2);
+void M_java_util_concurrent_CopyOnWriteArrayList_replaceAll_java_util_function_UnaryOperator(jcontext ctx, jobject self, jobject param0);
+void M_java_util_concurrent_CopyOnWriteArrayList_replaceAllRange_java_util_function_UnaryOperator_int_int(jcontext ctx, jobject self, jobject param0, jint param1, jint param2);
+void M_java_util_concurrent_CopyOnWriteArrayList_sort_java_util_Comparator(jcontext ctx, jobject self, jobject param0);
+void M_java_util_concurrent_CopyOnWriteArrayList_sortRange_java_util_Comparator_int_int(jcontext ctx, jobject self, jobject param0, jint param1, jint param2);
+void M_java_util_concurrent_CopyOnWriteArrayList_writeObject_java_io_ObjectOutputStream(jcontext ctx, jobject self, jobject param0);
+void M_java_util_concurrent_CopyOnWriteArrayList_readObject_java_io_ObjectInputStream(jcontext ctx, jobject self, jobject param0);
+jobject M_java_util_concurrent_CopyOnWriteArrayList_toString_R_java_lang_String(jcontext ctx, jobject self);
+jbool M_java_util_concurrent_CopyOnWriteArrayList_equals_java_lang_Object_R_boolean(jcontext ctx, jobject self, jobject param0);
+jint SM_java_util_concurrent_CopyOnWriteArrayList_hashCodeOfRange_Array1_java_lang_Object_int_int_R_int(jcontext ctx, jobject param0, jint param1, jint param2);
+jint M_java_util_concurrent_CopyOnWriteArrayList_hashCode_R_int(jcontext ctx, jobject self);
+jobject M_java_util_concurrent_CopyOnWriteArrayList_iterator_R_java_util_Iterator(jcontext ctx, jobject self);
+jobject M_java_util_concurrent_CopyOnWriteArrayList_listIterator_R_java_util_ListIterator(jcontext ctx, jobject self);
+jobject M_java_util_concurrent_CopyOnWriteArrayList_listIterator_int_R_java_util_ListIterator(jcontext ctx, jobject self, jint param0);
+jobject M_java_util_concurrent_CopyOnWriteArrayList_subList_int_int_R_java_util_List(jcontext ctx, jobject self, jint param0, jint param1);
+jbool SM_java_util_concurrent_CopyOnWriteArrayList_lambda$retainAll$1_java_util_Collection_java_lang_Object_R_boolean(jcontext ctx, jobject param0, jobject param1);
+jbool SM_java_util_concurrent_CopyOnWriteArrayList_lambda$removeAll$0_java_util_Collection_java_lang_Object_R_boolean(jcontext ctx, jobject param0, jobject param1);
+jint SM_java_util_concurrent_CopyOnWriteArrayList_access$000_java_lang_Object_Array1_java_lang_Object_int_int_R_int(jcontext ctx, jobject param0, jobject param1, jint param2, jint param3);
+jint SM_java_util_concurrent_CopyOnWriteArrayList_access$100_java_lang_Object_Array1_java_lang_Object_int_int_R_int(jcontext ctx, jobject param0, jobject param1, jint param2, jint param3);
+jint SM_java_util_concurrent_CopyOnWriteArrayList_access$200_Array1_java_lang_Object_int_int_R_int(jcontext ctx, jobject param0, jint param1, jint param2);
+
+#ifdef __cplusplus
+}
+#endif
+
+#endif

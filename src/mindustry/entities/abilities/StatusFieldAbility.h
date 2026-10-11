@@ -1,0 +1,94 @@
+#ifndef HEADER_mindustry_entities_abilities_StatusFieldAbility
+#define HEADER_mindustry_entities_abilities_StatusFieldAbility
+
+#include "Clearwing.h"
+#include "mindustry/entities/abilities/Ability.h"
+
+#ifdef __cplusplus
+extern "C" {
+#endif
+
+typedef struct mindustry_entities_abilities_StatusFieldAbility {
+	mindustry_entities_abilities_Ability parent;
+	jref F_effect;
+	jfloat F_duration;
+	jfloat F_reload;
+	jfloat F_range;
+	jbool F_onShoot;
+	jref F_applyEffect;
+	jref F_activeEffect;
+	jfloat F_effectX;
+	jfloat F_effectY;
+	jbool F_parentizeEffects;
+	jbool F_effectSizeParam;
+	jref F_color;
+	jfloat F_timer;
+} mindustry_entities_abilities_StatusFieldAbility;
+
+extern Class class_mindustry_entities_abilities_StatusFieldAbility;
+
+
+#define VTABLE_mindustry_entities_abilities_StatusFieldAbility_hashCode_R_int 0
+typedef jint (*func_mindustry_entities_abilities_StatusFieldAbility_hashCode_R_int)(jcontext ctx, jobject self);
+#define VTABLE_mindustry_entities_abilities_StatusFieldAbility_equals_java_lang_Object_R_boolean 1
+typedef jbool (*func_mindustry_entities_abilities_StatusFieldAbility_equals_java_lang_Object_R_boolean)(jcontext ctx, jobject self, jobject param0);
+#define VTABLE_mindustry_entities_abilities_StatusFieldAbility_clone_R_java_lang_Object 2
+typedef jobject (*func_mindustry_entities_abilities_StatusFieldAbility_clone_R_java_lang_Object)(jcontext ctx, jobject self);
+#define VTABLE_mindustry_entities_abilities_StatusFieldAbility_getClass_R_java_lang_Class 3
+typedef jobject (*func_mindustry_entities_abilities_StatusFieldAbility_getClass_R_java_lang_Class)(jcontext ctx, jobject self);
+#define VTABLE_mindustry_entities_abilities_StatusFieldAbility_toString_R_java_lang_String 4
+typedef jobject (*func_mindustry_entities_abilities_StatusFieldAbility_toString_R_java_lang_String)(jcontext ctx, jobject self);
+#define VTABLE_mindustry_entities_abilities_StatusFieldAbility_finalize 5
+typedef void (*func_mindustry_entities_abilities_StatusFieldAbility_finalize)(jcontext ctx, jobject self);
+#define VTABLE_mindustry_entities_abilities_StatusFieldAbility_notify 6
+typedef void (*func_mindustry_entities_abilities_StatusFieldAbility_notify)(jcontext ctx, jobject self);
+#define VTABLE_mindustry_entities_abilities_StatusFieldAbility_notifyAll 7
+typedef void (*func_mindustry_entities_abilities_StatusFieldAbility_notifyAll)(jcontext ctx, jobject self);
+#define VTABLE_mindustry_entities_abilities_StatusFieldAbility_wait 8
+typedef void (*func_mindustry_entities_abilities_StatusFieldAbility_wait)(jcontext ctx, jobject self);
+#define VTABLE_mindustry_entities_abilities_StatusFieldAbility_wait_long 9
+typedef void (*func_mindustry_entities_abilities_StatusFieldAbility_wait_long)(jcontext ctx, jobject self, jlong param0);
+#define VTABLE_mindustry_entities_abilities_StatusFieldAbility_wait_long_int 10
+typedef void (*func_mindustry_entities_abilities_StatusFieldAbility_wait_long_int)(jcontext ctx, jobject self, jlong param0, jint param1);
+#define VTABLE_mindustry_entities_abilities_StatusFieldAbility_update_mindustry_gen_Unit 11
+typedef void (*func_mindustry_entities_abilities_StatusFieldAbility_update_mindustry_gen_Unit)(jcontext ctx, jobject self, jobject param0);
+#define VTABLE_mindustry_entities_abilities_StatusFieldAbility_draw_mindustry_gen_Unit 12
+typedef void (*func_mindustry_entities_abilities_StatusFieldAbility_draw_mindustry_gen_Unit)(jcontext ctx, jobject self, jobject param0);
+#define VTABLE_mindustry_entities_abilities_StatusFieldAbility_death_mindustry_gen_Unit 13
+typedef void (*func_mindustry_entities_abilities_StatusFieldAbility_death_mindustry_gen_Unit)(jcontext ctx, jobject self, jobject param0);
+#define VTABLE_mindustry_entities_abilities_StatusFieldAbility_created_mindustry_gen_Unit 14
+typedef void (*func_mindustry_entities_abilities_StatusFieldAbility_created_mindustry_gen_Unit)(jcontext ctx, jobject self, jobject param0);
+#define VTABLE_mindustry_entities_abilities_StatusFieldAbility_init_mindustry_type_UnitType 15
+typedef void (*func_mindustry_entities_abilities_StatusFieldAbility_init_mindustry_type_UnitType)(jcontext ctx, jobject self, jobject param0);
+#define VTABLE_mindustry_entities_abilities_StatusFieldAbility_displayBars_mindustry_gen_Unit_arc_scene_ui_layout_Table 16
+typedef void (*func_mindustry_entities_abilities_StatusFieldAbility_displayBars_mindustry_gen_Unit_arc_scene_ui_layout_Table)(jcontext ctx, jobject self, jobject param0, jobject param1);
+#define VTABLE_mindustry_entities_abilities_StatusFieldAbility_display_arc_scene_ui_layout_Table 17
+typedef void (*func_mindustry_entities_abilities_StatusFieldAbility_display_arc_scene_ui_layout_Table)(jcontext ctx, jobject self, jobject param0);
+#define VTABLE_mindustry_entities_abilities_StatusFieldAbility_addStats_arc_scene_ui_layout_Table 18
+typedef void (*func_mindustry_entities_abilities_StatusFieldAbility_addStats_arc_scene_ui_layout_Table)(jcontext ctx, jobject self, jobject param0);
+#define VTABLE_mindustry_entities_abilities_StatusFieldAbility_abilityStat_java_lang_String_Array1_java_lang_Object_R_java_lang_String 19
+typedef jobject (*func_mindustry_entities_abilities_StatusFieldAbility_abilityStat_java_lang_String_Array1_java_lang_Object_R_java_lang_String)(jcontext ctx, jobject self, jobject param0, jobject param1);
+#define VTABLE_mindustry_entities_abilities_StatusFieldAbility_copy_R_mindustry_entities_abilities_Ability 20
+typedef jobject (*func_mindustry_entities_abilities_StatusFieldAbility_copy_R_mindustry_entities_abilities_Ability)(jcontext ctx, jobject self);
+#define VTABLE_mindustry_entities_abilities_StatusFieldAbility_localized_R_java_lang_String 21
+typedef jobject (*func_mindustry_entities_abilities_StatusFieldAbility_localized_R_java_lang_String)(jcontext ctx, jobject self);
+#define VTABLE_mindustry_entities_abilities_StatusFieldAbility_getBundle_R_java_lang_String 22
+typedef jobject (*func_mindustry_entities_abilities_StatusFieldAbility_getBundle_R_java_lang_String)(jcontext ctx, jobject self);
+#define VTABLE_mindustry_entities_abilities_StatusFieldAbility_lambda$display$0_arc_scene_ui_layout_Table 23
+typedef void (*func_mindustry_entities_abilities_StatusFieldAbility_lambda$display$0_arc_scene_ui_layout_Table)(jcontext ctx, jobject self, jobject param0);
+#define VTABLE_mindustry_entities_abilities_StatusFieldAbility_lambda$update$0_mindustry_gen_Unit 24
+typedef void (*func_mindustry_entities_abilities_StatusFieldAbility_lambda$update$0_mindustry_gen_Unit)(jcontext ctx, jobject self, jobject param0);
+
+void mark_mindustry_entities_abilities_StatusFieldAbility(jobject object, jint mark, jint depth);
+void clinit_mindustry_entities_abilities_StatusFieldAbility(jcontext ctx);
+void init_mindustry_entities_abilities_StatusFieldAbility(jcontext ctx, jobject self);
+void init_mindustry_entities_abilities_StatusFieldAbility_mindustry_type_StatusEffect_float_float_float(jcontext ctx, jobject self, jobject param0, jfloat param1, jfloat param2, jfloat param3);
+void M_mindustry_entities_abilities_StatusFieldAbility_addStats_arc_scene_ui_layout_Table(jcontext ctx, jobject self, jobject param0);
+void M_mindustry_entities_abilities_StatusFieldAbility_update_mindustry_gen_Unit(jcontext ctx, jobject self, jobject param0);
+void M_mindustry_entities_abilities_StatusFieldAbility_lambda$update$0_mindustry_gen_Unit(jcontext ctx, jobject self, jobject param0);
+
+#ifdef __cplusplus
+}
+#endif
+
+#endif

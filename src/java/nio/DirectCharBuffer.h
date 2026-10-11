@@ -1,0 +1,201 @@
+#ifndef HEADER_java_nio_DirectCharBuffer
+#define HEADER_java_nio_DirectCharBuffer
+
+#include "Clearwing.h"
+#include "java/nio/CharBuffer.h"
+
+#ifdef __cplusplus
+extern "C" {
+#endif
+
+typedef struct java_nio_DirectCharBuffer {
+	java_nio_CharBuffer parent;
+	jref F_bb;
+	jint F_offset;
+} java_nio_DirectCharBuffer;
+
+extern Class class_java_nio_DirectCharBuffer;
+
+extern jbool SF_java_nio_DirectCharBuffer_$assertionsDisabled;
+
+#define VTABLE_java_nio_DirectCharBuffer_hashCode_R_int 0
+typedef jint (*func_java_nio_DirectCharBuffer_hashCode_R_int)(jcontext ctx, jobject self);
+#define VTABLE_java_nio_DirectCharBuffer_equals_java_lang_Object_R_boolean 1
+typedef jbool (*func_java_nio_DirectCharBuffer_equals_java_lang_Object_R_boolean)(jcontext ctx, jobject self, jobject param0);
+#define VTABLE_java_nio_DirectCharBuffer_clone_R_java_lang_Object 2
+typedef jobject (*func_java_nio_DirectCharBuffer_clone_R_java_lang_Object)(jcontext ctx, jobject self);
+#define VTABLE_java_nio_DirectCharBuffer_getClass_R_java_lang_Class 3
+typedef jobject (*func_java_nio_DirectCharBuffer_getClass_R_java_lang_Class)(jcontext ctx, jobject self);
+#define VTABLE_java_nio_DirectCharBuffer_toString_R_java_lang_String 4
+typedef jobject (*func_java_nio_DirectCharBuffer_toString_R_java_lang_String)(jcontext ctx, jobject self);
+#define VTABLE_java_nio_DirectCharBuffer_finalize 5
+typedef void (*func_java_nio_DirectCharBuffer_finalize)(jcontext ctx, jobject self);
+#define VTABLE_java_nio_DirectCharBuffer_notify 6
+typedef void (*func_java_nio_DirectCharBuffer_notify)(jcontext ctx, jobject self);
+#define VTABLE_java_nio_DirectCharBuffer_notifyAll 7
+typedef void (*func_java_nio_DirectCharBuffer_notifyAll)(jcontext ctx, jobject self);
+#define VTABLE_java_nio_DirectCharBuffer_wait 8
+typedef void (*func_java_nio_DirectCharBuffer_wait)(jcontext ctx, jobject self);
+#define VTABLE_java_nio_DirectCharBuffer_wait_long 9
+typedef void (*func_java_nio_DirectCharBuffer_wait_long)(jcontext ctx, jobject self, jlong param0);
+#define VTABLE_java_nio_DirectCharBuffer_wait_long_int 10
+typedef void (*func_java_nio_DirectCharBuffer_wait_long_int)(jcontext ctx, jobject self, jlong param0, jint param1);
+#define VTABLE_java_nio_DirectCharBuffer_capacity_R_int 11
+typedef jint (*func_java_nio_DirectCharBuffer_capacity_R_int)(jcontext ctx, jobject self);
+#define VTABLE_java_nio_DirectCharBuffer_position_R_int 12
+typedef jint (*func_java_nio_DirectCharBuffer_position_R_int)(jcontext ctx, jobject self);
+#define VTABLE_java_nio_DirectCharBuffer_position_int_R_java_nio_Buffer 13
+typedef jobject (*func_java_nio_DirectCharBuffer_position_int_R_java_nio_Buffer)(jcontext ctx, jobject self, jint param0);
+#define VTABLE_java_nio_DirectCharBuffer_limit_R_int 14
+typedef jint (*func_java_nio_DirectCharBuffer_limit_R_int)(jcontext ctx, jobject self);
+#define VTABLE_java_nio_DirectCharBuffer_limit_int_R_java_nio_Buffer 15
+typedef jobject (*func_java_nio_DirectCharBuffer_limit_int_R_java_nio_Buffer)(jcontext ctx, jobject self, jint param0);
+#define VTABLE_java_nio_DirectCharBuffer_mark_R_java_nio_Buffer 16
+typedef jobject (*func_java_nio_DirectCharBuffer_mark_R_java_nio_Buffer)(jcontext ctx, jobject self);
+#define VTABLE_java_nio_DirectCharBuffer_reset_R_java_nio_Buffer 17
+typedef jobject (*func_java_nio_DirectCharBuffer_reset_R_java_nio_Buffer)(jcontext ctx, jobject self);
+#define VTABLE_java_nio_DirectCharBuffer_clear_R_java_nio_Buffer 18
+typedef jobject (*func_java_nio_DirectCharBuffer_clear_R_java_nio_Buffer)(jcontext ctx, jobject self);
+#define VTABLE_java_nio_DirectCharBuffer_flip_R_java_nio_Buffer 19
+typedef jobject (*func_java_nio_DirectCharBuffer_flip_R_java_nio_Buffer)(jcontext ctx, jobject self);
+#define VTABLE_java_nio_DirectCharBuffer_rewind_R_java_nio_Buffer 20
+typedef jobject (*func_java_nio_DirectCharBuffer_rewind_R_java_nio_Buffer)(jcontext ctx, jobject self);
+#define VTABLE_java_nio_DirectCharBuffer_remaining_R_int 21
+typedef jint (*func_java_nio_DirectCharBuffer_remaining_R_int)(jcontext ctx, jobject self);
+#define VTABLE_java_nio_DirectCharBuffer_hasRemaining_R_boolean 22
+typedef jbool (*func_java_nio_DirectCharBuffer_hasRemaining_R_boolean)(jcontext ctx, jobject self);
+#define VTABLE_java_nio_DirectCharBuffer_isReadOnly_R_boolean 23
+typedef jbool (*func_java_nio_DirectCharBuffer_isReadOnly_R_boolean)(jcontext ctx, jobject self);
+#define VTABLE_java_nio_DirectCharBuffer_hasArray_R_boolean 24
+typedef jbool (*func_java_nio_DirectCharBuffer_hasArray_R_boolean)(jcontext ctx, jobject self);
+#define VTABLE_java_nio_DirectCharBuffer_array_R_java_lang_Object 25
+typedef jobject (*func_java_nio_DirectCharBuffer_array_R_java_lang_Object)(jcontext ctx, jobject self);
+#define VTABLE_java_nio_DirectCharBuffer_arrayOffset_R_int 26
+typedef jint (*func_java_nio_DirectCharBuffer_arrayOffset_R_int)(jcontext ctx, jobject self);
+#define VTABLE_java_nio_DirectCharBuffer_isDirect_R_boolean 27
+typedef jbool (*func_java_nio_DirectCharBuffer_isDirect_R_boolean)(jcontext ctx, jobject self);
+#define VTABLE_java_nio_DirectCharBuffer_nextGetIndex_R_int 28
+typedef jint (*func_java_nio_DirectCharBuffer_nextGetIndex_R_int)(jcontext ctx, jobject self);
+#define VTABLE_java_nio_DirectCharBuffer_nextGetIndex_int_R_int 29
+typedef jint (*func_java_nio_DirectCharBuffer_nextGetIndex_int_R_int)(jcontext ctx, jobject self, jint param0);
+#define VTABLE_java_nio_DirectCharBuffer_nextPutIndex_R_int 30
+typedef jint (*func_java_nio_DirectCharBuffer_nextPutIndex_R_int)(jcontext ctx, jobject self);
+#define VTABLE_java_nio_DirectCharBuffer_nextPutIndex_int_R_int 31
+typedef jint (*func_java_nio_DirectCharBuffer_nextPutIndex_int_R_int)(jcontext ctx, jobject self, jint param0);
+#define VTABLE_java_nio_DirectCharBuffer_checkIndex_int_R_int 32
+typedef jint (*func_java_nio_DirectCharBuffer_checkIndex_int_R_int)(jcontext ctx, jobject self, jint param0);
+#define VTABLE_java_nio_DirectCharBuffer_checkIndex_int_int_R_int 33
+typedef jint (*func_java_nio_DirectCharBuffer_checkIndex_int_int_R_int)(jcontext ctx, jobject self, jint param0, jint param1);
+#define VTABLE_java_nio_DirectCharBuffer_markValue_R_int 34
+typedef jint (*func_java_nio_DirectCharBuffer_markValue_R_int)(jcontext ctx, jobject self);
+#define VTABLE_java_nio_DirectCharBuffer_truncate 35
+typedef void (*func_java_nio_DirectCharBuffer_truncate)(jcontext ctx, jobject self);
+#define VTABLE_java_nio_DirectCharBuffer_discardMark 36
+typedef void (*func_java_nio_DirectCharBuffer_discardMark)(jcontext ctx, jobject self);
+#define VTABLE_java_nio_DirectCharBuffer_compareTo_java_lang_Object_R_int 37
+typedef jint (*func_java_nio_DirectCharBuffer_compareTo_java_lang_Object_R_int)(jcontext ctx, jobject self, jobject param0);
+#define VTABLE_java_nio_DirectCharBuffer_append_char_R_java_lang_Appendable 38
+typedef jobject (*func_java_nio_DirectCharBuffer_append_char_R_java_lang_Appendable)(jcontext ctx, jobject self, jchar param0);
+#define VTABLE_java_nio_DirectCharBuffer_append_java_lang_CharSequence_R_java_lang_Appendable 39
+typedef jobject (*func_java_nio_DirectCharBuffer_append_java_lang_CharSequence_R_java_lang_Appendable)(jcontext ctx, jobject self, jobject param0);
+#define VTABLE_java_nio_DirectCharBuffer_append_java_lang_CharSequence_int_int_R_java_lang_Appendable 40
+typedef jobject (*func_java_nio_DirectCharBuffer_append_java_lang_CharSequence_int_int_R_java_lang_Appendable)(jcontext ctx, jobject self, jobject param0, jint param1, jint param2);
+#define VTABLE_java_nio_DirectCharBuffer_length_R_int 41
+typedef jint (*func_java_nio_DirectCharBuffer_length_R_int)(jcontext ctx, jobject self);
+#define VTABLE_java_nio_DirectCharBuffer_charAt_int_R_char 42
+typedef jchar (*func_java_nio_DirectCharBuffer_charAt_int_R_char)(jcontext ctx, jobject self, jint param0);
+#define VTABLE_java_nio_DirectCharBuffer_subSequence_int_int_R_java_lang_CharSequence 43
+typedef jobject (*func_java_nio_DirectCharBuffer_subSequence_int_int_R_java_lang_CharSequence)(jcontext ctx, jobject self, jint param0, jint param1);
+#define VTABLE_java_nio_DirectCharBuffer_read_java_nio_CharBuffer_R_int 44
+typedef jint (*func_java_nio_DirectCharBuffer_read_java_nio_CharBuffer_R_int)(jcontext ctx, jobject self, jobject param0);
+#define VTABLE_java_nio_DirectCharBuffer_slice_R_java_nio_CharBuffer 45
+typedef jobject (*func_java_nio_DirectCharBuffer_slice_R_java_nio_CharBuffer)(jcontext ctx, jobject self);
+#define VTABLE_java_nio_DirectCharBuffer_duplicate_R_java_nio_CharBuffer 46
+typedef jobject (*func_java_nio_DirectCharBuffer_duplicate_R_java_nio_CharBuffer)(jcontext ctx, jobject self);
+#define VTABLE_java_nio_DirectCharBuffer_asReadOnlyBuffer_R_java_nio_CharBuffer 47
+typedef jobject (*func_java_nio_DirectCharBuffer_asReadOnlyBuffer_R_java_nio_CharBuffer)(jcontext ctx, jobject self);
+#define VTABLE_java_nio_DirectCharBuffer_get_R_char 48
+typedef jchar (*func_java_nio_DirectCharBuffer_get_R_char)(jcontext ctx, jobject self);
+#define VTABLE_java_nio_DirectCharBuffer_put_char_R_java_nio_CharBuffer 49
+typedef jobject (*func_java_nio_DirectCharBuffer_put_char_R_java_nio_CharBuffer)(jcontext ctx, jobject self, jchar param0);
+#define VTABLE_java_nio_DirectCharBuffer_get_int_R_char 50
+typedef jchar (*func_java_nio_DirectCharBuffer_get_int_R_char)(jcontext ctx, jobject self, jint param0);
+#define VTABLE_java_nio_DirectCharBuffer_getUnchecked_int_R_char 51
+typedef jchar (*func_java_nio_DirectCharBuffer_getUnchecked_int_R_char)(jcontext ctx, jobject self, jint param0);
+#define VTABLE_java_nio_DirectCharBuffer_put_int_char_R_java_nio_CharBuffer 52
+typedef jobject (*func_java_nio_DirectCharBuffer_put_int_char_R_java_nio_CharBuffer)(jcontext ctx, jobject self, jint param0, jchar param1);
+#define VTABLE_java_nio_DirectCharBuffer_get_Array1_char_int_int_R_java_nio_CharBuffer 53
+typedef jobject (*func_java_nio_DirectCharBuffer_get_Array1_char_int_int_R_java_nio_CharBuffer)(jcontext ctx, jobject self, jobject param0, jint param1, jint param2);
+#define VTABLE_java_nio_DirectCharBuffer_get_Array1_char_R_java_nio_CharBuffer 54
+typedef jobject (*func_java_nio_DirectCharBuffer_get_Array1_char_R_java_nio_CharBuffer)(jcontext ctx, jobject self, jobject param0);
+#define VTABLE_java_nio_DirectCharBuffer_put_java_nio_CharBuffer_R_java_nio_CharBuffer 55
+typedef jobject (*func_java_nio_DirectCharBuffer_put_java_nio_CharBuffer_R_java_nio_CharBuffer)(jcontext ctx, jobject self, jobject param0);
+#define VTABLE_java_nio_DirectCharBuffer_put_Array1_char_int_int_R_java_nio_CharBuffer 56
+typedef jobject (*func_java_nio_DirectCharBuffer_put_Array1_char_int_int_R_java_nio_CharBuffer)(jcontext ctx, jobject self, jobject param0, jint param1, jint param2);
+#define VTABLE_java_nio_DirectCharBuffer_put_Array1_char_R_java_nio_CharBuffer 57
+typedef jobject (*func_java_nio_DirectCharBuffer_put_Array1_char_R_java_nio_CharBuffer)(jcontext ctx, jobject self, jobject param0);
+#define VTABLE_java_nio_DirectCharBuffer_put_java_lang_String_int_int_R_java_nio_CharBuffer 58
+typedef jobject (*func_java_nio_DirectCharBuffer_put_java_lang_String_int_int_R_java_nio_CharBuffer)(jcontext ctx, jobject self, jobject param0, jint param1, jint param2);
+#define VTABLE_java_nio_DirectCharBuffer_put_java_lang_String_R_java_nio_CharBuffer 59
+typedef jobject (*func_java_nio_DirectCharBuffer_put_java_lang_String_R_java_nio_CharBuffer)(jcontext ctx, jobject self, jobject param0);
+#define VTABLE_java_nio_DirectCharBuffer_array_R_Array1_char 60
+typedef jobject (*func_java_nio_DirectCharBuffer_array_R_Array1_char)(jcontext ctx, jobject self);
+#define VTABLE_java_nio_DirectCharBuffer_position_int_R_java_nio_CharBuffer 61
+typedef jobject (*func_java_nio_DirectCharBuffer_position_int_R_java_nio_CharBuffer)(jcontext ctx, jobject self, jint param0);
+#define VTABLE_java_nio_DirectCharBuffer_limit_int_R_java_nio_CharBuffer 62
+typedef jobject (*func_java_nio_DirectCharBuffer_limit_int_R_java_nio_CharBuffer)(jcontext ctx, jobject self, jint param0);
+#define VTABLE_java_nio_DirectCharBuffer_mark_R_java_nio_CharBuffer 63
+typedef jobject (*func_java_nio_DirectCharBuffer_mark_R_java_nio_CharBuffer)(jcontext ctx, jobject self);
+#define VTABLE_java_nio_DirectCharBuffer_reset_R_java_nio_CharBuffer 64
+typedef jobject (*func_java_nio_DirectCharBuffer_reset_R_java_nio_CharBuffer)(jcontext ctx, jobject self);
+#define VTABLE_java_nio_DirectCharBuffer_clear_R_java_nio_CharBuffer 65
+typedef jobject (*func_java_nio_DirectCharBuffer_clear_R_java_nio_CharBuffer)(jcontext ctx, jobject self);
+#define VTABLE_java_nio_DirectCharBuffer_flip_R_java_nio_CharBuffer 66
+typedef jobject (*func_java_nio_DirectCharBuffer_flip_R_java_nio_CharBuffer)(jcontext ctx, jobject self);
+#define VTABLE_java_nio_DirectCharBuffer_rewind_R_java_nio_CharBuffer 67
+typedef jobject (*func_java_nio_DirectCharBuffer_rewind_R_java_nio_CharBuffer)(jcontext ctx, jobject self);
+#define VTABLE_java_nio_DirectCharBuffer_compact_R_java_nio_CharBuffer 68
+typedef jobject (*func_java_nio_DirectCharBuffer_compact_R_java_nio_CharBuffer)(jcontext ctx, jobject self);
+#define VTABLE_java_nio_DirectCharBuffer_compareTo_java_nio_CharBuffer_R_int 69
+typedef jint (*func_java_nio_DirectCharBuffer_compareTo_java_nio_CharBuffer_R_int)(jcontext ctx, jobject self, jobject param0);
+#define VTABLE_java_nio_DirectCharBuffer_toString_int_int_R_java_lang_String 70
+typedef jobject (*func_java_nio_DirectCharBuffer_toString_int_int_R_java_lang_String)(jcontext ctx, jobject self, jint param0, jint param1);
+#define VTABLE_java_nio_DirectCharBuffer_subSequence_int_int_R_java_nio_CharBuffer 71
+typedef jobject (*func_java_nio_DirectCharBuffer_subSequence_int_int_R_java_nio_CharBuffer)(jcontext ctx, jobject self, jint param0, jint param1);
+#define VTABLE_java_nio_DirectCharBuffer_append_java_lang_CharSequence_R_java_nio_CharBuffer 72
+typedef jobject (*func_java_nio_DirectCharBuffer_append_java_lang_CharSequence_R_java_nio_CharBuffer)(jcontext ctx, jobject self, jobject param0);
+#define VTABLE_java_nio_DirectCharBuffer_append_java_lang_CharSequence_int_int_R_java_nio_CharBuffer 73
+typedef jobject (*func_java_nio_DirectCharBuffer_append_java_lang_CharSequence_int_int_R_java_nio_CharBuffer)(jcontext ctx, jobject self, jobject param0, jint param1, jint param2);
+#define VTABLE_java_nio_DirectCharBuffer_append_char_R_java_nio_CharBuffer 74
+typedef jobject (*func_java_nio_DirectCharBuffer_append_char_R_java_nio_CharBuffer)(jcontext ctx, jobject self, jchar param0);
+#define VTABLE_java_nio_DirectCharBuffer_order_R_java_nio_ByteOrder 75
+typedef jobject (*func_java_nio_DirectCharBuffer_order_R_java_nio_ByteOrder)(jcontext ctx, jobject self);
+#define VTABLE_java_nio_DirectCharBuffer_ix_int_R_int 76
+typedef jint (*func_java_nio_DirectCharBuffer_ix_int_R_int)(jcontext ctx, jobject self, jint param0);
+
+void mark_java_nio_DirectCharBuffer(jobject object, jint mark, jint depth);
+void clinit_java_nio_DirectCharBuffer(jcontext ctx);
+void init_java_nio_DirectCharBuffer_java_nio_ByteBuffer(jcontext ctx, jobject self, jobject param0);
+void init_java_nio_DirectCharBuffer_java_nio_ByteBuffer_int_int_int_int_int(jcontext ctx, jobject self, jobject param0, jint param1, jint param2, jint param3, jint param4, jint param5);
+jobject M_java_nio_DirectCharBuffer_slice_R_java_nio_CharBuffer(jcontext ctx, jobject self);
+jobject M_java_nio_DirectCharBuffer_duplicate_R_java_nio_CharBuffer(jcontext ctx, jobject self);
+jobject M_java_nio_DirectCharBuffer_asReadOnlyBuffer_R_java_nio_CharBuffer(jcontext ctx, jobject self);
+jint M_java_nio_DirectCharBuffer_ix_int_R_int(jcontext ctx, jobject self, jint param0);
+jchar M_java_nio_DirectCharBuffer_get_R_char(jcontext ctx, jobject self);
+jchar M_java_nio_DirectCharBuffer_get_int_R_char(jcontext ctx, jobject self, jint param0);
+jchar M_java_nio_DirectCharBuffer_getUnchecked_int_R_char(jcontext ctx, jobject self, jint param0);
+jobject M_java_nio_DirectCharBuffer_put_char_R_java_nio_CharBuffer(jcontext ctx, jobject self, jchar param0);
+jobject M_java_nio_DirectCharBuffer_put_int_char_R_java_nio_CharBuffer(jcontext ctx, jobject self, jint param0, jchar param1);
+jobject M_java_nio_DirectCharBuffer_compact_R_java_nio_CharBuffer(jcontext ctx, jobject self);
+jbool M_java_nio_DirectCharBuffer_isDirect_R_boolean(jcontext ctx, jobject self);
+jbool M_java_nio_DirectCharBuffer_isReadOnly_R_boolean(jcontext ctx, jobject self);
+jobject M_java_nio_DirectCharBuffer_toString_int_int_R_java_lang_String(jcontext ctx, jobject self, jint param0, jint param1);
+jobject M_java_nio_DirectCharBuffer_subSequence_int_int_R_java_nio_CharBuffer(jcontext ctx, jobject self, jint param0, jint param1);
+jobject M_java_nio_DirectCharBuffer_order_R_java_nio_ByteOrder(jcontext ctx, jobject self);
+jobject M_java_nio_DirectCharBuffer_subSequence_int_int_R_java_lang_CharSequence(jcontext ctx, jobject self, jint param0, jint param1);
+
+#ifdef __cplusplus
+}
+#endif
+
+#endif

@@ -1,0 +1,113 @@
+#ifndef HEADER_mindustry_content_UnitTypes
+#define HEADER_mindustry_content_UnitTypes
+
+#include "Clearwing.h"
+#include "java/lang/Object.h"
+
+#ifdef __cplusplus
+extern "C" {
+#endif
+
+typedef struct mindustry_content_UnitTypes {
+	java_lang_Object parent;
+} mindustry_content_UnitTypes;
+
+extern Class class_mindustry_content_UnitTypes;
+
+extern jobject SF_mindustry_content_UnitTypes_mace;
+extern jobject SF_mindustry_content_UnitTypes_dagger;
+extern jobject SF_mindustry_content_UnitTypes_crawler;
+extern jobject SF_mindustry_content_UnitTypes_fortress;
+extern jobject SF_mindustry_content_UnitTypes_scepter;
+extern jobject SF_mindustry_content_UnitTypes_reign;
+extern jobject SF_mindustry_content_UnitTypes_vela;
+extern jobject SF_mindustry_content_UnitTypes_nova;
+extern jobject SF_mindustry_content_UnitTypes_pulsar;
+extern jobject SF_mindustry_content_UnitTypes_quasar;
+extern jobject SF_mindustry_content_UnitTypes_corvus;
+extern jobject SF_mindustry_content_UnitTypes_atrax;
+extern jobject SF_mindustry_content_UnitTypes_merui;
+extern jobject SF_mindustry_content_UnitTypes_cleroi;
+extern jobject SF_mindustry_content_UnitTypes_anthicus;
+extern jobject SF_mindustry_content_UnitTypes_tecta;
+extern jobject SF_mindustry_content_UnitTypes_collaris;
+extern jobject SF_mindustry_content_UnitTypes_spiroct;
+extern jobject SF_mindustry_content_UnitTypes_arkyid;
+extern jobject SF_mindustry_content_UnitTypes_toxopid;
+extern jobject SF_mindustry_content_UnitTypes_elude;
+extern jobject SF_mindustry_content_UnitTypes_flare;
+extern jobject SF_mindustry_content_UnitTypes_eclipse;
+extern jobject SF_mindustry_content_UnitTypes_horizon;
+extern jobject SF_mindustry_content_UnitTypes_zenith;
+extern jobject SF_mindustry_content_UnitTypes_antumbra;
+extern jobject SF_mindustry_content_UnitTypes_avert;
+extern jobject SF_mindustry_content_UnitTypes_obviate;
+extern jobject SF_mindustry_content_UnitTypes_mono;
+extern jobject SF_mindustry_content_UnitTypes_poly;
+extern jobject SF_mindustry_content_UnitTypes_mega;
+extern jobject SF_mindustry_content_UnitTypes_evoke;
+extern jobject SF_mindustry_content_UnitTypes_incite;
+extern jobject SF_mindustry_content_UnitTypes_emanate;
+extern jobject SF_mindustry_content_UnitTypes_quell;
+extern jobject SF_mindustry_content_UnitTypes_disrupt;
+extern jobject SF_mindustry_content_UnitTypes_quad;
+extern jobject SF_mindustry_content_UnitTypes_oct;
+extern jobject SF_mindustry_content_UnitTypes_alpha;
+extern jobject SF_mindustry_content_UnitTypes_beta;
+extern jobject SF_mindustry_content_UnitTypes_gamma;
+extern jobject SF_mindustry_content_UnitTypes_risso;
+extern jobject SF_mindustry_content_UnitTypes_minke;
+extern jobject SF_mindustry_content_UnitTypes_bryde;
+extern jobject SF_mindustry_content_UnitTypes_sei;
+extern jobject SF_mindustry_content_UnitTypes_omura;
+extern jobject SF_mindustry_content_UnitTypes_retusa;
+extern jobject SF_mindustry_content_UnitTypes_oxynoe;
+extern jobject SF_mindustry_content_UnitTypes_cyerce;
+extern jobject SF_mindustry_content_UnitTypes_aegires;
+extern jobject SF_mindustry_content_UnitTypes_navanax;
+extern jobject SF_mindustry_content_UnitTypes_block;
+extern jobject SF_mindustry_content_UnitTypes_manifold;
+extern jobject SF_mindustry_content_UnitTypes_assemblyDrone;
+extern jobject SF_mindustry_content_UnitTypes_dummy;
+extern jobject SF_mindustry_content_UnitTypes_stell;
+extern jobject SF_mindustry_content_UnitTypes_locus;
+extern jobject SF_mindustry_content_UnitTypes_precept;
+extern jobject SF_mindustry_content_UnitTypes_vanquish;
+extern jobject SF_mindustry_content_UnitTypes_conquer;
+extern jobject SF_mindustry_content_UnitTypes_missile;
+extern jobject SF_mindustry_content_UnitTypes_latum;
+extern jobject SF_mindustry_content_UnitTypes_renale;
+
+#define VTABLE_mindustry_content_UnitTypes_hashCode_R_int 0
+typedef jint (*func_mindustry_content_UnitTypes_hashCode_R_int)(jcontext ctx, jobject self);
+#define VTABLE_mindustry_content_UnitTypes_equals_java_lang_Object_R_boolean 1
+typedef jbool (*func_mindustry_content_UnitTypes_equals_java_lang_Object_R_boolean)(jcontext ctx, jobject self, jobject param0);
+#define VTABLE_mindustry_content_UnitTypes_clone_R_java_lang_Object 2
+typedef jobject (*func_mindustry_content_UnitTypes_clone_R_java_lang_Object)(jcontext ctx, jobject self);
+#define VTABLE_mindustry_content_UnitTypes_getClass_R_java_lang_Class 3
+typedef jobject (*func_mindustry_content_UnitTypes_getClass_R_java_lang_Class)(jcontext ctx, jobject self);
+#define VTABLE_mindustry_content_UnitTypes_toString_R_java_lang_String 4
+typedef jobject (*func_mindustry_content_UnitTypes_toString_R_java_lang_String)(jcontext ctx, jobject self);
+#define VTABLE_mindustry_content_UnitTypes_finalize 5
+typedef void (*func_mindustry_content_UnitTypes_finalize)(jcontext ctx, jobject self);
+#define VTABLE_mindustry_content_UnitTypes_notify 6
+typedef void (*func_mindustry_content_UnitTypes_notify)(jcontext ctx, jobject self);
+#define VTABLE_mindustry_content_UnitTypes_notifyAll 7
+typedef void (*func_mindustry_content_UnitTypes_notifyAll)(jcontext ctx, jobject self);
+#define VTABLE_mindustry_content_UnitTypes_wait 8
+typedef void (*func_mindustry_content_UnitTypes_wait)(jcontext ctx, jobject self);
+#define VTABLE_mindustry_content_UnitTypes_wait_long 9
+typedef void (*func_mindustry_content_UnitTypes_wait_long)(jcontext ctx, jobject self, jlong param0);
+#define VTABLE_mindustry_content_UnitTypes_wait_long_int 10
+typedef void (*func_mindustry_content_UnitTypes_wait_long_int)(jcontext ctx, jobject self, jlong param0, jint param1);
+
+void mark_mindustry_content_UnitTypes(jobject object, jint mark, jint depth);
+void clinit_mindustry_content_UnitTypes(jcontext ctx);
+void init_mindustry_content_UnitTypes(jcontext ctx, jobject self);
+void SM_mindustry_content_UnitTypes_load(jcontext ctx);
+
+#ifdef __cplusplus
+}
+#endif
+
+#endif

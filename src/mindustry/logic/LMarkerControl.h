@@ -1,0 +1,91 @@
+#ifndef HEADER_mindustry_logic_LMarkerControl
+#define HEADER_mindustry_logic_LMarkerControl
+
+#include "Clearwing.h"
+#include "java/lang/Enum.h"
+
+#ifdef __cplusplus
+extern "C" {
+#endif
+
+typedef struct mindustry_logic_LMarkerControl {
+	java_lang_Enum parent;
+	jref F_params;
+} mindustry_logic_LMarkerControl;
+
+extern Class class_mindustry_logic_LMarkerControl;
+
+extern jobject SF_mindustry_logic_LMarkerControl_remove;
+extern jobject SF_mindustry_logic_LMarkerControl_world;
+extern jobject SF_mindustry_logic_LMarkerControl_minimap;
+extern jobject SF_mindustry_logic_LMarkerControl_light;
+extern jobject SF_mindustry_logic_LMarkerControl_autoscale;
+extern jobject SF_mindustry_logic_LMarkerControl_pos;
+extern jobject SF_mindustry_logic_LMarkerControl_endPos;
+extern jobject SF_mindustry_logic_LMarkerControl_drawLayer;
+extern jobject SF_mindustry_logic_LMarkerControl_color;
+extern jobject SF_mindustry_logic_LMarkerControl_radius;
+extern jobject SF_mindustry_logic_LMarkerControl_stroke;
+extern jobject SF_mindustry_logic_LMarkerControl_outline;
+extern jobject SF_mindustry_logic_LMarkerControl_rotation;
+extern jobject SF_mindustry_logic_LMarkerControl_shape;
+extern jobject SF_mindustry_logic_LMarkerControl_arc;
+extern jobject SF_mindustry_logic_LMarkerControl_flushText;
+extern jobject SF_mindustry_logic_LMarkerControl_fontSize;
+extern jobject SF_mindustry_logic_LMarkerControl_textHeight;
+extern jobject SF_mindustry_logic_LMarkerControl_textAlign;
+extern jobject SF_mindustry_logic_LMarkerControl_lineAlign;
+extern jobject SF_mindustry_logic_LMarkerControl_labelFlags;
+extern jobject SF_mindustry_logic_LMarkerControl_texture;
+extern jobject SF_mindustry_logic_LMarkerControl_textureSize;
+extern jobject SF_mindustry_logic_LMarkerControl_posi;
+extern jobject SF_mindustry_logic_LMarkerControl_uvi;
+extern jobject SF_mindustry_logic_LMarkerControl_colori;
+extern jobject SF_mindustry_logic_LMarkerControl_all;
+extern jobject SF_mindustry_logic_LMarkerControl_$VALUES;
+
+#define VTABLE_mindustry_logic_LMarkerControl_hashCode_R_int 0
+typedef jint (*func_mindustry_logic_LMarkerControl_hashCode_R_int)(jcontext ctx, jobject self);
+#define VTABLE_mindustry_logic_LMarkerControl_equals_java_lang_Object_R_boolean 1
+typedef jbool (*func_mindustry_logic_LMarkerControl_equals_java_lang_Object_R_boolean)(jcontext ctx, jobject self, jobject param0);
+#define VTABLE_mindustry_logic_LMarkerControl_clone_R_java_lang_Object 2
+typedef jobject (*func_mindustry_logic_LMarkerControl_clone_R_java_lang_Object)(jcontext ctx, jobject self);
+#define VTABLE_mindustry_logic_LMarkerControl_getClass_R_java_lang_Class 3
+typedef jobject (*func_mindustry_logic_LMarkerControl_getClass_R_java_lang_Class)(jcontext ctx, jobject self);
+#define VTABLE_mindustry_logic_LMarkerControl_toString_R_java_lang_String 4
+typedef jobject (*func_mindustry_logic_LMarkerControl_toString_R_java_lang_String)(jcontext ctx, jobject self);
+#define VTABLE_mindustry_logic_LMarkerControl_finalize 5
+typedef void (*func_mindustry_logic_LMarkerControl_finalize)(jcontext ctx, jobject self);
+#define VTABLE_mindustry_logic_LMarkerControl_notify 6
+typedef void (*func_mindustry_logic_LMarkerControl_notify)(jcontext ctx, jobject self);
+#define VTABLE_mindustry_logic_LMarkerControl_notifyAll 7
+typedef void (*func_mindustry_logic_LMarkerControl_notifyAll)(jcontext ctx, jobject self);
+#define VTABLE_mindustry_logic_LMarkerControl_wait 8
+typedef void (*func_mindustry_logic_LMarkerControl_wait)(jcontext ctx, jobject self);
+#define VTABLE_mindustry_logic_LMarkerControl_wait_long 9
+typedef void (*func_mindustry_logic_LMarkerControl_wait_long)(jcontext ctx, jobject self, jlong param0);
+#define VTABLE_mindustry_logic_LMarkerControl_wait_long_int 10
+typedef void (*func_mindustry_logic_LMarkerControl_wait_long_int)(jcontext ctx, jobject self, jlong param0, jint param1);
+#define VTABLE_mindustry_logic_LMarkerControl_compareTo_java_lang_Object_R_int 11
+typedef jint (*func_mindustry_logic_LMarkerControl_compareTo_java_lang_Object_R_int)(jcontext ctx, jobject self, jobject param0);
+#define VTABLE_mindustry_logic_LMarkerControl_compareTo_java_lang_Enum_R_int 12
+typedef jint (*func_mindustry_logic_LMarkerControl_compareTo_java_lang_Enum_R_int)(jcontext ctx, jobject self, jobject param0);
+#define VTABLE_mindustry_logic_LMarkerControl_name_R_java_lang_String 13
+typedef jobject (*func_mindustry_logic_LMarkerControl_name_R_java_lang_String)(jcontext ctx, jobject self);
+#define VTABLE_mindustry_logic_LMarkerControl_ordinal_R_int 14
+typedef jint (*func_mindustry_logic_LMarkerControl_ordinal_R_int)(jcontext ctx, jobject self);
+#define VTABLE_mindustry_logic_LMarkerControl_getDeclaringClass_R_java_lang_Class 15
+typedef jobject (*func_mindustry_logic_LMarkerControl_getDeclaringClass_R_java_lang_Class)(jcontext ctx, jobject self);
+
+void mark_mindustry_logic_LMarkerControl(jobject object, jint mark, jint depth);
+void clinit_mindustry_logic_LMarkerControl(jcontext ctx);
+jobject SM_mindustry_logic_LMarkerControl_values_R_Array1_mindustry_logic_LMarkerControl(jcontext ctx);
+jobject SM_mindustry_logic_LMarkerControl_valueOf_java_lang_String_R_mindustry_logic_LMarkerControl(jcontext ctx, jobject param0);
+void init_mindustry_logic_LMarkerControl_java_lang_String_int_Array1_java_lang_String(jcontext ctx, jobject self, jobject param0, jint param1, jobject param2);
+jobject SM_mindustry_logic_LMarkerControl_$values_R_Array1_mindustry_logic_LMarkerControl(jcontext ctx);
+
+#ifdef __cplusplus
+}
+#endif
+
+#endif

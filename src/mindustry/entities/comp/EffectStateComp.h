@@ -1,0 +1,209 @@
+#ifndef HEADER_mindustry_entities_comp_EffectStateComp
+#define HEADER_mindustry_entities_comp_EffectStateComp
+
+#include "Clearwing.h"
+#include "java/lang/Object.h"
+#include "mindustry/gen/Posc.h"
+#include "mindustry/gen/Drawc.h"
+#include "mindustry/gen/Timedc.h"
+#include "mindustry/gen/Rotc.h"
+#include "mindustry/gen/Childc.h"
+
+#ifdef __cplusplus
+extern "C" {
+#endif
+
+typedef struct mindustry_entities_comp_EffectStateComp {
+	java_lang_Object parent;
+	jfloat F_time;
+	jfloat F_lifetime;
+	jfloat F_rotation;
+	jfloat F_x;
+	jfloat F_y;
+	jint F_id;
+	jref F_color;
+	jref F_effect;
+	jref F_data;
+} mindustry_entities_comp_EffectStateComp;
+
+extern Class class_mindustry_entities_comp_EffectStateComp;
+
+
+#define VTABLE_mindustry_entities_comp_EffectStateComp_hashCode_R_int 0
+typedef jint (*func_mindustry_entities_comp_EffectStateComp_hashCode_R_int)(jcontext ctx, jobject self);
+#define VTABLE_mindustry_entities_comp_EffectStateComp_equals_java_lang_Object_R_boolean 1
+typedef jbool (*func_mindustry_entities_comp_EffectStateComp_equals_java_lang_Object_R_boolean)(jcontext ctx, jobject self, jobject param0);
+#define VTABLE_mindustry_entities_comp_EffectStateComp_clone_R_java_lang_Object 2
+typedef jobject (*func_mindustry_entities_comp_EffectStateComp_clone_R_java_lang_Object)(jcontext ctx, jobject self);
+#define VTABLE_mindustry_entities_comp_EffectStateComp_getClass_R_java_lang_Class 3
+typedef jobject (*func_mindustry_entities_comp_EffectStateComp_getClass_R_java_lang_Class)(jcontext ctx, jobject self);
+#define VTABLE_mindustry_entities_comp_EffectStateComp_toString_R_java_lang_String 4
+typedef jobject (*func_mindustry_entities_comp_EffectStateComp_toString_R_java_lang_String)(jcontext ctx, jobject self);
+#define VTABLE_mindustry_entities_comp_EffectStateComp_finalize 5
+typedef void (*func_mindustry_entities_comp_EffectStateComp_finalize)(jcontext ctx, jobject self);
+#define VTABLE_mindustry_entities_comp_EffectStateComp_notify 6
+typedef void (*func_mindustry_entities_comp_EffectStateComp_notify)(jcontext ctx, jobject self);
+#define VTABLE_mindustry_entities_comp_EffectStateComp_notifyAll 7
+typedef void (*func_mindustry_entities_comp_EffectStateComp_notifyAll)(jcontext ctx, jobject self);
+#define VTABLE_mindustry_entities_comp_EffectStateComp_wait 8
+typedef void (*func_mindustry_entities_comp_EffectStateComp_wait)(jcontext ctx, jobject self);
+#define VTABLE_mindustry_entities_comp_EffectStateComp_wait_long 9
+typedef void (*func_mindustry_entities_comp_EffectStateComp_wait_long)(jcontext ctx, jobject self, jlong param0);
+#define VTABLE_mindustry_entities_comp_EffectStateComp_wait_long_int 10
+typedef void (*func_mindustry_entities_comp_EffectStateComp_wait_long_int)(jcontext ctx, jobject self, jlong param0, jint param1);
+#define VTABLE_mindustry_entities_comp_EffectStateComp_getX_R_float 11
+typedef jfloat (*func_mindustry_entities_comp_EffectStateComp_getX_R_float)(jcontext ctx, jobject self);
+#define VTABLE_mindustry_entities_comp_EffectStateComp_getY_R_float 12
+typedef jfloat (*func_mindustry_entities_comp_EffectStateComp_getY_R_float)(jcontext ctx, jobject self);
+#define VTABLE_mindustry_entities_comp_EffectStateComp_angleTo_arc_math_geom_Position_R_float 13
+typedef jfloat (*func_mindustry_entities_comp_EffectStateComp_angleTo_arc_math_geom_Position_R_float)(jcontext ctx, jobject self, jobject param0);
+#define VTABLE_mindustry_entities_comp_EffectStateComp_angleTo_float_float_R_float 14
+typedef jfloat (*func_mindustry_entities_comp_EffectStateComp_angleTo_float_float_R_float)(jcontext ctx, jobject self, jfloat param0, jfloat param1);
+#define VTABLE_mindustry_entities_comp_EffectStateComp_dst2_arc_math_geom_Position_R_float 15
+typedef jfloat (*func_mindustry_entities_comp_EffectStateComp_dst2_arc_math_geom_Position_R_float)(jcontext ctx, jobject self, jobject param0);
+#define VTABLE_mindustry_entities_comp_EffectStateComp_dst_arc_math_geom_Position_R_float 16
+typedef jfloat (*func_mindustry_entities_comp_EffectStateComp_dst_arc_math_geom_Position_R_float)(jcontext ctx, jobject self, jobject param0);
+#define VTABLE_mindustry_entities_comp_EffectStateComp_dst_float_float_R_float 17
+typedef jfloat (*func_mindustry_entities_comp_EffectStateComp_dst_float_float_R_float)(jcontext ctx, jobject self, jfloat param0, jfloat param1);
+#define VTABLE_mindustry_entities_comp_EffectStateComp_dst2_float_float_R_float 18
+typedef jfloat (*func_mindustry_entities_comp_EffectStateComp_dst2_float_float_R_float)(jcontext ctx, jobject self, jfloat param0, jfloat param1);
+#define VTABLE_mindustry_entities_comp_EffectStateComp_within_arc_math_geom_Position_float_R_boolean 19
+typedef jbool (*func_mindustry_entities_comp_EffectStateComp_within_arc_math_geom_Position_float_R_boolean)(jcontext ctx, jobject self, jobject param0, jfloat param1);
+#define VTABLE_mindustry_entities_comp_EffectStateComp_within_float_float_float_R_boolean 20
+typedef jbool (*func_mindustry_entities_comp_EffectStateComp_within_float_float_float_R_boolean)(jcontext ctx, jobject self, jfloat param0, jfloat param1, jfloat param2);
+#define VTABLE_mindustry_entities_comp_EffectStateComp_self_R_mindustry_gen_Entityc 21
+typedef jobject (*func_mindustry_entities_comp_EffectStateComp_self_R_mindustry_gen_Entityc)(jcontext ctx, jobject self);
+#define VTABLE_mindustry_entities_comp_EffectStateComp_as_R_java_lang_Object 22
+typedef jobject (*func_mindustry_entities_comp_EffectStateComp_as_R_java_lang_Object)(jcontext ctx, jobject self);
+#define VTABLE_mindustry_entities_comp_EffectStateComp_isAdded_R_boolean 23
+typedef jbool (*func_mindustry_entities_comp_EffectStateComp_isAdded_R_boolean)(jcontext ctx, jobject self);
+#define VTABLE_mindustry_entities_comp_EffectStateComp_isLocal_R_boolean 24
+typedef jbool (*func_mindustry_entities_comp_EffectStateComp_isLocal_R_boolean)(jcontext ctx, jobject self);
+#define VTABLE_mindustry_entities_comp_EffectStateComp_isRemote_R_boolean 25
+typedef jbool (*func_mindustry_entities_comp_EffectStateComp_isRemote_R_boolean)(jcontext ctx, jobject self);
+#define VTABLE_mindustry_entities_comp_EffectStateComp_serialize_R_boolean 26
+typedef jbool (*func_mindustry_entities_comp_EffectStateComp_serialize_R_boolean)(jcontext ctx, jobject self);
+#define VTABLE_mindustry_entities_comp_EffectStateComp_classId_R_int 27
+typedef jint (*func_mindustry_entities_comp_EffectStateComp_classId_R_int)(jcontext ctx, jobject self);
+#define VTABLE_mindustry_entities_comp_EffectStateComp_id_R_int 28
+typedef jint (*func_mindustry_entities_comp_EffectStateComp_id_R_int)(jcontext ctx, jobject self);
+#define VTABLE_mindustry_entities_comp_EffectStateComp_add 29
+typedef void (*func_mindustry_entities_comp_EffectStateComp_add)(jcontext ctx, jobject self);
+#define VTABLE_mindustry_entities_comp_EffectStateComp_afterRead 30
+typedef void (*func_mindustry_entities_comp_EffectStateComp_afterRead)(jcontext ctx, jobject self);
+#define VTABLE_mindustry_entities_comp_EffectStateComp_afterReadAll 31
+typedef void (*func_mindustry_entities_comp_EffectStateComp_afterReadAll)(jcontext ctx, jobject self);
+#define VTABLE_mindustry_entities_comp_EffectStateComp_beforeWrite 32
+typedef void (*func_mindustry_entities_comp_EffectStateComp_beforeWrite)(jcontext ctx, jobject self);
+#define VTABLE_mindustry_entities_comp_EffectStateComp_id_int 33
+typedef void (*func_mindustry_entities_comp_EffectStateComp_id_int)(jcontext ctx, jobject self, jint param0);
+#define VTABLE_mindustry_entities_comp_EffectStateComp_read_arc_util_io_Reads 34
+typedef void (*func_mindustry_entities_comp_EffectStateComp_read_arc_util_io_Reads)(jcontext ctx, jobject self, jobject param0);
+#define VTABLE_mindustry_entities_comp_EffectStateComp_remove 35
+typedef void (*func_mindustry_entities_comp_EffectStateComp_remove)(jcontext ctx, jobject self);
+#define VTABLE_mindustry_entities_comp_EffectStateComp_update 36
+typedef void (*func_mindustry_entities_comp_EffectStateComp_update)(jcontext ctx, jobject self);
+#define VTABLE_mindustry_entities_comp_EffectStateComp_write_arc_util_io_Writes 37
+typedef void (*func_mindustry_entities_comp_EffectStateComp_write_arc_util_io_Writes)(jcontext ctx, jobject self, jobject param0);
+#define VTABLE_mindustry_entities_comp_EffectStateComp_floorOn_R_mindustry_world_blocks_environment_Floor 38
+typedef jobject (*func_mindustry_entities_comp_EffectStateComp_floorOn_R_mindustry_world_blocks_environment_Floor)(jcontext ctx, jobject self);
+#define VTABLE_mindustry_entities_comp_EffectStateComp_buildOn_R_mindustry_gen_Building 39
+typedef jobject (*func_mindustry_entities_comp_EffectStateComp_buildOn_R_mindustry_gen_Building)(jcontext ctx, jobject self);
+#define VTABLE_mindustry_entities_comp_EffectStateComp_onSolid_R_boolean 40
+typedef jbool (*func_mindustry_entities_comp_EffectStateComp_onSolid_R_boolean)(jcontext ctx, jobject self);
+#define VTABLE_mindustry_entities_comp_EffectStateComp_x_R_float 41
+typedef jfloat (*func_mindustry_entities_comp_EffectStateComp_x_R_float)(jcontext ctx, jobject self);
+#define VTABLE_mindustry_entities_comp_EffectStateComp_y_R_float 42
+typedef jfloat (*func_mindustry_entities_comp_EffectStateComp_y_R_float)(jcontext ctx, jobject self);
+#define VTABLE_mindustry_entities_comp_EffectStateComp_tileX_R_int 43
+typedef jint (*func_mindustry_entities_comp_EffectStateComp_tileX_R_int)(jcontext ctx, jobject self);
+#define VTABLE_mindustry_entities_comp_EffectStateComp_tileY_R_int 44
+typedef jint (*func_mindustry_entities_comp_EffectStateComp_tileY_R_int)(jcontext ctx, jobject self);
+#define VTABLE_mindustry_entities_comp_EffectStateComp_blockOn_R_mindustry_world_Block 45
+typedef jobject (*func_mindustry_entities_comp_EffectStateComp_blockOn_R_mindustry_world_Block)(jcontext ctx, jobject self);
+#define VTABLE_mindustry_entities_comp_EffectStateComp_tileOn_R_mindustry_world_Tile 46
+typedef jobject (*func_mindustry_entities_comp_EffectStateComp_tileOn_R_mindustry_world_Tile)(jcontext ctx, jobject self);
+#define VTABLE_mindustry_entities_comp_EffectStateComp_set_arc_math_geom_Position 47
+typedef void (*func_mindustry_entities_comp_EffectStateComp_set_arc_math_geom_Position)(jcontext ctx, jobject self, jobject param0);
+#define VTABLE_mindustry_entities_comp_EffectStateComp_set_float_float 48
+typedef void (*func_mindustry_entities_comp_EffectStateComp_set_float_float)(jcontext ctx, jobject self, jfloat param0, jfloat param1);
+#define VTABLE_mindustry_entities_comp_EffectStateComp_trns_arc_math_geom_Position 49
+typedef void (*func_mindustry_entities_comp_EffectStateComp_trns_arc_math_geom_Position)(jcontext ctx, jobject self, jobject param0);
+#define VTABLE_mindustry_entities_comp_EffectStateComp_trns_float_float 50
+typedef void (*func_mindustry_entities_comp_EffectStateComp_trns_float_float)(jcontext ctx, jobject self, jfloat param0, jfloat param1);
+#define VTABLE_mindustry_entities_comp_EffectStateComp_x_float 51
+typedef void (*func_mindustry_entities_comp_EffectStateComp_x_float)(jcontext ctx, jobject self, jfloat param0);
+#define VTABLE_mindustry_entities_comp_EffectStateComp_y_float 52
+typedef void (*func_mindustry_entities_comp_EffectStateComp_y_float)(jcontext ctx, jobject self, jfloat param0);
+#define VTABLE_mindustry_entities_comp_EffectStateComp_clipSize_R_float 53
+typedef jfloat (*func_mindustry_entities_comp_EffectStateComp_clipSize_R_float)(jcontext ctx, jobject self);
+#define VTABLE_mindustry_entities_comp_EffectStateComp_draw 54
+typedef void (*func_mindustry_entities_comp_EffectStateComp_draw)(jcontext ctx, jobject self);
+#define VTABLE_mindustry_entities_comp_EffectStateComp_fin_R_float 55
+typedef jfloat (*func_mindustry_entities_comp_EffectStateComp_fin_R_float)(jcontext ctx, jobject self);
+#define VTABLE_mindustry_entities_comp_EffectStateComp_fout_R_float 56
+typedef jfloat (*func_mindustry_entities_comp_EffectStateComp_fout_R_float)(jcontext ctx, jobject self);
+#define VTABLE_mindustry_entities_comp_EffectStateComp_fout_arc_math_Interp_R_float 57
+typedef jfloat (*func_mindustry_entities_comp_EffectStateComp_fout_arc_math_Interp_R_float)(jcontext ctx, jobject self, jobject param0);
+#define VTABLE_mindustry_entities_comp_EffectStateComp_fout_float_R_float 58
+typedef jfloat (*func_mindustry_entities_comp_EffectStateComp_fout_float_R_float)(jcontext ctx, jobject self, jfloat param0);
+#define VTABLE_mindustry_entities_comp_EffectStateComp_fin_arc_math_Interp_R_float 59
+typedef jfloat (*func_mindustry_entities_comp_EffectStateComp_fin_arc_math_Interp_R_float)(jcontext ctx, jobject self, jobject param0);
+#define VTABLE_mindustry_entities_comp_EffectStateComp_finpow_R_float 60
+typedef jfloat (*func_mindustry_entities_comp_EffectStateComp_finpow_R_float)(jcontext ctx, jobject self);
+#define VTABLE_mindustry_entities_comp_EffectStateComp_foutpow_R_float 61
+typedef jfloat (*func_mindustry_entities_comp_EffectStateComp_foutpow_R_float)(jcontext ctx, jobject self);
+#define VTABLE_mindustry_entities_comp_EffectStateComp_finpowdown_R_float 62
+typedef jfloat (*func_mindustry_entities_comp_EffectStateComp_finpowdown_R_float)(jcontext ctx, jobject self);
+#define VTABLE_mindustry_entities_comp_EffectStateComp_foutpowdown_R_float 63
+typedef jfloat (*func_mindustry_entities_comp_EffectStateComp_foutpowdown_R_float)(jcontext ctx, jobject self);
+#define VTABLE_mindustry_entities_comp_EffectStateComp_fslope_R_float 64
+typedef jfloat (*func_mindustry_entities_comp_EffectStateComp_fslope_R_float)(jcontext ctx, jobject self);
+#define VTABLE_mindustry_entities_comp_EffectStateComp_lifetime_R_float 65
+typedef jfloat (*func_mindustry_entities_comp_EffectStateComp_lifetime_R_float)(jcontext ctx, jobject self);
+#define VTABLE_mindustry_entities_comp_EffectStateComp_time_R_float 66
+typedef jfloat (*func_mindustry_entities_comp_EffectStateComp_time_R_float)(jcontext ctx, jobject self);
+#define VTABLE_mindustry_entities_comp_EffectStateComp_lifetime_float 67
+typedef void (*func_mindustry_entities_comp_EffectStateComp_lifetime_float)(jcontext ctx, jobject self, jfloat param0);
+#define VTABLE_mindustry_entities_comp_EffectStateComp_time_float 68
+typedef void (*func_mindustry_entities_comp_EffectStateComp_time_float)(jcontext ctx, jobject self, jfloat param0);
+#define VTABLE_mindustry_entities_comp_EffectStateComp_rotation_R_float 69
+typedef jfloat (*func_mindustry_entities_comp_EffectStateComp_rotation_R_float)(jcontext ctx, jobject self);
+#define VTABLE_mindustry_entities_comp_EffectStateComp_rotation_float 70
+typedef void (*func_mindustry_entities_comp_EffectStateComp_rotation_float)(jcontext ctx, jobject self, jfloat param0);
+#define VTABLE_mindustry_entities_comp_EffectStateComp_parent_R_mindustry_gen_Posc 71
+typedef jobject (*func_mindustry_entities_comp_EffectStateComp_parent_R_mindustry_gen_Posc)(jcontext ctx, jobject self);
+#define VTABLE_mindustry_entities_comp_EffectStateComp_rotWithParent_R_boolean 72
+typedef jbool (*func_mindustry_entities_comp_EffectStateComp_rotWithParent_R_boolean)(jcontext ctx, jobject self);
+#define VTABLE_mindustry_entities_comp_EffectStateComp_offsetPos_R_float 73
+typedef jfloat (*func_mindustry_entities_comp_EffectStateComp_offsetPos_R_float)(jcontext ctx, jobject self);
+#define VTABLE_mindustry_entities_comp_EffectStateComp_offsetRot_R_float 74
+typedef jfloat (*func_mindustry_entities_comp_EffectStateComp_offsetRot_R_float)(jcontext ctx, jobject self);
+#define VTABLE_mindustry_entities_comp_EffectStateComp_offsetX_R_float 75
+typedef jfloat (*func_mindustry_entities_comp_EffectStateComp_offsetX_R_float)(jcontext ctx, jobject self);
+#define VTABLE_mindustry_entities_comp_EffectStateComp_offsetY_R_float 76
+typedef jfloat (*func_mindustry_entities_comp_EffectStateComp_offsetY_R_float)(jcontext ctx, jobject self);
+#define VTABLE_mindustry_entities_comp_EffectStateComp_offsetPos_float 77
+typedef void (*func_mindustry_entities_comp_EffectStateComp_offsetPos_float)(jcontext ctx, jobject self, jfloat param0);
+#define VTABLE_mindustry_entities_comp_EffectStateComp_offsetRot_float 78
+typedef void (*func_mindustry_entities_comp_EffectStateComp_offsetRot_float)(jcontext ctx, jobject self, jfloat param0);
+#define VTABLE_mindustry_entities_comp_EffectStateComp_offsetX_float 79
+typedef void (*func_mindustry_entities_comp_EffectStateComp_offsetX_float)(jcontext ctx, jobject self, jfloat param0);
+#define VTABLE_mindustry_entities_comp_EffectStateComp_offsetY_float 80
+typedef void (*func_mindustry_entities_comp_EffectStateComp_offsetY_float)(jcontext ctx, jobject self, jfloat param0);
+#define VTABLE_mindustry_entities_comp_EffectStateComp_parent_mindustry_gen_Posc 81
+typedef void (*func_mindustry_entities_comp_EffectStateComp_parent_mindustry_gen_Posc)(jcontext ctx, jobject self, jobject param0);
+#define VTABLE_mindustry_entities_comp_EffectStateComp_rotWithParent_boolean 82
+typedef void (*func_mindustry_entities_comp_EffectStateComp_rotWithParent_boolean)(jcontext ctx, jobject self, jbool param0);
+
+void mark_mindustry_entities_comp_EffectStateComp(jobject object, jint mark, jint depth);
+void clinit_mindustry_entities_comp_EffectStateComp(jcontext ctx);
+void init_mindustry_entities_comp_EffectStateComp(jcontext ctx, jobject self);
+void M_mindustry_entities_comp_EffectStateComp_draw(jcontext ctx, jobject self);
+jfloat M_mindustry_entities_comp_EffectStateComp_clipSize_R_float(jcontext ctx, jobject self);
+
+#ifdef __cplusplus
+}
+#endif
+
+#endif

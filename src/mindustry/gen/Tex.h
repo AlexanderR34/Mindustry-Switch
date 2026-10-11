@@ -1,0 +1,180 @@
+#ifndef HEADER_mindustry_gen_Tex
+#define HEADER_mindustry_gen_Tex
+
+#include "Clearwing.h"
+#include "java/lang/Object.h"
+
+#ifdef __cplusplus
+extern "C" {
+#endif
+
+typedef struct mindustry_gen_Tex {
+	java_lang_Object parent;
+} mindustry_gen_Tex;
+
+extern Class class_mindustry_gen_Tex;
+
+extern jobject SF_mindustry_gen_Tex_alphaBgLine;
+extern jobject SF_mindustry_gen_Tex_alphaBg;
+extern jobject SF_mindustry_gen_Tex_alphaaaa;
+extern jobject SF_mindustry_gen_Tex_barTop;
+extern jobject SF_mindustry_gen_Tex_bar;
+extern jobject SF_mindustry_gen_Tex_buttonDisabled;
+extern jobject SF_mindustry_gen_Tex_buttonDown;
+extern jobject SF_mindustry_gen_Tex_buttonEdge1;
+extern jobject SF_mindustry_gen_Tex_buttonEdge2;
+extern jobject SF_mindustry_gen_Tex_buttonEdge3;
+extern jobject SF_mindustry_gen_Tex_buttonEdge4;
+extern jobject SF_mindustry_gen_Tex_buttonEdgeDown1;
+extern jobject SF_mindustry_gen_Tex_buttonEdgeDown3;
+extern jobject SF_mindustry_gen_Tex_buttonEdgeOver1;
+extern jobject SF_mindustry_gen_Tex_buttonEdgeOver3;
+extern jobject SF_mindustry_gen_Tex_buttonEdgeOver4;
+extern jobject SF_mindustry_gen_Tex_buttonOver;
+extern jobject SF_mindustry_gen_Tex_buttonRed;
+extern jobject SF_mindustry_gen_Tex_buttonRightDisabled;
+extern jobject SF_mindustry_gen_Tex_buttonRightDown;
+extern jobject SF_mindustry_gen_Tex_buttonRightOver;
+extern jobject SF_mindustry_gen_Tex_buttonRight;
+extern jobject SF_mindustry_gen_Tex_buttonSelectTrans;
+extern jobject SF_mindustry_gen_Tex_buttonSelect;
+extern jobject SF_mindustry_gen_Tex_buttonSideLeftDown;
+extern jobject SF_mindustry_gen_Tex_buttonSideLeftOver;
+extern jobject SF_mindustry_gen_Tex_buttonSideLeft;
+extern jobject SF_mindustry_gen_Tex_buttonSideRightDown;
+extern jobject SF_mindustry_gen_Tex_buttonSideRightOver;
+extern jobject SF_mindustry_gen_Tex_buttonSideRight;
+extern jobject SF_mindustry_gen_Tex_buttonTrans;
+extern jobject SF_mindustry_gen_Tex_button;
+extern jobject SF_mindustry_gen_Tex_cat;
+extern jobject SF_mindustry_gen_Tex_checkDisabled;
+extern jobject SF_mindustry_gen_Tex_checkOff;
+extern jobject SF_mindustry_gen_Tex_checkOnDisabled;
+extern jobject SF_mindustry_gen_Tex_checkOnOver;
+extern jobject SF_mindustry_gen_Tex_checkOn;
+extern jobject SF_mindustry_gen_Tex_checkOver;
+extern jobject SF_mindustry_gen_Tex_clear;
+extern jobject SF_mindustry_gen_Tex_crater;
+extern jobject SF_mindustry_gen_Tex_cursor;
+extern jobject SF_mindustry_gen_Tex_discordBanner;
+extern jobject SF_mindustry_gen_Tex_flatAngled;
+extern jobject SF_mindustry_gen_Tex_flatDownBase;
+extern jobject SF_mindustry_gen_Tex_infoBanner;
+extern jobject SF_mindustry_gen_Tex_inventory;
+extern jobject SF_mindustry_gen_Tex_logicNode;
+extern jobject SF_mindustry_gen_Tex_logo;
+extern jobject SF_mindustry_gen_Tex_nomap;
+extern jobject SF_mindustry_gen_Tex_pane2;
+extern jobject SF_mindustry_gen_Tex_paneLeft;
+extern jobject SF_mindustry_gen_Tex_paneRight;
+extern jobject SF_mindustry_gen_Tex_paneSolid;
+extern jobject SF_mindustry_gen_Tex_paneTop;
+extern jobject SF_mindustry_gen_Tex_pane;
+extern jobject SF_mindustry_gen_Tex_ranai;
+extern jobject SF_mindustry_gen_Tex_scrollHorizontal;
+extern jobject SF_mindustry_gen_Tex_scrollKnobHorizontalBlack;
+extern jobject SF_mindustry_gen_Tex_scrollKnobVerticalBlack;
+extern jobject SF_mindustry_gen_Tex_scrollKnobVerticalThin;
+extern jobject SF_mindustry_gen_Tex_scroll;
+extern jobject SF_mindustry_gen_Tex_sectorAegis;
+extern jobject SF_mindustry_gen_Tex_sectorAtlas;
+extern jobject SF_mindustry_gen_Tex_sectorAtolls;
+extern jobject SF_mindustry_gen_Tex_sectorBasin;
+extern jobject SF_mindustry_gen_Tex_sectorBiomassFacility;
+extern jobject SF_mindustry_gen_Tex_sectorCalderaErekir;
+extern jobject SF_mindustry_gen_Tex_sectorCoastline;
+extern jobject SF_mindustry_gen_Tex_sectorCrateredBattleground;
+extern jobject SF_mindustry_gen_Tex_sectorCrevice;
+extern jobject SF_mindustry_gen_Tex_sectorCrossroads;
+extern jobject SF_mindustry_gen_Tex_sectorCruxscape;
+extern jobject SF_mindustry_gen_Tex_sectorDesolateRift;
+extern jobject SF_mindustry_gen_Tex_sectorExtractionOutpost;
+extern jobject SF_mindustry_gen_Tex_sectorFacility32m;
+extern jobject SF_mindustry_gen_Tex_sectorFallenVessel;
+extern jobject SF_mindustry_gen_Tex_sectorFrontier;
+extern jobject SF_mindustry_gen_Tex_sectorFrozenForest;
+extern jobject SF_mindustry_gen_Tex_sectorFungalPass;
+extern jobject SF_mindustry_gen_Tex_sectorGeothermalStronghold;
+extern jobject SF_mindustry_gen_Tex_sectorGroundZero;
+extern jobject SF_mindustry_gen_Tex_sectorImpact0078;
+extern jobject SF_mindustry_gen_Tex_sectorInfestedCanyons;
+extern jobject SF_mindustry_gen_Tex_sectorIntersect;
+extern jobject SF_mindustry_gen_Tex_sectorKarst;
+extern jobject SF_mindustry_gen_Tex_sectorLake;
+extern jobject SF_mindustry_gen_Tex_sectorLittoralShipyard;
+extern jobject SF_mindustry_gen_Tex_sectorMarsh;
+extern jobject SF_mindustry_gen_Tex_sectorMycelialBastion;
+extern jobject SF_mindustry_gen_Tex_sectorNavalFortress;
+extern jobject SF_mindustry_gen_Tex_sectorNuclearComplex;
+extern jobject SF_mindustry_gen_Tex_sectorOnset;
+extern jobject SF_mindustry_gen_Tex_sectorOrigin;
+extern jobject SF_mindustry_gen_Tex_sectorOvergrowth;
+extern jobject SF_mindustry_gen_Tex_sectorPeaks;
+extern jobject SF_mindustry_gen_Tex_sectorPerilousHarbor;
+extern jobject SF_mindustry_gen_Tex_sectorPlanetaryTerminal;
+extern jobject SF_mindustry_gen_Tex_sectorRavine;
+extern jobject SF_mindustry_gen_Tex_sectorRuinousShores;
+extern jobject SF_mindustry_gen_Tex_sectorSaltFlats;
+extern jobject SF_mindustry_gen_Tex_sectorSiege;
+extern jobject SF_mindustry_gen_Tex_sectorSplit;
+extern jobject SF_mindustry_gen_Tex_sectorStainedMountains;
+extern jobject SF_mindustry_gen_Tex_sectorStronghold;
+extern jobject SF_mindustry_gen_Tex_sectorSunkenPier;
+extern jobject SF_mindustry_gen_Tex_sectorTaintedWoods;
+extern jobject SF_mindustry_gen_Tex_sectorTarFields;
+extern jobject SF_mindustry_gen_Tex_sectorTestingGrounds;
+extern jobject SF_mindustry_gen_Tex_sectorWeatheredChannels;
+extern jobject SF_mindustry_gen_Tex_sectorWindsweptIslands;
+extern jobject SF_mindustry_gen_Tex_selection;
+extern jobject SF_mindustry_gen_Tex_sidelineOver;
+extern jobject SF_mindustry_gen_Tex_sideline;
+extern jobject SF_mindustry_gen_Tex_sliderBack;
+extern jobject SF_mindustry_gen_Tex_sliderKnobDown;
+extern jobject SF_mindustry_gen_Tex_sliderKnobOver;
+extern jobject SF_mindustry_gen_Tex_sliderKnob;
+extern jobject SF_mindustry_gen_Tex_slider;
+extern jobject SF_mindustry_gen_Tex_underline2;
+extern jobject SF_mindustry_gen_Tex_underlineDisabled;
+extern jobject SF_mindustry_gen_Tex_underlineOver;
+extern jobject SF_mindustry_gen_Tex_underlineRed;
+extern jobject SF_mindustry_gen_Tex_underlineWhite;
+extern jobject SF_mindustry_gen_Tex_underline;
+extern jobject SF_mindustry_gen_Tex_wavepane;
+extern jobject SF_mindustry_gen_Tex_whitePane;
+extern jobject SF_mindustry_gen_Tex_whiteui;
+extern jobject SF_mindustry_gen_Tex_windowEmpty;
+
+#define VTABLE_mindustry_gen_Tex_hashCode_R_int 0
+typedef jint (*func_mindustry_gen_Tex_hashCode_R_int)(jcontext ctx, jobject self);
+#define VTABLE_mindustry_gen_Tex_equals_java_lang_Object_R_boolean 1
+typedef jbool (*func_mindustry_gen_Tex_equals_java_lang_Object_R_boolean)(jcontext ctx, jobject self, jobject param0);
+#define VTABLE_mindustry_gen_Tex_clone_R_java_lang_Object 2
+typedef jobject (*func_mindustry_gen_Tex_clone_R_java_lang_Object)(jcontext ctx, jobject self);
+#define VTABLE_mindustry_gen_Tex_getClass_R_java_lang_Class 3
+typedef jobject (*func_mindustry_gen_Tex_getClass_R_java_lang_Class)(jcontext ctx, jobject self);
+#define VTABLE_mindustry_gen_Tex_toString_R_java_lang_String 4
+typedef jobject (*func_mindustry_gen_Tex_toString_R_java_lang_String)(jcontext ctx, jobject self);
+#define VTABLE_mindustry_gen_Tex_finalize 5
+typedef void (*func_mindustry_gen_Tex_finalize)(jcontext ctx, jobject self);
+#define VTABLE_mindustry_gen_Tex_notify 6
+typedef void (*func_mindustry_gen_Tex_notify)(jcontext ctx, jobject self);
+#define VTABLE_mindustry_gen_Tex_notifyAll 7
+typedef void (*func_mindustry_gen_Tex_notifyAll)(jcontext ctx, jobject self);
+#define VTABLE_mindustry_gen_Tex_wait 8
+typedef void (*func_mindustry_gen_Tex_wait)(jcontext ctx, jobject self);
+#define VTABLE_mindustry_gen_Tex_wait_long 9
+typedef void (*func_mindustry_gen_Tex_wait_long)(jcontext ctx, jobject self, jlong param0);
+#define VTABLE_mindustry_gen_Tex_wait_long_int 10
+typedef void (*func_mindustry_gen_Tex_wait_long_int)(jcontext ctx, jobject self, jlong param0, jint param1);
+
+void mark_mindustry_gen_Tex(jobject object, jint mark, jint depth);
+void clinit_mindustry_gen_Tex(jcontext ctx);
+void init_mindustry_gen_Tex(jcontext ctx, jobject self);
+void SM_mindustry_gen_Tex_load(jcontext ctx);
+void SM_mindustry_gen_Tex_loadStyles(jcontext ctx);
+
+#ifdef __cplusplus
+}
+#endif
+
+#endif

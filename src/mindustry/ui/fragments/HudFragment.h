@@ -1,0 +1,344 @@
+#ifndef HEADER_mindustry_ui_fragments_HudFragment
+#define HEADER_mindustry_ui_fragments_HudFragment
+
+#include "Clearwing.h"
+#include "java/lang/Object.h"
+
+#ifdef __cplusplus
+extern "C" {
+#endif
+
+typedef struct mindustry_ui_fragments_HudFragment {
+	java_lang_Object parent;
+	jref F_blockfrag;
+	jref F_coreItems;
+	jbool F_shown;
+	jref F_flip;
+	jref F_hudText;
+	jbool F_showHudText;
+	jref F_lastUnlockTable;
+	jref F_lastUnlockLayout;
+	jlong F_lastToast;
+	jfloat F_pauseDisableDur;
+	jref F_blocksOut;
+	jref F_hudLabel;
+	jfloat F_coreAttackTime;
+} mindustry_ui_fragments_HudFragment;
+
+extern Class class_mindustry_ui_fragments_HudFragment;
+
+extern jfloat SF_mindustry_ui_fragments_HudFragment_dsize;
+extern jfloat SF_mindustry_ui_fragments_HudFragment_pauseHeight;
+extern jobject SF_mindustry_ui_fragments_HudFragment_favoriteBlocks;
+extern jobject SF_mindustry_ui_fragments_HudFragment_lastFavorited;
+
+#define VTABLE_mindustry_ui_fragments_HudFragment_hashCode_R_int 0
+typedef jint (*func_mindustry_ui_fragments_HudFragment_hashCode_R_int)(jcontext ctx, jobject self);
+#define VTABLE_mindustry_ui_fragments_HudFragment_equals_java_lang_Object_R_boolean 1
+typedef jbool (*func_mindustry_ui_fragments_HudFragment_equals_java_lang_Object_R_boolean)(jcontext ctx, jobject self, jobject param0);
+#define VTABLE_mindustry_ui_fragments_HudFragment_clone_R_java_lang_Object 2
+typedef jobject (*func_mindustry_ui_fragments_HudFragment_clone_R_java_lang_Object)(jcontext ctx, jobject self);
+#define VTABLE_mindustry_ui_fragments_HudFragment_getClass_R_java_lang_Class 3
+typedef jobject (*func_mindustry_ui_fragments_HudFragment_getClass_R_java_lang_Class)(jcontext ctx, jobject self);
+#define VTABLE_mindustry_ui_fragments_HudFragment_toString_R_java_lang_String 4
+typedef jobject (*func_mindustry_ui_fragments_HudFragment_toString_R_java_lang_String)(jcontext ctx, jobject self);
+#define VTABLE_mindustry_ui_fragments_HudFragment_finalize 5
+typedef void (*func_mindustry_ui_fragments_HudFragment_finalize)(jcontext ctx, jobject self);
+#define VTABLE_mindustry_ui_fragments_HudFragment_notify 6
+typedef void (*func_mindustry_ui_fragments_HudFragment_notify)(jcontext ctx, jobject self);
+#define VTABLE_mindustry_ui_fragments_HudFragment_notifyAll 7
+typedef void (*func_mindustry_ui_fragments_HudFragment_notifyAll)(jcontext ctx, jobject self);
+#define VTABLE_mindustry_ui_fragments_HudFragment_wait 8
+typedef void (*func_mindustry_ui_fragments_HudFragment_wait)(jcontext ctx, jobject self);
+#define VTABLE_mindustry_ui_fragments_HudFragment_wait_long 9
+typedef void (*func_mindustry_ui_fragments_HudFragment_wait_long)(jcontext ctx, jobject self, jlong param0);
+#define VTABLE_mindustry_ui_fragments_HudFragment_wait_long_int 10
+typedef void (*func_mindustry_ui_fragments_HudFragment_wait_long_int)(jcontext ctx, jobject self, jlong param0, jint param1);
+#define VTABLE_mindustry_ui_fragments_HudFragment_addBlockSelection_arc_scene_ui_layout_Table 11
+typedef void (*func_mindustry_ui_fragments_HudFragment_addBlockSelection_arc_scene_ui_layout_Table)(jcontext ctx, jobject self, jobject param0);
+#define VTABLE_mindustry_ui_fragments_HudFragment_rebuildBlockSelection_arc_scene_ui_layout_Table_java_lang_String 12
+typedef void (*func_mindustry_ui_fragments_HudFragment_rebuildBlockSelection_arc_scene_ui_layout_Table_java_lang_String)(jcontext ctx, jobject self, jobject param0, jobject param1);
+#define VTABLE_mindustry_ui_fragments_HudFragment_build_arc_scene_Group 13
+typedef void (*func_mindustry_ui_fragments_HudFragment_build_arc_scene_Group)(jcontext ctx, jobject self, jobject param0);
+#define VTABLE_mindustry_ui_fragments_HudFragment_setHudText_java_lang_String 14
+typedef void (*func_mindustry_ui_fragments_HudFragment_setHudText_java_lang_String)(jcontext ctx, jobject self, jobject param0);
+#define VTABLE_mindustry_ui_fragments_HudFragment_toggleHudText_boolean 15
+typedef void (*func_mindustry_ui_fragments_HudFragment_toggleHudText_boolean)(jcontext ctx, jobject self, jbool param0);
+#define VTABLE_mindustry_ui_fragments_HudFragment_scheduleToast_java_lang_Runnable 16
+typedef void (*func_mindustry_ui_fragments_HudFragment_scheduleToast_java_lang_Runnable)(jcontext ctx, jobject self, jobject param0);
+#define VTABLE_mindustry_ui_fragments_HudFragment_hasToast_R_boolean 17
+typedef jbool (*func_mindustry_ui_fragments_HudFragment_hasToast_R_boolean)(jcontext ctx, jobject self);
+#define VTABLE_mindustry_ui_fragments_HudFragment_showToast_java_lang_String 18
+typedef void (*func_mindustry_ui_fragments_HudFragment_showToast_java_lang_String)(jcontext ctx, jobject self, jobject param0);
+#define VTABLE_mindustry_ui_fragments_HudFragment_showToast_arc_scene_style_Drawable_java_lang_String 19
+typedef void (*func_mindustry_ui_fragments_HudFragment_showToast_arc_scene_style_Drawable_java_lang_String)(jcontext ctx, jobject self, jobject param0, jobject param1);
+#define VTABLE_mindustry_ui_fragments_HudFragment_showToast_arc_scene_style_Drawable_float_java_lang_String 20
+typedef void (*func_mindustry_ui_fragments_HudFragment_showToast_arc_scene_style_Drawable_float_java_lang_String)(jcontext ctx, jobject self, jobject param0, jfloat param1, jobject param2);
+#define VTABLE_mindustry_ui_fragments_HudFragment_showPauseDisabled 21
+typedef void (*func_mindustry_ui_fragments_HudFragment_showPauseDisabled)(jcontext ctx, jobject self);
+#define VTABLE_mindustry_ui_fragments_HudFragment_showUnlock_mindustry_ctype_UnlockableContent 22
+typedef void (*func_mindustry_ui_fragments_HudFragment_showUnlock_mindustry_ctype_UnlockableContent)(jcontext ctx, jobject self, jobject param0);
+#define VTABLE_mindustry_ui_fragments_HudFragment_toggleMenus 23
+typedef void (*func_mindustry_ui_fragments_HudFragment_toggleMenus)(jcontext ctx, jobject self);
+#define VTABLE_mindustry_ui_fragments_HudFragment_makeStatusTable_R_arc_scene_ui_layout_Table 24
+typedef jobject (*func_mindustry_ui_fragments_HudFragment_makeStatusTable_R_arc_scene_ui_layout_Table)(jcontext ctx, jobject self);
+#define VTABLE_mindustry_ui_fragments_HudFragment_addInfoTable_arc_scene_ui_layout_Table 25
+typedef void (*func_mindustry_ui_fragments_HudFragment_addInfoTable_arc_scene_ui_layout_Table)(jcontext ctx, jobject self, jobject param0);
+#define VTABLE_mindustry_ui_fragments_HudFragment_canSkipWave_R_boolean 26
+typedef jbool (*func_mindustry_ui_fragments_HudFragment_canSkipWave_R_boolean)(jcontext ctx, jobject self);
+#define VTABLE_mindustry_ui_fragments_HudFragment_shown_R_boolean 27
+typedef jbool (*func_mindustry_ui_fragments_HudFragment_shown_R_boolean)(jcontext ctx, jobject self);
+#define VTABLE_mindustry_ui_fragments_HudFragment_lambda$makeStatusTable$13_Array1_boolean_Array1_arc_scene_ui_layout_Cell_arc_scene_ui_layout_Table_java_lang_StringBuilder_mindustry_ui_IntFormat_mindustry_ui_IntFormat_mindustry_ui_IntFormat_mindustry_ui_IntFormat_mindustry_ui_IntFormat_mindustry_ui_IntFormat_mindustry_ui_IntFormat_R_java_lang_CharSequence 28
+typedef jobject (*func_mindustry_ui_fragments_HudFragment_lambda$makeStatusTable$13_Array1_boolean_Array1_arc_scene_ui_layout_Cell_arc_scene_ui_layout_Table_java_lang_StringBuilder_mindustry_ui_IntFormat_mindustry_ui_IntFormat_mindustry_ui_IntFormat_mindustry_ui_IntFormat_mindustry_ui_IntFormat_mindustry_ui_IntFormat_mindustry_ui_IntFormat_R_java_lang_CharSequence)(jcontext ctx, jobject self, jobject param0, jobject param1, jobject param2, jobject param3, jobject param4, jobject param5, jobject param6, jobject param7, jobject param8, jobject param9, jobject param10);
+#define VTABLE_mindustry_ui_fragments_HudFragment_lambda$makeStatusTable$1_arc_scene_ui_layout_Table 29
+typedef void (*func_mindustry_ui_fragments_HudFragment_lambda$makeStatusTable$1_arc_scene_ui_layout_Table)(jcontext ctx, jobject self, jobject param0);
+#define VTABLE_mindustry_ui_fragments_HudFragment_lambda$showUnlock$0_mindustry_ctype_UnlockableContent 30
+typedef void (*func_mindustry_ui_fragments_HudFragment_lambda$showUnlock$0_mindustry_ctype_UnlockableContent)(jcontext ctx, jobject self, jobject param0);
+#define VTABLE_mindustry_ui_fragments_HudFragment_lambda$showUnlock$2_arc_scene_ui_layout_Table_arc_scene_ui_layout_Table 31
+typedef void (*func_mindustry_ui_fragments_HudFragment_lambda$showUnlock$2_arc_scene_ui_layout_Table_arc_scene_ui_layout_Table)(jcontext ctx, jobject self, jobject param0, jobject param1);
+#define VTABLE_mindustry_ui_fragments_HudFragment_lambda$showUnlock$3 32
+typedef void (*func_mindustry_ui_fragments_HudFragment_lambda$showUnlock$3)(jcontext ctx, jobject self);
+#define VTABLE_mindustry_ui_fragments_HudFragment_lambda$showUnlock$1_arc_scene_ui_layout_Table 33
+typedef void (*func_mindustry_ui_fragments_HudFragment_lambda$showUnlock$1_arc_scene_ui_layout_Table)(jcontext ctx, jobject self, jobject param0);
+#define VTABLE_mindustry_ui_fragments_HudFragment_lambda$build$57_arc_scene_ui_layout_Table 34
+typedef void (*func_mindustry_ui_fragments_HudFragment_lambda$build$57_arc_scene_ui_layout_Table)(jcontext ctx, jobject self, jobject param0);
+#define VTABLE_mindustry_ui_fragments_HudFragment_lambda$build$77_arc_scene_ui_layout_Table 35
+typedef void (*func_mindustry_ui_fragments_HudFragment_lambda$build$77_arc_scene_ui_layout_Table)(jcontext ctx, jobject self, jobject param0);
+#define VTABLE_mindustry_ui_fragments_HudFragment_lambda$build$78_arc_scene_ui_layout_Table_R_boolean 36
+typedef jbool (*func_mindustry_ui_fragments_HudFragment_lambda$build$78_arc_scene_ui_layout_Table_R_boolean)(jcontext ctx, jobject self, jobject param0);
+#define VTABLE_mindustry_ui_fragments_HudFragment_lambda$build$76_arc_scene_ui_layout_Table 37
+typedef void (*func_mindustry_ui_fragments_HudFragment_lambda$build$76_arc_scene_ui_layout_Table)(jcontext ctx, jobject self, jobject param0);
+#define VTABLE_mindustry_ui_fragments_HudFragment_lambda$build$74_arc_scene_ui_layout_Table 38
+typedef void (*func_mindustry_ui_fragments_HudFragment_lambda$build$74_arc_scene_ui_layout_Table)(jcontext ctx, jobject self, jobject param0);
+#define VTABLE_mindustry_ui_fragments_HudFragment_lambda$build$75_R_java_lang_CharSequence 39
+typedef jobject (*func_mindustry_ui_fragments_HudFragment_lambda$build$75_R_java_lang_CharSequence)(jcontext ctx, jobject self);
+#define VTABLE_mindustry_ui_fragments_HudFragment_lambda$build$60_arc_scene_ui_layout_Table 40
+typedef void (*func_mindustry_ui_fragments_HudFragment_lambda$build$60_arc_scene_ui_layout_Table)(jcontext ctx, jobject self, jobject param0);
+#define VTABLE_mindustry_ui_fragments_HudFragment_lambda$build$68_R_boolean 41
+typedef jbool (*func_mindustry_ui_fragments_HudFragment_lambda$build$68_R_boolean)(jcontext ctx, jobject self);
+#define VTABLE_mindustry_ui_fragments_HudFragment_lambda$build$63_mindustry_game_EventType$ResetEvent 42
+typedef void (*func_mindustry_ui_fragments_HudFragment_lambda$build$63_mindustry_game_EventType$ResetEvent)(jcontext ctx, jobject self, jobject param0);
+#define VTABLE_mindustry_ui_fragments_HudFragment_lambda$build$62_float 43
+typedef void (*func_mindustry_ui_fragments_HudFragment_lambda$build$62_float)(jcontext ctx, jobject self, jfloat param0);
+#define VTABLE_mindustry_ui_fragments_HudFragment_lambda$build$61_R_boolean 44
+typedef jbool (*func_mindustry_ui_fragments_HudFragment_lambda$build$61_R_boolean)(jcontext ctx, jobject self);
+#define VTABLE_mindustry_ui_fragments_HudFragment_lambda$build$59_R_boolean 45
+typedef jbool (*func_mindustry_ui_fragments_HudFragment_lambda$build$59_R_boolean)(jcontext ctx, jobject self);
+#define VTABLE_mindustry_ui_fragments_HudFragment_lambda$build$23_arc_scene_ui_layout_Table 46
+typedef void (*func_mindustry_ui_fragments_HudFragment_lambda$build$23_arc_scene_ui_layout_Table)(jcontext ctx, jobject self, jobject param0);
+#define VTABLE_mindustry_ui_fragments_HudFragment_lambda$build$50_arc_scene_ui_layout_Table 47
+typedef void (*func_mindustry_ui_fragments_HudFragment_lambda$build$50_arc_scene_ui_layout_Table)(jcontext ctx, jobject self, jobject param0);
+#define VTABLE_mindustry_ui_fragments_HudFragment_lambda$build$51_R_boolean 48
+typedef jbool (*func_mindustry_ui_fragments_HudFragment_lambda$build$51_R_boolean)(jcontext ctx, jobject self);
+#define VTABLE_mindustry_ui_fragments_HudFragment_lambda$build$49_R_boolean 49
+typedef jbool (*func_mindustry_ui_fragments_HudFragment_lambda$build$49_R_boolean)(jcontext ctx, jobject self);
+#define VTABLE_mindustry_ui_fragments_HudFragment_lambda$build$41_arc_scene_ui_layout_Table 50
+typedef void (*func_mindustry_ui_fragments_HudFragment_lambda$build$41_arc_scene_ui_layout_Table)(jcontext ctx, jobject self, jobject param0);
+#define VTABLE_mindustry_ui_fragments_HudFragment_lambda$build$38_arc_scene_ui_layout_Table 51
+typedef void (*func_mindustry_ui_fragments_HudFragment_lambda$build$38_arc_scene_ui_layout_Table)(jcontext ctx, jobject self, jobject param0);
+#define VTABLE_mindustry_ui_fragments_HudFragment_lambda$build$40_arc_scene_ui_ImageButton_R_boolean 52
+typedef jbool (*func_mindustry_ui_fragments_HudFragment_lambda$build$40_arc_scene_ui_ImageButton_R_boolean)(jcontext ctx, jobject self, jobject param0);
+#define VTABLE_mindustry_ui_fragments_HudFragment_lambda$build$37_R_boolean 53
+typedef jbool (*func_mindustry_ui_fragments_HudFragment_lambda$build$37_R_boolean)(jcontext ctx, jobject self);
+#define VTABLE_mindustry_ui_fragments_HudFragment_lambda$build$35 54
+typedef void (*func_mindustry_ui_fragments_HudFragment_lambda$build$35)(jcontext ctx, jobject self);
+#define VTABLE_mindustry_ui_fragments_HudFragment_lambda$build$27_arc_scene_ui_layout_Table 55
+typedef void (*func_mindustry_ui_fragments_HudFragment_lambda$build$27_arc_scene_ui_layout_Table)(jcontext ctx, jobject self, jobject param0);
+#define VTABLE_mindustry_ui_fragments_HudFragment_lambda$build$29_arc_scene_ui_ImageButton 56
+typedef void (*func_mindustry_ui_fragments_HudFragment_lambda$build$29_arc_scene_ui_ImageButton)(jcontext ctx, jobject self, jobject param0);
+#define VTABLE_mindustry_ui_fragments_HudFragment_lambda$build$28 57
+typedef void (*func_mindustry_ui_fragments_HudFragment_lambda$build$28)(jcontext ctx, jobject self);
+#define VTABLE_mindustry_ui_fragments_HudFragment_lambda$build$26_R_boolean 58
+typedef jbool (*func_mindustry_ui_fragments_HudFragment_lambda$build$26_R_boolean)(jcontext ctx, jobject self);
+#define VTABLE_mindustry_ui_fragments_HudFragment_lambda$build$19_arc_scene_ui_layout_Table 59
+typedef void (*func_mindustry_ui_fragments_HudFragment_lambda$build$19_arc_scene_ui_layout_Table)(jcontext ctx, jobject self, jobject param0);
+#define VTABLE_mindustry_ui_fragments_HudFragment_lambda$build$20_R_boolean 60
+typedef jbool (*func_mindustry_ui_fragments_HudFragment_lambda$build$20_R_boolean)(jcontext ctx, jobject self);
+#define VTABLE_mindustry_ui_fragments_HudFragment_lambda$build$16_arc_scene_ui_layout_Table 61
+typedef void (*func_mindustry_ui_fragments_HudFragment_lambda$build$16_arc_scene_ui_layout_Table)(jcontext ctx, jobject self, jobject param0);
+#define VTABLE_mindustry_ui_fragments_HudFragment_lambda$build$17_R_boolean 62
+typedef jbool (*func_mindustry_ui_fragments_HudFragment_lambda$build$17_R_boolean)(jcontext ctx, jobject self);
+#define VTABLE_mindustry_ui_fragments_HudFragment_lambda$build$10_arc_scene_ui_layout_Table 63
+typedef void (*func_mindustry_ui_fragments_HudFragment_lambda$build$10_arc_scene_ui_layout_Table)(jcontext ctx, jobject self, jobject param0);
+#define VTABLE_mindustry_ui_fragments_HudFragment_lambda$build$12_arc_scene_ui_layout_Table 64
+typedef void (*func_mindustry_ui_fragments_HudFragment_lambda$build$12_arc_scene_ui_layout_Table)(jcontext ctx, jobject self, jobject param0);
+#define VTABLE_mindustry_ui_fragments_HudFragment_lambda$build$11_R_boolean 65
+typedef jbool (*func_mindustry_ui_fragments_HudFragment_lambda$build$11_R_boolean)(jcontext ctx, jobject self);
+#define VTABLE_mindustry_ui_fragments_HudFragment_lambda$build$5_arc_scene_ui_layout_Table 66
+typedef void (*func_mindustry_ui_fragments_HudFragment_lambda$build$5_arc_scene_ui_layout_Table)(jcontext ctx, jobject self, jobject param0);
+#define VTABLE_mindustry_ui_fragments_HudFragment_lambda$build$6_R_boolean 67
+typedef jbool (*func_mindustry_ui_fragments_HudFragment_lambda$build$6_R_boolean)(jcontext ctx, jobject self);
+#define VTABLE_mindustry_ui_fragments_HudFragment_lambda$build$4_mindustry_game_EventType$ResetEvent 68
+typedef void (*func_mindustry_ui_fragments_HudFragment_lambda$build$4_mindustry_game_EventType$ResetEvent)(jcontext ctx, jobject self, jobject param0);
+#define VTABLE_mindustry_ui_fragments_HudFragment_lambda$build$3_mindustry_game_EventType$SectorInvasionEvent 69
+typedef void (*func_mindustry_ui_fragments_HudFragment_lambda$build$3_mindustry_game_EventType$SectorInvasionEvent)(jcontext ctx, jobject self, jobject param0);
+#define VTABLE_mindustry_ui_fragments_HudFragment_lambda$build$2_mindustry_game_EventType$SectorLoseEvent 70
+typedef void (*func_mindustry_ui_fragments_HudFragment_lambda$build$2_mindustry_game_EventType$SectorLoseEvent)(jcontext ctx, jobject self, jobject param0);
+#define VTABLE_mindustry_ui_fragments_HudFragment_lambda$build$1_mindustry_game_EventType$SectorCaptureEvent 71
+typedef void (*func_mindustry_ui_fragments_HudFragment_lambda$build$1_mindustry_game_EventType$SectorCaptureEvent)(jcontext ctx, jobject self, jobject param0);
+#define VTABLE_mindustry_ui_fragments_HudFragment_lambda$build$0_mindustry_game_EventType$WaveEvent 72
+typedef void (*func_mindustry_ui_fragments_HudFragment_lambda$build$0_mindustry_game_EventType$WaveEvent)(jcontext ctx, jobject self, jobject param0);
+#define VTABLE_mindustry_ui_fragments_HudFragment_lambda$rebuildBlockSelection$2_mindustry_world_Block_arc_scene_ui_layout_Table_java_lang_String 73
+typedef void (*func_mindustry_ui_fragments_HudFragment_lambda$rebuildBlockSelection$2_mindustry_world_Block_arc_scene_ui_layout_Table_java_lang_String)(jcontext ctx, jobject self, jobject param0, jobject param1, jobject param2);
+#define VTABLE_mindustry_ui_fragments_HudFragment_lambda$addBlockSelection$1_arc_scene_ui_layout_Table_arc_scene_ui_layout_Table 74
+typedef void (*func_mindustry_ui_fragments_HudFragment_lambda$addBlockSelection$1_arc_scene_ui_layout_Table_arc_scene_ui_layout_Table)(jcontext ctx, jobject self, jobject param0, jobject param1);
+#define VTABLE_mindustry_ui_fragments_HudFragment_lambda$addBlockSelection$2_arc_scene_ui_layout_Table_java_lang_String 75
+typedef void (*func_mindustry_ui_fragments_HudFragment_lambda$addBlockSelection$2_arc_scene_ui_layout_Table_java_lang_String)(jcontext ctx, jobject self, jobject param0, jobject param1);
+#define VTABLE_mindustry_ui_fragments_HudFragment_lambda$addBlockSelection$0_arc_scene_ui_ScrollPane_Array1_mindustry_type_Planet_arc_scene_ui_layout_Table 76
+typedef void (*func_mindustry_ui_fragments_HudFragment_lambda$addBlockSelection$0_arc_scene_ui_ScrollPane_Array1_mindustry_type_Planet_arc_scene_ui_layout_Table)(jcontext ctx, jobject self, jobject param0, jobject param1, jobject param2);
+
+void mark_mindustry_ui_fragments_HudFragment(jobject object, jint mark, jint depth);
+void clinit_mindustry_ui_fragments_HudFragment(jcontext ctx);
+void init_mindustry_ui_fragments_HudFragment(jcontext ctx, jobject self);
+void M_mindustry_ui_fragments_HudFragment_addBlockSelection_arc_scene_ui_layout_Table(jcontext ctx, jobject self, jobject param0);
+void SM_mindustry_ui_fragments_HudFragment_loadFavorites(jcontext ctx);
+void SM_mindustry_ui_fragments_HudFragment_saveFavorites(jcontext ctx);
+jbool SM_mindustry_ui_fragments_HudFragment_isFavorite_mindustry_world_Block_R_boolean(jcontext ctx, jobject param0);
+void SM_mindustry_ui_fragments_HudFragment_toggleFavorite_mindustry_world_Block(jcontext ctx, jobject param0);
+void M_mindustry_ui_fragments_HudFragment_rebuildBlockSelection_arc_scene_ui_layout_Table_java_lang_String(jcontext ctx, jobject self, jobject param0, jobject param1);
+void M_mindustry_ui_fragments_HudFragment_build_arc_scene_Group(jcontext ctx, jobject self, jobject param0);
+void SM_mindustry_ui_fragments_HudFragment_setPlayerTeamEditor_mindustry_gen_Player_mindustry_game_Team(jcontext ctx, jobject param0, jobject param1);
+void M_mindustry_ui_fragments_HudFragment_setHudText_java_lang_String(jcontext ctx, jobject self, jobject param0);
+void M_mindustry_ui_fragments_HudFragment_toggleHudText_boolean(jcontext ctx, jobject self, jbool param0);
+void M_mindustry_ui_fragments_HudFragment_scheduleToast_java_lang_Runnable(jcontext ctx, jobject self, jobject param0);
+jbool M_mindustry_ui_fragments_HudFragment_hasToast_R_boolean(jcontext ctx, jobject self);
+void M_mindustry_ui_fragments_HudFragment_showToast_java_lang_String(jcontext ctx, jobject self, jobject param0);
+void M_mindustry_ui_fragments_HudFragment_showToast_arc_scene_style_Drawable_java_lang_String(jcontext ctx, jobject self, jobject param0, jobject param1);
+void M_mindustry_ui_fragments_HudFragment_showToast_arc_scene_style_Drawable_float_java_lang_String(jcontext ctx, jobject self, jobject param0, jfloat param1, jobject param2);
+void M_mindustry_ui_fragments_HudFragment_showPauseDisabled(jcontext ctx, jobject self);
+void M_mindustry_ui_fragments_HudFragment_showUnlock_mindustry_ctype_UnlockableContent(jcontext ctx, jobject self, jobject param0);
+void M_mindustry_ui_fragments_HudFragment_toggleMenus(jcontext ctx, jobject self);
+jobject M_mindustry_ui_fragments_HudFragment_makeStatusTable_R_arc_scene_ui_layout_Table(jcontext ctx, jobject self);
+void M_mindustry_ui_fragments_HudFragment_addInfoTable_arc_scene_ui_layout_Table(jcontext ctx, jobject self, jobject param0);
+jbool M_mindustry_ui_fragments_HudFragment_canSkipWave_R_boolean(jcontext ctx, jobject self);
+jbool M_mindustry_ui_fragments_HudFragment_shown_R_boolean(jcontext ctx, jobject self);
+void SM_mindustry_ui_fragments_HudFragment_lambda$addInfoTable$2_arc_struct_Bits_arc_scene_ui_layout_Table(jcontext ctx, jobject param0, jobject param1);
+void SM_mindustry_ui_fragments_HudFragment_lambda$addInfoTable$3_mindustry_type_StatusEffect_arc_scene_ui_layout_Table(jcontext ctx, jobject param0, jobject param1);
+jobject SM_mindustry_ui_fragments_HudFragment_lambda$addInfoTable$4_mindustry_type_StatusEffect_R_java_lang_CharSequence(jcontext ctx, jobject param0);
+jbool SM_mindustry_ui_fragments_HudFragment_lambda$addInfoTable$1_Array1_float_R_boolean(jcontext ctx, jobject param0);
+void SM_mindustry_ui_fragments_HudFragment_lambda$addInfoTable$0_Array1_float_arc_scene_ui_layout_Table(jcontext ctx, jobject param0, jobject param1);
+jobject M_mindustry_ui_fragments_HudFragment_lambda$makeStatusTable$13_Array1_boolean_Array1_arc_scene_ui_layout_Cell_arc_scene_ui_layout_Table_java_lang_StringBuilder_mindustry_ui_IntFormat_mindustry_ui_IntFormat_mindustry_ui_IntFormat_mindustry_ui_IntFormat_mindustry_ui_IntFormat_mindustry_ui_IntFormat_mindustry_ui_IntFormat_R_java_lang_CharSequence(jcontext ctx, jobject self, jobject param0, jobject param1, jobject param2, jobject param3, jobject param4, jobject param5, jobject param6, jobject param7, jobject param8, jobject param9, jobject param10);
+jint SM_mindustry_ui_fragments_HudFragment_lambda$makeStatusTable$14_mindustry_game_Teams$TeamData_R_int(jcontext ctx, jobject param0);
+void M_mindustry_ui_fragments_HudFragment_lambda$makeStatusTable$1_arc_scene_ui_layout_Table(jcontext ctx, jobject self, jobject param0);
+void SM_mindustry_ui_fragments_HudFragment_lambda$makeStatusTable$12_arc_func_Boolp_mindustry_ui_fragments_HudFragment$1SideBar(jcontext ctx, jobject param0, jobject param1);
+jbool SM_mindustry_ui_fragments_HudFragment_lambda$makeStatusTable$11_arc_func_Boolp_R_boolean(jcontext ctx, jobject param0);
+jfloat SM_mindustry_ui_fragments_HudFragment_lambda$makeStatusTable$10_arc_func_Boolp_arc_func_Floatp_R_float(jcontext ctx, jobject param0, jobject param1);
+jobject SM_mindustry_ui_fragments_HudFragment_lambda$makeStatusTable$9_R_arc_graphics_g2d_TextureRegion(jcontext ctx);
+jbool SM_mindustry_ui_fragments_HudFragment_lambda$makeStatusTable$8_R_boolean(jcontext ctx);
+jfloat SM_mindustry_ui_fragments_HudFragment_lambda$makeStatusTable$7_Array1_float_R_float(jcontext ctx, jobject param0);
+jbool SM_mindustry_ui_fragments_HudFragment_lambda$makeStatusTable$6_R_boolean(jcontext ctx);
+jfloat SM_mindustry_ui_fragments_HudFragment_lambda$makeStatusTable$5_R_float(jcontext ctx);
+jfloat SM_mindustry_ui_fragments_HudFragment_lambda$makeStatusTable$4_R_float(jcontext ctx);
+jbool SM_mindustry_ui_fragments_HudFragment_lambda$makeStatusTable$3_R_boolean(jcontext ctx);
+void SM_mindustry_ui_fragments_HudFragment_lambda$makeStatusTable$2(jcontext ctx);
+jobject SM_mindustry_ui_fragments_HudFragment_lambda$makeStatusTable$0_java_lang_StringBuilder_java_lang_Integer_R_java_lang_String(jcontext ctx, jobject param0, jobject param1);
+void M_mindustry_ui_fragments_HudFragment_lambda$showUnlock$0_mindustry_ctype_UnlockableContent(jcontext ctx, jobject self, jobject param0);
+void M_mindustry_ui_fragments_HudFragment_lambda$showUnlock$2_arc_scene_ui_layout_Table_arc_scene_ui_layout_Table(jcontext ctx, jobject self, jobject param0, jobject param1);
+void M_mindustry_ui_fragments_HudFragment_lambda$showUnlock$3(jcontext ctx, jobject self);
+void M_mindustry_ui_fragments_HudFragment_lambda$showUnlock$1_arc_scene_ui_layout_Table(jcontext ctx, jobject self, jobject param0);
+void SM_mindustry_ui_fragments_HudFragment_lambda$showToast$0_arc_scene_style_Drawable_float_java_lang_String(jcontext ctx, jobject param0, jfloat param1, jobject param2);
+void SM_mindustry_ui_fragments_HudFragment_lambda$showToast$2_arc_scene_ui_layout_Table_arc_scene_ui_layout_Table(jcontext ctx, jobject param0, jobject param1);
+void SM_mindustry_ui_fragments_HudFragment_lambda$showToast$1_arc_scene_ui_layout_Table(jcontext ctx, jobject param0);
+void SM_mindustry_ui_fragments_HudFragment_lambda$build$83_arc_scene_ui_layout_Table(jcontext ctx, jobject param0);
+jbool SM_mindustry_ui_fragments_HudFragment_lambda$build$84_R_boolean(jcontext ctx);
+void SM_mindustry_ui_fragments_HudFragment_lambda$build$79_arc_scene_ui_layout_Table(jcontext ctx, jobject param0);
+void SM_mindustry_ui_fragments_HudFragment_lambda$build$82_arc_scene_ui_layout_Table(jcontext ctx, jobject param0);
+void SM_mindustry_ui_fragments_HudFragment_lambda$build$80_arc_scene_ui_layout_Table(jcontext ctx, jobject param0);
+void SM_mindustry_ui_fragments_HudFragment_lambda$build$81_arc_scene_ui_Label(jcontext ctx, jobject param0);
+void M_mindustry_ui_fragments_HudFragment_lambda$build$57_arc_scene_ui_layout_Table(jcontext ctx, jobject self, jobject param0);
+void M_mindustry_ui_fragments_HudFragment_lambda$build$77_arc_scene_ui_layout_Table(jcontext ctx, jobject self, jobject param0);
+jbool M_mindustry_ui_fragments_HudFragment_lambda$build$78_arc_scene_ui_layout_Table_R_boolean(jcontext ctx, jobject self, jobject param0);
+void M_mindustry_ui_fragments_HudFragment_lambda$build$76_arc_scene_ui_layout_Table(jcontext ctx, jobject self, jobject param0);
+void M_mindustry_ui_fragments_HudFragment_lambda$build$74_arc_scene_ui_layout_Table(jcontext ctx, jobject self, jobject param0);
+jobject M_mindustry_ui_fragments_HudFragment_lambda$build$75_R_java_lang_CharSequence(jcontext ctx, jobject self);
+jbool SM_mindustry_ui_fragments_HudFragment_lambda$build$73_R_boolean(jcontext ctx);
+void SM_mindustry_ui_fragments_HudFragment_lambda$build$69_java_lang_StringBuilder_int_java_lang_String_arc_scene_ui_layout_Table(jcontext ctx, jobject param0, jint param1, jobject param2, jobject param3);
+jfloat SM_mindustry_ui_fragments_HudFragment_lambda$build$72_R_float(jcontext ctx);
+jobject SM_mindustry_ui_fragments_HudFragment_lambda$build$71_R_arc_graphics_Color(jcontext ctx);
+jobject SM_mindustry_ui_fragments_HudFragment_lambda$build$70_java_lang_StringBuilder_int_java_lang_String_R_java_lang_CharSequence(jcontext ctx, jobject param0, jint param1, jobject param2);
+void M_mindustry_ui_fragments_HudFragment_lambda$build$60_arc_scene_ui_layout_Table(jcontext ctx, jobject self, jobject param0);
+jbool M_mindustry_ui_fragments_HudFragment_lambda$build$68_R_boolean(jcontext ctx, jobject self);
+void SM_mindustry_ui_fragments_HudFragment_lambda$build$64_arc_scene_ui_layout_Table(jcontext ctx, jobject param0);
+void SM_mindustry_ui_fragments_HudFragment_lambda$build$67_arc_scene_ui_Label(jcontext ctx, jobject param0);
+void SM_mindustry_ui_fragments_HudFragment_lambda$build$65_arc_scene_ui_Label(jcontext ctx, jobject param0);
+void SM_mindustry_ui_fragments_HudFragment_lambda$build$66(jcontext ctx);
+void M_mindustry_ui_fragments_HudFragment_lambda$build$63_mindustry_game_EventType$ResetEvent(jcontext ctx, jobject self, jobject param0);
+void M_mindustry_ui_fragments_HudFragment_lambda$build$62_float(jcontext ctx, jobject self, jfloat param0);
+jbool M_mindustry_ui_fragments_HudFragment_lambda$build$61_R_boolean(jcontext ctx, jobject self);
+jbool M_mindustry_ui_fragments_HudFragment_lambda$build$59_R_boolean(jcontext ctx, jobject self);
+void SM_mindustry_ui_fragments_HudFragment_lambda$build$58_arc_scene_ui_layout_Table(jcontext ctx, jobject param0);
+void M_mindustry_ui_fragments_HudFragment_lambda$build$23_arc_scene_ui_layout_Table(jcontext ctx, jobject self, jobject param0);
+void M_mindustry_ui_fragments_HudFragment_lambda$build$50_arc_scene_ui_layout_Table(jcontext ctx, jobject self, jobject param0);
+jobject SM_mindustry_ui_fragments_HudFragment_lambda$build$56_mindustry_ui_IntFormat_R_java_lang_CharSequence(jcontext ctx, jobject param0);
+jobject SM_mindustry_ui_fragments_HudFragment_lambda$build$55_mindustry_ui_IntFormat_R_java_lang_CharSequence(jcontext ctx, jobject param0);
+jobject SM_mindustry_ui_fragments_HudFragment_lambda$build$54_mindustry_ui_IntFormat_R_java_lang_CharSequence(jcontext ctx, jobject param0);
+jobject SM_mindustry_ui_fragments_HudFragment_lambda$build$53_mindustry_ui_IntFormat_R_java_lang_CharSequence(jcontext ctx, jobject param0);
+jobject SM_mindustry_ui_fragments_HudFragment_lambda$build$52_mindustry_ui_IntFormat_R_java_lang_CharSequence(jcontext ctx, jobject param0);
+jbool M_mindustry_ui_fragments_HudFragment_lambda$build$51_R_boolean(jcontext ctx, jobject self);
+jbool M_mindustry_ui_fragments_HudFragment_lambda$build$49_R_boolean(jcontext ctx, jobject self);
+jfloat SM_mindustry_ui_fragments_HudFragment_lambda$build$48_R_float(jcontext ctx);
+void M_mindustry_ui_fragments_HudFragment_lambda$build$41_arc_scene_ui_layout_Table(jcontext ctx, jobject self, jobject param0);
+jbool SM_mindustry_ui_fragments_HudFragment_lambda$build$47_R_boolean(jcontext ctx);
+void SM_mindustry_ui_fragments_HudFragment_lambda$build$42_arc_scene_ui_layout_Table(jcontext ctx, jobject param0);
+void SM_mindustry_ui_fragments_HudFragment_lambda$build$46_arc_scene_ui_ImageButton(jcontext ctx, jobject param0);
+void SM_mindustry_ui_fragments_HudFragment_lambda$build$45(jcontext ctx);
+void SM_mindustry_ui_fragments_HudFragment_lambda$build$44_arc_scene_ui_ImageButton_mindustry_game_Team(jcontext ctx, jobject param0, jobject param1);
+void SM_mindustry_ui_fragments_HudFragment_lambda$build$43_mindustry_game_Team(jcontext ctx, jobject param0);
+void M_mindustry_ui_fragments_HudFragment_lambda$build$38_arc_scene_ui_layout_Table(jcontext ctx, jobject self, jobject param0);
+jbool M_mindustry_ui_fragments_HudFragment_lambda$build$40_arc_scene_ui_ImageButton_R_boolean(jcontext ctx, jobject self, jobject param0);
+void SM_mindustry_ui_fragments_HudFragment_lambda$build$39(jcontext ctx);
+jbool M_mindustry_ui_fragments_HudFragment_lambda$build$37_R_boolean(jcontext ctx, jobject self);
+void M_mindustry_ui_fragments_HudFragment_lambda$build$35(jcontext ctx, jobject self);
+void SM_mindustry_ui_fragments_HudFragment_lambda$build$36(jcontext ctx);
+jbool SM_mindustry_ui_fragments_HudFragment_lambda$build$34_R_boolean(jcontext ctx);
+void M_mindustry_ui_fragments_HudFragment_lambda$build$27_arc_scene_ui_layout_Table(jcontext ctx, jobject self, jobject param0);
+void SM_mindustry_ui_fragments_HudFragment_lambda$build$33_arc_scene_ui_ImageButton(jcontext ctx, jobject param0);
+void SM_mindustry_ui_fragments_HudFragment_lambda$build$32(jcontext ctx);
+void SM_mindustry_ui_fragments_HudFragment_lambda$build$31_arc_scene_ui_ImageButton(jcontext ctx, jobject param0);
+void SM_mindustry_ui_fragments_HudFragment_lambda$build$30(jcontext ctx);
+void M_mindustry_ui_fragments_HudFragment_lambda$build$29_arc_scene_ui_ImageButton(jcontext ctx, jobject self, jobject param0);
+void M_mindustry_ui_fragments_HudFragment_lambda$build$28(jcontext ctx, jobject self);
+jbool M_mindustry_ui_fragments_HudFragment_lambda$build$26_R_boolean(jcontext ctx, jobject self);
+jobject SM_mindustry_ui_fragments_HudFragment_lambda$build$25_R_java_lang_CharSequence(jcontext ctx);
+void SM_mindustry_ui_fragments_HudFragment_lambda$build$24_float_float_float_float(jcontext ctx, jfloat param0, jfloat param1, jfloat param2, jfloat param3);
+void M_mindustry_ui_fragments_HudFragment_lambda$build$19_arc_scene_ui_layout_Table(jcontext ctx, jobject self, jobject param0);
+jbool SM_mindustry_ui_fragments_HudFragment_lambda$build$22_R_boolean(jcontext ctx);
+jobject SM_mindustry_ui_fragments_HudFragment_lambda$build$21_R_java_lang_CharSequence(jcontext ctx);
+jbool M_mindustry_ui_fragments_HudFragment_lambda$build$20_R_boolean(jcontext ctx, jobject self);
+void M_mindustry_ui_fragments_HudFragment_lambda$build$16_arc_scene_ui_layout_Table(jcontext ctx, jobject self, jobject param0);
+void SM_mindustry_ui_fragments_HudFragment_lambda$build$18_arc_scene_ui_layout_Table(jcontext ctx, jobject param0);
+jbool M_mindustry_ui_fragments_HudFragment_lambda$build$17_R_boolean(jcontext ctx, jobject self);
+void SM_mindustry_ui_fragments_HudFragment_lambda$build$15_float_float_float_float(jcontext ctx, jfloat param0, jfloat param1, jfloat param2, jfloat param3);
+void M_mindustry_ui_fragments_HudFragment_lambda$build$10_arc_scene_ui_layout_Table(jcontext ctx, jobject self, jobject param0);
+void SM_mindustry_ui_fragments_HudFragment_lambda$build$13_arc_scene_ui_layout_Table(jcontext ctx, jobject param0);
+jobject SM_mindustry_ui_fragments_HudFragment_lambda$build$14_R_java_lang_CharSequence(jcontext ctx);
+void M_mindustry_ui_fragments_HudFragment_lambda$build$12_arc_scene_ui_layout_Table(jcontext ctx, jobject self, jobject param0);
+jbool M_mindustry_ui_fragments_HudFragment_lambda$build$11_R_boolean(jcontext ctx, jobject self);
+void M_mindustry_ui_fragments_HudFragment_lambda$build$5_arc_scene_ui_layout_Table(jcontext ctx, jobject self, jobject param0);
+void SM_mindustry_ui_fragments_HudFragment_lambda$build$7_float_arc_scene_ui_layout_Table(jcontext ctx, jfloat param0, jobject param1);
+jfloat SM_mindustry_ui_fragments_HudFragment_lambda$build$9_float_R_float(jcontext ctx, jfloat param0);
+jobject SM_mindustry_ui_fragments_HudFragment_lambda$build$8_R_java_lang_CharSequence(jcontext ctx);
+jbool M_mindustry_ui_fragments_HudFragment_lambda$build$6_R_boolean(jcontext ctx, jobject self);
+void M_mindustry_ui_fragments_HudFragment_lambda$build$4_mindustry_game_EventType$ResetEvent(jcontext ctx, jobject self, jobject param0);
+void M_mindustry_ui_fragments_HudFragment_lambda$build$3_mindustry_game_EventType$SectorInvasionEvent(jcontext ctx, jobject self, jobject param0);
+void M_mindustry_ui_fragments_HudFragment_lambda$build$2_mindustry_game_EventType$SectorLoseEvent(jcontext ctx, jobject self, jobject param0);
+void M_mindustry_ui_fragments_HudFragment_lambda$build$1_mindustry_game_EventType$SectorCaptureEvent(jcontext ctx, jobject self, jobject param0);
+void M_mindustry_ui_fragments_HudFragment_lambda$build$0_mindustry_game_EventType$WaveEvent(jcontext ctx, jobject self, jobject param0);
+void SM_mindustry_ui_fragments_HudFragment_lambda$rebuildBlockSelection$4(jcontext ctx);
+void SM_mindustry_ui_fragments_HudFragment_lambda$rebuildBlockSelection$3_arc_scene_ui_ImageButton_mindustry_world_Block(jcontext ctx, jobject param0, jobject param1);
+void M_mindustry_ui_fragments_HudFragment_lambda$rebuildBlockSelection$2_mindustry_world_Block_arc_scene_ui_layout_Table_java_lang_String(jcontext ctx, jobject self, jobject param0, jobject param1, jobject param2);
+void SM_mindustry_ui_fragments_HudFragment_lambda$rebuildBlockSelection$1_mindustry_world_Block(jcontext ctx, jobject param0);
+jint SM_mindustry_ui_fragments_HudFragment_lambda$rebuildBlockSelection$0_mindustry_world_Block_mindustry_world_Block_R_int(jcontext ctx, jobject param0, jobject param1);
+void SM_mindustry_ui_fragments_HudFragment_lambda$addBlockSelection$6_Array1_mindustry_world_Block_Array1_arc_scene_ui_layout_Table_arc_scene_ui_layout_Collapser(jcontext ctx, jobject param0, jobject param1, jobject param2);
+void SM_mindustry_ui_fragments_HudFragment_lambda$addBlockSelection$5_arc_scene_ui_layout_Collapser(jcontext ctx, jobject param0);
+jbool SM_mindustry_ui_fragments_HudFragment_lambda$addBlockSelection$4_R_boolean(jcontext ctx);
+void SM_mindustry_ui_fragments_HudFragment_lambda$addBlockSelection$3_Array1_arc_scene_ui_layout_Table_arc_scene_ui_layout_Table(jcontext ctx, jobject param0, jobject param1);
+void M_mindustry_ui_fragments_HudFragment_lambda$addBlockSelection$1_arc_scene_ui_layout_Table_arc_scene_ui_layout_Table(jcontext ctx, jobject self, jobject param0, jobject param1);
+void M_mindustry_ui_fragments_HudFragment_lambda$addBlockSelection$2_arc_scene_ui_layout_Table_java_lang_String(jcontext ctx, jobject self, jobject param0, jobject param1);
+void M_mindustry_ui_fragments_HudFragment_lambda$addBlockSelection$0_arc_scene_ui_ScrollPane_Array1_mindustry_type_Planet_arc_scene_ui_layout_Table(jcontext ctx, jobject self, jobject param0, jobject param1, jobject param2);
+
+#ifdef __cplusplus
+}
+#endif
+
+#endif

@@ -1,0 +1,291 @@
+#ifndef HEADER_mindustry_entities_comp_BuilderComp
+#define HEADER_mindustry_entities_comp_BuilderComp
+
+#include "Clearwing.h"
+#include "java/lang/Object.h"
+#include "mindustry/gen/Posc.h"
+#include "mindustry/gen/Statusc.h"
+#include "mindustry/gen/Teamc.h"
+#include "mindustry/gen/Rotc.h"
+
+#ifdef __cplusplus
+extern "C" {
+#endif
+
+typedef struct mindustry_entities_comp_BuilderComp {
+	java_lang_Object parent;
+	jfloat F_x;
+	jfloat F_y;
+	jfloat F_rotation;
+	jfloat F_buildSpeedMultiplier;
+	jref F_type;
+	jref F_team;
+	jref F_plans;
+	jbool F_updateBuilding;
+	jfloat F_buildCounter;
+	jref F_lastActive;
+	jint F_lastSize;
+	jfloat F_buildAlpha;
+} mindustry_entities_comp_BuilderComp;
+
+extern Class class_mindustry_entities_comp_BuilderComp;
+
+
+#define VTABLE_mindustry_entities_comp_BuilderComp_hashCode_R_int 0
+typedef jint (*func_mindustry_entities_comp_BuilderComp_hashCode_R_int)(jcontext ctx, jobject self);
+#define VTABLE_mindustry_entities_comp_BuilderComp_equals_java_lang_Object_R_boolean 1
+typedef jbool (*func_mindustry_entities_comp_BuilderComp_equals_java_lang_Object_R_boolean)(jcontext ctx, jobject self, jobject param0);
+#define VTABLE_mindustry_entities_comp_BuilderComp_clone_R_java_lang_Object 2
+typedef jobject (*func_mindustry_entities_comp_BuilderComp_clone_R_java_lang_Object)(jcontext ctx, jobject self);
+#define VTABLE_mindustry_entities_comp_BuilderComp_getClass_R_java_lang_Class 3
+typedef jobject (*func_mindustry_entities_comp_BuilderComp_getClass_R_java_lang_Class)(jcontext ctx, jobject self);
+#define VTABLE_mindustry_entities_comp_BuilderComp_toString_R_java_lang_String 4
+typedef jobject (*func_mindustry_entities_comp_BuilderComp_toString_R_java_lang_String)(jcontext ctx, jobject self);
+#define VTABLE_mindustry_entities_comp_BuilderComp_finalize 5
+typedef void (*func_mindustry_entities_comp_BuilderComp_finalize)(jcontext ctx, jobject self);
+#define VTABLE_mindustry_entities_comp_BuilderComp_notify 6
+typedef void (*func_mindustry_entities_comp_BuilderComp_notify)(jcontext ctx, jobject self);
+#define VTABLE_mindustry_entities_comp_BuilderComp_notifyAll 7
+typedef void (*func_mindustry_entities_comp_BuilderComp_notifyAll)(jcontext ctx, jobject self);
+#define VTABLE_mindustry_entities_comp_BuilderComp_wait 8
+typedef void (*func_mindustry_entities_comp_BuilderComp_wait)(jcontext ctx, jobject self);
+#define VTABLE_mindustry_entities_comp_BuilderComp_wait_long 9
+typedef void (*func_mindustry_entities_comp_BuilderComp_wait_long)(jcontext ctx, jobject self, jlong param0);
+#define VTABLE_mindustry_entities_comp_BuilderComp_wait_long_int 10
+typedef void (*func_mindustry_entities_comp_BuilderComp_wait_long_int)(jcontext ctx, jobject self, jlong param0, jint param1);
+#define VTABLE_mindustry_entities_comp_BuilderComp_getX_R_float 11
+typedef jfloat (*func_mindustry_entities_comp_BuilderComp_getX_R_float)(jcontext ctx, jobject self);
+#define VTABLE_mindustry_entities_comp_BuilderComp_getY_R_float 12
+typedef jfloat (*func_mindustry_entities_comp_BuilderComp_getY_R_float)(jcontext ctx, jobject self);
+#define VTABLE_mindustry_entities_comp_BuilderComp_angleTo_arc_math_geom_Position_R_float 13
+typedef jfloat (*func_mindustry_entities_comp_BuilderComp_angleTo_arc_math_geom_Position_R_float)(jcontext ctx, jobject self, jobject param0);
+#define VTABLE_mindustry_entities_comp_BuilderComp_angleTo_float_float_R_float 14
+typedef jfloat (*func_mindustry_entities_comp_BuilderComp_angleTo_float_float_R_float)(jcontext ctx, jobject self, jfloat param0, jfloat param1);
+#define VTABLE_mindustry_entities_comp_BuilderComp_dst2_arc_math_geom_Position_R_float 15
+typedef jfloat (*func_mindustry_entities_comp_BuilderComp_dst2_arc_math_geom_Position_R_float)(jcontext ctx, jobject self, jobject param0);
+#define VTABLE_mindustry_entities_comp_BuilderComp_dst_arc_math_geom_Position_R_float 16
+typedef jfloat (*func_mindustry_entities_comp_BuilderComp_dst_arc_math_geom_Position_R_float)(jcontext ctx, jobject self, jobject param0);
+#define VTABLE_mindustry_entities_comp_BuilderComp_dst_float_float_R_float 17
+typedef jfloat (*func_mindustry_entities_comp_BuilderComp_dst_float_float_R_float)(jcontext ctx, jobject self, jfloat param0, jfloat param1);
+#define VTABLE_mindustry_entities_comp_BuilderComp_dst2_float_float_R_float 18
+typedef jfloat (*func_mindustry_entities_comp_BuilderComp_dst2_float_float_R_float)(jcontext ctx, jobject self, jfloat param0, jfloat param1);
+#define VTABLE_mindustry_entities_comp_BuilderComp_within_arc_math_geom_Position_float_R_boolean 19
+typedef jbool (*func_mindustry_entities_comp_BuilderComp_within_arc_math_geom_Position_float_R_boolean)(jcontext ctx, jobject self, jobject param0, jfloat param1);
+#define VTABLE_mindustry_entities_comp_BuilderComp_within_float_float_float_R_boolean 20
+typedef jbool (*func_mindustry_entities_comp_BuilderComp_within_float_float_float_R_boolean)(jcontext ctx, jobject self, jfloat param0, jfloat param1, jfloat param2);
+#define VTABLE_mindustry_entities_comp_BuilderComp_self_R_mindustry_gen_Entityc 21
+typedef jobject (*func_mindustry_entities_comp_BuilderComp_self_R_mindustry_gen_Entityc)(jcontext ctx, jobject self);
+#define VTABLE_mindustry_entities_comp_BuilderComp_as_R_java_lang_Object 22
+typedef jobject (*func_mindustry_entities_comp_BuilderComp_as_R_java_lang_Object)(jcontext ctx, jobject self);
+#define VTABLE_mindustry_entities_comp_BuilderComp_isAdded_R_boolean 23
+typedef jbool (*func_mindustry_entities_comp_BuilderComp_isAdded_R_boolean)(jcontext ctx, jobject self);
+#define VTABLE_mindustry_entities_comp_BuilderComp_isLocal_R_boolean 24
+typedef jbool (*func_mindustry_entities_comp_BuilderComp_isLocal_R_boolean)(jcontext ctx, jobject self);
+#define VTABLE_mindustry_entities_comp_BuilderComp_isRemote_R_boolean 25
+typedef jbool (*func_mindustry_entities_comp_BuilderComp_isRemote_R_boolean)(jcontext ctx, jobject self);
+#define VTABLE_mindustry_entities_comp_BuilderComp_serialize_R_boolean 26
+typedef jbool (*func_mindustry_entities_comp_BuilderComp_serialize_R_boolean)(jcontext ctx, jobject self);
+#define VTABLE_mindustry_entities_comp_BuilderComp_classId_R_int 27
+typedef jint (*func_mindustry_entities_comp_BuilderComp_classId_R_int)(jcontext ctx, jobject self);
+#define VTABLE_mindustry_entities_comp_BuilderComp_id_R_int 28
+typedef jint (*func_mindustry_entities_comp_BuilderComp_id_R_int)(jcontext ctx, jobject self);
+#define VTABLE_mindustry_entities_comp_BuilderComp_add 29
+typedef void (*func_mindustry_entities_comp_BuilderComp_add)(jcontext ctx, jobject self);
+#define VTABLE_mindustry_entities_comp_BuilderComp_afterRead 30
+typedef void (*func_mindustry_entities_comp_BuilderComp_afterRead)(jcontext ctx, jobject self);
+#define VTABLE_mindustry_entities_comp_BuilderComp_afterReadAll 31
+typedef void (*func_mindustry_entities_comp_BuilderComp_afterReadAll)(jcontext ctx, jobject self);
+#define VTABLE_mindustry_entities_comp_BuilderComp_beforeWrite 32
+typedef void (*func_mindustry_entities_comp_BuilderComp_beforeWrite)(jcontext ctx, jobject self);
+#define VTABLE_mindustry_entities_comp_BuilderComp_id_int 33
+typedef void (*func_mindustry_entities_comp_BuilderComp_id_int)(jcontext ctx, jobject self, jint param0);
+#define VTABLE_mindustry_entities_comp_BuilderComp_read_arc_util_io_Reads 34
+typedef void (*func_mindustry_entities_comp_BuilderComp_read_arc_util_io_Reads)(jcontext ctx, jobject self, jobject param0);
+#define VTABLE_mindustry_entities_comp_BuilderComp_remove 35
+typedef void (*func_mindustry_entities_comp_BuilderComp_remove)(jcontext ctx, jobject self);
+#define VTABLE_mindustry_entities_comp_BuilderComp_update 36
+typedef void (*func_mindustry_entities_comp_BuilderComp_update)(jcontext ctx, jobject self);
+#define VTABLE_mindustry_entities_comp_BuilderComp_write_arc_util_io_Writes 37
+typedef void (*func_mindustry_entities_comp_BuilderComp_write_arc_util_io_Writes)(jcontext ctx, jobject self, jobject param0);
+#define VTABLE_mindustry_entities_comp_BuilderComp_floorOn_R_mindustry_world_blocks_environment_Floor 38
+typedef jobject (*func_mindustry_entities_comp_BuilderComp_floorOn_R_mindustry_world_blocks_environment_Floor)(jcontext ctx, jobject self);
+#define VTABLE_mindustry_entities_comp_BuilderComp_buildOn_R_mindustry_gen_Building 39
+typedef jobject (*func_mindustry_entities_comp_BuilderComp_buildOn_R_mindustry_gen_Building)(jcontext ctx, jobject self);
+#define VTABLE_mindustry_entities_comp_BuilderComp_onSolid_R_boolean 40
+typedef jbool (*func_mindustry_entities_comp_BuilderComp_onSolid_R_boolean)(jcontext ctx, jobject self);
+#define VTABLE_mindustry_entities_comp_BuilderComp_x_R_float 41
+typedef jfloat (*func_mindustry_entities_comp_BuilderComp_x_R_float)(jcontext ctx, jobject self);
+#define VTABLE_mindustry_entities_comp_BuilderComp_y_R_float 42
+typedef jfloat (*func_mindustry_entities_comp_BuilderComp_y_R_float)(jcontext ctx, jobject self);
+#define VTABLE_mindustry_entities_comp_BuilderComp_tileX_R_int 43
+typedef jint (*func_mindustry_entities_comp_BuilderComp_tileX_R_int)(jcontext ctx, jobject self);
+#define VTABLE_mindustry_entities_comp_BuilderComp_tileY_R_int 44
+typedef jint (*func_mindustry_entities_comp_BuilderComp_tileY_R_int)(jcontext ctx, jobject self);
+#define VTABLE_mindustry_entities_comp_BuilderComp_blockOn_R_mindustry_world_Block 45
+typedef jobject (*func_mindustry_entities_comp_BuilderComp_blockOn_R_mindustry_world_Block)(jcontext ctx, jobject self);
+#define VTABLE_mindustry_entities_comp_BuilderComp_tileOn_R_mindustry_world_Tile 46
+typedef jobject (*func_mindustry_entities_comp_BuilderComp_tileOn_R_mindustry_world_Tile)(jcontext ctx, jobject self);
+#define VTABLE_mindustry_entities_comp_BuilderComp_set_arc_math_geom_Position 47
+typedef void (*func_mindustry_entities_comp_BuilderComp_set_arc_math_geom_Position)(jcontext ctx, jobject self, jobject param0);
+#define VTABLE_mindustry_entities_comp_BuilderComp_set_float_float 48
+typedef void (*func_mindustry_entities_comp_BuilderComp_set_float_float)(jcontext ctx, jobject self, jfloat param0, jfloat param1);
+#define VTABLE_mindustry_entities_comp_BuilderComp_trns_arc_math_geom_Position 49
+typedef void (*func_mindustry_entities_comp_BuilderComp_trns_arc_math_geom_Position)(jcontext ctx, jobject self, jobject param0);
+#define VTABLE_mindustry_entities_comp_BuilderComp_trns_float_float 50
+typedef void (*func_mindustry_entities_comp_BuilderComp_trns_float_float)(jcontext ctx, jobject self, jfloat param0, jfloat param1);
+#define VTABLE_mindustry_entities_comp_BuilderComp_x_float 51
+typedef void (*func_mindustry_entities_comp_BuilderComp_x_float)(jcontext ctx, jobject self, jfloat param0);
+#define VTABLE_mindustry_entities_comp_BuilderComp_y_float 52
+typedef void (*func_mindustry_entities_comp_BuilderComp_y_float)(jcontext ctx, jobject self, jfloat param0);
+#define VTABLE_mindustry_entities_comp_BuilderComp_applyDynamicStatus_R_mindustry_entities_units_StatusEntry 53
+typedef jobject (*func_mindustry_entities_comp_BuilderComp_applyDynamicStatus_R_mindustry_entities_units_StatusEntry)(jcontext ctx, jobject self);
+#define VTABLE_mindustry_entities_comp_BuilderComp_apply_mindustry_type_StatusEffect_float 54
+typedef void (*func_mindustry_entities_comp_BuilderComp_apply_mindustry_type_StatusEffect_float)(jcontext ctx, jobject self, jobject param0, jfloat param1);
+#define VTABLE_mindustry_entities_comp_BuilderComp_apply_mindustry_type_StatusEffect 55
+typedef void (*func_mindustry_entities_comp_BuilderComp_apply_mindustry_type_StatusEffect)(jcontext ctx, jobject self, jobject param0);
+#define VTABLE_mindustry_entities_comp_BuilderComp_unapply_mindustry_type_StatusEffect 56
+typedef void (*func_mindustry_entities_comp_BuilderComp_unapply_mindustry_type_StatusEffect)(jcontext ctx, jobject self, jobject param0);
+#define VTABLE_mindustry_entities_comp_BuilderComp_statusDamageMultiplier_float 57
+typedef void (*func_mindustry_entities_comp_BuilderComp_statusDamageMultiplier_float)(jcontext ctx, jobject self, jfloat param0);
+#define VTABLE_mindustry_entities_comp_BuilderComp_statusReloadMultiplier_float 58
+typedef void (*func_mindustry_entities_comp_BuilderComp_statusReloadMultiplier_float)(jcontext ctx, jobject self, jfloat param0);
+#define VTABLE_mindustry_entities_comp_BuilderComp_statusArmor_float 59
+typedef void (*func_mindustry_entities_comp_BuilderComp_statusArmor_float)(jcontext ctx, jobject self, jfloat param0);
+#define VTABLE_mindustry_entities_comp_BuilderComp_statusBuildSpeed_float 60
+typedef void (*func_mindustry_entities_comp_BuilderComp_statusBuildSpeed_float)(jcontext ctx, jobject self, jfloat param0);
+#define VTABLE_mindustry_entities_comp_BuilderComp_statusDrag_float 61
+typedef void (*func_mindustry_entities_comp_BuilderComp_statusDrag_float)(jcontext ctx, jobject self, jfloat param0);
+#define VTABLE_mindustry_entities_comp_BuilderComp_statusMaxHealth_float 62
+typedef void (*func_mindustry_entities_comp_BuilderComp_statusMaxHealth_float)(jcontext ctx, jobject self, jfloat param0);
+#define VTABLE_mindustry_entities_comp_BuilderComp_statusSpeed_float 63
+typedef void (*func_mindustry_entities_comp_BuilderComp_statusSpeed_float)(jcontext ctx, jobject self, jfloat param0);
+#define VTABLE_mindustry_entities_comp_BuilderComp_statusColor_R_arc_graphics_Color 64
+typedef jobject (*func_mindustry_entities_comp_BuilderComp_statusColor_R_arc_graphics_Color)(jcontext ctx, jobject self);
+#define VTABLE_mindustry_entities_comp_BuilderComp_statusBits_R_arc_struct_Bits 65
+typedef jobject (*func_mindustry_entities_comp_BuilderComp_statusBits_R_arc_struct_Bits)(jcontext ctx, jobject self);
+#define VTABLE_mindustry_entities_comp_BuilderComp_disarmed_R_boolean 66
+typedef jbool (*func_mindustry_entities_comp_BuilderComp_disarmed_R_boolean)(jcontext ctx, jobject self);
+#define VTABLE_mindustry_entities_comp_BuilderComp_hasEffect_mindustry_type_StatusEffect_R_boolean 67
+typedef jbool (*func_mindustry_entities_comp_BuilderComp_hasEffect_mindustry_type_StatusEffect_R_boolean)(jcontext ctx, jobject self, jobject param0);
+#define VTABLE_mindustry_entities_comp_BuilderComp_isBoss_R_boolean 68
+typedef jbool (*func_mindustry_entities_comp_BuilderComp_isBoss_R_boolean)(jcontext ctx, jobject self);
+#define VTABLE_mindustry_entities_comp_BuilderComp_isGrounded_R_boolean 69
+typedef jbool (*func_mindustry_entities_comp_BuilderComp_isGrounded_R_boolean)(jcontext ctx, jobject self);
+#define VTABLE_mindustry_entities_comp_BuilderComp_isImmune_mindustry_type_StatusEffect_R_boolean 70
+typedef jbool (*func_mindustry_entities_comp_BuilderComp_isImmune_mindustry_type_StatusEffect_R_boolean)(jcontext ctx, jobject self, jobject param0);
+#define VTABLE_mindustry_entities_comp_BuilderComp_armorOverride_R_float 71
+typedef jfloat (*func_mindustry_entities_comp_BuilderComp_armorOverride_R_float)(jcontext ctx, jobject self);
+#define VTABLE_mindustry_entities_comp_BuilderComp_buildSpeedMultiplier_R_float 72
+typedef jfloat (*func_mindustry_entities_comp_BuilderComp_buildSpeedMultiplier_R_float)(jcontext ctx, jobject self);
+#define VTABLE_mindustry_entities_comp_BuilderComp_damageMultiplier_R_float 73
+typedef jfloat (*func_mindustry_entities_comp_BuilderComp_damageMultiplier_R_float)(jcontext ctx, jobject self);
+#define VTABLE_mindustry_entities_comp_BuilderComp_dragMultiplier_R_float 74
+typedef jfloat (*func_mindustry_entities_comp_BuilderComp_dragMultiplier_R_float)(jcontext ctx, jobject self);
+#define VTABLE_mindustry_entities_comp_BuilderComp_getDuration_mindustry_type_StatusEffect_R_float 75
+typedef jfloat (*func_mindustry_entities_comp_BuilderComp_getDuration_mindustry_type_StatusEffect_R_float)(jcontext ctx, jobject self, jobject param0);
+#define VTABLE_mindustry_entities_comp_BuilderComp_healthMultiplier_R_float 76
+typedef jfloat (*func_mindustry_entities_comp_BuilderComp_healthMultiplier_R_float)(jcontext ctx, jobject self);
+#define VTABLE_mindustry_entities_comp_BuilderComp_reloadMultiplier_R_float 77
+typedef jfloat (*func_mindustry_entities_comp_BuilderComp_reloadMultiplier_R_float)(jcontext ctx, jobject self);
+#define VTABLE_mindustry_entities_comp_BuilderComp_speedMultiplier_R_float 78
+typedef jfloat (*func_mindustry_entities_comp_BuilderComp_speedMultiplier_R_float)(jcontext ctx, jobject self);
+#define VTABLE_mindustry_entities_comp_BuilderComp_armorOverride_float 79
+typedef void (*func_mindustry_entities_comp_BuilderComp_armorOverride_float)(jcontext ctx, jobject self, jfloat param0);
+#define VTABLE_mindustry_entities_comp_BuilderComp_buildSpeedMultiplier_float 80
+typedef void (*func_mindustry_entities_comp_BuilderComp_buildSpeedMultiplier_float)(jcontext ctx, jobject self, jfloat param0);
+#define VTABLE_mindustry_entities_comp_BuilderComp_clearStatuses 81
+typedef void (*func_mindustry_entities_comp_BuilderComp_clearStatuses)(jcontext ctx, jobject self);
+#define VTABLE_mindustry_entities_comp_BuilderComp_damageMultiplier_float 82
+typedef void (*func_mindustry_entities_comp_BuilderComp_damageMultiplier_float)(jcontext ctx, jobject self, jfloat param0);
+#define VTABLE_mindustry_entities_comp_BuilderComp_disarmed_boolean 83
+typedef void (*func_mindustry_entities_comp_BuilderComp_disarmed_boolean)(jcontext ctx, jobject self, jbool param0);
+#define VTABLE_mindustry_entities_comp_BuilderComp_dragMultiplier_float 84
+typedef void (*func_mindustry_entities_comp_BuilderComp_dragMultiplier_float)(jcontext ctx, jobject self, jfloat param0);
+#define VTABLE_mindustry_entities_comp_BuilderComp_draw 85
+typedef void (*func_mindustry_entities_comp_BuilderComp_draw)(jcontext ctx, jobject self);
+#define VTABLE_mindustry_entities_comp_BuilderComp_healthMultiplier_float 86
+typedef void (*func_mindustry_entities_comp_BuilderComp_healthMultiplier_float)(jcontext ctx, jobject self, jfloat param0);
+#define VTABLE_mindustry_entities_comp_BuilderComp_reloadMultiplier_float 87
+typedef void (*func_mindustry_entities_comp_BuilderComp_reloadMultiplier_float)(jcontext ctx, jobject self, jfloat param0);
+#define VTABLE_mindustry_entities_comp_BuilderComp_setDuration_mindustry_type_StatusEffect_float 88
+typedef void (*func_mindustry_entities_comp_BuilderComp_setDuration_mindustry_type_StatusEffect_float)(jcontext ctx, jobject self, jobject param0, jfloat param1);
+#define VTABLE_mindustry_entities_comp_BuilderComp_speedMultiplier_float 89
+typedef void (*func_mindustry_entities_comp_BuilderComp_speedMultiplier_float)(jcontext ctx, jobject self, jfloat param0);
+#define VTABLE_mindustry_entities_comp_BuilderComp_inFogTo_mindustry_game_Team_R_boolean 90
+typedef jbool (*func_mindustry_entities_comp_BuilderComp_inFogTo_mindustry_game_Team_R_boolean)(jcontext ctx, jobject self, jobject param0);
+#define VTABLE_mindustry_entities_comp_BuilderComp_cheating_R_boolean 91
+typedef jbool (*func_mindustry_entities_comp_BuilderComp_cheating_R_boolean)(jcontext ctx, jobject self);
+#define VTABLE_mindustry_entities_comp_BuilderComp_team_R_mindustry_game_Team 92
+typedef jobject (*func_mindustry_entities_comp_BuilderComp_team_R_mindustry_game_Team)(jcontext ctx, jobject self);
+#define VTABLE_mindustry_entities_comp_BuilderComp_closestCore_R_mindustry_world_blocks_storage_CoreBlock$CoreBuild 93
+typedef jobject (*func_mindustry_entities_comp_BuilderComp_closestCore_R_mindustry_world_blocks_storage_CoreBlock$CoreBuild)(jcontext ctx, jobject self);
+#define VTABLE_mindustry_entities_comp_BuilderComp_closestEnemyCore_R_mindustry_world_blocks_storage_CoreBlock$CoreBuild 94
+typedef jobject (*func_mindustry_entities_comp_BuilderComp_closestEnemyCore_R_mindustry_world_blocks_storage_CoreBlock$CoreBuild)(jcontext ctx, jobject self);
+#define VTABLE_mindustry_entities_comp_BuilderComp_core_R_mindustry_world_blocks_storage_CoreBlock$CoreBuild 95
+typedef jobject (*func_mindustry_entities_comp_BuilderComp_core_R_mindustry_world_blocks_storage_CoreBlock$CoreBuild)(jcontext ctx, jobject self);
+#define VTABLE_mindustry_entities_comp_BuilderComp_team_mindustry_game_Team 96
+typedef void (*func_mindustry_entities_comp_BuilderComp_team_mindustry_game_Team)(jcontext ctx, jobject self, jobject param0);
+#define VTABLE_mindustry_entities_comp_BuilderComp_rotation_R_float 97
+typedef jfloat (*func_mindustry_entities_comp_BuilderComp_rotation_R_float)(jcontext ctx, jobject self);
+#define VTABLE_mindustry_entities_comp_BuilderComp_rotation_float 98
+typedef void (*func_mindustry_entities_comp_BuilderComp_rotation_float)(jcontext ctx, jobject self, jfloat param0);
+#define VTABLE_mindustry_entities_comp_BuilderComp_canBuild_R_boolean 99
+typedef jbool (*func_mindustry_entities_comp_BuilderComp_canBuild_R_boolean)(jcontext ctx, jobject self);
+#define VTABLE_mindustry_entities_comp_BuilderComp_validatePlans 100
+typedef void (*func_mindustry_entities_comp_BuilderComp_validatePlans)(jcontext ctx, jobject self);
+#define VTABLE_mindustry_entities_comp_BuilderComp_updateBuildLogic 101
+typedef void (*func_mindustry_entities_comp_BuilderComp_updateBuildLogic)(jcontext ctx, jobject self);
+#define VTABLE_mindustry_entities_comp_BuilderComp_drawPlan_mindustry_entities_units_BuildPlan_float 102
+typedef void (*func_mindustry_entities_comp_BuilderComp_drawPlan_mindustry_entities_units_BuildPlan_float)(jcontext ctx, jobject self, jobject param0, jfloat param1);
+#define VTABLE_mindustry_entities_comp_BuilderComp_drawPlanTop_mindustry_entities_units_BuildPlan_float 103
+typedef void (*func_mindustry_entities_comp_BuilderComp_drawPlanTop_mindustry_entities_units_BuildPlan_float)(jcontext ctx, jobject self, jobject param0, jfloat param1);
+#define VTABLE_mindustry_entities_comp_BuilderComp_shouldSkip_mindustry_entities_units_BuildPlan_mindustry_gen_Building_R_boolean 104
+typedef jbool (*func_mindustry_entities_comp_BuilderComp_shouldSkip_mindustry_entities_units_BuildPlan_mindustry_gen_Building_R_boolean)(jcontext ctx, jobject self, jobject param0, jobject param1);
+#define VTABLE_mindustry_entities_comp_BuilderComp_removeBuild_int_int_boolean 105
+typedef void (*func_mindustry_entities_comp_BuilderComp_removeBuild_int_int_boolean)(jcontext ctx, jobject self, jint param0, jint param1, jbool param2);
+#define VTABLE_mindustry_entities_comp_BuilderComp_isBuilding_R_boolean 106
+typedef jbool (*func_mindustry_entities_comp_BuilderComp_isBuilding_R_boolean)(jcontext ctx, jobject self);
+#define VTABLE_mindustry_entities_comp_BuilderComp_clearBuilding 107
+typedef void (*func_mindustry_entities_comp_BuilderComp_clearBuilding)(jcontext ctx, jobject self);
+#define VTABLE_mindustry_entities_comp_BuilderComp_addBuild_mindustry_entities_units_BuildPlan 108
+typedef void (*func_mindustry_entities_comp_BuilderComp_addBuild_mindustry_entities_units_BuildPlan)(jcontext ctx, jobject self, jobject param0);
+#define VTABLE_mindustry_entities_comp_BuilderComp_addBuild_mindustry_entities_units_BuildPlan_boolean 109
+typedef void (*func_mindustry_entities_comp_BuilderComp_addBuild_mindustry_entities_units_BuildPlan_boolean)(jcontext ctx, jobject self, jobject param0, jbool param1);
+#define VTABLE_mindustry_entities_comp_BuilderComp_activelyBuilding_R_boolean 110
+typedef jbool (*func_mindustry_entities_comp_BuilderComp_activelyBuilding_R_boolean)(jcontext ctx, jobject self);
+#define VTABLE_mindustry_entities_comp_BuilderComp_buildPlan_R_mindustry_entities_units_BuildPlan 111
+typedef jobject (*func_mindustry_entities_comp_BuilderComp_buildPlan_R_mindustry_entities_units_BuildPlan)(jcontext ctx, jobject self);
+#define VTABLE_mindustry_entities_comp_BuilderComp_drawBuilding 112
+typedef void (*func_mindustry_entities_comp_BuilderComp_drawBuilding)(jcontext ctx, jobject self);
+#define VTABLE_mindustry_entities_comp_BuilderComp_drawBuildingBeam_float_float 113
+typedef void (*func_mindustry_entities_comp_BuilderComp_drawBuildingBeam_float_float)(jcontext ctx, jobject self, jfloat param0, jfloat param1);
+
+void mark_mindustry_entities_comp_BuilderComp(jobject object, jint mark, jint depth);
+void clinit_mindustry_entities_comp_BuilderComp(jcontext ctx);
+void init_mindustry_entities_comp_BuilderComp(jcontext ctx, jobject self);
+jbool M_mindustry_entities_comp_BuilderComp_canBuild_R_boolean(jcontext ctx, jobject self);
+void M_mindustry_entities_comp_BuilderComp_update(jcontext ctx, jobject self);
+void M_mindustry_entities_comp_BuilderComp_afterRead(jcontext ctx, jobject self);
+void M_mindustry_entities_comp_BuilderComp_validatePlans(jcontext ctx, jobject self);
+void M_mindustry_entities_comp_BuilderComp_updateBuildLogic(jcontext ctx, jobject self);
+void M_mindustry_entities_comp_BuilderComp_drawPlan_mindustry_entities_units_BuildPlan_float(jcontext ctx, jobject self, jobject param0, jfloat param1);
+void M_mindustry_entities_comp_BuilderComp_drawPlanTop_mindustry_entities_units_BuildPlan_float(jcontext ctx, jobject self, jobject param0, jfloat param1);
+jbool M_mindustry_entities_comp_BuilderComp_shouldSkip_mindustry_entities_units_BuildPlan_mindustry_gen_Building_R_boolean(jcontext ctx, jobject self, jobject param0, jobject param1);
+void M_mindustry_entities_comp_BuilderComp_removeBuild_int_int_boolean(jcontext ctx, jobject self, jint param0, jint param1, jbool param2);
+jbool M_mindustry_entities_comp_BuilderComp_isBuilding_R_boolean(jcontext ctx, jobject self);
+void M_mindustry_entities_comp_BuilderComp_clearBuilding(jcontext ctx, jobject self);
+void M_mindustry_entities_comp_BuilderComp_addBuild_mindustry_entities_units_BuildPlan(jcontext ctx, jobject self, jobject param0);
+void M_mindustry_entities_comp_BuilderComp_addBuild_mindustry_entities_units_BuildPlan_boolean(jcontext ctx, jobject self, jobject param0, jbool param1);
+jbool M_mindustry_entities_comp_BuilderComp_activelyBuilding_R_boolean(jcontext ctx, jobject self);
+jobject M_mindustry_entities_comp_BuilderComp_buildPlan_R_mindustry_entities_units_BuildPlan(jcontext ctx, jobject self);
+void M_mindustry_entities_comp_BuilderComp_drawBuilding(jcontext ctx, jobject self);
+void M_mindustry_entities_comp_BuilderComp_drawBuildingBeam_float_float(jcontext ctx, jobject self, jfloat param0, jfloat param1);
+jbool SM_mindustry_entities_comp_BuilderComp_lambda$removeBuild$0_boolean_int_int_mindustry_entities_units_BuildPlan_R_boolean(jcontext ctx, jbool param0, jint param1, jint param2, jobject param3);
+jbool SM_mindustry_entities_comp_BuilderComp_lambda$shouldSkip$0_mindustry_gen_Building_mindustry_type_ItemStack_R_boolean(jcontext ctx, jobject param0, jobject param1);
+jbool SM_mindustry_entities_comp_BuilderComp_lambda$updateBuildLogic$0_mindustry_world_blocks_storage_CoreBlock$CoreBuild_mindustry_type_ItemStack_R_boolean(jcontext ctx, jobject param0, jobject param1);
+
+#ifdef __cplusplus
+}
+#endif
+
+#endif

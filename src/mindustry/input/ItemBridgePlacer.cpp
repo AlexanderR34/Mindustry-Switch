@@ -1,0 +1,214 @@
+#include "mindustry/input/ItemBridgePlacer.h"
+#include "java/lang/Object.h"
+#include "mindustry/world/blocks/distribution/ItemBridge.h"
+#include "mindustry/world/Block.h"
+#include "mindustry/input/BridgePlacer.h"
+#include "arc/math/geom/Point2.h"
+#include "mindustry/ctype/UnlockableContent.h"
+#include "mindustry/entities/units/BuildPlan.h"
+#include "mindustry/input/ItemBridgePlacer.h"
+
+extern "C" {
+
+
+void mark_mindustry_input_ItemBridgePlacer(jobject object, jint mark, jint depth) {
+	if (!object) {
+		return;
+	}
+	if (depth > GC_DEPTH_ALWAYS && (object->gcMark < GC_MARK_START || object->gcMark == mark))
+		return;
+	if (depth > MAX_GC_MARK_DEPTH) {
+		markDeepObject(object);
+		return;
+	}
+	if (object->gcMark >= GC_MARK_START)
+		object->gcMark = mark;
+	auto self = (mindustry_input_ItemBridgePlacer *) object;
+	if (self->F_bridge)
+		((gc_mark_ptr) ((jclass) ((jobject) self->F_bridge)->clazz)->markFunction)((jobject) self->F_bridge, mark, depth + 1);
+}
+
+void clinit_mindustry_input_ItemBridgePlacer(jcontext ctx) {
+	static bool initialized;
+	if (initialized) return;
+	initialized = true;
+}
+
+void init_mindustry_input_ItemBridgePlacer_mindustry_world_blocks_distribution_ItemBridge(jcontext ctx, jobject self, jobject param0) {
+	NULL_CHECK(self);
+	jtype frame[4];
+	auto stack = &frame[2];
+	jtype *sp = stack;
+	FrameInfo frameInfo { "mindustry/input/ItemBridgePlacer:<init>", 4 };
+	auto frameRef = pushStackFrame(ctx, &frameInfo, frame, nullptr);
+
+	clinit_mindustry_input_ItemBridgePlacer(ctx);
+	frame[0].o = self;
+	frame[1].o = param0;
+	{
+	LINE_NUMBER(28);
+	init_java_lang_Object(ctx, (frame[0].o));
+	LINE_NUMBER(29);
+	((mindustry_input_ItemBridgePlacer *) NULL_CHECK((frame[0].o)))->F_bridge = (jref) (frame[1].o);
+	LINE_NUMBER(30);
+	popStackFrame(ctx);
+	return;
+	}
+
+	popStackFrame(ctx);
+}
+
+jbool M_mindustry_input_ItemBridgePlacer_unlockedNow_R_boolean(jcontext ctx, jobject self) {
+	NULL_CHECK(self);
+	jtype frame[2];
+	auto stack = &frame[1];
+	jtype *sp = stack;
+	FrameInfo frameInfo { "mindustry/input/ItemBridgePlacer:unlockedNow", 2 };
+	auto frameRef = pushStackFrame(ctx, &frameInfo, frame, nullptr);
+
+	frame[0].o = self;
+	{
+	LINE_NUMBER(34);
+	sp[0].o = (jobject)((mindustry_input_ItemBridgePlacer *) NULL_CHECK((frame[0].o)))->F_bridge;
+	jint temp0 = (jint)((func_mindustry_world_blocks_distribution_ItemBridge_unlockedNow_R_boolean) ((void **) nullCheck(ctx, sp[0].o)->vtable)[VTABLE_mindustry_world_blocks_distribution_ItemBridge_unlockedNow_R_boolean])(ctx, sp[0].o);
+	popStackFrame(ctx);
+	return temp0;
+	}
+
+	popStackFrame(ctx);
+}
+
+jbool M_mindustry_input_ItemBridgePlacer_positionsValid_int_int_int_int_R_boolean(jcontext ctx, jobject self, jint param0, jint param1, jint param2, jint param3) {
+	NULL_CHECK(self);
+	jtype frame[10];
+	auto stack = &frame[5];
+	jtype *sp = stack;
+	FrameInfo frameInfo { "mindustry/input/ItemBridgePlacer:positionsValid", 10 };
+	auto frameRef = pushStackFrame(ctx, &frameInfo, frame, nullptr);
+
+	frame[0].o = self;
+	frame[1].i = param0;
+	frame[2].i = param1;
+	frame[3].i = param2;
+	frame[4].i = param3;
+	{
+	LINE_NUMBER(39);
+	sp[0].o = (jobject)((mindustry_input_ItemBridgePlacer *) NULL_CHECK((frame[0].o)))->F_bridge;
+	jint temp0 = (jint)((func_mindustry_world_blocks_distribution_ItemBridge_positionsValid_int_int_int_int_R_boolean) ((void **) nullCheck(ctx, sp[0].o)->vtable)[VTABLE_mindustry_world_blocks_distribution_ItemBridge_positionsValid_int_int_int_int_R_boolean])(ctx, sp[0].o, (frame[1].i), (frame[2].i), (frame[3].i), (frame[4].i));
+	popStackFrame(ctx);
+	return temp0;
+	}
+
+	popStackFrame(ctx);
+}
+
+void M_mindustry_input_ItemBridgePlacer_applyToPlans_mindustry_entities_units_BuildPlan_mindustry_entities_units_BuildPlan(jcontext ctx, jobject self, jobject param0, jobject param1) {
+	NULL_CHECK(self);
+	jtype frame[9];
+	auto stack = &frame[3];
+	jtype *sp = stack;
+	FrameInfo frameInfo { "mindustry/input/ItemBridgePlacer:applyToPlans", 9 };
+	auto frameRef = pushStackFrame(ctx, &frameInfo, frame, nullptr);
+
+	frame[0].o = self;
+	frame[1].o = param0;
+	frame[2].o = param1;
+	{
+	LINE_NUMBER(44);
+	sp[0].o = frame[1].o;
+	sp[1].o = (jobject)((mindustry_input_ItemBridgePlacer *) NULL_CHECK((frame[0].o)))->F_bridge;
+	((mindustry_entities_units_BuildPlan *) NULL_CHECK(sp[0].o))->F_block = (jref) sp[1].o;
+	LINE_NUMBER(45);
+	sp[0].o = frame[2].o;
+	sp[1].o = (jobject)((mindustry_input_ItemBridgePlacer *) NULL_CHECK((frame[0].o)))->F_bridge;
+	((mindustry_entities_units_BuildPlan *) NULL_CHECK(sp[0].o))->F_block = (jref) sp[1].o;
+	LINE_NUMBER(46);
+	sp[0].o = frame[2].o;
+	clinit_arc_math_geom_Point2(ctx);
+	sp[1].o = gcAlloc(ctx, &class_arc_math_geom_Point2);
+	init_arc_math_geom_Point2_int_int(ctx, sp[1].o, (((jint)((mindustry_entities_units_BuildPlan *) NULL_CHECK((frame[1].o)))->F_x) - ((jint)((mindustry_entities_units_BuildPlan *) NULL_CHECK((frame[2].o)))->F_x)), (((jint)((mindustry_entities_units_BuildPlan *) NULL_CHECK((frame[1].o)))->F_y) - ((jint)((mindustry_entities_units_BuildPlan *) NULL_CHECK((frame[2].o)))->F_y)));
+	((mindustry_entities_units_BuildPlan *) NULL_CHECK(sp[0].o))->F_config = (jref) sp[1].o;
+	LINE_NUMBER(47);
+	popStackFrame(ctx);
+	return;
+	}
+
+	popStackFrame(ctx);
+}
+
+void *vtable_mindustry_input_ItemBridgePlacer[] {
+	(void *) M_java_lang_Object_hashCode_R_int,
+	(void *) M_java_lang_Object_equals_java_lang_Object_R_boolean,
+	(void *) M_java_lang_Object_clone_R_java_lang_Object,
+	(void *) M_java_lang_Object_getClass_R_java_lang_Class,
+	(void *) M_java_lang_Object_toString_R_java_lang_String,
+	(void *) M_java_lang_Object_finalize,
+	(void *) M_java_lang_Object_notify,
+	(void *) M_java_lang_Object_notifyAll,
+	(void *) M_java_lang_Object_wait,
+	(void *) M_java_lang_Object_wait_long,
+	(void *) M_java_lang_Object_wait_long_int,
+	(void *) M_mindustry_input_ItemBridgePlacer_unlockedNow_R_boolean,
+	(void *) M_mindustry_input_ItemBridgePlacer_positionsValid_int_int_int_int_R_boolean,
+	(void *) M_mindustry_input_ItemBridgePlacer_applyToPlans_mindustry_entities_units_BuildPlan_mindustry_entities_units_BuildPlan,
+};
+
+static VtableEntry vtableEntries[] {
+	{ "hashCode", "()I" },
+	{ "equals", "(Ljava/lang/Object;)Z" },
+	{ "clone", "()Ljava/lang/Object;" },
+	{ "getClass", "()Ljava/lang/Class;" },
+	{ "toString", "()Ljava/lang/String;" },
+	{ "finalize", "()V" },
+	{ "notify", "()V" },
+	{ "notifyAll", "()V" },
+	{ "wait", "()V" },
+	{ "wait", "(J)V" },
+	{ "wait", "(JI)V" },
+	{ "unlockedNow", "()Z" },
+	{ "positionsValid", "(IIII)Z" },
+	{ "applyToPlans", "(Lmindustry/entities/units/BuildPlan;Lmindustry/entities/units/BuildPlan;)V" },
+};
+
+static jclass interfaces[] { &class_mindustry_input_BridgePlacer, };
+
+static FieldMetadata fields[] {
+	{ "bridge", &class_mindustry_world_blocks_distribution_ItemBridge, offsetof(mindustry_input_ItemBridgePlacer, F_bridge), "Lmindustry/world/blocks/distribution/ItemBridge;", 18 },
+};
+
+static MethodMetadata methods[] {
+	{ "<init>", (intptr_t) init_mindustry_input_ItemBridgePlacer_mindustry_world_blocks_distribution_ItemBridge, 0, "(Lmindustry/world/blocks/distribution/ItemBridge;)V", 0 },
+	{ "unlockedNow", (intptr_t) M_mindustry_input_ItemBridgePlacer_unlockedNow_R_boolean, VTABLE_mindustry_input_ItemBridgePlacer_unlockedNow_R_boolean, "()Z", 1 },
+	{ "positionsValid", (intptr_t) M_mindustry_input_ItemBridgePlacer_positionsValid_int_int_int_int_R_boolean, VTABLE_mindustry_input_ItemBridgePlacer_positionsValid_int_int_int_int_R_boolean, "(IIII)Z", 1 },
+	{ "applyToPlans", (intptr_t) M_mindustry_input_ItemBridgePlacer_applyToPlans_mindustry_entities_units_BuildPlan_mindustry_entities_units_BuildPlan, VTABLE_mindustry_input_ItemBridgePlacer_applyToPlans_mindustry_entities_units_BuildPlan_mindustry_entities_units_BuildPlan, "(Lmindustry/entities/units/BuildPlan;Lmindustry/entities/units/BuildPlan;)V", 1 },
+};
+
+Class class_mindustry_input_ItemBridgePlacer{
+		.nativeName = (intptr_t) "mindustry/input/ItemBridgePlacer",
+		.parentClass = (intptr_t) &class_java_lang_Object,
+		.size = sizeof(mindustry_input_ItemBridgePlacer),
+		.classVtable = (intptr_t) vtable_mindustry_input_ItemBridgePlacer,
+		.staticInitializer = (intptr_t) clinit_mindustry_input_ItemBridgePlacer,
+		.annotationInitializer = (intptr_t) nullptr,
+		.markFunction = (intptr_t) mark_mindustry_input_ItemBridgePlacer,
+		.primitive = false,
+		.arrayDimensions = 0,
+		.componentClass = (intptr_t) nullptr,
+		.outerClass = (intptr_t) nullptr,
+		.innerClassCount = 0,
+		.nativeInnerClasses = (intptr_t) nullptr,
+		.access = 32,
+		.interfaceCount = 1,
+		.nativeInterfaces = (intptr_t) interfaces,
+		.fieldCount = 1,
+		.nativeFields = (intptr_t) fields,
+		.methodCount = 4,
+		.nativeMethods = (intptr_t) methods,
+		.vtableSize = 14,
+		.vtableEntries = (intptr_t) vtableEntries,
+		.anonymous = false,
+		.synthetic = false,
+};
+static bool registered_mindustry_input_ItemBridgePlacer = registerClass(&class_mindustry_input_ItemBridgePlacer);
+
+}

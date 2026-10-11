@@ -1,0 +1,57 @@
+#ifndef HEADER_java_nio_channels_spi_SelectorProvider
+#define HEADER_java_nio_channels_spi_SelectorProvider
+
+#include "Clearwing.h"
+#include "java/lang/Object.h"
+
+#ifdef __cplusplus
+extern "C" {
+#endif
+
+typedef struct java_nio_channels_spi_SelectorProvider {
+	java_lang_Object parent;
+} java_nio_channels_spi_SelectorProvider;
+
+extern Class class_java_nio_channels_spi_SelectorProvider;
+
+extern jobject SF_java_nio_channels_spi_SelectorProvider_lock;
+extern jobject SF_java_nio_channels_spi_SelectorProvider_provider;
+
+#define VTABLE_java_nio_channels_spi_SelectorProvider_hashCode_R_int 0
+typedef jint (*func_java_nio_channels_spi_SelectorProvider_hashCode_R_int)(jcontext ctx, jobject self);
+#define VTABLE_java_nio_channels_spi_SelectorProvider_equals_java_lang_Object_R_boolean 1
+typedef jbool (*func_java_nio_channels_spi_SelectorProvider_equals_java_lang_Object_R_boolean)(jcontext ctx, jobject self, jobject param0);
+#define VTABLE_java_nio_channels_spi_SelectorProvider_clone_R_java_lang_Object 2
+typedef jobject (*func_java_nio_channels_spi_SelectorProvider_clone_R_java_lang_Object)(jcontext ctx, jobject self);
+#define VTABLE_java_nio_channels_spi_SelectorProvider_getClass_R_java_lang_Class 3
+typedef jobject (*func_java_nio_channels_spi_SelectorProvider_getClass_R_java_lang_Class)(jcontext ctx, jobject self);
+#define VTABLE_java_nio_channels_spi_SelectorProvider_toString_R_java_lang_String 4
+typedef jobject (*func_java_nio_channels_spi_SelectorProvider_toString_R_java_lang_String)(jcontext ctx, jobject self);
+#define VTABLE_java_nio_channels_spi_SelectorProvider_finalize 5
+typedef void (*func_java_nio_channels_spi_SelectorProvider_finalize)(jcontext ctx, jobject self);
+#define VTABLE_java_nio_channels_spi_SelectorProvider_notify 6
+typedef void (*func_java_nio_channels_spi_SelectorProvider_notify)(jcontext ctx, jobject self);
+#define VTABLE_java_nio_channels_spi_SelectorProvider_notifyAll 7
+typedef void (*func_java_nio_channels_spi_SelectorProvider_notifyAll)(jcontext ctx, jobject self);
+#define VTABLE_java_nio_channels_spi_SelectorProvider_wait 8
+typedef void (*func_java_nio_channels_spi_SelectorProvider_wait)(jcontext ctx, jobject self);
+#define VTABLE_java_nio_channels_spi_SelectorProvider_wait_long 9
+typedef void (*func_java_nio_channels_spi_SelectorProvider_wait_long)(jcontext ctx, jobject self, jlong param0);
+#define VTABLE_java_nio_channels_spi_SelectorProvider_wait_long_int 10
+typedef void (*func_java_nio_channels_spi_SelectorProvider_wait_long_int)(jcontext ctx, jobject self, jlong param0, jint param1);
+#define VTABLE_java_nio_channels_spi_SelectorProvider_openSelector_R_java_nio_channels_spi_AbstractSelector 11
+typedef jobject (*func_java_nio_channels_spi_SelectorProvider_openSelector_R_java_nio_channels_spi_AbstractSelector)(jcontext ctx, jobject self);
+
+void mark_java_nio_channels_spi_SelectorProvider(jobject object, jint mark, jint depth);
+void clinit_java_nio_channels_spi_SelectorProvider(jcontext ctx);
+jobject SM_java_nio_channels_spi_SelectorProvider_checkPermission_R_java_lang_Void(jcontext ctx);
+void init_java_nio_channels_spi_SelectorProvider_java_lang_Void(jcontext ctx, jobject self, jobject param0);
+void init_java_nio_channels_spi_SelectorProvider(jcontext ctx, jobject self);
+jbool SM_java_nio_channels_spi_SelectorProvider_loadProviderFromProperty_R_boolean(jcontext ctx);
+jobject SM_java_nio_channels_spi_SelectorProvider_provider_R_java_nio_channels_spi_SelectorProvider(jcontext ctx);
+
+#ifdef __cplusplus
+}
+#endif
+
+#endif

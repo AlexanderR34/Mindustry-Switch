@@ -1,0 +1,327 @@
+#ifndef HEADER_mindustry_gen_Icon
+#define HEADER_mindustry_gen_Icon
+
+#include "Clearwing.h"
+#include "java/lang/Object.h"
+
+#ifdef __cplusplus
+extern "C" {
+#endif
+
+typedef struct mindustry_gen_Icon {
+	java_lang_Object parent;
+} mindustry_gen_Icon;
+
+extern Class class_mindustry_gen_Icon;
+
+extern jobject SF_mindustry_gen_Icon_icons;
+extern jobject SF_mindustry_gen_Icon_fileTextFillSmall;
+extern jobject SF_mindustry_gen_Icon_fileTextFill;
+extern jobject SF_mindustry_gen_Icon_fileSmall;
+extern jobject SF_mindustry_gen_Icon_file;
+extern jobject SF_mindustry_gen_Icon_fileTextSmall;
+extern jobject SF_mindustry_gen_Icon_fileText;
+extern jobject SF_mindustry_gen_Icon_leftSmall;
+extern jobject SF_mindustry_gen_Icon_left;
+extern jobject SF_mindustry_gen_Icon_rightSmall;
+extern jobject SF_mindustry_gen_Icon_right;
+extern jobject SF_mindustry_gen_Icon_upSmall;
+extern jobject SF_mindustry_gen_Icon_up;
+extern jobject SF_mindustry_gen_Icon_downSmall;
+extern jobject SF_mindustry_gen_Icon_down;
+extern jobject SF_mindustry_gen_Icon_homeSmall;
+extern jobject SF_mindustry_gen_Icon_home;
+extern jobject SF_mindustry_gen_Icon_okSmall;
+extern jobject SF_mindustry_gen_Icon_ok;
+extern jobject SF_mindustry_gen_Icon_imageSmall;
+extern jobject SF_mindustry_gen_Icon_image;
+extern jobject SF_mindustry_gen_Icon_starSmall;
+extern jobject SF_mindustry_gen_Icon_star;
+extern jobject SF_mindustry_gen_Icon_resizeSmall;
+extern jobject SF_mindustry_gen_Icon_resize;
+extern jobject SF_mindustry_gen_Icon_wrenchSmall;
+extern jobject SF_mindustry_gen_Icon_wrench;
+extern jobject SF_mindustry_gen_Icon_githubSquareSmall;
+extern jobject SF_mindustry_gen_Icon_githubSquare;
+extern jobject SF_mindustry_gen_Icon_fileImageSmall;
+extern jobject SF_mindustry_gen_Icon_fileImage;
+extern jobject SF_mindustry_gen_Icon_addSmall;
+extern jobject SF_mindustry_gen_Icon_add;
+extern jobject SF_mindustry_gen_Icon_editSmall;
+extern jobject SF_mindustry_gen_Icon_edit;
+extern jobject SF_mindustry_gen_Icon_chartBarSmall;
+extern jobject SF_mindustry_gen_Icon_chartBar;
+extern jobject SF_mindustry_gen_Icon_planeOutlineSmall;
+extern jobject SF_mindustry_gen_Icon_planeOutline;
+extern jobject SF_mindustry_gen_Icon_filterSmall;
+extern jobject SF_mindustry_gen_Icon_filter;
+extern jobject SF_mindustry_gen_Icon_folderSmall;
+extern jobject SF_mindustry_gen_Icon_folder;
+extern jobject SF_mindustry_gen_Icon_steamSmall;
+extern jobject SF_mindustry_gen_Icon_steam;
+extern jobject SF_mindustry_gen_Icon_downOpenSmall;
+extern jobject SF_mindustry_gen_Icon_downOpen;
+extern jobject SF_mindustry_gen_Icon_leftOpenSmall;
+extern jobject SF_mindustry_gen_Icon_leftOpen;
+extern jobject SF_mindustry_gen_Icon_upOpenSmall;
+extern jobject SF_mindustry_gen_Icon_upOpen;
+extern jobject SF_mindustry_gen_Icon_mapSmall;
+extern jobject SF_mindustry_gen_Icon_map;
+extern jobject SF_mindustry_gen_Icon_rotateSmall;
+extern jobject SF_mindustry_gen_Icon_rotate;
+extern jobject SF_mindustry_gen_Icon_playSmall;
+extern jobject SF_mindustry_gen_Icon_play;
+extern jobject SF_mindustry_gen_Icon_pauseSmall;
+extern jobject SF_mindustry_gen_Icon_pause;
+extern jobject SF_mindustry_gen_Icon_listSmall;
+extern jobject SF_mindustry_gen_Icon_list;
+extern jobject SF_mindustry_gen_Icon_cancelSmall;
+extern jobject SF_mindustry_gen_Icon_cancel;
+extern jobject SF_mindustry_gen_Icon_moveSmall;
+extern jobject SF_mindustry_gen_Icon_move;
+extern jobject SF_mindustry_gen_Icon_terminalSmall;
+extern jobject SF_mindustry_gen_Icon_terminal;
+extern jobject SF_mindustry_gen_Icon_undoSmall;
+extern jobject SF_mindustry_gen_Icon_undo;
+extern jobject SF_mindustry_gen_Icon_redoSmall;
+extern jobject SF_mindustry_gen_Icon_redo;
+extern jobject SF_mindustry_gen_Icon_infoSmall;
+extern jobject SF_mindustry_gen_Icon_info;
+extern jobject SF_mindustry_gen_Icon_infoCircleSmall;
+extern jobject SF_mindustry_gen_Icon_infoCircle;
+extern jobject SF_mindustry_gen_Icon_rightOpenOutSmall;
+extern jobject SF_mindustry_gen_Icon_rightOpenOut;
+extern jobject SF_mindustry_gen_Icon_rightOpenSmall;
+extern jobject SF_mindustry_gen_Icon_rightOpen;
+extern jobject SF_mindustry_gen_Icon_wavesSmall;
+extern jobject SF_mindustry_gen_Icon_waves;
+extern jobject SF_mindustry_gen_Icon_filtersSmall;
+extern jobject SF_mindustry_gen_Icon_filters;
+extern jobject SF_mindustry_gen_Icon_layersSmall;
+extern jobject SF_mindustry_gen_Icon_layers;
+extern jobject SF_mindustry_gen_Icon_eraserSmall;
+extern jobject SF_mindustry_gen_Icon_eraser;
+extern jobject SF_mindustry_gen_Icon_bookOpenSmall;
+extern jobject SF_mindustry_gen_Icon_bookOpen;
+extern jobject SF_mindustry_gen_Icon_gridSmall;
+extern jobject SF_mindustry_gen_Icon_grid;
+extern jobject SF_mindustry_gen_Icon_flipXSmall;
+extern jobject SF_mindustry_gen_Icon_flipX;
+extern jobject SF_mindustry_gen_Icon_flipYSmall;
+extern jobject SF_mindustry_gen_Icon_flipY;
+extern jobject SF_mindustry_gen_Icon_diagonalSmall;
+extern jobject SF_mindustry_gen_Icon_diagonal;
+extern jobject SF_mindustry_gen_Icon_discordSmall;
+extern jobject SF_mindustry_gen_Icon_discord;
+extern jobject SF_mindustry_gen_Icon_redditAlienSmall;
+extern jobject SF_mindustry_gen_Icon_redditAlien;
+extern jobject SF_mindustry_gen_Icon_githubSmall;
+extern jobject SF_mindustry_gen_Icon_github;
+extern jobject SF_mindustry_gen_Icon_googleplaySmall;
+extern jobject SF_mindustry_gen_Icon_googleplay;
+extern jobject SF_mindustry_gen_Icon_androidSmall;
+extern jobject SF_mindustry_gen_Icon_android;
+extern jobject SF_mindustry_gen_Icon_trelloSmall;
+extern jobject SF_mindustry_gen_Icon_trello;
+extern jobject SF_mindustry_gen_Icon_logicSmall;
+extern jobject SF_mindustry_gen_Icon_logic;
+extern jobject SF_mindustry_gen_Icon_distributionSmall;
+extern jobject SF_mindustry_gen_Icon_distribution;
+extern jobject SF_mindustry_gen_Icon_hammerSmall;
+extern jobject SF_mindustry_gen_Icon_hammer;
+extern jobject SF_mindustry_gen_Icon_saveSmall;
+extern jobject SF_mindustry_gen_Icon_save;
+extern jobject SF_mindustry_gen_Icon_linkSmall;
+extern jobject SF_mindustry_gen_Icon_link;
+extern jobject SF_mindustry_gen_Icon_itchioSmall;
+extern jobject SF_mindustry_gen_Icon_itchio;
+extern jobject SF_mindustry_gen_Icon_lineSmall;
+extern jobject SF_mindustry_gen_Icon_line;
+extern jobject SF_mindustry_gen_Icon_adminSmall;
+extern jobject SF_mindustry_gen_Icon_admin;
+extern jobject SF_mindustry_gen_Icon_spray1Small;
+extern jobject SF_mindustry_gen_Icon_spray1;
+extern jobject SF_mindustry_gen_Icon_craftingSmall;
+extern jobject SF_mindustry_gen_Icon_crafting;
+extern jobject SF_mindustry_gen_Icon_fillSmall;
+extern jobject SF_mindustry_gen_Icon_fill;
+extern jobject SF_mindustry_gen_Icon_pasteSmall;
+extern jobject SF_mindustry_gen_Icon_paste;
+extern jobject SF_mindustry_gen_Icon_effectSmall;
+extern jobject SF_mindustry_gen_Icon_effect;
+extern jobject SF_mindustry_gen_Icon_bookSmall;
+extern jobject SF_mindustry_gen_Icon_book;
+extern jobject SF_mindustry_gen_Icon_liquidSmall;
+extern jobject SF_mindustry_gen_Icon_liquid;
+extern jobject SF_mindustry_gen_Icon_hostSmall;
+extern jobject SF_mindustry_gen_Icon_host;
+extern jobject SF_mindustry_gen_Icon_productionSmall;
+extern jobject SF_mindustry_gen_Icon_production;
+extern jobject SF_mindustry_gen_Icon_exitSmall;
+extern jobject SF_mindustry_gen_Icon_exit;
+extern jobject SF_mindustry_gen_Icon_modePvpSmall;
+extern jobject SF_mindustry_gen_Icon_modePvp;
+extern jobject SF_mindustry_gen_Icon_modeAttackSmall;
+extern jobject SF_mindustry_gen_Icon_modeAttack;
+extern jobject SF_mindustry_gen_Icon_refresh1Small;
+extern jobject SF_mindustry_gen_Icon_refresh1;
+extern jobject SF_mindustry_gen_Icon_noneSmall;
+extern jobject SF_mindustry_gen_Icon_none;
+extern jobject SF_mindustry_gen_Icon_pencilSmall;
+extern jobject SF_mindustry_gen_Icon_pencil;
+extern jobject SF_mindustry_gen_Icon_refreshSmall;
+extern jobject SF_mindustry_gen_Icon_refresh;
+extern jobject SF_mindustry_gen_Icon_modeSurvivalSmall;
+extern jobject SF_mindustry_gen_Icon_modeSurvival;
+extern jobject SF_mindustry_gen_Icon_commandRallySmall;
+extern jobject SF_mindustry_gen_Icon_commandRally;
+extern jobject SF_mindustry_gen_Icon_unitsSmall;
+extern jobject SF_mindustry_gen_Icon_units;
+extern jobject SF_mindustry_gen_Icon_commandAttackSmall;
+extern jobject SF_mindustry_gen_Icon_commandAttack;
+extern jobject SF_mindustry_gen_Icon_trashSmall;
+extern jobject SF_mindustry_gen_Icon_trash;
+extern jobject SF_mindustry_gen_Icon_chatSmall;
+extern jobject SF_mindustry_gen_Icon_chat;
+extern jobject SF_mindustry_gen_Icon_turretSmall;
+extern jobject SF_mindustry_gen_Icon_turret;
+extern jobject SF_mindustry_gen_Icon_playersSmall;
+extern jobject SF_mindustry_gen_Icon_players;
+extern jobject SF_mindustry_gen_Icon_editorSmall;
+extern jobject SF_mindustry_gen_Icon_editor;
+extern jobject SF_mindustry_gen_Icon_copySmall;
+extern jobject SF_mindustry_gen_Icon_copy;
+extern jobject SF_mindustry_gen_Icon_treeSmall;
+extern jobject SF_mindustry_gen_Icon_tree;
+extern jobject SF_mindustry_gen_Icon_lockOpenSmall;
+extern jobject SF_mindustry_gen_Icon_lockOpen;
+extern jobject SF_mindustry_gen_Icon_pickSmall;
+extern jobject SF_mindustry_gen_Icon_pick;
+extern jobject SF_mindustry_gen_Icon_exportSmall;
+extern jobject SF_mindustry_gen_Icon_export;
+extern jobject SF_mindustry_gen_Icon_downloadSmall;
+extern jobject SF_mindustry_gen_Icon_download;
+extern jobject SF_mindustry_gen_Icon_uploadSmall;
+extern jobject SF_mindustry_gen_Icon_upload;
+extern jobject SF_mindustry_gen_Icon_settingsSmall;
+extern jobject SF_mindustry_gen_Icon_settings;
+extern jobject SF_mindustry_gen_Icon_spraySmall;
+extern jobject SF_mindustry_gen_Icon_spray;
+extern jobject SF_mindustry_gen_Icon_zoomSmall;
+extern jobject SF_mindustry_gen_Icon_zoom;
+extern jobject SF_mindustry_gen_Icon_powerOldSmall;
+extern jobject SF_mindustry_gen_Icon_powerOld;
+extern jobject SF_mindustry_gen_Icon_powerSmall;
+extern jobject SF_mindustry_gen_Icon_power;
+extern jobject SF_mindustry_gen_Icon_menuSmall;
+extern jobject SF_mindustry_gen_Icon_menu;
+extern jobject SF_mindustry_gen_Icon_lockSmall;
+extern jobject SF_mindustry_gen_Icon_lock;
+extern jobject SF_mindustry_gen_Icon_eyeSmall;
+extern jobject SF_mindustry_gen_Icon_eye;
+extern jobject SF_mindustry_gen_Icon_eyeOffSmall;
+extern jobject SF_mindustry_gen_Icon_eyeOff;
+extern jobject SF_mindustry_gen_Icon_warningSmall;
+extern jobject SF_mindustry_gen_Icon_warning;
+extern jobject SF_mindustry_gen_Icon_terrainSmall;
+extern jobject SF_mindustry_gen_Icon_terrain;
+extern jobject SF_mindustry_gen_Icon_defenseSmall;
+extern jobject SF_mindustry_gen_Icon_defense;
+extern jobject SF_mindustry_gen_Icon_planetSmall;
+extern jobject SF_mindustry_gen_Icon_planet;
+extern jobject SF_mindustry_gen_Icon_arrowNoteSmall;
+extern jobject SF_mindustry_gen_Icon_arrowNote;
+extern jobject SF_mindustry_gen_Icon_musicSmall;
+extern jobject SF_mindustry_gen_Icon_music;
+extern jobject SF_mindustry_gen_Icon_fileAudioSmall;
+extern jobject SF_mindustry_gen_Icon_fileAudio;
+extern jobject SF_mindustry_gen_Icon_volumeOffSmall;
+extern jobject SF_mindustry_gen_Icon_volumeOff;
+extern jobject SF_mindustry_gen_Icon_volumeDownSmall;
+extern jobject SF_mindustry_gen_Icon_volumeDown;
+extern jobject SF_mindustry_gen_Icon_volumeUpSmall;
+extern jobject SF_mindustry_gen_Icon_volumeUp;
+extern jobject SF_mindustry_gen_Icon_tagSmall;
+extern jobject SF_mindustry_gen_Icon_tag;
+extern jobject SF_mindustry_gen_Icon_tagsSmall;
+extern jobject SF_mindustry_gen_Icon_tags;
+extern jobject SF_mindustry_gen_Icon_battery4Small;
+extern jobject SF_mindustry_gen_Icon_battery4;
+extern jobject SF_mindustry_gen_Icon_battery3Small;
+extern jobject SF_mindustry_gen_Icon_battery3;
+extern jobject SF_mindustry_gen_Icon_battery2Small;
+extern jobject SF_mindustry_gen_Icon_battery2;
+extern jobject SF_mindustry_gen_Icon_battery1Small;
+extern jobject SF_mindustry_gen_Icon_battery1;
+extern jobject SF_mindustry_gen_Icon_battery0Small;
+extern jobject SF_mindustry_gen_Icon_battery0;
+extern jobject SF_mindustry_gen_Icon_fileCodeSmall;
+extern jobject SF_mindustry_gen_Icon_fileCode;
+extern jobject SF_mindustry_gen_Icon_fileVideoSmall;
+extern jobject SF_mindustry_gen_Icon_fileVideo;
+extern jobject SF_mindustry_gen_Icon_fileArchiveSmall;
+extern jobject SF_mindustry_gen_Icon_fileArchive;
+extern jobject SF_mindustry_gen_Icon_folderOpenSmall;
+extern jobject SF_mindustry_gen_Icon_folderOpen;
+extern jobject SF_mindustry_gen_Icon_folderEmptySmall;
+extern jobject SF_mindustry_gen_Icon_folderEmpty;
+extern jobject SF_mindustry_gen_Icon_folderOpenEmptySmall;
+extern jobject SF_mindustry_gen_Icon_folderOpenEmpty;
+extern jobject SF_mindustry_gen_Icon_inboxSmall;
+extern jobject SF_mindustry_gen_Icon_inbox;
+extern jobject SF_mindustry_gen_Icon_sitemapSmall;
+extern jobject SF_mindustry_gen_Icon_sitemap;
+extern jobject SF_mindustry_gen_Icon_cloudSmall;
+extern jobject SF_mindustry_gen_Icon_cloud;
+extern jobject SF_mindustry_gen_Icon_uploadCloudSmall;
+extern jobject SF_mindustry_gen_Icon_uploadCloud;
+extern jobject SF_mindustry_gen_Icon_downloadCloudSmall;
+extern jobject SF_mindustry_gen_Icon_downloadCloud;
+extern jobject SF_mindustry_gen_Icon_rainSmall;
+extern jobject SF_mindustry_gen_Icon_rain;
+extern jobject SF_mindustry_gen_Icon_cloudSunSmall;
+extern jobject SF_mindustry_gen_Icon_cloudSun;
+extern jobject SF_mindustry_gen_Icon_drizzleSmall;
+extern jobject SF_mindustry_gen_Icon_drizzle;
+extern jobject SF_mindustry_gen_Icon_cloudFlashSmall;
+extern jobject SF_mindustry_gen_Icon_cloudFlash;
+extern jobject SF_mindustry_gen_Icon_cloudWindSmall;
+extern jobject SF_mindustry_gen_Icon_cloudWind;
+extern jobject SF_mindustry_gen_Icon_boxSmall;
+extern jobject SF_mindustry_gen_Icon_box;
+extern jobject SF_mindustry_gen_Icon_chartAltSmall;
+extern jobject SF_mindustry_gen_Icon_chartAlt;
+
+#define VTABLE_mindustry_gen_Icon_hashCode_R_int 0
+typedef jint (*func_mindustry_gen_Icon_hashCode_R_int)(jcontext ctx, jobject self);
+#define VTABLE_mindustry_gen_Icon_equals_java_lang_Object_R_boolean 1
+typedef jbool (*func_mindustry_gen_Icon_equals_java_lang_Object_R_boolean)(jcontext ctx, jobject self, jobject param0);
+#define VTABLE_mindustry_gen_Icon_clone_R_java_lang_Object 2
+typedef jobject (*func_mindustry_gen_Icon_clone_R_java_lang_Object)(jcontext ctx, jobject self);
+#define VTABLE_mindustry_gen_Icon_getClass_R_java_lang_Class 3
+typedef jobject (*func_mindustry_gen_Icon_getClass_R_java_lang_Class)(jcontext ctx, jobject self);
+#define VTABLE_mindustry_gen_Icon_toString_R_java_lang_String 4
+typedef jobject (*func_mindustry_gen_Icon_toString_R_java_lang_String)(jcontext ctx, jobject self);
+#define VTABLE_mindustry_gen_Icon_finalize 5
+typedef void (*func_mindustry_gen_Icon_finalize)(jcontext ctx, jobject self);
+#define VTABLE_mindustry_gen_Icon_notify 6
+typedef void (*func_mindustry_gen_Icon_notify)(jcontext ctx, jobject self);
+#define VTABLE_mindustry_gen_Icon_notifyAll 7
+typedef void (*func_mindustry_gen_Icon_notifyAll)(jcontext ctx, jobject self);
+#define VTABLE_mindustry_gen_Icon_wait 8
+typedef void (*func_mindustry_gen_Icon_wait)(jcontext ctx, jobject self);
+#define VTABLE_mindustry_gen_Icon_wait_long 9
+typedef void (*func_mindustry_gen_Icon_wait_long)(jcontext ctx, jobject self, jlong param0);
+#define VTABLE_mindustry_gen_Icon_wait_long_int 10
+typedef void (*func_mindustry_gen_Icon_wait_long_int)(jcontext ctx, jobject self, jlong param0, jint param1);
+
+void mark_mindustry_gen_Icon(jobject object, jint mark, jint depth);
+void clinit_mindustry_gen_Icon(jcontext ctx);
+void init_mindustry_gen_Icon(jcontext ctx, jobject self);
+void SM_mindustry_gen_Icon_load(jcontext ctx);
+
+#ifdef __cplusplus
+}
+#endif
+
+#endif

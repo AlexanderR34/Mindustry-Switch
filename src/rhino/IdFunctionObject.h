@@ -1,0 +1,324 @@
+#ifndef HEADER_rhino_IdFunctionObject
+#define HEADER_rhino_IdFunctionObject
+
+#include "Clearwing.h"
+#include "rhino/BaseFunction.h"
+
+#ifdef __cplusplus
+extern "C" {
+#endif
+
+typedef struct rhino_IdFunctionObject {
+	rhino_BaseFunction parent;
+	jref F_idcall;
+	jref F_tag;
+	jint F_methodId;
+	jint F_arity;
+	jbool F_useCallAsConstructor;
+	jref F_functionName;
+} rhino_IdFunctionObject;
+
+extern Class class_rhino_IdFunctionObject;
+
+
+#define VTABLE_rhino_IdFunctionObject_hashCode_R_int 0
+typedef jint (*func_rhino_IdFunctionObject_hashCode_R_int)(jcontext ctx, jobject self);
+#define VTABLE_rhino_IdFunctionObject_equals_java_lang_Object_R_boolean 1
+typedef jbool (*func_rhino_IdFunctionObject_equals_java_lang_Object_R_boolean)(jcontext ctx, jobject self, jobject param0);
+#define VTABLE_rhino_IdFunctionObject_clone_R_java_lang_Object 2
+typedef jobject (*func_rhino_IdFunctionObject_clone_R_java_lang_Object)(jcontext ctx, jobject self);
+#define VTABLE_rhino_IdFunctionObject_getClass_R_java_lang_Class 3
+typedef jobject (*func_rhino_IdFunctionObject_getClass_R_java_lang_Class)(jcontext ctx, jobject self);
+#define VTABLE_rhino_IdFunctionObject_toString_R_java_lang_String 4
+typedef jobject (*func_rhino_IdFunctionObject_toString_R_java_lang_String)(jcontext ctx, jobject self);
+#define VTABLE_rhino_IdFunctionObject_finalize 5
+typedef void (*func_rhino_IdFunctionObject_finalize)(jcontext ctx, jobject self);
+#define VTABLE_rhino_IdFunctionObject_notify 6
+typedef void (*func_rhino_IdFunctionObject_notify)(jcontext ctx, jobject self);
+#define VTABLE_rhino_IdFunctionObject_notifyAll 7
+typedef void (*func_rhino_IdFunctionObject_notifyAll)(jcontext ctx, jobject self);
+#define VTABLE_rhino_IdFunctionObject_wait 8
+typedef void (*func_rhino_IdFunctionObject_wait)(jcontext ctx, jobject self);
+#define VTABLE_rhino_IdFunctionObject_wait_long 9
+typedef void (*func_rhino_IdFunctionObject_wait_long)(jcontext ctx, jobject self, jlong param0);
+#define VTABLE_rhino_IdFunctionObject_wait_long_int 10
+typedef void (*func_rhino_IdFunctionObject_wait_long_int)(jcontext ctx, jobject self, jlong param0, jint param1);
+#define VTABLE_rhino_IdFunctionObject_getClassName_R_java_lang_String 11
+typedef jobject (*func_rhino_IdFunctionObject_getClassName_R_java_lang_String)(jcontext ctx, jobject self);
+#define VTABLE_rhino_IdFunctionObject_get_java_lang_String_rhino_Scriptable_R_java_lang_Object 12
+typedef jobject (*func_rhino_IdFunctionObject_get_java_lang_String_rhino_Scriptable_R_java_lang_Object)(jcontext ctx, jobject self, jobject param0, jobject param1);
+#define VTABLE_rhino_IdFunctionObject_get_int_rhino_Scriptable_R_java_lang_Object 13
+typedef jobject (*func_rhino_IdFunctionObject_get_int_rhino_Scriptable_R_java_lang_Object)(jcontext ctx, jobject self, jint param0, jobject param1);
+#define VTABLE_rhino_IdFunctionObject_has_java_lang_String_rhino_Scriptable_R_boolean 14
+typedef jbool (*func_rhino_IdFunctionObject_has_java_lang_String_rhino_Scriptable_R_boolean)(jcontext ctx, jobject self, jobject param0, jobject param1);
+#define VTABLE_rhino_IdFunctionObject_has_int_rhino_Scriptable_R_boolean 15
+typedef jbool (*func_rhino_IdFunctionObject_has_int_rhino_Scriptable_R_boolean)(jcontext ctx, jobject self, jint param0, jobject param1);
+#define VTABLE_rhino_IdFunctionObject_put_java_lang_String_rhino_Scriptable_java_lang_Object 16
+typedef void (*func_rhino_IdFunctionObject_put_java_lang_String_rhino_Scriptable_java_lang_Object)(jcontext ctx, jobject self, jobject param0, jobject param1, jobject param2);
+#define VTABLE_rhino_IdFunctionObject_put_int_rhino_Scriptable_java_lang_Object 17
+typedef void (*func_rhino_IdFunctionObject_put_int_rhino_Scriptable_java_lang_Object)(jcontext ctx, jobject self, jint param0, jobject param1, jobject param2);
+#define VTABLE_rhino_IdFunctionObject_delete_java_lang_String 18
+typedef void (*func_rhino_IdFunctionObject_delete_java_lang_String)(jcontext ctx, jobject self, jobject param0);
+#define VTABLE_rhino_IdFunctionObject_delete_int 19
+typedef void (*func_rhino_IdFunctionObject_delete_int)(jcontext ctx, jobject self, jint param0);
+#define VTABLE_rhino_IdFunctionObject_getPrototype_R_rhino_Scriptable 20
+typedef jobject (*func_rhino_IdFunctionObject_getPrototype_R_rhino_Scriptable)(jcontext ctx, jobject self);
+#define VTABLE_rhino_IdFunctionObject_setPrototype_rhino_Scriptable 21
+typedef void (*func_rhino_IdFunctionObject_setPrototype_rhino_Scriptable)(jcontext ctx, jobject self, jobject param0);
+#define VTABLE_rhino_IdFunctionObject_getParentScope_R_rhino_Scriptable 22
+typedef jobject (*func_rhino_IdFunctionObject_getParentScope_R_rhino_Scriptable)(jcontext ctx, jobject self);
+#define VTABLE_rhino_IdFunctionObject_setParentScope_rhino_Scriptable 23
+typedef void (*func_rhino_IdFunctionObject_setParentScope_rhino_Scriptable)(jcontext ctx, jobject self, jobject param0);
+#define VTABLE_rhino_IdFunctionObject_getIds_R_Array1_java_lang_Object 24
+typedef jobject (*func_rhino_IdFunctionObject_getIds_R_Array1_java_lang_Object)(jcontext ctx, jobject self);
+#define VTABLE_rhino_IdFunctionObject_getDefaultValue_java_lang_Class_R_java_lang_Object 25
+typedef jobject (*func_rhino_IdFunctionObject_getDefaultValue_java_lang_Class_R_java_lang_Object)(jcontext ctx, jobject self, jobject param0);
+#define VTABLE_rhino_IdFunctionObject_hasInstance_rhino_Scriptable_R_boolean 26
+typedef jbool (*func_rhino_IdFunctionObject_hasInstance_rhino_Scriptable_R_boolean)(jcontext ctx, jobject self, jobject param0);
+#define VTABLE_rhino_IdFunctionObject_get_rhino_Symbol_rhino_Scriptable_R_java_lang_Object 27
+typedef jobject (*func_rhino_IdFunctionObject_get_rhino_Symbol_rhino_Scriptable_R_java_lang_Object)(jcontext ctx, jobject self, jobject param0, jobject param1);
+#define VTABLE_rhino_IdFunctionObject_has_rhino_Symbol_rhino_Scriptable_R_boolean 28
+typedef jbool (*func_rhino_IdFunctionObject_has_rhino_Symbol_rhino_Scriptable_R_boolean)(jcontext ctx, jobject self, jobject param0, jobject param1);
+#define VTABLE_rhino_IdFunctionObject_put_rhino_Symbol_rhino_Scriptable_java_lang_Object 29
+typedef void (*func_rhino_IdFunctionObject_put_rhino_Symbol_rhino_Scriptable_java_lang_Object)(jcontext ctx, jobject self, jobject param0, jobject param1, jobject param2);
+#define VTABLE_rhino_IdFunctionObject_delete_rhino_Symbol 30
+typedef void (*func_rhino_IdFunctionObject_delete_rhino_Symbol)(jcontext ctx, jobject self, jobject param0);
+#define VTABLE_rhino_IdFunctionObject_getAllIds_R_Array1_java_lang_Object 31
+typedef jobject (*func_rhino_IdFunctionObject_getAllIds_R_Array1_java_lang_Object)(jcontext ctx, jobject self);
+#define VTABLE_rhino_IdFunctionObject_putConst_java_lang_String_rhino_Scriptable_java_lang_Object 32
+typedef void (*func_rhino_IdFunctionObject_putConst_java_lang_String_rhino_Scriptable_java_lang_Object)(jcontext ctx, jobject self, jobject param0, jobject param1, jobject param2);
+#define VTABLE_rhino_IdFunctionObject_defineConst_java_lang_String_rhino_Scriptable 33
+typedef void (*func_rhino_IdFunctionObject_defineConst_java_lang_String_rhino_Scriptable)(jcontext ctx, jobject self, jobject param0, jobject param1);
+#define VTABLE_rhino_IdFunctionObject_isConst_java_lang_String_R_boolean 34
+typedef jbool (*func_rhino_IdFunctionObject_isConst_java_lang_String_R_boolean)(jcontext ctx, jobject self, jobject param0);
+#define VTABLE_rhino_IdFunctionObject_createSlotMap_int_R_rhino_SlotMapContainer 35
+typedef jobject (*func_rhino_IdFunctionObject_createSlotMap_int_R_rhino_SlotMapContainer)(jcontext ctx, jobject self, jint param0);
+#define VTABLE_rhino_IdFunctionObject_getTypeOf_R_java_lang_String 36
+typedef jobject (*func_rhino_IdFunctionObject_getTypeOf_R_java_lang_String)(jcontext ctx, jobject self);
+#define VTABLE_rhino_IdFunctionObject_getAttributes_java_lang_String_R_int 37
+typedef jint (*func_rhino_IdFunctionObject_getAttributes_java_lang_String_R_int)(jcontext ctx, jobject self, jobject param0);
+#define VTABLE_rhino_IdFunctionObject_getAttributes_int_R_int 38
+typedef jint (*func_rhino_IdFunctionObject_getAttributes_int_R_int)(jcontext ctx, jobject self, jint param0);
+#define VTABLE_rhino_IdFunctionObject_getAttributes_rhino_Symbol_R_int 39
+typedef jint (*func_rhino_IdFunctionObject_getAttributes_rhino_Symbol_R_int)(jcontext ctx, jobject self, jobject param0);
+#define VTABLE_rhino_IdFunctionObject_setAttributes_java_lang_String_int 40
+typedef void (*func_rhino_IdFunctionObject_setAttributes_java_lang_String_int)(jcontext ctx, jobject self, jobject param0, jint param1);
+#define VTABLE_rhino_IdFunctionObject_setAttributes_int_int 41
+typedef void (*func_rhino_IdFunctionObject_setAttributes_int_int)(jcontext ctx, jobject self, jint param0, jint param1);
+#define VTABLE_rhino_IdFunctionObject_setAttributes_rhino_Symbol_int 42
+typedef void (*func_rhino_IdFunctionObject_setAttributes_rhino_Symbol_int)(jcontext ctx, jobject self, jobject param0, jint param1);
+#define VTABLE_rhino_IdFunctionObject_setGetterOrSetter_java_lang_String_int_rhino_Callable_boolean 43
+typedef void (*func_rhino_IdFunctionObject_setGetterOrSetter_java_lang_String_int_rhino_Callable_boolean)(jcontext ctx, jobject self, jobject param0, jint param1, jobject param2, jbool param3);
+#define VTABLE_rhino_IdFunctionObject_setGetterOrSetter_java_lang_String_int_rhino_Callable_boolean_boolean 44
+typedef void (*func_rhino_IdFunctionObject_setGetterOrSetter_java_lang_String_int_rhino_Callable_boolean_boolean)(jcontext ctx, jobject self, jobject param0, jint param1, jobject param2, jbool param3, jbool param4);
+#define VTABLE_rhino_IdFunctionObject_getGetterOrSetter_java_lang_String_int_boolean_R_java_lang_Object 45
+typedef jobject (*func_rhino_IdFunctionObject_getGetterOrSetter_java_lang_String_int_boolean_R_java_lang_Object)(jcontext ctx, jobject self, jobject param0, jint param1, jbool param2);
+#define VTABLE_rhino_IdFunctionObject_isGetterOrSetter_java_lang_String_int_boolean_R_boolean 46
+typedef jbool (*func_rhino_IdFunctionObject_isGetterOrSetter_java_lang_String_int_boolean_R_boolean)(jcontext ctx, jobject self, jobject param0, jint param1, jbool param2);
+#define VTABLE_rhino_IdFunctionObject_addLazilyInitializedValue_java_lang_String_int_rhino_LazilyLoadedCtor_int 47
+typedef void (*func_rhino_IdFunctionObject_addLazilyInitializedValue_java_lang_String_int_rhino_LazilyLoadedCtor_int)(jcontext ctx, jobject self, jobject param0, jint param1, jobject param2, jint param3);
+#define VTABLE_rhino_IdFunctionObject_setExternalArrayData_rhino_ExternalArrayData 48
+typedef void (*func_rhino_IdFunctionObject_setExternalArrayData_rhino_ExternalArrayData)(jcontext ctx, jobject self, jobject param0);
+#define VTABLE_rhino_IdFunctionObject_getExternalArrayData_R_rhino_ExternalArrayData 49
+typedef jobject (*func_rhino_IdFunctionObject_getExternalArrayData_R_rhino_ExternalArrayData)(jcontext ctx, jobject self);
+#define VTABLE_rhino_IdFunctionObject_getExternalArrayLength_R_java_lang_Object 50
+typedef jobject (*func_rhino_IdFunctionObject_getExternalArrayLength_R_java_lang_Object)(jcontext ctx, jobject self);
+#define VTABLE_rhino_IdFunctionObject_avoidObjectDetection_R_boolean 51
+typedef jbool (*func_rhino_IdFunctionObject_avoidObjectDetection_R_boolean)(jcontext ctx, jobject self);
+#define VTABLE_rhino_IdFunctionObject_equivalentValues_java_lang_Object_R_java_lang_Object 52
+typedef jobject (*func_rhino_IdFunctionObject_equivalentValues_java_lang_Object_R_java_lang_Object)(jcontext ctx, jobject self, jobject param0);
+#define VTABLE_rhino_IdFunctionObject_defineProperty_java_lang_String_java_lang_Object_int 53
+typedef void (*func_rhino_IdFunctionObject_defineProperty_java_lang_String_java_lang_Object_int)(jcontext ctx, jobject self, jobject param0, jobject param1, jint param2);
+#define VTABLE_rhino_IdFunctionObject_defineProperty_rhino_Symbol_java_lang_Object_int 54
+typedef void (*func_rhino_IdFunctionObject_defineProperty_rhino_Symbol_java_lang_Object_int)(jcontext ctx, jobject self, jobject param0, jobject param1, jint param2);
+#define VTABLE_rhino_IdFunctionObject_defineProperty_java_lang_String_java_lang_Class_int 55
+typedef void (*func_rhino_IdFunctionObject_defineProperty_java_lang_String_java_lang_Class_int)(jcontext ctx, jobject self, jobject param0, jobject param1, jint param2);
+#define VTABLE_rhino_IdFunctionObject_defineProperty_java_lang_String_java_lang_Object_java_lang_reflect_Method_java_lang_reflect_Method_int 56
+typedef void (*func_rhino_IdFunctionObject_defineProperty_java_lang_String_java_lang_Object_java_lang_reflect_Method_java_lang_reflect_Method_int)(jcontext ctx, jobject self, jobject param0, jobject param1, jobject param2, jobject param3, jint param4);
+#define VTABLE_rhino_IdFunctionObject_defineOwnProperties_rhino_Context_rhino_ScriptableObject 57
+typedef void (*func_rhino_IdFunctionObject_defineOwnProperties_rhino_Context_rhino_ScriptableObject)(jcontext ctx, jobject self, jobject param0, jobject param1);
+#define VTABLE_rhino_IdFunctionObject_defineOwnProperty_rhino_Context_java_lang_Object_rhino_ScriptableObject 58
+typedef void (*func_rhino_IdFunctionObject_defineOwnProperty_rhino_Context_java_lang_Object_rhino_ScriptableObject)(jcontext ctx, jobject self, jobject param0, jobject param1, jobject param2);
+#define VTABLE_rhino_IdFunctionObject_defineOwnProperty_rhino_Context_java_lang_Object_rhino_ScriptableObject_boolean 59
+typedef void (*func_rhino_IdFunctionObject_defineOwnProperty_rhino_Context_java_lang_Object_rhino_ScriptableObject_boolean)(jcontext ctx, jobject self, jobject param0, jobject param1, jobject param2, jbool param3);
+#define VTABLE_rhino_IdFunctionObject_checkPropertyDefinition_rhino_ScriptableObject 60
+typedef void (*func_rhino_IdFunctionObject_checkPropertyDefinition_rhino_ScriptableObject)(jcontext ctx, jobject self, jobject param0);
+#define VTABLE_rhino_IdFunctionObject_checkPropertyChange_java_lang_Object_rhino_ScriptableObject_rhino_ScriptableObject 61
+typedef void (*func_rhino_IdFunctionObject_checkPropertyChange_java_lang_Object_rhino_ScriptableObject_rhino_ScriptableObject)(jcontext ctx, jobject self, jobject param0, jobject param1, jobject param2);
+#define VTABLE_rhino_IdFunctionObject_sameValue_java_lang_Object_java_lang_Object_R_boolean 62
+typedef jbool (*func_rhino_IdFunctionObject_sameValue_java_lang_Object_java_lang_Object_R_boolean)(jcontext ctx, jobject self, jobject param0, jobject param1);
+#define VTABLE_rhino_IdFunctionObject_applyDescriptorToAttributeBitset_int_rhino_ScriptableObject_R_int 63
+typedef jint (*func_rhino_IdFunctionObject_applyDescriptorToAttributeBitset_int_rhino_ScriptableObject_R_int)(jcontext ctx, jobject self, jint param0, jobject param1);
+#define VTABLE_rhino_IdFunctionObject_isDataDescriptor_rhino_ScriptableObject_R_boolean 64
+typedef jbool (*func_rhino_IdFunctionObject_isDataDescriptor_rhino_ScriptableObject_R_boolean)(jcontext ctx, jobject self, jobject param0);
+#define VTABLE_rhino_IdFunctionObject_isAccessorDescriptor_rhino_ScriptableObject_R_boolean 65
+typedef jbool (*func_rhino_IdFunctionObject_isAccessorDescriptor_rhino_ScriptableObject_R_boolean)(jcontext ctx, jobject self, jobject param0);
+#define VTABLE_rhino_IdFunctionObject_isGenericDescriptor_rhino_ScriptableObject_R_boolean 66
+typedef jbool (*func_rhino_IdFunctionObject_isGenericDescriptor_rhino_ScriptableObject_R_boolean)(jcontext ctx, jobject self, jobject param0);
+#define VTABLE_rhino_IdFunctionObject_defineFunctionProperties_Array1_java_lang_String_java_lang_Class_int 67
+typedef void (*func_rhino_IdFunctionObject_defineFunctionProperties_Array1_java_lang_String_java_lang_Class_int)(jcontext ctx, jobject self, jobject param0, jobject param1, jint param2);
+#define VTABLE_rhino_IdFunctionObject_isExtensible_R_boolean 68
+typedef jbool (*func_rhino_IdFunctionObject_isExtensible_R_boolean)(jcontext ctx, jobject self);
+#define VTABLE_rhino_IdFunctionObject_preventExtensions 69
+typedef void (*func_rhino_IdFunctionObject_preventExtensions)(jcontext ctx, jobject self);
+#define VTABLE_rhino_IdFunctionObject_sealObject 70
+typedef void (*func_rhino_IdFunctionObject_sealObject)(jcontext ctx, jobject self);
+#define VTABLE_rhino_IdFunctionObject_isSealed_R_boolean 71
+typedef jbool (*func_rhino_IdFunctionObject_isSealed_R_boolean)(jcontext ctx, jobject self);
+#define VTABLE_rhino_IdFunctionObject_checkNotSealed_java_lang_Object_int 72
+typedef void (*func_rhino_IdFunctionObject_checkNotSealed_java_lang_Object_int)(jcontext ctx, jobject self, jobject param0, jint param1);
+#define VTABLE_rhino_IdFunctionObject_getAssociatedValue_java_lang_Object_R_java_lang_Object 73
+typedef jobject (*func_rhino_IdFunctionObject_getAssociatedValue_java_lang_Object_R_java_lang_Object)(jcontext ctx, jobject self, jobject param0);
+#define VTABLE_rhino_IdFunctionObject_associateValue_java_lang_Object_java_lang_Object_R_java_lang_Object 74
+typedef jobject (*func_rhino_IdFunctionObject_associateValue_java_lang_Object_java_lang_Object_R_java_lang_Object)(jcontext ctx, jobject self, jobject param0, jobject param1);
+#define VTABLE_rhino_IdFunctionObject_putImpl_java_lang_Object_int_rhino_Scriptable_java_lang_Object_R_boolean 75
+typedef jbool (*func_rhino_IdFunctionObject_putImpl_java_lang_Object_int_rhino_Scriptable_java_lang_Object_R_boolean)(jcontext ctx, jobject self, jobject param0, jint param1, jobject param2, jobject param3);
+#define VTABLE_rhino_IdFunctionObject_putConstImpl_java_lang_String_int_rhino_Scriptable_java_lang_Object_int_R_boolean 76
+typedef jbool (*func_rhino_IdFunctionObject_putConstImpl_java_lang_String_int_rhino_Scriptable_java_lang_Object_int_R_boolean)(jcontext ctx, jobject self, jobject param0, jint param1, jobject param2, jobject param3, jint param4);
+#define VTABLE_rhino_IdFunctionObject_findAttributeSlot_java_lang_String_int_rhino_ScriptableObject$SlotAccess_R_rhino_ScriptableObject$Slot 77
+typedef jobject (*func_rhino_IdFunctionObject_findAttributeSlot_java_lang_String_int_rhino_ScriptableObject$SlotAccess_R_rhino_ScriptableObject$Slot)(jcontext ctx, jobject self, jobject param0, jint param1, jobject param2);
+#define VTABLE_rhino_IdFunctionObject_findAttributeSlot_rhino_Symbol_rhino_ScriptableObject$SlotAccess_R_rhino_ScriptableObject$Slot 78
+typedef jobject (*func_rhino_IdFunctionObject_findAttributeSlot_rhino_Symbol_rhino_ScriptableObject$SlotAccess_R_rhino_ScriptableObject$Slot)(jcontext ctx, jobject self, jobject param0, jobject param1);
+#define VTABLE_rhino_IdFunctionObject_getIds_boolean_boolean_R_Array1_java_lang_Object 79
+typedef jobject (*func_rhino_IdFunctionObject_getIds_boolean_boolean_R_Array1_java_lang_Object)(jcontext ctx, jobject self, jbool param0, jbool param1);
+#define VTABLE_rhino_IdFunctionObject_getOwnPropertyDescriptor_rhino_Context_java_lang_Object_R_rhino_ScriptableObject 80
+typedef jobject (*func_rhino_IdFunctionObject_getOwnPropertyDescriptor_rhino_Context_java_lang_Object_R_rhino_ScriptableObject)(jcontext ctx, jobject self, jobject param0, jobject param1);
+#define VTABLE_rhino_IdFunctionObject_getSlot_rhino_Context_java_lang_Object_rhino_ScriptableObject$SlotAccess_R_rhino_ScriptableObject$Slot 81
+typedef jobject (*func_rhino_IdFunctionObject_getSlot_rhino_Context_java_lang_Object_rhino_ScriptableObject$SlotAccess_R_rhino_ScriptableObject$Slot)(jcontext ctx, jobject self, jobject param0, jobject param1, jobject param2);
+#define VTABLE_rhino_IdFunctionObject_size_R_int 82
+typedef jint (*func_rhino_IdFunctionObject_size_R_int)(jcontext ctx, jobject self);
+#define VTABLE_rhino_IdFunctionObject_isEmpty_R_boolean 83
+typedef jbool (*func_rhino_IdFunctionObject_isEmpty_R_boolean)(jcontext ctx, jobject self);
+#define VTABLE_rhino_IdFunctionObject_get_java_lang_Object_R_java_lang_Object 84
+typedef jobject (*func_rhino_IdFunctionObject_get_java_lang_Object_R_java_lang_Object)(jcontext ctx, jobject self, jobject param0);
+#define VTABLE_rhino_IdFunctionObject_execIdCall_rhino_IdFunctionObject_rhino_Context_rhino_Scriptable_rhino_Scriptable_Array1_java_lang_Object_R_java_lang_Object 85
+typedef jobject (*func_rhino_IdFunctionObject_execIdCall_rhino_IdFunctionObject_rhino_Context_rhino_Scriptable_rhino_Scriptable_Array1_java_lang_Object_R_java_lang_Object)(jcontext ctx, jobject self, jobject param0, jobject param1, jobject param2, jobject param3, jobject param4);
+#define VTABLE_rhino_IdFunctionObject_defaultHas_java_lang_String_R_boolean 86
+typedef jbool (*func_rhino_IdFunctionObject_defaultHas_java_lang_String_R_boolean)(jcontext ctx, jobject self, jobject param0);
+#define VTABLE_rhino_IdFunctionObject_defaultGet_java_lang_String_R_java_lang_Object 87
+typedef jobject (*func_rhino_IdFunctionObject_defaultGet_java_lang_String_R_java_lang_Object)(jcontext ctx, jobject self, jobject param0);
+#define VTABLE_rhino_IdFunctionObject_defaultPut_java_lang_String_java_lang_Object 88
+typedef void (*func_rhino_IdFunctionObject_defaultPut_java_lang_String_java_lang_Object)(jcontext ctx, jobject self, jobject param0, jobject param1);
+#define VTABLE_rhino_IdFunctionObject_getMaxInstanceId_R_int 89
+typedef jint (*func_rhino_IdFunctionObject_getMaxInstanceId_R_int)(jcontext ctx, jobject self);
+#define VTABLE_rhino_IdFunctionObject_findInstanceIdInfo_java_lang_String_R_int 90
+typedef jint (*func_rhino_IdFunctionObject_findInstanceIdInfo_java_lang_String_R_int)(jcontext ctx, jobject self, jobject param0);
+#define VTABLE_rhino_IdFunctionObject_findInstanceIdInfo_rhino_Symbol_R_int 91
+typedef jint (*func_rhino_IdFunctionObject_findInstanceIdInfo_rhino_Symbol_R_int)(jcontext ctx, jobject self, jobject param0);
+#define VTABLE_rhino_IdFunctionObject_getInstanceIdName_int_R_java_lang_String 92
+typedef jobject (*func_rhino_IdFunctionObject_getInstanceIdName_int_R_java_lang_String)(jcontext ctx, jobject self, jint param0);
+#define VTABLE_rhino_IdFunctionObject_getInstanceIdValue_int_R_java_lang_Object 93
+typedef jobject (*func_rhino_IdFunctionObject_getInstanceIdValue_int_R_java_lang_Object)(jcontext ctx, jobject self, jint param0);
+#define VTABLE_rhino_IdFunctionObject_setInstanceIdValue_int_java_lang_Object 94
+typedef void (*func_rhino_IdFunctionObject_setInstanceIdValue_int_java_lang_Object)(jcontext ctx, jobject self, jint param0, jobject param1);
+#define VTABLE_rhino_IdFunctionObject_setInstanceIdAttributes_int_int 95
+typedef void (*func_rhino_IdFunctionObject_setInstanceIdAttributes_int_int)(jcontext ctx, jobject self, jint param0, jint param1);
+#define VTABLE_rhino_IdFunctionObject_exportAsJSClass_int_rhino_Scriptable_boolean_R_rhino_IdFunctionObject 96
+typedef jobject (*func_rhino_IdFunctionObject_exportAsJSClass_int_rhino_Scriptable_boolean_R_rhino_IdFunctionObject)(jcontext ctx, jobject self, jint param0, jobject param1, jbool param2);
+#define VTABLE_rhino_IdFunctionObject_hasPrototypeMap_R_boolean 97
+typedef jbool (*func_rhino_IdFunctionObject_hasPrototypeMap_R_boolean)(jcontext ctx, jobject self);
+#define VTABLE_rhino_IdFunctionObject_activatePrototypeMap_int 98
+typedef void (*func_rhino_IdFunctionObject_activatePrototypeMap_int)(jcontext ctx, jobject self, jint param0);
+#define VTABLE_rhino_IdFunctionObject_initPrototypeMethod_java_lang_Object_int_java_lang_String_int_R_rhino_IdFunctionObject 99
+typedef jobject (*func_rhino_IdFunctionObject_initPrototypeMethod_java_lang_Object_int_java_lang_String_int_R_rhino_IdFunctionObject)(jcontext ctx, jobject self, jobject param0, jint param1, jobject param2, jint param3);
+#define VTABLE_rhino_IdFunctionObject_initPrototypeMethod_java_lang_Object_int_java_lang_String_java_lang_String_int_R_rhino_IdFunctionObject 100
+typedef jobject (*func_rhino_IdFunctionObject_initPrototypeMethod_java_lang_Object_int_java_lang_String_java_lang_String_int_R_rhino_IdFunctionObject)(jcontext ctx, jobject self, jobject param0, jint param1, jobject param2, jobject param3, jint param4);
+#define VTABLE_rhino_IdFunctionObject_initPrototypeMethod_java_lang_Object_int_rhino_Symbol_java_lang_String_int_R_rhino_IdFunctionObject 101
+typedef jobject (*func_rhino_IdFunctionObject_initPrototypeMethod_java_lang_Object_int_rhino_Symbol_java_lang_String_int_R_rhino_IdFunctionObject)(jcontext ctx, jobject self, jobject param0, jint param1, jobject param2, jobject param3, jint param4);
+#define VTABLE_rhino_IdFunctionObject_initPrototypeConstructor_rhino_IdFunctionObject 102
+typedef void (*func_rhino_IdFunctionObject_initPrototypeConstructor_rhino_IdFunctionObject)(jcontext ctx, jobject self, jobject param0);
+#define VTABLE_rhino_IdFunctionObject_initPrototypeValue_int_java_lang_String_java_lang_Object_int 103
+typedef void (*func_rhino_IdFunctionObject_initPrototypeValue_int_java_lang_String_java_lang_Object_int)(jcontext ctx, jobject self, jint param0, jobject param1, jobject param2, jint param3);
+#define VTABLE_rhino_IdFunctionObject_initPrototypeValue_int_rhino_Symbol_java_lang_Object_int 104
+typedef void (*func_rhino_IdFunctionObject_initPrototypeValue_int_rhino_Symbol_java_lang_Object_int)(jcontext ctx, jobject self, jint param0, jobject param1, jobject param2, jint param3);
+#define VTABLE_rhino_IdFunctionObject_initPrototypeId_int 105
+typedef void (*func_rhino_IdFunctionObject_initPrototypeId_int)(jcontext ctx, jobject self, jint param0);
+#define VTABLE_rhino_IdFunctionObject_findPrototypeId_java_lang_String_R_int 106
+typedef jint (*func_rhino_IdFunctionObject_findPrototypeId_java_lang_String_R_int)(jcontext ctx, jobject self, jobject param0);
+#define VTABLE_rhino_IdFunctionObject_findPrototypeId_rhino_Symbol_R_int 107
+typedef jint (*func_rhino_IdFunctionObject_findPrototypeId_rhino_Symbol_R_int)(jcontext ctx, jobject self, jobject param0);
+#define VTABLE_rhino_IdFunctionObject_fillConstructorProperties_rhino_IdFunctionObject 108
+typedef void (*func_rhino_IdFunctionObject_fillConstructorProperties_rhino_IdFunctionObject)(jcontext ctx, jobject self, jobject param0);
+#define VTABLE_rhino_IdFunctionObject_addIdFunctionProperty_rhino_Scriptable_java_lang_Object_int_java_lang_String_int 109
+typedef void (*func_rhino_IdFunctionObject_addIdFunctionProperty_rhino_Scriptable_java_lang_Object_int_java_lang_String_int)(jcontext ctx, jobject self, jobject param0, jobject param1, jint param2, jobject param3, jint param4);
+#define VTABLE_rhino_IdFunctionObject_newIdFunction_java_lang_Object_int_java_lang_String_int_rhino_Scriptable_R_rhino_IdFunctionObject 110
+typedef jobject (*func_rhino_IdFunctionObject_newIdFunction_java_lang_Object_int_java_lang_String_int_rhino_Scriptable_R_rhino_IdFunctionObject)(jcontext ctx, jobject self, jobject param0, jint param1, jobject param2, jint param3, jobject param4);
+#define VTABLE_rhino_IdFunctionObject_getBuiltInDescriptor_java_lang_String_R_rhino_ScriptableObject 111
+typedef jobject (*func_rhino_IdFunctionObject_getBuiltInDescriptor_java_lang_String_R_rhino_ScriptableObject)(jcontext ctx, jobject self, jobject param0);
+#define VTABLE_rhino_IdFunctionObject_getBuiltInDescriptor_rhino_Symbol_R_rhino_ScriptableObject 112
+typedef jobject (*func_rhino_IdFunctionObject_getBuiltInDescriptor_rhino_Symbol_R_rhino_ScriptableObject)(jcontext ctx, jobject self, jobject param0);
+#define VTABLE_rhino_IdFunctionObject_call_rhino_Context_rhino_Scriptable_rhino_Scriptable_Array1_java_lang_Object_R_java_lang_Object 113
+typedef jobject (*func_rhino_IdFunctionObject_call_rhino_Context_rhino_Scriptable_rhino_Scriptable_Array1_java_lang_Object_R_java_lang_Object)(jcontext ctx, jobject self, jobject param0, jobject param1, jobject param2, jobject param3);
+#define VTABLE_rhino_IdFunctionObject_construct_rhino_Context_rhino_Scriptable_Array1_java_lang_Object_R_rhino_Scriptable 114
+typedef jobject (*func_rhino_IdFunctionObject_construct_rhino_Context_rhino_Scriptable_Array1_java_lang_Object_R_rhino_Scriptable)(jcontext ctx, jobject self, jobject param0, jobject param1, jobject param2);
+#define VTABLE_rhino_IdFunctionObject_isGeneratorFunction_R_boolean 115
+typedef jbool (*func_rhino_IdFunctionObject_isGeneratorFunction_R_boolean)(jcontext ctx, jobject self);
+#define VTABLE_rhino_IdFunctionObject_realFunction_rhino_Scriptable_rhino_IdFunctionObject_R_rhino_BaseFunction 116
+typedef jobject (*func_rhino_IdFunctionObject_realFunction_rhino_Scriptable_rhino_IdFunctionObject_R_rhino_BaseFunction)(jcontext ctx, jobject self, jobject param0, jobject param1);
+#define VTABLE_rhino_IdFunctionObject_setImmunePrototypeProperty_java_lang_Object 117
+typedef void (*func_rhino_IdFunctionObject_setImmunePrototypeProperty_java_lang_Object)(jcontext ctx, jobject self, jobject param0);
+#define VTABLE_rhino_IdFunctionObject_getClassPrototype_R_rhino_Scriptable 118
+typedef jobject (*func_rhino_IdFunctionObject_getClassPrototype_R_rhino_Scriptable)(jcontext ctx, jobject self);
+#define VTABLE_rhino_IdFunctionObject_createObject_rhino_Context_rhino_Scriptable_R_rhino_Scriptable 119
+typedef jobject (*func_rhino_IdFunctionObject_createObject_rhino_Context_rhino_Scriptable_R_rhino_Scriptable)(jcontext ctx, jobject self, jobject param0, jobject param1);
+#define VTABLE_rhino_IdFunctionObject_decompile_int_int_R_java_lang_String 120
+typedef jobject (*func_rhino_IdFunctionObject_decompile_int_int_R_java_lang_String)(jcontext ctx, jobject self, jint param0, jint param1);
+#define VTABLE_rhino_IdFunctionObject_getArity_R_int 121
+typedef jint (*func_rhino_IdFunctionObject_getArity_R_int)(jcontext ctx, jobject self);
+#define VTABLE_rhino_IdFunctionObject_getLength_R_int 122
+typedef jint (*func_rhino_IdFunctionObject_getLength_R_int)(jcontext ctx, jobject self);
+#define VTABLE_rhino_IdFunctionObject_getFunctionName_R_java_lang_String 123
+typedef jobject (*func_rhino_IdFunctionObject_getFunctionName_R_java_lang_String)(jcontext ctx, jobject self);
+#define VTABLE_rhino_IdFunctionObject_hasPrototypeProperty_R_boolean 124
+typedef jbool (*func_rhino_IdFunctionObject_hasPrototypeProperty_R_boolean)(jcontext ctx, jobject self);
+#define VTABLE_rhino_IdFunctionObject_getPrototypeProperty_R_java_lang_Object 125
+typedef jobject (*func_rhino_IdFunctionObject_getPrototypeProperty_R_java_lang_Object)(jcontext ctx, jobject self);
+#define VTABLE_rhino_IdFunctionObject_setupDefaultPrototype_R_java_lang_Object 126
+typedef jobject (*func_rhino_IdFunctionObject_setupDefaultPrototype_R_java_lang_Object)(jcontext ctx, jobject self);
+#define VTABLE_rhino_IdFunctionObject_getArguments_R_java_lang_Object 127
+typedef jobject (*func_rhino_IdFunctionObject_getArguments_R_java_lang_Object)(jcontext ctx, jobject self);
+#define VTABLE_rhino_IdFunctionObject_jsConstructor_rhino_Context_rhino_Scriptable_Array1_java_lang_Object_R_java_lang_Object 128
+typedef jobject (*func_rhino_IdFunctionObject_jsConstructor_rhino_Context_rhino_Scriptable_Array1_java_lang_Object_R_java_lang_Object)(jcontext ctx, jobject self, jobject param0, jobject param1, jobject param2);
+#define VTABLE_rhino_IdFunctionObject_initFunction_java_lang_String_rhino_Scriptable 129
+typedef void (*func_rhino_IdFunctionObject_initFunction_java_lang_String_rhino_Scriptable)(jcontext ctx, jobject self, jobject param0, jobject param1);
+#define VTABLE_rhino_IdFunctionObject_hasTag_java_lang_Object_R_boolean 130
+typedef jbool (*func_rhino_IdFunctionObject_hasTag_java_lang_Object_R_boolean)(jcontext ctx, jobject self, jobject param0);
+#define VTABLE_rhino_IdFunctionObject_getTag_R_java_lang_Object 131
+typedef jobject (*func_rhino_IdFunctionObject_getTag_R_java_lang_Object)(jcontext ctx, jobject self);
+#define VTABLE_rhino_IdFunctionObject_methodId_R_int 132
+typedef jint (*func_rhino_IdFunctionObject_methodId_R_int)(jcontext ctx, jobject self);
+#define VTABLE_rhino_IdFunctionObject_markAsConstructor_rhino_Scriptable 133
+typedef void (*func_rhino_IdFunctionObject_markAsConstructor_rhino_Scriptable)(jcontext ctx, jobject self, jobject param0);
+#define VTABLE_rhino_IdFunctionObject_addAsProperty_rhino_Scriptable 134
+typedef void (*func_rhino_IdFunctionObject_addAsProperty_rhino_Scriptable)(jcontext ctx, jobject self, jobject param0);
+#define VTABLE_rhino_IdFunctionObject_exportAsScopeProperty 135
+typedef void (*func_rhino_IdFunctionObject_exportAsScopeProperty)(jcontext ctx, jobject self);
+#define VTABLE_rhino_IdFunctionObject_unknown_R_java_lang_RuntimeException 136
+typedef jobject (*func_rhino_IdFunctionObject_unknown_R_java_lang_RuntimeException)(jcontext ctx, jobject self);
+
+void mark_rhino_IdFunctionObject(jobject object, jint mark, jint depth);
+void clinit_rhino_IdFunctionObject(jcontext ctx);
+void init_rhino_IdFunctionObject_rhino_IdFunctionCall_java_lang_Object_int_int(jcontext ctx, jobject self, jobject param0, jobject param1, jint param2, jint param3);
+void init_rhino_IdFunctionObject_rhino_IdFunctionCall_java_lang_Object_int_java_lang_String_int_rhino_Scriptable(jcontext ctx, jobject self, jobject param0, jobject param1, jint param2, jobject param3, jint param4, jobject param5);
+void M_rhino_IdFunctionObject_initFunction_java_lang_String_rhino_Scriptable(jcontext ctx, jobject self, jobject param0, jobject param1);
+jbool M_rhino_IdFunctionObject_hasTag_java_lang_Object_R_boolean(jcontext ctx, jobject self, jobject param0);
+jobject M_rhino_IdFunctionObject_getTag_R_java_lang_Object(jcontext ctx, jobject self);
+jint M_rhino_IdFunctionObject_methodId_R_int(jcontext ctx, jobject self);
+void M_rhino_IdFunctionObject_markAsConstructor_rhino_Scriptable(jcontext ctx, jobject self, jobject param0);
+void M_rhino_IdFunctionObject_addAsProperty_rhino_Scriptable(jcontext ctx, jobject self, jobject param0);
+void M_rhino_IdFunctionObject_exportAsScopeProperty(jcontext ctx, jobject self);
+jobject M_rhino_IdFunctionObject_getPrototype_R_rhino_Scriptable(jcontext ctx, jobject self);
+jobject M_rhino_IdFunctionObject_call_rhino_Context_rhino_Scriptable_rhino_Scriptable_Array1_java_lang_Object_R_java_lang_Object(jcontext ctx, jobject self, jobject param0, jobject param1, jobject param2, jobject param3);
+jobject M_rhino_IdFunctionObject_createObject_rhino_Context_rhino_Scriptable_R_rhino_Scriptable(jcontext ctx, jobject self, jobject param0, jobject param1);
+jobject M_rhino_IdFunctionObject_decompile_int_int_R_java_lang_String(jcontext ctx, jobject self, jint param0, jint param1);
+jint M_rhino_IdFunctionObject_getArity_R_int(jcontext ctx, jobject self);
+jint M_rhino_IdFunctionObject_getLength_R_int(jcontext ctx, jobject self);
+jobject M_rhino_IdFunctionObject_getFunctionName_R_java_lang_String(jcontext ctx, jobject self);
+jobject M_rhino_IdFunctionObject_unknown_R_java_lang_RuntimeException(jcontext ctx, jobject self);
+jbool SM_rhino_IdFunctionObject_equalObjectGraphs_rhino_IdFunctionObject_rhino_IdFunctionObject_rhino_EqualObjectGraphs_R_boolean(jcontext ctx, jobject param0, jobject param1, jobject param2);
+
+#ifdef __cplusplus
+}
+#endif
+
+#endif

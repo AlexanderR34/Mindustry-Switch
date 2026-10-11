@@ -1,0 +1,162 @@
+#include "mindustry/content/UnitTypes_45_1.h"
+#include "mindustry/content/UnitTypes_45.h"
+#include "arc/math/Mathf.h"
+#include "java/lang/Object.h"
+#include "java/lang/String.h"
+#include "mindustry/entities/part/DrawPart_PartProgress.h"
+#include "mindustry/content/UnitTypes_45_1.h"
+#include "mindustry/entities/part/RegionPart.h"
+
+extern "C" {
+
+
+void mark_mindustry_content_UnitTypes$45$1(jobject object, jint mark, jint depth) {
+	if (!object) {
+		return;
+	}
+	if (depth > GC_DEPTH_ALWAYS && (object->gcMark < GC_MARK_START || object->gcMark == mark))
+		return;
+	if (depth > MAX_GC_MARK_DEPTH) {
+		markDeepObject(object);
+		return;
+	}
+	mark_mindustry_entities_part_RegionPart(object, mark, depth);
+	if (object->gcMark >= GC_MARK_START)
+		object->gcMark = mark;
+	auto self = (mindustry_content_UnitTypes$45$1 *) object;
+	if (self->F_this$0)
+		((gc_mark_ptr) ((jclass) ((jobject) self->F_this$0)->clazz)->markFunction)((jobject) self->F_this$0, mark, depth + 1);
+}
+
+void clinit_mindustry_content_UnitTypes$45$1(jcontext ctx) {
+	static bool initialized;
+	if (initialized) return;
+	initialized = true;
+	clinit_mindustry_entities_part_RegionPart(ctx);
+}
+
+void init_mindustry_content_UnitTypes$45$1_mindustry_content_UnitTypes$45_java_lang_String_int(jcontext ctx, jobject self, jobject param0, jobject param1, jint param2) {
+	NULL_CHECK(self);
+	jtype frame[10];
+	auto stack = &frame[5];
+	jtype *sp = stack;
+	FrameInfo frameInfo { "mindustry/content/UnitTypes$45$1:<init>", 10 };
+	auto frameRef = pushStackFrame(ctx, &frameInfo, frame, nullptr);
+
+	clinit_mindustry_content_UnitTypes$45$1(ctx);
+	frame[0].o = self;
+	frame[1].o = param0;
+	frame[2].o = param1;
+	frame[3].i = param2;
+	{
+	LINE_NUMBER(3269);
+	((mindustry_content_UnitTypes$45$1 *) NULL_CHECK((frame[0].o)))->F_val$fi = (frame[3].i);
+	((mindustry_content_UnitTypes$45$1 *) NULL_CHECK((frame[0].o)))->F_this$0 = (jref) (frame[1].o);
+	init_mindustry_entities_part_RegionPart_java_lang_String(ctx, (frame[0].o), (frame[2].o));
+	LINE_NUMBER(3270);
+	((mindustry_entities_part_RegionPart *) NULL_CHECK((frame[0].o)))->F_y = ((jfloat(5.25f)) - (((jfloat(11.25f)) * (jfloat(((jint)((mindustry_content_UnitTypes$45$1 *) NULL_CHECK((frame[0].o)))->F_val$fi)))) / (jfloat(4.0f))));
+	LINE_NUMBER(3271);
+	sp[0].o = frame[0].o;
+	jfloat temp0 = jfloat(5.25f);
+	jfloat temp1 = (jfloat)SM_arc_math_Mathf_slope_float_R_float(ctx, ((jfloat(((jint)((mindustry_content_UnitTypes$45$1 *) NULL_CHECK((frame[0].o)))->F_val$fi))) / (jfloat(4.0f))));
+	((mindustry_entities_part_RegionPart *) NULL_CHECK(sp[0].o))->F_moveX = (temp0 + (temp1 * (jfloat(1.25f))));
+	LINE_NUMBER(3272);
+	((mindustry_entities_part_RegionPart *) NULL_CHECK((frame[0].o)))->F_moveRot = ((jfloat(10.0f)) - ((jfloat(((jint)((mindustry_content_UnitTypes$45$1 *) NULL_CHECK((frame[0].o)))->F_val$fi))) * (jfloat(14.0f))));
+	LINE_NUMBER(3273);
+	frame[4].f = ((jfloat(((jint)((mindustry_content_UnitTypes$45$1 *) NULL_CHECK((frame[0].o)))->F_val$fi))) / (jfloat(4.0f)));
+	LINE_NUMBER(3274);
+	sp[0].o = frame[0].o;
+	clinit_mindustry_entities_part_DrawPart$PartProgress(ctx);
+	sp[1].o = (jobject)SF_mindustry_entities_part_DrawPart$PartProgress_reload;
+	sp[1].o = (jobject)((func_mindustry_entities_part_DrawPart$PartProgress_inv_R_mindustry_entities_part_DrawPart$PartProgress) resolveInterfaceMethod(ctx, &class_mindustry_entities_part_DrawPart$PartProgress, INDEX_mindustry_entities_part_DrawPart$PartProgress_inv_R_mindustry_entities_part_DrawPart$PartProgress, sp[1].o))(ctx, sp[1].o);
+	sp[1].o = (jobject)((func_mindustry_entities_part_DrawPart$PartProgress_mul_float_R_mindustry_entities_part_DrawPart$PartProgress) resolveInterfaceMethod(ctx, &class_mindustry_entities_part_DrawPart$PartProgress, INDEX_mindustry_entities_part_DrawPart$PartProgress_mul_float_R_mindustry_entities_part_DrawPart$PartProgress, sp[1].o))(ctx, sp[1].o, (jfloat(1.3f)));
+	sp[1].o = (jobject)((func_mindustry_entities_part_DrawPart$PartProgress_add_float_R_mindustry_entities_part_DrawPart$PartProgress) resolveInterfaceMethod(ctx, &class_mindustry_entities_part_DrawPart$PartProgress, INDEX_mindustry_entities_part_DrawPart$PartProgress_add_float_R_mindustry_entities_part_DrawPart$PartProgress, sp[1].o))(ctx, sp[1].o, (jfloat(0.1f)));
+	sp[1].o = (jobject)((func_mindustry_entities_part_DrawPart$PartProgress_sustain_float_float_float_R_mindustry_entities_part_DrawPart$PartProgress) resolveInterfaceMethod(ctx, &class_mindustry_entities_part_DrawPart$PartProgress, INDEX_mindustry_entities_part_DrawPart$PartProgress_sustain_float_float_float_R_mindustry_entities_part_DrawPart$PartProgress, sp[1].o))(ctx, sp[1].o, ((frame[4].f) * (jfloat(0.34f))), (jfloat(0.14f)), (jfloat(0.14f)));
+	((mindustry_entities_part_RegionPart *) NULL_CHECK(sp[0].o))->F_progress = (jref) sp[1].o;
+	LINE_NUMBER(3275);
+	((mindustry_entities_part_RegionPart *) NULL_CHECK((frame[0].o)))->F_layerOffset = (jfloat(-1,000000e-03f));
+	LINE_NUMBER(3276);
+	((mindustry_entities_part_RegionPart *) NULL_CHECK((frame[0].o)))->F_mirror = (jint(1));
+	LINE_NUMBER(3269);
+	popStackFrame(ctx);
+	return;
+	}
+
+	popStackFrame(ctx);
+}
+
+void *vtable_mindustry_content_UnitTypes$45$1[] {
+	(void *) M_java_lang_Object_hashCode_R_int,
+	(void *) M_java_lang_Object_equals_java_lang_Object_R_boolean,
+	(void *) M_java_lang_Object_clone_R_java_lang_Object,
+	(void *) M_java_lang_Object_getClass_R_java_lang_Class,
+	(void *) M_java_lang_Object_toString_R_java_lang_String,
+	(void *) M_java_lang_Object_finalize,
+	(void *) M_java_lang_Object_notify,
+	(void *) M_java_lang_Object_notifyAll,
+	(void *) M_java_lang_Object_wait,
+	(void *) M_java_lang_Object_wait_long,
+	(void *) M_java_lang_Object_wait_long_int,
+	(void *) M_mindustry_entities_part_RegionPart_draw_mindustry_entities_part_DrawPart$PartParams,
+	(void *) M_mindustry_entities_part_RegionPart_load_java_lang_String,
+	(void *) M_mindustry_entities_part_RegionPart_getOutlines_arc_struct_Seq,
+	(void *) M_mindustry_entities_part_RegionPart_rect_arc_graphics_g2d_TextureRegion_float_float_float,
+};
+
+static VtableEntry vtableEntries[] {
+	{ "hashCode", "()I" },
+	{ "equals", "(Ljava/lang/Object;)Z" },
+	{ "clone", "()Ljava/lang/Object;" },
+	{ "getClass", "()Ljava/lang/Class;" },
+	{ "toString", "()Ljava/lang/String;" },
+	{ "finalize", "()V" },
+	{ "notify", "()V" },
+	{ "notifyAll", "()V" },
+	{ "wait", "()V" },
+	{ "wait", "(J)V" },
+	{ "wait", "(JI)V" },
+	{ "draw", "(Lmindustry/entities/part/DrawPart$PartParams;)V" },
+	{ "load", "(Ljava/lang/String;)V" },
+	{ "getOutlines", "(Larc/struct/Seq;)V" },
+	{ "rect", "(Larc/graphics/g2d/TextureRegion;FFF)V" },
+};
+
+static FieldMetadata fields[] {
+	{ "val$fi", &class_int, offsetof(mindustry_content_UnitTypes$45$1, F_val$fi), "I", 4112 },
+	{ "this$0", &class_mindustry_content_UnitTypes$45, offsetof(mindustry_content_UnitTypes$45$1, F_this$0), "Lmindustry/content/UnitTypes$45;", 4112 },
+};
+
+static MethodMetadata methods[] {
+	{ "<init>", (intptr_t) init_mindustry_content_UnitTypes$45$1_mindustry_content_UnitTypes$45_java_lang_String_int, 0, "(Lmindustry/content/UnitTypes$45;Ljava/lang/String;I)V", 0 },
+};
+
+Class class_mindustry_content_UnitTypes$45$1{
+		.nativeName = (intptr_t) "mindustry/content/UnitTypes$45$1",
+		.parentClass = (intptr_t) &class_mindustry_entities_part_RegionPart,
+		.size = sizeof(mindustry_content_UnitTypes$45$1),
+		.classVtable = (intptr_t) vtable_mindustry_content_UnitTypes$45$1,
+		.staticInitializer = (intptr_t) clinit_mindustry_content_UnitTypes$45$1,
+		.annotationInitializer = (intptr_t) nullptr,
+		.markFunction = (intptr_t) mark_mindustry_content_UnitTypes$45$1,
+		.primitive = false,
+		.arrayDimensions = 0,
+		.componentClass = (intptr_t) nullptr,
+		.outerClass = (intptr_t) nullptr,
+		.innerClassCount = 0,
+		.nativeInnerClasses = (intptr_t) nullptr,
+		.access = 32,
+		.interfaceCount = 0,
+		.nativeInterfaces = (intptr_t) nullptr,
+		.fieldCount = 2,
+		.nativeFields = (intptr_t) fields,
+		.methodCount = 1,
+		.nativeMethods = (intptr_t) methods,
+		.vtableSize = 15,
+		.vtableEntries = (intptr_t) vtableEntries,
+		.anonymous = true,
+		.synthetic = false,
+};
+static bool registered_mindustry_content_UnitTypes$45$1 = registerClass(&class_mindustry_content_UnitTypes$45$1);
+
+}
+

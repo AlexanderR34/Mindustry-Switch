@@ -1,0 +1,77 @@
+#ifndef HEADER_mindustry_ui_dialogs_PlanetDialog$5$1
+#define HEADER_mindustry_ui_dialogs_PlanetDialog$5$1
+
+#include "Clearwing.h"
+#include "arc/scene/event/ElementGestureListener.h"
+
+#ifdef __cplusplus
+extern "C" {
+#endif
+
+typedef struct mindustry_ui_dialogs_PlanetDialog$5$1 {
+	arc_scene_event_ElementGestureListener parent;
+	jref F_this$1;
+} mindustry_ui_dialogs_PlanetDialog$5$1;
+
+extern Class class_mindustry_ui_dialogs_PlanetDialog$5$1;
+
+
+#define VTABLE_mindustry_ui_dialogs_PlanetDialog$5$1_hashCode_R_int 0
+typedef jint (*func_mindustry_ui_dialogs_PlanetDialog$5$1_hashCode_R_int)(jcontext ctx, jobject self);
+#define VTABLE_mindustry_ui_dialogs_PlanetDialog$5$1_equals_java_lang_Object_R_boolean 1
+typedef jbool (*func_mindustry_ui_dialogs_PlanetDialog$5$1_equals_java_lang_Object_R_boolean)(jcontext ctx, jobject self, jobject param0);
+#define VTABLE_mindustry_ui_dialogs_PlanetDialog$5$1_clone_R_java_lang_Object 2
+typedef jobject (*func_mindustry_ui_dialogs_PlanetDialog$5$1_clone_R_java_lang_Object)(jcontext ctx, jobject self);
+#define VTABLE_mindustry_ui_dialogs_PlanetDialog$5$1_getClass_R_java_lang_Class 3
+typedef jobject (*func_mindustry_ui_dialogs_PlanetDialog$5$1_getClass_R_java_lang_Class)(jcontext ctx, jobject self);
+#define VTABLE_mindustry_ui_dialogs_PlanetDialog$5$1_toString_R_java_lang_String 4
+typedef jobject (*func_mindustry_ui_dialogs_PlanetDialog$5$1_toString_R_java_lang_String)(jcontext ctx, jobject self);
+#define VTABLE_mindustry_ui_dialogs_PlanetDialog$5$1_finalize 5
+typedef void (*func_mindustry_ui_dialogs_PlanetDialog$5$1_finalize)(jcontext ctx, jobject self);
+#define VTABLE_mindustry_ui_dialogs_PlanetDialog$5$1_notify 6
+typedef void (*func_mindustry_ui_dialogs_PlanetDialog$5$1_notify)(jcontext ctx, jobject self);
+#define VTABLE_mindustry_ui_dialogs_PlanetDialog$5$1_notifyAll 7
+typedef void (*func_mindustry_ui_dialogs_PlanetDialog$5$1_notifyAll)(jcontext ctx, jobject self);
+#define VTABLE_mindustry_ui_dialogs_PlanetDialog$5$1_wait 8
+typedef void (*func_mindustry_ui_dialogs_PlanetDialog$5$1_wait)(jcontext ctx, jobject self);
+#define VTABLE_mindustry_ui_dialogs_PlanetDialog$5$1_wait_long 9
+typedef void (*func_mindustry_ui_dialogs_PlanetDialog$5$1_wait_long)(jcontext ctx, jobject self, jlong param0);
+#define VTABLE_mindustry_ui_dialogs_PlanetDialog$5$1_wait_long_int 10
+typedef void (*func_mindustry_ui_dialogs_PlanetDialog$5$1_wait_long_int)(jcontext ctx, jobject self, jlong param0, jint param1);
+#define VTABLE_mindustry_ui_dialogs_PlanetDialog$5$1_handle_arc_scene_event_SceneEvent_R_boolean 11
+typedef jbool (*func_mindustry_ui_dialogs_PlanetDialog$5$1_handle_arc_scene_event_SceneEvent_R_boolean)(jcontext ctx, jobject self, jobject param0);
+#define VTABLE_mindustry_ui_dialogs_PlanetDialog$5$1_touchDown_arc_scene_event_InputEvent_float_float_int_arc_input_KeyCode 12
+typedef void (*func_mindustry_ui_dialogs_PlanetDialog$5$1_touchDown_arc_scene_event_InputEvent_float_float_int_arc_input_KeyCode)(jcontext ctx, jobject self, jobject param0, jfloat param1, jfloat param2, jint param3, jobject param4);
+#define VTABLE_mindustry_ui_dialogs_PlanetDialog$5$1_touchUp_arc_scene_event_InputEvent_float_float_int_arc_input_KeyCode 13
+typedef void (*func_mindustry_ui_dialogs_PlanetDialog$5$1_touchUp_arc_scene_event_InputEvent_float_float_int_arc_input_KeyCode)(jcontext ctx, jobject self, jobject param0, jfloat param1, jfloat param2, jint param3, jobject param4);
+#define VTABLE_mindustry_ui_dialogs_PlanetDialog$5$1_tap_arc_scene_event_InputEvent_float_float_int_arc_input_KeyCode 14
+typedef void (*func_mindustry_ui_dialogs_PlanetDialog$5$1_tap_arc_scene_event_InputEvent_float_float_int_arc_input_KeyCode)(jcontext ctx, jobject self, jobject param0, jfloat param1, jfloat param2, jint param3, jobject param4);
+#define VTABLE_mindustry_ui_dialogs_PlanetDialog$5$1_longPress_arc_scene_Element_float_float_R_boolean 15
+typedef jbool (*func_mindustry_ui_dialogs_PlanetDialog$5$1_longPress_arc_scene_Element_float_float_R_boolean)(jcontext ctx, jobject self, jobject param0, jfloat param1, jfloat param2);
+#define VTABLE_mindustry_ui_dialogs_PlanetDialog$5$1_fling_arc_scene_event_InputEvent_float_float_arc_input_KeyCode 16
+typedef void (*func_mindustry_ui_dialogs_PlanetDialog$5$1_fling_arc_scene_event_InputEvent_float_float_arc_input_KeyCode)(jcontext ctx, jobject self, jobject param0, jfloat param1, jfloat param2, jobject param3);
+#define VTABLE_mindustry_ui_dialogs_PlanetDialog$5$1_pan_arc_scene_event_InputEvent_float_float_float_float 17
+typedef void (*func_mindustry_ui_dialogs_PlanetDialog$5$1_pan_arc_scene_event_InputEvent_float_float_float_float)(jcontext ctx, jobject self, jobject param0, jfloat param1, jfloat param2, jfloat param3, jfloat param4);
+#define VTABLE_mindustry_ui_dialogs_PlanetDialog$5$1_zoom_arc_scene_event_InputEvent_float_float 18
+typedef void (*func_mindustry_ui_dialogs_PlanetDialog$5$1_zoom_arc_scene_event_InputEvent_float_float)(jcontext ctx, jobject self, jobject param0, jfloat param1, jfloat param2);
+#define VTABLE_mindustry_ui_dialogs_PlanetDialog$5$1_pinch_arc_scene_event_InputEvent_arc_math_geom_Vec2_arc_math_geom_Vec2_arc_math_geom_Vec2_arc_math_geom_Vec2 19
+typedef void (*func_mindustry_ui_dialogs_PlanetDialog$5$1_pinch_arc_scene_event_InputEvent_arc_math_geom_Vec2_arc_math_geom_Vec2_arc_math_geom_Vec2_arc_math_geom_Vec2)(jcontext ctx, jobject self, jobject param0, jobject param1, jobject param2, jobject param3, jobject param4);
+#define VTABLE_mindustry_ui_dialogs_PlanetDialog$5$1_getGestureDetector_R_arc_input_GestureDetector 20
+typedef jobject (*func_mindustry_ui_dialogs_PlanetDialog$5$1_getGestureDetector_R_arc_input_GestureDetector)(jcontext ctx, jobject self);
+#define VTABLE_mindustry_ui_dialogs_PlanetDialog$5$1_getTouchDownTarget_R_arc_scene_Element 21
+typedef jobject (*func_mindustry_ui_dialogs_PlanetDialog$5$1_getTouchDownTarget_R_arc_scene_Element)(jcontext ctx, jobject self);
+#define VTABLE_mindustry_ui_dialogs_PlanetDialog$5$1_lambda$touchDown$0_mindustry_type_Sector_mindustry_type_SectorPreset 22
+typedef void (*func_mindustry_ui_dialogs_PlanetDialog$5$1_lambda$touchDown$0_mindustry_type_Sector_mindustry_type_SectorPreset)(jcontext ctx, jobject self, jobject param0, jobject param1);
+
+void mark_mindustry_ui_dialogs_PlanetDialog$5$1(jobject object, jint mark, jint depth);
+void clinit_mindustry_ui_dialogs_PlanetDialog$5$1(jcontext ctx);
+void init_mindustry_ui_dialogs_PlanetDialog$5$1_mindustry_ui_dialogs_PlanetDialog$5(jcontext ctx, jobject self, jobject param0);
+void M_mindustry_ui_dialogs_PlanetDialog$5$1_tap_arc_scene_event_InputEvent_float_float_int_arc_input_KeyCode(jcontext ctx, jobject self, jobject param0, jfloat param1, jfloat param2, jint param3, jobject param4);
+void M_mindustry_ui_dialogs_PlanetDialog$5$1_touchDown_arc_scene_event_InputEvent_float_float_int_arc_input_KeyCode(jcontext ctx, jobject self, jobject param0, jfloat param1, jfloat param2, jint param3, jobject param4);
+void M_mindustry_ui_dialogs_PlanetDialog$5$1_lambda$touchDown$0_mindustry_type_Sector_mindustry_type_SectorPreset(jcontext ctx, jobject self, jobject param0, jobject param1);
+
+#ifdef __cplusplus
+}
+#endif
+
+#endif

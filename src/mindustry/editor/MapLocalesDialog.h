@@ -1,0 +1,962 @@
+#ifndef HEADER_mindustry_editor_MapLocalesDialog
+#define HEADER_mindustry_editor_MapLocalesDialog
+
+#include "Clearwing.h"
+#include "mindustry/ui/dialogs/BaseDialog.h"
+
+#ifdef __cplusplus
+extern "C" {
+#endif
+
+typedef struct mindustry_editor_MapLocalesDialog {
+	mindustry_ui_dialogs_BaseDialog parent;
+	jref F_locales;
+	jref F_lastSaved;
+	jbool F_saved;
+	jref F_langs;
+	jref F_main;
+	jref F_propView;
+	jref F_selectedLocale;
+	jbool F_applytoall;
+	jbool F_collapsed;
+	jref F_searchString;
+	jbool F_searchByValue;
+	jbool F_showCorrect;
+	jbool F_showMissing;
+	jbool F_showSame;
+} mindustry_editor_MapLocalesDialog;
+
+extern Class class_mindustry_editor_MapLocalesDialog;
+
+extern jfloat SF_mindustry_editor_MapLocalesDialog_cardWidth;
+extern jobject SF_mindustry_editor_MapLocalesDialog_filterStyle;
+extern jobject SF_mindustry_editor_MapLocalesDialog_contentIcons;
+
+#define VTABLE_mindustry_editor_MapLocalesDialog_hashCode_R_int 0
+typedef jint (*func_mindustry_editor_MapLocalesDialog_hashCode_R_int)(jcontext ctx, jobject self);
+#define VTABLE_mindustry_editor_MapLocalesDialog_equals_java_lang_Object_R_boolean 1
+typedef jbool (*func_mindustry_editor_MapLocalesDialog_equals_java_lang_Object_R_boolean)(jcontext ctx, jobject self, jobject param0);
+#define VTABLE_mindustry_editor_MapLocalesDialog_clone_R_java_lang_Object 2
+typedef jobject (*func_mindustry_editor_MapLocalesDialog_clone_R_java_lang_Object)(jcontext ctx, jobject self);
+#define VTABLE_mindustry_editor_MapLocalesDialog_getClass_R_java_lang_Class 3
+typedef jobject (*func_mindustry_editor_MapLocalesDialog_getClass_R_java_lang_Class)(jcontext ctx, jobject self);
+#define VTABLE_mindustry_editor_MapLocalesDialog_toString_R_java_lang_String 4
+typedef jobject (*func_mindustry_editor_MapLocalesDialog_toString_R_java_lang_String)(jcontext ctx, jobject self);
+#define VTABLE_mindustry_editor_MapLocalesDialog_finalize 5
+typedef void (*func_mindustry_editor_MapLocalesDialog_finalize)(jcontext ctx, jobject self);
+#define VTABLE_mindustry_editor_MapLocalesDialog_notify 6
+typedef void (*func_mindustry_editor_MapLocalesDialog_notify)(jcontext ctx, jobject self);
+#define VTABLE_mindustry_editor_MapLocalesDialog_notifyAll 7
+typedef void (*func_mindustry_editor_MapLocalesDialog_notifyAll)(jcontext ctx, jobject self);
+#define VTABLE_mindustry_editor_MapLocalesDialog_wait 8
+typedef void (*func_mindustry_editor_MapLocalesDialog_wait)(jcontext ctx, jobject self);
+#define VTABLE_mindustry_editor_MapLocalesDialog_wait_long 9
+typedef void (*func_mindustry_editor_MapLocalesDialog_wait_long)(jcontext ctx, jobject self, jlong param0);
+#define VTABLE_mindustry_editor_MapLocalesDialog_wait_long_int 10
+typedef void (*func_mindustry_editor_MapLocalesDialog_wait_long_int)(jcontext ctx, jobject self, jlong param0, jint param1);
+#define VTABLE_mindustry_editor_MapLocalesDialog_draw 11
+typedef void (*func_mindustry_editor_MapLocalesDialog_draw)(jcontext ctx, jobject self);
+#define VTABLE_mindustry_editor_MapLocalesDialog_act_float 12
+typedef void (*func_mindustry_editor_MapLocalesDialog_act_float)(jcontext ctx, jobject self, jfloat param0);
+#define VTABLE_mindustry_editor_MapLocalesDialog_updateVisibility 13
+typedef void (*func_mindustry_editor_MapLocalesDialog_updateVisibility)(jcontext ctx, jobject self);
+#define VTABLE_mindustry_editor_MapLocalesDialog_hasMouse_R_boolean 14
+typedef jbool (*func_mindustry_editor_MapLocalesDialog_hasMouse_R_boolean)(jcontext ctx, jobject self);
+#define VTABLE_mindustry_editor_MapLocalesDialog_hasKeyboard_R_boolean 15
+typedef jbool (*func_mindustry_editor_MapLocalesDialog_hasKeyboard_R_boolean)(jcontext ctx, jobject self);
+#define VTABLE_mindustry_editor_MapLocalesDialog_hasScroll_R_boolean 16
+typedef jbool (*func_mindustry_editor_MapLocalesDialog_hasScroll_R_boolean)(jcontext ctx, jobject self);
+#define VTABLE_mindustry_editor_MapLocalesDialog_requestKeyboard 17
+typedef void (*func_mindustry_editor_MapLocalesDialog_requestKeyboard)(jcontext ctx, jobject self);
+#define VTABLE_mindustry_editor_MapLocalesDialog_requestScroll 18
+typedef void (*func_mindustry_editor_MapLocalesDialog_requestScroll)(jcontext ctx, jobject self);
+#define VTABLE_mindustry_editor_MapLocalesDialog_fire_arc_scene_event_SceneEvent_R_boolean 19
+typedef jbool (*func_mindustry_editor_MapLocalesDialog_fire_arc_scene_event_SceneEvent_R_boolean)(jcontext ctx, jobject self, jobject param0);
+#define VTABLE_mindustry_editor_MapLocalesDialog_notify_arc_scene_event_SceneEvent_boolean_R_boolean 20
+typedef jbool (*func_mindustry_editor_MapLocalesDialog_notify_arc_scene_event_SceneEvent_boolean_R_boolean)(jcontext ctx, jobject self, jobject param0, jbool param1);
+#define VTABLE_mindustry_editor_MapLocalesDialog_hit_float_float_boolean_R_arc_scene_Element 21
+typedef jobject (*func_mindustry_editor_MapLocalesDialog_hit_float_float_boolean_R_arc_scene_Element)(jcontext ctx, jobject self, jfloat param0, jfloat param1, jbool param2);
+#define VTABLE_mindustry_editor_MapLocalesDialog_remove_R_boolean 22
+typedef jbool (*func_mindustry_editor_MapLocalesDialog_remove_R_boolean)(jcontext ctx, jobject self);
+#define VTABLE_mindustry_editor_MapLocalesDialog_dragged_arc_func_Floatc2 23
+typedef void (*func_mindustry_editor_MapLocalesDialog_dragged_arc_func_Floatc2)(jcontext ctx, jobject self, jobject param0);
+#define VTABLE_mindustry_editor_MapLocalesDialog_scrolled_arc_func_Floatc 24
+typedef void (*func_mindustry_editor_MapLocalesDialog_scrolled_arc_func_Floatc)(jcontext ctx, jobject self, jobject param0);
+#define VTABLE_mindustry_editor_MapLocalesDialog_addListener_arc_scene_event_EventListener_R_boolean 25
+typedef jbool (*func_mindustry_editor_MapLocalesDialog_addListener_arc_scene_event_EventListener_R_boolean)(jcontext ctx, jobject self, jobject param0);
+#define VTABLE_mindustry_editor_MapLocalesDialog_removeListener_arc_scene_event_EventListener_R_boolean 26
+typedef jbool (*func_mindustry_editor_MapLocalesDialog_removeListener_arc_scene_event_EventListener_R_boolean)(jcontext ctx, jobject self, jobject param0);
+#define VTABLE_mindustry_editor_MapLocalesDialog_getListeners_R_arc_struct_Seq 27
+typedef jobject (*func_mindustry_editor_MapLocalesDialog_getListeners_R_arc_struct_Seq)(jcontext ctx, jobject self);
+#define VTABLE_mindustry_editor_MapLocalesDialog_addCaptureListener_arc_scene_event_EventListener_R_boolean 28
+typedef jbool (*func_mindustry_editor_MapLocalesDialog_addCaptureListener_arc_scene_event_EventListener_R_boolean)(jcontext ctx, jobject self, jobject param0);
+#define VTABLE_mindustry_editor_MapLocalesDialog_removeCaptureListener_arc_scene_event_EventListener_R_boolean 29
+typedef jbool (*func_mindustry_editor_MapLocalesDialog_removeCaptureListener_arc_scene_event_EventListener_R_boolean)(jcontext ctx, jobject self, jobject param0);
+#define VTABLE_mindustry_editor_MapLocalesDialog_getCaptureListeners_R_arc_struct_Seq 30
+typedef jobject (*func_mindustry_editor_MapLocalesDialog_getCaptureListeners_R_arc_struct_Seq)(jcontext ctx, jobject self);
+#define VTABLE_mindustry_editor_MapLocalesDialog_addAction_arc_scene_Action 31
+typedef void (*func_mindustry_editor_MapLocalesDialog_addAction_arc_scene_Action)(jcontext ctx, jobject self, jobject param0);
+#define VTABLE_mindustry_editor_MapLocalesDialog_actions_Array1_arc_scene_Action 32
+typedef void (*func_mindustry_editor_MapLocalesDialog_actions_Array1_arc_scene_Action)(jcontext ctx, jobject self, jobject param0);
+#define VTABLE_mindustry_editor_MapLocalesDialog_removeAction_arc_scene_Action 33
+typedef void (*func_mindustry_editor_MapLocalesDialog_removeAction_arc_scene_Action)(jcontext ctx, jobject self, jobject param0);
+#define VTABLE_mindustry_editor_MapLocalesDialog_getActions_R_arc_struct_Seq 34
+typedef jobject (*func_mindustry_editor_MapLocalesDialog_getActions_R_arc_struct_Seq)(jcontext ctx, jobject self);
+#define VTABLE_mindustry_editor_MapLocalesDialog_hasActions_R_boolean 35
+typedef jbool (*func_mindustry_editor_MapLocalesDialog_hasActions_R_boolean)(jcontext ctx, jobject self);
+#define VTABLE_mindustry_editor_MapLocalesDialog_clearActions 36
+typedef void (*func_mindustry_editor_MapLocalesDialog_clearActions)(jcontext ctx, jobject self);
+#define VTABLE_mindustry_editor_MapLocalesDialog_clearListeners 37
+typedef void (*func_mindustry_editor_MapLocalesDialog_clearListeners)(jcontext ctx, jobject self);
+#define VTABLE_mindustry_editor_MapLocalesDialog_clear 38
+typedef void (*func_mindustry_editor_MapLocalesDialog_clear)(jcontext ctx, jobject self);
+#define VTABLE_mindustry_editor_MapLocalesDialog_getScene_R_arc_scene_Scene 39
+typedef jobject (*func_mindustry_editor_MapLocalesDialog_getScene_R_arc_scene_Scene)(jcontext ctx, jobject self);
+#define VTABLE_mindustry_editor_MapLocalesDialog_setScene_arc_scene_Scene 40
+typedef void (*func_mindustry_editor_MapLocalesDialog_setScene_arc_scene_Scene)(jcontext ctx, jobject self, jobject param0);
+#define VTABLE_mindustry_editor_MapLocalesDialog_isDescendantOf_arc_func_Boolf_R_boolean 41
+typedef jbool (*func_mindustry_editor_MapLocalesDialog_isDescendantOf_arc_func_Boolf_R_boolean)(jcontext ctx, jobject self, jobject param0);
+#define VTABLE_mindustry_editor_MapLocalesDialog_isDescendantOf_arc_scene_Element_R_boolean 42
+typedef jbool (*func_mindustry_editor_MapLocalesDialog_isDescendantOf_arc_scene_Element_R_boolean)(jcontext ctx, jobject self, jobject param0);
+#define VTABLE_mindustry_editor_MapLocalesDialog_isAscendantOf_arc_scene_Element_R_boolean 43
+typedef jbool (*func_mindustry_editor_MapLocalesDialog_isAscendantOf_arc_scene_Element_R_boolean)(jcontext ctx, jobject self, jobject param0);
+#define VTABLE_mindustry_editor_MapLocalesDialog_hasParent_R_boolean 44
+typedef jbool (*func_mindustry_editor_MapLocalesDialog_hasParent_R_boolean)(jcontext ctx, jobject self);
+#define VTABLE_mindustry_editor_MapLocalesDialog_isTouchable_R_boolean 45
+typedef jbool (*func_mindustry_editor_MapLocalesDialog_isTouchable_R_boolean)(jcontext ctx, jobject self);
+#define VTABLE_mindustry_editor_MapLocalesDialog_getX_int_R_float 46
+typedef jfloat (*func_mindustry_editor_MapLocalesDialog_getX_int_R_float)(jcontext ctx, jobject self, jint param0);
+#define VTABLE_mindustry_editor_MapLocalesDialog_getY_int_R_float 47
+typedef jfloat (*func_mindustry_editor_MapLocalesDialog_getY_int_R_float)(jcontext ctx, jobject self, jint param0);
+#define VTABLE_mindustry_editor_MapLocalesDialog_setPosition_float_float 48
+typedef void (*func_mindustry_editor_MapLocalesDialog_setPosition_float_float)(jcontext ctx, jobject self, jfloat param0, jfloat param1);
+#define VTABLE_mindustry_editor_MapLocalesDialog_setPosition_float_float_int 49
+typedef void (*func_mindustry_editor_MapLocalesDialog_setPosition_float_float_int)(jcontext ctx, jobject self, jfloat param0, jfloat param1, jint param2);
+#define VTABLE_mindustry_editor_MapLocalesDialog_moveBy_float_float 50
+typedef void (*func_mindustry_editor_MapLocalesDialog_moveBy_float_float)(jcontext ctx, jobject self, jfloat param0, jfloat param1);
+#define VTABLE_mindustry_editor_MapLocalesDialog_getWidth_R_float 51
+typedef jfloat (*func_mindustry_editor_MapLocalesDialog_getWidth_R_float)(jcontext ctx, jobject self);
+#define VTABLE_mindustry_editor_MapLocalesDialog_setWidth_float 52
+typedef void (*func_mindustry_editor_MapLocalesDialog_setWidth_float)(jcontext ctx, jobject self, jfloat param0);
+#define VTABLE_mindustry_editor_MapLocalesDialog_getHeight_R_float 53
+typedef jfloat (*func_mindustry_editor_MapLocalesDialog_getHeight_R_float)(jcontext ctx, jobject self);
+#define VTABLE_mindustry_editor_MapLocalesDialog_setHeight_float 54
+typedef void (*func_mindustry_editor_MapLocalesDialog_setHeight_float)(jcontext ctx, jobject self, jfloat param0);
+#define VTABLE_mindustry_editor_MapLocalesDialog_getTop_R_float 55
+typedef jfloat (*func_mindustry_editor_MapLocalesDialog_getTop_R_float)(jcontext ctx, jobject self);
+#define VTABLE_mindustry_editor_MapLocalesDialog_getRight_R_float 56
+typedef jfloat (*func_mindustry_editor_MapLocalesDialog_getRight_R_float)(jcontext ctx, jobject self);
+#define VTABLE_mindustry_editor_MapLocalesDialog_sizeChanged 57
+typedef void (*func_mindustry_editor_MapLocalesDialog_sizeChanged)(jcontext ctx, jobject self);
+#define VTABLE_mindustry_editor_MapLocalesDialog_rotationChanged 58
+typedef void (*func_mindustry_editor_MapLocalesDialog_rotationChanged)(jcontext ctx, jobject self);
+#define VTABLE_mindustry_editor_MapLocalesDialog_setSize_float 59
+typedef void (*func_mindustry_editor_MapLocalesDialog_setSize_float)(jcontext ctx, jobject self, jfloat param0);
+#define VTABLE_mindustry_editor_MapLocalesDialog_setSize_float_float 60
+typedef void (*func_mindustry_editor_MapLocalesDialog_setSize_float_float)(jcontext ctx, jobject self, jfloat param0, jfloat param1);
+#define VTABLE_mindustry_editor_MapLocalesDialog_sizeBy_float 61
+typedef void (*func_mindustry_editor_MapLocalesDialog_sizeBy_float)(jcontext ctx, jobject self, jfloat param0);
+#define VTABLE_mindustry_editor_MapLocalesDialog_sizeBy_float_float 62
+typedef void (*func_mindustry_editor_MapLocalesDialog_sizeBy_float_float)(jcontext ctx, jobject self, jfloat param0, jfloat param1);
+#define VTABLE_mindustry_editor_MapLocalesDialog_setBounds_float_float_float_float 63
+typedef void (*func_mindustry_editor_MapLocalesDialog_setBounds_float_float_float_float)(jcontext ctx, jobject self, jfloat param0, jfloat param1, jfloat param2, jfloat param3);
+#define VTABLE_mindustry_editor_MapLocalesDialog_setOrigin_float_float 64
+typedef void (*func_mindustry_editor_MapLocalesDialog_setOrigin_float_float)(jcontext ctx, jobject self, jfloat param0, jfloat param1);
+#define VTABLE_mindustry_editor_MapLocalesDialog_setOrigin_int 65
+typedef void (*func_mindustry_editor_MapLocalesDialog_setOrigin_int)(jcontext ctx, jobject self, jint param0);
+#define VTABLE_mindustry_editor_MapLocalesDialog_setScale_float 66
+typedef void (*func_mindustry_editor_MapLocalesDialog_setScale_float)(jcontext ctx, jobject self, jfloat param0);
+#define VTABLE_mindustry_editor_MapLocalesDialog_setScale_float_float 67
+typedef void (*func_mindustry_editor_MapLocalesDialog_setScale_float_float)(jcontext ctx, jobject self, jfloat param0, jfloat param1);
+#define VTABLE_mindustry_editor_MapLocalesDialog_scaleBy_float 68
+typedef void (*func_mindustry_editor_MapLocalesDialog_scaleBy_float)(jcontext ctx, jobject self, jfloat param0);
+#define VTABLE_mindustry_editor_MapLocalesDialog_scaleBy_float_float 69
+typedef void (*func_mindustry_editor_MapLocalesDialog_scaleBy_float_float)(jcontext ctx, jobject self, jfloat param0, jfloat param1);
+#define VTABLE_mindustry_editor_MapLocalesDialog_getRotation_R_float 70
+typedef jfloat (*func_mindustry_editor_MapLocalesDialog_getRotation_R_float)(jcontext ctx, jobject self);
+#define VTABLE_mindustry_editor_MapLocalesDialog_setRotation_float 71
+typedef void (*func_mindustry_editor_MapLocalesDialog_setRotation_float)(jcontext ctx, jobject self, jfloat param0);
+#define VTABLE_mindustry_editor_MapLocalesDialog_setRotationOrigin_float_int 72
+typedef void (*func_mindustry_editor_MapLocalesDialog_setRotationOrigin_float_int)(jcontext ctx, jobject self, jfloat param0, jint param1);
+#define VTABLE_mindustry_editor_MapLocalesDialog_rotateBy_float 73
+typedef void (*func_mindustry_editor_MapLocalesDialog_rotateBy_float)(jcontext ctx, jobject self, jfloat param0);
+#define VTABLE_mindustry_editor_MapLocalesDialog_setColor_float_float_float_float 74
+typedef void (*func_mindustry_editor_MapLocalesDialog_setColor_float_float_float_float)(jcontext ctx, jobject self, jfloat param0, jfloat param1, jfloat param2, jfloat param3);
+#define VTABLE_mindustry_editor_MapLocalesDialog_setColor_arc_graphics_Color 75
+typedef void (*func_mindustry_editor_MapLocalesDialog_setColor_arc_graphics_Color)(jcontext ctx, jobject self, jobject param0);
+#define VTABLE_mindustry_editor_MapLocalesDialog_toFront 76
+typedef void (*func_mindustry_editor_MapLocalesDialog_toFront)(jcontext ctx, jobject self);
+#define VTABLE_mindustry_editor_MapLocalesDialog_toBack 77
+typedef void (*func_mindustry_editor_MapLocalesDialog_toBack)(jcontext ctx, jobject self);
+#define VTABLE_mindustry_editor_MapLocalesDialog_getZIndex_R_int 78
+typedef jint (*func_mindustry_editor_MapLocalesDialog_getZIndex_R_int)(jcontext ctx, jobject self);
+#define VTABLE_mindustry_editor_MapLocalesDialog_setZIndex_int 79
+typedef void (*func_mindustry_editor_MapLocalesDialog_setZIndex_int)(jcontext ctx, jobject self, jint param0);
+#define VTABLE_mindustry_editor_MapLocalesDialog_clipBegin_R_boolean 80
+typedef jbool (*func_mindustry_editor_MapLocalesDialog_clipBegin_R_boolean)(jcontext ctx, jobject self);
+#define VTABLE_mindustry_editor_MapLocalesDialog_clipBegin_float_float_float_float_R_boolean 81
+typedef jbool (*func_mindustry_editor_MapLocalesDialog_clipBegin_float_float_float_float_R_boolean)(jcontext ctx, jobject self, jfloat param0, jfloat param1, jfloat param2, jfloat param3);
+#define VTABLE_mindustry_editor_MapLocalesDialog_clipEnd 82
+typedef void (*func_mindustry_editor_MapLocalesDialog_clipEnd)(jcontext ctx, jobject self);
+#define VTABLE_mindustry_editor_MapLocalesDialog_screenToLocalCoordinates_arc_math_geom_Vec2_R_arc_math_geom_Vec2 83
+typedef jobject (*func_mindustry_editor_MapLocalesDialog_screenToLocalCoordinates_arc_math_geom_Vec2_R_arc_math_geom_Vec2)(jcontext ctx, jobject self, jobject param0);
+#define VTABLE_mindustry_editor_MapLocalesDialog_stageToLocalCoordinates_arc_math_geom_Vec2_R_arc_math_geom_Vec2 84
+typedef jobject (*func_mindustry_editor_MapLocalesDialog_stageToLocalCoordinates_arc_math_geom_Vec2_R_arc_math_geom_Vec2)(jcontext ctx, jobject self, jobject param0);
+#define VTABLE_mindustry_editor_MapLocalesDialog_localToStageCoordinates_arc_math_geom_Vec2_R_arc_math_geom_Vec2 85
+typedef jobject (*func_mindustry_editor_MapLocalesDialog_localToStageCoordinates_arc_math_geom_Vec2_R_arc_math_geom_Vec2)(jcontext ctx, jobject self, jobject param0);
+#define VTABLE_mindustry_editor_MapLocalesDialog_localToParentCoordinates_arc_math_geom_Vec2_R_arc_math_geom_Vec2 86
+typedef jobject (*func_mindustry_editor_MapLocalesDialog_localToParentCoordinates_arc_math_geom_Vec2_R_arc_math_geom_Vec2)(jcontext ctx, jobject self, jobject param0);
+#define VTABLE_mindustry_editor_MapLocalesDialog_localToAscendantCoordinates_arc_scene_Element_arc_math_geom_Vec2_R_arc_math_geom_Vec2 87
+typedef jobject (*func_mindustry_editor_MapLocalesDialog_localToAscendantCoordinates_arc_scene_Element_arc_math_geom_Vec2_R_arc_math_geom_Vec2)(jcontext ctx, jobject self, jobject param0, jobject param1);
+#define VTABLE_mindustry_editor_MapLocalesDialog_parentToLocalCoordinates_arc_math_geom_Vec2_R_arc_math_geom_Vec2 88
+typedef jobject (*func_mindustry_editor_MapLocalesDialog_parentToLocalCoordinates_arc_math_geom_Vec2_R_arc_math_geom_Vec2)(jcontext ctx, jobject self, jobject param0);
+#define VTABLE_mindustry_editor_MapLocalesDialog_getMinWidth_R_float 89
+typedef jfloat (*func_mindustry_editor_MapLocalesDialog_getMinWidth_R_float)(jcontext ctx, jobject self);
+#define VTABLE_mindustry_editor_MapLocalesDialog_getMinHeight_R_float 90
+typedef jfloat (*func_mindustry_editor_MapLocalesDialog_getMinHeight_R_float)(jcontext ctx, jobject self);
+#define VTABLE_mindustry_editor_MapLocalesDialog_getPrefWidth_R_float 91
+typedef jfloat (*func_mindustry_editor_MapLocalesDialog_getPrefWidth_R_float)(jcontext ctx, jobject self);
+#define VTABLE_mindustry_editor_MapLocalesDialog_getPrefHeight_R_float 92
+typedef jfloat (*func_mindustry_editor_MapLocalesDialog_getPrefHeight_R_float)(jcontext ctx, jobject self);
+#define VTABLE_mindustry_editor_MapLocalesDialog_getMaxWidth_R_float 93
+typedef jfloat (*func_mindustry_editor_MapLocalesDialog_getMaxWidth_R_float)(jcontext ctx, jobject self);
+#define VTABLE_mindustry_editor_MapLocalesDialog_getMaxHeight_R_float 94
+typedef jfloat (*func_mindustry_editor_MapLocalesDialog_getMaxHeight_R_float)(jcontext ctx, jobject self);
+#define VTABLE_mindustry_editor_MapLocalesDialog_setLayoutEnabled_boolean 95
+typedef void (*func_mindustry_editor_MapLocalesDialog_setLayoutEnabled_boolean)(jcontext ctx, jobject self, jbool param0);
+#define VTABLE_mindustry_editor_MapLocalesDialog_validate 96
+typedef void (*func_mindustry_editor_MapLocalesDialog_validate)(jcontext ctx, jobject self);
+#define VTABLE_mindustry_editor_MapLocalesDialog_needsLayout_R_boolean 97
+typedef jbool (*func_mindustry_editor_MapLocalesDialog_needsLayout_R_boolean)(jcontext ctx, jobject self);
+#define VTABLE_mindustry_editor_MapLocalesDialog_invalidate 98
+typedef void (*func_mindustry_editor_MapLocalesDialog_invalidate)(jcontext ctx, jobject self);
+#define VTABLE_mindustry_editor_MapLocalesDialog_invalidateHierarchy 99
+typedef void (*func_mindustry_editor_MapLocalesDialog_invalidateHierarchy)(jcontext ctx, jobject self);
+#define VTABLE_mindustry_editor_MapLocalesDialog_pack 100
+typedef void (*func_mindustry_editor_MapLocalesDialog_pack)(jcontext ctx, jobject self);
+#define VTABLE_mindustry_editor_MapLocalesDialog_setFillParent_boolean 101
+typedef void (*func_mindustry_editor_MapLocalesDialog_setFillParent_boolean)(jcontext ctx, jobject self, jbool param0);
+#define VTABLE_mindustry_editor_MapLocalesDialog_layout 102
+typedef void (*func_mindustry_editor_MapLocalesDialog_layout)(jcontext ctx, jobject self);
+#define VTABLE_mindustry_editor_MapLocalesDialog_keepInStage 103
+typedef void (*func_mindustry_editor_MapLocalesDialog_keepInStage)(jcontext ctx, jobject self);
+#define VTABLE_mindustry_editor_MapLocalesDialog_setTranslation_float_float 104
+typedef void (*func_mindustry_editor_MapLocalesDialog_setTranslation_float_float)(jcontext ctx, jobject self, jfloat param0, jfloat param1);
+#define VTABLE_mindustry_editor_MapLocalesDialog_keyDown_arc_input_KeyCode_java_lang_Runnable 105
+typedef void (*func_mindustry_editor_MapLocalesDialog_keyDown_arc_input_KeyCode_java_lang_Runnable)(jcontext ctx, jobject self, jobject param0, jobject param1);
+#define VTABLE_mindustry_editor_MapLocalesDialog_keyDown_arc_func_Cons 106
+typedef void (*func_mindustry_editor_MapLocalesDialog_keyDown_arc_func_Cons)(jcontext ctx, jobject self, jobject param0);
+#define VTABLE_mindustry_editor_MapLocalesDialog_fireClick 107
+typedef void (*func_mindustry_editor_MapLocalesDialog_fireClick)(jcontext ctx, jobject self);
+#define VTABLE_mindustry_editor_MapLocalesDialog_clicked_java_lang_Runnable_R_arc_scene_event_ClickListener 108
+typedef jobject (*func_mindustry_editor_MapLocalesDialog_clicked_java_lang_Runnable_R_arc_scene_event_ClickListener)(jcontext ctx, jobject self, jobject param0);
+#define VTABLE_mindustry_editor_MapLocalesDialog_clicked_arc_input_KeyCode_java_lang_Runnable_R_arc_scene_event_ClickListener 109
+typedef jobject (*func_mindustry_editor_MapLocalesDialog_clicked_arc_input_KeyCode_java_lang_Runnable_R_arc_scene_event_ClickListener)(jcontext ctx, jobject self, jobject param0, jobject param1);
+#define VTABLE_mindustry_editor_MapLocalesDialog_clicked_arc_func_Cons_java_lang_Runnable_R_arc_scene_event_ClickListener 110
+typedef jobject (*func_mindustry_editor_MapLocalesDialog_clicked_arc_func_Cons_java_lang_Runnable_R_arc_scene_event_ClickListener)(jcontext ctx, jobject self, jobject param0, jobject param1);
+#define VTABLE_mindustry_editor_MapLocalesDialog_clicked_arc_func_Cons_arc_func_Cons_R_arc_scene_event_ClickListener 111
+typedef jobject (*func_mindustry_editor_MapLocalesDialog_clicked_arc_func_Cons_arc_func_Cons_R_arc_scene_event_ClickListener)(jcontext ctx, jobject self, jobject param0, jobject param1);
+#define VTABLE_mindustry_editor_MapLocalesDialog_tapped_java_lang_Runnable_R_arc_scene_event_InputListener 112
+typedef jobject (*func_mindustry_editor_MapLocalesDialog_tapped_java_lang_Runnable_R_arc_scene_event_InputListener)(jcontext ctx, jobject self, jobject param0);
+#define VTABLE_mindustry_editor_MapLocalesDialog_hovered_java_lang_Runnable 113
+typedef void (*func_mindustry_editor_MapLocalesDialog_hovered_java_lang_Runnable)(jcontext ctx, jobject self, jobject param0);
+#define VTABLE_mindustry_editor_MapLocalesDialog_exited_java_lang_Runnable 114
+typedef void (*func_mindustry_editor_MapLocalesDialog_exited_java_lang_Runnable)(jcontext ctx, jobject self, jobject param0);
+#define VTABLE_mindustry_editor_MapLocalesDialog_released_java_lang_Runnable 115
+typedef void (*func_mindustry_editor_MapLocalesDialog_released_java_lang_Runnable)(jcontext ctx, jobject self, jobject param0);
+#define VTABLE_mindustry_editor_MapLocalesDialog_change 116
+typedef void (*func_mindustry_editor_MapLocalesDialog_change)(jcontext ctx, jobject self);
+#define VTABLE_mindustry_editor_MapLocalesDialog_changed_java_lang_Runnable 117
+typedef void (*func_mindustry_editor_MapLocalesDialog_changed_java_lang_Runnable)(jcontext ctx, jobject self, jobject param0);
+#define VTABLE_mindustry_editor_MapLocalesDialog_update_java_lang_Runnable_R_arc_scene_Element 118
+typedef jobject (*func_mindustry_editor_MapLocalesDialog_update_java_lang_Runnable_R_arc_scene_Element)(jcontext ctx, jobject self, jobject param0);
+#define VTABLE_mindustry_editor_MapLocalesDialog_visible_arc_func_Boolp_R_arc_scene_Element 119
+typedef jobject (*func_mindustry_editor_MapLocalesDialog_visible_arc_func_Boolp_R_arc_scene_Element)(jcontext ctx, jobject self, jobject param0);
+#define VTABLE_mindustry_editor_MapLocalesDialog_touchable_arc_func_Prov 120
+typedef void (*func_mindustry_editor_MapLocalesDialog_touchable_arc_func_Prov)(jcontext ctx, jobject self, jobject param0);
+#define VTABLE_mindustry_editor_MapLocalesDialog_setCullingArea_arc_math_geom_Rect 121
+typedef void (*func_mindustry_editor_MapLocalesDialog_setCullingArea_arc_math_geom_Rect)(jcontext ctx, jobject self, jobject param0);
+#define VTABLE_mindustry_editor_MapLocalesDialog_drawChildren 122
+typedef void (*func_mindustry_editor_MapLocalesDialog_drawChildren)(jcontext ctx, jobject self);
+#define VTABLE_mindustry_editor_MapLocalesDialog_computeTransform_R_arc_math_Mat 123
+typedef jobject (*func_mindustry_editor_MapLocalesDialog_computeTransform_R_arc_math_Mat)(jcontext ctx, jobject self);
+#define VTABLE_mindustry_editor_MapLocalesDialog_applyTransform_arc_math_Mat 124
+typedef void (*func_mindustry_editor_MapLocalesDialog_applyTransform_arc_math_Mat)(jcontext ctx, jobject self, jobject param0);
+#define VTABLE_mindustry_editor_MapLocalesDialog_resetTransform 125
+typedef void (*func_mindustry_editor_MapLocalesDialog_resetTransform)(jcontext ctx, jobject self);
+#define VTABLE_mindustry_editor_MapLocalesDialog_getCullingArea_R_arc_math_geom_Rect 126
+typedef jobject (*func_mindustry_editor_MapLocalesDialog_getCullingArea_R_arc_math_geom_Rect)(jcontext ctx, jobject self);
+#define VTABLE_mindustry_editor_MapLocalesDialog_childrenChanged 127
+typedef void (*func_mindustry_editor_MapLocalesDialog_childrenChanged)(jcontext ctx, jobject self);
+#define VTABLE_mindustry_editor_MapLocalesDialog_forEach_arc_func_Cons 128
+typedef void (*func_mindustry_editor_MapLocalesDialog_forEach_arc_func_Cons)(jcontext ctx, jobject self, jobject param0);
+#define VTABLE_mindustry_editor_MapLocalesDialog_fill_arc_scene_ui_layout_Table$DrawRect_R_arc_scene_Element 129
+typedef jobject (*func_mindustry_editor_MapLocalesDialog_fill_arc_scene_ui_layout_Table$DrawRect_R_arc_scene_Element)(jcontext ctx, jobject self, jobject param0);
+#define VTABLE_mindustry_editor_MapLocalesDialog_fill_arc_func_Cons 130
+typedef void (*func_mindustry_editor_MapLocalesDialog_fill_arc_func_Cons)(jcontext ctx, jobject self, jobject param0);
+#define VTABLE_mindustry_editor_MapLocalesDialog_fill_arc_scene_style_Drawable_arc_func_Cons 131
+typedef void (*func_mindustry_editor_MapLocalesDialog_fill_arc_scene_style_Drawable_arc_func_Cons)(jcontext ctx, jobject self, jobject param0, jobject param1);
+#define VTABLE_mindustry_editor_MapLocalesDialog_addChild_arc_scene_Element 132
+typedef void (*func_mindustry_editor_MapLocalesDialog_addChild_arc_scene_Element)(jcontext ctx, jobject self, jobject param0);
+#define VTABLE_mindustry_editor_MapLocalesDialog_addChildAt_int_arc_scene_Element 133
+typedef void (*func_mindustry_editor_MapLocalesDialog_addChildAt_int_arc_scene_Element)(jcontext ctx, jobject self, jint param0, jobject param1);
+#define VTABLE_mindustry_editor_MapLocalesDialog_addChildBefore_arc_scene_Element_arc_scene_Element 134
+typedef void (*func_mindustry_editor_MapLocalesDialog_addChildBefore_arc_scene_Element_arc_scene_Element)(jcontext ctx, jobject self, jobject param0, jobject param1);
+#define VTABLE_mindustry_editor_MapLocalesDialog_addChildAfter_arc_scene_Element_arc_scene_Element 135
+typedef void (*func_mindustry_editor_MapLocalesDialog_addChildAfter_arc_scene_Element_arc_scene_Element)(jcontext ctx, jobject self, jobject param0, jobject param1);
+#define VTABLE_mindustry_editor_MapLocalesDialog_removeChild_arc_scene_Element_R_boolean 136
+typedef jbool (*func_mindustry_editor_MapLocalesDialog_removeChild_arc_scene_Element_R_boolean)(jcontext ctx, jobject self, jobject param0);
+#define VTABLE_mindustry_editor_MapLocalesDialog_removeChild_arc_scene_Element_boolean_R_boolean 137
+typedef jbool (*func_mindustry_editor_MapLocalesDialog_removeChild_arc_scene_Element_boolean_R_boolean)(jcontext ctx, jobject self, jobject param0, jbool param1);
+#define VTABLE_mindustry_editor_MapLocalesDialog_clearChildren 138
+typedef void (*func_mindustry_editor_MapLocalesDialog_clearChildren)(jcontext ctx, jobject self);
+#define VTABLE_mindustry_editor_MapLocalesDialog_find_java_lang_String_R_arc_scene_Element 139
+typedef jobject (*func_mindustry_editor_MapLocalesDialog_find_java_lang_String_R_arc_scene_Element)(jcontext ctx, jobject self, jobject param0);
+#define VTABLE_mindustry_editor_MapLocalesDialog_findVisible_java_lang_String_R_arc_scene_Element 140
+typedef jobject (*func_mindustry_editor_MapLocalesDialog_findVisible_java_lang_String_R_arc_scene_Element)(jcontext ctx, jobject self, jobject param0);
+#define VTABLE_mindustry_editor_MapLocalesDialog_find_arc_func_Boolf_R_arc_scene_Element 141
+typedef jobject (*func_mindustry_editor_MapLocalesDialog_find_arc_func_Boolf_R_arc_scene_Element)(jcontext ctx, jobject self, jobject param0);
+#define VTABLE_mindustry_editor_MapLocalesDialog_swapActor_int_int_R_boolean 142
+typedef jbool (*func_mindustry_editor_MapLocalesDialog_swapActor_int_int_R_boolean)(jcontext ctx, jobject self, jint param0, jint param1);
+#define VTABLE_mindustry_editor_MapLocalesDialog_swapActor_arc_scene_Element_arc_scene_Element_R_boolean 143
+typedef jbool (*func_mindustry_editor_MapLocalesDialog_swapActor_arc_scene_Element_arc_scene_Element_R_boolean)(jcontext ctx, jobject self, jobject param0, jobject param1);
+#define VTABLE_mindustry_editor_MapLocalesDialog_getChildren_R_arc_struct_SnapshotSeq 144
+typedef jobject (*func_mindustry_editor_MapLocalesDialog_getChildren_R_arc_struct_SnapshotSeq)(jcontext ctx, jobject self);
+#define VTABLE_mindustry_editor_MapLocalesDialog_hasChildren_R_boolean 145
+typedef jbool (*func_mindustry_editor_MapLocalesDialog_hasChildren_R_boolean)(jcontext ctx, jobject self);
+#define VTABLE_mindustry_editor_MapLocalesDialog_isTransform_R_boolean 146
+typedef jbool (*func_mindustry_editor_MapLocalesDialog_isTransform_R_boolean)(jcontext ctx, jobject self);
+#define VTABLE_mindustry_editor_MapLocalesDialog_setTransform_boolean 147
+typedef void (*func_mindustry_editor_MapLocalesDialog_setTransform_boolean)(jcontext ctx, jobject self, jbool param0);
+#define VTABLE_mindustry_editor_MapLocalesDialog_localToDescendantCoordinates_arc_scene_Element_arc_math_geom_Vec2_R_arc_math_geom_Vec2 148
+typedef jobject (*func_mindustry_editor_MapLocalesDialog_localToDescendantCoordinates_arc_scene_Element_arc_math_geom_Vec2_R_arc_math_geom_Vec2)(jcontext ctx, jobject self, jobject param0, jobject param1);
+#define VTABLE_mindustry_editor_MapLocalesDialog_toString_java_lang_StringBuilder_int 149
+typedef void (*func_mindustry_editor_MapLocalesDialog_toString_java_lang_StringBuilder_int)(jcontext ctx, jobject self, jobject param0, jint param1);
+#define VTABLE_mindustry_editor_MapLocalesDialog_setLayoutEnabled_arc_scene_Group_boolean 150
+typedef void (*func_mindustry_editor_MapLocalesDialog_setLayoutEnabled_arc_scene_Group_boolean)(jcontext ctx, jobject self, jobject param0, jbool param1);
+#define VTABLE_mindustry_editor_MapLocalesDialog_obtainCell_R_arc_scene_ui_layout_Cell 151
+typedef jobject (*func_mindustry_editor_MapLocalesDialog_obtainCell_R_arc_scene_ui_layout_Cell)(jcontext ctx, jobject self);
+#define VTABLE_mindustry_editor_MapLocalesDialog_fill_R_arc_scene_ui_layout_Table 152
+typedef jobject (*func_mindustry_editor_MapLocalesDialog_fill_R_arc_scene_ui_layout_Table)(jcontext ctx, jobject self);
+#define VTABLE_mindustry_editor_MapLocalesDialog_drawBackground_float_float 153
+typedef void (*func_mindustry_editor_MapLocalesDialog_drawBackground_float_float)(jcontext ctx, jobject self, jfloat param0, jfloat param1);
+#define VTABLE_mindustry_editor_MapLocalesDialog_background_arc_scene_style_Drawable_R_arc_scene_ui_layout_Table 154
+typedef jobject (*func_mindustry_editor_MapLocalesDialog_background_arc_scene_style_Drawable_R_arc_scene_ui_layout_Table)(jcontext ctx, jobject self, jobject param0);
+#define VTABLE_mindustry_editor_MapLocalesDialog_getBackground_R_arc_scene_style_Drawable 155
+typedef jobject (*func_mindustry_editor_MapLocalesDialog_getBackground_R_arc_scene_style_Drawable)(jcontext ctx, jobject self);
+#define VTABLE_mindustry_editor_MapLocalesDialog_setBackground_arc_scene_style_Drawable 156
+typedef void (*func_mindustry_editor_MapLocalesDialog_setBackground_arc_scene_style_Drawable)(jcontext ctx, jobject self, jobject param0);
+#define VTABLE_mindustry_editor_MapLocalesDialog_getClip_R_boolean 157
+typedef jbool (*func_mindustry_editor_MapLocalesDialog_getClip_R_boolean)(jcontext ctx, jobject self);
+#define VTABLE_mindustry_editor_MapLocalesDialog_setClip_boolean 158
+typedef void (*func_mindustry_editor_MapLocalesDialog_setClip_boolean)(jcontext ctx, jobject self, jbool param0);
+#define VTABLE_mindustry_editor_MapLocalesDialog_add_arc_scene_Element_R_arc_scene_ui_layout_Cell 159
+typedef jobject (*func_mindustry_editor_MapLocalesDialog_add_arc_scene_Element_R_arc_scene_ui_layout_Cell)(jcontext ctx, jobject self, jobject param0);
+#define VTABLE_mindustry_editor_MapLocalesDialog_add_Array1_arc_scene_Element 160
+typedef void (*func_mindustry_editor_MapLocalesDialog_add_Array1_arc_scene_Element)(jcontext ctx, jobject self, jobject param0);
+#define VTABLE_mindustry_editor_MapLocalesDialog_collapser_arc_func_Cons_arc_func_Boolp_R_arc_scene_ui_layout_Cell 161
+typedef jobject (*func_mindustry_editor_MapLocalesDialog_collapser_arc_func_Cons_arc_func_Boolp_R_arc_scene_ui_layout_Cell)(jcontext ctx, jobject self, jobject param0, jobject param1);
+#define VTABLE_mindustry_editor_MapLocalesDialog_collapser_arc_scene_ui_layout_Table_arc_func_Boolp_R_arc_scene_ui_layout_Cell 162
+typedef jobject (*func_mindustry_editor_MapLocalesDialog_collapser_arc_scene_ui_layout_Table_arc_func_Boolp_R_arc_scene_ui_layout_Cell)(jcontext ctx, jobject self, jobject param0, jobject param1);
+#define VTABLE_mindustry_editor_MapLocalesDialog_collapser_arc_func_Cons_boolean_arc_func_Boolp_R_arc_scene_ui_layout_Cell 163
+typedef jobject (*func_mindustry_editor_MapLocalesDialog_collapser_arc_func_Cons_boolean_arc_func_Boolp_R_arc_scene_ui_layout_Cell)(jcontext ctx, jobject self, jobject param0, jbool param1, jobject param2);
+#define VTABLE_mindustry_editor_MapLocalesDialog_collapser_arc_scene_ui_layout_Table_boolean_arc_func_Boolp_R_arc_scene_ui_layout_Cell 164
+typedef jobject (*func_mindustry_editor_MapLocalesDialog_collapser_arc_scene_ui_layout_Table_boolean_arc_func_Boolp_R_arc_scene_ui_layout_Cell)(jcontext ctx, jobject self, jobject param0, jbool param1, jobject param2);
+#define VTABLE_mindustry_editor_MapLocalesDialog_table_R_arc_scene_ui_layout_Cell 165
+typedef jobject (*func_mindustry_editor_MapLocalesDialog_table_R_arc_scene_ui_layout_Cell)(jcontext ctx, jobject self);
+#define VTABLE_mindustry_editor_MapLocalesDialog_table_arc_scene_style_Drawable_R_arc_scene_ui_layout_Cell 166
+typedef jobject (*func_mindustry_editor_MapLocalesDialog_table_arc_scene_style_Drawable_R_arc_scene_ui_layout_Cell)(jcontext ctx, jobject self, jobject param0);
+#define VTABLE_mindustry_editor_MapLocalesDialog_table_arc_func_Cons_R_arc_scene_ui_layout_Cell 167
+typedef jobject (*func_mindustry_editor_MapLocalesDialog_table_arc_func_Cons_R_arc_scene_ui_layout_Cell)(jcontext ctx, jobject self, jobject param0);
+#define VTABLE_mindustry_editor_MapLocalesDialog_wrapTable_arc_func_Cons_R_arc_scene_ui_layout_Cell 168
+typedef jobject (*func_mindustry_editor_MapLocalesDialog_wrapTable_arc_func_Cons_R_arc_scene_ui_layout_Cell)(jcontext ctx, jobject self, jobject param0);
+#define VTABLE_mindustry_editor_MapLocalesDialog_table_arc_scene_style_Drawable_arc_func_Cons_R_arc_scene_ui_layout_Cell 169
+typedef jobject (*func_mindustry_editor_MapLocalesDialog_table_arc_scene_style_Drawable_arc_func_Cons_R_arc_scene_ui_layout_Cell)(jcontext ctx, jobject self, jobject param0, jobject param1);
+#define VTABLE_mindustry_editor_MapLocalesDialog_table_arc_scene_style_Drawable_int_arc_func_Cons_R_arc_scene_ui_layout_Cell 170
+typedef jobject (*func_mindustry_editor_MapLocalesDialog_table_arc_scene_style_Drawable_int_arc_func_Cons_R_arc_scene_ui_layout_Cell)(jcontext ctx, jobject self, jobject param0, jint param1, jobject param2);
+#define VTABLE_mindustry_editor_MapLocalesDialog_label_arc_func_Prov_R_arc_scene_ui_layout_Cell 171
+typedef jobject (*func_mindustry_editor_MapLocalesDialog_label_arc_func_Prov_R_arc_scene_ui_layout_Cell)(jcontext ctx, jobject self, jobject param0);
+#define VTABLE_mindustry_editor_MapLocalesDialog_labelWrap_arc_func_Prov_R_arc_scene_ui_layout_Cell 172
+typedef jobject (*func_mindustry_editor_MapLocalesDialog_labelWrap_arc_func_Prov_R_arc_scene_ui_layout_Cell)(jcontext ctx, jobject self, jobject param0);
+#define VTABLE_mindustry_editor_MapLocalesDialog_labelWrap_java_lang_String_R_arc_scene_ui_layout_Cell 173
+typedef jobject (*func_mindustry_editor_MapLocalesDialog_labelWrap_java_lang_String_R_arc_scene_ui_layout_Cell)(jcontext ctx, jobject self, jobject param0);
+#define VTABLE_mindustry_editor_MapLocalesDialog_pane_arc_func_Cons_R_arc_scene_ui_layout_Cell 174
+typedef jobject (*func_mindustry_editor_MapLocalesDialog_pane_arc_func_Cons_R_arc_scene_ui_layout_Cell)(jcontext ctx, jobject self, jobject param0);
+#define VTABLE_mindustry_editor_MapLocalesDialog_pane_arc_scene_ui_ScrollPane$ScrollPaneStyle_arc_func_Cons_R_arc_scene_ui_layout_Cell 175
+typedef jobject (*func_mindustry_editor_MapLocalesDialog_pane_arc_scene_ui_ScrollPane$ScrollPaneStyle_arc_func_Cons_R_arc_scene_ui_layout_Cell)(jcontext ctx, jobject self, jobject param0, jobject param1);
+#define VTABLE_mindustry_editor_MapLocalesDialog_pane_arc_scene_ui_ScrollPane$ScrollPaneStyle_arc_scene_Element_R_arc_scene_ui_layout_Cell 176
+typedef jobject (*func_mindustry_editor_MapLocalesDialog_pane_arc_scene_ui_ScrollPane$ScrollPaneStyle_arc_scene_Element_R_arc_scene_ui_layout_Cell)(jcontext ctx, jobject self, jobject param0, jobject param1);
+#define VTABLE_mindustry_editor_MapLocalesDialog_pane_arc_scene_Element_R_arc_scene_ui_layout_Cell 177
+typedef jobject (*func_mindustry_editor_MapLocalesDialog_pane_arc_scene_Element_R_arc_scene_ui_layout_Cell)(jcontext ctx, jobject self, jobject param0);
+#define VTABLE_mindustry_editor_MapLocalesDialog_add_java_lang_CharSequence_R_arc_scene_ui_layout_Cell 178
+typedef jobject (*func_mindustry_editor_MapLocalesDialog_add_java_lang_CharSequence_R_arc_scene_ui_layout_Cell)(jcontext ctx, jobject self, jobject param0);
+#define VTABLE_mindustry_editor_MapLocalesDialog_add_java_lang_CharSequence_float_R_arc_scene_ui_layout_Cell 179
+typedef jobject (*func_mindustry_editor_MapLocalesDialog_add_java_lang_CharSequence_float_R_arc_scene_ui_layout_Cell)(jcontext ctx, jobject self, jobject param0, jfloat param1);
+#define VTABLE_mindustry_editor_MapLocalesDialog_add_java_lang_CharSequence_arc_scene_ui_Label$LabelStyle_float_R_arc_scene_ui_layout_Cell 180
+typedef jobject (*func_mindustry_editor_MapLocalesDialog_add_java_lang_CharSequence_arc_scene_ui_Label$LabelStyle_float_R_arc_scene_ui_layout_Cell)(jcontext ctx, jobject self, jobject param0, jobject param1, jfloat param2);
+#define VTABLE_mindustry_editor_MapLocalesDialog_add_java_lang_CharSequence_arc_graphics_Color_float_R_arc_scene_ui_layout_Cell 181
+typedef jobject (*func_mindustry_editor_MapLocalesDialog_add_java_lang_CharSequence_arc_graphics_Color_float_R_arc_scene_ui_layout_Cell)(jcontext ctx, jobject self, jobject param0, jobject param1, jfloat param2);
+#define VTABLE_mindustry_editor_MapLocalesDialog_add_java_lang_CharSequence_arc_scene_ui_Label$LabelStyle_R_arc_scene_ui_layout_Cell 182
+typedef jobject (*func_mindustry_editor_MapLocalesDialog_add_java_lang_CharSequence_arc_scene_ui_Label$LabelStyle_R_arc_scene_ui_layout_Cell)(jcontext ctx, jobject self, jobject param0, jobject param1);
+#define VTABLE_mindustry_editor_MapLocalesDialog_add_java_lang_CharSequence_arc_graphics_Color_R_arc_scene_ui_layout_Cell 183
+typedef jobject (*func_mindustry_editor_MapLocalesDialog_add_java_lang_CharSequence_arc_graphics_Color_R_arc_scene_ui_layout_Cell)(jcontext ctx, jobject self, jobject param0, jobject param1);
+#define VTABLE_mindustry_editor_MapLocalesDialog_add_R_arc_scene_ui_layout_Cell 184
+typedef jobject (*func_mindustry_editor_MapLocalesDialog_add_R_arc_scene_ui_layout_Cell)(jcontext ctx, jobject self);
+#define VTABLE_mindustry_editor_MapLocalesDialog_stack_Array1_arc_scene_Element_R_arc_scene_ui_layout_Cell 185
+typedef jobject (*func_mindustry_editor_MapLocalesDialog_stack_Array1_arc_scene_Element_R_arc_scene_ui_layout_Cell)(jcontext ctx, jobject self, jobject param0);
+#define VTABLE_mindustry_editor_MapLocalesDialog_spacer_arc_func_Floatp_arc_func_Floatp_R_arc_scene_ui_layout_Cell 186
+typedef jobject (*func_mindustry_editor_MapLocalesDialog_spacer_arc_func_Floatp_arc_func_Floatp_R_arc_scene_ui_layout_Cell)(jcontext ctx, jobject self, jobject param0, jobject param1);
+#define VTABLE_mindustry_editor_MapLocalesDialog_spacerX_arc_func_Floatp_R_arc_scene_ui_layout_Cell 187
+typedef jobject (*func_mindustry_editor_MapLocalesDialog_spacerX_arc_func_Floatp_R_arc_scene_ui_layout_Cell)(jcontext ctx, jobject self, jobject param0);
+#define VTABLE_mindustry_editor_MapLocalesDialog_spacerY_arc_func_Floatp_R_arc_scene_ui_layout_Cell 188
+typedef jobject (*func_mindustry_editor_MapLocalesDialog_spacerY_arc_func_Floatp_R_arc_scene_ui_layout_Cell)(jcontext ctx, jobject self, jobject param0);
+#define VTABLE_mindustry_editor_MapLocalesDialog_image_arc_func_Prov_R_arc_scene_ui_layout_Cell 189
+typedef jobject (*func_mindustry_editor_MapLocalesDialog_image_arc_func_Prov_R_arc_scene_ui_layout_Cell)(jcontext ctx, jobject self, jobject param0);
+#define VTABLE_mindustry_editor_MapLocalesDialog_imageDraw_arc_func_Prov_R_arc_scene_ui_layout_Cell 190
+typedef jobject (*func_mindustry_editor_MapLocalesDialog_imageDraw_arc_func_Prov_R_arc_scene_ui_layout_Cell)(jcontext ctx, jobject self, jobject param0);
+#define VTABLE_mindustry_editor_MapLocalesDialog_image_R_arc_scene_ui_layout_Cell 191
+typedef jobject (*func_mindustry_editor_MapLocalesDialog_image_R_arc_scene_ui_layout_Cell)(jcontext ctx, jobject self);
+#define VTABLE_mindustry_editor_MapLocalesDialog_image_arc_scene_style_Drawable_R_arc_scene_ui_layout_Cell 192
+typedef jobject (*func_mindustry_editor_MapLocalesDialog_image_arc_scene_style_Drawable_R_arc_scene_ui_layout_Cell)(jcontext ctx, jobject self, jobject param0);
+#define VTABLE_mindustry_editor_MapLocalesDialog_image_arc_scene_style_Drawable_arc_graphics_Color_R_arc_scene_ui_layout_Cell 193
+typedef jobject (*func_mindustry_editor_MapLocalesDialog_image_arc_scene_style_Drawable_arc_graphics_Color_R_arc_scene_ui_layout_Cell)(jcontext ctx, jobject self, jobject param0, jobject param1);
+#define VTABLE_mindustry_editor_MapLocalesDialog_image_arc_graphics_g2d_TextureRegion_R_arc_scene_ui_layout_Cell 194
+typedef jobject (*func_mindustry_editor_MapLocalesDialog_image_arc_graphics_g2d_TextureRegion_R_arc_scene_ui_layout_Cell)(jcontext ctx, jobject self, jobject param0);
+#define VTABLE_mindustry_editor_MapLocalesDialog_check_java_lang_String_arc_func_Boolc_R_arc_scene_ui_layout_Cell 195
+typedef jobject (*func_mindustry_editor_MapLocalesDialog_check_java_lang_String_arc_func_Boolc_R_arc_scene_ui_layout_Cell)(jcontext ctx, jobject self, jobject param0, jobject param1);
+#define VTABLE_mindustry_editor_MapLocalesDialog_check_java_lang_String_boolean_arc_func_Boolc_R_arc_scene_ui_layout_Cell 196
+typedef jobject (*func_mindustry_editor_MapLocalesDialog_check_java_lang_String_boolean_arc_func_Boolc_R_arc_scene_ui_layout_Cell)(jcontext ctx, jobject self, jobject param0, jbool param1, jobject param2);
+#define VTABLE_mindustry_editor_MapLocalesDialog_check_java_lang_String_float_boolean_arc_func_Boolc_R_arc_scene_ui_layout_Cell 197
+typedef jobject (*func_mindustry_editor_MapLocalesDialog_check_java_lang_String_float_boolean_arc_func_Boolc_R_arc_scene_ui_layout_Cell)(jcontext ctx, jobject self, jobject param0, jfloat param1, jbool param2, jobject param3);
+#define VTABLE_mindustry_editor_MapLocalesDialog_button_arc_func_Cons_java_lang_Runnable_R_arc_scene_ui_layout_Cell 198
+typedef jobject (*func_mindustry_editor_MapLocalesDialog_button_arc_func_Cons_java_lang_Runnable_R_arc_scene_ui_layout_Cell)(jcontext ctx, jobject self, jobject param0, jobject param1);
+#define VTABLE_mindustry_editor_MapLocalesDialog_button_arc_func_Cons_arc_scene_ui_Button$ButtonStyle_java_lang_Runnable_R_arc_scene_ui_layout_Cell 199
+typedef jobject (*func_mindustry_editor_MapLocalesDialog_button_arc_func_Cons_arc_scene_ui_Button$ButtonStyle_java_lang_Runnable_R_arc_scene_ui_layout_Cell)(jcontext ctx, jobject self, jobject param0, jobject param1, jobject param2);
+#define VTABLE_mindustry_editor_MapLocalesDialog_button_java_lang_String_java_lang_Runnable_R_arc_scene_ui_layout_Cell 200
+typedef jobject (*func_mindustry_editor_MapLocalesDialog_button_java_lang_String_java_lang_Runnable_R_arc_scene_ui_layout_Cell)(jcontext ctx, jobject self, jobject param0, jobject param1);
+#define VTABLE_mindustry_editor_MapLocalesDialog_button_java_lang_String_arc_scene_ui_TextButton$TextButtonStyle_java_lang_Runnable_R_arc_scene_ui_layout_Cell 201
+typedef jobject (*func_mindustry_editor_MapLocalesDialog_button_java_lang_String_arc_scene_ui_TextButton$TextButtonStyle_java_lang_Runnable_R_arc_scene_ui_layout_Cell)(jcontext ctx, jobject self, jobject param0, jobject param1, jobject param2);
+#define VTABLE_mindustry_editor_MapLocalesDialog_button_arc_scene_style_Drawable_java_lang_Runnable_R_arc_scene_ui_layout_Cell 202
+typedef jobject (*func_mindustry_editor_MapLocalesDialog_button_arc_scene_style_Drawable_java_lang_Runnable_R_arc_scene_ui_layout_Cell)(jcontext ctx, jobject self, jobject param0, jobject param1);
+#define VTABLE_mindustry_editor_MapLocalesDialog_button_arc_scene_style_Drawable_float_java_lang_Runnable_R_arc_scene_ui_layout_Cell 203
+typedef jobject (*func_mindustry_editor_MapLocalesDialog_button_arc_scene_style_Drawable_float_java_lang_Runnable_R_arc_scene_ui_layout_Cell)(jcontext ctx, jobject self, jobject param0, jfloat param1, jobject param2);
+#define VTABLE_mindustry_editor_MapLocalesDialog_button_arc_scene_style_Drawable_arc_scene_ui_ImageButton$ImageButtonStyle_float_java_lang_Runnable_R_arc_scene_ui_layout_Cell 204
+typedef jobject (*func_mindustry_editor_MapLocalesDialog_button_arc_scene_style_Drawable_arc_scene_ui_ImageButton$ImageButtonStyle_float_java_lang_Runnable_R_arc_scene_ui_layout_Cell)(jcontext ctx, jobject self, jobject param0, jobject param1, jfloat param2, jobject param3);
+#define VTABLE_mindustry_editor_MapLocalesDialog_button_arc_scene_style_Drawable_arc_scene_ui_ImageButton$ImageButtonStyle_java_lang_Runnable_R_arc_scene_ui_layout_Cell 205
+typedef jobject (*func_mindustry_editor_MapLocalesDialog_button_arc_scene_style_Drawable_arc_scene_ui_ImageButton$ImageButtonStyle_java_lang_Runnable_R_arc_scene_ui_layout_Cell)(jcontext ctx, jobject self, jobject param0, jobject param1, jobject param2);
+#define VTABLE_mindustry_editor_MapLocalesDialog_field_java_lang_String_arc_func_Cons_R_arc_scene_ui_layout_Cell 206
+typedef jobject (*func_mindustry_editor_MapLocalesDialog_field_java_lang_String_arc_func_Cons_R_arc_scene_ui_layout_Cell)(jcontext ctx, jobject self, jobject param0, jobject param1);
+#define VTABLE_mindustry_editor_MapLocalesDialog_area_java_lang_String_arc_func_Cons_R_arc_scene_ui_layout_Cell 207
+typedef jobject (*func_mindustry_editor_MapLocalesDialog_area_java_lang_String_arc_func_Cons_R_arc_scene_ui_layout_Cell)(jcontext ctx, jobject self, jobject param0, jobject param1);
+#define VTABLE_mindustry_editor_MapLocalesDialog_area_java_lang_String_arc_scene_ui_TextField$TextFieldStyle_arc_func_Cons_R_arc_scene_ui_layout_Cell 208
+typedef jobject (*func_mindustry_editor_MapLocalesDialog_area_java_lang_String_arc_scene_ui_TextField$TextFieldStyle_arc_func_Cons_R_arc_scene_ui_layout_Cell)(jcontext ctx, jobject self, jobject param0, jobject param1, jobject param2);
+#define VTABLE_mindustry_editor_MapLocalesDialog_field_java_lang_String_arc_scene_ui_TextField$TextFieldFilter_arc_func_Cons_R_arc_scene_ui_layout_Cell 209
+typedef jobject (*func_mindustry_editor_MapLocalesDialog_field_java_lang_String_arc_scene_ui_TextField$TextFieldFilter_arc_func_Cons_R_arc_scene_ui_layout_Cell)(jcontext ctx, jobject self, jobject param0, jobject param1, jobject param2);
+#define VTABLE_mindustry_editor_MapLocalesDialog_field_java_lang_String_arc_scene_ui_TextField$TextFieldStyle_arc_func_Cons_R_arc_scene_ui_layout_Cell 210
+typedef jobject (*func_mindustry_editor_MapLocalesDialog_field_java_lang_String_arc_scene_ui_TextField$TextFieldStyle_arc_func_Cons_R_arc_scene_ui_layout_Cell)(jcontext ctx, jobject self, jobject param0, jobject param1, jobject param2);
+#define VTABLE_mindustry_editor_MapLocalesDialog_rect_arc_scene_ui_layout_Table$DrawRect_R_arc_scene_ui_layout_Cell 211
+typedef jobject (*func_mindustry_editor_MapLocalesDialog_rect_arc_scene_ui_layout_Table$DrawRect_R_arc_scene_ui_layout_Cell)(jcontext ctx, jobject self, jobject param0);
+#define VTABLE_mindustry_editor_MapLocalesDialog_buttonRow_java_lang_String_arc_scene_style_Drawable_java_lang_Runnable_R_arc_scene_ui_layout_Cell 212
+typedef jobject (*func_mindustry_editor_MapLocalesDialog_buttonRow_java_lang_String_arc_scene_style_Drawable_java_lang_Runnable_R_arc_scene_ui_layout_Cell)(jcontext ctx, jobject self, jobject param0, jobject param1, jobject param2);
+#define VTABLE_mindustry_editor_MapLocalesDialog_button_java_lang_String_arc_scene_style_Drawable_java_lang_Runnable_R_arc_scene_ui_layout_Cell 213
+typedef jobject (*func_mindustry_editor_MapLocalesDialog_button_java_lang_String_arc_scene_style_Drawable_java_lang_Runnable_R_arc_scene_ui_layout_Cell)(jcontext ctx, jobject self, jobject param0, jobject param1, jobject param2);
+#define VTABLE_mindustry_editor_MapLocalesDialog_button_java_lang_String_arc_scene_style_Drawable_float_java_lang_Runnable_R_arc_scene_ui_layout_Cell 214
+typedef jobject (*func_mindustry_editor_MapLocalesDialog_button_java_lang_String_arc_scene_style_Drawable_float_java_lang_Runnable_R_arc_scene_ui_layout_Cell)(jcontext ctx, jobject self, jobject param0, jobject param1, jfloat param2, jobject param3);
+#define VTABLE_mindustry_editor_MapLocalesDialog_button_java_lang_String_arc_scene_style_Drawable_arc_scene_ui_TextButton$TextButtonStyle_float_java_lang_Runnable_R_arc_scene_ui_layout_Cell 215
+typedef jobject (*func_mindustry_editor_MapLocalesDialog_button_java_lang_String_arc_scene_style_Drawable_arc_scene_ui_TextButton$TextButtonStyle_float_java_lang_Runnable_R_arc_scene_ui_layout_Cell)(jcontext ctx, jobject self, jobject param0, jobject param1, jobject param2, jfloat param3, jobject param4);
+#define VTABLE_mindustry_editor_MapLocalesDialog_button_java_lang_String_arc_scene_style_Drawable_arc_scene_ui_TextButton$TextButtonStyle_java_lang_Runnable_R_arc_scene_ui_layout_Cell 216
+typedef jobject (*func_mindustry_editor_MapLocalesDialog_button_java_lang_String_arc_scene_style_Drawable_arc_scene_ui_TextButton$TextButtonStyle_java_lang_Runnable_R_arc_scene_ui_layout_Cell)(jcontext ctx, jobject self, jobject param0, jobject param1, jobject param2, jobject param3);
+#define VTABLE_mindustry_editor_MapLocalesDialog_buttonCenter_java_lang_String_arc_scene_style_Drawable_float_java_lang_Runnable_R_arc_scene_ui_layout_Cell 217
+typedef jobject (*func_mindustry_editor_MapLocalesDialog_buttonCenter_java_lang_String_arc_scene_style_Drawable_float_java_lang_Runnable_R_arc_scene_ui_layout_Cell)(jcontext ctx, jobject self, jobject param0, jobject param1, jfloat param2, jobject param3);
+#define VTABLE_mindustry_editor_MapLocalesDialog_buttonCenter_java_lang_String_arc_scene_style_Drawable_java_lang_Runnable_R_arc_scene_ui_layout_Cell 218
+typedef jobject (*func_mindustry_editor_MapLocalesDialog_buttonCenter_java_lang_String_arc_scene_style_Drawable_java_lang_Runnable_R_arc_scene_ui_layout_Cell)(jcontext ctx, jobject self, jobject param0, jobject param1, jobject param2);
+#define VTABLE_mindustry_editor_MapLocalesDialog_buttonCenter_java_lang_String_arc_scene_style_Drawable_arc_scene_ui_TextButton$TextButtonStyle_float_java_lang_Runnable_R_arc_scene_ui_layout_Cell 219
+typedef jobject (*func_mindustry_editor_MapLocalesDialog_buttonCenter_java_lang_String_arc_scene_style_Drawable_arc_scene_ui_TextButton$TextButtonStyle_float_java_lang_Runnable_R_arc_scene_ui_layout_Cell)(jcontext ctx, jobject self, jobject param0, jobject param1, jobject param2, jfloat param3, jobject param4);
+#define VTABLE_mindustry_editor_MapLocalesDialog_slider_float_float_float_arc_func_Floatc_R_arc_scene_ui_layout_Cell 220
+typedef jobject (*func_mindustry_editor_MapLocalesDialog_slider_float_float_float_arc_func_Floatc_R_arc_scene_ui_layout_Cell)(jcontext ctx, jobject self, jfloat param0, jfloat param1, jfloat param2, jobject param3);
+#define VTABLE_mindustry_editor_MapLocalesDialog_slider_float_float_float_float_arc_func_Floatc_R_arc_scene_ui_layout_Cell 221
+typedef jobject (*func_mindustry_editor_MapLocalesDialog_slider_float_float_float_float_arc_func_Floatc_R_arc_scene_ui_layout_Cell)(jcontext ctx, jobject self, jfloat param0, jfloat param1, jfloat param2, jfloat param3, jobject param4);
+#define VTABLE_mindustry_editor_MapLocalesDialog_slider_float_float_float_float_boolean_arc_func_Floatc_R_arc_scene_ui_layout_Cell 222
+typedef jobject (*func_mindustry_editor_MapLocalesDialog_slider_float_float_float_float_boolean_arc_func_Floatc_R_arc_scene_ui_layout_Cell)(jcontext ctx, jobject self, jfloat param0, jfloat param1, jfloat param2, jfloat param3, jbool param4, jobject param5);
+#define VTABLE_mindustry_editor_MapLocalesDialog_reset 223
+typedef void (*func_mindustry_editor_MapLocalesDialog_reset)(jcontext ctx, jobject self);
+#define VTABLE_mindustry_editor_MapLocalesDialog_row_R_arc_scene_ui_layout_Table 224
+typedef jobject (*func_mindustry_editor_MapLocalesDialog_row_R_arc_scene_ui_layout_Table)(jcontext ctx, jobject self);
+#define VTABLE_mindustry_editor_MapLocalesDialog_endRow 225
+typedef void (*func_mindustry_editor_MapLocalesDialog_endRow)(jcontext ctx, jobject self);
+#define VTABLE_mindustry_editor_MapLocalesDialog_getCell_arc_scene_Element_R_arc_scene_ui_layout_Cell 226
+typedef jobject (*func_mindustry_editor_MapLocalesDialog_getCell_arc_scene_Element_R_arc_scene_ui_layout_Cell)(jcontext ctx, jobject self, jobject param0);
+#define VTABLE_mindustry_editor_MapLocalesDialog_getCells_R_arc_struct_Seq 227
+typedef jobject (*func_mindustry_editor_MapLocalesDialog_getCells_R_arc_struct_Seq)(jcontext ctx, jobject self);
+#define VTABLE_mindustry_editor_MapLocalesDialog_defaults_R_arc_scene_ui_layout_Cell 228
+typedef jobject (*func_mindustry_editor_MapLocalesDialog_defaults_R_arc_scene_ui_layout_Cell)(jcontext ctx, jobject self);
+#define VTABLE_mindustry_editor_MapLocalesDialog_margin_float_R_arc_scene_ui_layout_Table 229
+typedef jobject (*func_mindustry_editor_MapLocalesDialog_margin_float_R_arc_scene_ui_layout_Table)(jcontext ctx, jobject self, jfloat param0);
+#define VTABLE_mindustry_editor_MapLocalesDialog_margin_float_float_float_float_R_arc_scene_ui_layout_Table 230
+typedef jobject (*func_mindustry_editor_MapLocalesDialog_margin_float_float_float_float_R_arc_scene_ui_layout_Table)(jcontext ctx, jobject self, jfloat param0, jfloat param1, jfloat param2, jfloat param3);
+#define VTABLE_mindustry_editor_MapLocalesDialog_marginTop_float_R_arc_scene_ui_layout_Table 231
+typedef jobject (*func_mindustry_editor_MapLocalesDialog_marginTop_float_R_arc_scene_ui_layout_Table)(jcontext ctx, jobject self, jfloat param0);
+#define VTABLE_mindustry_editor_MapLocalesDialog_marginLeft_float_R_arc_scene_ui_layout_Table 232
+typedef jobject (*func_mindustry_editor_MapLocalesDialog_marginLeft_float_R_arc_scene_ui_layout_Table)(jcontext ctx, jobject self, jfloat param0);
+#define VTABLE_mindustry_editor_MapLocalesDialog_marginBottom_float_R_arc_scene_ui_layout_Table 233
+typedef jobject (*func_mindustry_editor_MapLocalesDialog_marginBottom_float_R_arc_scene_ui_layout_Table)(jcontext ctx, jobject self, jfloat param0);
+#define VTABLE_mindustry_editor_MapLocalesDialog_marginRight_float_R_arc_scene_ui_layout_Table 234
+typedef jobject (*func_mindustry_editor_MapLocalesDialog_marginRight_float_R_arc_scene_ui_layout_Table)(jcontext ctx, jobject self, jfloat param0);
+#define VTABLE_mindustry_editor_MapLocalesDialog_align_int_R_arc_scene_ui_layout_Table 235
+typedef jobject (*func_mindustry_editor_MapLocalesDialog_align_int_R_arc_scene_ui_layout_Table)(jcontext ctx, jobject self, jint param0);
+#define VTABLE_mindustry_editor_MapLocalesDialog_center_R_arc_scene_ui_layout_Table 236
+typedef jobject (*func_mindustry_editor_MapLocalesDialog_center_R_arc_scene_ui_layout_Table)(jcontext ctx, jobject self);
+#define VTABLE_mindustry_editor_MapLocalesDialog_top_R_arc_scene_ui_layout_Table 237
+typedef jobject (*func_mindustry_editor_MapLocalesDialog_top_R_arc_scene_ui_layout_Table)(jcontext ctx, jobject self);
+#define VTABLE_mindustry_editor_MapLocalesDialog_left_R_arc_scene_ui_layout_Table 238
+typedef jobject (*func_mindustry_editor_MapLocalesDialog_left_R_arc_scene_ui_layout_Table)(jcontext ctx, jobject self);
+#define VTABLE_mindustry_editor_MapLocalesDialog_bottom_R_arc_scene_ui_layout_Table 239
+typedef jobject (*func_mindustry_editor_MapLocalesDialog_bottom_R_arc_scene_ui_layout_Table)(jcontext ctx, jobject self);
+#define VTABLE_mindustry_editor_MapLocalesDialog_right_R_arc_scene_ui_layout_Table 240
+typedef jobject (*func_mindustry_editor_MapLocalesDialog_right_R_arc_scene_ui_layout_Table)(jcontext ctx, jobject self);
+#define VTABLE_mindustry_editor_MapLocalesDialog_getMarginTop_R_float 241
+typedef jfloat (*func_mindustry_editor_MapLocalesDialog_getMarginTop_R_float)(jcontext ctx, jobject self);
+#define VTABLE_mindustry_editor_MapLocalesDialog_getMarginLeft_R_float 242
+typedef jfloat (*func_mindustry_editor_MapLocalesDialog_getMarginLeft_R_float)(jcontext ctx, jobject self);
+#define VTABLE_mindustry_editor_MapLocalesDialog_getMarginBottom_R_float 243
+typedef jfloat (*func_mindustry_editor_MapLocalesDialog_getMarginBottom_R_float)(jcontext ctx, jobject self);
+#define VTABLE_mindustry_editor_MapLocalesDialog_getMarginRight_R_float 244
+typedef jfloat (*func_mindustry_editor_MapLocalesDialog_getMarginRight_R_float)(jcontext ctx, jobject self);
+#define VTABLE_mindustry_editor_MapLocalesDialog_getAlign_R_int 245
+typedef jint (*func_mindustry_editor_MapLocalesDialog_getAlign_R_int)(jcontext ctx, jobject self);
+#define VTABLE_mindustry_editor_MapLocalesDialog_getRow_float_R_int 246
+typedef jint (*func_mindustry_editor_MapLocalesDialog_getRow_float_R_int)(jcontext ctx, jobject self, jfloat param0);
+#define VTABLE_mindustry_editor_MapLocalesDialog_setRound_boolean 247
+typedef void (*func_mindustry_editor_MapLocalesDialog_setRound_boolean)(jcontext ctx, jobject self, jbool param0);
+#define VTABLE_mindustry_editor_MapLocalesDialog_getRows_R_int 248
+typedef jint (*func_mindustry_editor_MapLocalesDialog_getRows_R_int)(jcontext ctx, jobject self);
+#define VTABLE_mindustry_editor_MapLocalesDialog_getColumns_R_int 249
+typedef jint (*func_mindustry_editor_MapLocalesDialog_getColumns_R_int)(jcontext ctx, jobject self);
+#define VTABLE_mindustry_editor_MapLocalesDialog_getRowHeight_int_R_float 250
+typedef jfloat (*func_mindustry_editor_MapLocalesDialog_getRowHeight_int_R_float)(jcontext ctx, jobject self, jint param0);
+#define VTABLE_mindustry_editor_MapLocalesDialog_getColumnWidth_int_R_float 251
+typedef jfloat (*func_mindustry_editor_MapLocalesDialog_getColumnWidth_int_R_float)(jcontext ctx, jobject self, jint param0);
+#define VTABLE_mindustry_editor_MapLocalesDialog_ensureSize_Array1_float_int_R_Array1_float 252
+typedef jobject (*func_mindustry_editor_MapLocalesDialog_ensureSize_Array1_float_int_R_Array1_float)(jcontext ctx, jobject self, jobject param0, jint param1);
+#define VTABLE_mindustry_editor_MapLocalesDialog_computeSize 253
+typedef void (*func_mindustry_editor_MapLocalesDialog_computeSize)(jcontext ctx, jobject self);
+#define VTABLE_mindustry_editor_MapLocalesDialog_layout_float_float_float_float 254
+typedef void (*func_mindustry_editor_MapLocalesDialog_layout_float_float_float_float)(jcontext ctx, jobject self, jfloat param0, jfloat param1, jfloat param2, jfloat param3);
+#define VTABLE_mindustry_editor_MapLocalesDialog_getStyle_R_arc_scene_ui_Dialog$DialogStyle 255
+typedef jobject (*func_mindustry_editor_MapLocalesDialog_getStyle_R_arc_scene_ui_Dialog$DialogStyle)(jcontext ctx, jobject self);
+#define VTABLE_mindustry_editor_MapLocalesDialog_setStyle_arc_scene_ui_Dialog$DialogStyle 256
+typedef void (*func_mindustry_editor_MapLocalesDialog_setStyle_arc_scene_ui_Dialog$DialogStyle)(jcontext ctx, jobject self, jobject param0);
+#define VTABLE_mindustry_editor_MapLocalesDialog_keepWithinStage 257
+typedef void (*func_mindustry_editor_MapLocalesDialog_keepWithinStage)(jcontext ctx, jobject self);
+#define VTABLE_mindustry_editor_MapLocalesDialog_drawStageBackground_float_float_float_float 258
+typedef void (*func_mindustry_editor_MapLocalesDialog_drawStageBackground_float_float_float_float)(jcontext ctx, jobject self, jfloat param0, jfloat param1, jfloat param2, jfloat param3);
+#define VTABLE_mindustry_editor_MapLocalesDialog_centerWindow 259
+typedef void (*func_mindustry_editor_MapLocalesDialog_centerWindow)(jcontext ctx, jobject self);
+#define VTABLE_mindustry_editor_MapLocalesDialog_isMovable_R_boolean 260
+typedef jbool (*func_mindustry_editor_MapLocalesDialog_isMovable_R_boolean)(jcontext ctx, jobject self);
+#define VTABLE_mindustry_editor_MapLocalesDialog_setMovable_boolean 261
+typedef void (*func_mindustry_editor_MapLocalesDialog_setMovable_boolean)(jcontext ctx, jobject self, jbool param0);
+#define VTABLE_mindustry_editor_MapLocalesDialog_isModal_R_boolean 262
+typedef jbool (*func_mindustry_editor_MapLocalesDialog_isModal_R_boolean)(jcontext ctx, jobject self);
+#define VTABLE_mindustry_editor_MapLocalesDialog_setModal_boolean 263
+typedef void (*func_mindustry_editor_MapLocalesDialog_setModal_boolean)(jcontext ctx, jobject self, jbool param0);
+#define VTABLE_mindustry_editor_MapLocalesDialog_setKeepWithinStage_boolean 264
+typedef void (*func_mindustry_editor_MapLocalesDialog_setKeepWithinStage_boolean)(jcontext ctx, jobject self, jbool param0);
+#define VTABLE_mindustry_editor_MapLocalesDialog_isCentered_R_boolean 265
+typedef jbool (*func_mindustry_editor_MapLocalesDialog_isCentered_R_boolean)(jcontext ctx, jobject self);
+#define VTABLE_mindustry_editor_MapLocalesDialog_setCentered_boolean 266
+typedef void (*func_mindustry_editor_MapLocalesDialog_setCentered_boolean)(jcontext ctx, jobject self, jbool param0);
+#define VTABLE_mindustry_editor_MapLocalesDialog_isResizable_R_boolean 267
+typedef jbool (*func_mindustry_editor_MapLocalesDialog_isResizable_R_boolean)(jcontext ctx, jobject self);
+#define VTABLE_mindustry_editor_MapLocalesDialog_setResizable_boolean 268
+typedef void (*func_mindustry_editor_MapLocalesDialog_setResizable_boolean)(jcontext ctx, jobject self, jbool param0);
+#define VTABLE_mindustry_editor_MapLocalesDialog_setResizeBorder_int 269
+typedef void (*func_mindustry_editor_MapLocalesDialog_setResizeBorder_int)(jcontext ctx, jobject self, jint param0);
+#define VTABLE_mindustry_editor_MapLocalesDialog_isDragging_R_boolean 270
+typedef jbool (*func_mindustry_editor_MapLocalesDialog_isDragging_R_boolean)(jcontext ctx, jobject self);
+#define VTABLE_mindustry_editor_MapLocalesDialog_updateScrollFocus 271
+typedef void (*func_mindustry_editor_MapLocalesDialog_updateScrollFocus)(jcontext ctx, jobject self);
+#define VTABLE_mindustry_editor_MapLocalesDialog_shown_java_lang_Runnable 272
+typedef void (*func_mindustry_editor_MapLocalesDialog_shown_java_lang_Runnable)(jcontext ctx, jobject self, jobject param0);
+#define VTABLE_mindustry_editor_MapLocalesDialog_hidden_java_lang_Runnable 273
+typedef void (*func_mindustry_editor_MapLocalesDialog_hidden_java_lang_Runnable)(jcontext ctx, jobject self, jobject param0);
+#define VTABLE_mindustry_editor_MapLocalesDialog_resizedShown_java_lang_Runnable 274
+typedef void (*func_mindustry_editor_MapLocalesDialog_resizedShown_java_lang_Runnable)(jcontext ctx, jobject self, jobject param0);
+#define VTABLE_mindustry_editor_MapLocalesDialog_resized_java_lang_Runnable 275
+typedef void (*func_mindustry_editor_MapLocalesDialog_resized_java_lang_Runnable)(jcontext ctx, jobject self, jobject param0);
+#define VTABLE_mindustry_editor_MapLocalesDialog_resized_boolean_java_lang_Runnable 276
+typedef void (*func_mindustry_editor_MapLocalesDialog_resized_boolean_java_lang_Runnable)(jcontext ctx, jobject self, jbool param0, jobject param1);
+#define VTABLE_mindustry_editor_MapLocalesDialog_addCloseButton 277
+typedef void (*func_mindustry_editor_MapLocalesDialog_addCloseButton)(jcontext ctx, jobject self);
+#define VTABLE_mindustry_editor_MapLocalesDialog_closeOnBack 278
+typedef void (*func_mindustry_editor_MapLocalesDialog_closeOnBack)(jcontext ctx, jobject self);
+#define VTABLE_mindustry_editor_MapLocalesDialog_closeOnBack_java_lang_Runnable 279
+typedef void (*func_mindustry_editor_MapLocalesDialog_closeOnBack_java_lang_Runnable)(jcontext ctx, jobject self, jobject param0);
+#define VTABLE_mindustry_editor_MapLocalesDialog_isShown_R_boolean 280
+typedef jbool (*func_mindustry_editor_MapLocalesDialog_isShown_R_boolean)(jcontext ctx, jobject self);
+#define VTABLE_mindustry_editor_MapLocalesDialog_show_arc_scene_Scene_arc_scene_Action_R_arc_scene_ui_Dialog 281
+typedef jobject (*func_mindustry_editor_MapLocalesDialog_show_arc_scene_Scene_arc_scene_Action_R_arc_scene_ui_Dialog)(jcontext ctx, jobject self, jobject param0, jobject param1);
+#define VTABLE_mindustry_editor_MapLocalesDialog_toggle 282
+typedef void (*func_mindustry_editor_MapLocalesDialog_toggle)(jcontext ctx, jobject self);
+#define VTABLE_mindustry_editor_MapLocalesDialog_show_R_arc_scene_ui_Dialog 283
+typedef jobject (*func_mindustry_editor_MapLocalesDialog_show_R_arc_scene_ui_Dialog)(jcontext ctx, jobject self);
+#define VTABLE_mindustry_editor_MapLocalesDialog_show_arc_scene_Scene_R_arc_scene_ui_Dialog 284
+typedef jobject (*func_mindustry_editor_MapLocalesDialog_show_arc_scene_Scene_R_arc_scene_ui_Dialog)(jcontext ctx, jobject self, jobject param0);
+#define VTABLE_mindustry_editor_MapLocalesDialog_hide_arc_scene_Action 285
+typedef void (*func_mindustry_editor_MapLocalesDialog_hide_arc_scene_Action)(jcontext ctx, jobject self, jobject param0);
+#define VTABLE_mindustry_editor_MapLocalesDialog_hide 286
+typedef void (*func_mindustry_editor_MapLocalesDialog_hide)(jcontext ctx, jobject self);
+#define VTABLE_mindustry_editor_MapLocalesDialog_lambda$closeOnBack$1_java_lang_Runnable_arc_input_KeyCode 287
+typedef void (*func_mindustry_editor_MapLocalesDialog_lambda$closeOnBack$1_java_lang_Runnable_arc_input_KeyCode)(jcontext ctx, jobject self, jobject param0, jobject param1);
+#define VTABLE_mindustry_editor_MapLocalesDialog_lambda$updateScrollFocus$0_Array1_boolean 288
+typedef void (*func_mindustry_editor_MapLocalesDialog_lambda$updateScrollFocus$0_Array1_boolean)(jcontext ctx, jobject self, jobject param0);
+#define VTABLE_mindustry_editor_MapLocalesDialog_setTitleColor_arc_graphics_Color 289
+typedef void (*func_mindustry_editor_MapLocalesDialog_setTitleColor_arc_graphics_Color)(jcontext ctx, jobject self, jobject param0);
+#define VTABLE_mindustry_editor_MapLocalesDialog_makeButtonOverlay 290
+typedef void (*func_mindustry_editor_MapLocalesDialog_makeButtonOverlay)(jcontext ctx, jobject self);
+#define VTABLE_mindustry_editor_MapLocalesDialog_onResize_java_lang_Runnable 291
+typedef void (*func_mindustry_editor_MapLocalesDialog_onResize_java_lang_Runnable)(jcontext ctx, jobject self, jobject param0);
+#define VTABLE_mindustry_editor_MapLocalesDialog_addCloseListener 292
+typedef void (*func_mindustry_editor_MapLocalesDialog_addCloseListener)(jcontext ctx, jobject self);
+#define VTABLE_mindustry_editor_MapLocalesDialog_addCloseButton_float 293
+typedef void (*func_mindustry_editor_MapLocalesDialog_addCloseButton_float)(jcontext ctx, jobject self, jfloat param0);
+#define VTABLE_mindustry_editor_MapLocalesDialog_lambda$onResize$0_java_lang_Runnable_mindustry_game_EventType$ResizeEvent 294
+typedef void (*func_mindustry_editor_MapLocalesDialog_lambda$onResize$0_java_lang_Runnable_mindustry_game_EventType$ResizeEvent)(jcontext ctx, jobject self, jobject param0, jobject param1);
+#define VTABLE_mindustry_editor_MapLocalesDialog_lambda$new$1 295
+typedef void (*func_mindustry_editor_MapLocalesDialog_lambda$new$1)(jcontext ctx, jobject self);
+#define VTABLE_mindustry_editor_MapLocalesDialog_lambda$new$0 296
+typedef void (*func_mindustry_editor_MapLocalesDialog_lambda$new$0)(jcontext ctx, jobject self);
+#define VTABLE_mindustry_editor_MapLocalesDialog_show_mindustry_type_MapLocales 297
+typedef void (*func_mindustry_editor_MapLocalesDialog_show_mindustry_type_MapLocales)(jcontext ctx, jobject self, jobject param0);
+#define VTABLE_mindustry_editor_MapLocalesDialog_setup 298
+typedef void (*func_mindustry_editor_MapLocalesDialog_setup)(jcontext ctx, jobject self);
+#define VTABLE_mindustry_editor_MapLocalesDialog_buildTables 299
+typedef void (*func_mindustry_editor_MapLocalesDialog_buildTables)(jcontext ctx, jobject self);
+#define VTABLE_mindustry_editor_MapLocalesDialog_buildLocalesTable 300
+typedef void (*func_mindustry_editor_MapLocalesDialog_buildLocalesTable)(jcontext ctx, jobject self);
+#define VTABLE_mindustry_editor_MapLocalesDialog_buildMain 301
+typedef void (*func_mindustry_editor_MapLocalesDialog_buildMain)(jcontext ctx, jobject self);
+#define VTABLE_mindustry_editor_MapLocalesDialog_updateCard_arc_scene_ui_layout_Table_java_lang_String_java_lang_String 302
+typedef void (*func_mindustry_editor_MapLocalesDialog_updateCard_arc_scene_ui_layout_Table_java_lang_String_java_lang_String)(jcontext ctx, jobject self, jobject param0, jobject param1, jobject param2);
+#define VTABLE_mindustry_editor_MapLocalesDialog_updateCard_arc_scene_ui_layout_Table_java_lang_String_java_lang_String_java_lang_String_boolean 303
+typedef void (*func_mindustry_editor_MapLocalesDialog_updateCard_arc_scene_ui_layout_Table_java_lang_String_java_lang_String_java_lang_String_boolean)(jcontext ctx, jobject self, jobject param0, jobject param1, jobject param2, jobject param3, jbool param4);
+#define VTABLE_mindustry_editor_MapLocalesDialog_getPropertyStatus_java_lang_String_java_lang_String_java_lang_String_boolean_R_mindustry_editor_MapLocalesDialog$PropertyStatus 304
+typedef jobject (*func_mindustry_editor_MapLocalesDialog_getPropertyStatus_java_lang_String_java_lang_String_java_lang_String_boolean_R_mindustry_editor_MapLocalesDialog$PropertyStatus)(jcontext ctx, jobject self, jobject param0, jobject param1, jobject param2, jbool param3);
+#define VTABLE_mindustry_editor_MapLocalesDialog_addLocaleDialog 305
+typedef void (*func_mindustry_editor_MapLocalesDialog_addLocaleDialog)(jcontext ctx, jobject self);
+#define VTABLE_mindustry_editor_MapLocalesDialog_propEditDialog_arc_scene_ui_layout_Table_java_lang_String_java_lang_String 306
+typedef void (*func_mindustry_editor_MapLocalesDialog_propEditDialog_arc_scene_ui_layout_Table_java_lang_String_java_lang_String)(jcontext ctx, jobject self, jobject param0, jobject param1, jobject param2);
+#define VTABLE_mindustry_editor_MapLocalesDialog_localeEditDialog_java_lang_String 307
+typedef void (*func_mindustry_editor_MapLocalesDialog_localeEditDialog_java_lang_String)(jcontext ctx, jobject self, jobject param0);
+#define VTABLE_mindustry_editor_MapLocalesDialog_editDialog 308
+typedef void (*func_mindustry_editor_MapLocalesDialog_editDialog)(jcontext ctx, jobject self);
+#define VTABLE_mindustry_editor_MapLocalesDialog_viewPropertyDialog_java_lang_String 309
+typedef void (*func_mindustry_editor_MapLocalesDialog_viewPropertyDialog_java_lang_String)(jcontext ctx, jobject self, jobject param0);
+#define VTABLE_mindustry_editor_MapLocalesDialog_buildPropView_java_lang_String 310
+typedef void (*func_mindustry_editor_MapLocalesDialog_buildPropView_java_lang_String)(jcontext ctx, jobject self, jobject param0);
+#define VTABLE_mindustry_editor_MapLocalesDialog_filterDialog_java_lang_Runnable 311
+typedef void (*func_mindustry_editor_MapLocalesDialog_filterDialog_java_lang_Runnable)(jcontext ctx, jobject self, jobject param0);
+#define VTABLE_mindustry_editor_MapLocalesDialog_addIconDialog_arc_func_Cons 312
+typedef void (*func_mindustry_editor_MapLocalesDialog_addIconDialog_arc_func_Cons)(jcontext ctx, jobject self, jobject param0);
+#define VTABLE_mindustry_editor_MapLocalesDialog_iconsTable_arc_scene_ui_layout_Table_java_lang_String_arc_scene_ui_Dialog_arc_func_Cons 313
+typedef void (*func_mindustry_editor_MapLocalesDialog_iconsTable_arc_scene_ui_layout_Table_java_lang_String_arc_scene_ui_Dialog_arc_func_Cons)(jcontext ctx, jobject self, jobject param0, jobject param1, jobject param2, jobject param3);
+#define VTABLE_mindustry_editor_MapLocalesDialog_writeBundles_R_java_lang_String 314
+typedef jobject (*func_mindustry_editor_MapLocalesDialog_writeBundles_R_java_lang_String)(jcontext ctx, jobject self);
+#define VTABLE_mindustry_editor_MapLocalesDialog_writeLocale_java_lang_String_R_java_lang_String 315
+typedef jobject (*func_mindustry_editor_MapLocalesDialog_writeLocale_java_lang_String_R_java_lang_String)(jcontext ctx, jobject self, jobject param0);
+#define VTABLE_mindustry_editor_MapLocalesDialog_readBundles_java_lang_String_R_mindustry_type_MapLocales 316
+typedef jobject (*func_mindustry_editor_MapLocalesDialog_readBundles_java_lang_String_R_mindustry_type_MapLocales)(jcontext ctx, jobject self, jobject param0);
+#define VTABLE_mindustry_editor_MapLocalesDialog_readLocale_java_lang_String_R_arc_struct_StringMap 317
+typedef jobject (*func_mindustry_editor_MapLocalesDialog_readLocale_java_lang_String_R_arc_struct_StringMap)(jcontext ctx, jobject self, jobject param0);
+#define VTABLE_mindustry_editor_MapLocalesDialog_lambda$addIconDialog$3_arc_scene_ui_layout_Table_arc_scene_ui_TextField_mindustry_ui_dialogs_BaseDialog_arc_func_Cons 318
+typedef void (*func_mindustry_editor_MapLocalesDialog_lambda$addIconDialog$3_arc_scene_ui_layout_Table_arc_scene_ui_TextField_mindustry_ui_dialogs_BaseDialog_arc_func_Cons)(jcontext ctx, jobject self, jobject param0, jobject param1, jobject param2, jobject param3);
+#define VTABLE_mindustry_editor_MapLocalesDialog_lambda$addIconDialog$1_arc_scene_ui_TextField_arc_scene_ui_layout_Table_mindustry_ui_dialogs_BaseDialog_arc_func_Cons_arc_scene_ui_layout_Table 319
+typedef void (*func_mindustry_editor_MapLocalesDialog_lambda$addIconDialog$1_arc_scene_ui_TextField_arc_scene_ui_layout_Table_mindustry_ui_dialogs_BaseDialog_arc_func_Cons_arc_scene_ui_layout_Table)(jcontext ctx, jobject self, jobject param0, jobject param1, jobject param2, jobject param3, jobject param4);
+#define VTABLE_mindustry_editor_MapLocalesDialog_lambda$addIconDialog$2_arc_scene_ui_TextField_arc_scene_ui_layout_Table_mindustry_ui_dialogs_BaseDialog_arc_func_Cons 320
+typedef void (*func_mindustry_editor_MapLocalesDialog_lambda$addIconDialog$2_arc_scene_ui_TextField_arc_scene_ui_layout_Table_mindustry_ui_dialogs_BaseDialog_arc_func_Cons)(jcontext ctx, jobject self, jobject param0, jobject param1, jobject param2, jobject param3);
+#define VTABLE_mindustry_editor_MapLocalesDialog_lambda$addIconDialog$0_arc_scene_ui_layout_Table_mindustry_ui_dialogs_BaseDialog_arc_func_Cons_java_lang_String 321
+typedef void (*func_mindustry_editor_MapLocalesDialog_lambda$addIconDialog$0_arc_scene_ui_layout_Table_mindustry_ui_dialogs_BaseDialog_arc_func_Cons_java_lang_String)(jcontext ctx, jobject self, jobject param0, jobject param1, jobject param2, jobject param3);
+#define VTABLE_mindustry_editor_MapLocalesDialog_lambda$filterDialog$11_arc_scene_ui_TextButton 322
+typedef void (*func_mindustry_editor_MapLocalesDialog_lambda$filterDialog$11_arc_scene_ui_TextButton)(jcontext ctx, jobject self, jobject param0);
+#define VTABLE_mindustry_editor_MapLocalesDialog_lambda$filterDialog$10 323
+typedef void (*func_mindustry_editor_MapLocalesDialog_lambda$filterDialog$10)(jcontext ctx, jobject self);
+#define VTABLE_mindustry_editor_MapLocalesDialog_lambda$filterDialog$9_arc_scene_ui_TextButton 324
+typedef void (*func_mindustry_editor_MapLocalesDialog_lambda$filterDialog$9_arc_scene_ui_TextButton)(jcontext ctx, jobject self, jobject param0);
+#define VTABLE_mindustry_editor_MapLocalesDialog_lambda$filterDialog$8 325
+typedef void (*func_mindustry_editor_MapLocalesDialog_lambda$filterDialog$8)(jcontext ctx, jobject self);
+#define VTABLE_mindustry_editor_MapLocalesDialog_lambda$filterDialog$7_arc_scene_ui_TextButton 326
+typedef void (*func_mindustry_editor_MapLocalesDialog_lambda$filterDialog$7_arc_scene_ui_TextButton)(jcontext ctx, jobject self, jobject param0);
+#define VTABLE_mindustry_editor_MapLocalesDialog_lambda$filterDialog$6 327
+typedef void (*func_mindustry_editor_MapLocalesDialog_lambda$filterDialog$6)(jcontext ctx, jobject self);
+#define VTABLE_mindustry_editor_MapLocalesDialog_lambda$filterDialog$0_arc_scene_ui_layout_Table 328
+typedef void (*func_mindustry_editor_MapLocalesDialog_lambda$filterDialog$0_arc_scene_ui_layout_Table)(jcontext ctx, jobject self, jobject param0);
+#define VTABLE_mindustry_editor_MapLocalesDialog_lambda$filterDialog$1_arc_scene_ui_layout_Table 329
+typedef void (*func_mindustry_editor_MapLocalesDialog_lambda$filterDialog$1_arc_scene_ui_layout_Table)(jcontext ctx, jobject self, jobject param0);
+#define VTABLE_mindustry_editor_MapLocalesDialog_lambda$filterDialog$5_arc_scene_ui_TextButton_R_boolean 330
+typedef jbool (*func_mindustry_editor_MapLocalesDialog_lambda$filterDialog$5_arc_scene_ui_TextButton_R_boolean)(jcontext ctx, jobject self, jobject param0);
+#define VTABLE_mindustry_editor_MapLocalesDialog_lambda$filterDialog$4 331
+typedef void (*func_mindustry_editor_MapLocalesDialog_lambda$filterDialog$4)(jcontext ctx, jobject self);
+#define VTABLE_mindustry_editor_MapLocalesDialog_lambda$filterDialog$3_arc_scene_ui_TextButton_R_boolean 332
+typedef jbool (*func_mindustry_editor_MapLocalesDialog_lambda$filterDialog$3_arc_scene_ui_TextButton_R_boolean)(jcontext ctx, jobject self, jobject param0);
+#define VTABLE_mindustry_editor_MapLocalesDialog_lambda$filterDialog$2 333
+typedef void (*func_mindustry_editor_MapLocalesDialog_lambda$filterDialog$2)(jcontext ctx, jobject self);
+#define VTABLE_mindustry_editor_MapLocalesDialog_lambda$buildPropView$0_java_lang_String_arc_scene_ui_layout_Table 334
+typedef void (*func_mindustry_editor_MapLocalesDialog_lambda$buildPropView$0_java_lang_String_arc_scene_ui_layout_Table)(jcontext ctx, jobject self, jobject param0, jobject param1);
+#define VTABLE_mindustry_editor_MapLocalesDialog_lambda$buildPropView$6_java_lang_String_java_lang_String_arc_scene_ui_layout_Table 335
+typedef void (*func_mindustry_editor_MapLocalesDialog_lambda$buildPropView$6_java_lang_String_java_lang_String_arc_scene_ui_layout_Table)(jcontext ctx, jobject self, jobject param0, jobject param1, jobject param2);
+#define VTABLE_mindustry_editor_MapLocalesDialog_lambda$buildPropView$1_java_util_Locale_mindustry_editor_MapLocalesDialog$PropertyStatus_java_lang_String_java_lang_String_arc_scene_ui_layout_Table 336
+typedef void (*func_mindustry_editor_MapLocalesDialog_lambda$buildPropView$1_java_util_Locale_mindustry_editor_MapLocalesDialog$PropertyStatus_java_lang_String_java_lang_String_arc_scene_ui_layout_Table)(jcontext ctx, jobject self, jobject param0, jobject param1, jobject param2, jobject param3, jobject param4);
+#define VTABLE_mindustry_editor_MapLocalesDialog_lambda$buildPropView$5_java_lang_String_java_lang_String_java_lang_String 337
+typedef void (*func_mindustry_editor_MapLocalesDialog_lambda$buildPropView$5_java_lang_String_java_lang_String_java_lang_String)(jcontext ctx, jobject self, jobject param0, jobject param1, jobject param2);
+#define VTABLE_mindustry_editor_MapLocalesDialog_lambda$buildPropView$2_java_lang_String_java_lang_String_arc_scene_ui_layout_Table_arc_scene_ui_layout_Table 338
+typedef void (*func_mindustry_editor_MapLocalesDialog_lambda$buildPropView$2_java_lang_String_java_lang_String_arc_scene_ui_layout_Table_arc_scene_ui_layout_Table)(jcontext ctx, jobject self, jobject param0, jobject param1, jobject param2, jobject param3);
+#define VTABLE_mindustry_editor_MapLocalesDialog_lambda$buildPropView$3_java_lang_String_java_lang_String_arc_scene_ui_layout_Table 339
+typedef void (*func_mindustry_editor_MapLocalesDialog_lambda$buildPropView$3_java_lang_String_java_lang_String_arc_scene_ui_layout_Table)(jcontext ctx, jobject self, jobject param0, jobject param1, jobject param2);
+#define VTABLE_mindustry_editor_MapLocalesDialog_lambda$buildPropView$4_java_lang_String_java_lang_String_java_lang_String 340
+typedef void (*func_mindustry_editor_MapLocalesDialog_lambda$buildPropView$4_java_lang_String_java_lang_String_java_lang_String)(jcontext ctx, jobject self, jobject param0, jobject param1, jobject param2);
+#define VTABLE_mindustry_editor_MapLocalesDialog_lambda$viewPropertyDialog$0_java_lang_String_arc_scene_ui_layout_Table 341
+typedef void (*func_mindustry_editor_MapLocalesDialog_lambda$viewPropertyDialog$0_java_lang_String_arc_scene_ui_layout_Table)(jcontext ctx, jobject self, jobject param0, jobject param1);
+#define VTABLE_mindustry_editor_MapLocalesDialog_lambda$viewPropertyDialog$6_arc_scene_ui_TextField_java_lang_String 342
+typedef void (*func_mindustry_editor_MapLocalesDialog_lambda$viewPropertyDialog$6_arc_scene_ui_TextField_java_lang_String)(jcontext ctx, jobject self, jobject param0, jobject param1);
+#define VTABLE_mindustry_editor_MapLocalesDialog_lambda$viewPropertyDialog$5_arc_scene_ui_TextField 343
+typedef void (*func_mindustry_editor_MapLocalesDialog_lambda$viewPropertyDialog$5_arc_scene_ui_TextField)(jcontext ctx, jobject self, jobject param0);
+#define VTABLE_mindustry_editor_MapLocalesDialog_lambda$viewPropertyDialog$4_arc_scene_ui_TextField 344
+typedef void (*func_mindustry_editor_MapLocalesDialog_lambda$viewPropertyDialog$4_arc_scene_ui_TextField)(jcontext ctx, jobject self, jobject param0);
+#define VTABLE_mindustry_editor_MapLocalesDialog_lambda$viewPropertyDialog$3_java_lang_String_java_lang_String 345
+typedef void (*func_mindustry_editor_MapLocalesDialog_lambda$viewPropertyDialog$3_java_lang_String_java_lang_String)(jcontext ctx, jobject self, jobject param0, jobject param1);
+#define VTABLE_mindustry_editor_MapLocalesDialog_lambda$viewPropertyDialog$1_java_lang_String 346
+typedef void (*func_mindustry_editor_MapLocalesDialog_lambda$viewPropertyDialog$1_java_lang_String)(jcontext ctx, jobject self, jobject param0);
+#define VTABLE_mindustry_editor_MapLocalesDialog_lambda$viewPropertyDialog$2_java_lang_String 347
+typedef void (*func_mindustry_editor_MapLocalesDialog_lambda$viewPropertyDialog$2_java_lang_String)(jcontext ctx, jobject self, jobject param0);
+#define VTABLE_mindustry_editor_MapLocalesDialog_lambda$editDialog$0_mindustry_ui_dialogs_BaseDialog_arc_scene_ui_layout_Table 348
+typedef void (*func_mindustry_editor_MapLocalesDialog_lambda$editDialog$0_mindustry_ui_dialogs_BaseDialog_arc_scene_ui_layout_Table)(jcontext ctx, jobject self, jobject param0, jobject param1);
+#define VTABLE_mindustry_editor_MapLocalesDialog_lambda$editDialog$1_mindustry_ui_dialogs_BaseDialog_arc_scene_ui_layout_Table 349
+typedef void (*func_mindustry_editor_MapLocalesDialog_lambda$editDialog$1_mindustry_ui_dialogs_BaseDialog_arc_scene_ui_layout_Table)(jcontext ctx, jobject self, jobject param0, jobject param1);
+#define VTABLE_mindustry_editor_MapLocalesDialog_lambda$editDialog$5_arc_scene_ui_TextButton_R_boolean 350
+typedef jbool (*func_mindustry_editor_MapLocalesDialog_lambda$editDialog$5_arc_scene_ui_TextButton_R_boolean)(jcontext ctx, jobject self, jobject param0);
+#define VTABLE_mindustry_editor_MapLocalesDialog_lambda$editDialog$4_mindustry_ui_dialogs_BaseDialog 351
+typedef void (*func_mindustry_editor_MapLocalesDialog_lambda$editDialog$4_mindustry_ui_dialogs_BaseDialog)(jcontext ctx, jobject self, jobject param0);
+#define VTABLE_mindustry_editor_MapLocalesDialog_lambda$editDialog$3_mindustry_ui_dialogs_BaseDialog 352
+typedef void (*func_mindustry_editor_MapLocalesDialog_lambda$editDialog$3_mindustry_ui_dialogs_BaseDialog)(jcontext ctx, jobject self, jobject param0);
+#define VTABLE_mindustry_editor_MapLocalesDialog_lambda$editDialog$2_mindustry_ui_dialogs_BaseDialog 353
+typedef void (*func_mindustry_editor_MapLocalesDialog_lambda$editDialog$2_mindustry_ui_dialogs_BaseDialog)(jcontext ctx, jobject self, jobject param0);
+#define VTABLE_mindustry_editor_MapLocalesDialog_lambda$localeEditDialog$0_java_lang_String_mindustry_ui_dialogs_BaseDialog_arc_scene_ui_layout_Table 354
+typedef void (*func_mindustry_editor_MapLocalesDialog_lambda$localeEditDialog$0_java_lang_String_mindustry_ui_dialogs_BaseDialog_arc_scene_ui_layout_Table)(jcontext ctx, jobject self, jobject param0, jobject param1, jobject param2);
+#define VTABLE_mindustry_editor_MapLocalesDialog_lambda$localeEditDialog$1_java_lang_String_mindustry_ui_dialogs_BaseDialog_arc_scene_ui_layout_Table 355
+typedef void (*func_mindustry_editor_MapLocalesDialog_lambda$localeEditDialog$1_java_lang_String_mindustry_ui_dialogs_BaseDialog_arc_scene_ui_layout_Table)(jcontext ctx, jobject self, jobject param0, jobject param1, jobject param2);
+#define VTABLE_mindustry_editor_MapLocalesDialog_lambda$localeEditDialog$3_java_lang_String_mindustry_ui_dialogs_BaseDialog 356
+typedef void (*func_mindustry_editor_MapLocalesDialog_lambda$localeEditDialog$3_java_lang_String_mindustry_ui_dialogs_BaseDialog)(jcontext ctx, jobject self, jobject param0, jobject param1);
+#define VTABLE_mindustry_editor_MapLocalesDialog_lambda$localeEditDialog$2_java_lang_String_mindustry_ui_dialogs_BaseDialog 357
+typedef void (*func_mindustry_editor_MapLocalesDialog_lambda$localeEditDialog$2_java_lang_String_mindustry_ui_dialogs_BaseDialog)(jcontext ctx, jobject self, jobject param0, jobject param1);
+#define VTABLE_mindustry_editor_MapLocalesDialog_lambda$propEditDialog$0_java_lang_String_java_lang_String_arc_scene_ui_layout_Table_mindustry_ui_dialogs_BaseDialog_arc_scene_ui_layout_Table 358
+typedef void (*func_mindustry_editor_MapLocalesDialog_lambda$propEditDialog$0_java_lang_String_java_lang_String_arc_scene_ui_layout_Table_mindustry_ui_dialogs_BaseDialog_arc_scene_ui_layout_Table)(jcontext ctx, jobject self, jobject param0, jobject param1, jobject param2, jobject param3, jobject param4);
+#define VTABLE_mindustry_editor_MapLocalesDialog_lambda$propEditDialog$1_java_lang_String_java_lang_String_arc_scene_ui_layout_Table_mindustry_ui_dialogs_BaseDialog_arc_scene_ui_layout_Table 359
+typedef void (*func_mindustry_editor_MapLocalesDialog_lambda$propEditDialog$1_java_lang_String_java_lang_String_arc_scene_ui_layout_Table_mindustry_ui_dialogs_BaseDialog_arc_scene_ui_layout_Table)(jcontext ctx, jobject self, jobject param0, jobject param1, jobject param2, jobject param3, jobject param4);
+#define VTABLE_mindustry_editor_MapLocalesDialog_lambda$propEditDialog$7_java_lang_String_arc_scene_ui_TextButton_R_boolean 360
+typedef jbool (*func_mindustry_editor_MapLocalesDialog_lambda$propEditDialog$7_java_lang_String_arc_scene_ui_TextButton_R_boolean)(jcontext ctx, jobject self, jobject param0, jobject param1);
+#define VTABLE_mindustry_editor_MapLocalesDialog_lambda$propEditDialog$6_java_lang_String_mindustry_ui_dialogs_BaseDialog 361
+typedef void (*func_mindustry_editor_MapLocalesDialog_lambda$propEditDialog$6_java_lang_String_mindustry_ui_dialogs_BaseDialog)(jcontext ctx, jobject self, jobject param0, jobject param1);
+#define VTABLE_mindustry_editor_MapLocalesDialog_lambda$propEditDialog$4_java_lang_String_java_lang_String_mindustry_ui_dialogs_BaseDialog 362
+typedef void (*func_mindustry_editor_MapLocalesDialog_lambda$propEditDialog$4_java_lang_String_java_lang_String_mindustry_ui_dialogs_BaseDialog)(jcontext ctx, jobject self, jobject param0, jobject param1, jobject param2);
+#define VTABLE_mindustry_editor_MapLocalesDialog_lambda$propEditDialog$5_java_lang_String_java_lang_String_java_lang_String 363
+typedef void (*func_mindustry_editor_MapLocalesDialog_lambda$propEditDialog$5_java_lang_String_java_lang_String_java_lang_String)(jcontext ctx, jobject self, jobject param0, jobject param1, jobject param2);
+#define VTABLE_mindustry_editor_MapLocalesDialog_lambda$propEditDialog$3_java_lang_String_mindustry_ui_dialogs_BaseDialog 364
+typedef void (*func_mindustry_editor_MapLocalesDialog_lambda$propEditDialog$3_java_lang_String_mindustry_ui_dialogs_BaseDialog)(jcontext ctx, jobject self, jobject param0, jobject param1);
+#define VTABLE_mindustry_editor_MapLocalesDialog_lambda$propEditDialog$2_java_lang_String_java_lang_String_arc_scene_ui_layout_Table_mindustry_ui_dialogs_BaseDialog 365
+typedef void (*func_mindustry_editor_MapLocalesDialog_lambda$propEditDialog$2_java_lang_String_java_lang_String_arc_scene_ui_layout_Table_mindustry_ui_dialogs_BaseDialog)(jcontext ctx, jobject self, jobject param0, jobject param1, jobject param2, jobject param3);
+#define VTABLE_mindustry_editor_MapLocalesDialog_lambda$addLocaleDialog$0_mindustry_ui_dialogs_BaseDialog_arc_scene_ui_layout_Table 366
+typedef void (*func_mindustry_editor_MapLocalesDialog_lambda$addLocaleDialog$0_mindustry_ui_dialogs_BaseDialog_arc_scene_ui_layout_Table)(jcontext ctx, jobject self, jobject param0, jobject param1);
+#define VTABLE_mindustry_editor_MapLocalesDialog_lambda$addLocaleDialog$2_java_lang_String_arc_scene_ui_TextButton 367
+typedef void (*func_mindustry_editor_MapLocalesDialog_lambda$addLocaleDialog$2_java_lang_String_arc_scene_ui_TextButton)(jcontext ctx, jobject self, jobject param0, jobject param1);
+#define VTABLE_mindustry_editor_MapLocalesDialog_lambda$addLocaleDialog$1_java_lang_String_mindustry_ui_dialogs_BaseDialog 368
+typedef void (*func_mindustry_editor_MapLocalesDialog_lambda$addLocaleDialog$1_java_lang_String_mindustry_ui_dialogs_BaseDialog)(jcontext ctx, jobject self, jobject param0, jobject param1);
+#define VTABLE_mindustry_editor_MapLocalesDialog_lambda$buildMain$0_arc_struct_StringMap_arc_scene_ui_layout_Table 369
+typedef void (*func_mindustry_editor_MapLocalesDialog_lambda$buildMain$0_arc_struct_StringMap_arc_scene_ui_layout_Table)(jcontext ctx, jobject self, jobject param0, jobject param1);
+#define VTABLE_mindustry_editor_MapLocalesDialog_lambda$buildMain$1_java_lang_String_arc_struct_StringMap_arc_scene_ui_layout_Table 370
+typedef void (*func_mindustry_editor_MapLocalesDialog_lambda$buildMain$1_java_lang_String_arc_struct_StringMap_arc_scene_ui_layout_Table)(jcontext ctx, jobject self, jobject param0, jobject param1, jobject param2);
+#define VTABLE_mindustry_editor_MapLocalesDialog_lambda$buildMain$8_Array1_java_lang_String_arc_struct_StringMap_Array1_java_lang_String_arc_scene_ui_layout_Table_arc_scene_ui_layout_Table 371
+typedef void (*func_mindustry_editor_MapLocalesDialog_lambda$buildMain$8_Array1_java_lang_String_arc_struct_StringMap_Array1_java_lang_String_arc_scene_ui_layout_Table_arc_scene_ui_layout_Table)(jcontext ctx, jobject self, jobject param0, jobject param1, jobject param2, jobject param3, jobject param4);
+#define VTABLE_mindustry_editor_MapLocalesDialog_lambda$buildMain$9_arc_struct_StringMap_Array1_java_lang_String_arc_scene_ui_layout_Table_java_lang_String 372
+typedef void (*func_mindustry_editor_MapLocalesDialog_lambda$buildMain$9_arc_struct_StringMap_Array1_java_lang_String_arc_scene_ui_layout_Table_java_lang_String)(jcontext ctx, jobject self, jobject param0, jobject param1, jobject param2, jobject param3);
+#define VTABLE_mindustry_editor_MapLocalesDialog_lambda$buildMain$7_arc_scene_ui_layout_Table_Array1_java_lang_String_Array1_java_lang_String 373
+typedef void (*func_mindustry_editor_MapLocalesDialog_lambda$buildMain$7_arc_scene_ui_layout_Table_Array1_java_lang_String_Array1_java_lang_String)(jcontext ctx, jobject self, jobject param0, jobject param1, jobject param2);
+#define VTABLE_mindustry_editor_MapLocalesDialog_lambda$buildMain$6_Array1_java_lang_String_arc_struct_StringMap 374
+typedef void (*func_mindustry_editor_MapLocalesDialog_lambda$buildMain$6_Array1_java_lang_String_arc_struct_StringMap)(jcontext ctx, jobject self, jobject param0, jobject param1);
+#define VTABLE_mindustry_editor_MapLocalesDialog_lambda$buildMain$5_arc_struct_StringMap_arc_scene_ui_layout_Table_Array1_java_lang_String_Array1_java_lang_String_java_lang_String 375
+typedef void (*func_mindustry_editor_MapLocalesDialog_lambda$buildMain$5_arc_struct_StringMap_arc_scene_ui_layout_Table_Array1_java_lang_String_Array1_java_lang_String_java_lang_String)(jcontext ctx, jobject self, jobject param0, jobject param1, jobject param2, jobject param3, jobject param4);
+#define VTABLE_mindustry_editor_MapLocalesDialog_lambda$buildLocalesTable$0_arc_scene_ui_layout_Table 376
+typedef void (*func_mindustry_editor_MapLocalesDialog_lambda$buildLocalesTable$0_arc_scene_ui_layout_Table)(jcontext ctx, jobject self, jobject param0);
+#define VTABLE_mindustry_editor_MapLocalesDialog_lambda$buildLocalesTable$4_java_lang_String 377
+typedef void (*func_mindustry_editor_MapLocalesDialog_lambda$buildLocalesTable$4_java_lang_String)(jcontext ctx, jobject self, jobject param0);
+#define VTABLE_mindustry_editor_MapLocalesDialog_lambda$buildLocalesTable$5_java_lang_String 378
+typedef void (*func_mindustry_editor_MapLocalesDialog_lambda$buildLocalesTable$5_java_lang_String)(jcontext ctx, jobject self, jobject param0);
+#define VTABLE_mindustry_editor_MapLocalesDialog_lambda$buildLocalesTable$3_java_lang_String 379
+typedef void (*func_mindustry_editor_MapLocalesDialog_lambda$buildLocalesTable$3_java_lang_String)(jcontext ctx, jobject self, jobject param0);
+#define VTABLE_mindustry_editor_MapLocalesDialog_lambda$buildLocalesTable$2_java_lang_String_arc_scene_ui_TextButton 380
+typedef void (*func_mindustry_editor_MapLocalesDialog_lambda$buildLocalesTable$2_java_lang_String_arc_scene_ui_TextButton)(jcontext ctx, jobject self, jobject param0, jobject param1);
+#define VTABLE_mindustry_editor_MapLocalesDialog_lambda$buildLocalesTable$1_java_lang_String 381
+typedef void (*func_mindustry_editor_MapLocalesDialog_lambda$buildLocalesTable$1_java_lang_String)(jcontext ctx, jobject self, jobject param0);
+#define VTABLE_mindustry_editor_MapLocalesDialog_lambda$setup$10_arc_scene_ui_layout_Table 382
+typedef void (*func_mindustry_editor_MapLocalesDialog_lambda$setup$10_arc_scene_ui_layout_Table)(jcontext ctx, jobject self, jobject param0);
+#define VTABLE_mindustry_editor_MapLocalesDialog_lambda$setup$13_arc_scene_ui_TextField_arc_scene_ui_TextField 383
+typedef void (*func_mindustry_editor_MapLocalesDialog_lambda$setup$13_arc_scene_ui_TextField_arc_scene_ui_TextField)(jcontext ctx, jobject self, jobject param0, jobject param1);
+#define VTABLE_mindustry_editor_MapLocalesDialog_lambda$setup$0_arc_scene_ui_layout_Table 384
+typedef void (*func_mindustry_editor_MapLocalesDialog_lambda$setup$0_arc_scene_ui_layout_Table)(jcontext ctx, jobject self, jobject param0);
+#define VTABLE_mindustry_editor_MapLocalesDialog_lambda$setup$9_boolean 385
+typedef void (*func_mindustry_editor_MapLocalesDialog_lambda$setup$9_boolean)(jcontext ctx, jobject self, jbool param0);
+#define VTABLE_mindustry_editor_MapLocalesDialog_lambda$setup$1_arc_scene_ui_layout_Table 386
+typedef void (*func_mindustry_editor_MapLocalesDialog_lambda$setup$1_arc_scene_ui_layout_Table)(jcontext ctx, jobject self, jobject param0);
+#define VTABLE_mindustry_editor_MapLocalesDialog_lambda$setup$8_arc_scene_ui_TextField 387
+typedef void (*func_mindustry_editor_MapLocalesDialog_lambda$setup$8_arc_scene_ui_TextField)(jcontext ctx, jobject self, jobject param0);
+#define VTABLE_mindustry_editor_MapLocalesDialog_lambda$setup$7_arc_scene_ui_TextField 388
+typedef void (*func_mindustry_editor_MapLocalesDialog_lambda$setup$7_arc_scene_ui_TextField)(jcontext ctx, jobject self, jobject param0);
+#define VTABLE_mindustry_editor_MapLocalesDialog_lambda$setup$6_arc_scene_ui_TextField 389
+typedef void (*func_mindustry_editor_MapLocalesDialog_lambda$setup$6_arc_scene_ui_TextField)(jcontext ctx, jobject self, jobject param0);
+#define VTABLE_mindustry_editor_MapLocalesDialog_lambda$setup$5_java_lang_String 390
+typedef void (*func_mindustry_editor_MapLocalesDialog_lambda$setup$5_java_lang_String)(jcontext ctx, jobject self, jobject param0);
+#define VTABLE_mindustry_editor_MapLocalesDialog_lambda$setup$4 391
+typedef void (*func_mindustry_editor_MapLocalesDialog_lambda$setup$4)(jcontext ctx, jobject self);
+#define VTABLE_mindustry_editor_MapLocalesDialog_lambda$setup$3_arc_scene_ui_ImageButton 392
+typedef void (*func_mindustry_editor_MapLocalesDialog_lambda$setup$3_arc_scene_ui_ImageButton)(jcontext ctx, jobject self, jobject param0);
+#define VTABLE_mindustry_editor_MapLocalesDialog_lambda$setup$2 393
+typedef void (*func_mindustry_editor_MapLocalesDialog_lambda$setup$2)(jcontext ctx, jobject self);
+#define VTABLE_mindustry_editor_MapLocalesDialog_lambda$new$0_arc_scene_ui_layout_Table 394
+typedef void (*func_mindustry_editor_MapLocalesDialog_lambda$new$0_arc_scene_ui_layout_Table)(jcontext ctx, jobject self, jobject param0);
+#define VTABLE_mindustry_editor_MapLocalesDialog_lambda$new$6_arc_scene_ui_TextButton_R_boolean 395
+typedef jbool (*func_mindustry_editor_MapLocalesDialog_lambda$new$6_arc_scene_ui_TextButton_R_boolean)(jcontext ctx, jobject self, jobject param0);
+#define VTABLE_mindustry_editor_MapLocalesDialog_lambda$new$5 396
+typedef void (*func_mindustry_editor_MapLocalesDialog_lambda$new$5)(jcontext ctx, jobject self);
+#define VTABLE_mindustry_editor_MapLocalesDialog_lambda$new$3 397
+typedef void (*func_mindustry_editor_MapLocalesDialog_lambda$new$3)(jcontext ctx, jobject self);
+#define VTABLE_mindustry_editor_MapLocalesDialog_lambda$new$4 398
+typedef void (*func_mindustry_editor_MapLocalesDialog_lambda$new$4)(jcontext ctx, jobject self);
+#define VTABLE_mindustry_editor_MapLocalesDialog_lambda$new$2 399
+typedef void (*func_mindustry_editor_MapLocalesDialog_lambda$new$2)(jcontext ctx, jobject self);
+
+void mark_mindustry_editor_MapLocalesDialog(jobject object, jint mark, jint depth);
+void clinit_mindustry_editor_MapLocalesDialog(jcontext ctx);
+void init_mindustry_editor_MapLocalesDialog(jcontext ctx, jobject self);
+void M_mindustry_editor_MapLocalesDialog_show_mindustry_type_MapLocales(jcontext ctx, jobject self, jobject param0);
+void M_mindustry_editor_MapLocalesDialog_setup(jcontext ctx, jobject self);
+void M_mindustry_editor_MapLocalesDialog_buildTables(jcontext ctx, jobject self);
+void M_mindustry_editor_MapLocalesDialog_buildLocalesTable(jcontext ctx, jobject self);
+void M_mindustry_editor_MapLocalesDialog_buildMain(jcontext ctx, jobject self);
+void M_mindustry_editor_MapLocalesDialog_updateCard_arc_scene_ui_layout_Table_java_lang_String_java_lang_String(jcontext ctx, jobject self, jobject param0, jobject param1, jobject param2);
+void M_mindustry_editor_MapLocalesDialog_updateCard_arc_scene_ui_layout_Table_java_lang_String_java_lang_String_java_lang_String_boolean(jcontext ctx, jobject self, jobject param0, jobject param1, jobject param2, jobject param3, jbool param4);
+jobject M_mindustry_editor_MapLocalesDialog_getPropertyStatus_java_lang_String_java_lang_String_java_lang_String_boolean_R_mindustry_editor_MapLocalesDialog$PropertyStatus(jcontext ctx, jobject self, jobject param0, jobject param1, jobject param2, jbool param3);
+void M_mindustry_editor_MapLocalesDialog_addLocaleDialog(jcontext ctx, jobject self);
+void M_mindustry_editor_MapLocalesDialog_propEditDialog_arc_scene_ui_layout_Table_java_lang_String_java_lang_String(jcontext ctx, jobject self, jobject param0, jobject param1, jobject param2);
+void M_mindustry_editor_MapLocalesDialog_localeEditDialog_java_lang_String(jcontext ctx, jobject self, jobject param0);
+void M_mindustry_editor_MapLocalesDialog_editDialog(jcontext ctx, jobject self);
+void M_mindustry_editor_MapLocalesDialog_viewPropertyDialog_java_lang_String(jcontext ctx, jobject self, jobject param0);
+void M_mindustry_editor_MapLocalesDialog_buildPropView_java_lang_String(jcontext ctx, jobject self, jobject param0);
+void M_mindustry_editor_MapLocalesDialog_filterDialog_java_lang_Runnable(jcontext ctx, jobject self, jobject param0);
+void M_mindustry_editor_MapLocalesDialog_addIconDialog_arc_func_Cons(jcontext ctx, jobject self, jobject param0);
+void M_mindustry_editor_MapLocalesDialog_iconsTable_arc_scene_ui_layout_Table_java_lang_String_arc_scene_ui_Dialog_arc_func_Cons(jcontext ctx, jobject self, jobject param0, jobject param1, jobject param2, jobject param3);
+jobject M_mindustry_editor_MapLocalesDialog_writeBundles_R_java_lang_String(jcontext ctx, jobject self);
+jobject M_mindustry_editor_MapLocalesDialog_writeLocale_java_lang_String_R_java_lang_String(jcontext ctx, jobject self, jobject param0);
+jobject M_mindustry_editor_MapLocalesDialog_readBundles_java_lang_String_R_mindustry_type_MapLocales(jcontext ctx, jobject self, jobject param0);
+jobject M_mindustry_editor_MapLocalesDialog_readLocale_java_lang_String_R_arc_struct_StringMap(jcontext ctx, jobject self, jobject param0);
+void SM_mindustry_editor_MapLocalesDialog_lambda$iconsTable$4_arc_func_Cons_mindustry_game_Team_arc_scene_ui_Dialog(jcontext ctx, jobject param0, jobject param1, jobject param2);
+jbool SM_mindustry_editor_MapLocalesDialog_lambda$iconsTable$3_java_lang_String_mindustry_game_Team_R_boolean(jcontext ctx, jobject param0, jobject param1);
+void SM_mindustry_editor_MapLocalesDialog_lambda$iconsTable$2_arc_func_Cons_mindustry_ctype_UnlockableContent_arc_scene_ui_Dialog(jcontext ctx, jobject param0, jobject param1, jobject param2);
+jbool SM_mindustry_editor_MapLocalesDialog_lambda$iconsTable$1_java_lang_String_mindustry_ctype_UnlockableContent_R_boolean(jcontext ctx, jobject param0, jobject param1);
+void SM_mindustry_editor_MapLocalesDialog_lambda$iconsTable$0_arc_func_Cons_java_lang_String_arc_scene_ui_Dialog(jcontext ctx, jobject param0, jobject param1, jobject param2);
+void M_mindustry_editor_MapLocalesDialog_lambda$addIconDialog$3_arc_scene_ui_layout_Table_arc_scene_ui_TextField_mindustry_ui_dialogs_BaseDialog_arc_func_Cons(jcontext ctx, jobject self, jobject param0, jobject param1, jobject param2, jobject param3);
+void M_mindustry_editor_MapLocalesDialog_lambda$addIconDialog$1_arc_scene_ui_TextField_arc_scene_ui_layout_Table_mindustry_ui_dialogs_BaseDialog_arc_func_Cons_arc_scene_ui_layout_Table(jcontext ctx, jobject self, jobject param0, jobject param1, jobject param2, jobject param3, jobject param4);
+void M_mindustry_editor_MapLocalesDialog_lambda$addIconDialog$2_arc_scene_ui_TextField_arc_scene_ui_layout_Table_mindustry_ui_dialogs_BaseDialog_arc_func_Cons(jcontext ctx, jobject self, jobject param0, jobject param1, jobject param2, jobject param3);
+void M_mindustry_editor_MapLocalesDialog_lambda$addIconDialog$0_arc_scene_ui_layout_Table_mindustry_ui_dialogs_BaseDialog_arc_func_Cons_java_lang_String(jcontext ctx, jobject self, jobject param0, jobject param1, jobject param2, jobject param3);
+void SM_mindustry_editor_MapLocalesDialog_lambda$filterDialog$12_java_lang_Runnable_mindustry_ui_dialogs_BaseDialog(jcontext ctx, jobject param0, jobject param1);
+void M_mindustry_editor_MapLocalesDialog_lambda$filterDialog$11_arc_scene_ui_TextButton(jcontext ctx, jobject self, jobject param0);
+void M_mindustry_editor_MapLocalesDialog_lambda$filterDialog$10(jcontext ctx, jobject self);
+void M_mindustry_editor_MapLocalesDialog_lambda$filterDialog$9_arc_scene_ui_TextButton(jcontext ctx, jobject self, jobject param0);
+void M_mindustry_editor_MapLocalesDialog_lambda$filterDialog$8(jcontext ctx, jobject self);
+void M_mindustry_editor_MapLocalesDialog_lambda$filterDialog$7_arc_scene_ui_TextButton(jcontext ctx, jobject self, jobject param0);
+void M_mindustry_editor_MapLocalesDialog_lambda$filterDialog$6(jcontext ctx, jobject self);
+void M_mindustry_editor_MapLocalesDialog_lambda$filterDialog$0_arc_scene_ui_layout_Table(jcontext ctx, jobject self, jobject param0);
+void M_mindustry_editor_MapLocalesDialog_lambda$filterDialog$1_arc_scene_ui_layout_Table(jcontext ctx, jobject self, jobject param0);
+jbool M_mindustry_editor_MapLocalesDialog_lambda$filterDialog$5_arc_scene_ui_TextButton_R_boolean(jcontext ctx, jobject self, jobject param0);
+void M_mindustry_editor_MapLocalesDialog_lambda$filterDialog$4(jcontext ctx, jobject self);
+jbool M_mindustry_editor_MapLocalesDialog_lambda$filterDialog$3_arc_scene_ui_TextButton_R_boolean(jcontext ctx, jobject self, jobject param0);
+void M_mindustry_editor_MapLocalesDialog_lambda$filterDialog$2(jcontext ctx, jobject self);
+void M_mindustry_editor_MapLocalesDialog_lambda$buildPropView$0_java_lang_String_arc_scene_ui_layout_Table(jcontext ctx, jobject self, jobject param0, jobject param1);
+void M_mindustry_editor_MapLocalesDialog_lambda$buildPropView$6_java_lang_String_java_lang_String_arc_scene_ui_layout_Table(jcontext ctx, jobject self, jobject param0, jobject param1, jobject param2);
+void M_mindustry_editor_MapLocalesDialog_lambda$buildPropView$1_java_util_Locale_mindustry_editor_MapLocalesDialog$PropertyStatus_java_lang_String_java_lang_String_arc_scene_ui_layout_Table(jcontext ctx, jobject self, jobject param0, jobject param1, jobject param2, jobject param3, jobject param4);
+void M_mindustry_editor_MapLocalesDialog_lambda$buildPropView$5_java_lang_String_java_lang_String_java_lang_String(jcontext ctx, jobject self, jobject param0, jobject param1, jobject param2);
+void M_mindustry_editor_MapLocalesDialog_lambda$buildPropView$2_java_lang_String_java_lang_String_arc_scene_ui_layout_Table_arc_scene_ui_layout_Table(jcontext ctx, jobject self, jobject param0, jobject param1, jobject param2, jobject param3);
+void M_mindustry_editor_MapLocalesDialog_lambda$buildPropView$3_java_lang_String_java_lang_String_arc_scene_ui_layout_Table(jcontext ctx, jobject self, jobject param0, jobject param1, jobject param2);
+void M_mindustry_editor_MapLocalesDialog_lambda$buildPropView$4_java_lang_String_java_lang_String_java_lang_String(jcontext ctx, jobject self, jobject param0, jobject param1, jobject param2);
+void M_mindustry_editor_MapLocalesDialog_lambda$viewPropertyDialog$0_java_lang_String_arc_scene_ui_layout_Table(jcontext ctx, jobject self, jobject param0, jobject param1);
+void M_mindustry_editor_MapLocalesDialog_lambda$viewPropertyDialog$6_arc_scene_ui_TextField_java_lang_String(jcontext ctx, jobject self, jobject param0, jobject param1);
+void M_mindustry_editor_MapLocalesDialog_lambda$viewPropertyDialog$5_arc_scene_ui_TextField(jcontext ctx, jobject self, jobject param0);
+void M_mindustry_editor_MapLocalesDialog_lambda$viewPropertyDialog$4_arc_scene_ui_TextField(jcontext ctx, jobject self, jobject param0);
+void M_mindustry_editor_MapLocalesDialog_lambda$viewPropertyDialog$3_java_lang_String_java_lang_String(jcontext ctx, jobject self, jobject param0, jobject param1);
+void M_mindustry_editor_MapLocalesDialog_lambda$viewPropertyDialog$1_java_lang_String(jcontext ctx, jobject self, jobject param0);
+void M_mindustry_editor_MapLocalesDialog_lambda$viewPropertyDialog$2_java_lang_String(jcontext ctx, jobject self, jobject param0);
+void M_mindustry_editor_MapLocalesDialog_lambda$editDialog$0_mindustry_ui_dialogs_BaseDialog_arc_scene_ui_layout_Table(jcontext ctx, jobject self, jobject param0, jobject param1);
+void M_mindustry_editor_MapLocalesDialog_lambda$editDialog$1_mindustry_ui_dialogs_BaseDialog_arc_scene_ui_layout_Table(jcontext ctx, jobject self, jobject param0, jobject param1);
+jbool M_mindustry_editor_MapLocalesDialog_lambda$editDialog$5_arc_scene_ui_TextButton_R_boolean(jcontext ctx, jobject self, jobject param0);
+void M_mindustry_editor_MapLocalesDialog_lambda$editDialog$4_mindustry_ui_dialogs_BaseDialog(jcontext ctx, jobject self, jobject param0);
+void M_mindustry_editor_MapLocalesDialog_lambda$editDialog$3_mindustry_ui_dialogs_BaseDialog(jcontext ctx, jobject self, jobject param0);
+void M_mindustry_editor_MapLocalesDialog_lambda$editDialog$2_mindustry_ui_dialogs_BaseDialog(jcontext ctx, jobject self, jobject param0);
+void M_mindustry_editor_MapLocalesDialog_lambda$localeEditDialog$0_java_lang_String_mindustry_ui_dialogs_BaseDialog_arc_scene_ui_layout_Table(jcontext ctx, jobject self, jobject param0, jobject param1, jobject param2);
+void M_mindustry_editor_MapLocalesDialog_lambda$localeEditDialog$1_java_lang_String_mindustry_ui_dialogs_BaseDialog_arc_scene_ui_layout_Table(jcontext ctx, jobject self, jobject param0, jobject param1, jobject param2);
+void M_mindustry_editor_MapLocalesDialog_lambda$localeEditDialog$3_java_lang_String_mindustry_ui_dialogs_BaseDialog(jcontext ctx, jobject self, jobject param0, jobject param1);
+void M_mindustry_editor_MapLocalesDialog_lambda$localeEditDialog$2_java_lang_String_mindustry_ui_dialogs_BaseDialog(jcontext ctx, jobject self, jobject param0, jobject param1);
+void M_mindustry_editor_MapLocalesDialog_lambda$propEditDialog$0_java_lang_String_java_lang_String_arc_scene_ui_layout_Table_mindustry_ui_dialogs_BaseDialog_arc_scene_ui_layout_Table(jcontext ctx, jobject self, jobject param0, jobject param1, jobject param2, jobject param3, jobject param4);
+void M_mindustry_editor_MapLocalesDialog_lambda$propEditDialog$1_java_lang_String_java_lang_String_arc_scene_ui_layout_Table_mindustry_ui_dialogs_BaseDialog_arc_scene_ui_layout_Table(jcontext ctx, jobject self, jobject param0, jobject param1, jobject param2, jobject param3, jobject param4);
+jbool M_mindustry_editor_MapLocalesDialog_lambda$propEditDialog$7_java_lang_String_arc_scene_ui_TextButton_R_boolean(jcontext ctx, jobject self, jobject param0, jobject param1);
+void M_mindustry_editor_MapLocalesDialog_lambda$propEditDialog$6_java_lang_String_mindustry_ui_dialogs_BaseDialog(jcontext ctx, jobject self, jobject param0, jobject param1);
+void M_mindustry_editor_MapLocalesDialog_lambda$propEditDialog$4_java_lang_String_java_lang_String_mindustry_ui_dialogs_BaseDialog(jcontext ctx, jobject self, jobject param0, jobject param1, jobject param2);
+void M_mindustry_editor_MapLocalesDialog_lambda$propEditDialog$5_java_lang_String_java_lang_String_java_lang_String(jcontext ctx, jobject self, jobject param0, jobject param1, jobject param2);
+void M_mindustry_editor_MapLocalesDialog_lambda$propEditDialog$3_java_lang_String_mindustry_ui_dialogs_BaseDialog(jcontext ctx, jobject self, jobject param0, jobject param1);
+void M_mindustry_editor_MapLocalesDialog_lambda$propEditDialog$2_java_lang_String_java_lang_String_arc_scene_ui_layout_Table_mindustry_ui_dialogs_BaseDialog(jcontext ctx, jobject self, jobject param0, jobject param1, jobject param2, jobject param3);
+void M_mindustry_editor_MapLocalesDialog_lambda$addLocaleDialog$0_mindustry_ui_dialogs_BaseDialog_arc_scene_ui_layout_Table(jcontext ctx, jobject self, jobject param0, jobject param1);
+void M_mindustry_editor_MapLocalesDialog_lambda$addLocaleDialog$2_java_lang_String_arc_scene_ui_TextButton(jcontext ctx, jobject self, jobject param0, jobject param1);
+void M_mindustry_editor_MapLocalesDialog_lambda$addLocaleDialog$1_java_lang_String_mindustry_ui_dialogs_BaseDialog(jcontext ctx, jobject self, jobject param0, jobject param1);
+void M_mindustry_editor_MapLocalesDialog_lambda$buildMain$0_arc_struct_StringMap_arc_scene_ui_layout_Table(jcontext ctx, jobject self, jobject param0, jobject param1);
+void M_mindustry_editor_MapLocalesDialog_lambda$buildMain$1_java_lang_String_arc_struct_StringMap_arc_scene_ui_layout_Table(jcontext ctx, jobject self, jobject param0, jobject param1, jobject param2);
+jbool SM_mindustry_editor_MapLocalesDialog_lambda$buildMain$11_Array1_boolean_R_boolean(jcontext ctx, jobject param0);
+void M_mindustry_editor_MapLocalesDialog_lambda$buildMain$8_Array1_java_lang_String_arc_struct_StringMap_Array1_java_lang_String_arc_scene_ui_layout_Table_arc_scene_ui_layout_Table(jcontext ctx, jobject self, jobject param0, jobject param1, jobject param2, jobject param3, jobject param4);
+void SM_mindustry_editor_MapLocalesDialog_lambda$buildMain$10_Array1_java_lang_String_arc_struct_StringMap_Array1_java_lang_String_arc_scene_ui_TextArea(jcontext ctx, jobject param0, jobject param1, jobject param2, jobject param3);
+void M_mindustry_editor_MapLocalesDialog_lambda$buildMain$9_arc_struct_StringMap_Array1_java_lang_String_arc_scene_ui_layout_Table_java_lang_String(jcontext ctx, jobject self, jobject param0, jobject param1, jobject param2, jobject param3);
+void M_mindustry_editor_MapLocalesDialog_lambda$buildMain$7_arc_scene_ui_layout_Table_Array1_java_lang_String_Array1_java_lang_String(jcontext ctx, jobject self, jobject param0, jobject param1, jobject param2);
+void M_mindustry_editor_MapLocalesDialog_lambda$buildMain$6_Array1_java_lang_String_arc_struct_StringMap(jcontext ctx, jobject self, jobject param0, jobject param1);
+void M_mindustry_editor_MapLocalesDialog_lambda$buildMain$5_arc_struct_StringMap_arc_scene_ui_layout_Table_Array1_java_lang_String_Array1_java_lang_String_java_lang_String(jcontext ctx, jobject self, jobject param0, jobject param1, jobject param2, jobject param3, jobject param4);
+jbool SM_mindustry_editor_MapLocalesDialog_lambda$buildMain$4_arc_scene_ui_TextField_char_R_boolean(jcontext ctx, jobject param0, jchar param1);
+void SM_mindustry_editor_MapLocalesDialog_lambda$buildMain$3_Array1_boolean_arc_scene_ui_ImageButton(jcontext ctx, jobject param0, jobject param1);
+void SM_mindustry_editor_MapLocalesDialog_lambda$buildMain$2_Array1_boolean(jcontext ctx, jobject param0);
+void M_mindustry_editor_MapLocalesDialog_lambda$buildLocalesTable$0_arc_scene_ui_layout_Table(jcontext ctx, jobject self, jobject param0);
+void M_mindustry_editor_MapLocalesDialog_lambda$buildLocalesTable$4_java_lang_String(jcontext ctx, jobject self, jobject param0);
+void M_mindustry_editor_MapLocalesDialog_lambda$buildLocalesTable$5_java_lang_String(jcontext ctx, jobject self, jobject param0);
+void M_mindustry_editor_MapLocalesDialog_lambda$buildLocalesTable$3_java_lang_String(jcontext ctx, jobject self, jobject param0);
+void M_mindustry_editor_MapLocalesDialog_lambda$buildLocalesTable$2_java_lang_String_arc_scene_ui_TextButton(jcontext ctx, jobject self, jobject param0, jobject param1);
+void M_mindustry_editor_MapLocalesDialog_lambda$buildLocalesTable$1_java_lang_String(jcontext ctx, jobject self, jobject param0);
+void M_mindustry_editor_MapLocalesDialog_lambda$setup$10_arc_scene_ui_layout_Table(jcontext ctx, jobject self, jobject param0);
+void M_mindustry_editor_MapLocalesDialog_lambda$setup$13_arc_scene_ui_TextField_arc_scene_ui_TextField(jcontext ctx, jobject self, jobject param0, jobject param1);
+void SM_mindustry_editor_MapLocalesDialog_lambda$setup$12_java_lang_String(jcontext ctx, jobject param0);
+void SM_mindustry_editor_MapLocalesDialog_lambda$setup$11_java_lang_String(jcontext ctx, jobject param0);
+void M_mindustry_editor_MapLocalesDialog_lambda$setup$0_arc_scene_ui_layout_Table(jcontext ctx, jobject self, jobject param0);
+void M_mindustry_editor_MapLocalesDialog_lambda$setup$9_boolean(jcontext ctx, jobject self, jbool param0);
+void M_mindustry_editor_MapLocalesDialog_lambda$setup$1_arc_scene_ui_layout_Table(jcontext ctx, jobject self, jobject param0);
+void M_mindustry_editor_MapLocalesDialog_lambda$setup$8_arc_scene_ui_TextField(jcontext ctx, jobject self, jobject param0);
+void M_mindustry_editor_MapLocalesDialog_lambda$setup$7_arc_scene_ui_TextField(jcontext ctx, jobject self, jobject param0);
+void M_mindustry_editor_MapLocalesDialog_lambda$setup$6_arc_scene_ui_TextField(jcontext ctx, jobject self, jobject param0);
+void M_mindustry_editor_MapLocalesDialog_lambda$setup$5_java_lang_String(jcontext ctx, jobject self, jobject param0);
+void M_mindustry_editor_MapLocalesDialog_lambda$setup$4(jcontext ctx, jobject self);
+void M_mindustry_editor_MapLocalesDialog_lambda$setup$3_arc_scene_ui_ImageButton(jcontext ctx, jobject self, jobject param0);
+void M_mindustry_editor_MapLocalesDialog_lambda$setup$2(jcontext ctx, jobject self);
+void SM_mindustry_editor_MapLocalesDialog_lambda$new$7(jcontext ctx);
+void M_mindustry_editor_MapLocalesDialog_lambda$new$0_arc_scene_ui_layout_Table(jcontext ctx, jobject self, jobject param0);
+jbool M_mindustry_editor_MapLocalesDialog_lambda$new$6_arc_scene_ui_TextButton_R_boolean(jcontext ctx, jobject self, jobject param0);
+void M_mindustry_editor_MapLocalesDialog_lambda$new$5(jcontext ctx, jobject self);
+void M_mindustry_editor_MapLocalesDialog_lambda$new$3(jcontext ctx, jobject self);
+void M_mindustry_editor_MapLocalesDialog_lambda$new$4(jcontext ctx, jobject self);
+void M_mindustry_editor_MapLocalesDialog_lambda$new$1(jcontext ctx, jobject self);
+void M_mindustry_editor_MapLocalesDialog_lambda$new$2(jcontext ctx, jobject self);
+
+#ifdef __cplusplus
+}
+#endif
+
+#endif

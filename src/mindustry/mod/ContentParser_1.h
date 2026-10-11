@@ -1,0 +1,202 @@
+#ifndef HEADER_mindustry_mod_ContentParser$1
+#define HEADER_mindustry_mod_ContentParser$1
+
+#include "Clearwing.h"
+#include "arc/struct/ObjectMap.h"
+
+#ifdef __cplusplus
+extern "C" {
+#endif
+
+typedef struct mindustry_mod_ContentParser$1 {
+	arc_struct_ObjectMap parent;
+	jref F_this$0;
+} mindustry_mod_ContentParser$1;
+
+extern Class class_mindustry_mod_ContentParser$1;
+
+
+#define VTABLE_mindustry_mod_ContentParser$1_hashCode_R_int 0
+typedef jint (*func_mindustry_mod_ContentParser$1_hashCode_R_int)(jcontext ctx, jobject self);
+#define VTABLE_mindustry_mod_ContentParser$1_equals_java_lang_Object_R_boolean 1
+typedef jbool (*func_mindustry_mod_ContentParser$1_equals_java_lang_Object_R_boolean)(jcontext ctx, jobject self, jobject param0);
+#define VTABLE_mindustry_mod_ContentParser$1_clone_R_java_lang_Object 2
+typedef jobject (*func_mindustry_mod_ContentParser$1_clone_R_java_lang_Object)(jcontext ctx, jobject self);
+#define VTABLE_mindustry_mod_ContentParser$1_getClass_R_java_lang_Class 3
+typedef jobject (*func_mindustry_mod_ContentParser$1_getClass_R_java_lang_Class)(jcontext ctx, jobject self);
+#define VTABLE_mindustry_mod_ContentParser$1_toString_R_java_lang_String 4
+typedef jobject (*func_mindustry_mod_ContentParser$1_toString_R_java_lang_String)(jcontext ctx, jobject self);
+#define VTABLE_mindustry_mod_ContentParser$1_finalize 5
+typedef void (*func_mindustry_mod_ContentParser$1_finalize)(jcontext ctx, jobject self);
+#define VTABLE_mindustry_mod_ContentParser$1_notify 6
+typedef void (*func_mindustry_mod_ContentParser$1_notify)(jcontext ctx, jobject self);
+#define VTABLE_mindustry_mod_ContentParser$1_notifyAll 7
+typedef void (*func_mindustry_mod_ContentParser$1_notifyAll)(jcontext ctx, jobject self);
+#define VTABLE_mindustry_mod_ContentParser$1_wait 8
+typedef void (*func_mindustry_mod_ContentParser$1_wait)(jcontext ctx, jobject self);
+#define VTABLE_mindustry_mod_ContentParser$1_wait_long 9
+typedef void (*func_mindustry_mod_ContentParser$1_wait_long)(jcontext ctx, jobject self, jlong param0);
+#define VTABLE_mindustry_mod_ContentParser$1_wait_long_int 10
+typedef void (*func_mindustry_mod_ContentParser$1_wait_long_int)(jcontext ctx, jobject self, jlong param0, jint param1);
+#define VTABLE_mindustry_mod_ContentParser$1_iterator_R_java_util_Iterator 11
+typedef jobject (*func_mindustry_mod_ContentParser$1_iterator_R_java_util_Iterator)(jcontext ctx, jobject self);
+#define VTABLE_mindustry_mod_ContentParser$1_forEach_java_util_function_Consumer 12
+typedef void (*func_mindustry_mod_ContentParser$1_forEach_java_util_function_Consumer)(jcontext ctx, jobject self, jobject param0);
+#define VTABLE_mindustry_mod_ContentParser$1_spliterator_R_java_util_Spliterator 13
+typedef jobject (*func_mindustry_mod_ContentParser$1_spliterator_R_java_util_Spliterator)(jcontext ctx, jobject self);
+#define VTABLE_mindustry_mod_ContentParser$1_place_java_lang_Object_R_int 14
+typedef jint (*func_mindustry_mod_ContentParser$1_place_java_lang_Object_R_int)(jcontext ctx, jobject self, jobject param0);
+#define VTABLE_mindustry_mod_ContentParser$1_locateKey_java_lang_Object_R_int 15
+typedef jint (*func_mindustry_mod_ContentParser$1_locateKey_java_lang_Object_R_int)(jcontext ctx, jobject self, jobject param0);
+#define VTABLE_mindustry_mod_ContentParser$1_put_java_lang_Object_java_lang_Object_R_java_lang_Object 16
+typedef jobject (*func_mindustry_mod_ContentParser$1_put_java_lang_Object_java_lang_Object_R_java_lang_Object)(jcontext ctx, jobject self, jobject param0, jobject param1);
+#define VTABLE_mindustry_mod_ContentParser$1_putMissing_java_lang_Object_java_lang_Object_R_java_lang_Object 17
+typedef jobject (*func_mindustry_mod_ContentParser$1_putMissing_java_lang_Object_java_lang_Object_R_java_lang_Object)(jcontext ctx, jobject self, jobject param0, jobject param1);
+#define VTABLE_mindustry_mod_ContentParser$1_putAll_Array1_java_lang_Object 18
+typedef void (*func_mindustry_mod_ContentParser$1_putAll_Array1_java_lang_Object)(jcontext ctx, jobject self, jobject param0);
+#define VTABLE_mindustry_mod_ContentParser$1_putAll_arc_struct_ObjectMap 19
+typedef void (*func_mindustry_mod_ContentParser$1_putAll_arc_struct_ObjectMap)(jcontext ctx, jobject self, jobject param0);
+#define VTABLE_mindustry_mod_ContentParser$1_merge_arc_struct_ObjectMap_R_arc_struct_ObjectMap 20
+typedef jobject (*func_mindustry_mod_ContentParser$1_merge_arc_struct_ObjectMap_R_arc_struct_ObjectMap)(jcontext ctx, jobject self, jobject param0);
+#define VTABLE_mindustry_mod_ContentParser$1_each_arc_func_Cons2 21
+typedef void (*func_mindustry_mod_ContentParser$1_each_arc_func_Cons2)(jcontext ctx, jobject self, jobject param0);
+#define VTABLE_mindustry_mod_ContentParser$1_copy_R_arc_struct_ObjectMap 22
+typedef jobject (*func_mindustry_mod_ContentParser$1_copy_R_arc_struct_ObjectMap)(jcontext ctx, jobject self);
+#define VTABLE_mindustry_mod_ContentParser$1_set_arc_struct_ObjectMap 23
+typedef void (*func_mindustry_mod_ContentParser$1_set_arc_struct_ObjectMap)(jcontext ctx, jobject self, jobject param0);
+#define VTABLE_mindustry_mod_ContentParser$1_putResize_java_lang_Object_java_lang_Object 24
+typedef void (*func_mindustry_mod_ContentParser$1_putResize_java_lang_Object_java_lang_Object)(jcontext ctx, jobject self, jobject param0, jobject param1);
+#define VTABLE_mindustry_mod_ContentParser$1_getThrow_java_lang_Object_arc_func_Prov_R_java_lang_Object 25
+typedef jobject (*func_mindustry_mod_ContentParser$1_getThrow_java_lang_Object_arc_func_Prov_R_java_lang_Object)(jcontext ctx, jobject self, jobject param0, jobject param1);
+#define VTABLE_mindustry_mod_ContentParser$1_get_java_lang_Object_arc_func_Prov_R_java_lang_Object 26
+typedef jobject (*func_mindustry_mod_ContentParser$1_get_java_lang_Object_arc_func_Prov_R_java_lang_Object)(jcontext ctx, jobject self, jobject param0, jobject param1);
+#define VTABLE_mindustry_mod_ContentParser$1_get_java_lang_Object_R_java_lang_Object 27
+typedef jobject (*func_mindustry_mod_ContentParser$1_get_java_lang_Object_R_java_lang_Object)(jcontext ctx, jobject self, jobject param0);
+#define VTABLE_mindustry_mod_ContentParser$1_get_java_lang_Object_java_lang_Object_R_java_lang_Object 28
+typedef jobject (*func_mindustry_mod_ContentParser$1_get_java_lang_Object_java_lang_Object_R_java_lang_Object)(jcontext ctx, jobject self, jobject param0, jobject param1);
+#define VTABLE_mindustry_mod_ContentParser$1_remove_java_lang_Object_R_java_lang_Object 29
+typedef jobject (*func_mindustry_mod_ContentParser$1_remove_java_lang_Object_R_java_lang_Object)(jcontext ctx, jobject self, jobject param0);
+#define VTABLE_mindustry_mod_ContentParser$1_notEmpty_R_boolean 30
+typedef jbool (*func_mindustry_mod_ContentParser$1_notEmpty_R_boolean)(jcontext ctx, jobject self);
+#define VTABLE_mindustry_mod_ContentParser$1_isEmpty_R_boolean 31
+typedef jbool (*func_mindustry_mod_ContentParser$1_isEmpty_R_boolean)(jcontext ctx, jobject self);
+#define VTABLE_mindustry_mod_ContentParser$1_shrink_int 32
+typedef void (*func_mindustry_mod_ContentParser$1_shrink_int)(jcontext ctx, jobject self, jint param0);
+#define VTABLE_mindustry_mod_ContentParser$1_clear_int 33
+typedef void (*func_mindustry_mod_ContentParser$1_clear_int)(jcontext ctx, jobject self, jint param0);
+#define VTABLE_mindustry_mod_ContentParser$1_clear 34
+typedef void (*func_mindustry_mod_ContentParser$1_clear)(jcontext ctx, jobject self);
+#define VTABLE_mindustry_mod_ContentParser$1_containsValue_java_lang_Object_boolean_R_boolean 35
+typedef jbool (*func_mindustry_mod_ContentParser$1_containsValue_java_lang_Object_boolean_R_boolean)(jcontext ctx, jobject self, jobject param0, jbool param1);
+#define VTABLE_mindustry_mod_ContentParser$1_containsKey_java_lang_Object_R_boolean 36
+typedef jbool (*func_mindustry_mod_ContentParser$1_containsKey_java_lang_Object_R_boolean)(jcontext ctx, jobject self, jobject param0);
+#define VTABLE_mindustry_mod_ContentParser$1_findKey_java_lang_Object_boolean_R_java_lang_Object 37
+typedef jobject (*func_mindustry_mod_ContentParser$1_findKey_java_lang_Object_boolean_R_java_lang_Object)(jcontext ctx, jobject self, jobject param0, jbool param1);
+#define VTABLE_mindustry_mod_ContentParser$1_ensureCapacity_int 38
+typedef void (*func_mindustry_mod_ContentParser$1_ensureCapacity_int)(jcontext ctx, jobject self, jint param0);
+#define VTABLE_mindustry_mod_ContentParser$1_resize_int 39
+typedef void (*func_mindustry_mod_ContentParser$1_resize_int)(jcontext ctx, jobject self, jint param0);
+#define VTABLE_mindustry_mod_ContentParser$1_toString_java_lang_String_R_java_lang_String 40
+typedef jobject (*func_mindustry_mod_ContentParser$1_toString_java_lang_String_R_java_lang_String)(jcontext ctx, jobject self, jobject param0);
+#define VTABLE_mindustry_mod_ContentParser$1_toString_java_lang_String_boolean_R_java_lang_String 41
+typedef jobject (*func_mindustry_mod_ContentParser$1_toString_java_lang_String_boolean_R_java_lang_String)(jcontext ctx, jobject self, jobject param0, jbool param1);
+#define VTABLE_mindustry_mod_ContentParser$1_iterator_R_arc_struct_ObjectMap$Entries 42
+typedef jobject (*func_mindustry_mod_ContentParser$1_iterator_R_arc_struct_ObjectMap$Entries)(jcontext ctx, jobject self);
+#define VTABLE_mindustry_mod_ContentParser$1_entries_R_arc_struct_ObjectMap$Entries 43
+typedef jobject (*func_mindustry_mod_ContentParser$1_entries_R_arc_struct_ObjectMap$Entries)(jcontext ctx, jobject self);
+#define VTABLE_mindustry_mod_ContentParser$1_values_R_arc_struct_ObjectMap$Values 44
+typedef jobject (*func_mindustry_mod_ContentParser$1_values_R_arc_struct_ObjectMap$Values)(jcontext ctx, jobject self);
+#define VTABLE_mindustry_mod_ContentParser$1_keys_R_arc_struct_ObjectMap$Keys 45
+typedef jobject (*func_mindustry_mod_ContentParser$1_keys_R_arc_struct_ObjectMap$Keys)(jcontext ctx, jobject self);
+#define VTABLE_mindustry_mod_ContentParser$1_lambda$new$29_java_lang_Class_arc_util_serialization_JsonValue_R_java_lang_Object 46
+typedef jobject (*func_mindustry_mod_ContentParser$1_lambda$new$29_java_lang_Class_arc_util_serialization_JsonValue_R_java_lang_Object)(jcontext ctx, jobject self, jobject param0, jobject param1);
+#define VTABLE_mindustry_mod_ContentParser$1_lambda$new$28_java_lang_Class_arc_util_serialization_JsonValue_R_java_lang_Object 47
+typedef jobject (*func_mindustry_mod_ContentParser$1_lambda$new$28_java_lang_Class_arc_util_serialization_JsonValue_R_java_lang_Object)(jcontext ctx, jobject self, jobject param0, jobject param1);
+#define VTABLE_mindustry_mod_ContentParser$1_lambda$new$27_java_lang_Class_arc_util_serialization_JsonValue_R_java_lang_Object 48
+typedef jobject (*func_mindustry_mod_ContentParser$1_lambda$new$27_java_lang_Class_arc_util_serialization_JsonValue_R_java_lang_Object)(jcontext ctx, jobject self, jobject param0, jobject param1);
+#define VTABLE_mindustry_mod_ContentParser$1_lambda$new$26_java_lang_Class_arc_util_serialization_JsonValue_R_java_lang_Object 49
+typedef jobject (*func_mindustry_mod_ContentParser$1_lambda$new$26_java_lang_Class_arc_util_serialization_JsonValue_R_java_lang_Object)(jcontext ctx, jobject self, jobject param0, jobject param1);
+#define VTABLE_mindustry_mod_ContentParser$1_lambda$new$25_java_lang_Class_arc_util_serialization_JsonValue_R_java_lang_Object 50
+typedef jobject (*func_mindustry_mod_ContentParser$1_lambda$new$25_java_lang_Class_arc_util_serialization_JsonValue_R_java_lang_Object)(jcontext ctx, jobject self, jobject param0, jobject param1);
+#define VTABLE_mindustry_mod_ContentParser$1_lambda$new$24_java_lang_Class_arc_util_serialization_JsonValue_R_java_lang_Object 51
+typedef jobject (*func_mindustry_mod_ContentParser$1_lambda$new$24_java_lang_Class_arc_util_serialization_JsonValue_R_java_lang_Object)(jcontext ctx, jobject self, jobject param0, jobject param1);
+#define VTABLE_mindustry_mod_ContentParser$1_lambda$new$23_java_lang_Class_arc_util_serialization_JsonValue_R_java_lang_Object 52
+typedef jobject (*func_mindustry_mod_ContentParser$1_lambda$new$23_java_lang_Class_arc_util_serialization_JsonValue_R_java_lang_Object)(jcontext ctx, jobject self, jobject param0, jobject param1);
+#define VTABLE_mindustry_mod_ContentParser$1_lambda$new$21_java_lang_Class_arc_util_serialization_JsonValue_R_java_lang_Object 53
+typedef jobject (*func_mindustry_mod_ContentParser$1_lambda$new$21_java_lang_Class_arc_util_serialization_JsonValue_R_java_lang_Object)(jcontext ctx, jobject self, jobject param0, jobject param1);
+#define VTABLE_mindustry_mod_ContentParser$1_lambda$new$20_java_lang_Class_arc_util_serialization_JsonValue_R_java_lang_Object 54
+typedef jobject (*func_mindustry_mod_ContentParser$1_lambda$new$20_java_lang_Class_arc_util_serialization_JsonValue_R_java_lang_Object)(jcontext ctx, jobject self, jobject param0, jobject param1);
+#define VTABLE_mindustry_mod_ContentParser$1_lambda$new$19_java_lang_Class_arc_util_serialization_JsonValue_R_java_lang_Object 55
+typedef jobject (*func_mindustry_mod_ContentParser$1_lambda$new$19_java_lang_Class_arc_util_serialization_JsonValue_R_java_lang_Object)(jcontext ctx, jobject self, jobject param0, jobject param1);
+#define VTABLE_mindustry_mod_ContentParser$1_lambda$new$18_java_lang_Class_arc_util_serialization_JsonValue_R_java_lang_Object 56
+typedef jobject (*func_mindustry_mod_ContentParser$1_lambda$new$18_java_lang_Class_arc_util_serialization_JsonValue_R_java_lang_Object)(jcontext ctx, jobject self, jobject param0, jobject param1);
+#define VTABLE_mindustry_mod_ContentParser$1_lambda$new$17_java_lang_Class_arc_util_serialization_JsonValue_R_java_lang_Object 57
+typedef jobject (*func_mindustry_mod_ContentParser$1_lambda$new$17_java_lang_Class_arc_util_serialization_JsonValue_R_java_lang_Object)(jcontext ctx, jobject self, jobject param0, jobject param1);
+#define VTABLE_mindustry_mod_ContentParser$1_lambda$new$16_java_lang_Class_arc_util_serialization_JsonValue_R_java_lang_Object 58
+typedef jobject (*func_mindustry_mod_ContentParser$1_lambda$new$16_java_lang_Class_arc_util_serialization_JsonValue_R_java_lang_Object)(jcontext ctx, jobject self, jobject param0, jobject param1);
+#define VTABLE_mindustry_mod_ContentParser$1_lambda$new$15_java_lang_Class_arc_util_serialization_JsonValue_R_java_lang_Object 59
+typedef jobject (*func_mindustry_mod_ContentParser$1_lambda$new$15_java_lang_Class_arc_util_serialization_JsonValue_R_java_lang_Object)(jcontext ctx, jobject self, jobject param0, jobject param1);
+#define VTABLE_mindustry_mod_ContentParser$1_lambda$new$14_java_lang_Class_arc_util_serialization_JsonValue_R_java_lang_Object 60
+typedef jobject (*func_mindustry_mod_ContentParser$1_lambda$new$14_java_lang_Class_arc_util_serialization_JsonValue_R_java_lang_Object)(jcontext ctx, jobject self, jobject param0, jobject param1);
+#define VTABLE_mindustry_mod_ContentParser$1_lambda$new$11_java_lang_Class_arc_util_serialization_JsonValue_R_java_lang_Object 61
+typedef jobject (*func_mindustry_mod_ContentParser$1_lambda$new$11_java_lang_Class_arc_util_serialization_JsonValue_R_java_lang_Object)(jcontext ctx, jobject self, jobject param0, jobject param1);
+#define VTABLE_mindustry_mod_ContentParser$1_lambda$new$10_java_lang_Class_arc_util_serialization_JsonValue_R_java_lang_Object 62
+typedef jobject (*func_mindustry_mod_ContentParser$1_lambda$new$10_java_lang_Class_arc_util_serialization_JsonValue_R_java_lang_Object)(jcontext ctx, jobject self, jobject param0, jobject param1);
+#define VTABLE_mindustry_mod_ContentParser$1_lambda$new$9_java_lang_Class_arc_util_serialization_JsonValue_R_java_lang_Object 63
+typedef jobject (*func_mindustry_mod_ContentParser$1_lambda$new$9_java_lang_Class_arc_util_serialization_JsonValue_R_java_lang_Object)(jcontext ctx, jobject self, jobject param0, jobject param1);
+#define VTABLE_mindustry_mod_ContentParser$1_lambda$new$8_java_lang_Class_arc_util_serialization_JsonValue_R_java_lang_Object 64
+typedef jobject (*func_mindustry_mod_ContentParser$1_lambda$new$8_java_lang_Class_arc_util_serialization_JsonValue_R_java_lang_Object)(jcontext ctx, jobject self, jobject param0, jobject param1);
+#define VTABLE_mindustry_mod_ContentParser$1_lambda$new$7_java_lang_Class_arc_util_serialization_JsonValue_R_java_lang_Object 65
+typedef jobject (*func_mindustry_mod_ContentParser$1_lambda$new$7_java_lang_Class_arc_util_serialization_JsonValue_R_java_lang_Object)(jcontext ctx, jobject self, jobject param0, jobject param1);
+#define VTABLE_mindustry_mod_ContentParser$1_lambda$new$4_java_lang_Class_arc_util_serialization_JsonValue_R_java_lang_Object 66
+typedef jobject (*func_mindustry_mod_ContentParser$1_lambda$new$4_java_lang_Class_arc_util_serialization_JsonValue_R_java_lang_Object)(jcontext ctx, jobject self, jobject param0, jobject param1);
+#define VTABLE_mindustry_mod_ContentParser$1_lambda$new$3_java_lang_Class_arc_util_serialization_JsonValue_R_java_lang_Object 67
+typedef jobject (*func_mindustry_mod_ContentParser$1_lambda$new$3_java_lang_Class_arc_util_serialization_JsonValue_R_java_lang_Object)(jcontext ctx, jobject self, jobject param0, jobject param1);
+#define VTABLE_mindustry_mod_ContentParser$1_lambda$new$2_java_lang_Class_arc_util_serialization_JsonValue_R_java_lang_Object 68
+typedef jobject (*func_mindustry_mod_ContentParser$1_lambda$new$2_java_lang_Class_arc_util_serialization_JsonValue_R_java_lang_Object)(jcontext ctx, jobject self, jobject param0, jobject param1);
+#define VTABLE_mindustry_mod_ContentParser$1_lambda$new$1_java_lang_Class_arc_util_serialization_JsonValue_R_java_lang_Object 69
+typedef jobject (*func_mindustry_mod_ContentParser$1_lambda$new$1_java_lang_Class_arc_util_serialization_JsonValue_R_java_lang_Object)(jcontext ctx, jobject self, jobject param0, jobject param1);
+#define VTABLE_mindustry_mod_ContentParser$1_lambda$new$0_java_lang_Class_arc_util_serialization_JsonValue_R_java_lang_Object 70
+typedef jobject (*func_mindustry_mod_ContentParser$1_lambda$new$0_java_lang_Class_arc_util_serialization_JsonValue_R_java_lang_Object)(jcontext ctx, jobject self, jobject param0, jobject param1);
+
+void mark_mindustry_mod_ContentParser$1(jobject object, jint mark, jint depth);
+void clinit_mindustry_mod_ContentParser$1(jcontext ctx);
+void init_mindustry_mod_ContentParser$1_mindustry_mod_ContentParser(jcontext ctx, jobject self, jobject param0);
+jobject SM_mindustry_mod_ContentParser$1_lambda$new$30_java_lang_Class_arc_util_serialization_JsonValue_R_java_lang_Object(jcontext ctx, jobject param0, jobject param1);
+jbool SM_mindustry_mod_ContentParser$1_lambda$new$31_arc_util_serialization_JsonValue_mindustry_game_Team_R_boolean(jcontext ctx, jobject param0, jobject param1);
+jobject M_mindustry_mod_ContentParser$1_lambda$new$29_java_lang_Class_arc_util_serialization_JsonValue_R_java_lang_Object(jcontext ctx, jobject self, jobject param0, jobject param1);
+jobject M_mindustry_mod_ContentParser$1_lambda$new$28_java_lang_Class_arc_util_serialization_JsonValue_R_java_lang_Object(jcontext ctx, jobject self, jobject param0, jobject param1);
+jobject M_mindustry_mod_ContentParser$1_lambda$new$27_java_lang_Class_arc_util_serialization_JsonValue_R_java_lang_Object(jcontext ctx, jobject self, jobject param0, jobject param1);
+jobject M_mindustry_mod_ContentParser$1_lambda$new$26_java_lang_Class_arc_util_serialization_JsonValue_R_java_lang_Object(jcontext ctx, jobject self, jobject param0, jobject param1);
+jobject M_mindustry_mod_ContentParser$1_lambda$new$25_java_lang_Class_arc_util_serialization_JsonValue_R_java_lang_Object(jcontext ctx, jobject self, jobject param0, jobject param1);
+jobject M_mindustry_mod_ContentParser$1_lambda$new$24_java_lang_Class_arc_util_serialization_JsonValue_R_java_lang_Object(jcontext ctx, jobject self, jobject param0, jobject param1);
+jobject M_mindustry_mod_ContentParser$1_lambda$new$23_java_lang_Class_arc_util_serialization_JsonValue_R_java_lang_Object(jcontext ctx, jobject self, jobject param0, jobject param1);
+jobject SM_mindustry_mod_ContentParser$1_lambda$new$22_java_lang_Class_arc_util_serialization_JsonValue_R_java_lang_Object(jcontext ctx, jobject param0, jobject param1);
+jobject M_mindustry_mod_ContentParser$1_lambda$new$21_java_lang_Class_arc_util_serialization_JsonValue_R_java_lang_Object(jcontext ctx, jobject self, jobject param0, jobject param1);
+jobject M_mindustry_mod_ContentParser$1_lambda$new$20_java_lang_Class_arc_util_serialization_JsonValue_R_java_lang_Object(jcontext ctx, jobject self, jobject param0, jobject param1);
+jobject M_mindustry_mod_ContentParser$1_lambda$new$19_java_lang_Class_arc_util_serialization_JsonValue_R_java_lang_Object(jcontext ctx, jobject self, jobject param0, jobject param1);
+jobject M_mindustry_mod_ContentParser$1_lambda$new$18_java_lang_Class_arc_util_serialization_JsonValue_R_java_lang_Object(jcontext ctx, jobject self, jobject param0, jobject param1);
+jobject M_mindustry_mod_ContentParser$1_lambda$new$17_java_lang_Class_arc_util_serialization_JsonValue_R_java_lang_Object(jcontext ctx, jobject self, jobject param0, jobject param1);
+jobject M_mindustry_mod_ContentParser$1_lambda$new$16_java_lang_Class_arc_util_serialization_JsonValue_R_java_lang_Object(jcontext ctx, jobject self, jobject param0, jobject param1);
+jobject M_mindustry_mod_ContentParser$1_lambda$new$15_java_lang_Class_arc_util_serialization_JsonValue_R_java_lang_Object(jcontext ctx, jobject self, jobject param0, jobject param1);
+jobject M_mindustry_mod_ContentParser$1_lambda$new$14_java_lang_Class_arc_util_serialization_JsonValue_R_java_lang_Object(jcontext ctx, jobject self, jobject param0, jobject param1);
+jobject SM_mindustry_mod_ContentParser$1_lambda$new$13_java_lang_Class_arc_util_serialization_JsonValue_R_java_lang_Object(jcontext ctx, jobject param0, jobject param1);
+jobject SM_mindustry_mod_ContentParser$1_lambda$new$12_java_lang_Class_arc_util_serialization_JsonValue_R_java_lang_Object(jcontext ctx, jobject param0, jobject param1);
+jobject M_mindustry_mod_ContentParser$1_lambda$new$11_java_lang_Class_arc_util_serialization_JsonValue_R_java_lang_Object(jcontext ctx, jobject self, jobject param0, jobject param1);
+jobject M_mindustry_mod_ContentParser$1_lambda$new$10_java_lang_Class_arc_util_serialization_JsonValue_R_java_lang_Object(jcontext ctx, jobject self, jobject param0, jobject param1);
+jobject M_mindustry_mod_ContentParser$1_lambda$new$9_java_lang_Class_arc_util_serialization_JsonValue_R_java_lang_Object(jcontext ctx, jobject self, jobject param0, jobject param1);
+jobject M_mindustry_mod_ContentParser$1_lambda$new$8_java_lang_Class_arc_util_serialization_JsonValue_R_java_lang_Object(jcontext ctx, jobject self, jobject param0, jobject param1);
+jobject M_mindustry_mod_ContentParser$1_lambda$new$7_java_lang_Class_arc_util_serialization_JsonValue_R_java_lang_Object(jcontext ctx, jobject self, jobject param0, jobject param1);
+jobject SM_mindustry_mod_ContentParser$1_lambda$new$6_java_lang_Class_arc_util_serialization_JsonValue_R_java_lang_Object(jcontext ctx, jobject param0, jobject param1);
+jobject SM_mindustry_mod_ContentParser$1_lambda$new$5_java_lang_Class_arc_util_serialization_JsonValue_R_java_lang_Object(jcontext ctx, jobject param0, jobject param1);
+jobject M_mindustry_mod_ContentParser$1_lambda$new$4_java_lang_Class_arc_util_serialization_JsonValue_R_java_lang_Object(jcontext ctx, jobject self, jobject param0, jobject param1);
+jobject M_mindustry_mod_ContentParser$1_lambda$new$3_java_lang_Class_arc_util_serialization_JsonValue_R_java_lang_Object(jcontext ctx, jobject self, jobject param0, jobject param1);
+jobject M_mindustry_mod_ContentParser$1_lambda$new$2_java_lang_Class_arc_util_serialization_JsonValue_R_java_lang_Object(jcontext ctx, jobject self, jobject param0, jobject param1);
+jobject M_mindustry_mod_ContentParser$1_lambda$new$1_java_lang_Class_arc_util_serialization_JsonValue_R_java_lang_Object(jcontext ctx, jobject self, jobject param0, jobject param1);
+jobject M_mindustry_mod_ContentParser$1_lambda$new$0_java_lang_Class_arc_util_serialization_JsonValue_R_java_lang_Object(jcontext ctx, jobject self, jobject param0, jobject param1);
+
+#ifdef __cplusplus
+}
+#endif
+
+#endif

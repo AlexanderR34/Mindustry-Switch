@@ -1,0 +1,201 @@
+#ifndef HEADER_java_math_SignedMutableBigInteger
+#define HEADER_java_math_SignedMutableBigInteger
+
+#include "Clearwing.h"
+#include "java/math/MutableBigInteger.h"
+
+#ifdef __cplusplus
+extern "C" {
+#endif
+
+typedef struct java_math_SignedMutableBigInteger {
+	java_math_MutableBigInteger parent;
+	jint F_sign;
+} java_math_SignedMutableBigInteger;
+
+extern Class class_java_math_SignedMutableBigInteger;
+
+
+#define VTABLE_java_math_SignedMutableBigInteger_hashCode_R_int 0
+typedef jint (*func_java_math_SignedMutableBigInteger_hashCode_R_int)(jcontext ctx, jobject self);
+#define VTABLE_java_math_SignedMutableBigInteger_equals_java_lang_Object_R_boolean 1
+typedef jbool (*func_java_math_SignedMutableBigInteger_equals_java_lang_Object_R_boolean)(jcontext ctx, jobject self, jobject param0);
+#define VTABLE_java_math_SignedMutableBigInteger_clone_R_java_lang_Object 2
+typedef jobject (*func_java_math_SignedMutableBigInteger_clone_R_java_lang_Object)(jcontext ctx, jobject self);
+#define VTABLE_java_math_SignedMutableBigInteger_getClass_R_java_lang_Class 3
+typedef jobject (*func_java_math_SignedMutableBigInteger_getClass_R_java_lang_Class)(jcontext ctx, jobject self);
+#define VTABLE_java_math_SignedMutableBigInteger_toString_R_java_lang_String 4
+typedef jobject (*func_java_math_SignedMutableBigInteger_toString_R_java_lang_String)(jcontext ctx, jobject self);
+#define VTABLE_java_math_SignedMutableBigInteger_finalize 5
+typedef void (*func_java_math_SignedMutableBigInteger_finalize)(jcontext ctx, jobject self);
+#define VTABLE_java_math_SignedMutableBigInteger_notify 6
+typedef void (*func_java_math_SignedMutableBigInteger_notify)(jcontext ctx, jobject self);
+#define VTABLE_java_math_SignedMutableBigInteger_notifyAll 7
+typedef void (*func_java_math_SignedMutableBigInteger_notifyAll)(jcontext ctx, jobject self);
+#define VTABLE_java_math_SignedMutableBigInteger_wait 8
+typedef void (*func_java_math_SignedMutableBigInteger_wait)(jcontext ctx, jobject self);
+#define VTABLE_java_math_SignedMutableBigInteger_wait_long 9
+typedef void (*func_java_math_SignedMutableBigInteger_wait_long)(jcontext ctx, jobject self, jlong param0);
+#define VTABLE_java_math_SignedMutableBigInteger_wait_long_int 10
+typedef void (*func_java_math_SignedMutableBigInteger_wait_long_int)(jcontext ctx, jobject self, jlong param0, jint param1);
+#define VTABLE_java_math_SignedMutableBigInteger_ones_int 11
+typedef void (*func_java_math_SignedMutableBigInteger_ones_int)(jcontext ctx, jobject self, jint param0);
+#define VTABLE_java_math_SignedMutableBigInteger_getMagnitudeArray_R_Array1_int 12
+typedef jobject (*func_java_math_SignedMutableBigInteger_getMagnitudeArray_R_Array1_int)(jcontext ctx, jobject self);
+#define VTABLE_java_math_SignedMutableBigInteger_toLong_R_long 13
+typedef jlong (*func_java_math_SignedMutableBigInteger_toLong_R_long)(jcontext ctx, jobject self);
+#define VTABLE_java_math_SignedMutableBigInteger_toBigInteger_int_R_java_math_BigInteger 14
+typedef jobject (*func_java_math_SignedMutableBigInteger_toBigInteger_int_R_java_math_BigInteger)(jcontext ctx, jobject self, jint param0);
+#define VTABLE_java_math_SignedMutableBigInteger_toBigInteger_R_java_math_BigInteger 15
+typedef jobject (*func_java_math_SignedMutableBigInteger_toBigInteger_R_java_math_BigInteger)(jcontext ctx, jobject self);
+#define VTABLE_java_math_SignedMutableBigInteger_toBigDecimal_int_int_R_java_math_BigDecimal 16
+typedef jobject (*func_java_math_SignedMutableBigInteger_toBigDecimal_int_int_R_java_math_BigDecimal)(jcontext ctx, jobject self, jint param0, jint param1);
+#define VTABLE_java_math_SignedMutableBigInteger_toCompactValue_int_R_long 17
+typedef jlong (*func_java_math_SignedMutableBigInteger_toCompactValue_int_R_long)(jcontext ctx, jobject self, jint param0);
+#define VTABLE_java_math_SignedMutableBigInteger_clear 18
+typedef void (*func_java_math_SignedMutableBigInteger_clear)(jcontext ctx, jobject self);
+#define VTABLE_java_math_SignedMutableBigInteger_reset 19
+typedef void (*func_java_math_SignedMutableBigInteger_reset)(jcontext ctx, jobject self);
+#define VTABLE_java_math_SignedMutableBigInteger_compare_java_math_MutableBigInteger_R_int 20
+typedef jint (*func_java_math_SignedMutableBigInteger_compare_java_math_MutableBigInteger_R_int)(jcontext ctx, jobject self, jobject param0);
+#define VTABLE_java_math_SignedMutableBigInteger_compareShifted_java_math_MutableBigInteger_int_R_int 21
+typedef jint (*func_java_math_SignedMutableBigInteger_compareShifted_java_math_MutableBigInteger_int_R_int)(jcontext ctx, jobject self, jobject param0, jint param1);
+#define VTABLE_java_math_SignedMutableBigInteger_compareHalf_java_math_MutableBigInteger_R_int 22
+typedef jint (*func_java_math_SignedMutableBigInteger_compareHalf_java_math_MutableBigInteger_R_int)(jcontext ctx, jobject self, jobject param0);
+#define VTABLE_java_math_SignedMutableBigInteger_getLowestSetBit_R_int 23
+typedef jint (*func_java_math_SignedMutableBigInteger_getLowestSetBit_R_int)(jcontext ctx, jobject self);
+#define VTABLE_java_math_SignedMutableBigInteger_getInt_int_R_int 24
+typedef jint (*func_java_math_SignedMutableBigInteger_getInt_int_R_int)(jcontext ctx, jobject self, jint param0);
+#define VTABLE_java_math_SignedMutableBigInteger_getLong_int_R_long 25
+typedef jlong (*func_java_math_SignedMutableBigInteger_getLong_int_R_long)(jcontext ctx, jobject self, jint param0);
+#define VTABLE_java_math_SignedMutableBigInteger_normalize 26
+typedef void (*func_java_math_SignedMutableBigInteger_normalize)(jcontext ctx, jobject self);
+#define VTABLE_java_math_SignedMutableBigInteger_ensureCapacity_int 27
+typedef void (*func_java_math_SignedMutableBigInteger_ensureCapacity_int)(jcontext ctx, jobject self, jint param0);
+#define VTABLE_java_math_SignedMutableBigInteger_toIntArray_R_Array1_int 28
+typedef jobject (*func_java_math_SignedMutableBigInteger_toIntArray_R_Array1_int)(jcontext ctx, jobject self);
+#define VTABLE_java_math_SignedMutableBigInteger_setInt_int_int 29
+typedef void (*func_java_math_SignedMutableBigInteger_setInt_int_int)(jcontext ctx, jobject self, jint param0, jint param1);
+#define VTABLE_java_math_SignedMutableBigInteger_setValue_Array1_int_int 30
+typedef void (*func_java_math_SignedMutableBigInteger_setValue_Array1_int_int)(jcontext ctx, jobject self, jobject param0, jint param1);
+#define VTABLE_java_math_SignedMutableBigInteger_copyValue_java_math_MutableBigInteger 31
+typedef void (*func_java_math_SignedMutableBigInteger_copyValue_java_math_MutableBigInteger)(jcontext ctx, jobject self, jobject param0);
+#define VTABLE_java_math_SignedMutableBigInteger_copyValue_Array1_int 32
+typedef void (*func_java_math_SignedMutableBigInteger_copyValue_Array1_int)(jcontext ctx, jobject self, jobject param0);
+#define VTABLE_java_math_SignedMutableBigInteger_isOne_R_boolean 33
+typedef jbool (*func_java_math_SignedMutableBigInteger_isOne_R_boolean)(jcontext ctx, jobject self);
+#define VTABLE_java_math_SignedMutableBigInteger_isZero_R_boolean 34
+typedef jbool (*func_java_math_SignedMutableBigInteger_isZero_R_boolean)(jcontext ctx, jobject self);
+#define VTABLE_java_math_SignedMutableBigInteger_isEven_R_boolean 35
+typedef jbool (*func_java_math_SignedMutableBigInteger_isEven_R_boolean)(jcontext ctx, jobject self);
+#define VTABLE_java_math_SignedMutableBigInteger_isOdd_R_boolean 36
+typedef jbool (*func_java_math_SignedMutableBigInteger_isOdd_R_boolean)(jcontext ctx, jobject self);
+#define VTABLE_java_math_SignedMutableBigInteger_isNormal_R_boolean 37
+typedef jbool (*func_java_math_SignedMutableBigInteger_isNormal_R_boolean)(jcontext ctx, jobject self);
+#define VTABLE_java_math_SignedMutableBigInteger_safeRightShift_int 38
+typedef void (*func_java_math_SignedMutableBigInteger_safeRightShift_int)(jcontext ctx, jobject self, jint param0);
+#define VTABLE_java_math_SignedMutableBigInteger_rightShift_int 39
+typedef void (*func_java_math_SignedMutableBigInteger_rightShift_int)(jcontext ctx, jobject self, jint param0);
+#define VTABLE_java_math_SignedMutableBigInteger_safeLeftShift_int 40
+typedef void (*func_java_math_SignedMutableBigInteger_safeLeftShift_int)(jcontext ctx, jobject self, jint param0);
+#define VTABLE_java_math_SignedMutableBigInteger_leftShift_int 41
+typedef void (*func_java_math_SignedMutableBigInteger_leftShift_int)(jcontext ctx, jobject self, jint param0);
+#define VTABLE_java_math_SignedMutableBigInteger_divadd_Array1_int_Array1_int_int_R_int 42
+typedef jint (*func_java_math_SignedMutableBigInteger_divadd_Array1_int_Array1_int_int_R_int)(jcontext ctx, jobject self, jobject param0, jobject param1, jint param2);
+#define VTABLE_java_math_SignedMutableBigInteger_mulsub_Array1_int_Array1_int_int_int_int_R_int 43
+typedef jint (*func_java_math_SignedMutableBigInteger_mulsub_Array1_int_Array1_int_int_int_int_R_int)(jcontext ctx, jobject self, jobject param0, jobject param1, jint param2, jint param3, jint param4);
+#define VTABLE_java_math_SignedMutableBigInteger_mulsubBorrow_Array1_int_Array1_int_int_int_int_R_int 44
+typedef jint (*func_java_math_SignedMutableBigInteger_mulsubBorrow_Array1_int_Array1_int_int_int_int_R_int)(jcontext ctx, jobject self, jobject param0, jobject param1, jint param2, jint param3, jint param4);
+#define VTABLE_java_math_SignedMutableBigInteger_primitiveRightShift_int 45
+typedef void (*func_java_math_SignedMutableBigInteger_primitiveRightShift_int)(jcontext ctx, jobject self, jint param0);
+#define VTABLE_java_math_SignedMutableBigInteger_primitiveLeftShift_int 46
+typedef void (*func_java_math_SignedMutableBigInteger_primitiveLeftShift_int)(jcontext ctx, jobject self, jint param0);
+#define VTABLE_java_math_SignedMutableBigInteger_getLower_int_R_java_math_BigInteger 47
+typedef jobject (*func_java_math_SignedMutableBigInteger_getLower_int_R_java_math_BigInteger)(jcontext ctx, jobject self, jint param0);
+#define VTABLE_java_math_SignedMutableBigInteger_keepLower_int 48
+typedef void (*func_java_math_SignedMutableBigInteger_keepLower_int)(jcontext ctx, jobject self, jint param0);
+#define VTABLE_java_math_SignedMutableBigInteger_add_java_math_MutableBigInteger 49
+typedef void (*func_java_math_SignedMutableBigInteger_add_java_math_MutableBigInteger)(jcontext ctx, jobject self, jobject param0);
+#define VTABLE_java_math_SignedMutableBigInteger_addShifted_java_math_MutableBigInteger_int 50
+typedef void (*func_java_math_SignedMutableBigInteger_addShifted_java_math_MutableBigInteger_int)(jcontext ctx, jobject self, jobject param0, jint param1);
+#define VTABLE_java_math_SignedMutableBigInteger_addDisjoint_java_math_MutableBigInteger_int 51
+typedef void (*func_java_math_SignedMutableBigInteger_addDisjoint_java_math_MutableBigInteger_int)(jcontext ctx, jobject self, jobject param0, jint param1);
+#define VTABLE_java_math_SignedMutableBigInteger_addLower_java_math_MutableBigInteger_int 52
+typedef void (*func_java_math_SignedMutableBigInteger_addLower_java_math_MutableBigInteger_int)(jcontext ctx, jobject self, jobject param0, jint param1);
+#define VTABLE_java_math_SignedMutableBigInteger_subtract_java_math_MutableBigInteger_R_int 53
+typedef jint (*func_java_math_SignedMutableBigInteger_subtract_java_math_MutableBigInteger_R_int)(jcontext ctx, jobject self, jobject param0);
+#define VTABLE_java_math_SignedMutableBigInteger_difference_java_math_MutableBigInteger_R_int 54
+typedef jint (*func_java_math_SignedMutableBigInteger_difference_java_math_MutableBigInteger_R_int)(jcontext ctx, jobject self, jobject param0);
+#define VTABLE_java_math_SignedMutableBigInteger_multiply_java_math_MutableBigInteger_java_math_MutableBigInteger 55
+typedef void (*func_java_math_SignedMutableBigInteger_multiply_java_math_MutableBigInteger_java_math_MutableBigInteger)(jcontext ctx, jobject self, jobject param0, jobject param1);
+#define VTABLE_java_math_SignedMutableBigInteger_mul_int_java_math_MutableBigInteger 56
+typedef void (*func_java_math_SignedMutableBigInteger_mul_int_java_math_MutableBigInteger)(jcontext ctx, jobject self, jint param0, jobject param1);
+#define VTABLE_java_math_SignedMutableBigInteger_divideOneWord_int_java_math_MutableBigInteger_R_int 57
+typedef jint (*func_java_math_SignedMutableBigInteger_divideOneWord_int_java_math_MutableBigInteger_R_int)(jcontext ctx, jobject self, jint param0, jobject param1);
+#define VTABLE_java_math_SignedMutableBigInteger_divide_java_math_MutableBigInteger_java_math_MutableBigInteger_R_java_math_MutableBigInteger 58
+typedef jobject (*func_java_math_SignedMutableBigInteger_divide_java_math_MutableBigInteger_java_math_MutableBigInteger_R_java_math_MutableBigInteger)(jcontext ctx, jobject self, jobject param0, jobject param1);
+#define VTABLE_java_math_SignedMutableBigInteger_divide_java_math_MutableBigInteger_java_math_MutableBigInteger_boolean_R_java_math_MutableBigInteger 59
+typedef jobject (*func_java_math_SignedMutableBigInteger_divide_java_math_MutableBigInteger_java_math_MutableBigInteger_boolean_R_java_math_MutableBigInteger)(jcontext ctx, jobject self, jobject param0, jobject param1, jbool param2);
+#define VTABLE_java_math_SignedMutableBigInteger_divideKnuth_java_math_MutableBigInteger_java_math_MutableBigInteger_R_java_math_MutableBigInteger 60
+typedef jobject (*func_java_math_SignedMutableBigInteger_divideKnuth_java_math_MutableBigInteger_java_math_MutableBigInteger_R_java_math_MutableBigInteger)(jcontext ctx, jobject self, jobject param0, jobject param1);
+#define VTABLE_java_math_SignedMutableBigInteger_divideKnuth_java_math_MutableBigInteger_java_math_MutableBigInteger_boolean_R_java_math_MutableBigInteger 61
+typedef jobject (*func_java_math_SignedMutableBigInteger_divideKnuth_java_math_MutableBigInteger_java_math_MutableBigInteger_boolean_R_java_math_MutableBigInteger)(jcontext ctx, jobject self, jobject param0, jobject param1, jbool param2);
+#define VTABLE_java_math_SignedMutableBigInteger_divideAndRemainderBurnikelZiegler_java_math_MutableBigInteger_java_math_MutableBigInteger_R_java_math_MutableBigInteger 62
+typedef jobject (*func_java_math_SignedMutableBigInteger_divideAndRemainderBurnikelZiegler_java_math_MutableBigInteger_java_math_MutableBigInteger_R_java_math_MutableBigInteger)(jcontext ctx, jobject self, jobject param0, jobject param1);
+#define VTABLE_java_math_SignedMutableBigInteger_divide2n1n_java_math_MutableBigInteger_java_math_MutableBigInteger_R_java_math_MutableBigInteger 63
+typedef jobject (*func_java_math_SignedMutableBigInteger_divide2n1n_java_math_MutableBigInteger_java_math_MutableBigInteger_R_java_math_MutableBigInteger)(jcontext ctx, jobject self, jobject param0, jobject param1);
+#define VTABLE_java_math_SignedMutableBigInteger_divide3n2n_java_math_MutableBigInteger_java_math_MutableBigInteger_R_java_math_MutableBigInteger 64
+typedef jobject (*func_java_math_SignedMutableBigInteger_divide3n2n_java_math_MutableBigInteger_java_math_MutableBigInteger_R_java_math_MutableBigInteger)(jcontext ctx, jobject self, jobject param0, jobject param1);
+#define VTABLE_java_math_SignedMutableBigInteger_getBlock_int_int_int_R_java_math_MutableBigInteger 65
+typedef jobject (*func_java_math_SignedMutableBigInteger_getBlock_int_int_int_R_java_math_MutableBigInteger)(jcontext ctx, jobject self, jint param0, jint param1, jint param2);
+#define VTABLE_java_math_SignedMutableBigInteger_bitLength_R_long 66
+typedef jlong (*func_java_math_SignedMutableBigInteger_bitLength_R_long)(jcontext ctx, jobject self);
+#define VTABLE_java_math_SignedMutableBigInteger_divide_long_java_math_MutableBigInteger_R_long 67
+typedef jlong (*func_java_math_SignedMutableBigInteger_divide_long_java_math_MutableBigInteger_R_long)(jcontext ctx, jobject self, jlong param0, jobject param1);
+#define VTABLE_java_math_SignedMutableBigInteger_divideMagnitude_java_math_MutableBigInteger_java_math_MutableBigInteger_boolean_R_java_math_MutableBigInteger 68
+typedef jobject (*func_java_math_SignedMutableBigInteger_divideMagnitude_java_math_MutableBigInteger_java_math_MutableBigInteger_boolean_R_java_math_MutableBigInteger)(jcontext ctx, jobject self, jobject param0, jobject param1, jbool param2);
+#define VTABLE_java_math_SignedMutableBigInteger_divideLongMagnitude_long_java_math_MutableBigInteger_R_java_math_MutableBigInteger 69
+typedef jobject (*func_java_math_SignedMutableBigInteger_divideLongMagnitude_long_java_math_MutableBigInteger_R_java_math_MutableBigInteger)(jcontext ctx, jobject self, jlong param0, jobject param1);
+#define VTABLE_java_math_SignedMutableBigInteger_divaddLong_int_int_Array1_int_int_R_int 70
+typedef jint (*func_java_math_SignedMutableBigInteger_divaddLong_int_int_Array1_int_int_R_int)(jcontext ctx, jobject self, jint param0, jint param1, jobject param2, jint param3);
+#define VTABLE_java_math_SignedMutableBigInteger_mulsubLong_Array1_int_int_int_int_int_R_int 71
+typedef jint (*func_java_math_SignedMutableBigInteger_mulsubLong_Array1_int_int_int_int_int_R_int)(jcontext ctx, jobject self, jobject param0, jint param1, jint param2, jint param3, jint param4);
+#define VTABLE_java_math_SignedMutableBigInteger_unsignedLongCompare_long_long_R_boolean 72
+typedef jbool (*func_java_math_SignedMutableBigInteger_unsignedLongCompare_long_long_R_boolean)(jcontext ctx, jobject self, jlong param0, jlong param1);
+#define VTABLE_java_math_SignedMutableBigInteger_hybridGCD_java_math_MutableBigInteger_R_java_math_MutableBigInteger 73
+typedef jobject (*func_java_math_SignedMutableBigInteger_hybridGCD_java_math_MutableBigInteger_R_java_math_MutableBigInteger)(jcontext ctx, jobject self, jobject param0);
+#define VTABLE_java_math_SignedMutableBigInteger_binaryGCD_java_math_MutableBigInteger_R_java_math_MutableBigInteger 74
+typedef jobject (*func_java_math_SignedMutableBigInteger_binaryGCD_java_math_MutableBigInteger_R_java_math_MutableBigInteger)(jcontext ctx, jobject self, jobject param0);
+#define VTABLE_java_math_SignedMutableBigInteger_mutableModInverse_java_math_MutableBigInteger_R_java_math_MutableBigInteger 75
+typedef jobject (*func_java_math_SignedMutableBigInteger_mutableModInverse_java_math_MutableBigInteger_R_java_math_MutableBigInteger)(jcontext ctx, jobject self, jobject param0);
+#define VTABLE_java_math_SignedMutableBigInteger_modInverseMP2_int_R_java_math_MutableBigInteger 76
+typedef jobject (*func_java_math_SignedMutableBigInteger_modInverseMP2_int_R_java_math_MutableBigInteger)(jcontext ctx, jobject self, jint param0);
+#define VTABLE_java_math_SignedMutableBigInteger_modInverse_java_math_MutableBigInteger_R_java_math_MutableBigInteger 77
+typedef jobject (*func_java_math_SignedMutableBigInteger_modInverse_java_math_MutableBigInteger_R_java_math_MutableBigInteger)(jcontext ctx, jobject self, jobject param0);
+#define VTABLE_java_math_SignedMutableBigInteger_euclidModInverse_int_R_java_math_MutableBigInteger 78
+typedef jobject (*func_java_math_SignedMutableBigInteger_euclidModInverse_int_R_java_math_MutableBigInteger)(jcontext ctx, jobject self, jint param0);
+#define VTABLE_java_math_SignedMutableBigInteger_signedAdd_java_math_SignedMutableBigInteger 79
+typedef void (*func_java_math_SignedMutableBigInteger_signedAdd_java_math_SignedMutableBigInteger)(jcontext ctx, jobject self, jobject param0);
+#define VTABLE_java_math_SignedMutableBigInteger_signedAdd_java_math_MutableBigInteger 80
+typedef void (*func_java_math_SignedMutableBigInteger_signedAdd_java_math_MutableBigInteger)(jcontext ctx, jobject self, jobject param0);
+#define VTABLE_java_math_SignedMutableBigInteger_signedSubtract_java_math_SignedMutableBigInteger 81
+typedef void (*func_java_math_SignedMutableBigInteger_signedSubtract_java_math_SignedMutableBigInteger)(jcontext ctx, jobject self, jobject param0);
+#define VTABLE_java_math_SignedMutableBigInteger_signedSubtract_java_math_MutableBigInteger 82
+typedef void (*func_java_math_SignedMutableBigInteger_signedSubtract_java_math_MutableBigInteger)(jcontext ctx, jobject self, jobject param0);
+
+void mark_java_math_SignedMutableBigInteger(jobject object, jint mark, jint depth);
+void clinit_java_math_SignedMutableBigInteger(jcontext ctx);
+void init_java_math_SignedMutableBigInteger(jcontext ctx, jobject self);
+void init_java_math_SignedMutableBigInteger_int(jcontext ctx, jobject self, jint param0);
+void init_java_math_SignedMutableBigInteger_java_math_MutableBigInteger(jcontext ctx, jobject self, jobject param0);
+void M_java_math_SignedMutableBigInteger_signedAdd_java_math_SignedMutableBigInteger(jcontext ctx, jobject self, jobject param0);
+void M_java_math_SignedMutableBigInteger_signedAdd_java_math_MutableBigInteger(jcontext ctx, jobject self, jobject param0);
+void M_java_math_SignedMutableBigInteger_signedSubtract_java_math_SignedMutableBigInteger(jcontext ctx, jobject self, jobject param0);
+void M_java_math_SignedMutableBigInteger_signedSubtract_java_math_MutableBigInteger(jcontext ctx, jobject self, jobject param0);
+jobject M_java_math_SignedMutableBigInteger_toString_R_java_lang_String(jcontext ctx, jobject self);
+
+#ifdef __cplusplus
+}
+#endif
+
+#endif

@@ -1,0 +1,84 @@
+#ifndef HEADER_mindustry_game_MapObjectives$DestroyCoreObjective
+#define HEADER_mindustry_game_MapObjectives$DestroyCoreObjective
+
+#include "Clearwing.h"
+#include "mindustry/game/MapObjectives_MapObjective.h"
+
+#ifdef __cplusplus
+extern "C" {
+#endif
+
+typedef struct mindustry_game_MapObjectives$DestroyCoreObjective {
+	mindustry_game_MapObjectives$MapObjective parent;
+} mindustry_game_MapObjectives$DestroyCoreObjective;
+
+extern Class class_mindustry_game_MapObjectives$DestroyCoreObjective;
+
+
+#define VTABLE_mindustry_game_MapObjectives$DestroyCoreObjective_hashCode_R_int 0
+typedef jint (*func_mindustry_game_MapObjectives$DestroyCoreObjective_hashCode_R_int)(jcontext ctx, jobject self);
+#define VTABLE_mindustry_game_MapObjectives$DestroyCoreObjective_equals_java_lang_Object_R_boolean 1
+typedef jbool (*func_mindustry_game_MapObjectives$DestroyCoreObjective_equals_java_lang_Object_R_boolean)(jcontext ctx, jobject self, jobject param0);
+#define VTABLE_mindustry_game_MapObjectives$DestroyCoreObjective_clone_R_java_lang_Object 2
+typedef jobject (*func_mindustry_game_MapObjectives$DestroyCoreObjective_clone_R_java_lang_Object)(jcontext ctx, jobject self);
+#define VTABLE_mindustry_game_MapObjectives$DestroyCoreObjective_getClass_R_java_lang_Class 3
+typedef jobject (*func_mindustry_game_MapObjectives$DestroyCoreObjective_getClass_R_java_lang_Class)(jcontext ctx, jobject self);
+#define VTABLE_mindustry_game_MapObjectives$DestroyCoreObjective_toString_R_java_lang_String 4
+typedef jobject (*func_mindustry_game_MapObjectives$DestroyCoreObjective_toString_R_java_lang_String)(jcontext ctx, jobject self);
+#define VTABLE_mindustry_game_MapObjectives$DestroyCoreObjective_finalize 5
+typedef void (*func_mindustry_game_MapObjectives$DestroyCoreObjective_finalize)(jcontext ctx, jobject self);
+#define VTABLE_mindustry_game_MapObjectives$DestroyCoreObjective_notify 6
+typedef void (*func_mindustry_game_MapObjectives$DestroyCoreObjective_notify)(jcontext ctx, jobject self);
+#define VTABLE_mindustry_game_MapObjectives$DestroyCoreObjective_notifyAll 7
+typedef void (*func_mindustry_game_MapObjectives$DestroyCoreObjective_notifyAll)(jcontext ctx, jobject self);
+#define VTABLE_mindustry_game_MapObjectives$DestroyCoreObjective_wait 8
+typedef void (*func_mindustry_game_MapObjectives$DestroyCoreObjective_wait)(jcontext ctx, jobject self);
+#define VTABLE_mindustry_game_MapObjectives$DestroyCoreObjective_wait_long 9
+typedef void (*func_mindustry_game_MapObjectives$DestroyCoreObjective_wait_long)(jcontext ctx, jobject self, jlong param0);
+#define VTABLE_mindustry_game_MapObjectives$DestroyCoreObjective_wait_long_int 10
+typedef void (*func_mindustry_game_MapObjectives$DestroyCoreObjective_wait_long_int)(jcontext ctx, jobject self, jlong param0, jint param1);
+#define VTABLE_mindustry_game_MapObjectives$DestroyCoreObjective_update_R_boolean 11
+typedef jbool (*func_mindustry_game_MapObjectives$DestroyCoreObjective_update_R_boolean)(jcontext ctx, jobject self);
+#define VTABLE_mindustry_game_MapObjectives$DestroyCoreObjective_reset 12
+typedef void (*func_mindustry_game_MapObjectives$DestroyCoreObjective_reset)(jcontext ctx, jobject self);
+#define VTABLE_mindustry_game_MapObjectives$DestroyCoreObjective_done 13
+typedef void (*func_mindustry_game_MapObjectives$DestroyCoreObjective_done)(jcontext ctx, jobject self);
+#define VTABLE_mindustry_game_MapObjectives$DestroyCoreObjective_dependencyFinished_R_boolean 14
+typedef jbool (*func_mindustry_game_MapObjectives$DestroyCoreObjective_dependencyFinished_R_boolean)(jcontext ctx, jobject self);
+#define VTABLE_mindustry_game_MapObjectives$DestroyCoreObjective_isCompleted_R_boolean 15
+typedef jbool (*func_mindustry_game_MapObjectives$DestroyCoreObjective_isCompleted_R_boolean)(jcontext ctx, jobject self);
+#define VTABLE_mindustry_game_MapObjectives$DestroyCoreObjective_qualified_R_boolean 16
+typedef jbool (*func_mindustry_game_MapObjectives$DestroyCoreObjective_qualified_R_boolean)(jcontext ctx, jobject self);
+#define VTABLE_mindustry_game_MapObjectives$DestroyCoreObjective_child_mindustry_game_MapObjectives$MapObjective_R_mindustry_game_MapObjectives$MapObjective 17
+typedef jobject (*func_mindustry_game_MapObjectives$DestroyCoreObjective_child_mindustry_game_MapObjectives$MapObjective_R_mindustry_game_MapObjectives$MapObjective)(jcontext ctx, jobject self, jobject param0);
+#define VTABLE_mindustry_game_MapObjectives$DestroyCoreObjective_parent_mindustry_game_MapObjectives$MapObjective_R_mindustry_game_MapObjectives$MapObjective 18
+typedef jobject (*func_mindustry_game_MapObjectives$DestroyCoreObjective_parent_mindustry_game_MapObjectives$MapObjective_R_mindustry_game_MapObjectives$MapObjective)(jcontext ctx, jobject self, jobject param0);
+#define VTABLE_mindustry_game_MapObjectives$DestroyCoreObjective_details_java_lang_String_R_mindustry_game_MapObjectives$MapObjective 19
+typedef jobject (*func_mindustry_game_MapObjectives$DestroyCoreObjective_details_java_lang_String_R_mindustry_game_MapObjectives$MapObjective)(jcontext ctx, jobject self, jobject param0);
+#define VTABLE_mindustry_game_MapObjectives$DestroyCoreObjective_flagsAdded_Array1_java_lang_String_R_mindustry_game_MapObjectives$MapObjective 20
+typedef jobject (*func_mindustry_game_MapObjectives$DestroyCoreObjective_flagsAdded_Array1_java_lang_String_R_mindustry_game_MapObjectives$MapObjective)(jcontext ctx, jobject self, jobject param0);
+#define VTABLE_mindustry_game_MapObjectives$DestroyCoreObjective_flagsRemoved_Array1_java_lang_String_R_mindustry_game_MapObjectives$MapObjective 21
+typedef jobject (*func_mindustry_game_MapObjectives$DestroyCoreObjective_flagsRemoved_Array1_java_lang_String_R_mindustry_game_MapObjectives$MapObjective)(jcontext ctx, jobject self, jobject param0);
+#define VTABLE_mindustry_game_MapObjectives$DestroyCoreObjective_markers_Array1_mindustry_game_MapObjectives$ObjectiveMarker_R_mindustry_game_MapObjectives$MapObjective 22
+typedef jobject (*func_mindustry_game_MapObjectives$DestroyCoreObjective_markers_Array1_mindustry_game_MapObjectives$ObjectiveMarker_R_mindustry_game_MapObjectives$MapObjective)(jcontext ctx, jobject self, jobject param0);
+#define VTABLE_mindustry_game_MapObjectives$DestroyCoreObjective_text_R_java_lang_String 23
+typedef jobject (*func_mindustry_game_MapObjectives$DestroyCoreObjective_text_R_java_lang_String)(jcontext ctx, jobject self);
+#define VTABLE_mindustry_game_MapObjectives$DestroyCoreObjective_details_R_java_lang_String 24
+typedef jobject (*func_mindustry_game_MapObjectives$DestroyCoreObjective_details_R_java_lang_String)(jcontext ctx, jobject self);
+#define VTABLE_mindustry_game_MapObjectives$DestroyCoreObjective_typeName_R_java_lang_String 25
+typedef jobject (*func_mindustry_game_MapObjectives$DestroyCoreObjective_typeName_R_java_lang_String)(jcontext ctx, jobject self);
+#define VTABLE_mindustry_game_MapObjectives$DestroyCoreObjective_validate 26
+typedef void (*func_mindustry_game_MapObjectives$DestroyCoreObjective_validate)(jcontext ctx, jobject self);
+
+void mark_mindustry_game_MapObjectives$DestroyCoreObjective(jobject object, jint mark, jint depth);
+void clinit_mindustry_game_MapObjectives$DestroyCoreObjective(jcontext ctx);
+void init_mindustry_game_MapObjectives$DestroyCoreObjective(jcontext ctx, jobject self);
+jbool M_mindustry_game_MapObjectives$DestroyCoreObjective_update_R_boolean(jcontext ctx, jobject self);
+jobject M_mindustry_game_MapObjectives$DestroyCoreObjective_text_R_java_lang_String(jcontext ctx, jobject self);
+jobject M_mindustry_game_MapObjectives$DestroyCoreObjective_toString_R_java_lang_String(jcontext ctx, jobject self);
+
+#ifdef __cplusplus
+}
+#endif
+
+#endif

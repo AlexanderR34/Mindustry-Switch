@@ -1,0 +1,139 @@
+#ifndef HEADER_java_util_concurrent_RecursiveAction
+#define HEADER_java_util_concurrent_RecursiveAction
+
+#include "Clearwing.h"
+#include "java/util/concurrent/ForkJoinTask.h"
+
+#ifdef __cplusplus
+extern "C" {
+#endif
+
+typedef struct java_util_concurrent_RecursiveAction {
+	java_util_concurrent_ForkJoinTask parent;
+} java_util_concurrent_RecursiveAction;
+
+extern Class class_java_util_concurrent_RecursiveAction;
+
+extern jlong SF_java_util_concurrent_RecursiveAction_serialVersionUID;
+
+#define VTABLE_java_util_concurrent_RecursiveAction_hashCode_R_int 0
+typedef jint (*func_java_util_concurrent_RecursiveAction_hashCode_R_int)(jcontext ctx, jobject self);
+#define VTABLE_java_util_concurrent_RecursiveAction_equals_java_lang_Object_R_boolean 1
+typedef jbool (*func_java_util_concurrent_RecursiveAction_equals_java_lang_Object_R_boolean)(jcontext ctx, jobject self, jobject param0);
+#define VTABLE_java_util_concurrent_RecursiveAction_clone_R_java_lang_Object 2
+typedef jobject (*func_java_util_concurrent_RecursiveAction_clone_R_java_lang_Object)(jcontext ctx, jobject self);
+#define VTABLE_java_util_concurrent_RecursiveAction_getClass_R_java_lang_Class 3
+typedef jobject (*func_java_util_concurrent_RecursiveAction_getClass_R_java_lang_Class)(jcontext ctx, jobject self);
+#define VTABLE_java_util_concurrent_RecursiveAction_toString_R_java_lang_String 4
+typedef jobject (*func_java_util_concurrent_RecursiveAction_toString_R_java_lang_String)(jcontext ctx, jobject self);
+#define VTABLE_java_util_concurrent_RecursiveAction_finalize 5
+typedef void (*func_java_util_concurrent_RecursiveAction_finalize)(jcontext ctx, jobject self);
+#define VTABLE_java_util_concurrent_RecursiveAction_notify 6
+typedef void (*func_java_util_concurrent_RecursiveAction_notify)(jcontext ctx, jobject self);
+#define VTABLE_java_util_concurrent_RecursiveAction_notifyAll 7
+typedef void (*func_java_util_concurrent_RecursiveAction_notifyAll)(jcontext ctx, jobject self);
+#define VTABLE_java_util_concurrent_RecursiveAction_wait 8
+typedef void (*func_java_util_concurrent_RecursiveAction_wait)(jcontext ctx, jobject self);
+#define VTABLE_java_util_concurrent_RecursiveAction_wait_long 9
+typedef void (*func_java_util_concurrent_RecursiveAction_wait_long)(jcontext ctx, jobject self, jlong param0);
+#define VTABLE_java_util_concurrent_RecursiveAction_wait_long_int 10
+typedef void (*func_java_util_concurrent_RecursiveAction_wait_long_int)(jcontext ctx, jobject self, jlong param0, jint param1);
+#define VTABLE_java_util_concurrent_RecursiveAction_cancel_boolean_R_boolean 11
+typedef jbool (*func_java_util_concurrent_RecursiveAction_cancel_boolean_R_boolean)(jcontext ctx, jobject self, jbool param0);
+#define VTABLE_java_util_concurrent_RecursiveAction_isCancelled_R_boolean 12
+typedef jbool (*func_java_util_concurrent_RecursiveAction_isCancelled_R_boolean)(jcontext ctx, jobject self);
+#define VTABLE_java_util_concurrent_RecursiveAction_isDone_R_boolean 13
+typedef jbool (*func_java_util_concurrent_RecursiveAction_isDone_R_boolean)(jcontext ctx, jobject self);
+#define VTABLE_java_util_concurrent_RecursiveAction_get_R_java_lang_Object 14
+typedef jobject (*func_java_util_concurrent_RecursiveAction_get_R_java_lang_Object)(jcontext ctx, jobject self);
+#define VTABLE_java_util_concurrent_RecursiveAction_get_long_java_util_concurrent_TimeUnit_R_java_lang_Object 15
+typedef jobject (*func_java_util_concurrent_RecursiveAction_get_long_java_util_concurrent_TimeUnit_R_java_lang_Object)(jcontext ctx, jobject self, jlong param0, jobject param1);
+#define VTABLE_java_util_concurrent_RecursiveAction_setCompletion_int_R_int 16
+typedef jint (*func_java_util_concurrent_RecursiveAction_setCompletion_int_R_int)(jcontext ctx, jobject self, jint param0);
+#define VTABLE_java_util_concurrent_RecursiveAction_doExec_R_int 17
+typedef jint (*func_java_util_concurrent_RecursiveAction_doExec_R_int)(jcontext ctx, jobject self);
+#define VTABLE_java_util_concurrent_RecursiveAction_internalWait_long 18
+typedef void (*func_java_util_concurrent_RecursiveAction_internalWait_long)(jcontext ctx, jobject self, jlong param0);
+#define VTABLE_java_util_concurrent_RecursiveAction_externalAwaitDone_R_int 19
+typedef jint (*func_java_util_concurrent_RecursiveAction_externalAwaitDone_R_int)(jcontext ctx, jobject self);
+#define VTABLE_java_util_concurrent_RecursiveAction_externalInterruptibleAwaitDone_R_int 20
+typedef jint (*func_java_util_concurrent_RecursiveAction_externalInterruptibleAwaitDone_R_int)(jcontext ctx, jobject self);
+#define VTABLE_java_util_concurrent_RecursiveAction_doJoin_R_int 21
+typedef jint (*func_java_util_concurrent_RecursiveAction_doJoin_R_int)(jcontext ctx, jobject self);
+#define VTABLE_java_util_concurrent_RecursiveAction_doInvoke_R_int 22
+typedef jint (*func_java_util_concurrent_RecursiveAction_doInvoke_R_int)(jcontext ctx, jobject self);
+#define VTABLE_java_util_concurrent_RecursiveAction_recordExceptionalCompletion_java_lang_Throwable_R_int 23
+typedef jint (*func_java_util_concurrent_RecursiveAction_recordExceptionalCompletion_java_lang_Throwable_R_int)(jcontext ctx, jobject self, jobject param0);
+#define VTABLE_java_util_concurrent_RecursiveAction_setExceptionalCompletion_java_lang_Throwable_R_int 24
+typedef jint (*func_java_util_concurrent_RecursiveAction_setExceptionalCompletion_java_lang_Throwable_R_int)(jcontext ctx, jobject self, jobject param0);
+#define VTABLE_java_util_concurrent_RecursiveAction_internalPropagateException_java_lang_Throwable 25
+typedef void (*func_java_util_concurrent_RecursiveAction_internalPropagateException_java_lang_Throwable)(jcontext ctx, jobject self, jobject param0);
+#define VTABLE_java_util_concurrent_RecursiveAction_clearExceptionalCompletion 26
+typedef void (*func_java_util_concurrent_RecursiveAction_clearExceptionalCompletion)(jcontext ctx, jobject self);
+#define VTABLE_java_util_concurrent_RecursiveAction_getThrowableException_R_java_lang_Throwable 27
+typedef jobject (*func_java_util_concurrent_RecursiveAction_getThrowableException_R_java_lang_Throwable)(jcontext ctx, jobject self);
+#define VTABLE_java_util_concurrent_RecursiveAction_reportException_int 28
+typedef void (*func_java_util_concurrent_RecursiveAction_reportException_int)(jcontext ctx, jobject self, jint param0);
+#define VTABLE_java_util_concurrent_RecursiveAction_fork_R_java_util_concurrent_ForkJoinTask 29
+typedef jobject (*func_java_util_concurrent_RecursiveAction_fork_R_java_util_concurrent_ForkJoinTask)(jcontext ctx, jobject self);
+#define VTABLE_java_util_concurrent_RecursiveAction_join_R_java_lang_Object 30
+typedef jobject (*func_java_util_concurrent_RecursiveAction_join_R_java_lang_Object)(jcontext ctx, jobject self);
+#define VTABLE_java_util_concurrent_RecursiveAction_invoke_R_java_lang_Object 31
+typedef jobject (*func_java_util_concurrent_RecursiveAction_invoke_R_java_lang_Object)(jcontext ctx, jobject self);
+#define VTABLE_java_util_concurrent_RecursiveAction_isCompletedAbnormally_R_boolean 32
+typedef jbool (*func_java_util_concurrent_RecursiveAction_isCompletedAbnormally_R_boolean)(jcontext ctx, jobject self);
+#define VTABLE_java_util_concurrent_RecursiveAction_isCompletedNormally_R_boolean 33
+typedef jbool (*func_java_util_concurrent_RecursiveAction_isCompletedNormally_R_boolean)(jcontext ctx, jobject self);
+#define VTABLE_java_util_concurrent_RecursiveAction_getException_R_java_lang_Throwable 34
+typedef jobject (*func_java_util_concurrent_RecursiveAction_getException_R_java_lang_Throwable)(jcontext ctx, jobject self);
+#define VTABLE_java_util_concurrent_RecursiveAction_completeExceptionally_java_lang_Throwable 35
+typedef void (*func_java_util_concurrent_RecursiveAction_completeExceptionally_java_lang_Throwable)(jcontext ctx, jobject self, jobject param0);
+#define VTABLE_java_util_concurrent_RecursiveAction_complete_java_lang_Object 36
+typedef void (*func_java_util_concurrent_RecursiveAction_complete_java_lang_Object)(jcontext ctx, jobject self, jobject param0);
+#define VTABLE_java_util_concurrent_RecursiveAction_quietlyComplete 37
+typedef void (*func_java_util_concurrent_RecursiveAction_quietlyComplete)(jcontext ctx, jobject self);
+#define VTABLE_java_util_concurrent_RecursiveAction_quietlyJoin 38
+typedef void (*func_java_util_concurrent_RecursiveAction_quietlyJoin)(jcontext ctx, jobject self);
+#define VTABLE_java_util_concurrent_RecursiveAction_quietlyInvoke 39
+typedef void (*func_java_util_concurrent_RecursiveAction_quietlyInvoke)(jcontext ctx, jobject self);
+#define VTABLE_java_util_concurrent_RecursiveAction_reinitialize 40
+typedef void (*func_java_util_concurrent_RecursiveAction_reinitialize)(jcontext ctx, jobject self);
+#define VTABLE_java_util_concurrent_RecursiveAction_tryUnfork_R_boolean 41
+typedef jbool (*func_java_util_concurrent_RecursiveAction_tryUnfork_R_boolean)(jcontext ctx, jobject self);
+#define VTABLE_java_util_concurrent_RecursiveAction_getRawResult_R_java_lang_Object 42
+typedef jobject (*func_java_util_concurrent_RecursiveAction_getRawResult_R_java_lang_Object)(jcontext ctx, jobject self);
+#define VTABLE_java_util_concurrent_RecursiveAction_setRawResult_java_lang_Object 43
+typedef void (*func_java_util_concurrent_RecursiveAction_setRawResult_java_lang_Object)(jcontext ctx, jobject self, jobject param0);
+#define VTABLE_java_util_concurrent_RecursiveAction_exec_R_boolean 44
+typedef jbool (*func_java_util_concurrent_RecursiveAction_exec_R_boolean)(jcontext ctx, jobject self);
+#define VTABLE_java_util_concurrent_RecursiveAction_getForkJoinTaskTag_R_short 45
+typedef jshort (*func_java_util_concurrent_RecursiveAction_getForkJoinTaskTag_R_short)(jcontext ctx, jobject self);
+#define VTABLE_java_util_concurrent_RecursiveAction_setForkJoinTaskTag_short_R_short 46
+typedef jshort (*func_java_util_concurrent_RecursiveAction_setForkJoinTaskTag_short_R_short)(jcontext ctx, jobject self, jshort param0);
+#define VTABLE_java_util_concurrent_RecursiveAction_compareAndSetForkJoinTaskTag_short_short_R_boolean 47
+typedef jbool (*func_java_util_concurrent_RecursiveAction_compareAndSetForkJoinTaskTag_short_short_R_boolean)(jcontext ctx, jobject self, jshort param0, jshort param1);
+#define VTABLE_java_util_concurrent_RecursiveAction_writeObject_java_io_ObjectOutputStream 48
+typedef void (*func_java_util_concurrent_RecursiveAction_writeObject_java_io_ObjectOutputStream)(jcontext ctx, jobject self, jobject param0);
+#define VTABLE_java_util_concurrent_RecursiveAction_readObject_java_io_ObjectInputStream 49
+typedef void (*func_java_util_concurrent_RecursiveAction_readObject_java_io_ObjectInputStream)(jcontext ctx, jobject self, jobject param0);
+#define VTABLE_java_util_concurrent_RecursiveAction_compute 50
+typedef void (*func_java_util_concurrent_RecursiveAction_compute)(jcontext ctx, jobject self);
+#define VTABLE_java_util_concurrent_RecursiveAction_getRawResult_R_java_lang_Void 51
+typedef jobject (*func_java_util_concurrent_RecursiveAction_getRawResult_R_java_lang_Void)(jcontext ctx, jobject self);
+#define VTABLE_java_util_concurrent_RecursiveAction_setRawResult_java_lang_Void 52
+typedef void (*func_java_util_concurrent_RecursiveAction_setRawResult_java_lang_Void)(jcontext ctx, jobject self, jobject param0);
+
+void mark_java_util_concurrent_RecursiveAction(jobject object, jint mark, jint depth);
+void clinit_java_util_concurrent_RecursiveAction(jcontext ctx);
+void init_java_util_concurrent_RecursiveAction(jcontext ctx, jobject self);
+jobject M_java_util_concurrent_RecursiveAction_getRawResult_R_java_lang_Void(jcontext ctx, jobject self);
+void M_java_util_concurrent_RecursiveAction_setRawResult_java_lang_Void(jcontext ctx, jobject self, jobject param0);
+jbool M_java_util_concurrent_RecursiveAction_exec_R_boolean(jcontext ctx, jobject self);
+void M_java_util_concurrent_RecursiveAction_setRawResult_java_lang_Object(jcontext ctx, jobject self, jobject param0);
+jobject M_java_util_concurrent_RecursiveAction_getRawResult_R_java_lang_Object(jcontext ctx, jobject self);
+
+#ifdef __cplusplus
+}
+#endif
+
+#endif

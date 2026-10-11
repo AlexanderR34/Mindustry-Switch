@@ -1,0 +1,140 @@
+#ifndef HEADER_mindustry_logic_LStatements$JumpStatement
+#define HEADER_mindustry_logic_LStatements$JumpStatement
+
+#include "Clearwing.h"
+#include "mindustry/logic/LStatement.h"
+
+#ifdef __cplusplus
+extern "C" {
+#endif
+
+typedef struct mindustry_logic_LStatements$JumpStatement {
+	mindustry_logic_LStatement parent;
+	jref F_dest;
+	jint F_destIndex;
+	jref F_op;
+	jref F_value;
+	jref F_compare;
+} mindustry_logic_LStatements$JumpStatement;
+
+extern Class class_mindustry_logic_LStatements$JumpStatement;
+
+extern jobject SF_mindustry_logic_LStatements$JumpStatement_last;
+
+#define VTABLE_mindustry_logic_LStatements$JumpStatement_hashCode_R_int 0
+typedef jint (*func_mindustry_logic_LStatements$JumpStatement_hashCode_R_int)(jcontext ctx, jobject self);
+#define VTABLE_mindustry_logic_LStatements$JumpStatement_equals_java_lang_Object_R_boolean 1
+typedef jbool (*func_mindustry_logic_LStatements$JumpStatement_equals_java_lang_Object_R_boolean)(jcontext ctx, jobject self, jobject param0);
+#define VTABLE_mindustry_logic_LStatements$JumpStatement_clone_R_java_lang_Object 2
+typedef jobject (*func_mindustry_logic_LStatements$JumpStatement_clone_R_java_lang_Object)(jcontext ctx, jobject self);
+#define VTABLE_mindustry_logic_LStatements$JumpStatement_getClass_R_java_lang_Class 3
+typedef jobject (*func_mindustry_logic_LStatements$JumpStatement_getClass_R_java_lang_Class)(jcontext ctx, jobject self);
+#define VTABLE_mindustry_logic_LStatements$JumpStatement_toString_R_java_lang_String 4
+typedef jobject (*func_mindustry_logic_LStatements$JumpStatement_toString_R_java_lang_String)(jcontext ctx, jobject self);
+#define VTABLE_mindustry_logic_LStatements$JumpStatement_finalize 5
+typedef void (*func_mindustry_logic_LStatements$JumpStatement_finalize)(jcontext ctx, jobject self);
+#define VTABLE_mindustry_logic_LStatements$JumpStatement_notify 6
+typedef void (*func_mindustry_logic_LStatements$JumpStatement_notify)(jcontext ctx, jobject self);
+#define VTABLE_mindustry_logic_LStatements$JumpStatement_notifyAll 7
+typedef void (*func_mindustry_logic_LStatements$JumpStatement_notifyAll)(jcontext ctx, jobject self);
+#define VTABLE_mindustry_logic_LStatements$JumpStatement_wait 8
+typedef void (*func_mindustry_logic_LStatements$JumpStatement_wait)(jcontext ctx, jobject self);
+#define VTABLE_mindustry_logic_LStatements$JumpStatement_wait_long 9
+typedef void (*func_mindustry_logic_LStatements$JumpStatement_wait_long)(jcontext ctx, jobject self, jlong param0);
+#define VTABLE_mindustry_logic_LStatements$JumpStatement_wait_long_int 10
+typedef void (*func_mindustry_logic_LStatements$JumpStatement_wait_long_int)(jcontext ctx, jobject self, jlong param0, jint param1);
+#define VTABLE_mindustry_logic_LStatements$JumpStatement_build_arc_scene_ui_layout_Table 11
+typedef void (*func_mindustry_logic_LStatements$JumpStatement_build_arc_scene_ui_layout_Table)(jcontext ctx, jobject self, jobject param0);
+#define VTABLE_mindustry_logic_LStatements$JumpStatement_build_mindustry_logic_LAssembler_R_mindustry_logic_LExecutor$LInstruction 12
+typedef jobject (*func_mindustry_logic_LStatements$JumpStatement_build_mindustry_logic_LAssembler_R_mindustry_logic_LExecutor$LInstruction)(jcontext ctx, jobject self, jobject param0);
+#define VTABLE_mindustry_logic_LStatements$JumpStatement_category_R_mindustry_logic_LCategory 13
+typedef jobject (*func_mindustry_logic_LStatements$JumpStatement_category_R_mindustry_logic_LCategory)(jcontext ctx, jobject self);
+#define VTABLE_mindustry_logic_LStatements$JumpStatement_copy_R_mindustry_logic_LStatement 14
+typedef jobject (*func_mindustry_logic_LStatements$JumpStatement_copy_R_mindustry_logic_LStatement)(jcontext ctx, jobject self);
+#define VTABLE_mindustry_logic_LStatements$JumpStatement_useWrapping_R_boolean 15
+typedef jbool (*func_mindustry_logic_LStatements$JumpStatement_useWrapping_R_boolean)(jcontext ctx, jobject self);
+#define VTABLE_mindustry_logic_LStatements$JumpStatement_hidden_R_boolean 16
+typedef jbool (*func_mindustry_logic_LStatements$JumpStatement_hidden_R_boolean)(jcontext ctx, jobject self);
+#define VTABLE_mindustry_logic_LStatements$JumpStatement_privileged_R_boolean 17
+typedef jbool (*func_mindustry_logic_LStatements$JumpStatement_privileged_R_boolean)(jcontext ctx, jobject self);
+#define VTABLE_mindustry_logic_LStatements$JumpStatement_nonPrivileged_R_boolean 18
+typedef jbool (*func_mindustry_logic_LStatements$JumpStatement_nonPrivileged_R_boolean)(jcontext ctx, jobject self);
+#define VTABLE_mindustry_logic_LStatements$JumpStatement_param_arc_scene_ui_layout_Cell 19
+typedef void (*func_mindustry_logic_LStatements$JumpStatement_param_arc_scene_ui_layout_Cell)(jcontext ctx, jobject self, jobject param0);
+#define VTABLE_mindustry_logic_LStatements$JumpStatement_field_arc_scene_ui_layout_Table_java_lang_String_arc_func_Cons_R_arc_scene_ui_layout_Cell 20
+typedef jobject (*func_mindustry_logic_LStatements$JumpStatement_field_arc_scene_ui_layout_Table_java_lang_String_arc_func_Cons_R_arc_scene_ui_layout_Cell)(jcontext ctx, jobject self, jobject param0, jobject param1, jobject param2);
+#define VTABLE_mindustry_logic_LStatements$JumpStatement_fields_arc_scene_ui_layout_Table_java_lang_String_java_lang_String_arc_func_Cons_R_arc_scene_ui_layout_Cell 21
+typedef jobject (*func_mindustry_logic_LStatements$JumpStatement_fields_arc_scene_ui_layout_Table_java_lang_String_java_lang_String_arc_func_Cons_R_arc_scene_ui_layout_Cell)(jcontext ctx, jobject self, jobject param0, jobject param1, jobject param2, jobject param3);
+#define VTABLE_mindustry_logic_LStatements$JumpStatement_fields_arc_scene_ui_layout_Table_java_lang_String_arc_func_Cons_R_arc_scene_ui_layout_Cell 22
+typedef jobject (*func_mindustry_logic_LStatements$JumpStatement_fields_arc_scene_ui_layout_Table_java_lang_String_arc_func_Cons_R_arc_scene_ui_layout_Cell)(jcontext ctx, jobject self, jobject param0, jobject param1, jobject param2);
+#define VTABLE_mindustry_logic_LStatements$JumpStatement_fields_arc_scene_ui_layout_Table_java_lang_String_boolean_java_lang_String_arc_func_Cons_R_arc_scene_ui_layout_Cell 23
+typedef jobject (*func_mindustry_logic_LStatements$JumpStatement_fields_arc_scene_ui_layout_Table_java_lang_String_boolean_java_lang_String_arc_func_Cons_R_arc_scene_ui_layout_Cell)(jcontext ctx, jobject self, jobject param0, jobject param1, jbool param2, jobject param3, jobject param4);
+#define VTABLE_mindustry_logic_LStatements$JumpStatement_col_arc_scene_ui_layout_Table_java_lang_String_arc_func_Cons_R_arc_scene_ui_layout_Cell 24
+typedef jobject (*func_mindustry_logic_LStatements$JumpStatement_col_arc_scene_ui_layout_Table_java_lang_String_arc_func_Cons_R_arc_scene_ui_layout_Cell)(jcontext ctx, jobject self, jobject param0, jobject param1, jobject param2);
+#define VTABLE_mindustry_logic_LStatements$JumpStatement_showSelect_arc_scene_ui_Button_Array1_java_lang_Object_java_lang_Object_arc_func_Cons_int_arc_func_Cons 25
+typedef void (*func_mindustry_logic_LStatements$JumpStatement_showSelect_arc_scene_ui_Button_Array1_java_lang_Object_java_lang_Object_arc_func_Cons_int_arc_func_Cons)(jcontext ctx, jobject self, jobject param0, jobject param1, jobject param2, jobject param3, jint param4, jobject param5);
+#define VTABLE_mindustry_logic_LStatements$JumpStatement_showSelect_arc_scene_ui_Button_Array1_java_lang_Object_java_lang_Object_arc_func_Cons 26
+typedef void (*func_mindustry_logic_LStatements$JumpStatement_showSelect_arc_scene_ui_Button_Array1_java_lang_Object_java_lang_Object_arc_func_Cons)(jcontext ctx, jobject self, jobject param0, jobject param1, jobject param2, jobject param3);
+#define VTABLE_mindustry_logic_LStatements$JumpStatement_fieldAlignSelect_arc_scene_ui_layout_Table_arc_func_Prov_arc_func_Cons_boolean_boolean 27
+typedef void (*func_mindustry_logic_LStatements$JumpStatement_fieldAlignSelect_arc_scene_ui_layout_Table_arc_func_Prov_arc_func_Cons_boolean_boolean)(jcontext ctx, jobject self, jobject param0, jobject param1, jobject param2, jbool param3, jbool param4);
+#define VTABLE_mindustry_logic_LStatements$JumpStatement_afterRead 28
+typedef void (*func_mindustry_logic_LStatements$JumpStatement_afterRead)(jcontext ctx, jobject self);
+#define VTABLE_mindustry_logic_LStatements$JumpStatement_write_java_lang_StringBuilder 29
+typedef void (*func_mindustry_logic_LStatements$JumpStatement_write_java_lang_StringBuilder)(jcontext ctx, jobject self, jobject param0);
+#define VTABLE_mindustry_logic_LStatements$JumpStatement_setupUI 30
+typedef void (*func_mindustry_logic_LStatements$JumpStatement_setupUI)(jcontext ctx, jobject self);
+#define VTABLE_mindustry_logic_LStatements$JumpStatement_saveUI 31
+typedef void (*func_mindustry_logic_LStatements$JumpStatement_saveUI)(jcontext ctx, jobject self);
+#define VTABLE_mindustry_logic_LStatements$JumpStatement_typeName_R_java_lang_String 32
+typedef jobject (*func_mindustry_logic_LStatements$JumpStatement_typeName_R_java_lang_String)(jcontext ctx, jobject self);
+#define VTABLE_mindustry_logic_LStatements$JumpStatement_statementKey_R_java_lang_String 33
+typedef jobject (*func_mindustry_logic_LStatements$JumpStatement_statementKey_R_java_lang_String)(jcontext ctx, jobject self);
+#define VTABLE_mindustry_logic_LStatements$JumpStatement_localizedName_R_java_lang_String 34
+typedef jobject (*func_mindustry_logic_LStatements$JumpStatement_localizedName_R_java_lang_String)(jcontext ctx, jobject self);
+#define VTABLE_mindustry_logic_LStatements$JumpStatement_name_R_java_lang_String 35
+typedef jobject (*func_mindustry_logic_LStatements$JumpStatement_name_R_java_lang_String)(jcontext ctx, jobject self);
+#define VTABLE_mindustry_logic_LStatements$JumpStatement_rebuild_arc_scene_ui_layout_Table 36
+typedef void (*func_mindustry_logic_LStatements$JumpStatement_rebuild_arc_scene_ui_layout_Table)(jcontext ctx, jobject self, jobject param0);
+#define VTABLE_mindustry_logic_LStatements$JumpStatement_lambda$rebuild$2_java_lang_String 37
+typedef void (*func_mindustry_logic_LStatements$JumpStatement_lambda$rebuild$2_java_lang_String)(jcontext ctx, jobject self, jobject param0);
+#define VTABLE_mindustry_logic_LStatements$JumpStatement_lambda$rebuild$1_java_lang_String 38
+typedef void (*func_mindustry_logic_LStatements$JumpStatement_lambda$rebuild$1_java_lang_String)(jcontext ctx, jobject self, jobject param0);
+#define VTABLE_mindustry_logic_LStatements$JumpStatement_lambda$rebuild$0_arc_scene_ui_layout_Table_mindustry_logic_ConditionOp 39
+typedef void (*func_mindustry_logic_LStatements$JumpStatement_lambda$rebuild$0_arc_scene_ui_layout_Table_mindustry_logic_ConditionOp)(jcontext ctx, jobject self, jobject param0, jobject param1);
+#define VTABLE_mindustry_logic_LStatements$JumpStatement_lambda$build$2_arc_scene_ui_layout_Table_java_lang_String 40
+typedef void (*func_mindustry_logic_LStatements$JumpStatement_lambda$build$2_arc_scene_ui_layout_Table_java_lang_String)(jcontext ctx, jobject self, jobject param0, jobject param1);
+#define VTABLE_mindustry_logic_LStatements$JumpStatement_lambda$build$3_arc_scene_ui_Label_java_lang_String 41
+typedef void (*func_mindustry_logic_LStatements$JumpStatement_lambda$build$3_arc_scene_ui_Label_java_lang_String)(jcontext ctx, jobject self, jobject param0, jobject param1);
+#define VTABLE_mindustry_logic_LStatements$JumpStatement_lambda$build$1_mindustry_logic_LCanvas$StatementElem 42
+typedef void (*func_mindustry_logic_LStatements$JumpStatement_lambda$build$1_mindustry_logic_LCanvas$StatementElem)(jcontext ctx, jobject self, jobject param0);
+#define VTABLE_mindustry_logic_LStatements$JumpStatement_lambda$build$0_R_mindustry_logic_LCanvas$StatementElem 43
+typedef jobject (*func_mindustry_logic_LStatements$JumpStatement_lambda$build$0_R_mindustry_logic_LCanvas$StatementElem)(jcontext ctx, jobject self);
+
+void mark_mindustry_logic_LStatements$JumpStatement(jobject object, jint mark, jint depth);
+void clinit_mindustry_logic_LStatements$JumpStatement(jcontext ctx);
+void init_mindustry_logic_LStatements$JumpStatement(jcontext ctx, jobject self);
+jbool M_mindustry_logic_LStatements$JumpStatement_useWrapping_R_boolean(jcontext ctx, jobject self);
+void M_mindustry_logic_LStatements$JumpStatement_build_arc_scene_ui_layout_Table(jcontext ctx, jobject self, jobject param0);
+void M_mindustry_logic_LStatements$JumpStatement_rebuild_arc_scene_ui_layout_Table(jcontext ctx, jobject self, jobject param0);
+void SM_mindustry_logic_LStatements$JumpStatement_addOp_mindustry_logic_LStatement_arc_scene_ui_layout_Table_mindustry_logic_ConditionOp_arc_func_Cons_java_lang_String_arc_func_Cons_java_lang_String_arc_func_Cons(jcontext ctx, jobject param0, jobject param1, jobject param2, jobject param3, jobject param4, jobject param5, jobject param6, jobject param7);
+void M_mindustry_logic_LStatements$JumpStatement_setupUI(jcontext ctx, jobject self);
+void M_mindustry_logic_LStatements$JumpStatement_saveUI(jcontext ctx, jobject self);
+jobject M_mindustry_logic_LStatements$JumpStatement_build_mindustry_logic_LAssembler_R_mindustry_logic_LExecutor$LInstruction(jcontext ctx, jobject self, jobject param0);
+jobject M_mindustry_logic_LStatements$JumpStatement_category_R_mindustry_logic_LCategory(jcontext ctx, jobject self);
+void SM_mindustry_logic_LStatements$JumpStatement_lambda$addOp$3(jcontext ctx);
+void SM_mindustry_logic_LStatements$JumpStatement_lambda$addOp$0_mindustry_logic_ConditionOp_mindustry_logic_LStatement_arc_func_Cons_arc_scene_ui_Button(jcontext ctx, jobject param0, jobject param1, jobject param2, jobject param3);
+void SM_mindustry_logic_LStatements$JumpStatement_lambda$addOp$1_mindustry_logic_LStatement_arc_scene_ui_Button_mindustry_logic_ConditionOp_arc_func_Cons(jcontext ctx, jobject param0, jobject param1, jobject param2, jobject param3);
+void SM_mindustry_logic_LStatements$JumpStatement_lambda$addOp$2_arc_scene_ui_layout_Cell(jcontext ctx, jobject param0);
+void M_mindustry_logic_LStatements$JumpStatement_lambda$rebuild$2_java_lang_String(jcontext ctx, jobject self, jobject param0);
+void M_mindustry_logic_LStatements$JumpStatement_lambda$rebuild$1_java_lang_String(jcontext ctx, jobject self, jobject param0);
+void M_mindustry_logic_LStatements$JumpStatement_lambda$rebuild$0_arc_scene_ui_layout_Table_mindustry_logic_ConditionOp(jcontext ctx, jobject self, jobject param0, jobject param1);
+void M_mindustry_logic_LStatements$JumpStatement_lambda$build$2_arc_scene_ui_layout_Table_java_lang_String(jcontext ctx, jobject self, jobject param0, jobject param1);
+void M_mindustry_logic_LStatements$JumpStatement_lambda$build$3_arc_scene_ui_Label_java_lang_String(jcontext ctx, jobject self, jobject param0, jobject param1);
+void M_mindustry_logic_LStatements$JumpStatement_lambda$build$1_mindustry_logic_LCanvas$StatementElem(jcontext ctx, jobject self, jobject param0);
+jobject M_mindustry_logic_LStatements$JumpStatement_lambda$build$0_R_mindustry_logic_LCanvas$StatementElem(jcontext ctx, jobject self);
+
+#ifdef __cplusplus
+}
+#endif
+
+#endif

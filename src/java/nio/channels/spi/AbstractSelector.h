@@ -1,0 +1,100 @@
+#ifndef HEADER_java_nio_channels_spi_AbstractSelector
+#define HEADER_java_nio_channels_spi_AbstractSelector
+
+#include "Clearwing.h"
+#include "java/nio/channels/Selector.h"
+
+#ifdef __cplusplus
+extern "C" {
+#endif
+
+typedef struct java_nio_channels_spi_AbstractSelector {
+	java_nio_channels_Selector parent;
+	jref F_selectorOpen;
+	jref F_provider;
+	jref F_cancelledKeys;
+} java_nio_channels_spi_AbstractSelector;
+
+extern Class class_java_nio_channels_spi_AbstractSelector;
+
+
+#define VTABLE_java_nio_channels_spi_AbstractSelector_hashCode_R_int 0
+typedef jint (*func_java_nio_channels_spi_AbstractSelector_hashCode_R_int)(jcontext ctx, jobject self);
+#define VTABLE_java_nio_channels_spi_AbstractSelector_equals_java_lang_Object_R_boolean 1
+typedef jbool (*func_java_nio_channels_spi_AbstractSelector_equals_java_lang_Object_R_boolean)(jcontext ctx, jobject self, jobject param0);
+#define VTABLE_java_nio_channels_spi_AbstractSelector_clone_R_java_lang_Object 2
+typedef jobject (*func_java_nio_channels_spi_AbstractSelector_clone_R_java_lang_Object)(jcontext ctx, jobject self);
+#define VTABLE_java_nio_channels_spi_AbstractSelector_getClass_R_java_lang_Class 3
+typedef jobject (*func_java_nio_channels_spi_AbstractSelector_getClass_R_java_lang_Class)(jcontext ctx, jobject self);
+#define VTABLE_java_nio_channels_spi_AbstractSelector_toString_R_java_lang_String 4
+typedef jobject (*func_java_nio_channels_spi_AbstractSelector_toString_R_java_lang_String)(jcontext ctx, jobject self);
+#define VTABLE_java_nio_channels_spi_AbstractSelector_finalize 5
+typedef void (*func_java_nio_channels_spi_AbstractSelector_finalize)(jcontext ctx, jobject self);
+#define VTABLE_java_nio_channels_spi_AbstractSelector_notify 6
+typedef void (*func_java_nio_channels_spi_AbstractSelector_notify)(jcontext ctx, jobject self);
+#define VTABLE_java_nio_channels_spi_AbstractSelector_notifyAll 7
+typedef void (*func_java_nio_channels_spi_AbstractSelector_notifyAll)(jcontext ctx, jobject self);
+#define VTABLE_java_nio_channels_spi_AbstractSelector_wait 8
+typedef void (*func_java_nio_channels_spi_AbstractSelector_wait)(jcontext ctx, jobject self);
+#define VTABLE_java_nio_channels_spi_AbstractSelector_wait_long 9
+typedef void (*func_java_nio_channels_spi_AbstractSelector_wait_long)(jcontext ctx, jobject self, jlong param0);
+#define VTABLE_java_nio_channels_spi_AbstractSelector_wait_long_int 10
+typedef void (*func_java_nio_channels_spi_AbstractSelector_wait_long_int)(jcontext ctx, jobject self, jlong param0, jint param1);
+#define VTABLE_java_nio_channels_spi_AbstractSelector_close 11
+typedef void (*func_java_nio_channels_spi_AbstractSelector_close)(jcontext ctx, jobject self);
+#define VTABLE_java_nio_channels_spi_AbstractSelector_isOpen_R_boolean 12
+typedef jbool (*func_java_nio_channels_spi_AbstractSelector_isOpen_R_boolean)(jcontext ctx, jobject self);
+#define VTABLE_java_nio_channels_spi_AbstractSelector_provider_R_java_nio_channels_spi_SelectorProvider 13
+typedef jobject (*func_java_nio_channels_spi_AbstractSelector_provider_R_java_nio_channels_spi_SelectorProvider)(jcontext ctx, jobject self);
+#define VTABLE_java_nio_channels_spi_AbstractSelector_keys_R_java_util_Set 14
+typedef jobject (*func_java_nio_channels_spi_AbstractSelector_keys_R_java_util_Set)(jcontext ctx, jobject self);
+#define VTABLE_java_nio_channels_spi_AbstractSelector_selectedKeys_R_java_util_Set 15
+typedef jobject (*func_java_nio_channels_spi_AbstractSelector_selectedKeys_R_java_util_Set)(jcontext ctx, jobject self);
+#define VTABLE_java_nio_channels_spi_AbstractSelector_selectNow_R_int 16
+typedef jint (*func_java_nio_channels_spi_AbstractSelector_selectNow_R_int)(jcontext ctx, jobject self);
+#define VTABLE_java_nio_channels_spi_AbstractSelector_select_long_R_int 17
+typedef jint (*func_java_nio_channels_spi_AbstractSelector_select_long_R_int)(jcontext ctx, jobject self, jlong param0);
+#define VTABLE_java_nio_channels_spi_AbstractSelector_select_R_int 18
+typedef jint (*func_java_nio_channels_spi_AbstractSelector_select_R_int)(jcontext ctx, jobject self);
+#define VTABLE_java_nio_channels_spi_AbstractSelector_select_java_util_function_Consumer_long_R_int 19
+typedef jint (*func_java_nio_channels_spi_AbstractSelector_select_java_util_function_Consumer_long_R_int)(jcontext ctx, jobject self, jobject param0, jlong param1);
+#define VTABLE_java_nio_channels_spi_AbstractSelector_select_java_util_function_Consumer_R_int 20
+typedef jint (*func_java_nio_channels_spi_AbstractSelector_select_java_util_function_Consumer_R_int)(jcontext ctx, jobject self, jobject param0);
+#define VTABLE_java_nio_channels_spi_AbstractSelector_selectNow_java_util_function_Consumer_R_int 21
+typedef jint (*func_java_nio_channels_spi_AbstractSelector_selectNow_java_util_function_Consumer_R_int)(jcontext ctx, jobject self, jobject param0);
+#define VTABLE_java_nio_channels_spi_AbstractSelector_doSelect_java_util_function_Consumer_long_R_int 22
+typedef jint (*func_java_nio_channels_spi_AbstractSelector_doSelect_java_util_function_Consumer_long_R_int)(jcontext ctx, jobject self, jobject param0, jlong param1);
+#define VTABLE_java_nio_channels_spi_AbstractSelector_wakeup_R_java_nio_channels_Selector 23
+typedef jobject (*func_java_nio_channels_spi_AbstractSelector_wakeup_R_java_nio_channels_Selector)(jcontext ctx, jobject self);
+#define VTABLE_java_nio_channels_spi_AbstractSelector_cancel_java_nio_channels_SelectionKey 24
+typedef void (*func_java_nio_channels_spi_AbstractSelector_cancel_java_nio_channels_SelectionKey)(jcontext ctx, jobject self, jobject param0);
+#define VTABLE_java_nio_channels_spi_AbstractSelector_implCloseSelector 25
+typedef void (*func_java_nio_channels_spi_AbstractSelector_implCloseSelector)(jcontext ctx, jobject self);
+#define VTABLE_java_nio_channels_spi_AbstractSelector_cancelledKeys_R_java_util_Set 26
+typedef jobject (*func_java_nio_channels_spi_AbstractSelector_cancelledKeys_R_java_util_Set)(jcontext ctx, jobject self);
+#define VTABLE_java_nio_channels_spi_AbstractSelector_register_java_nio_channels_spi_AbstractSelectableChannel_int_java_lang_Object_R_java_nio_channels_SelectionKey 27
+typedef jobject (*func_java_nio_channels_spi_AbstractSelector_register_java_nio_channels_spi_AbstractSelectableChannel_int_java_lang_Object_R_java_nio_channels_SelectionKey)(jcontext ctx, jobject self, jobject param0, jint param1, jobject param2);
+#define VTABLE_java_nio_channels_spi_AbstractSelector_deregister_java_nio_channels_spi_AbstractSelectionKey 28
+typedef void (*func_java_nio_channels_spi_AbstractSelector_deregister_java_nio_channels_spi_AbstractSelectionKey)(jcontext ctx, jobject self, jobject param0);
+#define VTABLE_java_nio_channels_spi_AbstractSelector_begin 29
+typedef void (*func_java_nio_channels_spi_AbstractSelector_begin)(jcontext ctx, jobject self);
+#define VTABLE_java_nio_channels_spi_AbstractSelector_end 30
+typedef void (*func_java_nio_channels_spi_AbstractSelector_end)(jcontext ctx, jobject self);
+
+void mark_java_nio_channels_spi_AbstractSelector(jobject object, jint mark, jint depth);
+void clinit_java_nio_channels_spi_AbstractSelector(jcontext ctx);
+void init_java_nio_channels_spi_AbstractSelector_java_nio_channels_spi_SelectorProvider(jcontext ctx, jobject self, jobject param0);
+void M_java_nio_channels_spi_AbstractSelector_cancel_java_nio_channels_SelectionKey(jcontext ctx, jobject self, jobject param0);
+void M_java_nio_channels_spi_AbstractSelector_close(jcontext ctx, jobject self);
+jbool M_java_nio_channels_spi_AbstractSelector_isOpen_R_boolean(jcontext ctx, jobject self);
+jobject M_java_nio_channels_spi_AbstractSelector_provider_R_java_nio_channels_spi_SelectorProvider(jcontext ctx, jobject self);
+jobject M_java_nio_channels_spi_AbstractSelector_cancelledKeys_R_java_util_Set(jcontext ctx, jobject self);
+void M_java_nio_channels_spi_AbstractSelector_deregister_java_nio_channels_spi_AbstractSelectionKey(jcontext ctx, jobject self, jobject param0);
+void M_java_nio_channels_spi_AbstractSelector_begin(jcontext ctx, jobject self);
+void M_java_nio_channels_spi_AbstractSelector_end(jcontext ctx, jobject self);
+
+#ifdef __cplusplus
+}
+#endif
+
+#endif

@@ -1,0 +1,58 @@
+#ifndef HEADER_arc_Graphics$BufferFormat
+#define HEADER_arc_Graphics$BufferFormat
+
+#include "Clearwing.h"
+#include "java/lang/Object.h"
+
+#ifdef __cplusplus
+extern "C" {
+#endif
+
+typedef struct arc_Graphics$BufferFormat {
+	java_lang_Object parent;
+	jint F_r;
+	jint F_g;
+	jint F_b;
+	jint F_a;
+	jint F_depth;
+	jint F_stencil;
+	jint F_samples;
+	jbool F_coverageSampling;
+} arc_Graphics$BufferFormat;
+
+extern Class class_arc_Graphics$BufferFormat;
+
+
+#define VTABLE_arc_Graphics$BufferFormat_hashCode_R_int 0
+typedef jint (*func_arc_Graphics$BufferFormat_hashCode_R_int)(jcontext ctx, jobject self);
+#define VTABLE_arc_Graphics$BufferFormat_equals_java_lang_Object_R_boolean 1
+typedef jbool (*func_arc_Graphics$BufferFormat_equals_java_lang_Object_R_boolean)(jcontext ctx, jobject self, jobject param0);
+#define VTABLE_arc_Graphics$BufferFormat_clone_R_java_lang_Object 2
+typedef jobject (*func_arc_Graphics$BufferFormat_clone_R_java_lang_Object)(jcontext ctx, jobject self);
+#define VTABLE_arc_Graphics$BufferFormat_getClass_R_java_lang_Class 3
+typedef jobject (*func_arc_Graphics$BufferFormat_getClass_R_java_lang_Class)(jcontext ctx, jobject self);
+#define VTABLE_arc_Graphics$BufferFormat_toString_R_java_lang_String 4
+typedef jobject (*func_arc_Graphics$BufferFormat_toString_R_java_lang_String)(jcontext ctx, jobject self);
+#define VTABLE_arc_Graphics$BufferFormat_finalize 5
+typedef void (*func_arc_Graphics$BufferFormat_finalize)(jcontext ctx, jobject self);
+#define VTABLE_arc_Graphics$BufferFormat_notify 6
+typedef void (*func_arc_Graphics$BufferFormat_notify)(jcontext ctx, jobject self);
+#define VTABLE_arc_Graphics$BufferFormat_notifyAll 7
+typedef void (*func_arc_Graphics$BufferFormat_notifyAll)(jcontext ctx, jobject self);
+#define VTABLE_arc_Graphics$BufferFormat_wait 8
+typedef void (*func_arc_Graphics$BufferFormat_wait)(jcontext ctx, jobject self);
+#define VTABLE_arc_Graphics$BufferFormat_wait_long 9
+typedef void (*func_arc_Graphics$BufferFormat_wait_long)(jcontext ctx, jobject self, jlong param0);
+#define VTABLE_arc_Graphics$BufferFormat_wait_long_int 10
+typedef void (*func_arc_Graphics$BufferFormat_wait_long_int)(jcontext ctx, jobject self, jlong param0, jint param1);
+
+void mark_arc_Graphics$BufferFormat(jobject object, jint mark, jint depth);
+void clinit_arc_Graphics$BufferFormat(jcontext ctx);
+void init_arc_Graphics$BufferFormat_int_int_int_int_int_int_int_boolean(jcontext ctx, jobject self, jint param0, jint param1, jint param2, jint param3, jint param4, jint param5, jint param6, jbool param7);
+jobject M_arc_Graphics$BufferFormat_toString_R_java_lang_String(jcontext ctx, jobject self);
+
+#ifdef __cplusplus
+}
+#endif
+
+#endif

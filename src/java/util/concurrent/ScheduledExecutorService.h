@@ -1,0 +1,35 @@
+#ifndef HEADER_java_util_concurrent_ScheduledExecutorService
+#define HEADER_java_util_concurrent_ScheduledExecutorService
+
+#include "Clearwing.h"
+#include "java/lang/Object.h"
+#include "java/util/concurrent/ExecutorService.h"
+
+#ifdef __cplusplus
+extern "C" {
+#endif
+
+typedef struct java_util_concurrent_ScheduledExecutorService {
+	java_lang_Object parent;
+} java_util_concurrent_ScheduledExecutorService;
+
+extern Class class_java_util_concurrent_ScheduledExecutorService;
+
+
+#define INDEX_java_util_concurrent_ScheduledExecutorService_schedule_java_lang_Runnable_long_java_util_concurrent_TimeUnit_R_java_util_concurrent_ScheduledFuture 0
+typedef jobject (*func_java_util_concurrent_ScheduledExecutorService_schedule_java_lang_Runnable_long_java_util_concurrent_TimeUnit_R_java_util_concurrent_ScheduledFuture)(jcontext ctx, jobject self, jobject param0, jlong param1, jobject param2);
+#define INDEX_java_util_concurrent_ScheduledExecutorService_schedule_java_util_concurrent_Callable_long_java_util_concurrent_TimeUnit_R_java_util_concurrent_ScheduledFuture 1
+typedef jobject (*func_java_util_concurrent_ScheduledExecutorService_schedule_java_util_concurrent_Callable_long_java_util_concurrent_TimeUnit_R_java_util_concurrent_ScheduledFuture)(jcontext ctx, jobject self, jobject param0, jlong param1, jobject param2);
+#define INDEX_java_util_concurrent_ScheduledExecutorService_scheduleAtFixedRate_java_lang_Runnable_long_long_java_util_concurrent_TimeUnit_R_java_util_concurrent_ScheduledFuture 2
+typedef jobject (*func_java_util_concurrent_ScheduledExecutorService_scheduleAtFixedRate_java_lang_Runnable_long_long_java_util_concurrent_TimeUnit_R_java_util_concurrent_ScheduledFuture)(jcontext ctx, jobject self, jobject param0, jlong param1, jlong param2, jobject param3);
+#define INDEX_java_util_concurrent_ScheduledExecutorService_scheduleWithFixedDelay_java_lang_Runnable_long_long_java_util_concurrent_TimeUnit_R_java_util_concurrent_ScheduledFuture 3
+typedef jobject (*func_java_util_concurrent_ScheduledExecutorService_scheduleWithFixedDelay_java_lang_Runnable_long_long_java_util_concurrent_TimeUnit_R_java_util_concurrent_ScheduledFuture)(jcontext ctx, jobject self, jobject param0, jlong param1, jlong param2, jobject param3);
+
+void mark_java_util_concurrent_ScheduledExecutorService(jobject object, jint mark, jint depth);
+void clinit_java_util_concurrent_ScheduledExecutorService(jcontext ctx);
+
+#ifdef __cplusplus
+}
+#endif
+
+#endif

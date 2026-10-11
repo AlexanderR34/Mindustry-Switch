@@ -1,0 +1,70 @@
+#ifndef HEADER_arc_assets_loaders_FontLoader
+#define HEADER_arc_assets_loaders_FontLoader
+
+#include "Clearwing.h"
+#include "arc/assets/loaders/AsynchronousAssetLoader.h"
+
+#ifdef __cplusplus
+extern "C" {
+#endif
+
+typedef struct arc_assets_loaders_FontLoader {
+	arc_assets_loaders_AsynchronousAssetLoader parent;
+	jref F_data;
+} arc_assets_loaders_FontLoader;
+
+extern Class class_arc_assets_loaders_FontLoader;
+
+
+#define VTABLE_arc_assets_loaders_FontLoader_hashCode_R_int 0
+typedef jint (*func_arc_assets_loaders_FontLoader_hashCode_R_int)(jcontext ctx, jobject self);
+#define VTABLE_arc_assets_loaders_FontLoader_equals_java_lang_Object_R_boolean 1
+typedef jbool (*func_arc_assets_loaders_FontLoader_equals_java_lang_Object_R_boolean)(jcontext ctx, jobject self, jobject param0);
+#define VTABLE_arc_assets_loaders_FontLoader_clone_R_java_lang_Object 2
+typedef jobject (*func_arc_assets_loaders_FontLoader_clone_R_java_lang_Object)(jcontext ctx, jobject self);
+#define VTABLE_arc_assets_loaders_FontLoader_getClass_R_java_lang_Class 3
+typedef jobject (*func_arc_assets_loaders_FontLoader_getClass_R_java_lang_Class)(jcontext ctx, jobject self);
+#define VTABLE_arc_assets_loaders_FontLoader_toString_R_java_lang_String 4
+typedef jobject (*func_arc_assets_loaders_FontLoader_toString_R_java_lang_String)(jcontext ctx, jobject self);
+#define VTABLE_arc_assets_loaders_FontLoader_finalize 5
+typedef void (*func_arc_assets_loaders_FontLoader_finalize)(jcontext ctx, jobject self);
+#define VTABLE_arc_assets_loaders_FontLoader_notify 6
+typedef void (*func_arc_assets_loaders_FontLoader_notify)(jcontext ctx, jobject self);
+#define VTABLE_arc_assets_loaders_FontLoader_notifyAll 7
+typedef void (*func_arc_assets_loaders_FontLoader_notifyAll)(jcontext ctx, jobject self);
+#define VTABLE_arc_assets_loaders_FontLoader_wait 8
+typedef void (*func_arc_assets_loaders_FontLoader_wait)(jcontext ctx, jobject self);
+#define VTABLE_arc_assets_loaders_FontLoader_wait_long 9
+typedef void (*func_arc_assets_loaders_FontLoader_wait_long)(jcontext ctx, jobject self, jlong param0);
+#define VTABLE_arc_assets_loaders_FontLoader_wait_long_int 10
+typedef void (*func_arc_assets_loaders_FontLoader_wait_long_int)(jcontext ctx, jobject self, jlong param0, jint param1);
+#define VTABLE_arc_assets_loaders_FontLoader_resolve_java_lang_String_R_arc_files_Fi 11
+typedef jobject (*func_arc_assets_loaders_FontLoader_resolve_java_lang_String_R_arc_files_Fi)(jcontext ctx, jobject self, jobject param0);
+#define VTABLE_arc_assets_loaders_FontLoader_getDependencies_java_lang_String_arc_files_Fi_arc_assets_AssetLoaderParameters_R_arc_struct_Seq 12
+typedef jobject (*func_arc_assets_loaders_FontLoader_getDependencies_java_lang_String_arc_files_Fi_arc_assets_AssetLoaderParameters_R_arc_struct_Seq)(jcontext ctx, jobject self, jobject param0, jobject param1, jobject param2);
+#define VTABLE_arc_assets_loaders_FontLoader_loadAsync_arc_assets_AssetManager_java_lang_String_arc_files_Fi_arc_assets_AssetLoaderParameters 13
+typedef void (*func_arc_assets_loaders_FontLoader_loadAsync_arc_assets_AssetManager_java_lang_String_arc_files_Fi_arc_assets_AssetLoaderParameters)(jcontext ctx, jobject self, jobject param0, jobject param1, jobject param2, jobject param3);
+#define VTABLE_arc_assets_loaders_FontLoader_loadSync_arc_assets_AssetManager_java_lang_String_arc_files_Fi_arc_assets_AssetLoaderParameters_R_java_lang_Object 14
+typedef jobject (*func_arc_assets_loaders_FontLoader_loadSync_arc_assets_AssetManager_java_lang_String_arc_files_Fi_arc_assets_AssetLoaderParameters_R_java_lang_Object)(jcontext ctx, jobject self, jobject param0, jobject param1, jobject param2, jobject param3);
+#define VTABLE_arc_assets_loaders_FontLoader_getDependencies_java_lang_String_arc_files_Fi_arc_assets_loaders_FontLoader$FontParameter_R_arc_struct_Seq 15
+typedef jobject (*func_arc_assets_loaders_FontLoader_getDependencies_java_lang_String_arc_files_Fi_arc_assets_loaders_FontLoader$FontParameter_R_arc_struct_Seq)(jcontext ctx, jobject self, jobject param0, jobject param1, jobject param2);
+#define VTABLE_arc_assets_loaders_FontLoader_loadAsync_arc_assets_AssetManager_java_lang_String_arc_files_Fi_arc_assets_loaders_FontLoader$FontParameter 16
+typedef void (*func_arc_assets_loaders_FontLoader_loadAsync_arc_assets_AssetManager_java_lang_String_arc_files_Fi_arc_assets_loaders_FontLoader$FontParameter)(jcontext ctx, jobject self, jobject param0, jobject param1, jobject param2, jobject param3);
+#define VTABLE_arc_assets_loaders_FontLoader_loadSync_arc_assets_AssetManager_java_lang_String_arc_files_Fi_arc_assets_loaders_FontLoader$FontParameter_R_arc_graphics_g2d_Font 17
+typedef jobject (*func_arc_assets_loaders_FontLoader_loadSync_arc_assets_AssetManager_java_lang_String_arc_files_Fi_arc_assets_loaders_FontLoader$FontParameter_R_arc_graphics_g2d_Font)(jcontext ctx, jobject self, jobject param0, jobject param1, jobject param2, jobject param3);
+
+void mark_arc_assets_loaders_FontLoader(jobject object, jint mark, jint depth);
+void clinit_arc_assets_loaders_FontLoader(jcontext ctx);
+void init_arc_assets_loaders_FontLoader_arc_assets_loaders_FileHandleResolver(jcontext ctx, jobject self, jobject param0);
+jobject M_arc_assets_loaders_FontLoader_getDependencies_java_lang_String_arc_files_Fi_arc_assets_loaders_FontLoader$FontParameter_R_arc_struct_Seq(jcontext ctx, jobject self, jobject param0, jobject param1, jobject param2);
+void M_arc_assets_loaders_FontLoader_loadAsync_arc_assets_AssetManager_java_lang_String_arc_files_Fi_arc_assets_loaders_FontLoader$FontParameter(jcontext ctx, jobject self, jobject param0, jobject param1, jobject param2, jobject param3);
+jobject M_arc_assets_loaders_FontLoader_loadSync_arc_assets_AssetManager_java_lang_String_arc_files_Fi_arc_assets_loaders_FontLoader$FontParameter_R_arc_graphics_g2d_Font(jcontext ctx, jobject self, jobject param0, jobject param1, jobject param2, jobject param3);
+jobject M_arc_assets_loaders_FontLoader_loadSync_arc_assets_AssetManager_java_lang_String_arc_files_Fi_arc_assets_AssetLoaderParameters_R_java_lang_Object(jcontext ctx, jobject self, jobject param0, jobject param1, jobject param2, jobject param3);
+void M_arc_assets_loaders_FontLoader_loadAsync_arc_assets_AssetManager_java_lang_String_arc_files_Fi_arc_assets_AssetLoaderParameters(jcontext ctx, jobject self, jobject param0, jobject param1, jobject param2, jobject param3);
+jobject M_arc_assets_loaders_FontLoader_getDependencies_java_lang_String_arc_files_Fi_arc_assets_AssetLoaderParameters_R_arc_struct_Seq(jcontext ctx, jobject self, jobject param0, jobject param1, jobject param2);
+
+#ifdef __cplusplus
+}
+#endif
+
+#endif

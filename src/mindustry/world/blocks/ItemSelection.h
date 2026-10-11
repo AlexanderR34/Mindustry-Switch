@@ -1,0 +1,68 @@
+#ifndef HEADER_mindustry_world_blocks_ItemSelection
+#define HEADER_mindustry_world_blocks_ItemSelection
+
+#include "Clearwing.h"
+#include "java/lang/Object.h"
+
+#ifdef __cplusplus
+extern "C" {
+#endif
+
+typedef struct mindustry_world_blocks_ItemSelection {
+	java_lang_Object parent;
+} mindustry_world_blocks_ItemSelection;
+
+extern Class class_mindustry_world_blocks_ItemSelection;
+
+extern jobject SF_mindustry_world_blocks_ItemSelection_search;
+extern jint SF_mindustry_world_blocks_ItemSelection_rowCount;
+
+#define VTABLE_mindustry_world_blocks_ItemSelection_hashCode_R_int 0
+typedef jint (*func_mindustry_world_blocks_ItemSelection_hashCode_R_int)(jcontext ctx, jobject self);
+#define VTABLE_mindustry_world_blocks_ItemSelection_equals_java_lang_Object_R_boolean 1
+typedef jbool (*func_mindustry_world_blocks_ItemSelection_equals_java_lang_Object_R_boolean)(jcontext ctx, jobject self, jobject param0);
+#define VTABLE_mindustry_world_blocks_ItemSelection_clone_R_java_lang_Object 2
+typedef jobject (*func_mindustry_world_blocks_ItemSelection_clone_R_java_lang_Object)(jcontext ctx, jobject self);
+#define VTABLE_mindustry_world_blocks_ItemSelection_getClass_R_java_lang_Class 3
+typedef jobject (*func_mindustry_world_blocks_ItemSelection_getClass_R_java_lang_Class)(jcontext ctx, jobject self);
+#define VTABLE_mindustry_world_blocks_ItemSelection_toString_R_java_lang_String 4
+typedef jobject (*func_mindustry_world_blocks_ItemSelection_toString_R_java_lang_String)(jcontext ctx, jobject self);
+#define VTABLE_mindustry_world_blocks_ItemSelection_finalize 5
+typedef void (*func_mindustry_world_blocks_ItemSelection_finalize)(jcontext ctx, jobject self);
+#define VTABLE_mindustry_world_blocks_ItemSelection_notify 6
+typedef void (*func_mindustry_world_blocks_ItemSelection_notify)(jcontext ctx, jobject self);
+#define VTABLE_mindustry_world_blocks_ItemSelection_notifyAll 7
+typedef void (*func_mindustry_world_blocks_ItemSelection_notifyAll)(jcontext ctx, jobject self);
+#define VTABLE_mindustry_world_blocks_ItemSelection_wait 8
+typedef void (*func_mindustry_world_blocks_ItemSelection_wait)(jcontext ctx, jobject self);
+#define VTABLE_mindustry_world_blocks_ItemSelection_wait_long 9
+typedef void (*func_mindustry_world_blocks_ItemSelection_wait_long)(jcontext ctx, jobject self, jlong param0);
+#define VTABLE_mindustry_world_blocks_ItemSelection_wait_long_int 10
+typedef void (*func_mindustry_world_blocks_ItemSelection_wait_long_int)(jcontext ctx, jobject self, jlong param0, jint param1);
+
+void mark_mindustry_world_blocks_ItemSelection(jobject object, jint mark, jint depth);
+void clinit_mindustry_world_blocks_ItemSelection(jcontext ctx);
+void init_mindustry_world_blocks_ItemSelection(jcontext ctx, jobject self);
+void SM_mindustry_world_blocks_ItemSelection_buildTable_arc_scene_ui_layout_Table_arc_struct_Seq_arc_func_Prov_arc_func_Cons(jcontext ctx, jobject param0, jobject param1, jobject param2, jobject param3);
+void SM_mindustry_world_blocks_ItemSelection_buildTable_arc_scene_ui_layout_Table_arc_struct_Seq_arc_func_Prov_arc_func_Cons_boolean(jcontext ctx, jobject param0, jobject param1, jobject param2, jobject param3, jbool param4);
+void SM_mindustry_world_blocks_ItemSelection_buildTable_arc_scene_ui_layout_Table_arc_struct_Seq_arc_func_Prov_arc_func_Cons_int(jcontext ctx, jobject param0, jobject param1, jobject param2, jobject param3, jint param4);
+void SM_mindustry_world_blocks_ItemSelection_buildTable_mindustry_world_Block_arc_scene_ui_layout_Table_arc_struct_Seq_arc_func_Prov_arc_func_Cons(jcontext ctx, jobject param0, jobject param1, jobject param2, jobject param3, jobject param4);
+void SM_mindustry_world_blocks_ItemSelection_buildTable_mindustry_world_Block_arc_scene_ui_layout_Table_arc_struct_Seq_arc_func_Prov_arc_func_Cons_boolean(jcontext ctx, jobject param0, jobject param1, jobject param2, jobject param3, jobject param4, jbool param5);
+void SM_mindustry_world_blocks_ItemSelection_buildTable_mindustry_world_Block_arc_scene_ui_layout_Table_arc_struct_Seq_arc_func_Prov_arc_func_Cons_int_int(jcontext ctx, jobject param0, jobject param1, jobject param2, jobject param3, jobject param4, jint param5, jint param6);
+void SM_mindustry_world_blocks_ItemSelection_buildTable_arc_scene_ui_layout_Table_arc_struct_Seq_arc_func_Prov_arc_func_Cons_int_int(jcontext ctx, jobject param0, jobject param1, jobject param2, jobject param3, jint param4, jint param5);
+void SM_mindustry_world_blocks_ItemSelection_buildTable_mindustry_world_Block_arc_scene_ui_layout_Table_arc_struct_Seq_arc_func_Prov_arc_func_Cons_boolean_int_int(jcontext ctx, jobject param0, jobject param1, jobject param2, jobject param3, jobject param4, jbool param5, jint param6, jint param7);
+void SM_mindustry_world_blocks_ItemSelection_lambda$buildTable$8_mindustry_world_Block_arc_scene_ui_ScrollPane(jcontext ctx, jobject param0, jobject param1);
+void SM_mindustry_world_blocks_ItemSelection_lambda$buildTable$7_arc_scene_ui_ScrollPane(jcontext ctx, jobject param0);
+void SM_mindustry_world_blocks_ItemSelection_lambda$buildTable$5_java_lang_Runnable_arc_scene_ui_layout_Table(jcontext ctx, jobject param0, jobject param1);
+void SM_mindustry_world_blocks_ItemSelection_lambda$buildTable$6_java_lang_Runnable_java_lang_String(jcontext ctx, jobject param0, jobject param1);
+void SM_mindustry_world_blocks_ItemSelection_lambda$buildTable$0_arc_scene_ui_ButtonGroup_arc_scene_ui_layout_Table_arc_struct_Seq_boolean_arc_func_Cons_arc_func_Prov_int(jcontext ctx, jobject param0, jobject param1, jobject param2, jbool param3, jobject param4, jobject param5, jint param6);
+void SM_mindustry_world_blocks_ItemSelection_lambda$buildTable$4_arc_scene_ui_ImageButton_arc_func_Prov_mindustry_ctype_UnlockableContent(jcontext ctx, jobject param0, jobject param1, jobject param2);
+void SM_mindustry_world_blocks_ItemSelection_lambda$buildTable$3_arc_func_Cons_arc_scene_ui_ImageButton_mindustry_ctype_UnlockableContent(jcontext ctx, jobject param0, jobject param1, jobject param2);
+void SM_mindustry_world_blocks_ItemSelection_lambda$buildTable$2_boolean(jcontext ctx, jbool param0);
+jbool SM_mindustry_world_blocks_ItemSelection_lambda$buildTable$1_java_lang_String_mindustry_ctype_UnlockableContent_R_boolean(jcontext ctx, jobject param0, jobject param1);
+
+#ifdef __cplusplus
+}
+#endif
+
+#endif

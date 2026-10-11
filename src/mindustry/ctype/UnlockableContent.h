@@ -1,0 +1,190 @@
+#ifndef HEADER_mindustry_ctype_UnlockableContent
+#define HEADER_mindustry_ctype_UnlockableContent
+
+#include "Clearwing.h"
+#include "mindustry/ctype/MappableContent.h"
+
+#ifdef __cplusplus
+extern "C" {
+#endif
+
+typedef struct mindustry_ctype_UnlockableContent {
+	mindustry_ctype_MappableContent parent;
+	jref F_stats;
+	jref F_localizedName;
+	jref F_description;
+	jref F_details;
+	jref F_credit;
+	jbool F_alwaysUnlocked;
+	jbool F_inlineDescription;
+	jbool F_hideDetails;
+	jbool F_hideDatabase;
+	jbool F_generateIcons;
+	jfloat F_selectionSize;
+	jref F_uiIcon;
+	jref F_fullIcon;
+	jref F_fullOverride;
+	jbool F_allDatabaseTabs;
+	jref F_shownPlanets;
+	jref F_databaseTabs;
+	jref F_databaseCategory;
+	jref F_databaseTag;
+	jref F_techNode;
+	jref F_techNodes;
+	jbool F_unlocked;
+} mindustry_ctype_UnlockableContent;
+
+extern Class class_mindustry_ctype_UnlockableContent;
+
+
+#define VTABLE_mindustry_ctype_UnlockableContent_hashCode_R_int 0
+typedef jint (*func_mindustry_ctype_UnlockableContent_hashCode_R_int)(jcontext ctx, jobject self);
+#define VTABLE_mindustry_ctype_UnlockableContent_equals_java_lang_Object_R_boolean 1
+typedef jbool (*func_mindustry_ctype_UnlockableContent_equals_java_lang_Object_R_boolean)(jcontext ctx, jobject self, jobject param0);
+#define VTABLE_mindustry_ctype_UnlockableContent_clone_R_java_lang_Object 2
+typedef jobject (*func_mindustry_ctype_UnlockableContent_clone_R_java_lang_Object)(jcontext ctx, jobject self);
+#define VTABLE_mindustry_ctype_UnlockableContent_getClass_R_java_lang_Class 3
+typedef jobject (*func_mindustry_ctype_UnlockableContent_getClass_R_java_lang_Class)(jcontext ctx, jobject self);
+#define VTABLE_mindustry_ctype_UnlockableContent_toString_R_java_lang_String 4
+typedef jobject (*func_mindustry_ctype_UnlockableContent_toString_R_java_lang_String)(jcontext ctx, jobject self);
+#define VTABLE_mindustry_ctype_UnlockableContent_finalize 5
+typedef void (*func_mindustry_ctype_UnlockableContent_finalize)(jcontext ctx, jobject self);
+#define VTABLE_mindustry_ctype_UnlockableContent_notify 6
+typedef void (*func_mindustry_ctype_UnlockableContent_notify)(jcontext ctx, jobject self);
+#define VTABLE_mindustry_ctype_UnlockableContent_notifyAll 7
+typedef void (*func_mindustry_ctype_UnlockableContent_notifyAll)(jcontext ctx, jobject self);
+#define VTABLE_mindustry_ctype_UnlockableContent_wait 8
+typedef void (*func_mindustry_ctype_UnlockableContent_wait)(jcontext ctx, jobject self);
+#define VTABLE_mindustry_ctype_UnlockableContent_wait_long 9
+typedef void (*func_mindustry_ctype_UnlockableContent_wait_long)(jcontext ctx, jobject self, jlong param0);
+#define VTABLE_mindustry_ctype_UnlockableContent_wait_long_int 10
+typedef void (*func_mindustry_ctype_UnlockableContent_wait_long_int)(jcontext ctx, jobject self, jlong param0, jint param1);
+#define VTABLE_mindustry_ctype_UnlockableContent_compareTo_java_lang_Object_R_int 11
+typedef jint (*func_mindustry_ctype_UnlockableContent_compareTo_java_lang_Object_R_int)(jcontext ctx, jobject self, jobject param0);
+#define VTABLE_mindustry_ctype_UnlockableContent_getContentType_R_mindustry_ctype_ContentType 12
+typedef jobject (*func_mindustry_ctype_UnlockableContent_getContentType_R_mindustry_ctype_ContentType)(jcontext ctx, jobject self);
+#define VTABLE_mindustry_ctype_UnlockableContent_removeContent 13
+typedef void (*func_mindustry_ctype_UnlockableContent_removeContent)(jcontext ctx, jobject self);
+#define VTABLE_mindustry_ctype_UnlockableContent_init 14
+typedef void (*func_mindustry_ctype_UnlockableContent_init)(jcontext ctx, jobject self);
+#define VTABLE_mindustry_ctype_UnlockableContent_postInit 15
+typedef void (*func_mindustry_ctype_UnlockableContent_postInit)(jcontext ctx, jobject self);
+#define VTABLE_mindustry_ctype_UnlockableContent_afterPatch 16
+typedef void (*func_mindustry_ctype_UnlockableContent_afterPatch)(jcontext ctx, jobject self);
+#define VTABLE_mindustry_ctype_UnlockableContent_load 17
+typedef void (*func_mindustry_ctype_UnlockableContent_load)(jcontext ctx, jobject self);
+#define VTABLE_mindustry_ctype_UnlockableContent_loadIcon 18
+typedef void (*func_mindustry_ctype_UnlockableContent_loadIcon)(jcontext ctx, jobject self);
+#define VTABLE_mindustry_ctype_UnlockableContent_hasErrored_R_boolean 19
+typedef jbool (*func_mindustry_ctype_UnlockableContent_hasErrored_R_boolean)(jcontext ctx, jobject self);
+#define VTABLE_mindustry_ctype_UnlockableContent_isVanilla_R_boolean 20
+typedef jbool (*func_mindustry_ctype_UnlockableContent_isVanilla_R_boolean)(jcontext ctx, jobject self);
+#define VTABLE_mindustry_ctype_UnlockableContent_isModded_R_boolean 21
+typedef jbool (*func_mindustry_ctype_UnlockableContent_isModded_R_boolean)(jcontext ctx, jobject self);
+#define VTABLE_mindustry_ctype_UnlockableContent_isPatchContent_R_boolean 22
+typedef jbool (*func_mindustry_ctype_UnlockableContent_isPatchContent_R_boolean)(jcontext ctx, jobject self);
+#define VTABLE_mindustry_ctype_UnlockableContent_compareTo_mindustry_ctype_Content_R_int 23
+typedef jint (*func_mindustry_ctype_UnlockableContent_compareTo_mindustry_ctype_Content_R_int)(jcontext ctx, jobject self, jobject param0);
+#define VTABLE_mindustry_ctype_UnlockableContent_isBanned_R_boolean 24
+typedef jbool (*func_mindustry_ctype_UnlockableContent_isBanned_R_boolean)(jcontext ctx, jobject self);
+#define VTABLE_mindustry_ctype_UnlockableContent_isOnPlanet_mindustry_type_Planet_R_boolean 25
+typedef jbool (*func_mindustry_ctype_UnlockableContent_isOnPlanet_mindustry_type_Planet_R_boolean)(jcontext ctx, jobject self, jobject param0);
+#define VTABLE_mindustry_ctype_UnlockableContent_getLogicId_R_int 26
+typedef jint (*func_mindustry_ctype_UnlockableContent_getLogicId_R_int)(jcontext ctx, jobject self);
+#define VTABLE_mindustry_ctype_UnlockableContent_displayDescription_R_java_lang_String 27
+typedef jobject (*func_mindustry_ctype_UnlockableContent_displayDescription_R_java_lang_String)(jcontext ctx, jobject self);
+#define VTABLE_mindustry_ctype_UnlockableContent_checkStats 28
+typedef void (*func_mindustry_ctype_UnlockableContent_checkStats)(jcontext ctx, jobject self);
+#define VTABLE_mindustry_ctype_UnlockableContent_setStats 29
+typedef void (*func_mindustry_ctype_UnlockableContent_setStats)(jcontext ctx, jobject self);
+#define VTABLE_mindustry_ctype_UnlockableContent_computeStats_R_mindustry_world_meta_Stats 30
+typedef jobject (*func_mindustry_ctype_UnlockableContent_computeStats_R_mindustry_world_meta_Stats)(jcontext ctx, jobject self);
+#define VTABLE_mindustry_ctype_UnlockableContent_displayExtra_arc_scene_ui_layout_Table 31
+typedef void (*func_mindustry_ctype_UnlockableContent_displayExtra_arc_scene_ui_layout_Table)(jcontext ctx, jobject self, jobject param0);
+#define VTABLE_mindustry_ctype_UnlockableContent_createIcons_mindustry_graphics_MultiPacker 32
+typedef void (*func_mindustry_ctype_UnlockableContent_createIcons_mindustry_graphics_MultiPacker)(jcontext ctx, jobject self, jobject param0);
+#define VTABLE_mindustry_ctype_UnlockableContent_makeOutline_mindustry_graphics_MultiPacker$PageType_mindustry_graphics_MultiPacker_arc_graphics_g2d_TextureRegion_boolean_arc_graphics_Color_int 33
+typedef void (*func_mindustry_ctype_UnlockableContent_makeOutline_mindustry_graphics_MultiPacker$PageType_mindustry_graphics_MultiPacker_arc_graphics_g2d_TextureRegion_boolean_arc_graphics_Color_int)(jcontext ctx, jobject self, jobject param0, jobject param1, jobject param2, jbool param3, jobject param4, jint param5);
+#define VTABLE_mindustry_ctype_UnlockableContent_makeOutline_mindustry_graphics_MultiPacker$PageType_mindustry_graphics_MultiPacker_arc_graphics_g2d_TextureRegion_boolean_arc_graphics_Color_int_int 34
+typedef void (*func_mindustry_ctype_UnlockableContent_makeOutline_mindustry_graphics_MultiPacker$PageType_mindustry_graphics_MultiPacker_arc_graphics_g2d_TextureRegion_boolean_arc_graphics_Color_int_int)(jcontext ctx, jobject self, jobject param0, jobject param1, jobject param2, jbool param3, jobject param4, jint param5, jint param6);
+#define VTABLE_mindustry_ctype_UnlockableContent_makeOutline_mindustry_graphics_MultiPacker_arc_graphics_g2d_TextureRegion_java_lang_String_arc_graphics_Color_int 35
+typedef void (*func_mindustry_ctype_UnlockableContent_makeOutline_mindustry_graphics_MultiPacker_arc_graphics_g2d_TextureRegion_java_lang_String_arc_graphics_Color_int)(jcontext ctx, jobject self, jobject param0, jobject param1, jobject param2, jobject param3, jint param4);
+#define VTABLE_mindustry_ctype_UnlockableContent_makeOutline_mindustry_graphics_MultiPacker_arc_graphics_g2d_TextureRegion_java_lang_String_arc_graphics_Color 36
+typedef void (*func_mindustry_ctype_UnlockableContent_makeOutline_mindustry_graphics_MultiPacker_arc_graphics_g2d_TextureRegion_java_lang_String_arc_graphics_Color)(jcontext ctx, jobject self, jobject param0, jobject param1, jobject param2, jobject param3);
+#define VTABLE_mindustry_ctype_UnlockableContent_researchRequirements_R_Array1_mindustry_type_ItemStack 37
+typedef jobject (*func_mindustry_ctype_UnlockableContent_researchRequirements_R_Array1_mindustry_type_ItemStack)(jcontext ctx, jobject self);
+#define VTABLE_mindustry_ctype_UnlockableContent_emoji_R_java_lang_String 38
+typedef jobject (*func_mindustry_ctype_UnlockableContent_emoji_R_java_lang_String)(jcontext ctx, jobject self);
+#define VTABLE_mindustry_ctype_UnlockableContent_emojiChar_R_int 39
+typedef jint (*func_mindustry_ctype_UnlockableContent_emojiChar_R_int)(jcontext ctx, jobject self);
+#define VTABLE_mindustry_ctype_UnlockableContent_hasEmoji_R_boolean 40
+typedef jbool (*func_mindustry_ctype_UnlockableContent_hasEmoji_R_boolean)(jcontext ctx, jobject self);
+#define VTABLE_mindustry_ctype_UnlockableContent_getDependencies_arc_func_Cons 41
+typedef void (*func_mindustry_ctype_UnlockableContent_getDependencies_arc_func_Cons)(jcontext ctx, jobject self, jobject param0);
+#define VTABLE_mindustry_ctype_UnlockableContent_onUnlock 42
+typedef void (*func_mindustry_ctype_UnlockableContent_onUnlock)(jcontext ctx, jobject self);
+#define VTABLE_mindustry_ctype_UnlockableContent_isHidden_R_boolean 43
+typedef jbool (*func_mindustry_ctype_UnlockableContent_isHidden_R_boolean)(jcontext ctx, jobject self);
+#define VTABLE_mindustry_ctype_UnlockableContent_showUnlock_R_boolean 44
+typedef jbool (*func_mindustry_ctype_UnlockableContent_showUnlock_R_boolean)(jcontext ctx, jobject self);
+#define VTABLE_mindustry_ctype_UnlockableContent_logicVisible_R_boolean 45
+typedef jbool (*func_mindustry_ctype_UnlockableContent_logicVisible_R_boolean)(jcontext ctx, jobject self);
+#define VTABLE_mindustry_ctype_UnlockableContent_unlock 46
+typedef void (*func_mindustry_ctype_UnlockableContent_unlock)(jcontext ctx, jobject self);
+#define VTABLE_mindustry_ctype_UnlockableContent_quietUnlock 47
+typedef void (*func_mindustry_ctype_UnlockableContent_quietUnlock)(jcontext ctx, jobject self);
+#define VTABLE_mindustry_ctype_UnlockableContent_unlockedNowHost_R_boolean 48
+typedef jbool (*func_mindustry_ctype_UnlockableContent_unlockedNowHost_R_boolean)(jcontext ctx, jobject self);
+#define VTABLE_mindustry_ctype_UnlockableContent_unlockedHost_R_boolean 49
+typedef jbool (*func_mindustry_ctype_UnlockableContent_unlockedHost_R_boolean)(jcontext ctx, jobject self);
+#define VTABLE_mindustry_ctype_UnlockableContent_unlockedNow_R_boolean 50
+typedef jbool (*func_mindustry_ctype_UnlockableContent_unlockedNow_R_boolean)(jcontext ctx, jobject self);
+#define VTABLE_mindustry_ctype_UnlockableContent_unlocked_R_boolean 51
+typedef jbool (*func_mindustry_ctype_UnlockableContent_unlocked_R_boolean)(jcontext ctx, jobject self);
+#define VTABLE_mindustry_ctype_UnlockableContent_clearUnlock 52
+typedef void (*func_mindustry_ctype_UnlockableContent_clearUnlock)(jcontext ctx, jobject self);
+#define VTABLE_mindustry_ctype_UnlockableContent_locked_R_boolean 53
+typedef jbool (*func_mindustry_ctype_UnlockableContent_locked_R_boolean)(jcontext ctx, jobject self);
+
+void mark_mindustry_ctype_UnlockableContent(jobject object, jint mark, jint depth);
+void clinit_mindustry_ctype_UnlockableContent(jcontext ctx);
+void init_mindustry_ctype_UnlockableContent_java_lang_String(jcontext ctx, jobject self, jobject param0);
+void M_mindustry_ctype_UnlockableContent_postInit(jcontext ctx, jobject self);
+void M_mindustry_ctype_UnlockableContent_loadIcon(jcontext ctx, jobject self);
+void M_mindustry_ctype_UnlockableContent_afterPatch(jcontext ctx, jobject self);
+jbool M_mindustry_ctype_UnlockableContent_isBanned_R_boolean(jcontext ctx, jobject self);
+jbool M_mindustry_ctype_UnlockableContent_isOnPlanet_mindustry_type_Planet_R_boolean(jcontext ctx, jobject self, jobject param0);
+jint M_mindustry_ctype_UnlockableContent_getLogicId_R_int(jcontext ctx, jobject self);
+jobject M_mindustry_ctype_UnlockableContent_displayDescription_R_java_lang_String(jcontext ctx, jobject self);
+void M_mindustry_ctype_UnlockableContent_checkStats(jcontext ctx, jobject self);
+void M_mindustry_ctype_UnlockableContent_setStats(jcontext ctx, jobject self);
+jobject M_mindustry_ctype_UnlockableContent_computeStats_R_mindustry_world_meta_Stats(jcontext ctx, jobject self);
+void M_mindustry_ctype_UnlockableContent_displayExtra_arc_scene_ui_layout_Table(jcontext ctx, jobject self, jobject param0);
+void M_mindustry_ctype_UnlockableContent_createIcons_mindustry_graphics_MultiPacker(jcontext ctx, jobject self, jobject param0);
+void M_mindustry_ctype_UnlockableContent_makeOutline_mindustry_graphics_MultiPacker$PageType_mindustry_graphics_MultiPacker_arc_graphics_g2d_TextureRegion_boolean_arc_graphics_Color_int(jcontext ctx, jobject self, jobject param0, jobject param1, jobject param2, jbool param3, jobject param4, jint param5);
+void M_mindustry_ctype_UnlockableContent_makeOutline_mindustry_graphics_MultiPacker$PageType_mindustry_graphics_MultiPacker_arc_graphics_g2d_TextureRegion_boolean_arc_graphics_Color_int_int(jcontext ctx, jobject self, jobject param0, jobject param1, jobject param2, jbool param3, jobject param4, jint param5, jint param6);
+void M_mindustry_ctype_UnlockableContent_makeOutline_mindustry_graphics_MultiPacker_arc_graphics_g2d_TextureRegion_java_lang_String_arc_graphics_Color_int(jcontext ctx, jobject self, jobject param0, jobject param1, jobject param2, jobject param3, jint param4);
+void M_mindustry_ctype_UnlockableContent_makeOutline_mindustry_graphics_MultiPacker_arc_graphics_g2d_TextureRegion_java_lang_String_arc_graphics_Color(jcontext ctx, jobject self, jobject param0, jobject param1, jobject param2, jobject param3);
+jobject M_mindustry_ctype_UnlockableContent_researchRequirements_R_Array1_mindustry_type_ItemStack(jcontext ctx, jobject self);
+jobject M_mindustry_ctype_UnlockableContent_emoji_R_java_lang_String(jcontext ctx, jobject self);
+jint M_mindustry_ctype_UnlockableContent_emojiChar_R_int(jcontext ctx, jobject self);
+jbool M_mindustry_ctype_UnlockableContent_hasEmoji_R_boolean(jcontext ctx, jobject self);
+void M_mindustry_ctype_UnlockableContent_getDependencies_arc_func_Cons(jcontext ctx, jobject self, jobject param0);
+void M_mindustry_ctype_UnlockableContent_onUnlock(jcontext ctx, jobject self);
+jbool M_mindustry_ctype_UnlockableContent_isHidden_R_boolean(jcontext ctx, jobject self);
+jbool M_mindustry_ctype_UnlockableContent_showUnlock_R_boolean(jcontext ctx, jobject self);
+jbool M_mindustry_ctype_UnlockableContent_logicVisible_R_boolean(jcontext ctx, jobject self);
+void M_mindustry_ctype_UnlockableContent_unlock(jcontext ctx, jobject self);
+void M_mindustry_ctype_UnlockableContent_quietUnlock(jcontext ctx, jobject self);
+jbool M_mindustry_ctype_UnlockableContent_unlockedNowHost_R_boolean(jcontext ctx, jobject self);
+jbool M_mindustry_ctype_UnlockableContent_unlockedHost_R_boolean(jcontext ctx, jobject self);
+jbool M_mindustry_ctype_UnlockableContent_unlockedNow_R_boolean(jcontext ctx, jobject self);
+jbool M_mindustry_ctype_UnlockableContent_unlocked_R_boolean(jcontext ctx, jobject self);
+void M_mindustry_ctype_UnlockableContent_clearUnlock(jcontext ctx, jobject self);
+jbool M_mindustry_ctype_UnlockableContent_locked_R_boolean(jcontext ctx, jobject self);
+
+#ifdef __cplusplus
+}
+#endif
+
+#endif

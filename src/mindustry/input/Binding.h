@@ -1,0 +1,138 @@
+#ifndef HEADER_mindustry_input_Binding
+#define HEADER_mindustry_input_Binding
+
+#include "Clearwing.h"
+#include "java/lang/Object.h"
+
+#ifdef __cplusplus
+extern "C" {
+#endif
+
+typedef struct mindustry_input_Binding {
+	java_lang_Object parent;
+} mindustry_input_Binding;
+
+extern Class class_mindustry_input_Binding;
+
+extern jobject SF_mindustry_input_Binding_moveX;
+extern jobject SF_mindustry_input_Binding_moveY;
+extern jobject SF_mindustry_input_Binding_mouseMove;
+extern jobject SF_mindustry_input_Binding_pan;
+extern jobject SF_mindustry_input_Binding_boost;
+extern jobject SF_mindustry_input_Binding_respawn;
+extern jobject SF_mindustry_input_Binding_control;
+extern jobject SF_mindustry_input_Binding_select;
+extern jobject SF_mindustry_input_Binding_deselect;
+extern jobject SF_mindustry_input_Binding_breakBlock;
+extern jobject SF_mindustry_input_Binding_pickupCargo;
+extern jobject SF_mindustry_input_Binding_dropCargo;
+extern jobject SF_mindustry_input_Binding_clearBuilding;
+extern jobject SF_mindustry_input_Binding_pauseBuilding;
+extern jobject SF_mindustry_input_Binding_rotate;
+extern jobject SF_mindustry_input_Binding_rotatePlaced;
+extern jobject SF_mindustry_input_Binding_diagonalPlacement;
+extern jobject SF_mindustry_input_Binding_pick;
+extern jobject SF_mindustry_input_Binding_ping;
+extern jobject SF_mindustry_input_Binding_rebuildSelect;
+extern jobject SF_mindustry_input_Binding_schematicSelect;
+extern jobject SF_mindustry_input_Binding_schematicFlipX;
+extern jobject SF_mindustry_input_Binding_schematicFlipY;
+extern jobject SF_mindustry_input_Binding_schematicMenu;
+extern jobject SF_mindustry_input_Binding_commandMode;
+extern jobject SF_mindustry_input_Binding_commandQueue;
+extern jobject SF_mindustry_input_Binding_createControlGroup;
+extern jobject SF_mindustry_input_Binding_selectAllUnits;
+extern jobject SF_mindustry_input_Binding_selectAllUnitFactories;
+extern jobject SF_mindustry_input_Binding_selectAllUnitTransport;
+extern jobject SF_mindustry_input_Binding_selectAcrossScreen;
+extern jobject SF_mindustry_input_Binding_cancelOrders;
+extern jobject SF_mindustry_input_Binding_unitStanceHoldFire;
+extern jobject SF_mindustry_input_Binding_unitStancePursueTarget;
+extern jobject SF_mindustry_input_Binding_unitStancePatrol;
+extern jobject SF_mindustry_input_Binding_unitStanceRam;
+extern jobject SF_mindustry_input_Binding_unitStanceBoost;
+extern jobject SF_mindustry_input_Binding_unitStanceHoldPosition;
+extern jobject SF_mindustry_input_Binding_unitCommandMove;
+extern jobject SF_mindustry_input_Binding_unitCommandRepair;
+extern jobject SF_mindustry_input_Binding_unitCommandRebuild;
+extern jobject SF_mindustry_input_Binding_unitCommandAssist;
+extern jobject SF_mindustry_input_Binding_unitCommandMine;
+extern jobject SF_mindustry_input_Binding_unitCommandEnterPayload;
+extern jobject SF_mindustry_input_Binding_unitCommandLoadUnits;
+extern jobject SF_mindustry_input_Binding_unitCommandLoadBlocks;
+extern jobject SF_mindustry_input_Binding_unitCommandUnloadPayload;
+extern jobject SF_mindustry_input_Binding_unitCommandLoopPayload;
+extern jobject SF_mindustry_input_Binding_categoryPrev;
+extern jobject SF_mindustry_input_Binding_categoryNext;
+extern jobject SF_mindustry_input_Binding_blockSelectLeft;
+extern jobject SF_mindustry_input_Binding_blockSelectRight;
+extern jobject SF_mindustry_input_Binding_blockSelectUp;
+extern jobject SF_mindustry_input_Binding_blockSelectDown;
+extern jobject SF_mindustry_input_Binding_blockSelect01;
+extern jobject SF_mindustry_input_Binding_blockSelect02;
+extern jobject SF_mindustry_input_Binding_blockSelect03;
+extern jobject SF_mindustry_input_Binding_blockSelect04;
+extern jobject SF_mindustry_input_Binding_blockSelect05;
+extern jobject SF_mindustry_input_Binding_blockSelect06;
+extern jobject SF_mindustry_input_Binding_blockSelect07;
+extern jobject SF_mindustry_input_Binding_blockSelect08;
+extern jobject SF_mindustry_input_Binding_blockSelect09;
+extern jobject SF_mindustry_input_Binding_blockSelect10;
+extern jobject SF_mindustry_input_Binding_zoom;
+extern jobject SF_mindustry_input_Binding_detachCamera;
+extern jobject SF_mindustry_input_Binding_teleportCursor;
+extern jobject SF_mindustry_input_Binding_menu;
+extern jobject SF_mindustry_input_Binding_fullscreen;
+extern jobject SF_mindustry_input_Binding_pause;
+extern jobject SF_mindustry_input_Binding_skipWave;
+extern jobject SF_mindustry_input_Binding_minimap;
+extern jobject SF_mindustry_input_Binding_research;
+extern jobject SF_mindustry_input_Binding_planetMap;
+extern jobject SF_mindustry_input_Binding_blockInfo;
+extern jobject SF_mindustry_input_Binding_toggleMenus;
+extern jobject SF_mindustry_input_Binding_screenshot;
+extern jobject SF_mindustry_input_Binding_togglePowerLines;
+extern jobject SF_mindustry_input_Binding_toggleBlockStatus;
+extern jobject SF_mindustry_input_Binding_playerList;
+extern jobject SF_mindustry_input_Binding_chat;
+extern jobject SF_mindustry_input_Binding_chatHistoryPrev;
+extern jobject SF_mindustry_input_Binding_chatHistoryNext;
+extern jobject SF_mindustry_input_Binding_chatScroll;
+extern jobject SF_mindustry_input_Binding_chatMode;
+extern jobject SF_mindustry_input_Binding_console;
+extern jobject SF_mindustry_input_Binding_debugHitboxes;
+extern jobject SF_mindustry_input_Binding_performanceMetrics;
+
+#define VTABLE_mindustry_input_Binding_hashCode_R_int 0
+typedef jint (*func_mindustry_input_Binding_hashCode_R_int)(jcontext ctx, jobject self);
+#define VTABLE_mindustry_input_Binding_equals_java_lang_Object_R_boolean 1
+typedef jbool (*func_mindustry_input_Binding_equals_java_lang_Object_R_boolean)(jcontext ctx, jobject self, jobject param0);
+#define VTABLE_mindustry_input_Binding_clone_R_java_lang_Object 2
+typedef jobject (*func_mindustry_input_Binding_clone_R_java_lang_Object)(jcontext ctx, jobject self);
+#define VTABLE_mindustry_input_Binding_getClass_R_java_lang_Class 3
+typedef jobject (*func_mindustry_input_Binding_getClass_R_java_lang_Class)(jcontext ctx, jobject self);
+#define VTABLE_mindustry_input_Binding_toString_R_java_lang_String 4
+typedef jobject (*func_mindustry_input_Binding_toString_R_java_lang_String)(jcontext ctx, jobject self);
+#define VTABLE_mindustry_input_Binding_finalize 5
+typedef void (*func_mindustry_input_Binding_finalize)(jcontext ctx, jobject self);
+#define VTABLE_mindustry_input_Binding_notify 6
+typedef void (*func_mindustry_input_Binding_notify)(jcontext ctx, jobject self);
+#define VTABLE_mindustry_input_Binding_notifyAll 7
+typedef void (*func_mindustry_input_Binding_notifyAll)(jcontext ctx, jobject self);
+#define VTABLE_mindustry_input_Binding_wait 8
+typedef void (*func_mindustry_input_Binding_wait)(jcontext ctx, jobject self);
+#define VTABLE_mindustry_input_Binding_wait_long 9
+typedef void (*func_mindustry_input_Binding_wait_long)(jcontext ctx, jobject self, jlong param0);
+#define VTABLE_mindustry_input_Binding_wait_long_int 10
+typedef void (*func_mindustry_input_Binding_wait_long_int)(jcontext ctx, jobject self, jlong param0, jint param1);
+
+void mark_mindustry_input_Binding(jobject object, jint mark, jint depth);
+void clinit_mindustry_input_Binding(jcontext ctx);
+void init_mindustry_input_Binding(jcontext ctx, jobject self);
+void SM_mindustry_input_Binding_init(jcontext ctx);
+
+#ifdef __cplusplus
+}
+#endif
+
+#endif

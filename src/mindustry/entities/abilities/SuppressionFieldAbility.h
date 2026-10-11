@@ -1,0 +1,103 @@
+#ifndef HEADER_mindustry_entities_abilities_SuppressionFieldAbility
+#define HEADER_mindustry_entities_abilities_SuppressionFieldAbility
+
+#include "Clearwing.h"
+#include "mindustry/entities/abilities/Ability.h"
+
+#ifdef __cplusplus
+extern "C" {
+#endif
+
+typedef struct mindustry_entities_abilities_SuppressionFieldAbility {
+	mindustry_entities_abilities_Ability parent;
+	jfloat F_reload;
+	jfloat F_maxDelay;
+	jfloat F_range;
+	jfloat F_orbRadius;
+	jfloat F_orbMidScl;
+	jfloat F_orbSinScl;
+	jfloat F_orbSinMag;
+	jref F_color;
+	jfloat F_layer;
+	jfloat F_x;
+	jfloat F_y;
+	jint F_particles;
+	jfloat F_particleSize;
+	jfloat F_particleLen;
+	jfloat F_rotateScl;
+	jfloat F_particleLife;
+	jbool F_active;
+	jref F_particleInterp;
+	jref F_particleColor;
+	jref F_effectColor;
+	jfloat F_applyParticleChance;
+	jfloat F_timer;
+} mindustry_entities_abilities_SuppressionFieldAbility;
+
+extern Class class_mindustry_entities_abilities_SuppressionFieldAbility;
+
+extern jobject SF_mindustry_entities_abilities_SuppressionFieldAbility_rand;
+
+#define VTABLE_mindustry_entities_abilities_SuppressionFieldAbility_hashCode_R_int 0
+typedef jint (*func_mindustry_entities_abilities_SuppressionFieldAbility_hashCode_R_int)(jcontext ctx, jobject self);
+#define VTABLE_mindustry_entities_abilities_SuppressionFieldAbility_equals_java_lang_Object_R_boolean 1
+typedef jbool (*func_mindustry_entities_abilities_SuppressionFieldAbility_equals_java_lang_Object_R_boolean)(jcontext ctx, jobject self, jobject param0);
+#define VTABLE_mindustry_entities_abilities_SuppressionFieldAbility_clone_R_java_lang_Object 2
+typedef jobject (*func_mindustry_entities_abilities_SuppressionFieldAbility_clone_R_java_lang_Object)(jcontext ctx, jobject self);
+#define VTABLE_mindustry_entities_abilities_SuppressionFieldAbility_getClass_R_java_lang_Class 3
+typedef jobject (*func_mindustry_entities_abilities_SuppressionFieldAbility_getClass_R_java_lang_Class)(jcontext ctx, jobject self);
+#define VTABLE_mindustry_entities_abilities_SuppressionFieldAbility_toString_R_java_lang_String 4
+typedef jobject (*func_mindustry_entities_abilities_SuppressionFieldAbility_toString_R_java_lang_String)(jcontext ctx, jobject self);
+#define VTABLE_mindustry_entities_abilities_SuppressionFieldAbility_finalize 5
+typedef void (*func_mindustry_entities_abilities_SuppressionFieldAbility_finalize)(jcontext ctx, jobject self);
+#define VTABLE_mindustry_entities_abilities_SuppressionFieldAbility_notify 6
+typedef void (*func_mindustry_entities_abilities_SuppressionFieldAbility_notify)(jcontext ctx, jobject self);
+#define VTABLE_mindustry_entities_abilities_SuppressionFieldAbility_notifyAll 7
+typedef void (*func_mindustry_entities_abilities_SuppressionFieldAbility_notifyAll)(jcontext ctx, jobject self);
+#define VTABLE_mindustry_entities_abilities_SuppressionFieldAbility_wait 8
+typedef void (*func_mindustry_entities_abilities_SuppressionFieldAbility_wait)(jcontext ctx, jobject self);
+#define VTABLE_mindustry_entities_abilities_SuppressionFieldAbility_wait_long 9
+typedef void (*func_mindustry_entities_abilities_SuppressionFieldAbility_wait_long)(jcontext ctx, jobject self, jlong param0);
+#define VTABLE_mindustry_entities_abilities_SuppressionFieldAbility_wait_long_int 10
+typedef void (*func_mindustry_entities_abilities_SuppressionFieldAbility_wait_long_int)(jcontext ctx, jobject self, jlong param0, jint param1);
+#define VTABLE_mindustry_entities_abilities_SuppressionFieldAbility_update_mindustry_gen_Unit 11
+typedef void (*func_mindustry_entities_abilities_SuppressionFieldAbility_update_mindustry_gen_Unit)(jcontext ctx, jobject self, jobject param0);
+#define VTABLE_mindustry_entities_abilities_SuppressionFieldAbility_draw_mindustry_gen_Unit 12
+typedef void (*func_mindustry_entities_abilities_SuppressionFieldAbility_draw_mindustry_gen_Unit)(jcontext ctx, jobject self, jobject param0);
+#define VTABLE_mindustry_entities_abilities_SuppressionFieldAbility_death_mindustry_gen_Unit 13
+typedef void (*func_mindustry_entities_abilities_SuppressionFieldAbility_death_mindustry_gen_Unit)(jcontext ctx, jobject self, jobject param0);
+#define VTABLE_mindustry_entities_abilities_SuppressionFieldAbility_created_mindustry_gen_Unit 14
+typedef void (*func_mindustry_entities_abilities_SuppressionFieldAbility_created_mindustry_gen_Unit)(jcontext ctx, jobject self, jobject param0);
+#define VTABLE_mindustry_entities_abilities_SuppressionFieldAbility_init_mindustry_type_UnitType 15
+typedef void (*func_mindustry_entities_abilities_SuppressionFieldAbility_init_mindustry_type_UnitType)(jcontext ctx, jobject self, jobject param0);
+#define VTABLE_mindustry_entities_abilities_SuppressionFieldAbility_displayBars_mindustry_gen_Unit_arc_scene_ui_layout_Table 16
+typedef void (*func_mindustry_entities_abilities_SuppressionFieldAbility_displayBars_mindustry_gen_Unit_arc_scene_ui_layout_Table)(jcontext ctx, jobject self, jobject param0, jobject param1);
+#define VTABLE_mindustry_entities_abilities_SuppressionFieldAbility_display_arc_scene_ui_layout_Table 17
+typedef void (*func_mindustry_entities_abilities_SuppressionFieldAbility_display_arc_scene_ui_layout_Table)(jcontext ctx, jobject self, jobject param0);
+#define VTABLE_mindustry_entities_abilities_SuppressionFieldAbility_addStats_arc_scene_ui_layout_Table 18
+typedef void (*func_mindustry_entities_abilities_SuppressionFieldAbility_addStats_arc_scene_ui_layout_Table)(jcontext ctx, jobject self, jobject param0);
+#define VTABLE_mindustry_entities_abilities_SuppressionFieldAbility_abilityStat_java_lang_String_Array1_java_lang_Object_R_java_lang_String 19
+typedef jobject (*func_mindustry_entities_abilities_SuppressionFieldAbility_abilityStat_java_lang_String_Array1_java_lang_Object_R_java_lang_String)(jcontext ctx, jobject self, jobject param0, jobject param1);
+#define VTABLE_mindustry_entities_abilities_SuppressionFieldAbility_copy_R_mindustry_entities_abilities_Ability 20
+typedef jobject (*func_mindustry_entities_abilities_SuppressionFieldAbility_copy_R_mindustry_entities_abilities_Ability)(jcontext ctx, jobject self);
+#define VTABLE_mindustry_entities_abilities_SuppressionFieldAbility_localized_R_java_lang_String 21
+typedef jobject (*func_mindustry_entities_abilities_SuppressionFieldAbility_localized_R_java_lang_String)(jcontext ctx, jobject self);
+#define VTABLE_mindustry_entities_abilities_SuppressionFieldAbility_getBundle_R_java_lang_String 22
+typedef jobject (*func_mindustry_entities_abilities_SuppressionFieldAbility_getBundle_R_java_lang_String)(jcontext ctx, jobject self);
+#define VTABLE_mindustry_entities_abilities_SuppressionFieldAbility_lambda$display$0_arc_scene_ui_layout_Table 23
+typedef void (*func_mindustry_entities_abilities_SuppressionFieldAbility_lambda$display$0_arc_scene_ui_layout_Table)(jcontext ctx, jobject self, jobject param0);
+
+void mark_mindustry_entities_abilities_SuppressionFieldAbility(jobject object, jint mark, jint depth);
+void clinit_mindustry_entities_abilities_SuppressionFieldAbility(jcontext ctx);
+void init_mindustry_entities_abilities_SuppressionFieldAbility(jcontext ctx, jobject self);
+void M_mindustry_entities_abilities_SuppressionFieldAbility_init_mindustry_type_UnitType(jcontext ctx, jobject self, jobject param0);
+void M_mindustry_entities_abilities_SuppressionFieldAbility_addStats_arc_scene_ui_layout_Table(jcontext ctx, jobject self, jobject param0);
+void M_mindustry_entities_abilities_SuppressionFieldAbility_update_mindustry_gen_Unit(jcontext ctx, jobject self, jobject param0);
+void M_mindustry_entities_abilities_SuppressionFieldAbility_draw_mindustry_gen_Unit(jcontext ctx, jobject self, jobject param0);
+jfloat SM_mindustry_entities_abilities_SuppressionFieldAbility_lambda$new$0_float_R_float(jcontext ctx, jfloat param0);
+
+#ifdef __cplusplus
+}
+#endif
+
+#endif

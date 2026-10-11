@@ -1,0 +1,108 @@
+#ifndef HEADER_java_net_IPAddressUtil
+#define HEADER_java_net_IPAddressUtil
+
+#include "Clearwing.h"
+#include "java/lang/Object.h"
+
+#ifdef __cplusplus
+extern "C" {
+#endif
+
+typedef struct java_net_IPAddressUtil {
+	java_lang_Object parent;
+} java_net_IPAddressUtil;
+
+extern Class class_java_net_IPAddressUtil;
+
+extern jint SF_java_net_IPAddressUtil_INADDR4SZ;
+extern jint SF_java_net_IPAddressUtil_INADDR16SZ;
+extern jint SF_java_net_IPAddressUtil_INT16SZ;
+extern jlong SF_java_net_IPAddressUtil_L_IPV6_DELIMS;
+extern jlong SF_java_net_IPAddressUtil_H_IPV6_DELIMS;
+extern jlong SF_java_net_IPAddressUtil_L_GEN_DELIMS;
+extern jlong SF_java_net_IPAddressUtil_H_GEN_DELIMS;
+extern jlong SF_java_net_IPAddressUtil_L_AUTH_DELIMS;
+extern jlong SF_java_net_IPAddressUtil_H_AUTH_DELIMS;
+extern jlong SF_java_net_IPAddressUtil_L_COLON;
+extern jlong SF_java_net_IPAddressUtil_H_COLON;
+extern jlong SF_java_net_IPAddressUtil_L_SLASH;
+extern jlong SF_java_net_IPAddressUtil_H_SLASH;
+extern jlong SF_java_net_IPAddressUtil_L_BACKSLASH;
+extern jlong SF_java_net_IPAddressUtil_H_BACKSLASH;
+extern jlong SF_java_net_IPAddressUtil_L_NON_PRINTABLE;
+extern jlong SF_java_net_IPAddressUtil_H_NON_PRINTABLE;
+extern jlong SF_java_net_IPAddressUtil_L_EXCLUDE;
+extern jlong SF_java_net_IPAddressUtil_H_EXCLUDE;
+extern jobject SF_java_net_IPAddressUtil_OTHERS;
+extern jobject SF_java_net_IPAddressUtil_cache;
+extern jint SF_java_net_IPAddressUtil_HEXADECIMAL;
+extern jint SF_java_net_IPAddressUtil_DECIMAL;
+extern jint SF_java_net_IPAddressUtil_OCTAL;
+extern jobject SF_java_net_IPAddressUtil_SUPPORTED_RADIXES;
+extern jlong SF_java_net_IPAddressUtil_CANT_PARSE_IN_RADIX;
+extern jlong SF_java_net_IPAddressUtil_TERMINAL_PARSE_ERROR;
+extern jobject SF_java_net_IPAddressUtil_ALLOW_AMBIGUOUS_IPADDRESS_LITERALS_SP;
+extern jbool SF_java_net_IPAddressUtil_ALLOW_AMBIGUOUS_IPADDRESS_LITERALS_SP_VALUE;
+extern jbool SF_java_net_IPAddressUtil_$assertionsDisabled;
+
+#define VTABLE_java_net_IPAddressUtil_hashCode_R_int 0
+typedef jint (*func_java_net_IPAddressUtil_hashCode_R_int)(jcontext ctx, jobject self);
+#define VTABLE_java_net_IPAddressUtil_equals_java_lang_Object_R_boolean 1
+typedef jbool (*func_java_net_IPAddressUtil_equals_java_lang_Object_R_boolean)(jcontext ctx, jobject self, jobject param0);
+#define VTABLE_java_net_IPAddressUtil_clone_R_java_lang_Object 2
+typedef jobject (*func_java_net_IPAddressUtil_clone_R_java_lang_Object)(jcontext ctx, jobject self);
+#define VTABLE_java_net_IPAddressUtil_getClass_R_java_lang_Class 3
+typedef jobject (*func_java_net_IPAddressUtil_getClass_R_java_lang_Class)(jcontext ctx, jobject self);
+#define VTABLE_java_net_IPAddressUtil_toString_R_java_lang_String 4
+typedef jobject (*func_java_net_IPAddressUtil_toString_R_java_lang_String)(jcontext ctx, jobject self);
+#define VTABLE_java_net_IPAddressUtil_finalize 5
+typedef void (*func_java_net_IPAddressUtil_finalize)(jcontext ctx, jobject self);
+#define VTABLE_java_net_IPAddressUtil_notify 6
+typedef void (*func_java_net_IPAddressUtil_notify)(jcontext ctx, jobject self);
+#define VTABLE_java_net_IPAddressUtil_notifyAll 7
+typedef void (*func_java_net_IPAddressUtil_notifyAll)(jcontext ctx, jobject self);
+#define VTABLE_java_net_IPAddressUtil_wait 8
+typedef void (*func_java_net_IPAddressUtil_wait)(jcontext ctx, jobject self);
+#define VTABLE_java_net_IPAddressUtil_wait_long 9
+typedef void (*func_java_net_IPAddressUtil_wait_long)(jcontext ctx, jobject self, jlong param0);
+#define VTABLE_java_net_IPAddressUtil_wait_long_int 10
+typedef void (*func_java_net_IPAddressUtil_wait_long_int)(jcontext ctx, jobject self, jlong param0, jint param1);
+
+void mark_java_net_IPAddressUtil(jobject object, jint mark, jint depth);
+void clinit_java_net_IPAddressUtil(jcontext ctx);
+void init_java_net_IPAddressUtil(jcontext ctx, jobject self);
+jobject SM_java_net_IPAddressUtil_textToNumericFormatV4_java_lang_String_R_Array1_byte(jcontext ctx, jobject param0);
+jobject SM_java_net_IPAddressUtil_validateNumericFormatV4_java_lang_String_R_Array1_byte(jcontext ctx, jobject param0);
+jobject SM_java_net_IPAddressUtil_textToNumericFormatV6_java_lang_String_R_Array1_byte(jcontext ctx, jobject param0);
+jbool SM_java_net_IPAddressUtil_isIPv4LiteralAddress_java_lang_String_R_boolean(jcontext ctx, jobject param0);
+jbool SM_java_net_IPAddressUtil_isIPv6LiteralAddress_java_lang_String_R_boolean(jcontext ctx, jobject param0);
+jobject SM_java_net_IPAddressUtil_convertFromIPv4MappedAddress_Array1_byte_R_Array1_byte(jcontext ctx, jobject param0);
+jbool SM_java_net_IPAddressUtil_isIPv4MappedAddress_Array1_byte_R_boolean(jcontext ctx, jobject param0);
+jbool SM_java_net_IPAddressUtil_match_char_long_long_R_boolean(jcontext ctx, jchar param0, jlong param1, jlong param2);
+jint SM_java_net_IPAddressUtil_scan_java_lang_String_long_long_R_int(jcontext ctx, jobject param0, jlong param1, jlong param2);
+jint SM_java_net_IPAddressUtil_scan_java_lang_String_long_long_Array1_char_R_int(jcontext ctx, jobject param0, jlong param1, jlong param2, jobject param3);
+jobject SM_java_net_IPAddressUtil_describeChar_char_R_java_lang_String(jcontext ctx, jchar param0);
+jobject SM_java_net_IPAddressUtil_checkUserInfo_java_lang_String_R_java_lang_String(jcontext ctx, jobject param0);
+jobject SM_java_net_IPAddressUtil_checkHost_java_lang_String_R_java_lang_String(jcontext ctx, jobject param0);
+jobject SM_java_net_IPAddressUtil_checkAuth_java_lang_String_R_java_lang_String(jcontext ctx, jobject param0);
+jobject SM_java_net_IPAddressUtil_checkAuthority_java_net_URL_R_java_lang_String(jcontext ctx, jobject param0);
+jobject SM_java_net_IPAddressUtil_checkExternalForm_java_net_URL_R_java_lang_String(jcontext ctx, jobject param0);
+jobject SM_java_net_IPAddressUtil_checkHostString_java_lang_String_R_java_lang_String(jcontext ctx, jobject param0);
+jobject SM_java_net_IPAddressUtil_toScopedAddress_java_net_InetAddress_R_java_net_InetAddress(jcontext ctx, jobject param0);
+jobject SM_java_net_IPAddressUtil_toScopedAddress_java_net_InetSocketAddress_R_java_net_InetSocketAddress(jcontext ctx, jobject param0);
+jobject SM_java_net_IPAddressUtil_findScopedAddress_java_net_InetAddress_R_java_net_InetAddress(jcontext ctx, jobject param0);
+jint SM_java_net_IPAddressUtil_digit_char_int_R_int(jcontext ctx, jchar param0, jint param1);
+jbool SM_java_net_IPAddressUtil_isBsdParsableV4_java_lang_String_R_boolean(jcontext ctx, jobject param0);
+jlong SM_java_net_IPAddressUtil_parseV4FieldBsd_int_java_nio_CharBuffer_int_R_long(jcontext ctx, jint param0, jobject param1, jint param2);
+jbool SM_java_net_IPAddressUtil_checkPrefix_java_nio_CharBuffer_int_R_boolean(jcontext ctx, jobject param0, jint param1);
+jbool SM_java_net_IPAddressUtil_isOctalFieldStart_java_nio_CharBuffer_R_boolean(jcontext ctx, jobject param0);
+jbool SM_java_net_IPAddressUtil_isDecimalFieldStart_java_nio_CharBuffer_R_boolean(jcontext ctx, jobject param0);
+jbool SM_java_net_IPAddressUtil_isHexFieldStart_java_nio_CharBuffer_R_boolean(jcontext ctx, jobject param0);
+jint SM_java_net_IPAddressUtil_parseAsciiDigit_char_int_R_int(jcontext ctx, jchar param0, jint param1);
+jint SM_java_net_IPAddressUtil_parseAsciiHexDigit_char_R_int(jcontext ctx, jchar param0);
+
+#ifdef __cplusplus
+}
+#endif
+
+#endif

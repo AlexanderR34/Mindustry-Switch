@@ -1,0 +1,75 @@
+#ifndef HEADER_mindustry_ui_fragments_PlanConfigFragment
+#define HEADER_mindustry_ui_fragments_PlanConfigFragment
+
+#include "Clearwing.h"
+#include "java/lang/Object.h"
+
+#ifdef __cplusplus
+extern "C" {
+#endif
+
+typedef struct mindustry_ui_fragments_PlanConfigFragment {
+	java_lang_Object parent;
+	jref F_table;
+	jref F_selected;
+} mindustry_ui_fragments_PlanConfigFragment;
+
+extern Class class_mindustry_ui_fragments_PlanConfigFragment;
+
+
+#define VTABLE_mindustry_ui_fragments_PlanConfigFragment_hashCode_R_int 0
+typedef jint (*func_mindustry_ui_fragments_PlanConfigFragment_hashCode_R_int)(jcontext ctx, jobject self);
+#define VTABLE_mindustry_ui_fragments_PlanConfigFragment_equals_java_lang_Object_R_boolean 1
+typedef jbool (*func_mindustry_ui_fragments_PlanConfigFragment_equals_java_lang_Object_R_boolean)(jcontext ctx, jobject self, jobject param0);
+#define VTABLE_mindustry_ui_fragments_PlanConfigFragment_clone_R_java_lang_Object 2
+typedef jobject (*func_mindustry_ui_fragments_PlanConfigFragment_clone_R_java_lang_Object)(jcontext ctx, jobject self);
+#define VTABLE_mindustry_ui_fragments_PlanConfigFragment_getClass_R_java_lang_Class 3
+typedef jobject (*func_mindustry_ui_fragments_PlanConfigFragment_getClass_R_java_lang_Class)(jcontext ctx, jobject self);
+#define VTABLE_mindustry_ui_fragments_PlanConfigFragment_toString_R_java_lang_String 4
+typedef jobject (*func_mindustry_ui_fragments_PlanConfigFragment_toString_R_java_lang_String)(jcontext ctx, jobject self);
+#define VTABLE_mindustry_ui_fragments_PlanConfigFragment_finalize 5
+typedef void (*func_mindustry_ui_fragments_PlanConfigFragment_finalize)(jcontext ctx, jobject self);
+#define VTABLE_mindustry_ui_fragments_PlanConfigFragment_notify 6
+typedef void (*func_mindustry_ui_fragments_PlanConfigFragment_notify)(jcontext ctx, jobject self);
+#define VTABLE_mindustry_ui_fragments_PlanConfigFragment_notifyAll 7
+typedef void (*func_mindustry_ui_fragments_PlanConfigFragment_notifyAll)(jcontext ctx, jobject self);
+#define VTABLE_mindustry_ui_fragments_PlanConfigFragment_wait 8
+typedef void (*func_mindustry_ui_fragments_PlanConfigFragment_wait)(jcontext ctx, jobject self);
+#define VTABLE_mindustry_ui_fragments_PlanConfigFragment_wait_long 9
+typedef void (*func_mindustry_ui_fragments_PlanConfigFragment_wait_long)(jcontext ctx, jobject self, jlong param0);
+#define VTABLE_mindustry_ui_fragments_PlanConfigFragment_wait_long_int 10
+typedef void (*func_mindustry_ui_fragments_PlanConfigFragment_wait_long_int)(jcontext ctx, jobject self, jlong param0, jint param1);
+#define VTABLE_mindustry_ui_fragments_PlanConfigFragment_build_arc_scene_Group 11
+typedef void (*func_mindustry_ui_fragments_PlanConfigFragment_build_arc_scene_Group)(jcontext ctx, jobject self, jobject param0);
+#define VTABLE_mindustry_ui_fragments_PlanConfigFragment_showConfig_mindustry_entities_units_BuildPlan 12
+typedef void (*func_mindustry_ui_fragments_PlanConfigFragment_showConfig_mindustry_entities_units_BuildPlan)(jcontext ctx, jobject self, jobject param0);
+#define VTABLE_mindustry_ui_fragments_PlanConfigFragment_forceHide 13
+typedef void (*func_mindustry_ui_fragments_PlanConfigFragment_forceHide)(jcontext ctx, jobject self);
+#define VTABLE_mindustry_ui_fragments_PlanConfigFragment_hide 14
+typedef void (*func_mindustry_ui_fragments_PlanConfigFragment_hide)(jcontext ctx, jobject self);
+#define VTABLE_mindustry_ui_fragments_PlanConfigFragment_lambda$showConfig$2_mindustry_entities_units_BuildPlan_mindustry_world_Block 15
+typedef void (*func_mindustry_ui_fragments_PlanConfigFragment_lambda$showConfig$2_mindustry_entities_units_BuildPlan_mindustry_world_Block)(jcontext ctx, jobject self, jobject param0, jobject param1);
+#define VTABLE_mindustry_ui_fragments_PlanConfigFragment_lambda$showConfig$1_mindustry_ctype_UnlockableContent 16
+typedef void (*func_mindustry_ui_fragments_PlanConfigFragment_lambda$showConfig$1_mindustry_ctype_UnlockableContent)(jcontext ctx, jobject self, jobject param0);
+#define VTABLE_mindustry_ui_fragments_PlanConfigFragment_lambda$showConfig$0_R_mindustry_ctype_UnlockableContent 17
+typedef jobject (*func_mindustry_ui_fragments_PlanConfigFragment_lambda$showConfig$0_R_mindustry_ctype_UnlockableContent)(jcontext ctx, jobject self);
+#define VTABLE_mindustry_ui_fragments_PlanConfigFragment_lambda$build$0_mindustry_game_EventType$ResetEvent 18
+typedef void (*func_mindustry_ui_fragments_PlanConfigFragment_lambda$build$0_mindustry_game_EventType$ResetEvent)(jcontext ctx, jobject self, jobject param0);
+
+void mark_mindustry_ui_fragments_PlanConfigFragment(jobject object, jint mark, jint depth);
+void clinit_mindustry_ui_fragments_PlanConfigFragment(jcontext ctx);
+void init_mindustry_ui_fragments_PlanConfigFragment(jcontext ctx, jobject self);
+void M_mindustry_ui_fragments_PlanConfigFragment_build_arc_scene_Group(jcontext ctx, jobject self, jobject param0);
+void M_mindustry_ui_fragments_PlanConfigFragment_showConfig_mindustry_entities_units_BuildPlan(jcontext ctx, jobject self, jobject param0);
+void M_mindustry_ui_fragments_PlanConfigFragment_forceHide(jcontext ctx, jobject self);
+void M_mindustry_ui_fragments_PlanConfigFragment_hide(jcontext ctx, jobject self);
+void M_mindustry_ui_fragments_PlanConfigFragment_lambda$showConfig$2_mindustry_entities_units_BuildPlan_mindustry_world_Block(jcontext ctx, jobject self, jobject param0, jobject param1);
+void M_mindustry_ui_fragments_PlanConfigFragment_lambda$showConfig$1_mindustry_ctype_UnlockableContent(jcontext ctx, jobject self, jobject param0);
+jobject M_mindustry_ui_fragments_PlanConfigFragment_lambda$showConfig$0_R_mindustry_ctype_UnlockableContent(jcontext ctx, jobject self);
+void M_mindustry_ui_fragments_PlanConfigFragment_lambda$build$0_mindustry_game_EventType$ResetEvent(jcontext ctx, jobject self, jobject param0);
+
+#ifdef __cplusplus
+}
+#endif
+
+#endif

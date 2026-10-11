@@ -1,0 +1,218 @@
+#ifndef HEADER_mindustry_maps_generators_PlanetGenerator
+#define HEADER_mindustry_maps_generators_PlanetGenerator
+
+#include "Clearwing.h"
+#include "mindustry/maps/generators/BasicGenerator.h"
+#include "mindustry/graphics/g3d/HexMesher.h"
+
+#ifdef __cplusplus
+extern "C" {
+#endif
+
+typedef struct mindustry_maps_generators_PlanetGenerator {
+	mindustry_maps_generators_BasicGenerator parent;
+	jint F_baseSeed;
+	jint F_seed;
+	jref F_sector;
+} mindustry_maps_generators_PlanetGenerator;
+
+extern Class class_mindustry_maps_generators_PlanetGenerator;
+
+extern jobject SF_mindustry_maps_generators_PlanetGenerator_tmpItems;
+
+#define VTABLE_mindustry_maps_generators_PlanetGenerator_hashCode_R_int 0
+typedef jint (*func_mindustry_maps_generators_PlanetGenerator_hashCode_R_int)(jcontext ctx, jobject self);
+#define VTABLE_mindustry_maps_generators_PlanetGenerator_equals_java_lang_Object_R_boolean 1
+typedef jbool (*func_mindustry_maps_generators_PlanetGenerator_equals_java_lang_Object_R_boolean)(jcontext ctx, jobject self, jobject param0);
+#define VTABLE_mindustry_maps_generators_PlanetGenerator_clone_R_java_lang_Object 2
+typedef jobject (*func_mindustry_maps_generators_PlanetGenerator_clone_R_java_lang_Object)(jcontext ctx, jobject self);
+#define VTABLE_mindustry_maps_generators_PlanetGenerator_getClass_R_java_lang_Class 3
+typedef jobject (*func_mindustry_maps_generators_PlanetGenerator_getClass_R_java_lang_Class)(jcontext ctx, jobject self);
+#define VTABLE_mindustry_maps_generators_PlanetGenerator_toString_R_java_lang_String 4
+typedef jobject (*func_mindustry_maps_generators_PlanetGenerator_toString_R_java_lang_String)(jcontext ctx, jobject self);
+#define VTABLE_mindustry_maps_generators_PlanetGenerator_finalize 5
+typedef void (*func_mindustry_maps_generators_PlanetGenerator_finalize)(jcontext ctx, jobject self);
+#define VTABLE_mindustry_maps_generators_PlanetGenerator_notify 6
+typedef void (*func_mindustry_maps_generators_PlanetGenerator_notify)(jcontext ctx, jobject self);
+#define VTABLE_mindustry_maps_generators_PlanetGenerator_notifyAll 7
+typedef void (*func_mindustry_maps_generators_PlanetGenerator_notifyAll)(jcontext ctx, jobject self);
+#define VTABLE_mindustry_maps_generators_PlanetGenerator_wait 8
+typedef void (*func_mindustry_maps_generators_PlanetGenerator_wait)(jcontext ctx, jobject self);
+#define VTABLE_mindustry_maps_generators_PlanetGenerator_wait_long 9
+typedef void (*func_mindustry_maps_generators_PlanetGenerator_wait_long)(jcontext ctx, jobject self, jlong param0);
+#define VTABLE_mindustry_maps_generators_PlanetGenerator_wait_long_int 10
+typedef void (*func_mindustry_maps_generators_PlanetGenerator_wait_long_int)(jcontext ctx, jobject self, jlong param0, jint param1);
+#define VTABLE_mindustry_maps_generators_PlanetGenerator_generate_mindustry_world_Tiles_mindustry_world_WorldParams 11
+typedef void (*func_mindustry_maps_generators_PlanetGenerator_generate_mindustry_world_Tiles_mindustry_world_WorldParams)(jcontext ctx, jobject self, jobject param0, jobject param1);
+#define VTABLE_mindustry_maps_generators_PlanetGenerator_postGenerate_mindustry_world_Tiles 12
+typedef void (*func_mindustry_maps_generators_PlanetGenerator_postGenerate_mindustry_world_Tiles)(jcontext ctx, jobject self, jobject param0);
+#define VTABLE_mindustry_maps_generators_PlanetGenerator_generate 13
+typedef void (*func_mindustry_maps_generators_PlanetGenerator_generate)(jcontext ctx, jobject self);
+#define VTABLE_mindustry_maps_generators_PlanetGenerator_median_int 14
+typedef void (*func_mindustry_maps_generators_PlanetGenerator_median_int)(jcontext ctx, jobject self, jint param0);
+#define VTABLE_mindustry_maps_generators_PlanetGenerator_median_int_double 15
+typedef void (*func_mindustry_maps_generators_PlanetGenerator_median_int_double)(jcontext ctx, jobject self, jint param0, jdouble param1);
+#define VTABLE_mindustry_maps_generators_PlanetGenerator_median_int_double_mindustry_world_Block 16
+typedef void (*func_mindustry_maps_generators_PlanetGenerator_median_int_double_mindustry_world_Block)(jcontext ctx, jobject self, jint param0, jdouble param1, jobject param2);
+#define VTABLE_mindustry_maps_generators_PlanetGenerator_ores_arc_struct_Seq 17
+typedef void (*func_mindustry_maps_generators_PlanetGenerator_ores_arc_struct_Seq)(jcontext ctx, jobject self, jobject param0);
+#define VTABLE_mindustry_maps_generators_PlanetGenerator_ore_mindustry_world_Block_mindustry_world_Block_float_float 18
+typedef void (*func_mindustry_maps_generators_PlanetGenerator_ore_mindustry_world_Block_mindustry_world_Block_float_float)(jcontext ctx, jobject self, jobject param0, jobject param1, jfloat param2, jfloat param3);
+#define VTABLE_mindustry_maps_generators_PlanetGenerator_oreAround_mindustry_world_Block_mindustry_world_Block_int_float_float 19
+typedef void (*func_mindustry_maps_generators_PlanetGenerator_oreAround_mindustry_world_Block_mindustry_world_Block_int_float_float)(jcontext ctx, jobject self, jobject param0, jobject param1, jint param2, jfloat param3, jfloat param4);
+#define VTABLE_mindustry_maps_generators_PlanetGenerator_wallOre_mindustry_world_Block_mindustry_world_Block_float_float 20
+typedef void (*func_mindustry_maps_generators_PlanetGenerator_wallOre_mindustry_world_Block_mindustry_world_Block_float_float)(jcontext ctx, jobject self, jobject param0, jobject param1, jfloat param2, jfloat param3);
+#define VTABLE_mindustry_maps_generators_PlanetGenerator_cliffs 21
+typedef void (*func_mindustry_maps_generators_PlanetGenerator_cliffs)(jcontext ctx, jobject self);
+#define VTABLE_mindustry_maps_generators_PlanetGenerator_terrain_mindustry_world_Block_float_float_float 22
+typedef void (*func_mindustry_maps_generators_PlanetGenerator_terrain_mindustry_world_Block_float_float_float)(jcontext ctx, jobject self, jobject param0, jfloat param1, jfloat param2, jfloat param3);
+#define VTABLE_mindustry_maps_generators_PlanetGenerator_noise_mindustry_world_Block_mindustry_world_Block_int_float_float_float 23
+typedef void (*func_mindustry_maps_generators_PlanetGenerator_noise_mindustry_world_Block_mindustry_world_Block_int_float_float_float)(jcontext ctx, jobject self, jobject param0, jobject param1, jint param2, jfloat param3, jfloat param4, jfloat param5);
+#define VTABLE_mindustry_maps_generators_PlanetGenerator_overlay_mindustry_world_Block_mindustry_world_Block_float_int_float_float_float 24
+typedef void (*func_mindustry_maps_generators_PlanetGenerator_overlay_mindustry_world_Block_mindustry_world_Block_float_int_float_float_float)(jcontext ctx, jobject self, jobject param0, jobject param1, jfloat param2, jint param3, jfloat param4, jfloat param5, jfloat param6);
+#define VTABLE_mindustry_maps_generators_PlanetGenerator_tech 25
+typedef void (*func_mindustry_maps_generators_PlanetGenerator_tech)(jcontext ctx, jobject self);
+#define VTABLE_mindustry_maps_generators_PlanetGenerator_tech_mindustry_world_Block_mindustry_world_Block_mindustry_world_Block 26
+typedef void (*func_mindustry_maps_generators_PlanetGenerator_tech_mindustry_world_Block_mindustry_world_Block_mindustry_world_Block)(jcontext ctx, jobject self, jobject param0, jobject param1, jobject param2);
+#define VTABLE_mindustry_maps_generators_PlanetGenerator_distort_float_float 27
+typedef void (*func_mindustry_maps_generators_PlanetGenerator_distort_float_float)(jcontext ctx, jobject self, jfloat param0, jfloat param1);
+#define VTABLE_mindustry_maps_generators_PlanetGenerator_scatter_mindustry_world_Block_mindustry_world_Block_float 28
+typedef void (*func_mindustry_maps_generators_PlanetGenerator_scatter_mindustry_world_Block_mindustry_world_Block_float)(jcontext ctx, jobject self, jobject param0, jobject param1, jfloat param2);
+#define VTABLE_mindustry_maps_generators_PlanetGenerator_each_arc_func_Intc2 29
+typedef void (*func_mindustry_maps_generators_PlanetGenerator_each_arc_func_Intc2)(jcontext ctx, jobject self, jobject param0);
+#define VTABLE_mindustry_maps_generators_PlanetGenerator_cells_int 30
+typedef void (*func_mindustry_maps_generators_PlanetGenerator_cells_int)(jcontext ctx, jobject self, jint param0);
+#define VTABLE_mindustry_maps_generators_PlanetGenerator_cells_int_int_int_int 31
+typedef void (*func_mindustry_maps_generators_PlanetGenerator_cells_int_int_int_int)(jcontext ctx, jobject self, jint param0, jint param1, jint param2, jint param3);
+#define VTABLE_mindustry_maps_generators_PlanetGenerator_noise_float_float_double_double_R_float 32
+typedef jfloat (*func_mindustry_maps_generators_PlanetGenerator_noise_float_float_double_double_R_float)(jcontext ctx, jobject self, jfloat param0, jfloat param1, jdouble param2, jdouble param3);
+#define VTABLE_mindustry_maps_generators_PlanetGenerator_noise_float_float_double_double_double_double_R_float 33
+typedef jfloat (*func_mindustry_maps_generators_PlanetGenerator_noise_float_float_double_double_double_double_R_float)(jcontext ctx, jobject self, jfloat param0, jfloat param1, jdouble param2, jdouble param3, jdouble param4, jdouble param5);
+#define VTABLE_mindustry_maps_generators_PlanetGenerator_noise_float_float_double_double_double_R_float 34
+typedef jfloat (*func_mindustry_maps_generators_PlanetGenerator_noise_float_float_double_double_double_R_float)(jcontext ctx, jobject self, jfloat param0, jfloat param1, jdouble param2, jdouble param3, jdouble param4);
+#define VTABLE_mindustry_maps_generators_PlanetGenerator_pass_arc_func_Intc2 35
+typedef void (*func_mindustry_maps_generators_PlanetGenerator_pass_arc_func_Intc2)(jcontext ctx, jobject self, jobject param0);
+#define VTABLE_mindustry_maps_generators_PlanetGenerator_nearWall_int_int_R_boolean 36
+typedef jbool (*func_mindustry_maps_generators_PlanetGenerator_nearWall_int_int_R_boolean)(jcontext ctx, jobject self, jint param0, jint param1);
+#define VTABLE_mindustry_maps_generators_PlanetGenerator_nearAir_int_int_R_boolean 37
+typedef jbool (*func_mindustry_maps_generators_PlanetGenerator_nearAir_int_int_R_boolean)(jcontext ctx, jobject self, jint param0, jint param1);
+#define VTABLE_mindustry_maps_generators_PlanetGenerator_removeWall_int_int_int_arc_func_Boolf 38
+typedef void (*func_mindustry_maps_generators_PlanetGenerator_removeWall_int_int_int_arc_func_Boolf)(jcontext ctx, jobject self, jint param0, jint param1, jint param2, jobject param3);
+#define VTABLE_mindustry_maps_generators_PlanetGenerator_near_int_int_int_mindustry_world_Block_R_boolean 39
+typedef jbool (*func_mindustry_maps_generators_PlanetGenerator_near_int_int_int_mindustry_world_Block_R_boolean)(jcontext ctx, jobject self, jint param0, jint param1, jint param2, jobject param3);
+#define VTABLE_mindustry_maps_generators_PlanetGenerator_decoration_float 40
+typedef void (*func_mindustry_maps_generators_PlanetGenerator_decoration_float)(jcontext ctx, jobject self, jfloat param0);
+#define VTABLE_mindustry_maps_generators_PlanetGenerator_blend_mindustry_world_Block_mindustry_world_Block_float 41
+typedef void (*func_mindustry_maps_generators_PlanetGenerator_blend_mindustry_world_Block_mindustry_world_Block_float)(jcontext ctx, jobject self, jobject param0, jobject param1, jfloat param2);
+#define VTABLE_mindustry_maps_generators_PlanetGenerator_brush_arc_struct_Seq_int 42
+typedef void (*func_mindustry_maps_generators_PlanetGenerator_brush_arc_struct_Seq_int)(jcontext ctx, jobject self, jobject param0, jint param1);
+#define VTABLE_mindustry_maps_generators_PlanetGenerator_erase_int_int_int 43
+typedef void (*func_mindustry_maps_generators_PlanetGenerator_erase_int_int_int)(jcontext ctx, jobject self, jint param0, jint param1, jint param2);
+#define VTABLE_mindustry_maps_generators_PlanetGenerator_pathfind_int_int_int_int_mindustry_ai_Astar$TileHeuristic_mindustry_ai_Astar$DistanceHeuristic_R_arc_struct_Seq 44
+typedef jobject (*func_mindustry_maps_generators_PlanetGenerator_pathfind_int_int_int_int_mindustry_ai_Astar$TileHeuristic_mindustry_ai_Astar$DistanceHeuristic_R_arc_struct_Seq)(jcontext ctx, jobject self, jint param0, jint param1, jint param2, jint param3, jobject param4, jobject param5);
+#define VTABLE_mindustry_maps_generators_PlanetGenerator_trimDark 45
+typedef void (*func_mindustry_maps_generators_PlanetGenerator_trimDark)(jcontext ctx, jobject self);
+#define VTABLE_mindustry_maps_generators_PlanetGenerator_inverseFloodFill_mindustry_world_Tile 46
+typedef void (*func_mindustry_maps_generators_PlanetGenerator_inverseFloodFill_mindustry_world_Tile)(jcontext ctx, jobject self, jobject param0);
+#define VTABLE_mindustry_maps_generators_PlanetGenerator_lambda$brush$0_int_mindustry_world_Tile 47
+typedef void (*func_mindustry_maps_generators_PlanetGenerator_lambda$brush$0_int_mindustry_world_Tile)(jcontext ctx, jobject self, jint param0, jobject param1);
+#define VTABLE_mindustry_maps_generators_PlanetGenerator_lambda$decoration$0_float_int_int 48
+typedef void (*func_mindustry_maps_generators_PlanetGenerator_lambda$decoration$0_float_int_int)(jcontext ctx, jobject self, jfloat param0, jint param1, jint param2);
+#define VTABLE_mindustry_maps_generators_PlanetGenerator_lambda$cells$1_int_arc_struct_GridBits_arc_struct_GridBits_int_int_int_int 49
+typedef void (*func_mindustry_maps_generators_PlanetGenerator_lambda$cells$1_int_arc_struct_GridBits_arc_struct_GridBits_int_int_int_int)(jcontext ctx, jobject self, jint param0, jobject param1, jobject param2, jint param3, jint param4, jint param5, jint param6);
+#define VTABLE_mindustry_maps_generators_PlanetGenerator_lambda$cells$0_arc_struct_GridBits_int_int 50
+typedef void (*func_mindustry_maps_generators_PlanetGenerator_lambda$cells$0_arc_struct_GridBits_int_int)(jcontext ctx, jobject self, jobject param0, jint param1, jint param2);
+#define VTABLE_mindustry_maps_generators_PlanetGenerator_lambda$scatter$0_float_mindustry_world_Block_mindustry_world_Block_int_int 51
+typedef void (*func_mindustry_maps_generators_PlanetGenerator_lambda$scatter$0_float_mindustry_world_Block_mindustry_world_Block_int_int)(jcontext ctx, jobject self, jfloat param0, jobject param1, jobject param2, jint param3, jint param4);
+#define VTABLE_mindustry_maps_generators_PlanetGenerator_lambda$distort$0_float_float_Array1_short_Array1_short_int_int 52
+typedef void (*func_mindustry_maps_generators_PlanetGenerator_lambda$distort$0_float_float_Array1_short_Array1_short_int_int)(jcontext ctx, jobject self, jfloat param0, jfloat param1, jobject param2, jobject param3, jint param4, jint param5);
+#define VTABLE_mindustry_maps_generators_PlanetGenerator_lambda$tech$0_int_mindustry_world_Block_mindustry_world_Block_mindustry_world_Block_int_int 53
+typedef void (*func_mindustry_maps_generators_PlanetGenerator_lambda$tech$0_int_mindustry_world_Block_mindustry_world_Block_mindustry_world_Block_int_int)(jcontext ctx, jobject self, jint param0, jobject param1, jobject param2, jobject param3, jint param4, jint param5);
+#define VTABLE_mindustry_maps_generators_PlanetGenerator_lambda$overlay$0_int_float_float_float_float_mindustry_world_Block_mindustry_world_Block_int_int 54
+typedef void (*func_mindustry_maps_generators_PlanetGenerator_lambda$overlay$0_int_float_float_float_float_mindustry_world_Block_mindustry_world_Block_int_int)(jcontext ctx, jobject self, jint param0, jfloat param1, jfloat param2, jfloat param3, jfloat param4, jobject param5, jobject param6, jint param7, jint param8);
+#define VTABLE_mindustry_maps_generators_PlanetGenerator_lambda$noise$0_int_float_float_float_mindustry_world_Block_mindustry_world_Block_int_int 55
+typedef void (*func_mindustry_maps_generators_PlanetGenerator_lambda$noise$0_int_float_float_float_mindustry_world_Block_mindustry_world_Block_int_int)(jcontext ctx, jobject self, jint param0, jfloat param1, jfloat param2, jfloat param3, jobject param4, jobject param5, jint param6, jint param7);
+#define VTABLE_mindustry_maps_generators_PlanetGenerator_lambda$terrain$0_float_float_float_mindustry_world_Block_int_int 56
+typedef void (*func_mindustry_maps_generators_PlanetGenerator_lambda$terrain$0_float_float_float_mindustry_world_Block_int_int)(jcontext ctx, jobject self, jfloat param0, jfloat param1, jfloat param2, jobject param3, jint param4, jint param5);
+#define VTABLE_mindustry_maps_generators_PlanetGenerator_lambda$wallOre$0_float_float_mindustry_world_Block_boolean_mindustry_world_Block_int_int 57
+typedef void (*func_mindustry_maps_generators_PlanetGenerator_lambda$wallOre$0_float_float_mindustry_world_Block_boolean_mindustry_world_Block_int_int)(jcontext ctx, jobject self, jfloat param0, jfloat param1, jobject param2, jbool param3, jobject param4, jint param5, jint param6);
+#define VTABLE_mindustry_maps_generators_PlanetGenerator_lambda$ore$0_mindustry_world_Block_float_float_mindustry_world_Block_int_int 58
+typedef void (*func_mindustry_maps_generators_PlanetGenerator_lambda$ore$0_mindustry_world_Block_float_float_mindustry_world_Block_int_int)(jcontext ctx, jobject self, jobject param0, jfloat param1, jfloat param2, jobject param3, jint param4, jint param5);
+#define VTABLE_mindustry_maps_generators_PlanetGenerator_lambda$ores$0_arc_struct_Seq_int_int 59
+typedef void (*func_mindustry_maps_generators_PlanetGenerator_lambda$ores$0_arc_struct_Seq_int_int)(jcontext ctx, jobject self, jobject param0, jint param1, jint param2);
+#define VTABLE_mindustry_maps_generators_PlanetGenerator_lambda$median$2_mindustry_world_Block_Array1_short_Array1_short_int_int 60
+typedef void (*func_mindustry_maps_generators_PlanetGenerator_lambda$median$2_mindustry_world_Block_Array1_short_Array1_short_int_int)(jcontext ctx, jobject self, jobject param0, jobject param1, jobject param2, jint param3, jint param4);
+#define VTABLE_mindustry_maps_generators_PlanetGenerator_lambda$median$0_mindustry_world_Block_int_Array1_short_double_Array1_short_int_int 61
+typedef void (*func_mindustry_maps_generators_PlanetGenerator_lambda$median$0_mindustry_world_Block_int_Array1_short_double_Array1_short_int_int)(jcontext ctx, jobject self, jobject param0, jint param1, jobject param2, jdouble param3, jobject param4, jint param5, jint param6);
+#define VTABLE_mindustry_maps_generators_PlanetGenerator_lambda$median$1_int_int 62
+typedef void (*func_mindustry_maps_generators_PlanetGenerator_lambda$median$1_int_int)(jcontext ctx, jobject self, jint param0, jint param1);
+#define VTABLE_mindustry_maps_generators_PlanetGenerator_getHeight_arc_math_geom_Vec3_R_float 63
+typedef jfloat (*func_mindustry_maps_generators_PlanetGenerator_getHeight_arc_math_geom_Vec3_R_float)(jcontext ctx, jobject self, jobject param0);
+#define VTABLE_mindustry_maps_generators_PlanetGenerator_getColor_arc_math_geom_Vec3_arc_graphics_Color 64
+typedef void (*func_mindustry_maps_generators_PlanetGenerator_getColor_arc_math_geom_Vec3_arc_graphics_Color)(jcontext ctx, jobject self, jobject param0, jobject param1);
+#define VTABLE_mindustry_maps_generators_PlanetGenerator_getEmissiveColor_arc_math_geom_Vec3_arc_graphics_Color 65
+typedef void (*func_mindustry_maps_generators_PlanetGenerator_getEmissiveColor_arc_math_geom_Vec3_arc_graphics_Color)(jcontext ctx, jobject self, jobject param0, jobject param1);
+#define VTABLE_mindustry_maps_generators_PlanetGenerator_isEmissive_R_boolean 66
+typedef jbool (*func_mindustry_maps_generators_PlanetGenerator_isEmissive_R_boolean)(jcontext ctx, jobject self);
+#define VTABLE_mindustry_maps_generators_PlanetGenerator_skip_arc_math_geom_Vec3_R_boolean 67
+typedef jbool (*func_mindustry_maps_generators_PlanetGenerator_skip_arc_math_geom_Vec3_R_boolean)(jcontext ctx, jobject self, jobject param0);
+#define VTABLE_mindustry_maps_generators_PlanetGenerator_generateSector_mindustry_type_Sector 68
+typedef void (*func_mindustry_maps_generators_PlanetGenerator_generateSector_mindustry_type_Sector)(jcontext ctx, jobject self, jobject param0);
+#define VTABLE_mindustry_maps_generators_PlanetGenerator_onSectorCaptured_mindustry_type_Sector 69
+typedef void (*func_mindustry_maps_generators_PlanetGenerator_onSectorCaptured_mindustry_type_Sector)(jcontext ctx, jobject self, jobject param0);
+#define VTABLE_mindustry_maps_generators_PlanetGenerator_onSectorLost_mindustry_type_Sector 70
+typedef void (*func_mindustry_maps_generators_PlanetGenerator_onSectorLost_mindustry_type_Sector)(jcontext ctx, jobject self, jobject param0);
+#define VTABLE_mindustry_maps_generators_PlanetGenerator_beforeSaveWrite_mindustry_type_Sector 71
+typedef void (*func_mindustry_maps_generators_PlanetGenerator_beforeSaveWrite_mindustry_type_Sector)(jcontext ctx, jobject self, jobject param0);
+#define VTABLE_mindustry_maps_generators_PlanetGenerator_getLockedText_mindustry_type_Sector_java_lang_StringBuilder 72
+typedef void (*func_mindustry_maps_generators_PlanetGenerator_getLockedText_mindustry_type_Sector_java_lang_StringBuilder)(jcontext ctx, jobject self, jobject param0, jobject param1);
+#define VTABLE_mindustry_maps_generators_PlanetGenerator_getLockedIcon_mindustry_type_Sector_R_arc_graphics_g2d_TextureRegion 73
+typedef jobject (*func_mindustry_maps_generators_PlanetGenerator_getLockedIcon_mindustry_type_Sector_R_arc_graphics_g2d_TextureRegion)(jcontext ctx, jobject self, jobject param0);
+#define VTABLE_mindustry_maps_generators_PlanetGenerator_allowLanding_mindustry_type_Sector_R_boolean 74
+typedef jbool (*func_mindustry_maps_generators_PlanetGenerator_allowLanding_mindustry_type_Sector_R_boolean)(jcontext ctx, jobject self, jobject param0);
+#define VTABLE_mindustry_maps_generators_PlanetGenerator_findLaunchCandidate_mindustry_type_Sector_mindustry_type_Sector_R_mindustry_type_Sector 75
+typedef jobject (*func_mindustry_maps_generators_PlanetGenerator_findLaunchCandidate_mindustry_type_Sector_mindustry_type_Sector_R_mindustry_type_Sector)(jcontext ctx, jobject self, jobject param0, jobject param1);
+#define VTABLE_mindustry_maps_generators_PlanetGenerator_allowAcceleratorLanding_mindustry_type_Sector_R_boolean 76
+typedef jbool (*func_mindustry_maps_generators_PlanetGenerator_allowAcceleratorLanding_mindustry_type_Sector_R_boolean)(jcontext ctx, jobject self, jobject param0);
+#define VTABLE_mindustry_maps_generators_PlanetGenerator_addWeather_mindustry_type_Sector_mindustry_game_Rules 77
+typedef void (*func_mindustry_maps_generators_PlanetGenerator_addWeather_mindustry_type_Sector_mindustry_game_Rules)(jcontext ctx, jobject self, jobject param0, jobject param1);
+#define VTABLE_mindustry_maps_generators_PlanetGenerator_genTile_arc_math_geom_Vec3_mindustry_world_TileGen 78
+typedef void (*func_mindustry_maps_generators_PlanetGenerator_genTile_arc_math_geom_Vec3_mindustry_world_TileGen)(jcontext ctx, jobject self, jobject param0, jobject param1);
+#define VTABLE_mindustry_maps_generators_PlanetGenerator_getSizeScl_R_float 79
+typedef jfloat (*func_mindustry_maps_generators_PlanetGenerator_getSizeScl_R_float)(jcontext ctx, jobject self);
+#define VTABLE_mindustry_maps_generators_PlanetGenerator_getSectorSize_mindustry_type_Sector_R_int 80
+typedef jint (*func_mindustry_maps_generators_PlanetGenerator_getSectorSize_mindustry_type_Sector_R_int)(jcontext ctx, jobject self, jobject param0);
+#define VTABLE_mindustry_maps_generators_PlanetGenerator_generate_mindustry_world_Tiles_mindustry_type_Sector_mindustry_world_WorldParams 81
+typedef void (*func_mindustry_maps_generators_PlanetGenerator_generate_mindustry_world_Tiles_mindustry_type_Sector_mindustry_world_WorldParams)(jcontext ctx, jobject self, jobject param0, jobject param1, jobject param2);
+
+void mark_mindustry_maps_generators_PlanetGenerator(jobject object, jint mark, jint depth);
+void clinit_mindustry_maps_generators_PlanetGenerator(jcontext ctx);
+void init_mindustry_maps_generators_PlanetGenerator(jcontext ctx, jobject self);
+void M_mindustry_maps_generators_PlanetGenerator_generateSector_mindustry_type_Sector(jcontext ctx, jobject self, jobject param0);
+void M_mindustry_maps_generators_PlanetGenerator_onSectorCaptured_mindustry_type_Sector(jcontext ctx, jobject self, jobject param0);
+void M_mindustry_maps_generators_PlanetGenerator_onSectorLost_mindustry_type_Sector(jcontext ctx, jobject self, jobject param0);
+void M_mindustry_maps_generators_PlanetGenerator_beforeSaveWrite_mindustry_type_Sector(jcontext ctx, jobject self, jobject param0);
+void M_mindustry_maps_generators_PlanetGenerator_getLockedText_mindustry_type_Sector_java_lang_StringBuilder(jcontext ctx, jobject self, jobject param0, jobject param1);
+jobject M_mindustry_maps_generators_PlanetGenerator_getLockedIcon_mindustry_type_Sector_R_arc_graphics_g2d_TextureRegion(jcontext ctx, jobject self, jobject param0);
+jbool M_mindustry_maps_generators_PlanetGenerator_allowLanding_mindustry_type_Sector_R_boolean(jcontext ctx, jobject self, jobject param0);
+jobject M_mindustry_maps_generators_PlanetGenerator_findLaunchCandidate_mindustry_type_Sector_mindustry_type_Sector_R_mindustry_type_Sector(jcontext ctx, jobject self, jobject param0, jobject param1);
+jbool M_mindustry_maps_generators_PlanetGenerator_allowAcceleratorLanding_mindustry_type_Sector_R_boolean(jcontext ctx, jobject self, jobject param0);
+void M_mindustry_maps_generators_PlanetGenerator_addWeather_mindustry_type_Sector_mindustry_game_Rules(jcontext ctx, jobject self, jobject param0, jobject param1);
+void M_mindustry_maps_generators_PlanetGenerator_genTile_arc_math_geom_Vec3_mindustry_world_TileGen(jcontext ctx, jobject self, jobject param0, jobject param1);
+jfloat M_mindustry_maps_generators_PlanetGenerator_noise_float_float_double_double_double_double_R_float(jcontext ctx, jobject self, jfloat param0, jfloat param1, jdouble param2, jdouble param3, jdouble param4, jdouble param5);
+jfloat M_mindustry_maps_generators_PlanetGenerator_getSizeScl_R_float(jcontext ctx, jobject self);
+jint M_mindustry_maps_generators_PlanetGenerator_getSectorSize_mindustry_type_Sector_R_int(jcontext ctx, jobject self, jobject param0);
+void M_mindustry_maps_generators_PlanetGenerator_generate_mindustry_world_Tiles_mindustry_type_Sector_mindustry_world_WorldParams(jcontext ctx, jobject self, jobject param0, jobject param1, jobject param2);
+jbool SM_mindustry_maps_generators_PlanetGenerator_lambda$addWeather$1_arc_struct_ObjectIntMap$Entry_R_boolean(jcontext ctx, jobject param0);
+jfloat SM_mindustry_maps_generators_PlanetGenerator_lambda$addWeather$0_arc_struct_ObjectIntMap$Entry_R_float(jcontext ctx, jobject param0);
+jfloat SM_mindustry_maps_generators_PlanetGenerator_lambda$findLaunchCandidate$4_mindustry_type_Sector_mindustry_type_Sector_R_float(jcontext ctx, jobject param0, jobject param1);
+jbool SM_mindustry_maps_generators_PlanetGenerator_lambda$findLaunchCandidate$3_mindustry_type_Sector_R_boolean(jcontext ctx, jobject param0);
+jbool SM_mindustry_maps_generators_PlanetGenerator_lambda$findLaunchCandidate$2_mindustry_type_Sector_R_boolean(jcontext ctx, jobject param0);
+jfloat SM_mindustry_maps_generators_PlanetGenerator_lambda$findLaunchCandidate$1_mindustry_type_Sector_mindustry_type_Sector_R_float(jcontext ctx, jobject param0, jobject param1);
+jbool SM_mindustry_maps_generators_PlanetGenerator_lambda$findLaunchCandidate$0_mindustry_type_Sector_R_boolean(jcontext ctx, jobject param0);
+
+#ifdef __cplusplus
+}
+#endif
+
+#endif

@@ -1,0 +1,86 @@
+#ifndef HEADER_mindustry_entities_comp_PowerGraphUpdaterComp
+#define HEADER_mindustry_entities_comp_PowerGraphUpdaterComp
+
+#include "Clearwing.h"
+#include "java/lang/Object.h"
+#include "mindustry/gen/Entityc.h"
+
+#ifdef __cplusplus
+extern "C" {
+#endif
+
+typedef struct mindustry_entities_comp_PowerGraphUpdaterComp {
+	java_lang_Object parent;
+	jref F_graph;
+} mindustry_entities_comp_PowerGraphUpdaterComp;
+
+extern Class class_mindustry_entities_comp_PowerGraphUpdaterComp;
+
+
+#define VTABLE_mindustry_entities_comp_PowerGraphUpdaterComp_hashCode_R_int 0
+typedef jint (*func_mindustry_entities_comp_PowerGraphUpdaterComp_hashCode_R_int)(jcontext ctx, jobject self);
+#define VTABLE_mindustry_entities_comp_PowerGraphUpdaterComp_equals_java_lang_Object_R_boolean 1
+typedef jbool (*func_mindustry_entities_comp_PowerGraphUpdaterComp_equals_java_lang_Object_R_boolean)(jcontext ctx, jobject self, jobject param0);
+#define VTABLE_mindustry_entities_comp_PowerGraphUpdaterComp_clone_R_java_lang_Object 2
+typedef jobject (*func_mindustry_entities_comp_PowerGraphUpdaterComp_clone_R_java_lang_Object)(jcontext ctx, jobject self);
+#define VTABLE_mindustry_entities_comp_PowerGraphUpdaterComp_getClass_R_java_lang_Class 3
+typedef jobject (*func_mindustry_entities_comp_PowerGraphUpdaterComp_getClass_R_java_lang_Class)(jcontext ctx, jobject self);
+#define VTABLE_mindustry_entities_comp_PowerGraphUpdaterComp_toString_R_java_lang_String 4
+typedef jobject (*func_mindustry_entities_comp_PowerGraphUpdaterComp_toString_R_java_lang_String)(jcontext ctx, jobject self);
+#define VTABLE_mindustry_entities_comp_PowerGraphUpdaterComp_finalize 5
+typedef void (*func_mindustry_entities_comp_PowerGraphUpdaterComp_finalize)(jcontext ctx, jobject self);
+#define VTABLE_mindustry_entities_comp_PowerGraphUpdaterComp_notify 6
+typedef void (*func_mindustry_entities_comp_PowerGraphUpdaterComp_notify)(jcontext ctx, jobject self);
+#define VTABLE_mindustry_entities_comp_PowerGraphUpdaterComp_notifyAll 7
+typedef void (*func_mindustry_entities_comp_PowerGraphUpdaterComp_notifyAll)(jcontext ctx, jobject self);
+#define VTABLE_mindustry_entities_comp_PowerGraphUpdaterComp_wait 8
+typedef void (*func_mindustry_entities_comp_PowerGraphUpdaterComp_wait)(jcontext ctx, jobject self);
+#define VTABLE_mindustry_entities_comp_PowerGraphUpdaterComp_wait_long 9
+typedef void (*func_mindustry_entities_comp_PowerGraphUpdaterComp_wait_long)(jcontext ctx, jobject self, jlong param0);
+#define VTABLE_mindustry_entities_comp_PowerGraphUpdaterComp_wait_long_int 10
+typedef void (*func_mindustry_entities_comp_PowerGraphUpdaterComp_wait_long_int)(jcontext ctx, jobject self, jlong param0, jint param1);
+#define VTABLE_mindustry_entities_comp_PowerGraphUpdaterComp_self_R_mindustry_gen_Entityc 11
+typedef jobject (*func_mindustry_entities_comp_PowerGraphUpdaterComp_self_R_mindustry_gen_Entityc)(jcontext ctx, jobject self);
+#define VTABLE_mindustry_entities_comp_PowerGraphUpdaterComp_as_R_java_lang_Object 12
+typedef jobject (*func_mindustry_entities_comp_PowerGraphUpdaterComp_as_R_java_lang_Object)(jcontext ctx, jobject self);
+#define VTABLE_mindustry_entities_comp_PowerGraphUpdaterComp_isAdded_R_boolean 13
+typedef jbool (*func_mindustry_entities_comp_PowerGraphUpdaterComp_isAdded_R_boolean)(jcontext ctx, jobject self);
+#define VTABLE_mindustry_entities_comp_PowerGraphUpdaterComp_isLocal_R_boolean 14
+typedef jbool (*func_mindustry_entities_comp_PowerGraphUpdaterComp_isLocal_R_boolean)(jcontext ctx, jobject self);
+#define VTABLE_mindustry_entities_comp_PowerGraphUpdaterComp_isRemote_R_boolean 15
+typedef jbool (*func_mindustry_entities_comp_PowerGraphUpdaterComp_isRemote_R_boolean)(jcontext ctx, jobject self);
+#define VTABLE_mindustry_entities_comp_PowerGraphUpdaterComp_serialize_R_boolean 16
+typedef jbool (*func_mindustry_entities_comp_PowerGraphUpdaterComp_serialize_R_boolean)(jcontext ctx, jobject self);
+#define VTABLE_mindustry_entities_comp_PowerGraphUpdaterComp_classId_R_int 17
+typedef jint (*func_mindustry_entities_comp_PowerGraphUpdaterComp_classId_R_int)(jcontext ctx, jobject self);
+#define VTABLE_mindustry_entities_comp_PowerGraphUpdaterComp_id_R_int 18
+typedef jint (*func_mindustry_entities_comp_PowerGraphUpdaterComp_id_R_int)(jcontext ctx, jobject self);
+#define VTABLE_mindustry_entities_comp_PowerGraphUpdaterComp_add 19
+typedef void (*func_mindustry_entities_comp_PowerGraphUpdaterComp_add)(jcontext ctx, jobject self);
+#define VTABLE_mindustry_entities_comp_PowerGraphUpdaterComp_afterRead 20
+typedef void (*func_mindustry_entities_comp_PowerGraphUpdaterComp_afterRead)(jcontext ctx, jobject self);
+#define VTABLE_mindustry_entities_comp_PowerGraphUpdaterComp_afterReadAll 21
+typedef void (*func_mindustry_entities_comp_PowerGraphUpdaterComp_afterReadAll)(jcontext ctx, jobject self);
+#define VTABLE_mindustry_entities_comp_PowerGraphUpdaterComp_beforeWrite 22
+typedef void (*func_mindustry_entities_comp_PowerGraphUpdaterComp_beforeWrite)(jcontext ctx, jobject self);
+#define VTABLE_mindustry_entities_comp_PowerGraphUpdaterComp_id_int 23
+typedef void (*func_mindustry_entities_comp_PowerGraphUpdaterComp_id_int)(jcontext ctx, jobject self, jint param0);
+#define VTABLE_mindustry_entities_comp_PowerGraphUpdaterComp_read_arc_util_io_Reads 24
+typedef void (*func_mindustry_entities_comp_PowerGraphUpdaterComp_read_arc_util_io_Reads)(jcontext ctx, jobject self, jobject param0);
+#define VTABLE_mindustry_entities_comp_PowerGraphUpdaterComp_remove 25
+typedef void (*func_mindustry_entities_comp_PowerGraphUpdaterComp_remove)(jcontext ctx, jobject self);
+#define VTABLE_mindustry_entities_comp_PowerGraphUpdaterComp_update 26
+typedef void (*func_mindustry_entities_comp_PowerGraphUpdaterComp_update)(jcontext ctx, jobject self);
+#define VTABLE_mindustry_entities_comp_PowerGraphUpdaterComp_write_arc_util_io_Writes 27
+typedef void (*func_mindustry_entities_comp_PowerGraphUpdaterComp_write_arc_util_io_Writes)(jcontext ctx, jobject self, jobject param0);
+
+void mark_mindustry_entities_comp_PowerGraphUpdaterComp(jobject object, jint mark, jint depth);
+void clinit_mindustry_entities_comp_PowerGraphUpdaterComp(jcontext ctx);
+void init_mindustry_entities_comp_PowerGraphUpdaterComp(jcontext ctx, jobject self);
+void M_mindustry_entities_comp_PowerGraphUpdaterComp_update(jcontext ctx, jobject self);
+
+#ifdef __cplusplus
+}
+#endif
+
+#endif

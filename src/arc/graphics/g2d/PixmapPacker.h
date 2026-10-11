@@ -1,0 +1,168 @@
+#ifndef HEADER_arc_graphics_g2d_PixmapPacker
+#define HEADER_arc_graphics_g2d_PixmapPacker
+
+#include "Clearwing.h"
+#include "java/lang/Object.h"
+#include "arc/util/Disposable.h"
+
+#ifdef __cplusplus
+extern "C" {
+#endif
+
+typedef struct arc_graphics_g2d_PixmapPacker {
+	java_lang_Object parent;
+	jref F_pages;
+	jbool F_packToTexture;
+	jbool F_disposed;
+	jint F_pageWidth;
+	jint F_pageHeight;
+	jint F_padding;
+	jbool F_allowMultiplePages;
+	jbool F_duplicateBorder;
+	jbool F_stripWhitespaceX;
+	jbool F_stripWhitespaceY;
+	jref F_transparentColor;
+	jref F_packStrategy;
+} arc_graphics_g2d_PixmapPacker;
+
+extern Class class_arc_graphics_g2d_PixmapPacker;
+
+
+#define VTABLE_arc_graphics_g2d_PixmapPacker_hashCode_R_int 0
+typedef jint (*func_arc_graphics_g2d_PixmapPacker_hashCode_R_int)(jcontext ctx, jobject self);
+#define VTABLE_arc_graphics_g2d_PixmapPacker_equals_java_lang_Object_R_boolean 1
+typedef jbool (*func_arc_graphics_g2d_PixmapPacker_equals_java_lang_Object_R_boolean)(jcontext ctx, jobject self, jobject param0);
+#define VTABLE_arc_graphics_g2d_PixmapPacker_clone_R_java_lang_Object 2
+typedef jobject (*func_arc_graphics_g2d_PixmapPacker_clone_R_java_lang_Object)(jcontext ctx, jobject self);
+#define VTABLE_arc_graphics_g2d_PixmapPacker_getClass_R_java_lang_Class 3
+typedef jobject (*func_arc_graphics_g2d_PixmapPacker_getClass_R_java_lang_Class)(jcontext ctx, jobject self);
+#define VTABLE_arc_graphics_g2d_PixmapPacker_toString_R_java_lang_String 4
+typedef jobject (*func_arc_graphics_g2d_PixmapPacker_toString_R_java_lang_String)(jcontext ctx, jobject self);
+#define VTABLE_arc_graphics_g2d_PixmapPacker_finalize 5
+typedef void (*func_arc_graphics_g2d_PixmapPacker_finalize)(jcontext ctx, jobject self);
+#define VTABLE_arc_graphics_g2d_PixmapPacker_notify 6
+typedef void (*func_arc_graphics_g2d_PixmapPacker_notify)(jcontext ctx, jobject self);
+#define VTABLE_arc_graphics_g2d_PixmapPacker_notifyAll 7
+typedef void (*func_arc_graphics_g2d_PixmapPacker_notifyAll)(jcontext ctx, jobject self);
+#define VTABLE_arc_graphics_g2d_PixmapPacker_wait 8
+typedef void (*func_arc_graphics_g2d_PixmapPacker_wait)(jcontext ctx, jobject self);
+#define VTABLE_arc_graphics_g2d_PixmapPacker_wait_long 9
+typedef void (*func_arc_graphics_g2d_PixmapPacker_wait_long)(jcontext ctx, jobject self, jlong param0);
+#define VTABLE_arc_graphics_g2d_PixmapPacker_wait_long_int 10
+typedef void (*func_arc_graphics_g2d_PixmapPacker_wait_long_int)(jcontext ctx, jobject self, jlong param0, jint param1);
+#define VTABLE_arc_graphics_g2d_PixmapPacker_dispose 11
+typedef void (*func_arc_graphics_g2d_PixmapPacker_dispose)(jcontext ctx, jobject self);
+#define VTABLE_arc_graphics_g2d_PixmapPacker_isDisposed_R_boolean 12
+typedef jbool (*func_arc_graphics_g2d_PixmapPacker_isDisposed_R_boolean)(jcontext ctx, jobject self);
+#define VTABLE_arc_graphics_g2d_PixmapPacker_setAllowMultiplePages_boolean 13
+typedef void (*func_arc_graphics_g2d_PixmapPacker_setAllowMultiplePages_boolean)(jcontext ctx, jobject self, jbool param0);
+#define VTABLE_arc_graphics_g2d_PixmapPacker_sort_arc_struct_Seq 14
+typedef void (*func_arc_graphics_g2d_PixmapPacker_sort_arc_struct_Seq)(jcontext ctx, jobject self, jobject param0);
+#define VTABLE_arc_graphics_g2d_PixmapPacker_pack_arc_graphics_Pixmap_R_arc_math_geom_Rect 15
+typedef jobject (*func_arc_graphics_g2d_PixmapPacker_pack_arc_graphics_Pixmap_R_arc_math_geom_Rect)(jcontext ctx, jobject self, jobject param0);
+#define VTABLE_arc_graphics_g2d_PixmapPacker_pack_java_lang_String_arc_graphics_Pixmap_R_arc_math_geom_Rect 16
+typedef jobject (*func_arc_graphics_g2d_PixmapPacker_pack_java_lang_String_arc_graphics_Pixmap_R_arc_math_geom_Rect)(jcontext ctx, jobject self, jobject param0, jobject param1);
+#define VTABLE_arc_graphics_g2d_PixmapPacker_pack_java_lang_String_arc_graphics_g2d_PixmapRegion_R_arc_math_geom_Rect 17
+typedef jobject (*func_arc_graphics_g2d_PixmapPacker_pack_java_lang_String_arc_graphics_g2d_PixmapRegion_R_arc_math_geom_Rect)(jcontext ctx, jobject self, jobject param0, jobject param1);
+#define VTABLE_arc_graphics_g2d_PixmapPacker_pack_java_lang_String_int_int_R_arc_math_geom_Rect 18
+typedef jobject (*func_arc_graphics_g2d_PixmapPacker_pack_java_lang_String_int_int_R_arc_math_geom_Rect)(jcontext ctx, jobject self, jobject param0, jint param1, jint param2);
+#define VTABLE_arc_graphics_g2d_PixmapPacker_pack_java_lang_String_arc_graphics_g2d_PixmapRegion_Array1_int_Array1_int_R_arc_math_geom_Rect 19
+typedef jobject (*func_arc_graphics_g2d_PixmapPacker_pack_java_lang_String_arc_graphics_g2d_PixmapRegion_Array1_int_Array1_int_R_arc_math_geom_Rect)(jcontext ctx, jobject self, jobject param0, jobject param1, jobject param2, jobject param3);
+#define VTABLE_arc_graphics_g2d_PixmapPacker_getPages_R_arc_struct_Seq 20
+typedef jobject (*func_arc_graphics_g2d_PixmapPacker_getPages_R_arc_struct_Seq)(jcontext ctx, jobject self);
+#define VTABLE_arc_graphics_g2d_PixmapPacker_getRect_java_lang_String_R_arc_math_geom_Rect 21
+typedef jobject (*func_arc_graphics_g2d_PixmapPacker_getRect_java_lang_String_R_arc_math_geom_Rect)(jcontext ctx, jobject self, jobject param0);
+#define VTABLE_arc_graphics_g2d_PixmapPacker_getRegion_java_lang_String_R_arc_graphics_g2d_PixmapRegion 22
+typedef jobject (*func_arc_graphics_g2d_PixmapPacker_getRegion_java_lang_String_R_arc_graphics_g2d_PixmapRegion)(jcontext ctx, jobject self, jobject param0);
+#define VTABLE_arc_graphics_g2d_PixmapPacker_getPage_java_lang_String_R_arc_graphics_g2d_PixmapPacker$Page 23
+typedef jobject (*func_arc_graphics_g2d_PixmapPacker_getPage_java_lang_String_R_arc_graphics_g2d_PixmapPacker$Page)(jcontext ctx, jobject self, jobject param0);
+#define VTABLE_arc_graphics_g2d_PixmapPacker_getPageIndex_java_lang_String_R_int 24
+typedef jint (*func_arc_graphics_g2d_PixmapPacker_getPageIndex_java_lang_String_R_int)(jcontext ctx, jobject self, jobject param0);
+#define VTABLE_arc_graphics_g2d_PixmapPacker_forceDispose 25
+typedef void (*func_arc_graphics_g2d_PixmapPacker_forceDispose)(jcontext ctx, jobject self);
+#define VTABLE_arc_graphics_g2d_PixmapPacker_generateTextureAtlas_arc_graphics_Texture$TextureFilter_arc_graphics_Texture$TextureFilter_boolean_R_arc_graphics_g2d_TextureAtlas 26
+typedef jobject (*func_arc_graphics_g2d_PixmapPacker_generateTextureAtlas_arc_graphics_Texture$TextureFilter_arc_graphics_Texture$TextureFilter_boolean_R_arc_graphics_g2d_TextureAtlas)(jcontext ctx, jobject self, jobject param0, jobject param1, jbool param2);
+#define VTABLE_arc_graphics_g2d_PixmapPacker_updateTextureAtlas_arc_graphics_g2d_TextureAtlas_arc_graphics_Texture$TextureFilter_arc_graphics_Texture$TextureFilter_boolean 27
+typedef void (*func_arc_graphics_g2d_PixmapPacker_updateTextureAtlas_arc_graphics_g2d_TextureAtlas_arc_graphics_Texture$TextureFilter_arc_graphics_Texture$TextureFilter_boolean)(jcontext ctx, jobject self, jobject param0, jobject param1, jobject param2, jbool param3);
+#define VTABLE_arc_graphics_g2d_PixmapPacker_updateTextureAtlas_arc_graphics_g2d_TextureAtlas_arc_graphics_Texture$TextureFilter_arc_graphics_Texture$TextureFilter_boolean_boolean 28
+typedef void (*func_arc_graphics_g2d_PixmapPacker_updateTextureAtlas_arc_graphics_g2d_TextureAtlas_arc_graphics_Texture$TextureFilter_arc_graphics_Texture$TextureFilter_boolean_boolean)(jcontext ctx, jobject self, jobject param0, jobject param1, jobject param2, jbool param3, jbool param4);
+#define VTABLE_arc_graphics_g2d_PixmapPacker_updateTextureRegions_arc_struct_Seq_arc_graphics_Texture$TextureFilter_arc_graphics_Texture$TextureFilter_boolean 29
+typedef void (*func_arc_graphics_g2d_PixmapPacker_updateTextureRegions_arc_struct_Seq_arc_graphics_Texture$TextureFilter_arc_graphics_Texture$TextureFilter_boolean)(jcontext ctx, jobject self, jobject param0, jobject param1, jobject param2, jbool param3);
+#define VTABLE_arc_graphics_g2d_PixmapPacker_updatePageTextures_arc_graphics_Texture$TextureFilter_arc_graphics_Texture$TextureFilter_boolean 30
+typedef void (*func_arc_graphics_g2d_PixmapPacker_updatePageTextures_arc_graphics_Texture$TextureFilter_arc_graphics_Texture$TextureFilter_boolean)(jcontext ctx, jobject self, jobject param0, jobject param1, jbool param2);
+#define VTABLE_arc_graphics_g2d_PixmapPacker_getPageWidth_R_int 31
+typedef jint (*func_arc_graphics_g2d_PixmapPacker_getPageWidth_R_int)(jcontext ctx, jobject self);
+#define VTABLE_arc_graphics_g2d_PixmapPacker_setPageWidth_int 32
+typedef void (*func_arc_graphics_g2d_PixmapPacker_setPageWidth_int)(jcontext ctx, jobject self, jint param0);
+#define VTABLE_arc_graphics_g2d_PixmapPacker_getPageHeight_R_int 33
+typedef jint (*func_arc_graphics_g2d_PixmapPacker_getPageHeight_R_int)(jcontext ctx, jobject self);
+#define VTABLE_arc_graphics_g2d_PixmapPacker_setPageHeight_int 34
+typedef void (*func_arc_graphics_g2d_PixmapPacker_setPageHeight_int)(jcontext ctx, jobject self, jint param0);
+#define VTABLE_arc_graphics_g2d_PixmapPacker_getPadding_R_int 35
+typedef jint (*func_arc_graphics_g2d_PixmapPacker_getPadding_R_int)(jcontext ctx, jobject self);
+#define VTABLE_arc_graphics_g2d_PixmapPacker_setPadding_int 36
+typedef void (*func_arc_graphics_g2d_PixmapPacker_setPadding_int)(jcontext ctx, jobject self, jint param0);
+#define VTABLE_arc_graphics_g2d_PixmapPacker_getDuplicateBorder_R_boolean 37
+typedef jbool (*func_arc_graphics_g2d_PixmapPacker_getDuplicateBorder_R_boolean)(jcontext ctx, jobject self);
+#define VTABLE_arc_graphics_g2d_PixmapPacker_setDuplicateBorder_boolean 38
+typedef void (*func_arc_graphics_g2d_PixmapPacker_setDuplicateBorder_boolean)(jcontext ctx, jobject self, jbool param0);
+#define VTABLE_arc_graphics_g2d_PixmapPacker_getPackToTexture_R_boolean 39
+typedef jbool (*func_arc_graphics_g2d_PixmapPacker_getPackToTexture_R_boolean)(jcontext ctx, jobject self);
+#define VTABLE_arc_graphics_g2d_PixmapPacker_setPackToTexture_boolean 40
+typedef void (*func_arc_graphics_g2d_PixmapPacker_setPackToTexture_boolean)(jcontext ctx, jobject self, jbool param0);
+#define VTABLE_arc_graphics_g2d_PixmapPacker_getTransparentColor_R_arc_graphics_Color 41
+typedef jobject (*func_arc_graphics_g2d_PixmapPacker_getTransparentColor_R_arc_graphics_Color)(jcontext ctx, jobject self);
+#define VTABLE_arc_graphics_g2d_PixmapPacker_setTransparentColor_arc_graphics_Color 42
+typedef void (*func_arc_graphics_g2d_PixmapPacker_setTransparentColor_arc_graphics_Color)(jcontext ctx, jobject self, jobject param0);
+#define VTABLE_arc_graphics_g2d_PixmapPacker_getSplits_arc_graphics_g2d_PixmapRegion_R_Array1_int 43
+typedef jobject (*func_arc_graphics_g2d_PixmapPacker_getSplits_arc_graphics_g2d_PixmapRegion_R_Array1_int)(jcontext ctx, jobject self, jobject param0);
+#define VTABLE_arc_graphics_g2d_PixmapPacker_getPads_arc_graphics_g2d_PixmapRegion_Array1_int_R_Array1_int 44
+typedef jobject (*func_arc_graphics_g2d_PixmapPacker_getPads_arc_graphics_g2d_PixmapRegion_Array1_int_R_Array1_int)(jcontext ctx, jobject self, jobject param0, jobject param1);
+#define VTABLE_arc_graphics_g2d_PixmapPacker_getSplitPoint_arc_graphics_g2d_PixmapRegion_int_int_boolean_boolean_R_int 45
+typedef jint (*func_arc_graphics_g2d_PixmapPacker_getSplitPoint_arc_graphics_g2d_PixmapRegion_int_int_boolean_boolean_R_int)(jcontext ctx, jobject self, jobject param0, jint param1, jint param2, jbool param3, jbool param4);
+
+void mark_arc_graphics_g2d_PixmapPacker(jobject object, jint mark, jint depth);
+void clinit_arc_graphics_g2d_PixmapPacker(jcontext ctx);
+void init_arc_graphics_g2d_PixmapPacker_int_int_int_boolean(jcontext ctx, jobject self, jint param0, jint param1, jint param2, jbool param3);
+void init_arc_graphics_g2d_PixmapPacker_int_int_int_boolean_arc_graphics_g2d_PixmapPacker$PackStrategy(jcontext ctx, jobject self, jint param0, jint param1, jint param2, jbool param3, jobject param4);
+void init_arc_graphics_g2d_PixmapPacker_int_int_int_boolean_boolean_boolean_arc_graphics_g2d_PixmapPacker$PackStrategy(jcontext ctx, jobject self, jint param0, jint param1, jint param2, jbool param3, jbool param4, jbool param5, jobject param6);
+void M_arc_graphics_g2d_PixmapPacker_setAllowMultiplePages_boolean(jcontext ctx, jobject self, jbool param0);
+void M_arc_graphics_g2d_PixmapPacker_sort_arc_struct_Seq(jcontext ctx, jobject self, jobject param0);
+jobject M_arc_graphics_g2d_PixmapPacker_pack_arc_graphics_Pixmap_R_arc_math_geom_Rect(jcontext ctx, jobject self, jobject param0);
+jobject M_arc_graphics_g2d_PixmapPacker_pack_java_lang_String_arc_graphics_Pixmap_R_arc_math_geom_Rect(jcontext ctx, jobject self, jobject param0, jobject param1);
+jobject M_arc_graphics_g2d_PixmapPacker_pack_java_lang_String_arc_graphics_g2d_PixmapRegion_R_arc_math_geom_Rect(jcontext ctx, jobject self, jobject param0, jobject param1);
+jobject M_arc_graphics_g2d_PixmapPacker_pack_java_lang_String_int_int_R_arc_math_geom_Rect(jcontext ctx, jobject self, jobject param0, jint param1, jint param2);
+jobject M_arc_graphics_g2d_PixmapPacker_pack_java_lang_String_arc_graphics_g2d_PixmapRegion_Array1_int_Array1_int_R_arc_math_geom_Rect(jcontext ctx, jobject self, jobject param0, jobject param1, jobject param2, jobject param3);
+jobject M_arc_graphics_g2d_PixmapPacker_getPages_R_arc_struct_Seq(jcontext ctx, jobject self);
+jobject M_arc_graphics_g2d_PixmapPacker_getRect_java_lang_String_R_arc_math_geom_Rect(jcontext ctx, jobject self, jobject param0);
+jobject M_arc_graphics_g2d_PixmapPacker_getRegion_java_lang_String_R_arc_graphics_g2d_PixmapRegion(jcontext ctx, jobject self, jobject param0);
+jobject M_arc_graphics_g2d_PixmapPacker_getPage_java_lang_String_R_arc_graphics_g2d_PixmapPacker$Page(jcontext ctx, jobject self, jobject param0);
+jint M_arc_graphics_g2d_PixmapPacker_getPageIndex_java_lang_String_R_int(jcontext ctx, jobject self, jobject param0);
+void M_arc_graphics_g2d_PixmapPacker_dispose(jcontext ctx, jobject self);
+void M_arc_graphics_g2d_PixmapPacker_forceDispose(jcontext ctx, jobject self);
+jobject M_arc_graphics_g2d_PixmapPacker_generateTextureAtlas_arc_graphics_Texture$TextureFilter_arc_graphics_Texture$TextureFilter_boolean_R_arc_graphics_g2d_TextureAtlas(jcontext ctx, jobject self, jobject param0, jobject param1, jbool param2);
+void M_arc_graphics_g2d_PixmapPacker_updateTextureAtlas_arc_graphics_g2d_TextureAtlas_arc_graphics_Texture$TextureFilter_arc_graphics_Texture$TextureFilter_boolean(jcontext ctx, jobject self, jobject param0, jobject param1, jobject param2, jbool param3);
+void M_arc_graphics_g2d_PixmapPacker_updateTextureAtlas_arc_graphics_g2d_TextureAtlas_arc_graphics_Texture$TextureFilter_arc_graphics_Texture$TextureFilter_boolean_boolean(jcontext ctx, jobject self, jobject param0, jobject param1, jobject param2, jbool param3, jbool param4);
+void M_arc_graphics_g2d_PixmapPacker_updateTextureRegions_arc_struct_Seq_arc_graphics_Texture$TextureFilter_arc_graphics_Texture$TextureFilter_boolean(jcontext ctx, jobject self, jobject param0, jobject param1, jobject param2, jbool param3);
+void M_arc_graphics_g2d_PixmapPacker_updatePageTextures_arc_graphics_Texture$TextureFilter_arc_graphics_Texture$TextureFilter_boolean(jcontext ctx, jobject self, jobject param0, jobject param1, jbool param2);
+jint M_arc_graphics_g2d_PixmapPacker_getPageWidth_R_int(jcontext ctx, jobject self);
+void M_arc_graphics_g2d_PixmapPacker_setPageWidth_int(jcontext ctx, jobject self, jint param0);
+jint M_arc_graphics_g2d_PixmapPacker_getPageHeight_R_int(jcontext ctx, jobject self);
+void M_arc_graphics_g2d_PixmapPacker_setPageHeight_int(jcontext ctx, jobject self, jint param0);
+jint M_arc_graphics_g2d_PixmapPacker_getPadding_R_int(jcontext ctx, jobject self);
+void M_arc_graphics_g2d_PixmapPacker_setPadding_int(jcontext ctx, jobject self, jint param0);
+jbool M_arc_graphics_g2d_PixmapPacker_getDuplicateBorder_R_boolean(jcontext ctx, jobject self);
+void M_arc_graphics_g2d_PixmapPacker_setDuplicateBorder_boolean(jcontext ctx, jobject self, jbool param0);
+jbool M_arc_graphics_g2d_PixmapPacker_getPackToTexture_R_boolean(jcontext ctx, jobject self);
+void M_arc_graphics_g2d_PixmapPacker_setPackToTexture_boolean(jcontext ctx, jobject self, jbool param0);
+jobject M_arc_graphics_g2d_PixmapPacker_getTransparentColor_R_arc_graphics_Color(jcontext ctx, jobject self);
+void M_arc_graphics_g2d_PixmapPacker_setTransparentColor_arc_graphics_Color(jcontext ctx, jobject self, jobject param0);
+jobject M_arc_graphics_g2d_PixmapPacker_getSplits_arc_graphics_g2d_PixmapRegion_R_Array1_int(jcontext ctx, jobject self, jobject param0);
+jobject M_arc_graphics_g2d_PixmapPacker_getPads_arc_graphics_g2d_PixmapRegion_Array1_int_R_Array1_int(jcontext ctx, jobject self, jobject param0, jobject param1);
+jint M_arc_graphics_g2d_PixmapPacker_getSplitPoint_arc_graphics_g2d_PixmapRegion_int_int_boolean_boolean_R_int(jcontext ctx, jobject self, jobject param0, jint param1, jint param2, jbool param3, jbool param4);
+
+#ifdef __cplusplus
+}
+#endif
+
+#endif

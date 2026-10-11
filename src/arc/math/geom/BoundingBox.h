@@ -1,0 +1,154 @@
+#ifndef HEADER_arc_math_geom_BoundingBox
+#define HEADER_arc_math_geom_BoundingBox
+
+#include "Clearwing.h"
+#include "java/lang/Object.h"
+
+#ifdef __cplusplus
+extern "C" {
+#endif
+
+typedef struct arc_math_geom_BoundingBox {
+	java_lang_Object parent;
+	jref F_min;
+	jref F_max;
+	jref F_cnt;
+	jref F_dim;
+} arc_math_geom_BoundingBox;
+
+extern Class class_arc_math_geom_BoundingBox;
+
+
+#define VTABLE_arc_math_geom_BoundingBox_hashCode_R_int 0
+typedef jint (*func_arc_math_geom_BoundingBox_hashCode_R_int)(jcontext ctx, jobject self);
+#define VTABLE_arc_math_geom_BoundingBox_equals_java_lang_Object_R_boolean 1
+typedef jbool (*func_arc_math_geom_BoundingBox_equals_java_lang_Object_R_boolean)(jcontext ctx, jobject self, jobject param0);
+#define VTABLE_arc_math_geom_BoundingBox_clone_R_java_lang_Object 2
+typedef jobject (*func_arc_math_geom_BoundingBox_clone_R_java_lang_Object)(jcontext ctx, jobject self);
+#define VTABLE_arc_math_geom_BoundingBox_getClass_R_java_lang_Class 3
+typedef jobject (*func_arc_math_geom_BoundingBox_getClass_R_java_lang_Class)(jcontext ctx, jobject self);
+#define VTABLE_arc_math_geom_BoundingBox_toString_R_java_lang_String 4
+typedef jobject (*func_arc_math_geom_BoundingBox_toString_R_java_lang_String)(jcontext ctx, jobject self);
+#define VTABLE_arc_math_geom_BoundingBox_finalize 5
+typedef void (*func_arc_math_geom_BoundingBox_finalize)(jcontext ctx, jobject self);
+#define VTABLE_arc_math_geom_BoundingBox_notify 6
+typedef void (*func_arc_math_geom_BoundingBox_notify)(jcontext ctx, jobject self);
+#define VTABLE_arc_math_geom_BoundingBox_notifyAll 7
+typedef void (*func_arc_math_geom_BoundingBox_notifyAll)(jcontext ctx, jobject self);
+#define VTABLE_arc_math_geom_BoundingBox_wait 8
+typedef void (*func_arc_math_geom_BoundingBox_wait)(jcontext ctx, jobject self);
+#define VTABLE_arc_math_geom_BoundingBox_wait_long 9
+typedef void (*func_arc_math_geom_BoundingBox_wait_long)(jcontext ctx, jobject self, jlong param0);
+#define VTABLE_arc_math_geom_BoundingBox_wait_long_int 10
+typedef void (*func_arc_math_geom_BoundingBox_wait_long_int)(jcontext ctx, jobject self, jlong param0, jint param1);
+#define VTABLE_arc_math_geom_BoundingBox_getCenter_arc_math_geom_Vec3_R_arc_math_geom_Vec3 11
+typedef jobject (*func_arc_math_geom_BoundingBox_getCenter_arc_math_geom_Vec3_R_arc_math_geom_Vec3)(jcontext ctx, jobject self, jobject param0);
+#define VTABLE_arc_math_geom_BoundingBox_getCenterX_R_float 12
+typedef jfloat (*func_arc_math_geom_BoundingBox_getCenterX_R_float)(jcontext ctx, jobject self);
+#define VTABLE_arc_math_geom_BoundingBox_getCenterY_R_float 13
+typedef jfloat (*func_arc_math_geom_BoundingBox_getCenterY_R_float)(jcontext ctx, jobject self);
+#define VTABLE_arc_math_geom_BoundingBox_getCenterZ_R_float 14
+typedef jfloat (*func_arc_math_geom_BoundingBox_getCenterZ_R_float)(jcontext ctx, jobject self);
+#define VTABLE_arc_math_geom_BoundingBox_getCorner000_arc_math_geom_Vec3_R_arc_math_geom_Vec3 15
+typedef jobject (*func_arc_math_geom_BoundingBox_getCorner000_arc_math_geom_Vec3_R_arc_math_geom_Vec3)(jcontext ctx, jobject self, jobject param0);
+#define VTABLE_arc_math_geom_BoundingBox_getCorner001_arc_math_geom_Vec3_R_arc_math_geom_Vec3 16
+typedef jobject (*func_arc_math_geom_BoundingBox_getCorner001_arc_math_geom_Vec3_R_arc_math_geom_Vec3)(jcontext ctx, jobject self, jobject param0);
+#define VTABLE_arc_math_geom_BoundingBox_getCorner010_arc_math_geom_Vec3_R_arc_math_geom_Vec3 17
+typedef jobject (*func_arc_math_geom_BoundingBox_getCorner010_arc_math_geom_Vec3_R_arc_math_geom_Vec3)(jcontext ctx, jobject self, jobject param0);
+#define VTABLE_arc_math_geom_BoundingBox_getCorner011_arc_math_geom_Vec3_R_arc_math_geom_Vec3 18
+typedef jobject (*func_arc_math_geom_BoundingBox_getCorner011_arc_math_geom_Vec3_R_arc_math_geom_Vec3)(jcontext ctx, jobject self, jobject param0);
+#define VTABLE_arc_math_geom_BoundingBox_getCorner100_arc_math_geom_Vec3_R_arc_math_geom_Vec3 19
+typedef jobject (*func_arc_math_geom_BoundingBox_getCorner100_arc_math_geom_Vec3_R_arc_math_geom_Vec3)(jcontext ctx, jobject self, jobject param0);
+#define VTABLE_arc_math_geom_BoundingBox_getCorner101_arc_math_geom_Vec3_R_arc_math_geom_Vec3 20
+typedef jobject (*func_arc_math_geom_BoundingBox_getCorner101_arc_math_geom_Vec3_R_arc_math_geom_Vec3)(jcontext ctx, jobject self, jobject param0);
+#define VTABLE_arc_math_geom_BoundingBox_getCorner110_arc_math_geom_Vec3_R_arc_math_geom_Vec3 21
+typedef jobject (*func_arc_math_geom_BoundingBox_getCorner110_arc_math_geom_Vec3_R_arc_math_geom_Vec3)(jcontext ctx, jobject self, jobject param0);
+#define VTABLE_arc_math_geom_BoundingBox_getCorner111_arc_math_geom_Vec3_R_arc_math_geom_Vec3 22
+typedef jobject (*func_arc_math_geom_BoundingBox_getCorner111_arc_math_geom_Vec3_R_arc_math_geom_Vec3)(jcontext ctx, jobject self, jobject param0);
+#define VTABLE_arc_math_geom_BoundingBox_getDimensions_arc_math_geom_Vec3_R_arc_math_geom_Vec3 23
+typedef jobject (*func_arc_math_geom_BoundingBox_getDimensions_arc_math_geom_Vec3_R_arc_math_geom_Vec3)(jcontext ctx, jobject self, jobject param0);
+#define VTABLE_arc_math_geom_BoundingBox_getWidth_R_float 24
+typedef jfloat (*func_arc_math_geom_BoundingBox_getWidth_R_float)(jcontext ctx, jobject self);
+#define VTABLE_arc_math_geom_BoundingBox_getHeight_R_float 25
+typedef jfloat (*func_arc_math_geom_BoundingBox_getHeight_R_float)(jcontext ctx, jobject self);
+#define VTABLE_arc_math_geom_BoundingBox_getDepth_R_float 26
+typedef jfloat (*func_arc_math_geom_BoundingBox_getDepth_R_float)(jcontext ctx, jobject self);
+#define VTABLE_arc_math_geom_BoundingBox_getMin_arc_math_geom_Vec3_R_arc_math_geom_Vec3 27
+typedef jobject (*func_arc_math_geom_BoundingBox_getMin_arc_math_geom_Vec3_R_arc_math_geom_Vec3)(jcontext ctx, jobject self, jobject param0);
+#define VTABLE_arc_math_geom_BoundingBox_getMax_arc_math_geom_Vec3_R_arc_math_geom_Vec3 28
+typedef jobject (*func_arc_math_geom_BoundingBox_getMax_arc_math_geom_Vec3_R_arc_math_geom_Vec3)(jcontext ctx, jobject self, jobject param0);
+#define VTABLE_arc_math_geom_BoundingBox_set_arc_math_geom_BoundingBox_R_arc_math_geom_BoundingBox 29
+typedef jobject (*func_arc_math_geom_BoundingBox_set_arc_math_geom_BoundingBox_R_arc_math_geom_BoundingBox)(jcontext ctx, jobject self, jobject param0);
+#define VTABLE_arc_math_geom_BoundingBox_set_arc_math_geom_Vec3_arc_math_geom_Vec3_R_arc_math_geom_BoundingBox 30
+typedef jobject (*func_arc_math_geom_BoundingBox_set_arc_math_geom_Vec3_arc_math_geom_Vec3_R_arc_math_geom_BoundingBox)(jcontext ctx, jobject self, jobject param0, jobject param1);
+#define VTABLE_arc_math_geom_BoundingBox_set_Array1_arc_math_geom_Vec3_R_arc_math_geom_BoundingBox 31
+typedef jobject (*func_arc_math_geom_BoundingBox_set_Array1_arc_math_geom_Vec3_R_arc_math_geom_BoundingBox)(jcontext ctx, jobject self, jobject param0);
+#define VTABLE_arc_math_geom_BoundingBox_set_arc_struct_Seq_R_arc_math_geom_BoundingBox 32
+typedef jobject (*func_arc_math_geom_BoundingBox_set_arc_struct_Seq_R_arc_math_geom_BoundingBox)(jcontext ctx, jobject self, jobject param0);
+#define VTABLE_arc_math_geom_BoundingBox_inf_R_arc_math_geom_BoundingBox 33
+typedef jobject (*func_arc_math_geom_BoundingBox_inf_R_arc_math_geom_BoundingBox)(jcontext ctx, jobject self);
+#define VTABLE_arc_math_geom_BoundingBox_ext_arc_math_geom_Vec3_R_arc_math_geom_BoundingBox 34
+typedef jobject (*func_arc_math_geom_BoundingBox_ext_arc_math_geom_Vec3_R_arc_math_geom_BoundingBox)(jcontext ctx, jobject self, jobject param0);
+#define VTABLE_arc_math_geom_BoundingBox_clr_R_arc_math_geom_BoundingBox 35
+typedef jobject (*func_arc_math_geom_BoundingBox_clr_R_arc_math_geom_BoundingBox)(jcontext ctx, jobject self);
+#define VTABLE_arc_math_geom_BoundingBox_isValid_R_boolean 36
+typedef jbool (*func_arc_math_geom_BoundingBox_isValid_R_boolean)(jcontext ctx, jobject self);
+#define VTABLE_arc_math_geom_BoundingBox_ext_arc_math_geom_BoundingBox_R_arc_math_geom_BoundingBox 37
+typedef jobject (*func_arc_math_geom_BoundingBox_ext_arc_math_geom_BoundingBox_R_arc_math_geom_BoundingBox)(jcontext ctx, jobject self, jobject param0);
+#define VTABLE_arc_math_geom_BoundingBox_ext_arc_math_geom_Vec3_float_R_arc_math_geom_BoundingBox 38
+typedef jobject (*func_arc_math_geom_BoundingBox_ext_arc_math_geom_Vec3_float_R_arc_math_geom_BoundingBox)(jcontext ctx, jobject self, jobject param0, jfloat param1);
+#define VTABLE_arc_math_geom_BoundingBox_contains_arc_math_geom_BoundingBox_R_boolean 39
+typedef jbool (*func_arc_math_geom_BoundingBox_contains_arc_math_geom_BoundingBox_R_boolean)(jcontext ctx, jobject self, jobject param0);
+#define VTABLE_arc_math_geom_BoundingBox_intersects_arc_math_geom_BoundingBox_R_boolean 40
+typedef jbool (*func_arc_math_geom_BoundingBox_intersects_arc_math_geom_BoundingBox_R_boolean)(jcontext ctx, jobject self, jobject param0);
+#define VTABLE_arc_math_geom_BoundingBox_contains_arc_math_geom_Vec3_R_boolean 41
+typedef jbool (*func_arc_math_geom_BoundingBox_contains_arc_math_geom_Vec3_R_boolean)(jcontext ctx, jobject self, jobject param0);
+#define VTABLE_arc_math_geom_BoundingBox_ext_float_float_float_R_arc_math_geom_BoundingBox 42
+typedef jobject (*func_arc_math_geom_BoundingBox_ext_float_float_float_R_arc_math_geom_BoundingBox)(jcontext ctx, jobject self, jfloat param0, jfloat param1, jfloat param2);
+
+void mark_arc_math_geom_BoundingBox(jobject object, jint mark, jint depth);
+void clinit_arc_math_geom_BoundingBox(jcontext ctx);
+void init_arc_math_geom_BoundingBox(jcontext ctx, jobject self);
+void init_arc_math_geom_BoundingBox_arc_math_geom_BoundingBox(jcontext ctx, jobject self, jobject param0);
+void init_arc_math_geom_BoundingBox_arc_math_geom_Vec3_arc_math_geom_Vec3(jcontext ctx, jobject self, jobject param0, jobject param1);
+jfloat SM_arc_math_geom_BoundingBox_min_float_float_R_float(jcontext ctx, jfloat param0, jfloat param1);
+jfloat SM_arc_math_geom_BoundingBox_max_float_float_R_float(jcontext ctx, jfloat param0, jfloat param1);
+jobject M_arc_math_geom_BoundingBox_getCenter_arc_math_geom_Vec3_R_arc_math_geom_Vec3(jcontext ctx, jobject self, jobject param0);
+jfloat M_arc_math_geom_BoundingBox_getCenterX_R_float(jcontext ctx, jobject self);
+jfloat M_arc_math_geom_BoundingBox_getCenterY_R_float(jcontext ctx, jobject self);
+jfloat M_arc_math_geom_BoundingBox_getCenterZ_R_float(jcontext ctx, jobject self);
+jobject M_arc_math_geom_BoundingBox_getCorner000_arc_math_geom_Vec3_R_arc_math_geom_Vec3(jcontext ctx, jobject self, jobject param0);
+jobject M_arc_math_geom_BoundingBox_getCorner001_arc_math_geom_Vec3_R_arc_math_geom_Vec3(jcontext ctx, jobject self, jobject param0);
+jobject M_arc_math_geom_BoundingBox_getCorner010_arc_math_geom_Vec3_R_arc_math_geom_Vec3(jcontext ctx, jobject self, jobject param0);
+jobject M_arc_math_geom_BoundingBox_getCorner011_arc_math_geom_Vec3_R_arc_math_geom_Vec3(jcontext ctx, jobject self, jobject param0);
+jobject M_arc_math_geom_BoundingBox_getCorner100_arc_math_geom_Vec3_R_arc_math_geom_Vec3(jcontext ctx, jobject self, jobject param0);
+jobject M_arc_math_geom_BoundingBox_getCorner101_arc_math_geom_Vec3_R_arc_math_geom_Vec3(jcontext ctx, jobject self, jobject param0);
+jobject M_arc_math_geom_BoundingBox_getCorner110_arc_math_geom_Vec3_R_arc_math_geom_Vec3(jcontext ctx, jobject self, jobject param0);
+jobject M_arc_math_geom_BoundingBox_getCorner111_arc_math_geom_Vec3_R_arc_math_geom_Vec3(jcontext ctx, jobject self, jobject param0);
+jobject M_arc_math_geom_BoundingBox_getDimensions_arc_math_geom_Vec3_R_arc_math_geom_Vec3(jcontext ctx, jobject self, jobject param0);
+jfloat M_arc_math_geom_BoundingBox_getWidth_R_float(jcontext ctx, jobject self);
+jfloat M_arc_math_geom_BoundingBox_getHeight_R_float(jcontext ctx, jobject self);
+jfloat M_arc_math_geom_BoundingBox_getDepth_R_float(jcontext ctx, jobject self);
+jobject M_arc_math_geom_BoundingBox_getMin_arc_math_geom_Vec3_R_arc_math_geom_Vec3(jcontext ctx, jobject self, jobject param0);
+jobject M_arc_math_geom_BoundingBox_getMax_arc_math_geom_Vec3_R_arc_math_geom_Vec3(jcontext ctx, jobject self, jobject param0);
+jobject M_arc_math_geom_BoundingBox_set_arc_math_geom_BoundingBox_R_arc_math_geom_BoundingBox(jcontext ctx, jobject self, jobject param0);
+jobject M_arc_math_geom_BoundingBox_set_arc_math_geom_Vec3_arc_math_geom_Vec3_R_arc_math_geom_BoundingBox(jcontext ctx, jobject self, jobject param0, jobject param1);
+jobject M_arc_math_geom_BoundingBox_set_Array1_arc_math_geom_Vec3_R_arc_math_geom_BoundingBox(jcontext ctx, jobject self, jobject param0);
+jobject M_arc_math_geom_BoundingBox_set_arc_struct_Seq_R_arc_math_geom_BoundingBox(jcontext ctx, jobject self, jobject param0);
+jobject M_arc_math_geom_BoundingBox_inf_R_arc_math_geom_BoundingBox(jcontext ctx, jobject self);
+jobject M_arc_math_geom_BoundingBox_ext_arc_math_geom_Vec3_R_arc_math_geom_BoundingBox(jcontext ctx, jobject self, jobject param0);
+jobject M_arc_math_geom_BoundingBox_clr_R_arc_math_geom_BoundingBox(jcontext ctx, jobject self);
+jbool M_arc_math_geom_BoundingBox_isValid_R_boolean(jcontext ctx, jobject self);
+jobject M_arc_math_geom_BoundingBox_ext_arc_math_geom_BoundingBox_R_arc_math_geom_BoundingBox(jcontext ctx, jobject self, jobject param0);
+jobject M_arc_math_geom_BoundingBox_ext_arc_math_geom_Vec3_float_R_arc_math_geom_BoundingBox(jcontext ctx, jobject self, jobject param0, jfloat param1);
+jbool M_arc_math_geom_BoundingBox_contains_arc_math_geom_BoundingBox_R_boolean(jcontext ctx, jobject self, jobject param0);
+jbool M_arc_math_geom_BoundingBox_intersects_arc_math_geom_BoundingBox_R_boolean(jcontext ctx, jobject self, jobject param0);
+jbool M_arc_math_geom_BoundingBox_contains_arc_math_geom_Vec3_R_boolean(jcontext ctx, jobject self, jobject param0);
+jobject M_arc_math_geom_BoundingBox_toString_R_java_lang_String(jcontext ctx, jobject self);
+jobject M_arc_math_geom_BoundingBox_ext_float_float_float_R_arc_math_geom_BoundingBox(jcontext ctx, jobject self, jfloat param0, jfloat param1, jfloat param2);
+
+#ifdef __cplusplus
+}
+#endif
+
+#endif

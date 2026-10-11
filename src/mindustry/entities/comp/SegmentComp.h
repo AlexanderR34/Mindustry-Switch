@@ -1,0 +1,762 @@
+#ifndef HEADER_mindustry_entities_comp_SegmentComp
+#define HEADER_mindustry_entities_comp_SegmentComp
+
+#include "Clearwing.h"
+#include "java/lang/Object.h"
+#include "mindustry/gen/Posc.h"
+#include "mindustry/gen/Rotc.h"
+#include "mindustry/gen/Hitboxc.h"
+#include "mindustry/gen/Unitc.h"
+#include "mindustry/gen/Segmentc.h"
+
+#ifdef __cplusplus
+extern "C" {
+#endif
+
+typedef struct mindustry_entities_comp_SegmentComp {
+	java_lang_Object parent;
+	jfloat F_x;
+	jfloat F_y;
+	jfloat F_rotation;
+	jref F_type;
+	jref F_vel;
+	jref F_parentSegment;
+	jref F_childSegment;
+	jref F_headSegment;
+	jint F_segmentIndex;
+	jint F_parentId;
+} mindustry_entities_comp_SegmentComp;
+
+extern Class class_mindustry_entities_comp_SegmentComp;
+
+
+#define VTABLE_mindustry_entities_comp_SegmentComp_hashCode_R_int 0
+typedef jint (*func_mindustry_entities_comp_SegmentComp_hashCode_R_int)(jcontext ctx, jobject self);
+#define VTABLE_mindustry_entities_comp_SegmentComp_equals_java_lang_Object_R_boolean 1
+typedef jbool (*func_mindustry_entities_comp_SegmentComp_equals_java_lang_Object_R_boolean)(jcontext ctx, jobject self, jobject param0);
+#define VTABLE_mindustry_entities_comp_SegmentComp_clone_R_java_lang_Object 2
+typedef jobject (*func_mindustry_entities_comp_SegmentComp_clone_R_java_lang_Object)(jcontext ctx, jobject self);
+#define VTABLE_mindustry_entities_comp_SegmentComp_getClass_R_java_lang_Class 3
+typedef jobject (*func_mindustry_entities_comp_SegmentComp_getClass_R_java_lang_Class)(jcontext ctx, jobject self);
+#define VTABLE_mindustry_entities_comp_SegmentComp_toString_R_java_lang_String 4
+typedef jobject (*func_mindustry_entities_comp_SegmentComp_toString_R_java_lang_String)(jcontext ctx, jobject self);
+#define VTABLE_mindustry_entities_comp_SegmentComp_finalize 5
+typedef void (*func_mindustry_entities_comp_SegmentComp_finalize)(jcontext ctx, jobject self);
+#define VTABLE_mindustry_entities_comp_SegmentComp_notify 6
+typedef void (*func_mindustry_entities_comp_SegmentComp_notify)(jcontext ctx, jobject self);
+#define VTABLE_mindustry_entities_comp_SegmentComp_notifyAll 7
+typedef void (*func_mindustry_entities_comp_SegmentComp_notifyAll)(jcontext ctx, jobject self);
+#define VTABLE_mindustry_entities_comp_SegmentComp_wait 8
+typedef void (*func_mindustry_entities_comp_SegmentComp_wait)(jcontext ctx, jobject self);
+#define VTABLE_mindustry_entities_comp_SegmentComp_wait_long 9
+typedef void (*func_mindustry_entities_comp_SegmentComp_wait_long)(jcontext ctx, jobject self, jlong param0);
+#define VTABLE_mindustry_entities_comp_SegmentComp_wait_long_int 10
+typedef void (*func_mindustry_entities_comp_SegmentComp_wait_long_int)(jcontext ctx, jobject self, jlong param0, jint param1);
+#define VTABLE_mindustry_entities_comp_SegmentComp_getX_R_float 11
+typedef jfloat (*func_mindustry_entities_comp_SegmentComp_getX_R_float)(jcontext ctx, jobject self);
+#define VTABLE_mindustry_entities_comp_SegmentComp_getY_R_float 12
+typedef jfloat (*func_mindustry_entities_comp_SegmentComp_getY_R_float)(jcontext ctx, jobject self);
+#define VTABLE_mindustry_entities_comp_SegmentComp_angleTo_arc_math_geom_Position_R_float 13
+typedef jfloat (*func_mindustry_entities_comp_SegmentComp_angleTo_arc_math_geom_Position_R_float)(jcontext ctx, jobject self, jobject param0);
+#define VTABLE_mindustry_entities_comp_SegmentComp_angleTo_float_float_R_float 14
+typedef jfloat (*func_mindustry_entities_comp_SegmentComp_angleTo_float_float_R_float)(jcontext ctx, jobject self, jfloat param0, jfloat param1);
+#define VTABLE_mindustry_entities_comp_SegmentComp_dst2_arc_math_geom_Position_R_float 15
+typedef jfloat (*func_mindustry_entities_comp_SegmentComp_dst2_arc_math_geom_Position_R_float)(jcontext ctx, jobject self, jobject param0);
+#define VTABLE_mindustry_entities_comp_SegmentComp_dst_arc_math_geom_Position_R_float 16
+typedef jfloat (*func_mindustry_entities_comp_SegmentComp_dst_arc_math_geom_Position_R_float)(jcontext ctx, jobject self, jobject param0);
+#define VTABLE_mindustry_entities_comp_SegmentComp_dst_float_float_R_float 17
+typedef jfloat (*func_mindustry_entities_comp_SegmentComp_dst_float_float_R_float)(jcontext ctx, jobject self, jfloat param0, jfloat param1);
+#define VTABLE_mindustry_entities_comp_SegmentComp_dst2_float_float_R_float 18
+typedef jfloat (*func_mindustry_entities_comp_SegmentComp_dst2_float_float_R_float)(jcontext ctx, jobject self, jfloat param0, jfloat param1);
+#define VTABLE_mindustry_entities_comp_SegmentComp_within_arc_math_geom_Position_float_R_boolean 19
+typedef jbool (*func_mindustry_entities_comp_SegmentComp_within_arc_math_geom_Position_float_R_boolean)(jcontext ctx, jobject self, jobject param0, jfloat param1);
+#define VTABLE_mindustry_entities_comp_SegmentComp_within_float_float_float_R_boolean 20
+typedef jbool (*func_mindustry_entities_comp_SegmentComp_within_float_float_float_R_boolean)(jcontext ctx, jobject self, jfloat param0, jfloat param1, jfloat param2);
+#define VTABLE_mindustry_entities_comp_SegmentComp_self_R_mindustry_gen_Entityc 21
+typedef jobject (*func_mindustry_entities_comp_SegmentComp_self_R_mindustry_gen_Entityc)(jcontext ctx, jobject self);
+#define VTABLE_mindustry_entities_comp_SegmentComp_as_R_java_lang_Object 22
+typedef jobject (*func_mindustry_entities_comp_SegmentComp_as_R_java_lang_Object)(jcontext ctx, jobject self);
+#define VTABLE_mindustry_entities_comp_SegmentComp_isAdded_R_boolean 23
+typedef jbool (*func_mindustry_entities_comp_SegmentComp_isAdded_R_boolean)(jcontext ctx, jobject self);
+#define VTABLE_mindustry_entities_comp_SegmentComp_isLocal_R_boolean 24
+typedef jbool (*func_mindustry_entities_comp_SegmentComp_isLocal_R_boolean)(jcontext ctx, jobject self);
+#define VTABLE_mindustry_entities_comp_SegmentComp_isRemote_R_boolean 25
+typedef jbool (*func_mindustry_entities_comp_SegmentComp_isRemote_R_boolean)(jcontext ctx, jobject self);
+#define VTABLE_mindustry_entities_comp_SegmentComp_serialize_R_boolean 26
+typedef jbool (*func_mindustry_entities_comp_SegmentComp_serialize_R_boolean)(jcontext ctx, jobject self);
+#define VTABLE_mindustry_entities_comp_SegmentComp_classId_R_int 27
+typedef jint (*func_mindustry_entities_comp_SegmentComp_classId_R_int)(jcontext ctx, jobject self);
+#define VTABLE_mindustry_entities_comp_SegmentComp_id_R_int 28
+typedef jint (*func_mindustry_entities_comp_SegmentComp_id_R_int)(jcontext ctx, jobject self);
+#define VTABLE_mindustry_entities_comp_SegmentComp_add 29
+typedef void (*func_mindustry_entities_comp_SegmentComp_add)(jcontext ctx, jobject self);
+#define VTABLE_mindustry_entities_comp_SegmentComp_afterRead 30
+typedef void (*func_mindustry_entities_comp_SegmentComp_afterRead)(jcontext ctx, jobject self);
+#define VTABLE_mindustry_entities_comp_SegmentComp_afterReadAll 31
+typedef void (*func_mindustry_entities_comp_SegmentComp_afterReadAll)(jcontext ctx, jobject self);
+#define VTABLE_mindustry_entities_comp_SegmentComp_beforeWrite 32
+typedef void (*func_mindustry_entities_comp_SegmentComp_beforeWrite)(jcontext ctx, jobject self);
+#define VTABLE_mindustry_entities_comp_SegmentComp_id_int 33
+typedef void (*func_mindustry_entities_comp_SegmentComp_id_int)(jcontext ctx, jobject self, jint param0);
+#define VTABLE_mindustry_entities_comp_SegmentComp_read_arc_util_io_Reads 34
+typedef void (*func_mindustry_entities_comp_SegmentComp_read_arc_util_io_Reads)(jcontext ctx, jobject self, jobject param0);
+#define VTABLE_mindustry_entities_comp_SegmentComp_remove 35
+typedef void (*func_mindustry_entities_comp_SegmentComp_remove)(jcontext ctx, jobject self);
+#define VTABLE_mindustry_entities_comp_SegmentComp_update 36
+typedef void (*func_mindustry_entities_comp_SegmentComp_update)(jcontext ctx, jobject self);
+#define VTABLE_mindustry_entities_comp_SegmentComp_write_arc_util_io_Writes 37
+typedef void (*func_mindustry_entities_comp_SegmentComp_write_arc_util_io_Writes)(jcontext ctx, jobject self, jobject param0);
+#define VTABLE_mindustry_entities_comp_SegmentComp_floorOn_R_mindustry_world_blocks_environment_Floor 38
+typedef jobject (*func_mindustry_entities_comp_SegmentComp_floorOn_R_mindustry_world_blocks_environment_Floor)(jcontext ctx, jobject self);
+#define VTABLE_mindustry_entities_comp_SegmentComp_buildOn_R_mindustry_gen_Building 39
+typedef jobject (*func_mindustry_entities_comp_SegmentComp_buildOn_R_mindustry_gen_Building)(jcontext ctx, jobject self);
+#define VTABLE_mindustry_entities_comp_SegmentComp_onSolid_R_boolean 40
+typedef jbool (*func_mindustry_entities_comp_SegmentComp_onSolid_R_boolean)(jcontext ctx, jobject self);
+#define VTABLE_mindustry_entities_comp_SegmentComp_x_R_float 41
+typedef jfloat (*func_mindustry_entities_comp_SegmentComp_x_R_float)(jcontext ctx, jobject self);
+#define VTABLE_mindustry_entities_comp_SegmentComp_y_R_float 42
+typedef jfloat (*func_mindustry_entities_comp_SegmentComp_y_R_float)(jcontext ctx, jobject self);
+#define VTABLE_mindustry_entities_comp_SegmentComp_tileX_R_int 43
+typedef jint (*func_mindustry_entities_comp_SegmentComp_tileX_R_int)(jcontext ctx, jobject self);
+#define VTABLE_mindustry_entities_comp_SegmentComp_tileY_R_int 44
+typedef jint (*func_mindustry_entities_comp_SegmentComp_tileY_R_int)(jcontext ctx, jobject self);
+#define VTABLE_mindustry_entities_comp_SegmentComp_blockOn_R_mindustry_world_Block 45
+typedef jobject (*func_mindustry_entities_comp_SegmentComp_blockOn_R_mindustry_world_Block)(jcontext ctx, jobject self);
+#define VTABLE_mindustry_entities_comp_SegmentComp_tileOn_R_mindustry_world_Tile 46
+typedef jobject (*func_mindustry_entities_comp_SegmentComp_tileOn_R_mindustry_world_Tile)(jcontext ctx, jobject self);
+#define VTABLE_mindustry_entities_comp_SegmentComp_set_arc_math_geom_Position 47
+typedef void (*func_mindustry_entities_comp_SegmentComp_set_arc_math_geom_Position)(jcontext ctx, jobject self, jobject param0);
+#define VTABLE_mindustry_entities_comp_SegmentComp_set_float_float 48
+typedef void (*func_mindustry_entities_comp_SegmentComp_set_float_float)(jcontext ctx, jobject self, jfloat param0, jfloat param1);
+#define VTABLE_mindustry_entities_comp_SegmentComp_trns_arc_math_geom_Position 49
+typedef void (*func_mindustry_entities_comp_SegmentComp_trns_arc_math_geom_Position)(jcontext ctx, jobject self, jobject param0);
+#define VTABLE_mindustry_entities_comp_SegmentComp_trns_float_float 50
+typedef void (*func_mindustry_entities_comp_SegmentComp_trns_float_float)(jcontext ctx, jobject self, jfloat param0, jfloat param1);
+#define VTABLE_mindustry_entities_comp_SegmentComp_x_float 51
+typedef void (*func_mindustry_entities_comp_SegmentComp_x_float)(jcontext ctx, jobject self, jfloat param0);
+#define VTABLE_mindustry_entities_comp_SegmentComp_y_float 52
+typedef void (*func_mindustry_entities_comp_SegmentComp_y_float)(jcontext ctx, jobject self, jfloat param0);
+#define VTABLE_mindustry_entities_comp_SegmentComp_rotation_R_float 53
+typedef jfloat (*func_mindustry_entities_comp_SegmentComp_rotation_R_float)(jcontext ctx, jobject self);
+#define VTABLE_mindustry_entities_comp_SegmentComp_rotation_float 54
+typedef void (*func_mindustry_entities_comp_SegmentComp_rotation_float)(jcontext ctx, jobject self, jfloat param0);
+#define VTABLE_mindustry_entities_comp_SegmentComp_hitbox_arc_math_geom_Rect 55
+typedef void (*func_mindustry_entities_comp_SegmentComp_hitbox_arc_math_geom_Rect)(jcontext ctx, jobject self, jobject param0);
+#define VTABLE_mindustry_entities_comp_SegmentComp_hitSize_R_float 56
+typedef jfloat (*func_mindustry_entities_comp_SegmentComp_hitSize_R_float)(jcontext ctx, jobject self);
+#define VTABLE_mindustry_entities_comp_SegmentComp_collides_mindustry_gen_Hitboxc_R_boolean 57
+typedef jbool (*func_mindustry_entities_comp_SegmentComp_collides_mindustry_gen_Hitboxc_R_boolean)(jcontext ctx, jobject self, jobject param0);
+#define VTABLE_mindustry_entities_comp_SegmentComp_deltaAngle_R_float 58
+typedef jfloat (*func_mindustry_entities_comp_SegmentComp_deltaAngle_R_float)(jcontext ctx, jobject self);
+#define VTABLE_mindustry_entities_comp_SegmentComp_deltaLen_R_float 59
+typedef jfloat (*func_mindustry_entities_comp_SegmentComp_deltaLen_R_float)(jcontext ctx, jobject self);
+#define VTABLE_mindustry_entities_comp_SegmentComp_deltaX_R_float 60
+typedef jfloat (*func_mindustry_entities_comp_SegmentComp_deltaX_R_float)(jcontext ctx, jobject self);
+#define VTABLE_mindustry_entities_comp_SegmentComp_deltaY_R_float 61
+typedef jfloat (*func_mindustry_entities_comp_SegmentComp_deltaY_R_float)(jcontext ctx, jobject self);
+#define VTABLE_mindustry_entities_comp_SegmentComp_lastX_R_float 62
+typedef jfloat (*func_mindustry_entities_comp_SegmentComp_lastX_R_float)(jcontext ctx, jobject self);
+#define VTABLE_mindustry_entities_comp_SegmentComp_lastY_R_float 63
+typedef jfloat (*func_mindustry_entities_comp_SegmentComp_lastY_R_float)(jcontext ctx, jobject self);
+#define VTABLE_mindustry_entities_comp_SegmentComp_collision_mindustry_gen_Hitboxc_float_float 64
+typedef void (*func_mindustry_entities_comp_SegmentComp_collision_mindustry_gen_Hitboxc_float_float)(jcontext ctx, jobject self, jobject param0, jfloat param1, jfloat param2);
+#define VTABLE_mindustry_entities_comp_SegmentComp_deltaX_float 65
+typedef void (*func_mindustry_entities_comp_SegmentComp_deltaX_float)(jcontext ctx, jobject self, jfloat param0);
+#define VTABLE_mindustry_entities_comp_SegmentComp_deltaY_float 66
+typedef void (*func_mindustry_entities_comp_SegmentComp_deltaY_float)(jcontext ctx, jobject self, jfloat param0);
+#define VTABLE_mindustry_entities_comp_SegmentComp_getCollisions_arc_func_Cons 67
+typedef void (*func_mindustry_entities_comp_SegmentComp_getCollisions_arc_func_Cons)(jcontext ctx, jobject self, jobject param0);
+#define VTABLE_mindustry_entities_comp_SegmentComp_hitSize_float 68
+typedef void (*func_mindustry_entities_comp_SegmentComp_hitSize_float)(jcontext ctx, jobject self, jfloat param0);
+#define VTABLE_mindustry_entities_comp_SegmentComp_hitboxTile_arc_math_geom_Rect 69
+typedef void (*func_mindustry_entities_comp_SegmentComp_hitboxTile_arc_math_geom_Rect)(jcontext ctx, jobject self, jobject param0);
+#define VTABLE_mindustry_entities_comp_SegmentComp_lastX_float 70
+typedef void (*func_mindustry_entities_comp_SegmentComp_lastX_float)(jcontext ctx, jobject self, jfloat param0);
+#define VTABLE_mindustry_entities_comp_SegmentComp_lastY_float 71
+typedef void (*func_mindustry_entities_comp_SegmentComp_lastY_float)(jcontext ctx, jobject self, jfloat param0);
+#define VTABLE_mindustry_entities_comp_SegmentComp_updateLastPosition 72
+typedef void (*func_mindustry_entities_comp_SegmentComp_updateLastPosition)(jcontext ctx, jobject self);
+#define VTABLE_mindustry_entities_comp_SegmentComp_applyDynamicStatus_R_mindustry_entities_units_StatusEntry 73
+typedef jobject (*func_mindustry_entities_comp_SegmentComp_applyDynamicStatus_R_mindustry_entities_units_StatusEntry)(jcontext ctx, jobject self);
+#define VTABLE_mindustry_entities_comp_SegmentComp_apply_mindustry_type_StatusEffect_float 74
+typedef void (*func_mindustry_entities_comp_SegmentComp_apply_mindustry_type_StatusEffect_float)(jcontext ctx, jobject self, jobject param0, jfloat param1);
+#define VTABLE_mindustry_entities_comp_SegmentComp_apply_mindustry_type_StatusEffect 75
+typedef void (*func_mindustry_entities_comp_SegmentComp_apply_mindustry_type_StatusEffect)(jcontext ctx, jobject self, jobject param0);
+#define VTABLE_mindustry_entities_comp_SegmentComp_unapply_mindustry_type_StatusEffect 76
+typedef void (*func_mindustry_entities_comp_SegmentComp_unapply_mindustry_type_StatusEffect)(jcontext ctx, jobject self, jobject param0);
+#define VTABLE_mindustry_entities_comp_SegmentComp_statusDamageMultiplier_float 77
+typedef void (*func_mindustry_entities_comp_SegmentComp_statusDamageMultiplier_float)(jcontext ctx, jobject self, jfloat param0);
+#define VTABLE_mindustry_entities_comp_SegmentComp_statusReloadMultiplier_float 78
+typedef void (*func_mindustry_entities_comp_SegmentComp_statusReloadMultiplier_float)(jcontext ctx, jobject self, jfloat param0);
+#define VTABLE_mindustry_entities_comp_SegmentComp_statusArmor_float 79
+typedef void (*func_mindustry_entities_comp_SegmentComp_statusArmor_float)(jcontext ctx, jobject self, jfloat param0);
+#define VTABLE_mindustry_entities_comp_SegmentComp_statusBuildSpeed_float 80
+typedef void (*func_mindustry_entities_comp_SegmentComp_statusBuildSpeed_float)(jcontext ctx, jobject self, jfloat param0);
+#define VTABLE_mindustry_entities_comp_SegmentComp_statusDrag_float 81
+typedef void (*func_mindustry_entities_comp_SegmentComp_statusDrag_float)(jcontext ctx, jobject self, jfloat param0);
+#define VTABLE_mindustry_entities_comp_SegmentComp_statusMaxHealth_float 82
+typedef void (*func_mindustry_entities_comp_SegmentComp_statusMaxHealth_float)(jcontext ctx, jobject self, jfloat param0);
+#define VTABLE_mindustry_entities_comp_SegmentComp_statusSpeed_float 83
+typedef void (*func_mindustry_entities_comp_SegmentComp_statusSpeed_float)(jcontext ctx, jobject self, jfloat param0);
+#define VTABLE_mindustry_entities_comp_SegmentComp_statusColor_R_arc_graphics_Color 84
+typedef jobject (*func_mindustry_entities_comp_SegmentComp_statusColor_R_arc_graphics_Color)(jcontext ctx, jobject self);
+#define VTABLE_mindustry_entities_comp_SegmentComp_statusBits_R_arc_struct_Bits 85
+typedef jobject (*func_mindustry_entities_comp_SegmentComp_statusBits_R_arc_struct_Bits)(jcontext ctx, jobject self);
+#define VTABLE_mindustry_entities_comp_SegmentComp_disarmed_R_boolean 86
+typedef jbool (*func_mindustry_entities_comp_SegmentComp_disarmed_R_boolean)(jcontext ctx, jobject self);
+#define VTABLE_mindustry_entities_comp_SegmentComp_hasEffect_mindustry_type_StatusEffect_R_boolean 87
+typedef jbool (*func_mindustry_entities_comp_SegmentComp_hasEffect_mindustry_type_StatusEffect_R_boolean)(jcontext ctx, jobject self, jobject param0);
+#define VTABLE_mindustry_entities_comp_SegmentComp_isBoss_R_boolean 88
+typedef jbool (*func_mindustry_entities_comp_SegmentComp_isBoss_R_boolean)(jcontext ctx, jobject self);
+#define VTABLE_mindustry_entities_comp_SegmentComp_isGrounded_R_boolean 89
+typedef jbool (*func_mindustry_entities_comp_SegmentComp_isGrounded_R_boolean)(jcontext ctx, jobject self);
+#define VTABLE_mindustry_entities_comp_SegmentComp_isImmune_mindustry_type_StatusEffect_R_boolean 90
+typedef jbool (*func_mindustry_entities_comp_SegmentComp_isImmune_mindustry_type_StatusEffect_R_boolean)(jcontext ctx, jobject self, jobject param0);
+#define VTABLE_mindustry_entities_comp_SegmentComp_armorOverride_R_float 91
+typedef jfloat (*func_mindustry_entities_comp_SegmentComp_armorOverride_R_float)(jcontext ctx, jobject self);
+#define VTABLE_mindustry_entities_comp_SegmentComp_buildSpeedMultiplier_R_float 92
+typedef jfloat (*func_mindustry_entities_comp_SegmentComp_buildSpeedMultiplier_R_float)(jcontext ctx, jobject self);
+#define VTABLE_mindustry_entities_comp_SegmentComp_damageMultiplier_R_float 93
+typedef jfloat (*func_mindustry_entities_comp_SegmentComp_damageMultiplier_R_float)(jcontext ctx, jobject self);
+#define VTABLE_mindustry_entities_comp_SegmentComp_dragMultiplier_R_float 94
+typedef jfloat (*func_mindustry_entities_comp_SegmentComp_dragMultiplier_R_float)(jcontext ctx, jobject self);
+#define VTABLE_mindustry_entities_comp_SegmentComp_getDuration_mindustry_type_StatusEffect_R_float 95
+typedef jfloat (*func_mindustry_entities_comp_SegmentComp_getDuration_mindustry_type_StatusEffect_R_float)(jcontext ctx, jobject self, jobject param0);
+#define VTABLE_mindustry_entities_comp_SegmentComp_healthMultiplier_R_float 96
+typedef jfloat (*func_mindustry_entities_comp_SegmentComp_healthMultiplier_R_float)(jcontext ctx, jobject self);
+#define VTABLE_mindustry_entities_comp_SegmentComp_reloadMultiplier_R_float 97
+typedef jfloat (*func_mindustry_entities_comp_SegmentComp_reloadMultiplier_R_float)(jcontext ctx, jobject self);
+#define VTABLE_mindustry_entities_comp_SegmentComp_speedMultiplier_R_float 98
+typedef jfloat (*func_mindustry_entities_comp_SegmentComp_speedMultiplier_R_float)(jcontext ctx, jobject self);
+#define VTABLE_mindustry_entities_comp_SegmentComp_armorOverride_float 99
+typedef void (*func_mindustry_entities_comp_SegmentComp_armorOverride_float)(jcontext ctx, jobject self, jfloat param0);
+#define VTABLE_mindustry_entities_comp_SegmentComp_buildSpeedMultiplier_float 100
+typedef void (*func_mindustry_entities_comp_SegmentComp_buildSpeedMultiplier_float)(jcontext ctx, jobject self, jfloat param0);
+#define VTABLE_mindustry_entities_comp_SegmentComp_clearStatuses 101
+typedef void (*func_mindustry_entities_comp_SegmentComp_clearStatuses)(jcontext ctx, jobject self);
+#define VTABLE_mindustry_entities_comp_SegmentComp_damageMultiplier_float 102
+typedef void (*func_mindustry_entities_comp_SegmentComp_damageMultiplier_float)(jcontext ctx, jobject self, jfloat param0);
+#define VTABLE_mindustry_entities_comp_SegmentComp_disarmed_boolean 103
+typedef void (*func_mindustry_entities_comp_SegmentComp_disarmed_boolean)(jcontext ctx, jobject self, jbool param0);
+#define VTABLE_mindustry_entities_comp_SegmentComp_dragMultiplier_float 104
+typedef void (*func_mindustry_entities_comp_SegmentComp_dragMultiplier_float)(jcontext ctx, jobject self, jfloat param0);
+#define VTABLE_mindustry_entities_comp_SegmentComp_draw 105
+typedef void (*func_mindustry_entities_comp_SegmentComp_draw)(jcontext ctx, jobject self);
+#define VTABLE_mindustry_entities_comp_SegmentComp_healthMultiplier_float 106
+typedef void (*func_mindustry_entities_comp_SegmentComp_healthMultiplier_float)(jcontext ctx, jobject self, jfloat param0);
+#define VTABLE_mindustry_entities_comp_SegmentComp_reloadMultiplier_float 107
+typedef void (*func_mindustry_entities_comp_SegmentComp_reloadMultiplier_float)(jcontext ctx, jobject self, jfloat param0);
+#define VTABLE_mindustry_entities_comp_SegmentComp_setDuration_mindustry_type_StatusEffect_float 108
+typedef void (*func_mindustry_entities_comp_SegmentComp_setDuration_mindustry_type_StatusEffect_float)(jcontext ctx, jobject self, jobject param0, jfloat param1);
+#define VTABLE_mindustry_entities_comp_SegmentComp_speedMultiplier_float 109
+typedef void (*func_mindustry_entities_comp_SegmentComp_speedMultiplier_float)(jcontext ctx, jobject self, jfloat param0);
+#define VTABLE_mindustry_entities_comp_SegmentComp_inFogTo_mindustry_game_Team_R_boolean 110
+typedef jbool (*func_mindustry_entities_comp_SegmentComp_inFogTo_mindustry_game_Team_R_boolean)(jcontext ctx, jobject self, jobject param0);
+#define VTABLE_mindustry_entities_comp_SegmentComp_cheating_R_boolean 111
+typedef jbool (*func_mindustry_entities_comp_SegmentComp_cheating_R_boolean)(jcontext ctx, jobject self);
+#define VTABLE_mindustry_entities_comp_SegmentComp_team_R_mindustry_game_Team 112
+typedef jobject (*func_mindustry_entities_comp_SegmentComp_team_R_mindustry_game_Team)(jcontext ctx, jobject self);
+#define VTABLE_mindustry_entities_comp_SegmentComp_closestCore_R_mindustry_world_blocks_storage_CoreBlock$CoreBuild 113
+typedef jobject (*func_mindustry_entities_comp_SegmentComp_closestCore_R_mindustry_world_blocks_storage_CoreBlock$CoreBuild)(jcontext ctx, jobject self);
+#define VTABLE_mindustry_entities_comp_SegmentComp_closestEnemyCore_R_mindustry_world_blocks_storage_CoreBlock$CoreBuild 114
+typedef jobject (*func_mindustry_entities_comp_SegmentComp_closestEnemyCore_R_mindustry_world_blocks_storage_CoreBlock$CoreBuild)(jcontext ctx, jobject self);
+#define VTABLE_mindustry_entities_comp_SegmentComp_core_R_mindustry_world_blocks_storage_CoreBlock$CoreBuild 115
+typedef jobject (*func_mindustry_entities_comp_SegmentComp_core_R_mindustry_world_blocks_storage_CoreBlock$CoreBuild)(jcontext ctx, jobject self);
+#define VTABLE_mindustry_entities_comp_SegmentComp_team_mindustry_game_Team 116
+typedef void (*func_mindustry_entities_comp_SegmentComp_team_mindustry_game_Team)(jcontext ctx, jobject self, jobject param0);
+#define VTABLE_mindustry_entities_comp_SegmentComp_buildPlan_R_mindustry_entities_units_BuildPlan 117
+typedef jobject (*func_mindustry_entities_comp_SegmentComp_buildPlan_R_mindustry_entities_units_BuildPlan)(jcontext ctx, jobject self);
+#define VTABLE_mindustry_entities_comp_SegmentComp_shouldSkip_mindustry_entities_units_BuildPlan_mindustry_gen_Building_R_boolean 118
+typedef jbool (*func_mindustry_entities_comp_SegmentComp_shouldSkip_mindustry_entities_units_BuildPlan_mindustry_gen_Building_R_boolean)(jcontext ctx, jobject self, jobject param0, jobject param1);
+#define VTABLE_mindustry_entities_comp_SegmentComp_addBuild_mindustry_entities_units_BuildPlan_boolean 119
+typedef void (*func_mindustry_entities_comp_SegmentComp_addBuild_mindustry_entities_units_BuildPlan_boolean)(jcontext ctx, jobject self, jobject param0, jbool param1);
+#define VTABLE_mindustry_entities_comp_SegmentComp_addBuild_mindustry_entities_units_BuildPlan 120
+typedef void (*func_mindustry_entities_comp_SegmentComp_addBuild_mindustry_entities_units_BuildPlan)(jcontext ctx, jobject self, jobject param0);
+#define VTABLE_mindustry_entities_comp_SegmentComp_clearBuilding 121
+typedef void (*func_mindustry_entities_comp_SegmentComp_clearBuilding)(jcontext ctx, jobject self);
+#define VTABLE_mindustry_entities_comp_SegmentComp_isBuilding_R_boolean 122
+typedef jbool (*func_mindustry_entities_comp_SegmentComp_isBuilding_R_boolean)(jcontext ctx, jobject self);
+#define VTABLE_mindustry_entities_comp_SegmentComp_plans_R_arc_struct_Queue 123
+typedef jobject (*func_mindustry_entities_comp_SegmentComp_plans_R_arc_struct_Queue)(jcontext ctx, jobject self);
+#define VTABLE_mindustry_entities_comp_SegmentComp_activelyBuilding_R_boolean 124
+typedef jbool (*func_mindustry_entities_comp_SegmentComp_activelyBuilding_R_boolean)(jcontext ctx, jobject self);
+#define VTABLE_mindustry_entities_comp_SegmentComp_canBuild_R_boolean 125
+typedef jbool (*func_mindustry_entities_comp_SegmentComp_canBuild_R_boolean)(jcontext ctx, jobject self);
+#define VTABLE_mindustry_entities_comp_SegmentComp_updateBuilding_R_boolean 126
+typedef jbool (*func_mindustry_entities_comp_SegmentComp_updateBuilding_R_boolean)(jcontext ctx, jobject self);
+#define VTABLE_mindustry_entities_comp_SegmentComp_buildAlpha_R_float 127
+typedef jfloat (*func_mindustry_entities_comp_SegmentComp_buildAlpha_R_float)(jcontext ctx, jobject self);
+#define VTABLE_mindustry_entities_comp_SegmentComp_buildAlpha_float 128
+typedef void (*func_mindustry_entities_comp_SegmentComp_buildAlpha_float)(jcontext ctx, jobject self, jfloat param0);
+#define VTABLE_mindustry_entities_comp_SegmentComp_drawBuilding 129
+typedef void (*func_mindustry_entities_comp_SegmentComp_drawBuilding)(jcontext ctx, jobject self);
+#define VTABLE_mindustry_entities_comp_SegmentComp_drawBuildingBeam_float_float 130
+typedef void (*func_mindustry_entities_comp_SegmentComp_drawBuildingBeam_float_float)(jcontext ctx, jobject self, jfloat param0, jfloat param1);
+#define VTABLE_mindustry_entities_comp_SegmentComp_drawPlan_mindustry_entities_units_BuildPlan_float 131
+typedef void (*func_mindustry_entities_comp_SegmentComp_drawPlan_mindustry_entities_units_BuildPlan_float)(jcontext ctx, jobject self, jobject param0, jfloat param1);
+#define VTABLE_mindustry_entities_comp_SegmentComp_drawPlanTop_mindustry_entities_units_BuildPlan_float 132
+typedef void (*func_mindustry_entities_comp_SegmentComp_drawPlanTop_mindustry_entities_units_BuildPlan_float)(jcontext ctx, jobject self, jobject param0, jfloat param1);
+#define VTABLE_mindustry_entities_comp_SegmentComp_plans_arc_struct_Queue 133
+typedef void (*func_mindustry_entities_comp_SegmentComp_plans_arc_struct_Queue)(jcontext ctx, jobject self, jobject param0);
+#define VTABLE_mindustry_entities_comp_SegmentComp_removeBuild_int_int_boolean 134
+typedef void (*func_mindustry_entities_comp_SegmentComp_removeBuild_int_int_boolean)(jcontext ctx, jobject self, jint param0, jint param1, jbool param2);
+#define VTABLE_mindustry_entities_comp_SegmentComp_updateBuildLogic 135
+typedef void (*func_mindustry_entities_comp_SegmentComp_updateBuildLogic)(jcontext ctx, jobject self);
+#define VTABLE_mindustry_entities_comp_SegmentComp_updateBuilding_boolean 136
+typedef void (*func_mindustry_entities_comp_SegmentComp_updateBuilding_boolean)(jcontext ctx, jobject self, jbool param0);
+#define VTABLE_mindustry_entities_comp_SegmentComp_validatePlans 137
+typedef void (*func_mindustry_entities_comp_SegmentComp_validatePlans)(jcontext ctx, jobject self);
+#define VTABLE_mindustry_entities_comp_SegmentComp_clipSize_R_float 138
+typedef jfloat (*func_mindustry_entities_comp_SegmentComp_clipSize_R_float)(jcontext ctx, jobject self);
+#define VTABLE_mindustry_entities_comp_SegmentComp_damageArmorMult_float_float 139
+typedef void (*func_mindustry_entities_comp_SegmentComp_damageArmorMult_float_float)(jcontext ctx, jobject self, jfloat param0, jfloat param1);
+#define VTABLE_mindustry_entities_comp_SegmentComp_damageArmorMult_float_float_boolean 140
+typedef void (*func_mindustry_entities_comp_SegmentComp_damageArmorMult_float_float_boolean)(jcontext ctx, jobject self, jfloat param0, jfloat param1, jbool param2);
+#define VTABLE_mindustry_entities_comp_SegmentComp_damagePierce_float 141
+typedef void (*func_mindustry_entities_comp_SegmentComp_damagePierce_float)(jcontext ctx, jobject self, jfloat param0);
+#define VTABLE_mindustry_entities_comp_SegmentComp_damagePierce_float_boolean 142
+typedef void (*func_mindustry_entities_comp_SegmentComp_damagePierce_float_boolean)(jcontext ctx, jobject self, jfloat param0, jbool param1);
+#define VTABLE_mindustry_entities_comp_SegmentComp_healFract_float 143
+typedef void (*func_mindustry_entities_comp_SegmentComp_healFract_float)(jcontext ctx, jobject self, jfloat param0);
+#define VTABLE_mindustry_entities_comp_SegmentComp_heal_float 144
+typedef void (*func_mindustry_entities_comp_SegmentComp_heal_float)(jcontext ctx, jobject self, jfloat param0);
+#define VTABLE_mindustry_entities_comp_SegmentComp_damaged_R_boolean 145
+typedef jbool (*func_mindustry_entities_comp_SegmentComp_damaged_R_boolean)(jcontext ctx, jobject self);
+#define VTABLE_mindustry_entities_comp_SegmentComp_dead_R_boolean 146
+typedef jbool (*func_mindustry_entities_comp_SegmentComp_dead_R_boolean)(jcontext ctx, jobject self);
+#define VTABLE_mindustry_entities_comp_SegmentComp_isValid_R_boolean 147
+typedef jbool (*func_mindustry_entities_comp_SegmentComp_isValid_R_boolean)(jcontext ctx, jobject self);
+#define VTABLE_mindustry_entities_comp_SegmentComp_health_R_float 148
+typedef jfloat (*func_mindustry_entities_comp_SegmentComp_health_R_float)(jcontext ctx, jobject self);
+#define VTABLE_mindustry_entities_comp_SegmentComp_healthf_R_float 149
+typedef jfloat (*func_mindustry_entities_comp_SegmentComp_healthf_R_float)(jcontext ctx, jobject self);
+#define VTABLE_mindustry_entities_comp_SegmentComp_hitTime_R_float 150
+typedef jfloat (*func_mindustry_entities_comp_SegmentComp_hitTime_R_float)(jcontext ctx, jobject self);
+#define VTABLE_mindustry_entities_comp_SegmentComp_maxHealth_R_float 151
+typedef jfloat (*func_mindustry_entities_comp_SegmentComp_maxHealth_R_float)(jcontext ctx, jobject self);
+#define VTABLE_mindustry_entities_comp_SegmentComp_clampHealth 152
+typedef void (*func_mindustry_entities_comp_SegmentComp_clampHealth)(jcontext ctx, jobject self);
+#define VTABLE_mindustry_entities_comp_SegmentComp_damage_float 153
+typedef void (*func_mindustry_entities_comp_SegmentComp_damage_float)(jcontext ctx, jobject self, jfloat param0);
+#define VTABLE_mindustry_entities_comp_SegmentComp_damage_float_boolean 154
+typedef void (*func_mindustry_entities_comp_SegmentComp_damage_float_boolean)(jcontext ctx, jobject self, jfloat param0, jbool param1);
+#define VTABLE_mindustry_entities_comp_SegmentComp_damageContinuous_float 155
+typedef void (*func_mindustry_entities_comp_SegmentComp_damageContinuous_float)(jcontext ctx, jobject self, jfloat param0);
+#define VTABLE_mindustry_entities_comp_SegmentComp_damageContinuousArmorMult_float_float 156
+typedef void (*func_mindustry_entities_comp_SegmentComp_damageContinuousArmorMult_float_float)(jcontext ctx, jobject self, jfloat param0, jfloat param1);
+#define VTABLE_mindustry_entities_comp_SegmentComp_damageContinuousPierce_float 157
+typedef void (*func_mindustry_entities_comp_SegmentComp_damageContinuousPierce_float)(jcontext ctx, jobject self, jfloat param0);
+#define VTABLE_mindustry_entities_comp_SegmentComp_dead_boolean 158
+typedef void (*func_mindustry_entities_comp_SegmentComp_dead_boolean)(jcontext ctx, jobject self, jbool param0);
+#define VTABLE_mindustry_entities_comp_SegmentComp_heal 159
+typedef void (*func_mindustry_entities_comp_SegmentComp_heal)(jcontext ctx, jobject self);
+#define VTABLE_mindustry_entities_comp_SegmentComp_health_float 160
+typedef void (*func_mindustry_entities_comp_SegmentComp_health_float)(jcontext ctx, jobject self, jfloat param0);
+#define VTABLE_mindustry_entities_comp_SegmentComp_hitTime_float 161
+typedef void (*func_mindustry_entities_comp_SegmentComp_hitTime_float)(jcontext ctx, jobject self, jfloat param0);
+#define VTABLE_mindustry_entities_comp_SegmentComp_kill 162
+typedef void (*func_mindustry_entities_comp_SegmentComp_kill)(jcontext ctx, jobject self);
+#define VTABLE_mindustry_entities_comp_SegmentComp_killed 163
+typedef void (*func_mindustry_entities_comp_SegmentComp_killed)(jcontext ctx, jobject self);
+#define VTABLE_mindustry_entities_comp_SegmentComp_maxHealth_float 164
+typedef void (*func_mindustry_entities_comp_SegmentComp_maxHealth_float)(jcontext ctx, jobject self, jfloat param0);
+#define VTABLE_mindustry_entities_comp_SegmentComp_acceptsItem_mindustry_type_Item_R_boolean 165
+typedef jbool (*func_mindustry_entities_comp_SegmentComp_acceptsItem_mindustry_type_Item_R_boolean)(jcontext ctx, jobject self, jobject param0);
+#define VTABLE_mindustry_entities_comp_SegmentComp_hasItem_R_boolean 166
+typedef jbool (*func_mindustry_entities_comp_SegmentComp_hasItem_R_boolean)(jcontext ctx, jobject self);
+#define VTABLE_mindustry_entities_comp_SegmentComp_itemTime_R_float 167
+typedef jfloat (*func_mindustry_entities_comp_SegmentComp_itemTime_R_float)(jcontext ctx, jobject self);
+#define VTABLE_mindustry_entities_comp_SegmentComp_itemCapacity_R_int 168
+typedef jint (*func_mindustry_entities_comp_SegmentComp_itemCapacity_R_int)(jcontext ctx, jobject self);
+#define VTABLE_mindustry_entities_comp_SegmentComp_maxAccepted_mindustry_type_Item_R_int 169
+typedef jint (*func_mindustry_entities_comp_SegmentComp_maxAccepted_mindustry_type_Item_R_int)(jcontext ctx, jobject self, jobject param0);
+#define VTABLE_mindustry_entities_comp_SegmentComp_item_R_mindustry_type_Item 170
+typedef jobject (*func_mindustry_entities_comp_SegmentComp_item_R_mindustry_type_Item)(jcontext ctx, jobject self);
+#define VTABLE_mindustry_entities_comp_SegmentComp_stack_R_mindustry_type_ItemStack 171
+typedef jobject (*func_mindustry_entities_comp_SegmentComp_stack_R_mindustry_type_ItemStack)(jcontext ctx, jobject self);
+#define VTABLE_mindustry_entities_comp_SegmentComp_addItem_mindustry_type_Item 172
+typedef void (*func_mindustry_entities_comp_SegmentComp_addItem_mindustry_type_Item)(jcontext ctx, jobject self, jobject param0);
+#define VTABLE_mindustry_entities_comp_SegmentComp_addItem_mindustry_type_Item_int 173
+typedef void (*func_mindustry_entities_comp_SegmentComp_addItem_mindustry_type_Item_int)(jcontext ctx, jobject self, jobject param0, jint param1);
+#define VTABLE_mindustry_entities_comp_SegmentComp_clearItem 174
+typedef void (*func_mindustry_entities_comp_SegmentComp_clearItem)(jcontext ctx, jobject self);
+#define VTABLE_mindustry_entities_comp_SegmentComp_itemTime_float 175
+typedef void (*func_mindustry_entities_comp_SegmentComp_itemTime_float)(jcontext ctx, jobject self, jfloat param0);
+#define VTABLE_mindustry_entities_comp_SegmentComp_stack_mindustry_type_ItemStack 176
+typedef void (*func_mindustry_entities_comp_SegmentComp_stack_mindustry_type_ItemStack)(jcontext ctx, jobject self, jobject param0);
+#define VTABLE_mindustry_entities_comp_SegmentComp_mineTile_R_mindustry_world_Tile 177
+typedef jobject (*func_mindustry_entities_comp_SegmentComp_mineTile_R_mindustry_world_Tile)(jcontext ctx, jobject self);
+#define VTABLE_mindustry_entities_comp_SegmentComp_canMine_R_boolean 178
+typedef jbool (*func_mindustry_entities_comp_SegmentComp_canMine_R_boolean)(jcontext ctx, jobject self);
+#define VTABLE_mindustry_entities_comp_SegmentComp_canMine_mindustry_type_Item_R_boolean 179
+typedef jbool (*func_mindustry_entities_comp_SegmentComp_canMine_mindustry_type_Item_R_boolean)(jcontext ctx, jobject self, jobject param0);
+#define VTABLE_mindustry_entities_comp_SegmentComp_mining_R_boolean 180
+typedef jbool (*func_mindustry_entities_comp_SegmentComp_mining_R_boolean)(jcontext ctx, jobject self);
+#define VTABLE_mindustry_entities_comp_SegmentComp_offloadImmediately_R_boolean 181
+typedef jbool (*func_mindustry_entities_comp_SegmentComp_offloadImmediately_R_boolean)(jcontext ctx, jobject self);
+#define VTABLE_mindustry_entities_comp_SegmentComp_validMine_mindustry_world_Tile_R_boolean 182
+typedef jbool (*func_mindustry_entities_comp_SegmentComp_validMine_mindustry_world_Tile_R_boolean)(jcontext ctx, jobject self, jobject param0);
+#define VTABLE_mindustry_entities_comp_SegmentComp_validMine_mindustry_world_Tile_boolean_R_boolean 183
+typedef jbool (*func_mindustry_entities_comp_SegmentComp_validMine_mindustry_world_Tile_boolean_R_boolean)(jcontext ctx, jobject self, jobject param0, jbool param1);
+#define VTABLE_mindustry_entities_comp_SegmentComp_mineTimer_R_float 184
+typedef jfloat (*func_mindustry_entities_comp_SegmentComp_mineTimer_R_float)(jcontext ctx, jobject self);
+#define VTABLE_mindustry_entities_comp_SegmentComp_getMineResult_mindustry_world_Tile_R_mindustry_type_Item 185
+typedef jobject (*func_mindustry_entities_comp_SegmentComp_getMineResult_mindustry_world_Tile_R_mindustry_type_Item)(jcontext ctx, jobject self, jobject param0);
+#define VTABLE_mindustry_entities_comp_SegmentComp_mineTile_mindustry_world_Tile 186
+typedef void (*func_mindustry_entities_comp_SegmentComp_mineTile_mindustry_world_Tile)(jcontext ctx, jobject self, jobject param0);
+#define VTABLE_mindustry_entities_comp_SegmentComp_mineTimer_float 187
+typedef void (*func_mindustry_entities_comp_SegmentComp_mineTimer_float)(jcontext ctx, jobject self, jfloat param0);
+#define VTABLE_mindustry_entities_comp_SegmentComp_solidity_R_mindustry_entities_EntityCollisions$SolidPred 188
+typedef jobject (*func_mindustry_entities_comp_SegmentComp_solidity_R_mindustry_entities_EntityCollisions$SolidPred)(jcontext ctx, jobject self);
+#define VTABLE_mindustry_entities_comp_SegmentComp_canPassOn_R_boolean 189
+typedef jbool (*func_mindustry_entities_comp_SegmentComp_canPassOn_R_boolean)(jcontext ctx, jobject self);
+#define VTABLE_mindustry_entities_comp_SegmentComp_canPass_int_int_R_boolean 190
+typedef jbool (*func_mindustry_entities_comp_SegmentComp_canPass_int_int_R_boolean)(jcontext ctx, jobject self, jint param0, jint param1);
+#define VTABLE_mindustry_entities_comp_SegmentComp_vel_R_arc_math_geom_Vec2 191
+typedef jobject (*func_mindustry_entities_comp_SegmentComp_vel_R_arc_math_geom_Vec2)(jcontext ctx, jobject self);
+#define VTABLE_mindustry_entities_comp_SegmentComp_ignoreSolids_R_boolean 192
+typedef jbool (*func_mindustry_entities_comp_SegmentComp_ignoreSolids_R_boolean)(jcontext ctx, jobject self);
+#define VTABLE_mindustry_entities_comp_SegmentComp_moving_R_boolean 193
+typedef jbool (*func_mindustry_entities_comp_SegmentComp_moving_R_boolean)(jcontext ctx, jobject self);
+#define VTABLE_mindustry_entities_comp_SegmentComp_drag_R_float 194
+typedef jfloat (*func_mindustry_entities_comp_SegmentComp_drag_R_float)(jcontext ctx, jobject self);
+#define VTABLE_mindustry_entities_comp_SegmentComp_drag_float 195
+typedef void (*func_mindustry_entities_comp_SegmentComp_drag_float)(jcontext ctx, jobject self, jfloat param0);
+#define VTABLE_mindustry_entities_comp_SegmentComp_move_arc_math_geom_Vec2 196
+typedef void (*func_mindustry_entities_comp_SegmentComp_move_arc_math_geom_Vec2)(jcontext ctx, jobject self, jobject param0);
+#define VTABLE_mindustry_entities_comp_SegmentComp_move_float_float 197
+typedef void (*func_mindustry_entities_comp_SegmentComp_move_float_float)(jcontext ctx, jobject self, jfloat param0, jfloat param1);
+#define VTABLE_mindustry_entities_comp_SegmentComp_vel_arc_math_geom_Vec2 198
+typedef void (*func_mindustry_entities_comp_SegmentComp_vel_arc_math_geom_Vec2)(jcontext ctx, jobject self, jobject param0);
+#define VTABLE_mindustry_entities_comp_SegmentComp_velAddNet_arc_math_geom_Vec2 199
+typedef void (*func_mindustry_entities_comp_SegmentComp_velAddNet_arc_math_geom_Vec2)(jcontext ctx, jobject self, jobject param0);
+#define VTABLE_mindustry_entities_comp_SegmentComp_velAddNet_float_float 200
+typedef void (*func_mindustry_entities_comp_SegmentComp_velAddNet_float_float)(jcontext ctx, jobject self, jfloat param0, jfloat param1);
+#define VTABLE_mindustry_entities_comp_SegmentComp_hasPhysicsRef_R_boolean 201
+typedef jbool (*func_mindustry_entities_comp_SegmentComp_hasPhysicsRef_R_boolean)(jcontext ctx, jobject self);
+#define VTABLE_mindustry_entities_comp_SegmentComp_mass_R_float 202
+typedef jfloat (*func_mindustry_entities_comp_SegmentComp_mass_R_float)(jcontext ctx, jobject self);
+#define VTABLE_mindustry_entities_comp_SegmentComp_hasPhysicsRef_boolean 203
+typedef void (*func_mindustry_entities_comp_SegmentComp_hasPhysicsRef_boolean)(jcontext ctx, jobject self, jbool param0);
+#define VTABLE_mindustry_entities_comp_SegmentComp_impulse_arc_math_geom_Vec2 204
+typedef void (*func_mindustry_entities_comp_SegmentComp_impulse_arc_math_geom_Vec2)(jcontext ctx, jobject self, jobject param0);
+#define VTABLE_mindustry_entities_comp_SegmentComp_impulse_float_float 205
+typedef void (*func_mindustry_entities_comp_SegmentComp_impulse_float_float)(jcontext ctx, jobject self, jfloat param0, jfloat param1);
+#define VTABLE_mindustry_entities_comp_SegmentComp_impulseNet_arc_math_geom_Vec2 206
+typedef void (*func_mindustry_entities_comp_SegmentComp_impulseNet_arc_math_geom_Vec2)(jcontext ctx, jobject self, jobject param0);
+#define VTABLE_mindustry_entities_comp_SegmentComp_shield_R_float 207
+typedef jfloat (*func_mindustry_entities_comp_SegmentComp_shield_R_float)(jcontext ctx, jobject self);
+#define VTABLE_mindustry_entities_comp_SegmentComp_shield_float 208
+typedef void (*func_mindustry_entities_comp_SegmentComp_shield_float)(jcontext ctx, jobject self, jfloat param0);
+#define VTABLE_mindustry_entities_comp_SegmentComp_shieldAlpha_R_float 209
+typedef jfloat (*func_mindustry_entities_comp_SegmentComp_shieldAlpha_R_float)(jcontext ctx, jobject self);
+#define VTABLE_mindustry_entities_comp_SegmentComp_shieldAlpha_float 210
+typedef void (*func_mindustry_entities_comp_SegmentComp_shieldAlpha_float)(jcontext ctx, jobject self, jfloat param0);
+#define VTABLE_mindustry_entities_comp_SegmentComp_armor_R_float 211
+typedef jfloat (*func_mindustry_entities_comp_SegmentComp_armor_R_float)(jcontext ctx, jobject self);
+#define VTABLE_mindustry_entities_comp_SegmentComp_armor_float 212
+typedef void (*func_mindustry_entities_comp_SegmentComp_armor_float)(jcontext ctx, jobject self, jfloat param0);
+#define VTABLE_mindustry_entities_comp_SegmentComp_rawDamage_float 213
+typedef void (*func_mindustry_entities_comp_SegmentComp_rawDamage_float)(jcontext ctx, jobject self, jfloat param0);
+#define VTABLE_mindustry_entities_comp_SegmentComp_isSyncHidden_mindustry_game_Team_R_boolean 214
+typedef jbool (*func_mindustry_entities_comp_SegmentComp_isSyncHidden_mindustry_game_Team_R_boolean)(jcontext ctx, jobject self, jobject param0);
+#define VTABLE_mindustry_entities_comp_SegmentComp_lastUpdated_R_long 215
+typedef jlong (*func_mindustry_entities_comp_SegmentComp_lastUpdated_R_long)(jcontext ctx, jobject self);
+#define VTABLE_mindustry_entities_comp_SegmentComp_updateSpacing_R_long 216
+typedef jlong (*func_mindustry_entities_comp_SegmentComp_updateSpacing_R_long)(jcontext ctx, jobject self);
+#define VTABLE_mindustry_entities_comp_SegmentComp_afterSync 217
+typedef void (*func_mindustry_entities_comp_SegmentComp_afterSync)(jcontext ctx, jobject self);
+#define VTABLE_mindustry_entities_comp_SegmentComp_handleSyncHidden 218
+typedef void (*func_mindustry_entities_comp_SegmentComp_handleSyncHidden)(jcontext ctx, jobject self);
+#define VTABLE_mindustry_entities_comp_SegmentComp_interpolate 219
+typedef void (*func_mindustry_entities_comp_SegmentComp_interpolate)(jcontext ctx, jobject self);
+#define VTABLE_mindustry_entities_comp_SegmentComp_lastUpdated_long 220
+typedef void (*func_mindustry_entities_comp_SegmentComp_lastUpdated_long)(jcontext ctx, jobject self, jlong param0);
+#define VTABLE_mindustry_entities_comp_SegmentComp_readSync_arc_util_io_Reads 221
+typedef void (*func_mindustry_entities_comp_SegmentComp_readSync_arc_util_io_Reads)(jcontext ctx, jobject self, jobject param0);
+#define VTABLE_mindustry_entities_comp_SegmentComp_readSyncManual_java_nio_FloatBuffer 222
+typedef void (*func_mindustry_entities_comp_SegmentComp_readSyncManual_java_nio_FloatBuffer)(jcontext ctx, jobject self, jobject param0);
+#define VTABLE_mindustry_entities_comp_SegmentComp_snapInterpolation 223
+typedef void (*func_mindustry_entities_comp_SegmentComp_snapInterpolation)(jcontext ctx, jobject self);
+#define VTABLE_mindustry_entities_comp_SegmentComp_snapSync 224
+typedef void (*func_mindustry_entities_comp_SegmentComp_snapSync)(jcontext ctx, jobject self);
+#define VTABLE_mindustry_entities_comp_SegmentComp_updateSpacing_long 225
+typedef void (*func_mindustry_entities_comp_SegmentComp_updateSpacing_long)(jcontext ctx, jobject self, jlong param0);
+#define VTABLE_mindustry_entities_comp_SegmentComp_writeSync_arc_util_io_Writes 226
+typedef void (*func_mindustry_entities_comp_SegmentComp_writeSync_arc_util_io_Writes)(jcontext ctx, jobject self, jobject param0);
+#define VTABLE_mindustry_entities_comp_SegmentComp_writeSyncManual_java_nio_FloatBuffer 227
+typedef void (*func_mindustry_entities_comp_SegmentComp_writeSyncManual_java_nio_FloatBuffer)(jcontext ctx, jobject self, jobject param0);
+#define VTABLE_mindustry_entities_comp_SegmentComp_aim_float_float 228
+typedef void (*func_mindustry_entities_comp_SegmentComp_aim_float_float)(jcontext ctx, jobject self, jfloat param0, jfloat param1);
+#define VTABLE_mindustry_entities_comp_SegmentComp_aim_float_float_boolean 229
+typedef void (*func_mindustry_entities_comp_SegmentComp_aim_float_float_boolean)(jcontext ctx, jobject self, jfloat param0, jfloat param1, jbool param2);
+#define VTABLE_mindustry_entities_comp_SegmentComp_mounts_R_Array1_mindustry_entities_units_WeaponMount 230
+typedef jobject (*func_mindustry_entities_comp_SegmentComp_mounts_R_Array1_mindustry_entities_units_WeaponMount)(jcontext ctx, jobject self);
+#define VTABLE_mindustry_entities_comp_SegmentComp_mounts_Array1_mindustry_entities_units_WeaponMount 231
+typedef void (*func_mindustry_entities_comp_SegmentComp_mounts_Array1_mindustry_entities_units_WeaponMount)(jcontext ctx, jobject self, jobject param0);
+#define VTABLE_mindustry_entities_comp_SegmentComp_canShoot_R_boolean 232
+typedef jbool (*func_mindustry_entities_comp_SegmentComp_canShoot_R_boolean)(jcontext ctx, jobject self);
+#define VTABLE_mindustry_entities_comp_SegmentComp_isRotate_R_boolean 233
+typedef jbool (*func_mindustry_entities_comp_SegmentComp_isRotate_R_boolean)(jcontext ctx, jobject self);
+#define VTABLE_mindustry_entities_comp_SegmentComp_isShooting_R_boolean 234
+typedef jbool (*func_mindustry_entities_comp_SegmentComp_isShooting_R_boolean)(jcontext ctx, jobject self);
+#define VTABLE_mindustry_entities_comp_SegmentComp_aimX_R_float 235
+typedef jfloat (*func_mindustry_entities_comp_SegmentComp_aimX_R_float)(jcontext ctx, jobject self);
+#define VTABLE_mindustry_entities_comp_SegmentComp_aimY_R_float 236
+typedef jfloat (*func_mindustry_entities_comp_SegmentComp_aimY_R_float)(jcontext ctx, jobject self);
+#define VTABLE_mindustry_entities_comp_SegmentComp_aim_arc_math_geom_Position 237
+typedef void (*func_mindustry_entities_comp_SegmentComp_aim_arc_math_geom_Position)(jcontext ctx, jobject self, jobject param0);
+#define VTABLE_mindustry_entities_comp_SegmentComp_aimX_float 238
+typedef void (*func_mindustry_entities_comp_SegmentComp_aimX_float)(jcontext ctx, jobject self, jfloat param0);
+#define VTABLE_mindustry_entities_comp_SegmentComp_aimY_float 239
+typedef void (*func_mindustry_entities_comp_SegmentComp_aimY_float)(jcontext ctx, jobject self, jfloat param0);
+#define VTABLE_mindustry_entities_comp_SegmentComp_controlWeapons_boolean_boolean 240
+typedef void (*func_mindustry_entities_comp_SegmentComp_controlWeapons_boolean_boolean)(jcontext ctx, jobject self, jbool param0, jbool param1);
+#define VTABLE_mindustry_entities_comp_SegmentComp_controlWeapons_boolean 241
+typedef void (*func_mindustry_entities_comp_SegmentComp_controlWeapons_boolean)(jcontext ctx, jobject self, jbool param0);
+#define VTABLE_mindustry_entities_comp_SegmentComp_isShooting_boolean 242
+typedef void (*func_mindustry_entities_comp_SegmentComp_isShooting_boolean)(jcontext ctx, jobject self, jbool param0);
+#define VTABLE_mindustry_entities_comp_SegmentComp_setWeaponRotation_float 243
+typedef void (*func_mindustry_entities_comp_SegmentComp_setWeaponRotation_float)(jcontext ctx, jobject self, jfloat param0);
+#define VTABLE_mindustry_entities_comp_SegmentComp_setupWeapons_mindustry_type_UnitType 244
+typedef void (*func_mindustry_entities_comp_SegmentComp_setupWeapons_mindustry_type_UnitType)(jcontext ctx, jobject self, jobject param0);
+#define VTABLE_mindustry_entities_comp_SegmentComp_range_R_float 245
+typedef jfloat (*func_mindustry_entities_comp_SegmentComp_range_R_float)(jcontext ctx, jobject self);
+#define VTABLE_mindustry_entities_comp_SegmentComp_sense_mindustry_logic_LAccess_R_double 246
+typedef jdouble (*func_mindustry_entities_comp_SegmentComp_sense_mindustry_logic_LAccess_R_double)(jcontext ctx, jobject self, jobject param0);
+#define VTABLE_mindustry_entities_comp_SegmentComp_sense_mindustry_ctype_Content_R_double 247
+typedef jdouble (*func_mindustry_entities_comp_SegmentComp_sense_mindustry_ctype_Content_R_double)(jcontext ctx, jobject self, jobject param0);
+#define VTABLE_mindustry_entities_comp_SegmentComp_senseObject_mindustry_logic_LAccess_R_java_lang_Object 248
+typedef jobject (*func_mindustry_entities_comp_SegmentComp_senseObject_mindustry_logic_LAccess_R_java_lang_Object)(jcontext ctx, jobject self, jobject param0);
+#define VTABLE_mindustry_entities_comp_SegmentComp_setProp_mindustry_logic_LAccess_double 249
+typedef void (*func_mindustry_entities_comp_SegmentComp_setProp_mindustry_logic_LAccess_double)(jcontext ctx, jobject self, jobject param0, jdouble param1);
+#define VTABLE_mindustry_entities_comp_SegmentComp_setProp_mindustry_logic_LAccess_java_lang_Object 250
+typedef void (*func_mindustry_entities_comp_SegmentComp_setProp_mindustry_logic_LAccess_java_lang_Object)(jcontext ctx, jobject self, jobject param0, jobject param1);
+#define VTABLE_mindustry_entities_comp_SegmentComp_setProp_mindustry_ctype_UnlockableContent_double 251
+typedef void (*func_mindustry_entities_comp_SegmentComp_setProp_mindustry_ctype_UnlockableContent_double)(jcontext ctx, jobject self, jobject param0, jdouble param1);
+#define VTABLE_mindustry_entities_comp_SegmentComp_displayable_R_boolean 252
+typedef jbool (*func_mindustry_entities_comp_SegmentComp_displayable_R_boolean)(jcontext ctx, jobject self);
+#define VTABLE_mindustry_entities_comp_SegmentComp_display_arc_scene_ui_layout_Table 253
+typedef void (*func_mindustry_entities_comp_SegmentComp_display_arc_scene_ui_layout_Table)(jcontext ctx, jobject self, jobject param0);
+#define VTABLE_mindustry_entities_comp_SegmentComp_icon_R_arc_graphics_g2d_TextureRegion 254
+typedef jobject (*func_mindustry_entities_comp_SegmentComp_icon_R_arc_graphics_g2d_TextureRegion)(jcontext ctx, jobject self);
+#define VTABLE_mindustry_entities_comp_SegmentComp_physicSize_R_float 255
+typedef jfloat (*func_mindustry_entities_comp_SegmentComp_physicSize_R_float)(jcontext ctx, jobject self);
+#define VTABLE_mindustry_entities_comp_SegmentComp_getControllerName_R_java_lang_String 256
+typedef jobject (*func_mindustry_entities_comp_SegmentComp_getControllerName_R_java_lang_String)(jcontext ctx, jobject self);
+#define VTABLE_mindustry_entities_comp_SegmentComp_speed_R_float 257
+typedef jfloat (*func_mindustry_entities_comp_SegmentComp_speed_R_float)(jcontext ctx, jobject self);
+#define VTABLE_mindustry_entities_comp_SegmentComp_collisionLayer_R_int 258
+typedef jint (*func_mindustry_entities_comp_SegmentComp_collisionLayer_R_int)(jcontext ctx, jobject self);
+#define VTABLE_mindustry_entities_comp_SegmentComp_prefRotation_R_float 259
+typedef jfloat (*func_mindustry_entities_comp_SegmentComp_prefRotation_R_float)(jcontext ctx, jobject self);
+#define VTABLE_mindustry_entities_comp_SegmentComp_allowCommand_R_boolean 260
+typedef jbool (*func_mindustry_entities_comp_SegmentComp_allowCommand_R_boolean)(jcontext ctx, jobject self);
+#define VTABLE_mindustry_entities_comp_SegmentComp_isCommandable_R_boolean 261
+typedef jbool (*func_mindustry_entities_comp_SegmentComp_isCommandable_R_boolean)(jcontext ctx, jobject self);
+#define VTABLE_mindustry_entities_comp_SegmentComp_canLand_R_boolean 262
+typedef jbool (*func_mindustry_entities_comp_SegmentComp_canLand_R_boolean)(jcontext ctx, jobject self);
+#define VTABLE_mindustry_entities_comp_SegmentComp_destroy 263
+typedef void (*func_mindustry_entities_comp_SegmentComp_destroy)(jcontext ctx, jobject self);
+#define VTABLE_mindustry_entities_comp_SegmentComp_unloaded 264
+typedef void (*func_mindustry_entities_comp_SegmentComp_unloaded)(jcontext ctx, jobject self);
+#define VTABLE_mindustry_entities_comp_SegmentComp_movePref_arc_math_geom_Vec2 265
+typedef void (*func_mindustry_entities_comp_SegmentComp_movePref_arc_math_geom_Vec2)(jcontext ctx, jobject self, jobject param0);
+#define VTABLE_mindustry_entities_comp_SegmentComp_hasTarget_R_boolean 266
+typedef jbool (*func_mindustry_entities_comp_SegmentComp_hasTarget_R_boolean)(jcontext ctx, jobject self);
+#define VTABLE_mindustry_entities_comp_SegmentComp_hasTarget_boolean 267
+typedef void (*func_mindustry_entities_comp_SegmentComp_hasTarget_boolean)(jcontext ctx, jobject self, jbool param0);
+#define VTABLE_mindustry_entities_comp_SegmentComp_trail_R_mindustry_graphics_Trail 268
+typedef jobject (*func_mindustry_entities_comp_SegmentComp_trail_R_mindustry_graphics_Trail)(jcontext ctx, jobject self);
+#define VTABLE_mindustry_entities_comp_SegmentComp_dockedType_R_mindustry_type_UnitType 269
+typedef jobject (*func_mindustry_entities_comp_SegmentComp_dockedType_R_mindustry_type_UnitType)(jcontext ctx, jobject self);
+#define VTABLE_mindustry_entities_comp_SegmentComp_lastDrownFloor_R_mindustry_world_blocks_environment_Floor 270
+typedef jobject (*func_mindustry_entities_comp_SegmentComp_lastDrownFloor_R_mindustry_world_blocks_environment_Floor)(jcontext ctx, jobject self);
+#define VTABLE_mindustry_entities_comp_SegmentComp_getPlayer_R_mindustry_gen_Player 271
+typedef jobject (*func_mindustry_entities_comp_SegmentComp_getPlayer_R_mindustry_gen_Player)(jcontext ctx, jobject self);
+#define VTABLE_mindustry_entities_comp_SegmentComp_canDrown_R_boolean 272
+typedef jbool (*func_mindustry_entities_comp_SegmentComp_canDrown_R_boolean)(jcontext ctx, jobject self);
+#define VTABLE_mindustry_entities_comp_SegmentComp_canTarget_mindustry_gen_Teamc_R_boolean 273
+typedef jbool (*func_mindustry_entities_comp_SegmentComp_canTarget_mindustry_gen_Teamc_R_boolean)(jcontext ctx, jobject self, jobject param0);
+#define VTABLE_mindustry_entities_comp_SegmentComp_checkTarget_boolean_boolean_R_boolean 274
+typedef jbool (*func_mindustry_entities_comp_SegmentComp_checkTarget_boolean_boolean_R_boolean)(jcontext ctx, jobject self, jbool param0, jbool param1);
+#define VTABLE_mindustry_entities_comp_SegmentComp_hasWeapons_R_boolean 275
+typedef jbool (*func_mindustry_entities_comp_SegmentComp_hasWeapons_R_boolean)(jcontext ctx, jobject self);
+#define VTABLE_mindustry_entities_comp_SegmentComp_hittable_R_boolean 276
+typedef jbool (*func_mindustry_entities_comp_SegmentComp_hittable_R_boolean)(jcontext ctx, jobject self);
+#define VTABLE_mindustry_entities_comp_SegmentComp_inRange_arc_math_geom_Position_R_boolean 277
+typedef jbool (*func_mindustry_entities_comp_SegmentComp_inRange_arc_math_geom_Position_R_boolean)(jcontext ctx, jobject self, jobject param0);
+#define VTABLE_mindustry_entities_comp_SegmentComp_isAI_R_boolean 278
+typedef jbool (*func_mindustry_entities_comp_SegmentComp_isAI_R_boolean)(jcontext ctx, jobject self);
+#define VTABLE_mindustry_entities_comp_SegmentComp_isEnemy_R_boolean 279
+typedef jbool (*func_mindustry_entities_comp_SegmentComp_isEnemy_R_boolean)(jcontext ctx, jobject self);
+#define VTABLE_mindustry_entities_comp_SegmentComp_isFlying_R_boolean 280
+typedef jbool (*func_mindustry_entities_comp_SegmentComp_isFlying_R_boolean)(jcontext ctx, jobject self);
+#define VTABLE_mindustry_entities_comp_SegmentComp_isMissile_R_boolean 281
+typedef jbool (*func_mindustry_entities_comp_SegmentComp_isMissile_R_boolean)(jcontext ctx, jobject self);
+#define VTABLE_mindustry_entities_comp_SegmentComp_isPathImpassable_int_int_R_boolean 282
+typedef jbool (*func_mindustry_entities_comp_SegmentComp_isPathImpassable_int_int_R_boolean)(jcontext ctx, jobject self, jint param0, jint param1);
+#define VTABLE_mindustry_entities_comp_SegmentComp_isPlayer_R_boolean 283
+typedef jbool (*func_mindustry_entities_comp_SegmentComp_isPlayer_R_boolean)(jcontext ctx, jobject self);
+#define VTABLE_mindustry_entities_comp_SegmentComp_killable_R_boolean 284
+typedef jbool (*func_mindustry_entities_comp_SegmentComp_killable_R_boolean)(jcontext ctx, jobject self);
+#define VTABLE_mindustry_entities_comp_SegmentComp_playerControllable_R_boolean 285
+typedef jbool (*func_mindustry_entities_comp_SegmentComp_playerControllable_R_boolean)(jcontext ctx, jobject self);
+#define VTABLE_mindustry_entities_comp_SegmentComp_shouldUpdateController_R_boolean 286
+typedef jbool (*func_mindustry_entities_comp_SegmentComp_shouldUpdateController_R_boolean)(jcontext ctx, jobject self);
+#define VTABLE_mindustry_entities_comp_SegmentComp_spawnedByCore_R_boolean 287
+typedef jbool (*func_mindustry_entities_comp_SegmentComp_spawnedByCore_R_boolean)(jcontext ctx, jobject self);
+#define VTABLE_mindustry_entities_comp_SegmentComp_targetable_mindustry_game_Team_R_boolean 288
+typedef jbool (*func_mindustry_entities_comp_SegmentComp_targetable_mindustry_game_Team_R_boolean)(jcontext ctx, jobject self, jobject param0);
+#define VTABLE_mindustry_entities_comp_SegmentComp_flag_R_double 289
+typedef jdouble (*func_mindustry_entities_comp_SegmentComp_flag_R_double)(jcontext ctx, jobject self);
+#define VTABLE_mindustry_entities_comp_SegmentComp_ammof_R_float 290
+typedef jfloat (*func_mindustry_entities_comp_SegmentComp_ammof_R_float)(jcontext ctx, jobject self);
+#define VTABLE_mindustry_entities_comp_SegmentComp_bounds_R_float 291
+typedef jfloat (*func_mindustry_entities_comp_SegmentComp_bounds_R_float)(jcontext ctx, jobject self);
+#define VTABLE_mindustry_entities_comp_SegmentComp_drownTime_R_float 292
+typedef jfloat (*func_mindustry_entities_comp_SegmentComp_drownTime_R_float)(jcontext ctx, jobject self);
+#define VTABLE_mindustry_entities_comp_SegmentComp_elevation_R_float 293
+typedef jfloat (*func_mindustry_entities_comp_SegmentComp_elevation_R_float)(jcontext ctx, jobject self);
+#define VTABLE_mindustry_entities_comp_SegmentComp_floorSpeedMultiplier_R_float 294
+typedef jfloat (*func_mindustry_entities_comp_SegmentComp_floorSpeedMultiplier_R_float)(jcontext ctx, jobject self);
+#define VTABLE_mindustry_entities_comp_SegmentComp_healTime_R_float 295
+typedef jfloat (*func_mindustry_entities_comp_SegmentComp_healTime_R_float)(jcontext ctx, jobject self);
+#define VTABLE_mindustry_entities_comp_SegmentComp_shadowAlpha_R_float 296
+typedef jfloat (*func_mindustry_entities_comp_SegmentComp_shadowAlpha_R_float)(jcontext ctx, jobject self);
+#define VTABLE_mindustry_entities_comp_SegmentComp_splashTimer_R_float 297
+typedef jfloat (*func_mindustry_entities_comp_SegmentComp_splashTimer_R_float)(jcontext ctx, jobject self);
+#define VTABLE_mindustry_entities_comp_SegmentComp_cap_R_int 298
+typedef jint (*func_mindustry_entities_comp_SegmentComp_cap_R_int)(jcontext ctx, jobject self);
+#define VTABLE_mindustry_entities_comp_SegmentComp_count_R_int 299
+typedef jint (*func_mindustry_entities_comp_SegmentComp_count_R_int)(jcontext ctx, jobject self);
+#define VTABLE_mindustry_entities_comp_SegmentComp_lastFogPos_R_int 300
+typedef jint (*func_mindustry_entities_comp_SegmentComp_lastFogPos_R_int)(jcontext ctx, jobject self);
+#define VTABLE_mindustry_entities_comp_SegmentComp_lastCommanded_R_java_lang_String 301
+typedef jobject (*func_mindustry_entities_comp_SegmentComp_lastCommanded_R_java_lang_String)(jcontext ctx, jobject self);
+#define VTABLE_mindustry_entities_comp_SegmentComp_command_R_mindustry_ai_types_CommandAI 302
+typedef jobject (*func_mindustry_entities_comp_SegmentComp_command_R_mindustry_ai_types_CommandAI)(jcontext ctx, jobject self);
+#define VTABLE_mindustry_entities_comp_SegmentComp_abilities_R_Array1_mindustry_entities_abilities_Ability 303
+typedef jobject (*func_mindustry_entities_comp_SegmentComp_abilities_R_Array1_mindustry_entities_abilities_Ability)(jcontext ctx, jobject self);
+#define VTABLE_mindustry_entities_comp_SegmentComp_controller_R_mindustry_entities_units_UnitController 304
+typedef jobject (*func_mindustry_entities_comp_SegmentComp_controller_R_mindustry_entities_units_UnitController)(jcontext ctx, jobject self);
+#define VTABLE_mindustry_entities_comp_SegmentComp_type_R_mindustry_type_UnitType 305
+typedef jobject (*func_mindustry_entities_comp_SegmentComp_type_R_mindustry_type_UnitType)(jcontext ctx, jobject self);
+#define VTABLE_mindustry_entities_comp_SegmentComp_drownFloor_R_mindustry_world_blocks_environment_Floor 306
+typedef jobject (*func_mindustry_entities_comp_SegmentComp_drownFloor_R_mindustry_world_blocks_environment_Floor)(jcontext ctx, jobject self);
+#define VTABLE_mindustry_entities_comp_SegmentComp_abilities_Array1_mindustry_entities_abilities_Ability 307
+typedef void (*func_mindustry_entities_comp_SegmentComp_abilities_Array1_mindustry_entities_abilities_Ability)(jcontext ctx, jobject self, jobject param0);
+#define VTABLE_mindustry_entities_comp_SegmentComp_aimLook_arc_math_geom_Position 308
+typedef void (*func_mindustry_entities_comp_SegmentComp_aimLook_arc_math_geom_Position)(jcontext ctx, jobject self, jobject param0);
+#define VTABLE_mindustry_entities_comp_SegmentComp_aimLook_float_float 309
+typedef void (*func_mindustry_entities_comp_SegmentComp_aimLook_float_float)(jcontext ctx, jobject self, jfloat param0, jfloat param1);
+#define VTABLE_mindustry_entities_comp_SegmentComp_approach_arc_math_geom_Vec2 310
+typedef void (*func_mindustry_entities_comp_SegmentComp_approach_arc_math_geom_Vec2)(jcontext ctx, jobject self, jobject param0);
+#define VTABLE_mindustry_entities_comp_SegmentComp_controller_mindustry_entities_units_UnitController 311
+typedef void (*func_mindustry_entities_comp_SegmentComp_controller_mindustry_entities_units_UnitController)(jcontext ctx, jobject self, jobject param0);
+#define VTABLE_mindustry_entities_comp_SegmentComp_dockedType_mindustry_type_UnitType 312
+typedef void (*func_mindustry_entities_comp_SegmentComp_dockedType_mindustry_type_UnitType)(jcontext ctx, jobject self, jobject param0);
+#define VTABLE_mindustry_entities_comp_SegmentComp_drownTime_float 313
+typedef void (*func_mindustry_entities_comp_SegmentComp_drownTime_float)(jcontext ctx, jobject self, jfloat param0);
+#define VTABLE_mindustry_entities_comp_SegmentComp_elevation_float 314
+typedef void (*func_mindustry_entities_comp_SegmentComp_elevation_float)(jcontext ctx, jobject self, jfloat param0);
+#define VTABLE_mindustry_entities_comp_SegmentComp_flag_double 315
+typedef void (*func_mindustry_entities_comp_SegmentComp_flag_double)(jcontext ctx, jobject self, jdouble param0);
+#define VTABLE_mindustry_entities_comp_SegmentComp_healTime_float 316
+typedef void (*func_mindustry_entities_comp_SegmentComp_healTime_float)(jcontext ctx, jobject self, jfloat param0);
+#define VTABLE_mindustry_entities_comp_SegmentComp_landed 317
+typedef void (*func_mindustry_entities_comp_SegmentComp_landed)(jcontext ctx, jobject self);
+#define VTABLE_mindustry_entities_comp_SegmentComp_lastCommanded_java_lang_String 318
+typedef void (*func_mindustry_entities_comp_SegmentComp_lastCommanded_java_lang_String)(jcontext ctx, jobject self, jobject param0);
+#define VTABLE_mindustry_entities_comp_SegmentComp_lastDrownFloor_mindustry_world_blocks_environment_Floor 319
+typedef void (*func_mindustry_entities_comp_SegmentComp_lastDrownFloor_mindustry_world_blocks_environment_Floor)(jcontext ctx, jobject self, jobject param0);
+#define VTABLE_mindustry_entities_comp_SegmentComp_lastFogPos_int 320
+typedef void (*func_mindustry_entities_comp_SegmentComp_lastFogPos_int)(jcontext ctx, jobject self, jint param0);
+#define VTABLE_mindustry_entities_comp_SegmentComp_lookAt_arc_math_geom_Position 321
+typedef void (*func_mindustry_entities_comp_SegmentComp_lookAt_arc_math_geom_Position)(jcontext ctx, jobject self, jobject param0);
+#define VTABLE_mindustry_entities_comp_SegmentComp_lookAt_float 322
+typedef void (*func_mindustry_entities_comp_SegmentComp_lookAt_float)(jcontext ctx, jobject self, jfloat param0);
+#define VTABLE_mindustry_entities_comp_SegmentComp_lookAt_float_float 323
+typedef void (*func_mindustry_entities_comp_SegmentComp_lookAt_float_float)(jcontext ctx, jobject self, jfloat param0, jfloat param1);
+#define VTABLE_mindustry_entities_comp_SegmentComp_moveAt_arc_math_geom_Vec2 324
+typedef void (*func_mindustry_entities_comp_SegmentComp_moveAt_arc_math_geom_Vec2)(jcontext ctx, jobject self, jobject param0);
+#define VTABLE_mindustry_entities_comp_SegmentComp_moveAt_arc_math_geom_Vec2_float 325
+typedef void (*func_mindustry_entities_comp_SegmentComp_moveAt_arc_math_geom_Vec2_float)(jcontext ctx, jobject self, jobject param0, jfloat param1);
+#define VTABLE_mindustry_entities_comp_SegmentComp_resetController 326
+typedef void (*func_mindustry_entities_comp_SegmentComp_resetController)(jcontext ctx, jobject self);
+#define VTABLE_mindustry_entities_comp_SegmentComp_rotateMove_arc_math_geom_Vec2 327
+typedef void (*func_mindustry_entities_comp_SegmentComp_rotateMove_arc_math_geom_Vec2)(jcontext ctx, jobject self, jobject param0);
+#define VTABLE_mindustry_entities_comp_SegmentComp_set_mindustry_type_UnitType_mindustry_entities_units_UnitController 328
+typedef void (*func_mindustry_entities_comp_SegmentComp_set_mindustry_type_UnitType_mindustry_entities_units_UnitController)(jcontext ctx, jobject self, jobject param0, jobject param1);
+#define VTABLE_mindustry_entities_comp_SegmentComp_setType_mindustry_type_UnitType 329
+typedef void (*func_mindustry_entities_comp_SegmentComp_setType_mindustry_type_UnitType)(jcontext ctx, jobject self, jobject param0);
+#define VTABLE_mindustry_entities_comp_SegmentComp_shadowAlpha_float 330
+typedef void (*func_mindustry_entities_comp_SegmentComp_shadowAlpha_float)(jcontext ctx, jobject self, jfloat param0);
+#define VTABLE_mindustry_entities_comp_SegmentComp_spawnedByCore_boolean 331
+typedef void (*func_mindustry_entities_comp_SegmentComp_spawnedByCore_boolean)(jcontext ctx, jobject self, jbool param0);
+#define VTABLE_mindustry_entities_comp_SegmentComp_splashTimer_float 332
+typedef void (*func_mindustry_entities_comp_SegmentComp_splashTimer_float)(jcontext ctx, jobject self, jfloat param0);
+#define VTABLE_mindustry_entities_comp_SegmentComp_trail_mindustry_graphics_Trail 333
+typedef void (*func_mindustry_entities_comp_SegmentComp_trail_mindustry_graphics_Trail)(jcontext ctx, jobject self, jobject param0);
+#define VTABLE_mindustry_entities_comp_SegmentComp_type_mindustry_type_UnitType 334
+typedef void (*func_mindustry_entities_comp_SegmentComp_type_mindustry_type_UnitType)(jcontext ctx, jobject self, jobject param0);
+#define VTABLE_mindustry_entities_comp_SegmentComp_updateBoosting_boolean 335
+typedef void (*func_mindustry_entities_comp_SegmentComp_updateBoosting_boolean)(jcontext ctx, jobject self, jbool param0);
+#define VTABLE_mindustry_entities_comp_SegmentComp_updateBoosting_boolean_boolean 336
+typedef void (*func_mindustry_entities_comp_SegmentComp_updateBoosting_boolean_boolean)(jcontext ctx, jobject self, jbool param0, jbool param1);
+#define VTABLE_mindustry_entities_comp_SegmentComp_updateDrowning 337
+typedef void (*func_mindustry_entities_comp_SegmentComp_updateDrowning)(jcontext ctx, jobject self);
+#define VTABLE_mindustry_entities_comp_SegmentComp_wobble 338
+typedef void (*func_mindustry_entities_comp_SegmentComp_wobble)(jcontext ctx, jobject self);
+#define VTABLE_mindustry_entities_comp_SegmentComp_childSegment_R_mindustry_gen_Segmentc 339
+typedef jobject (*func_mindustry_entities_comp_SegmentComp_childSegment_R_mindustry_gen_Segmentc)(jcontext ctx, jobject self);
+#define VTABLE_mindustry_entities_comp_SegmentComp_headSegment_R_mindustry_gen_Segmentc 340
+typedef jobject (*func_mindustry_entities_comp_SegmentComp_headSegment_R_mindustry_gen_Segmentc)(jcontext ctx, jobject self);
+#define VTABLE_mindustry_entities_comp_SegmentComp_parentSegment_R_mindustry_gen_Segmentc 341
+typedef jobject (*func_mindustry_entities_comp_SegmentComp_parentSegment_R_mindustry_gen_Segmentc)(jcontext ctx, jobject self);
+#define VTABLE_mindustry_entities_comp_SegmentComp_isHead_R_boolean 342
+typedef jbool (*func_mindustry_entities_comp_SegmentComp_isHead_R_boolean)(jcontext ctx, jobject self);
+#define VTABLE_mindustry_entities_comp_SegmentComp_parentId_R_int 343
+typedef jint (*func_mindustry_entities_comp_SegmentComp_parentId_R_int)(jcontext ctx, jobject self);
+#define VTABLE_mindustry_entities_comp_SegmentComp_segmentIndex_R_int 344
+typedef jint (*func_mindustry_entities_comp_SegmentComp_segmentIndex_R_int)(jcontext ctx, jobject self);
+#define VTABLE_mindustry_entities_comp_SegmentComp_addChild_mindustry_gen_Unit 345
+typedef void (*func_mindustry_entities_comp_SegmentComp_addChild_mindustry_gen_Unit)(jcontext ctx, jobject self, jobject param0);
+#define VTABLE_mindustry_entities_comp_SegmentComp_checkParent 346
+typedef void (*func_mindustry_entities_comp_SegmentComp_checkParent)(jcontext ctx, jobject self);
+#define VTABLE_mindustry_entities_comp_SegmentComp_childSegment_mindustry_gen_Segmentc 347
+typedef void (*func_mindustry_entities_comp_SegmentComp_childSegment_mindustry_gen_Segmentc)(jcontext ctx, jobject self, jobject param0);
+#define VTABLE_mindustry_entities_comp_SegmentComp_headSegment_mindustry_gen_Segmentc 348
+typedef void (*func_mindustry_entities_comp_SegmentComp_headSegment_mindustry_gen_Segmentc)(jcontext ctx, jobject self, jobject param0);
+#define VTABLE_mindustry_entities_comp_SegmentComp_parentId_int 349
+typedef void (*func_mindustry_entities_comp_SegmentComp_parentId_int)(jcontext ctx, jobject self, jint param0);
+#define VTABLE_mindustry_entities_comp_SegmentComp_parentSegment_mindustry_gen_Segmentc 350
+typedef void (*func_mindustry_entities_comp_SegmentComp_parentSegment_mindustry_gen_Segmentc)(jcontext ctx, jobject self, jobject param0);
+#define VTABLE_mindustry_entities_comp_SegmentComp_segmentIndex_int 351
+typedef void (*func_mindustry_entities_comp_SegmentComp_segmentIndex_int)(jcontext ctx, jobject self, jint param0);
+#define VTABLE_mindustry_entities_comp_SegmentComp_updateSegment_mindustry_gen_Segmentc_mindustry_gen_Segmentc_int 352
+typedef void (*func_mindustry_entities_comp_SegmentComp_updateSegment_mindustry_gen_Segmentc_mindustry_gen_Segmentc_int)(jcontext ctx, jobject self, jobject param0, jobject param1, jint param2);
+
+void mark_mindustry_entities_comp_SegmentComp(jobject object, jint mark, jint depth);
+void clinit_mindustry_entities_comp_SegmentComp(jcontext ctx);
+void init_mindustry_entities_comp_SegmentComp(jcontext ctx, jobject self);
+jbool M_mindustry_entities_comp_SegmentComp_isHead_R_boolean(jcontext ctx, jobject self);
+void M_mindustry_entities_comp_SegmentComp_addChild_mindustry_gen_Unit(jcontext ctx, jobject self, jobject param0);
+jbool M_mindustry_entities_comp_SegmentComp_ignoreSolids_R_boolean(jcontext ctx, jobject self);
+void M_mindustry_entities_comp_SegmentComp_update(jcontext ctx, jobject self);
+jbool M_mindustry_entities_comp_SegmentComp_playerControllable_R_boolean(jcontext ctx, jobject self);
+jbool M_mindustry_entities_comp_SegmentComp_shouldUpdateController_R_boolean(jcontext ctx, jobject self);
+jbool M_mindustry_entities_comp_SegmentComp_moving_R_boolean(jcontext ctx, jobject self);
+jint M_mindustry_entities_comp_SegmentComp_collisionLayer_R_int(jcontext ctx, jobject self);
+jbool M_mindustry_entities_comp_SegmentComp_isCommandable_R_boolean(jcontext ctx, jobject self);
+void M_mindustry_entities_comp_SegmentComp_afterSync(jcontext ctx, jobject self);
+void M_mindustry_entities_comp_SegmentComp_afterReadAll(jcontext ctx, jobject self);
+void M_mindustry_entities_comp_SegmentComp_beforeWrite(jcontext ctx, jobject self);
+void M_mindustry_entities_comp_SegmentComp_checkParent(jcontext ctx, jobject self);
+void M_mindustry_entities_comp_SegmentComp_updateSegment_mindustry_gen_Segmentc_mindustry_gen_Segmentc_int(jcontext ctx, jobject self, jobject param0, jobject param1, jint param2);
+
+#ifdef __cplusplus
+}
+#endif
+
+#endif

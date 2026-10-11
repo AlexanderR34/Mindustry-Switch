@@ -1,0 +1,96 @@
+#ifndef HEADER_mindustry_editor_data_MapPatchesView
+#define HEADER_mindustry_editor_data_MapPatchesView
+
+#include "Clearwing.h"
+#include "java/lang/Object.h"
+#include "mindustry/editor/data/AssetView.h"
+
+#ifdef __cplusplus
+extern "C" {
+#endif
+
+typedef struct mindustry_editor_data_MapPatchesView {
+	java_lang_Object parent;
+} mindustry_editor_data_MapPatchesView;
+
+extern Class class_mindustry_editor_data_MapPatchesView;
+
+
+#define VTABLE_mindustry_editor_data_MapPatchesView_hashCode_R_int 0
+typedef jint (*func_mindustry_editor_data_MapPatchesView_hashCode_R_int)(jcontext ctx, jobject self);
+#define VTABLE_mindustry_editor_data_MapPatchesView_equals_java_lang_Object_R_boolean 1
+typedef jbool (*func_mindustry_editor_data_MapPatchesView_equals_java_lang_Object_R_boolean)(jcontext ctx, jobject self, jobject param0);
+#define VTABLE_mindustry_editor_data_MapPatchesView_clone_R_java_lang_Object 2
+typedef jobject (*func_mindustry_editor_data_MapPatchesView_clone_R_java_lang_Object)(jcontext ctx, jobject self);
+#define VTABLE_mindustry_editor_data_MapPatchesView_getClass_R_java_lang_Class 3
+typedef jobject (*func_mindustry_editor_data_MapPatchesView_getClass_R_java_lang_Class)(jcontext ctx, jobject self);
+#define VTABLE_mindustry_editor_data_MapPatchesView_toString_R_java_lang_String 4
+typedef jobject (*func_mindustry_editor_data_MapPatchesView_toString_R_java_lang_String)(jcontext ctx, jobject self);
+#define VTABLE_mindustry_editor_data_MapPatchesView_finalize 5
+typedef void (*func_mindustry_editor_data_MapPatchesView_finalize)(jcontext ctx, jobject self);
+#define VTABLE_mindustry_editor_data_MapPatchesView_notify 6
+typedef void (*func_mindustry_editor_data_MapPatchesView_notify)(jcontext ctx, jobject self);
+#define VTABLE_mindustry_editor_data_MapPatchesView_notifyAll 7
+typedef void (*func_mindustry_editor_data_MapPatchesView_notifyAll)(jcontext ctx, jobject self);
+#define VTABLE_mindustry_editor_data_MapPatchesView_wait 8
+typedef void (*func_mindustry_editor_data_MapPatchesView_wait)(jcontext ctx, jobject self);
+#define VTABLE_mindustry_editor_data_MapPatchesView_wait_long 9
+typedef void (*func_mindustry_editor_data_MapPatchesView_wait_long)(jcontext ctx, jobject self, jlong param0);
+#define VTABLE_mindustry_editor_data_MapPatchesView_wait_long_int 10
+typedef void (*func_mindustry_editor_data_MapPatchesView_wait_long_int)(jcontext ctx, jobject self, jlong param0, jint param1);
+#define VTABLE_mindustry_editor_data_MapPatchesView_build_mindustry_editor_data_MapAssetsDialog_arc_scene_ui_layout_Table 11
+typedef void (*func_mindustry_editor_data_MapPatchesView_build_mindustry_editor_data_MapAssetsDialog_arc_scene_ui_layout_Table)(jcontext ctx, jobject self, jobject param0, jobject param1);
+#define VTABLE_mindustry_editor_data_MapPatchesView_buildButtons_mindustry_editor_data_MapAssetsDialog_arc_scene_ui_layout_Table 12
+typedef void (*func_mindustry_editor_data_MapPatchesView_buildButtons_mindustry_editor_data_MapAssetsDialog_arc_scene_ui_layout_Table)(jcontext ctx, jobject self, jobject param0, jobject param1);
+#define VTABLE_mindustry_editor_data_MapPatchesView_showImport_arc_func_Cons 13
+typedef void (*func_mindustry_editor_data_MapPatchesView_showImport_arc_func_Cons)(jcontext ctx, jobject self, jobject param0);
+#define VTABLE_mindustry_editor_data_MapPatchesView_addPatch_java_lang_String 14
+typedef void (*func_mindustry_editor_data_MapPatchesView_addPatch_java_lang_String)(jcontext ctx, jobject self, jobject param0);
+#define VTABLE_mindustry_editor_data_MapPatchesView_addPatch_java_lang_String_int 15
+typedef void (*func_mindustry_editor_data_MapPatchesView_addPatch_java_lang_String_int)(jcontext ctx, jobject self, jobject param0, jint param1);
+#define VTABLE_mindustry_editor_data_MapPatchesView_countFields_arc_util_serialization_JsonValue_R_int 16
+typedef jint (*func_mindustry_editor_data_MapPatchesView_countFields_arc_util_serialization_JsonValue_R_int)(jcontext ctx, jobject self, jobject param0);
+#define VTABLE_mindustry_editor_data_MapPatchesView_lambda$build$8_arc_struct_Seq_mindustry_mod_data_PatchAsset_mindustry_editor_data_MapAssetsDialog 17
+typedef void (*func_mindustry_editor_data_MapPatchesView_lambda$build$8_arc_struct_Seq_mindustry_mod_data_PatchAsset_mindustry_editor_data_MapAssetsDialog)(jcontext ctx, jobject self, jobject param0, jobject param1, jobject param2);
+#define VTABLE_mindustry_editor_data_MapPatchesView_lambda$build$9_arc_struct_Seq_mindustry_mod_data_PatchAsset_mindustry_editor_data_MapAssetsDialog_java_lang_String 18
+typedef void (*func_mindustry_editor_data_MapPatchesView_lambda$build$9_arc_struct_Seq_mindustry_mod_data_PatchAsset_mindustry_editor_data_MapAssetsDialog_java_lang_String)(jcontext ctx, jobject self, jobject param0, jobject param1, jobject param2, jobject param3);
+#define VTABLE_mindustry_editor_data_MapPatchesView_lambda$buildButtons$0_mindustry_editor_data_MapAssetsDialog 19
+typedef void (*func_mindustry_editor_data_MapPatchesView_lambda$buildButtons$0_mindustry_editor_data_MapAssetsDialog)(jcontext ctx, jobject self, jobject param0);
+#define VTABLE_mindustry_editor_data_MapPatchesView_lambda$buildButtons$1_mindustry_editor_data_MapAssetsDialog_java_lang_String 20
+typedef void (*func_mindustry_editor_data_MapPatchesView_lambda$buildButtons$1_mindustry_editor_data_MapAssetsDialog_java_lang_String)(jcontext ctx, jobject self, jobject param0, jobject param1);
+
+void mark_mindustry_editor_data_MapPatchesView(jobject object, jint mark, jint depth);
+void clinit_mindustry_editor_data_MapPatchesView(jcontext ctx);
+void init_mindustry_editor_data_MapPatchesView(jcontext ctx, jobject self);
+void M_mindustry_editor_data_MapPatchesView_buildButtons_mindustry_editor_data_MapAssetsDialog_arc_scene_ui_layout_Table(jcontext ctx, jobject self, jobject param0, jobject param1);
+void M_mindustry_editor_data_MapPatchesView_build_mindustry_editor_data_MapAssetsDialog_arc_scene_ui_layout_Table(jcontext ctx, jobject self, jobject param0, jobject param1);
+void M_mindustry_editor_data_MapPatchesView_showImport_arc_func_Cons(jcontext ctx, jobject self, jobject param0);
+void M_mindustry_editor_data_MapPatchesView_addPatch_java_lang_String(jcontext ctx, jobject self, jobject param0);
+void M_mindustry_editor_data_MapPatchesView_addPatch_java_lang_String_int(jcontext ctx, jobject self, jobject param0, jint param1);
+jint M_mindustry_editor_data_MapPatchesView_countFields_arc_util_serialization_JsonValue_R_int(jcontext ctx, jobject self, jobject param0);
+void SM_mindustry_editor_data_MapPatchesView_lambda$showImport$0_mindustry_ui_dialogs_BaseDialog_arc_func_Cons_arc_scene_ui_layout_Table(jcontext ctx, jobject param0, jobject param1, jobject param2);
+void SM_mindustry_editor_data_MapPatchesView_lambda$showImport$1_mindustry_ui_dialogs_BaseDialog_arc_func_Cons_arc_scene_ui_layout_Table(jcontext ctx, jobject param0, jobject param1, jobject param2);
+void SM_mindustry_editor_data_MapPatchesView_lambda$showImport$4_mindustry_ui_dialogs_BaseDialog_arc_func_Cons(jcontext ctx, jobject param0, jobject param1);
+void SM_mindustry_editor_data_MapPatchesView_lambda$showImport$5_mindustry_ui_dialogs_BaseDialog_arc_func_Cons_arc_files_Fi(jcontext ctx, jobject param0, jobject param1, jobject param2);
+jbool SM_mindustry_editor_data_MapPatchesView_lambda$showImport$3_arc_scene_ui_TextButton_R_boolean(jcontext ctx, jobject param0);
+void SM_mindustry_editor_data_MapPatchesView_lambda$showImport$2_mindustry_ui_dialogs_BaseDialog_arc_func_Cons(jcontext ctx, jobject param0, jobject param1);
+void SM_mindustry_editor_data_MapPatchesView_lambda$build$10_arc_struct_Seq_mindustry_mod_data_PatchAsset_mindustry_editor_data_MapAssetsDialog(jcontext ctx, jobject param0, jobject param1, jobject param2);
+void SM_mindustry_editor_data_MapPatchesView_lambda$build$11_arc_struct_Seq_mindustry_mod_data_PatchAsset_mindustry_editor_data_MapAssetsDialog(jcontext ctx, jobject param0, jobject param1, jobject param2);
+void M_mindustry_editor_data_MapPatchesView_lambda$build$8_arc_struct_Seq_mindustry_mod_data_PatchAsset_mindustry_editor_data_MapAssetsDialog(jcontext ctx, jobject self, jobject param0, jobject param1, jobject param2);
+void M_mindustry_editor_data_MapPatchesView_lambda$build$9_arc_struct_Seq_mindustry_mod_data_PatchAsset_mindustry_editor_data_MapAssetsDialog_java_lang_String(jcontext ctx, jobject self, jobject param0, jobject param1, jobject param2, jobject param3);
+void SM_mindustry_editor_data_MapPatchesView_lambda$build$7_mindustry_mod_data_PatchAsset(jcontext ctx, jobject param0);
+void SM_mindustry_editor_data_MapPatchesView_lambda$build$6_arc_scene_ui_TextButton(jcontext ctx, jobject param0);
+void SM_mindustry_editor_data_MapPatchesView_lambda$build$3_mindustry_mod_data_PatchAsset(jcontext ctx, jobject param0);
+void SM_mindustry_editor_data_MapPatchesView_lambda$build$4_mindustry_mod_data_PatchAsset_arc_scene_ui_layout_Table(jcontext ctx, jobject param0, jobject param1);
+void SM_mindustry_editor_data_MapPatchesView_lambda$build$5_mindustry_mod_data_PatchAsset_arc_scene_ui_layout_Table(jcontext ctx, jobject param0, jobject param1);
+void SM_mindustry_editor_data_MapPatchesView_lambda$build$0_mindustry_mod_data_PatchAsset(jcontext ctx, jobject param0);
+void SM_mindustry_editor_data_MapPatchesView_lambda$build$1_mindustry_mod_data_PatchAsset_arc_scene_ui_layout_Table(jcontext ctx, jobject param0, jobject param1);
+void SM_mindustry_editor_data_MapPatchesView_lambda$build$2_java_lang_String_arc_scene_ui_layout_Table(jcontext ctx, jobject param0, jobject param1);
+void M_mindustry_editor_data_MapPatchesView_lambda$buildButtons$0_mindustry_editor_data_MapAssetsDialog(jcontext ctx, jobject self, jobject param0);
+void M_mindustry_editor_data_MapPatchesView_lambda$buildButtons$1_mindustry_editor_data_MapAssetsDialog_java_lang_String(jcontext ctx, jobject self, jobject param0, jobject param1);
+
+#ifdef __cplusplus
+}
+#endif
+
+#endif

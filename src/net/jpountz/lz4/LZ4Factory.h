@@ -1,0 +1,92 @@
+#ifndef HEADER_net_jpountz_lz4_LZ4Factory
+#define HEADER_net_jpountz_lz4_LZ4Factory
+
+#include "Clearwing.h"
+#include "java/lang/Object.h"
+
+#ifdef __cplusplus
+extern "C" {
+#endif
+
+typedef struct net_jpountz_lz4_LZ4Factory {
+	java_lang_Object parent;
+	jref F_impl;
+	jref F_fastCompressor;
+	jref F_highCompressor;
+	jref F_fastDecompressor;
+	jref F_safeDecompressor;
+	jref F_highCompressors;
+} net_jpountz_lz4_LZ4Factory;
+
+extern Class class_net_jpountz_lz4_LZ4Factory;
+
+extern jobject SF_net_jpountz_lz4_LZ4Factory_NATIVE_INSTANCE;
+extern jobject SF_net_jpountz_lz4_LZ4Factory_NATIVE_INSECURE_INSTANCE;
+extern jobject SF_net_jpountz_lz4_LZ4Factory_JAVA_UNSAFE_INSTANCE;
+extern jobject SF_net_jpountz_lz4_LZ4Factory_JAVA_UNSAFE_INSECURE_INSTANCE;
+extern jobject SF_net_jpountz_lz4_LZ4Factory_JAVA_SAFE_INSTANCE;
+
+#define VTABLE_net_jpountz_lz4_LZ4Factory_hashCode_R_int 0
+typedef jint (*func_net_jpountz_lz4_LZ4Factory_hashCode_R_int)(jcontext ctx, jobject self);
+#define VTABLE_net_jpountz_lz4_LZ4Factory_equals_java_lang_Object_R_boolean 1
+typedef jbool (*func_net_jpountz_lz4_LZ4Factory_equals_java_lang_Object_R_boolean)(jcontext ctx, jobject self, jobject param0);
+#define VTABLE_net_jpountz_lz4_LZ4Factory_clone_R_java_lang_Object 2
+typedef jobject (*func_net_jpountz_lz4_LZ4Factory_clone_R_java_lang_Object)(jcontext ctx, jobject self);
+#define VTABLE_net_jpountz_lz4_LZ4Factory_getClass_R_java_lang_Class 3
+typedef jobject (*func_net_jpountz_lz4_LZ4Factory_getClass_R_java_lang_Class)(jcontext ctx, jobject self);
+#define VTABLE_net_jpountz_lz4_LZ4Factory_toString_R_java_lang_String 4
+typedef jobject (*func_net_jpountz_lz4_LZ4Factory_toString_R_java_lang_String)(jcontext ctx, jobject self);
+#define VTABLE_net_jpountz_lz4_LZ4Factory_finalize 5
+typedef void (*func_net_jpountz_lz4_LZ4Factory_finalize)(jcontext ctx, jobject self);
+#define VTABLE_net_jpountz_lz4_LZ4Factory_notify 6
+typedef void (*func_net_jpountz_lz4_LZ4Factory_notify)(jcontext ctx, jobject self);
+#define VTABLE_net_jpountz_lz4_LZ4Factory_notifyAll 7
+typedef void (*func_net_jpountz_lz4_LZ4Factory_notifyAll)(jcontext ctx, jobject self);
+#define VTABLE_net_jpountz_lz4_LZ4Factory_wait 8
+typedef void (*func_net_jpountz_lz4_LZ4Factory_wait)(jcontext ctx, jobject self);
+#define VTABLE_net_jpountz_lz4_LZ4Factory_wait_long 9
+typedef void (*func_net_jpountz_lz4_LZ4Factory_wait_long)(jcontext ctx, jobject self, jlong param0);
+#define VTABLE_net_jpountz_lz4_LZ4Factory_wait_long_int 10
+typedef void (*func_net_jpountz_lz4_LZ4Factory_wait_long_int)(jcontext ctx, jobject self, jlong param0, jint param1);
+#define VTABLE_net_jpountz_lz4_LZ4Factory_fastCompressor_R_net_jpountz_lz4_LZ4Compressor 11
+typedef jobject (*func_net_jpountz_lz4_LZ4Factory_fastCompressor_R_net_jpountz_lz4_LZ4Compressor)(jcontext ctx, jobject self);
+#define VTABLE_net_jpountz_lz4_LZ4Factory_highCompressor_R_net_jpountz_lz4_LZ4Compressor 12
+typedef jobject (*func_net_jpountz_lz4_LZ4Factory_highCompressor_R_net_jpountz_lz4_LZ4Compressor)(jcontext ctx, jobject self);
+#define VTABLE_net_jpountz_lz4_LZ4Factory_highCompressor_int_R_net_jpountz_lz4_LZ4Compressor 13
+typedef jobject (*func_net_jpountz_lz4_LZ4Factory_highCompressor_int_R_net_jpountz_lz4_LZ4Compressor)(jcontext ctx, jobject self, jint param0);
+#define VTABLE_net_jpountz_lz4_LZ4Factory_fastDecompressor_R_net_jpountz_lz4_LZ4FastDecompressor 14
+typedef jobject (*func_net_jpountz_lz4_LZ4Factory_fastDecompressor_R_net_jpountz_lz4_LZ4FastDecompressor)(jcontext ctx, jobject self);
+#define VTABLE_net_jpountz_lz4_LZ4Factory_safeDecompressor_R_net_jpountz_lz4_LZ4SafeDecompressor 15
+typedef jobject (*func_net_jpountz_lz4_LZ4Factory_safeDecompressor_R_net_jpountz_lz4_LZ4SafeDecompressor)(jcontext ctx, jobject self);
+#define VTABLE_net_jpountz_lz4_LZ4Factory_unknownSizeDecompressor_R_net_jpountz_lz4_LZ4UnknownSizeDecompressor 16
+typedef jobject (*func_net_jpountz_lz4_LZ4Factory_unknownSizeDecompressor_R_net_jpountz_lz4_LZ4UnknownSizeDecompressor)(jcontext ctx, jobject self);
+#define VTABLE_net_jpountz_lz4_LZ4Factory_decompressor_R_net_jpountz_lz4_LZ4Decompressor 17
+typedef jobject (*func_net_jpountz_lz4_LZ4Factory_decompressor_R_net_jpountz_lz4_LZ4Decompressor)(jcontext ctx, jobject self);
+
+void mark_net_jpountz_lz4_LZ4Factory(jobject object, jint mark, jint depth);
+void clinit_net_jpountz_lz4_LZ4Factory(jcontext ctx);
+jobject SM_net_jpountz_lz4_LZ4Factory_instance_java_lang_String_boolean_R_net_jpountz_lz4_LZ4Factory(jcontext ctx, jobject param0, jbool param1);
+jobject SM_net_jpountz_lz4_LZ4Factory_nativeInstance_R_net_jpountz_lz4_LZ4Factory(jcontext ctx);
+jobject SM_net_jpountz_lz4_LZ4Factory_nativeInsecureInstance_R_net_jpountz_lz4_LZ4Factory(jcontext ctx);
+jobject SM_net_jpountz_lz4_LZ4Factory_safeInstance_R_net_jpountz_lz4_LZ4Factory(jcontext ctx);
+jobject SM_net_jpountz_lz4_LZ4Factory_unsafeInstance_R_net_jpountz_lz4_LZ4Factory(jcontext ctx);
+jobject SM_net_jpountz_lz4_LZ4Factory_unsafeInsecureInstance_R_net_jpountz_lz4_LZ4Factory(jcontext ctx);
+jobject SM_net_jpountz_lz4_LZ4Factory_fastestJavaInstance_R_net_jpountz_lz4_LZ4Factory(jcontext ctx);
+jobject SM_net_jpountz_lz4_LZ4Factory_fastestInstance_R_net_jpountz_lz4_LZ4Factory(jcontext ctx);
+jobject SM_net_jpountz_lz4_LZ4Factory_classInstance_java_lang_String_R_java_lang_Object(jcontext ctx, jobject param0);
+void init_net_jpountz_lz4_LZ4Factory_java_lang_String_boolean(jcontext ctx, jobject self, jobject param0, jbool param1);
+jobject M_net_jpountz_lz4_LZ4Factory_fastCompressor_R_net_jpountz_lz4_LZ4Compressor(jcontext ctx, jobject self);
+jobject M_net_jpountz_lz4_LZ4Factory_highCompressor_R_net_jpountz_lz4_LZ4Compressor(jcontext ctx, jobject self);
+jobject M_net_jpountz_lz4_LZ4Factory_highCompressor_int_R_net_jpountz_lz4_LZ4Compressor(jcontext ctx, jobject self, jint param0);
+jobject M_net_jpountz_lz4_LZ4Factory_fastDecompressor_R_net_jpountz_lz4_LZ4FastDecompressor(jcontext ctx, jobject self);
+jobject M_net_jpountz_lz4_LZ4Factory_safeDecompressor_R_net_jpountz_lz4_LZ4SafeDecompressor(jcontext ctx, jobject self);
+jobject M_net_jpountz_lz4_LZ4Factory_unknownSizeDecompressor_R_net_jpountz_lz4_LZ4UnknownSizeDecompressor(jcontext ctx, jobject self);
+jobject M_net_jpountz_lz4_LZ4Factory_decompressor_R_net_jpountz_lz4_LZ4Decompressor(jcontext ctx, jobject self);
+void SM_net_jpountz_lz4_LZ4Factory_main_Array1_java_lang_String(jcontext ctx, jobject param0);
+jobject M_net_jpountz_lz4_LZ4Factory_toString_R_java_lang_String(jcontext ctx, jobject self);
+
+#ifdef __cplusplus
+}
+#endif
+
+#endif

@@ -1,0 +1,84 @@
+#ifndef HEADER_mindustry_world_consumers_ConsumeItems
+#define HEADER_mindustry_world_consumers_ConsumeItems
+
+#include "Clearwing.h"
+#include "mindustry/world/consumers/Consume.h"
+
+#ifdef __cplusplus
+extern "C" {
+#endif
+
+typedef struct mindustry_world_consumers_ConsumeItems {
+	mindustry_world_consumers_Consume parent;
+	jref F_items;
+} mindustry_world_consumers_ConsumeItems;
+
+extern Class class_mindustry_world_consumers_ConsumeItems;
+
+
+#define VTABLE_mindustry_world_consumers_ConsumeItems_hashCode_R_int 0
+typedef jint (*func_mindustry_world_consumers_ConsumeItems_hashCode_R_int)(jcontext ctx, jobject self);
+#define VTABLE_mindustry_world_consumers_ConsumeItems_equals_java_lang_Object_R_boolean 1
+typedef jbool (*func_mindustry_world_consumers_ConsumeItems_equals_java_lang_Object_R_boolean)(jcontext ctx, jobject self, jobject param0);
+#define VTABLE_mindustry_world_consumers_ConsumeItems_clone_R_java_lang_Object 2
+typedef jobject (*func_mindustry_world_consumers_ConsumeItems_clone_R_java_lang_Object)(jcontext ctx, jobject self);
+#define VTABLE_mindustry_world_consumers_ConsumeItems_getClass_R_java_lang_Class 3
+typedef jobject (*func_mindustry_world_consumers_ConsumeItems_getClass_R_java_lang_Class)(jcontext ctx, jobject self);
+#define VTABLE_mindustry_world_consumers_ConsumeItems_toString_R_java_lang_String 4
+typedef jobject (*func_mindustry_world_consumers_ConsumeItems_toString_R_java_lang_String)(jcontext ctx, jobject self);
+#define VTABLE_mindustry_world_consumers_ConsumeItems_finalize 5
+typedef void (*func_mindustry_world_consumers_ConsumeItems_finalize)(jcontext ctx, jobject self);
+#define VTABLE_mindustry_world_consumers_ConsumeItems_notify 6
+typedef void (*func_mindustry_world_consumers_ConsumeItems_notify)(jcontext ctx, jobject self);
+#define VTABLE_mindustry_world_consumers_ConsumeItems_notifyAll 7
+typedef void (*func_mindustry_world_consumers_ConsumeItems_notifyAll)(jcontext ctx, jobject self);
+#define VTABLE_mindustry_world_consumers_ConsumeItems_wait 8
+typedef void (*func_mindustry_world_consumers_ConsumeItems_wait)(jcontext ctx, jobject self);
+#define VTABLE_mindustry_world_consumers_ConsumeItems_wait_long 9
+typedef void (*func_mindustry_world_consumers_ConsumeItems_wait_long)(jcontext ctx, jobject self, jlong param0);
+#define VTABLE_mindustry_world_consumers_ConsumeItems_wait_long_int 10
+typedef void (*func_mindustry_world_consumers_ConsumeItems_wait_long_int)(jcontext ctx, jobject self, jlong param0, jint param1);
+#define VTABLE_mindustry_world_consumers_ConsumeItems_apply_mindustry_world_Block 11
+typedef void (*func_mindustry_world_consumers_ConsumeItems_apply_mindustry_world_Block)(jcontext ctx, jobject self, jobject param0);
+#define VTABLE_mindustry_world_consumers_ConsumeItems_optional_boolean_boolean_R_mindustry_world_consumers_Consume 12
+typedef jobject (*func_mindustry_world_consumers_ConsumeItems_optional_boolean_boolean_R_mindustry_world_consumers_Consume)(jcontext ctx, jobject self, jbool param0, jbool param1);
+#define VTABLE_mindustry_world_consumers_ConsumeItems_boost_R_mindustry_world_consumers_Consume 13
+typedef jobject (*func_mindustry_world_consumers_ConsumeItems_boost_R_mindustry_world_consumers_Consume)(jcontext ctx, jobject self);
+#define VTABLE_mindustry_world_consumers_ConsumeItems_update_boolean_R_mindustry_world_consumers_Consume 14
+typedef jobject (*func_mindustry_world_consumers_ConsumeItems_update_boolean_R_mindustry_world_consumers_Consume)(jcontext ctx, jobject self, jbool param0);
+#define VTABLE_mindustry_world_consumers_ConsumeItems_ignore_R_boolean 15
+typedef jbool (*func_mindustry_world_consumers_ConsumeItems_ignore_R_boolean)(jcontext ctx, jobject self);
+#define VTABLE_mindustry_world_consumers_ConsumeItems_build_mindustry_gen_Building_arc_scene_ui_layout_Table 16
+typedef void (*func_mindustry_world_consumers_ConsumeItems_build_mindustry_gen_Building_arc_scene_ui_layout_Table)(jcontext ctx, jobject self, jobject param0, jobject param1);
+#define VTABLE_mindustry_world_consumers_ConsumeItems_trigger_mindustry_gen_Building 17
+typedef void (*func_mindustry_world_consumers_ConsumeItems_trigger_mindustry_gen_Building)(jcontext ctx, jobject self, jobject param0);
+#define VTABLE_mindustry_world_consumers_ConsumeItems_update_mindustry_gen_Building 18
+typedef void (*func_mindustry_world_consumers_ConsumeItems_update_mindustry_gen_Building)(jcontext ctx, jobject self, jobject param0);
+#define VTABLE_mindustry_world_consumers_ConsumeItems_efficiency_mindustry_gen_Building_R_float 19
+typedef jfloat (*func_mindustry_world_consumers_ConsumeItems_efficiency_mindustry_gen_Building_R_float)(jcontext ctx, jobject self, jobject param0);
+#define VTABLE_mindustry_world_consumers_ConsumeItems_efficiencyMultiplier_mindustry_gen_Building_R_float 20
+typedef jfloat (*func_mindustry_world_consumers_ConsumeItems_efficiencyMultiplier_mindustry_gen_Building_R_float)(jcontext ctx, jobject self, jobject param0);
+#define VTABLE_mindustry_world_consumers_ConsumeItems_display_mindustry_world_meta_Stats 21
+typedef void (*func_mindustry_world_consumers_ConsumeItems_display_mindustry_world_meta_Stats)(jcontext ctx, jobject self, jobject param0);
+#define VTABLE_mindustry_world_consumers_ConsumeItems_lambda$build$0_mindustry_gen_Building_arc_scene_ui_layout_Table 22
+typedef void (*func_mindustry_world_consumers_ConsumeItems_lambda$build$0_mindustry_gen_Building_arc_scene_ui_layout_Table)(jcontext ctx, jobject self, jobject param0, jobject param1);
+#define VTABLE_mindustry_world_consumers_ConsumeItems_lambda$build$1_mindustry_gen_Building_mindustry_type_ItemStack_R_boolean 23
+typedef jbool (*func_mindustry_world_consumers_ConsumeItems_lambda$build$1_mindustry_gen_Building_mindustry_type_ItemStack_R_boolean)(jcontext ctx, jobject self, jobject param0, jobject param1);
+
+void mark_mindustry_world_consumers_ConsumeItems(jobject object, jint mark, jint depth);
+void clinit_mindustry_world_consumers_ConsumeItems(jcontext ctx);
+void init_mindustry_world_consumers_ConsumeItems_Array1_mindustry_type_ItemStack(jcontext ctx, jobject self, jobject param0);
+void init_mindustry_world_consumers_ConsumeItems(jcontext ctx, jobject self);
+void M_mindustry_world_consumers_ConsumeItems_apply_mindustry_world_Block(jcontext ctx, jobject self, jobject param0);
+void M_mindustry_world_consumers_ConsumeItems_build_mindustry_gen_Building_arc_scene_ui_layout_Table(jcontext ctx, jobject self, jobject param0, jobject param1);
+void M_mindustry_world_consumers_ConsumeItems_trigger_mindustry_gen_Building(jcontext ctx, jobject self, jobject param0);
+jfloat M_mindustry_world_consumers_ConsumeItems_efficiency_mindustry_gen_Building_R_float(jcontext ctx, jobject self, jobject param0);
+void M_mindustry_world_consumers_ConsumeItems_display_mindustry_world_meta_Stats(jcontext ctx, jobject self, jobject param0);
+void M_mindustry_world_consumers_ConsumeItems_lambda$build$0_mindustry_gen_Building_arc_scene_ui_layout_Table(jcontext ctx, jobject self, jobject param0, jobject param1);
+jbool M_mindustry_world_consumers_ConsumeItems_lambda$build$1_mindustry_gen_Building_mindustry_type_ItemStack_R_boolean(jcontext ctx, jobject self, jobject param0, jobject param1);
+
+#ifdef __cplusplus
+}
+#endif
+
+#endif

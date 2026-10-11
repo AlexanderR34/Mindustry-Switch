@@ -1,0 +1,65 @@
+#ifndef HEADER_java_net_InetAddress$CachedAddresses
+#define HEADER_java_net_InetAddress$CachedAddresses
+
+#include "Clearwing.h"
+#include "java/lang/Object.h"
+#include "java/net/InetAddress_Addresses.h"
+#include "java/lang/Comparable.h"
+
+#ifdef __cplusplus
+extern "C" {
+#endif
+
+typedef struct java_net_InetAddress$CachedAddresses {
+	java_lang_Object parent;
+	jref F_host;
+	jref F_inetAddresses;
+	jlong F_expiryTime;
+	jlong F_id;
+} java_net_InetAddress$CachedAddresses;
+
+extern Class class_java_net_InetAddress$CachedAddresses;
+
+extern jobject SF_java_net_InetAddress$CachedAddresses_seq;
+
+#define VTABLE_java_net_InetAddress$CachedAddresses_hashCode_R_int 0
+typedef jint (*func_java_net_InetAddress$CachedAddresses_hashCode_R_int)(jcontext ctx, jobject self);
+#define VTABLE_java_net_InetAddress$CachedAddresses_equals_java_lang_Object_R_boolean 1
+typedef jbool (*func_java_net_InetAddress$CachedAddresses_equals_java_lang_Object_R_boolean)(jcontext ctx, jobject self, jobject param0);
+#define VTABLE_java_net_InetAddress$CachedAddresses_clone_R_java_lang_Object 2
+typedef jobject (*func_java_net_InetAddress$CachedAddresses_clone_R_java_lang_Object)(jcontext ctx, jobject self);
+#define VTABLE_java_net_InetAddress$CachedAddresses_getClass_R_java_lang_Class 3
+typedef jobject (*func_java_net_InetAddress$CachedAddresses_getClass_R_java_lang_Class)(jcontext ctx, jobject self);
+#define VTABLE_java_net_InetAddress$CachedAddresses_toString_R_java_lang_String 4
+typedef jobject (*func_java_net_InetAddress$CachedAddresses_toString_R_java_lang_String)(jcontext ctx, jobject self);
+#define VTABLE_java_net_InetAddress$CachedAddresses_finalize 5
+typedef void (*func_java_net_InetAddress$CachedAddresses_finalize)(jcontext ctx, jobject self);
+#define VTABLE_java_net_InetAddress$CachedAddresses_notify 6
+typedef void (*func_java_net_InetAddress$CachedAddresses_notify)(jcontext ctx, jobject self);
+#define VTABLE_java_net_InetAddress$CachedAddresses_notifyAll 7
+typedef void (*func_java_net_InetAddress$CachedAddresses_notifyAll)(jcontext ctx, jobject self);
+#define VTABLE_java_net_InetAddress$CachedAddresses_wait 8
+typedef void (*func_java_net_InetAddress$CachedAddresses_wait)(jcontext ctx, jobject self);
+#define VTABLE_java_net_InetAddress$CachedAddresses_wait_long 9
+typedef void (*func_java_net_InetAddress$CachedAddresses_wait_long)(jcontext ctx, jobject self, jlong param0);
+#define VTABLE_java_net_InetAddress$CachedAddresses_wait_long_int 10
+typedef void (*func_java_net_InetAddress$CachedAddresses_wait_long_int)(jcontext ctx, jobject self, jlong param0, jint param1);
+#define VTABLE_java_net_InetAddress$CachedAddresses_get_R_Array1_java_net_InetAddress 11
+typedef jobject (*func_java_net_InetAddress$CachedAddresses_get_R_Array1_java_net_InetAddress)(jcontext ctx, jobject self);
+#define VTABLE_java_net_InetAddress$CachedAddresses_compareTo_java_lang_Object_R_int 12
+typedef jint (*func_java_net_InetAddress$CachedAddresses_compareTo_java_lang_Object_R_int)(jcontext ctx, jobject self, jobject param0);
+#define VTABLE_java_net_InetAddress$CachedAddresses_compareTo_java_net_InetAddress$CachedAddresses_R_int 13
+typedef jint (*func_java_net_InetAddress$CachedAddresses_compareTo_java_net_InetAddress$CachedAddresses_R_int)(jcontext ctx, jobject self, jobject param0);
+
+void mark_java_net_InetAddress$CachedAddresses(jobject object, jint mark, jint depth);
+void clinit_java_net_InetAddress$CachedAddresses(jcontext ctx);
+void init_java_net_InetAddress$CachedAddresses_java_lang_String_Array1_java_net_InetAddress_long(jcontext ctx, jobject self, jobject param0, jobject param1, jlong param2);
+jobject M_java_net_InetAddress$CachedAddresses_get_R_Array1_java_net_InetAddress(jcontext ctx, jobject self);
+jint M_java_net_InetAddress$CachedAddresses_compareTo_java_net_InetAddress$CachedAddresses_R_int(jcontext ctx, jobject self, jobject param0);
+jint M_java_net_InetAddress$CachedAddresses_compareTo_java_lang_Object_R_int(jcontext ctx, jobject self, jobject param0);
+
+#ifdef __cplusplus
+}
+#endif
+
+#endif

@@ -1,0 +1,291 @@
+#ifndef HEADER_mindustry_entities_comp_WeaponsComp
+#define HEADER_mindustry_entities_comp_WeaponsComp
+
+#include "Clearwing.h"
+#include "java/lang/Object.h"
+#include "mindustry/gen/Teamc.h"
+#include "mindustry/gen/Posc.h"
+#include "mindustry/gen/Rotc.h"
+#include "mindustry/gen/Velc.h"
+#include "mindustry/gen/Statusc.h"
+
+#ifdef __cplusplus
+extern "C" {
+#endif
+
+typedef struct mindustry_entities_comp_WeaponsComp {
+	java_lang_Object parent;
+	jfloat F_x;
+	jfloat F_y;
+	jbool F_disarmed;
+	jref F_type;
+	jref F_mounts;
+	jbool F_isRotate;
+	jfloat F_aimX;
+	jfloat F_aimY;
+	jbool F_isShooting;
+} mindustry_entities_comp_WeaponsComp;
+
+extern Class class_mindustry_entities_comp_WeaponsComp;
+
+
+#define VTABLE_mindustry_entities_comp_WeaponsComp_hashCode_R_int 0
+typedef jint (*func_mindustry_entities_comp_WeaponsComp_hashCode_R_int)(jcontext ctx, jobject self);
+#define VTABLE_mindustry_entities_comp_WeaponsComp_equals_java_lang_Object_R_boolean 1
+typedef jbool (*func_mindustry_entities_comp_WeaponsComp_equals_java_lang_Object_R_boolean)(jcontext ctx, jobject self, jobject param0);
+#define VTABLE_mindustry_entities_comp_WeaponsComp_clone_R_java_lang_Object 2
+typedef jobject (*func_mindustry_entities_comp_WeaponsComp_clone_R_java_lang_Object)(jcontext ctx, jobject self);
+#define VTABLE_mindustry_entities_comp_WeaponsComp_getClass_R_java_lang_Class 3
+typedef jobject (*func_mindustry_entities_comp_WeaponsComp_getClass_R_java_lang_Class)(jcontext ctx, jobject self);
+#define VTABLE_mindustry_entities_comp_WeaponsComp_toString_R_java_lang_String 4
+typedef jobject (*func_mindustry_entities_comp_WeaponsComp_toString_R_java_lang_String)(jcontext ctx, jobject self);
+#define VTABLE_mindustry_entities_comp_WeaponsComp_finalize 5
+typedef void (*func_mindustry_entities_comp_WeaponsComp_finalize)(jcontext ctx, jobject self);
+#define VTABLE_mindustry_entities_comp_WeaponsComp_notify 6
+typedef void (*func_mindustry_entities_comp_WeaponsComp_notify)(jcontext ctx, jobject self);
+#define VTABLE_mindustry_entities_comp_WeaponsComp_notifyAll 7
+typedef void (*func_mindustry_entities_comp_WeaponsComp_notifyAll)(jcontext ctx, jobject self);
+#define VTABLE_mindustry_entities_comp_WeaponsComp_wait 8
+typedef void (*func_mindustry_entities_comp_WeaponsComp_wait)(jcontext ctx, jobject self);
+#define VTABLE_mindustry_entities_comp_WeaponsComp_wait_long 9
+typedef void (*func_mindustry_entities_comp_WeaponsComp_wait_long)(jcontext ctx, jobject self, jlong param0);
+#define VTABLE_mindustry_entities_comp_WeaponsComp_wait_long_int 10
+typedef void (*func_mindustry_entities_comp_WeaponsComp_wait_long_int)(jcontext ctx, jobject self, jlong param0, jint param1);
+#define VTABLE_mindustry_entities_comp_WeaponsComp_self_R_mindustry_gen_Entityc 11
+typedef jobject (*func_mindustry_entities_comp_WeaponsComp_self_R_mindustry_gen_Entityc)(jcontext ctx, jobject self);
+#define VTABLE_mindustry_entities_comp_WeaponsComp_as_R_java_lang_Object 12
+typedef jobject (*func_mindustry_entities_comp_WeaponsComp_as_R_java_lang_Object)(jcontext ctx, jobject self);
+#define VTABLE_mindustry_entities_comp_WeaponsComp_isAdded_R_boolean 13
+typedef jbool (*func_mindustry_entities_comp_WeaponsComp_isAdded_R_boolean)(jcontext ctx, jobject self);
+#define VTABLE_mindustry_entities_comp_WeaponsComp_isLocal_R_boolean 14
+typedef jbool (*func_mindustry_entities_comp_WeaponsComp_isLocal_R_boolean)(jcontext ctx, jobject self);
+#define VTABLE_mindustry_entities_comp_WeaponsComp_isRemote_R_boolean 15
+typedef jbool (*func_mindustry_entities_comp_WeaponsComp_isRemote_R_boolean)(jcontext ctx, jobject self);
+#define VTABLE_mindustry_entities_comp_WeaponsComp_serialize_R_boolean 16
+typedef jbool (*func_mindustry_entities_comp_WeaponsComp_serialize_R_boolean)(jcontext ctx, jobject self);
+#define VTABLE_mindustry_entities_comp_WeaponsComp_classId_R_int 17
+typedef jint (*func_mindustry_entities_comp_WeaponsComp_classId_R_int)(jcontext ctx, jobject self);
+#define VTABLE_mindustry_entities_comp_WeaponsComp_id_R_int 18
+typedef jint (*func_mindustry_entities_comp_WeaponsComp_id_R_int)(jcontext ctx, jobject self);
+#define VTABLE_mindustry_entities_comp_WeaponsComp_add 19
+typedef void (*func_mindustry_entities_comp_WeaponsComp_add)(jcontext ctx, jobject self);
+#define VTABLE_mindustry_entities_comp_WeaponsComp_afterRead 20
+typedef void (*func_mindustry_entities_comp_WeaponsComp_afterRead)(jcontext ctx, jobject self);
+#define VTABLE_mindustry_entities_comp_WeaponsComp_afterReadAll 21
+typedef void (*func_mindustry_entities_comp_WeaponsComp_afterReadAll)(jcontext ctx, jobject self);
+#define VTABLE_mindustry_entities_comp_WeaponsComp_beforeWrite 22
+typedef void (*func_mindustry_entities_comp_WeaponsComp_beforeWrite)(jcontext ctx, jobject self);
+#define VTABLE_mindustry_entities_comp_WeaponsComp_id_int 23
+typedef void (*func_mindustry_entities_comp_WeaponsComp_id_int)(jcontext ctx, jobject self, jint param0);
+#define VTABLE_mindustry_entities_comp_WeaponsComp_read_arc_util_io_Reads 24
+typedef void (*func_mindustry_entities_comp_WeaponsComp_read_arc_util_io_Reads)(jcontext ctx, jobject self, jobject param0);
+#define VTABLE_mindustry_entities_comp_WeaponsComp_remove 25
+typedef void (*func_mindustry_entities_comp_WeaponsComp_remove)(jcontext ctx, jobject self);
+#define VTABLE_mindustry_entities_comp_WeaponsComp_update 26
+typedef void (*func_mindustry_entities_comp_WeaponsComp_update)(jcontext ctx, jobject self);
+#define VTABLE_mindustry_entities_comp_WeaponsComp_write_arc_util_io_Writes 27
+typedef void (*func_mindustry_entities_comp_WeaponsComp_write_arc_util_io_Writes)(jcontext ctx, jobject self, jobject param0);
+#define VTABLE_mindustry_entities_comp_WeaponsComp_getX_R_float 28
+typedef jfloat (*func_mindustry_entities_comp_WeaponsComp_getX_R_float)(jcontext ctx, jobject self);
+#define VTABLE_mindustry_entities_comp_WeaponsComp_getY_R_float 29
+typedef jfloat (*func_mindustry_entities_comp_WeaponsComp_getY_R_float)(jcontext ctx, jobject self);
+#define VTABLE_mindustry_entities_comp_WeaponsComp_angleTo_arc_math_geom_Position_R_float 30
+typedef jfloat (*func_mindustry_entities_comp_WeaponsComp_angleTo_arc_math_geom_Position_R_float)(jcontext ctx, jobject self, jobject param0);
+#define VTABLE_mindustry_entities_comp_WeaponsComp_angleTo_float_float_R_float 31
+typedef jfloat (*func_mindustry_entities_comp_WeaponsComp_angleTo_float_float_R_float)(jcontext ctx, jobject self, jfloat param0, jfloat param1);
+#define VTABLE_mindustry_entities_comp_WeaponsComp_dst2_arc_math_geom_Position_R_float 32
+typedef jfloat (*func_mindustry_entities_comp_WeaponsComp_dst2_arc_math_geom_Position_R_float)(jcontext ctx, jobject self, jobject param0);
+#define VTABLE_mindustry_entities_comp_WeaponsComp_dst_arc_math_geom_Position_R_float 33
+typedef jfloat (*func_mindustry_entities_comp_WeaponsComp_dst_arc_math_geom_Position_R_float)(jcontext ctx, jobject self, jobject param0);
+#define VTABLE_mindustry_entities_comp_WeaponsComp_dst_float_float_R_float 34
+typedef jfloat (*func_mindustry_entities_comp_WeaponsComp_dst_float_float_R_float)(jcontext ctx, jobject self, jfloat param0, jfloat param1);
+#define VTABLE_mindustry_entities_comp_WeaponsComp_dst2_float_float_R_float 35
+typedef jfloat (*func_mindustry_entities_comp_WeaponsComp_dst2_float_float_R_float)(jcontext ctx, jobject self, jfloat param0, jfloat param1);
+#define VTABLE_mindustry_entities_comp_WeaponsComp_within_arc_math_geom_Position_float_R_boolean 36
+typedef jbool (*func_mindustry_entities_comp_WeaponsComp_within_arc_math_geom_Position_float_R_boolean)(jcontext ctx, jobject self, jobject param0, jfloat param1);
+#define VTABLE_mindustry_entities_comp_WeaponsComp_within_float_float_float_R_boolean 37
+typedef jbool (*func_mindustry_entities_comp_WeaponsComp_within_float_float_float_R_boolean)(jcontext ctx, jobject self, jfloat param0, jfloat param1, jfloat param2);
+#define VTABLE_mindustry_entities_comp_WeaponsComp_floorOn_R_mindustry_world_blocks_environment_Floor 38
+typedef jobject (*func_mindustry_entities_comp_WeaponsComp_floorOn_R_mindustry_world_blocks_environment_Floor)(jcontext ctx, jobject self);
+#define VTABLE_mindustry_entities_comp_WeaponsComp_buildOn_R_mindustry_gen_Building 39
+typedef jobject (*func_mindustry_entities_comp_WeaponsComp_buildOn_R_mindustry_gen_Building)(jcontext ctx, jobject self);
+#define VTABLE_mindustry_entities_comp_WeaponsComp_onSolid_R_boolean 40
+typedef jbool (*func_mindustry_entities_comp_WeaponsComp_onSolid_R_boolean)(jcontext ctx, jobject self);
+#define VTABLE_mindustry_entities_comp_WeaponsComp_x_R_float 41
+typedef jfloat (*func_mindustry_entities_comp_WeaponsComp_x_R_float)(jcontext ctx, jobject self);
+#define VTABLE_mindustry_entities_comp_WeaponsComp_y_R_float 42
+typedef jfloat (*func_mindustry_entities_comp_WeaponsComp_y_R_float)(jcontext ctx, jobject self);
+#define VTABLE_mindustry_entities_comp_WeaponsComp_tileX_R_int 43
+typedef jint (*func_mindustry_entities_comp_WeaponsComp_tileX_R_int)(jcontext ctx, jobject self);
+#define VTABLE_mindustry_entities_comp_WeaponsComp_tileY_R_int 44
+typedef jint (*func_mindustry_entities_comp_WeaponsComp_tileY_R_int)(jcontext ctx, jobject self);
+#define VTABLE_mindustry_entities_comp_WeaponsComp_blockOn_R_mindustry_world_Block 45
+typedef jobject (*func_mindustry_entities_comp_WeaponsComp_blockOn_R_mindustry_world_Block)(jcontext ctx, jobject self);
+#define VTABLE_mindustry_entities_comp_WeaponsComp_tileOn_R_mindustry_world_Tile 46
+typedef jobject (*func_mindustry_entities_comp_WeaponsComp_tileOn_R_mindustry_world_Tile)(jcontext ctx, jobject self);
+#define VTABLE_mindustry_entities_comp_WeaponsComp_set_arc_math_geom_Position 47
+typedef void (*func_mindustry_entities_comp_WeaponsComp_set_arc_math_geom_Position)(jcontext ctx, jobject self, jobject param0);
+#define VTABLE_mindustry_entities_comp_WeaponsComp_set_float_float 48
+typedef void (*func_mindustry_entities_comp_WeaponsComp_set_float_float)(jcontext ctx, jobject self, jfloat param0, jfloat param1);
+#define VTABLE_mindustry_entities_comp_WeaponsComp_trns_arc_math_geom_Position 49
+typedef void (*func_mindustry_entities_comp_WeaponsComp_trns_arc_math_geom_Position)(jcontext ctx, jobject self, jobject param0);
+#define VTABLE_mindustry_entities_comp_WeaponsComp_trns_float_float 50
+typedef void (*func_mindustry_entities_comp_WeaponsComp_trns_float_float)(jcontext ctx, jobject self, jfloat param0, jfloat param1);
+#define VTABLE_mindustry_entities_comp_WeaponsComp_x_float 51
+typedef void (*func_mindustry_entities_comp_WeaponsComp_x_float)(jcontext ctx, jobject self, jfloat param0);
+#define VTABLE_mindustry_entities_comp_WeaponsComp_y_float 52
+typedef void (*func_mindustry_entities_comp_WeaponsComp_y_float)(jcontext ctx, jobject self, jfloat param0);
+#define VTABLE_mindustry_entities_comp_WeaponsComp_inFogTo_mindustry_game_Team_R_boolean 53
+typedef jbool (*func_mindustry_entities_comp_WeaponsComp_inFogTo_mindustry_game_Team_R_boolean)(jcontext ctx, jobject self, jobject param0);
+#define VTABLE_mindustry_entities_comp_WeaponsComp_cheating_R_boolean 54
+typedef jbool (*func_mindustry_entities_comp_WeaponsComp_cheating_R_boolean)(jcontext ctx, jobject self);
+#define VTABLE_mindustry_entities_comp_WeaponsComp_team_R_mindustry_game_Team 55
+typedef jobject (*func_mindustry_entities_comp_WeaponsComp_team_R_mindustry_game_Team)(jcontext ctx, jobject self);
+#define VTABLE_mindustry_entities_comp_WeaponsComp_closestCore_R_mindustry_world_blocks_storage_CoreBlock$CoreBuild 56
+typedef jobject (*func_mindustry_entities_comp_WeaponsComp_closestCore_R_mindustry_world_blocks_storage_CoreBlock$CoreBuild)(jcontext ctx, jobject self);
+#define VTABLE_mindustry_entities_comp_WeaponsComp_closestEnemyCore_R_mindustry_world_blocks_storage_CoreBlock$CoreBuild 57
+typedef jobject (*func_mindustry_entities_comp_WeaponsComp_closestEnemyCore_R_mindustry_world_blocks_storage_CoreBlock$CoreBuild)(jcontext ctx, jobject self);
+#define VTABLE_mindustry_entities_comp_WeaponsComp_core_R_mindustry_world_blocks_storage_CoreBlock$CoreBuild 58
+typedef jobject (*func_mindustry_entities_comp_WeaponsComp_core_R_mindustry_world_blocks_storage_CoreBlock$CoreBuild)(jcontext ctx, jobject self);
+#define VTABLE_mindustry_entities_comp_WeaponsComp_team_mindustry_game_Team 59
+typedef void (*func_mindustry_entities_comp_WeaponsComp_team_mindustry_game_Team)(jcontext ctx, jobject self, jobject param0);
+#define VTABLE_mindustry_entities_comp_WeaponsComp_rotation_R_float 60
+typedef jfloat (*func_mindustry_entities_comp_WeaponsComp_rotation_R_float)(jcontext ctx, jobject self);
+#define VTABLE_mindustry_entities_comp_WeaponsComp_rotation_float 61
+typedef void (*func_mindustry_entities_comp_WeaponsComp_rotation_float)(jcontext ctx, jobject self, jfloat param0);
+#define VTABLE_mindustry_entities_comp_WeaponsComp_solidity_R_mindustry_entities_EntityCollisions$SolidPred 62
+typedef jobject (*func_mindustry_entities_comp_WeaponsComp_solidity_R_mindustry_entities_EntityCollisions$SolidPred)(jcontext ctx, jobject self);
+#define VTABLE_mindustry_entities_comp_WeaponsComp_canPassOn_R_boolean 63
+typedef jbool (*func_mindustry_entities_comp_WeaponsComp_canPassOn_R_boolean)(jcontext ctx, jobject self);
+#define VTABLE_mindustry_entities_comp_WeaponsComp_canPass_int_int_R_boolean 64
+typedef jbool (*func_mindustry_entities_comp_WeaponsComp_canPass_int_int_R_boolean)(jcontext ctx, jobject self, jint param0, jint param1);
+#define VTABLE_mindustry_entities_comp_WeaponsComp_vel_R_arc_math_geom_Vec2 65
+typedef jobject (*func_mindustry_entities_comp_WeaponsComp_vel_R_arc_math_geom_Vec2)(jcontext ctx, jobject self);
+#define VTABLE_mindustry_entities_comp_WeaponsComp_ignoreSolids_R_boolean 66
+typedef jbool (*func_mindustry_entities_comp_WeaponsComp_ignoreSolids_R_boolean)(jcontext ctx, jobject self);
+#define VTABLE_mindustry_entities_comp_WeaponsComp_moving_R_boolean 67
+typedef jbool (*func_mindustry_entities_comp_WeaponsComp_moving_R_boolean)(jcontext ctx, jobject self);
+#define VTABLE_mindustry_entities_comp_WeaponsComp_drag_R_float 68
+typedef jfloat (*func_mindustry_entities_comp_WeaponsComp_drag_R_float)(jcontext ctx, jobject self);
+#define VTABLE_mindustry_entities_comp_WeaponsComp_drag_float 69
+typedef void (*func_mindustry_entities_comp_WeaponsComp_drag_float)(jcontext ctx, jobject self, jfloat param0);
+#define VTABLE_mindustry_entities_comp_WeaponsComp_move_arc_math_geom_Vec2 70
+typedef void (*func_mindustry_entities_comp_WeaponsComp_move_arc_math_geom_Vec2)(jcontext ctx, jobject self, jobject param0);
+#define VTABLE_mindustry_entities_comp_WeaponsComp_move_float_float 71
+typedef void (*func_mindustry_entities_comp_WeaponsComp_move_float_float)(jcontext ctx, jobject self, jfloat param0, jfloat param1);
+#define VTABLE_mindustry_entities_comp_WeaponsComp_vel_arc_math_geom_Vec2 72
+typedef void (*func_mindustry_entities_comp_WeaponsComp_vel_arc_math_geom_Vec2)(jcontext ctx, jobject self, jobject param0);
+#define VTABLE_mindustry_entities_comp_WeaponsComp_velAddNet_arc_math_geom_Vec2 73
+typedef void (*func_mindustry_entities_comp_WeaponsComp_velAddNet_arc_math_geom_Vec2)(jcontext ctx, jobject self, jobject param0);
+#define VTABLE_mindustry_entities_comp_WeaponsComp_velAddNet_float_float 74
+typedef void (*func_mindustry_entities_comp_WeaponsComp_velAddNet_float_float)(jcontext ctx, jobject self, jfloat param0, jfloat param1);
+#define VTABLE_mindustry_entities_comp_WeaponsComp_applyDynamicStatus_R_mindustry_entities_units_StatusEntry 75
+typedef jobject (*func_mindustry_entities_comp_WeaponsComp_applyDynamicStatus_R_mindustry_entities_units_StatusEntry)(jcontext ctx, jobject self);
+#define VTABLE_mindustry_entities_comp_WeaponsComp_apply_mindustry_type_StatusEffect_float 76
+typedef void (*func_mindustry_entities_comp_WeaponsComp_apply_mindustry_type_StatusEffect_float)(jcontext ctx, jobject self, jobject param0, jfloat param1);
+#define VTABLE_mindustry_entities_comp_WeaponsComp_apply_mindustry_type_StatusEffect 77
+typedef void (*func_mindustry_entities_comp_WeaponsComp_apply_mindustry_type_StatusEffect)(jcontext ctx, jobject self, jobject param0);
+#define VTABLE_mindustry_entities_comp_WeaponsComp_unapply_mindustry_type_StatusEffect 78
+typedef void (*func_mindustry_entities_comp_WeaponsComp_unapply_mindustry_type_StatusEffect)(jcontext ctx, jobject self, jobject param0);
+#define VTABLE_mindustry_entities_comp_WeaponsComp_statusDamageMultiplier_float 79
+typedef void (*func_mindustry_entities_comp_WeaponsComp_statusDamageMultiplier_float)(jcontext ctx, jobject self, jfloat param0);
+#define VTABLE_mindustry_entities_comp_WeaponsComp_statusReloadMultiplier_float 80
+typedef void (*func_mindustry_entities_comp_WeaponsComp_statusReloadMultiplier_float)(jcontext ctx, jobject self, jfloat param0);
+#define VTABLE_mindustry_entities_comp_WeaponsComp_statusArmor_float 81
+typedef void (*func_mindustry_entities_comp_WeaponsComp_statusArmor_float)(jcontext ctx, jobject self, jfloat param0);
+#define VTABLE_mindustry_entities_comp_WeaponsComp_statusBuildSpeed_float 82
+typedef void (*func_mindustry_entities_comp_WeaponsComp_statusBuildSpeed_float)(jcontext ctx, jobject self, jfloat param0);
+#define VTABLE_mindustry_entities_comp_WeaponsComp_statusDrag_float 83
+typedef void (*func_mindustry_entities_comp_WeaponsComp_statusDrag_float)(jcontext ctx, jobject self, jfloat param0);
+#define VTABLE_mindustry_entities_comp_WeaponsComp_statusMaxHealth_float 84
+typedef void (*func_mindustry_entities_comp_WeaponsComp_statusMaxHealth_float)(jcontext ctx, jobject self, jfloat param0);
+#define VTABLE_mindustry_entities_comp_WeaponsComp_statusSpeed_float 85
+typedef void (*func_mindustry_entities_comp_WeaponsComp_statusSpeed_float)(jcontext ctx, jobject self, jfloat param0);
+#define VTABLE_mindustry_entities_comp_WeaponsComp_statusColor_R_arc_graphics_Color 86
+typedef jobject (*func_mindustry_entities_comp_WeaponsComp_statusColor_R_arc_graphics_Color)(jcontext ctx, jobject self);
+#define VTABLE_mindustry_entities_comp_WeaponsComp_statusBits_R_arc_struct_Bits 87
+typedef jobject (*func_mindustry_entities_comp_WeaponsComp_statusBits_R_arc_struct_Bits)(jcontext ctx, jobject self);
+#define VTABLE_mindustry_entities_comp_WeaponsComp_disarmed_R_boolean 88
+typedef jbool (*func_mindustry_entities_comp_WeaponsComp_disarmed_R_boolean)(jcontext ctx, jobject self);
+#define VTABLE_mindustry_entities_comp_WeaponsComp_hasEffect_mindustry_type_StatusEffect_R_boolean 89
+typedef jbool (*func_mindustry_entities_comp_WeaponsComp_hasEffect_mindustry_type_StatusEffect_R_boolean)(jcontext ctx, jobject self, jobject param0);
+#define VTABLE_mindustry_entities_comp_WeaponsComp_isBoss_R_boolean 90
+typedef jbool (*func_mindustry_entities_comp_WeaponsComp_isBoss_R_boolean)(jcontext ctx, jobject self);
+#define VTABLE_mindustry_entities_comp_WeaponsComp_isGrounded_R_boolean 91
+typedef jbool (*func_mindustry_entities_comp_WeaponsComp_isGrounded_R_boolean)(jcontext ctx, jobject self);
+#define VTABLE_mindustry_entities_comp_WeaponsComp_isImmune_mindustry_type_StatusEffect_R_boolean 92
+typedef jbool (*func_mindustry_entities_comp_WeaponsComp_isImmune_mindustry_type_StatusEffect_R_boolean)(jcontext ctx, jobject self, jobject param0);
+#define VTABLE_mindustry_entities_comp_WeaponsComp_armorOverride_R_float 93
+typedef jfloat (*func_mindustry_entities_comp_WeaponsComp_armorOverride_R_float)(jcontext ctx, jobject self);
+#define VTABLE_mindustry_entities_comp_WeaponsComp_buildSpeedMultiplier_R_float 94
+typedef jfloat (*func_mindustry_entities_comp_WeaponsComp_buildSpeedMultiplier_R_float)(jcontext ctx, jobject self);
+#define VTABLE_mindustry_entities_comp_WeaponsComp_damageMultiplier_R_float 95
+typedef jfloat (*func_mindustry_entities_comp_WeaponsComp_damageMultiplier_R_float)(jcontext ctx, jobject self);
+#define VTABLE_mindustry_entities_comp_WeaponsComp_dragMultiplier_R_float 96
+typedef jfloat (*func_mindustry_entities_comp_WeaponsComp_dragMultiplier_R_float)(jcontext ctx, jobject self);
+#define VTABLE_mindustry_entities_comp_WeaponsComp_getDuration_mindustry_type_StatusEffect_R_float 97
+typedef jfloat (*func_mindustry_entities_comp_WeaponsComp_getDuration_mindustry_type_StatusEffect_R_float)(jcontext ctx, jobject self, jobject param0);
+#define VTABLE_mindustry_entities_comp_WeaponsComp_healthMultiplier_R_float 98
+typedef jfloat (*func_mindustry_entities_comp_WeaponsComp_healthMultiplier_R_float)(jcontext ctx, jobject self);
+#define VTABLE_mindustry_entities_comp_WeaponsComp_reloadMultiplier_R_float 99
+typedef jfloat (*func_mindustry_entities_comp_WeaponsComp_reloadMultiplier_R_float)(jcontext ctx, jobject self);
+#define VTABLE_mindustry_entities_comp_WeaponsComp_speedMultiplier_R_float 100
+typedef jfloat (*func_mindustry_entities_comp_WeaponsComp_speedMultiplier_R_float)(jcontext ctx, jobject self);
+#define VTABLE_mindustry_entities_comp_WeaponsComp_armorOverride_float 101
+typedef void (*func_mindustry_entities_comp_WeaponsComp_armorOverride_float)(jcontext ctx, jobject self, jfloat param0);
+#define VTABLE_mindustry_entities_comp_WeaponsComp_buildSpeedMultiplier_float 102
+typedef void (*func_mindustry_entities_comp_WeaponsComp_buildSpeedMultiplier_float)(jcontext ctx, jobject self, jfloat param0);
+#define VTABLE_mindustry_entities_comp_WeaponsComp_clearStatuses 103
+typedef void (*func_mindustry_entities_comp_WeaponsComp_clearStatuses)(jcontext ctx, jobject self);
+#define VTABLE_mindustry_entities_comp_WeaponsComp_damageMultiplier_float 104
+typedef void (*func_mindustry_entities_comp_WeaponsComp_damageMultiplier_float)(jcontext ctx, jobject self, jfloat param0);
+#define VTABLE_mindustry_entities_comp_WeaponsComp_disarmed_boolean 105
+typedef void (*func_mindustry_entities_comp_WeaponsComp_disarmed_boolean)(jcontext ctx, jobject self, jbool param0);
+#define VTABLE_mindustry_entities_comp_WeaponsComp_dragMultiplier_float 106
+typedef void (*func_mindustry_entities_comp_WeaponsComp_dragMultiplier_float)(jcontext ctx, jobject self, jfloat param0);
+#define VTABLE_mindustry_entities_comp_WeaponsComp_draw 107
+typedef void (*func_mindustry_entities_comp_WeaponsComp_draw)(jcontext ctx, jobject self);
+#define VTABLE_mindustry_entities_comp_WeaponsComp_healthMultiplier_float 108
+typedef void (*func_mindustry_entities_comp_WeaponsComp_healthMultiplier_float)(jcontext ctx, jobject self, jfloat param0);
+#define VTABLE_mindustry_entities_comp_WeaponsComp_reloadMultiplier_float 109
+typedef void (*func_mindustry_entities_comp_WeaponsComp_reloadMultiplier_float)(jcontext ctx, jobject self, jfloat param0);
+#define VTABLE_mindustry_entities_comp_WeaponsComp_setDuration_mindustry_type_StatusEffect_float 110
+typedef void (*func_mindustry_entities_comp_WeaponsComp_setDuration_mindustry_type_StatusEffect_float)(jcontext ctx, jobject self, jobject param0, jfloat param1);
+#define VTABLE_mindustry_entities_comp_WeaponsComp_speedMultiplier_float 111
+typedef void (*func_mindustry_entities_comp_WeaponsComp_speedMultiplier_float)(jcontext ctx, jobject self, jfloat param0);
+#define VTABLE_mindustry_entities_comp_WeaponsComp_setWeaponRotation_float 112
+typedef void (*func_mindustry_entities_comp_WeaponsComp_setWeaponRotation_float)(jcontext ctx, jobject self, jfloat param0);
+#define VTABLE_mindustry_entities_comp_WeaponsComp_setupWeapons_mindustry_type_UnitType 113
+typedef void (*func_mindustry_entities_comp_WeaponsComp_setupWeapons_mindustry_type_UnitType)(jcontext ctx, jobject self, jobject param0);
+#define VTABLE_mindustry_entities_comp_WeaponsComp_controlWeapons_boolean 114
+typedef void (*func_mindustry_entities_comp_WeaponsComp_controlWeapons_boolean)(jcontext ctx, jobject self, jbool param0);
+#define VTABLE_mindustry_entities_comp_WeaponsComp_controlWeapons_boolean_boolean 115
+typedef void (*func_mindustry_entities_comp_WeaponsComp_controlWeapons_boolean_boolean)(jcontext ctx, jobject self, jbool param0, jbool param1);
+#define VTABLE_mindustry_entities_comp_WeaponsComp_aim_arc_math_geom_Position 116
+typedef void (*func_mindustry_entities_comp_WeaponsComp_aim_arc_math_geom_Position)(jcontext ctx, jobject self, jobject param0);
+#define VTABLE_mindustry_entities_comp_WeaponsComp_aim_float_float 117
+typedef void (*func_mindustry_entities_comp_WeaponsComp_aim_float_float)(jcontext ctx, jobject self, jfloat param0, jfloat param1);
+#define VTABLE_mindustry_entities_comp_WeaponsComp_aim_float_float_boolean 118
+typedef void (*func_mindustry_entities_comp_WeaponsComp_aim_float_float_boolean)(jcontext ctx, jobject self, jfloat param0, jfloat param1, jbool param2);
+#define VTABLE_mindustry_entities_comp_WeaponsComp_canShoot_R_boolean 119
+typedef jbool (*func_mindustry_entities_comp_WeaponsComp_canShoot_R_boolean)(jcontext ctx, jobject self);
+
+void mark_mindustry_entities_comp_WeaponsComp(jobject object, jint mark, jint depth);
+void clinit_mindustry_entities_comp_WeaponsComp(jcontext ctx);
+void init_mindustry_entities_comp_WeaponsComp(jcontext ctx, jobject self);
+void M_mindustry_entities_comp_WeaponsComp_setWeaponRotation_float(jcontext ctx, jobject self, jfloat param0);
+void M_mindustry_entities_comp_WeaponsComp_setupWeapons_mindustry_type_UnitType(jcontext ctx, jobject self, jobject param0);
+void M_mindustry_entities_comp_WeaponsComp_controlWeapons_boolean(jcontext ctx, jobject self, jbool param0);
+void M_mindustry_entities_comp_WeaponsComp_controlWeapons_boolean_boolean(jcontext ctx, jobject self, jbool param0, jbool param1);
+void M_mindustry_entities_comp_WeaponsComp_aim_arc_math_geom_Position(jcontext ctx, jobject self, jobject param0);
+void M_mindustry_entities_comp_WeaponsComp_aim_float_float(jcontext ctx, jobject self, jfloat param0, jfloat param1);
+void M_mindustry_entities_comp_WeaponsComp_aim_float_float_boolean(jcontext ctx, jobject self, jfloat param0, jfloat param1, jbool param2);
+jbool M_mindustry_entities_comp_WeaponsComp_canShoot_R_boolean(jcontext ctx, jobject self);
+void M_mindustry_entities_comp_WeaponsComp_remove(jcontext ctx, jobject self);
+void M_mindustry_entities_comp_WeaponsComp_update(jcontext ctx, jobject self);
+
+#ifdef __cplusplus
+}
+#endif
+
+#endif

@@ -1,0 +1,125 @@
+#ifndef HEADER_mindustry_graphics_g3d_PlanetRenderer
+#define HEADER_mindustry_graphics_g3d_PlanetRenderer
+
+#include "Clearwing.h"
+#include "java/lang/Object.h"
+#include "arc/util/Disposable.h"
+
+#ifdef __cplusplus
+extern "C" {
+#endif
+
+typedef struct mindustry_graphics_g3d_PlanetRenderer {
+	java_lang_Object parent;
+	jref F_cam;
+	jref F_batch;
+	jref F_projector;
+	jref F_mat;
+	jref F_bloom;
+	jref F_atmosphere;
+	jref F_skybox;
+} mindustry_graphics_g3d_PlanetRenderer;
+
+extern Class class_mindustry_graphics_g3d_PlanetRenderer;
+
+extern jfloat SF_mindustry_graphics_g3d_PlanetRenderer_outlineRad;
+extern jfloat SF_mindustry_graphics_g3d_PlanetRenderer_camLength;
+extern jobject SF_mindustry_graphics_g3d_PlanetRenderer_outlineColor;
+extern jobject SF_mindustry_graphics_g3d_PlanetRenderer_hoverColor;
+extern jobject SF_mindustry_graphics_g3d_PlanetRenderer_borderColor;
+extern jobject SF_mindustry_graphics_g3d_PlanetRenderer_shadowColor;
+
+#define VTABLE_mindustry_graphics_g3d_PlanetRenderer_hashCode_R_int 0
+typedef jint (*func_mindustry_graphics_g3d_PlanetRenderer_hashCode_R_int)(jcontext ctx, jobject self);
+#define VTABLE_mindustry_graphics_g3d_PlanetRenderer_equals_java_lang_Object_R_boolean 1
+typedef jbool (*func_mindustry_graphics_g3d_PlanetRenderer_equals_java_lang_Object_R_boolean)(jcontext ctx, jobject self, jobject param0);
+#define VTABLE_mindustry_graphics_g3d_PlanetRenderer_clone_R_java_lang_Object 2
+typedef jobject (*func_mindustry_graphics_g3d_PlanetRenderer_clone_R_java_lang_Object)(jcontext ctx, jobject self);
+#define VTABLE_mindustry_graphics_g3d_PlanetRenderer_getClass_R_java_lang_Class 3
+typedef jobject (*func_mindustry_graphics_g3d_PlanetRenderer_getClass_R_java_lang_Class)(jcontext ctx, jobject self);
+#define VTABLE_mindustry_graphics_g3d_PlanetRenderer_toString_R_java_lang_String 4
+typedef jobject (*func_mindustry_graphics_g3d_PlanetRenderer_toString_R_java_lang_String)(jcontext ctx, jobject self);
+#define VTABLE_mindustry_graphics_g3d_PlanetRenderer_finalize 5
+typedef void (*func_mindustry_graphics_g3d_PlanetRenderer_finalize)(jcontext ctx, jobject self);
+#define VTABLE_mindustry_graphics_g3d_PlanetRenderer_notify 6
+typedef void (*func_mindustry_graphics_g3d_PlanetRenderer_notify)(jcontext ctx, jobject self);
+#define VTABLE_mindustry_graphics_g3d_PlanetRenderer_notifyAll 7
+typedef void (*func_mindustry_graphics_g3d_PlanetRenderer_notifyAll)(jcontext ctx, jobject self);
+#define VTABLE_mindustry_graphics_g3d_PlanetRenderer_wait 8
+typedef void (*func_mindustry_graphics_g3d_PlanetRenderer_wait)(jcontext ctx, jobject self);
+#define VTABLE_mindustry_graphics_g3d_PlanetRenderer_wait_long 9
+typedef void (*func_mindustry_graphics_g3d_PlanetRenderer_wait_long)(jcontext ctx, jobject self, jlong param0);
+#define VTABLE_mindustry_graphics_g3d_PlanetRenderer_wait_long_int 10
+typedef void (*func_mindustry_graphics_g3d_PlanetRenderer_wait_long_int)(jcontext ctx, jobject self, jlong param0, jint param1);
+#define VTABLE_mindustry_graphics_g3d_PlanetRenderer_dispose 11
+typedef void (*func_mindustry_graphics_g3d_PlanetRenderer_dispose)(jcontext ctx, jobject self);
+#define VTABLE_mindustry_graphics_g3d_PlanetRenderer_isDisposed_R_boolean 12
+typedef jbool (*func_mindustry_graphics_g3d_PlanetRenderer_isDisposed_R_boolean)(jcontext ctx, jobject self);
+#define VTABLE_mindustry_graphics_g3d_PlanetRenderer_render_mindustry_graphics_g3d_PlanetParams 13
+typedef void (*func_mindustry_graphics_g3d_PlanetRenderer_render_mindustry_graphics_g3d_PlanetParams)(jcontext ctx, jobject self, jobject param0);
+#define VTABLE_mindustry_graphics_g3d_PlanetRenderer_renderPlanet_mindustry_type_Planet_mindustry_graphics_g3d_PlanetParams 14
+typedef void (*func_mindustry_graphics_g3d_PlanetRenderer_renderPlanet_mindustry_type_Planet_mindustry_graphics_g3d_PlanetParams)(jcontext ctx, jobject self, jobject param0, jobject param1);
+#define VTABLE_mindustry_graphics_g3d_PlanetRenderer_renderTransparent_mindustry_type_Planet_mindustry_graphics_g3d_PlanetParams 15
+typedef void (*func_mindustry_graphics_g3d_PlanetRenderer_renderTransparent_mindustry_type_Planet_mindustry_graphics_g3d_PlanetParams)(jcontext ctx, jobject self, jobject param0, jobject param1);
+#define VTABLE_mindustry_graphics_g3d_PlanetRenderer_renderOrbit_mindustry_type_Planet_mindustry_graphics_g3d_PlanetParams 16
+typedef void (*func_mindustry_graphics_g3d_PlanetRenderer_renderOrbit_mindustry_type_Planet_mindustry_graphics_g3d_PlanetParams)(jcontext ctx, jobject self, jobject param0, jobject param1);
+#define VTABLE_mindustry_graphics_g3d_PlanetRenderer_renderSectors_mindustry_type_Planet_mindustry_graphics_g3d_PlanetParams 17
+typedef void (*func_mindustry_graphics_g3d_PlanetRenderer_renderSectors_mindustry_type_Planet_mindustry_graphics_g3d_PlanetParams)(jcontext ctx, jobject self, jobject param0, jobject param1);
+#define VTABLE_mindustry_graphics_g3d_PlanetRenderer_drawArcLine_mindustry_type_Planet_arc_math_geom_Vec3_arc_math_geom_Vec3 18
+typedef void (*func_mindustry_graphics_g3d_PlanetRenderer_drawArcLine_mindustry_type_Planet_arc_math_geom_Vec3_arc_math_geom_Vec3)(jcontext ctx, jobject self, jobject param0, jobject param1, jobject param2);
+#define VTABLE_mindustry_graphics_g3d_PlanetRenderer_drawArc_mindustry_type_Planet_arc_math_geom_Vec3_arc_math_geom_Vec3 19
+typedef void (*func_mindustry_graphics_g3d_PlanetRenderer_drawArc_mindustry_type_Planet_arc_math_geom_Vec3_arc_math_geom_Vec3)(jcontext ctx, jobject self, jobject param0, jobject param1, jobject param2);
+#define VTABLE_mindustry_graphics_g3d_PlanetRenderer_drawArc_mindustry_type_Planet_arc_math_geom_Vec3_arc_math_geom_Vec3_arc_graphics_Color_arc_graphics_Color_float 20
+typedef void (*func_mindustry_graphics_g3d_PlanetRenderer_drawArc_mindustry_type_Planet_arc_math_geom_Vec3_arc_math_geom_Vec3_arc_graphics_Color_arc_graphics_Color_float)(jcontext ctx, jobject self, jobject param0, jobject param1, jobject param2, jobject param3, jobject param4, jfloat param5);
+#define VTABLE_mindustry_graphics_g3d_PlanetRenderer_drawArc_mindustry_type_Planet_arc_math_geom_Vec3_arc_math_geom_Vec3_arc_graphics_Color_arc_graphics_Color_float_float_int 21
+typedef void (*func_mindustry_graphics_g3d_PlanetRenderer_drawArc_mindustry_type_Planet_arc_math_geom_Vec3_arc_math_geom_Vec3_arc_graphics_Color_arc_graphics_Color_float_float_int)(jcontext ctx, jobject self, jobject param0, jobject param1, jobject param2, jobject param3, jobject param4, jfloat param5, jfloat param6, jint param7);
+#define VTABLE_mindustry_graphics_g3d_PlanetRenderer_drawArcLine_mindustry_type_Planet_arc_math_geom_Vec3_arc_math_geom_Vec3_arc_graphics_Color_arc_graphics_Color_float_float_int_float 22
+typedef void (*func_mindustry_graphics_g3d_PlanetRenderer_drawArcLine_mindustry_type_Planet_arc_math_geom_Vec3_arc_math_geom_Vec3_arc_graphics_Color_arc_graphics_Color_float_float_int_float)(jcontext ctx, jobject self, jobject param0, jobject param1, jobject param2, jobject param3, jobject param4, jfloat param5, jfloat param6, jint param7, jfloat param8);
+#define VTABLE_mindustry_graphics_g3d_PlanetRenderer_drawBorders_mindustry_type_Sector_arc_graphics_Color_float 23
+typedef void (*func_mindustry_graphics_g3d_PlanetRenderer_drawBorders_mindustry_type_Sector_arc_graphics_Color_float)(jcontext ctx, jobject self, jobject param0, jobject param1, jfloat param2);
+#define VTABLE_mindustry_graphics_g3d_PlanetRenderer_drawPlane_mindustry_type_Sector_java_lang_Runnable 24
+typedef void (*func_mindustry_graphics_g3d_PlanetRenderer_drawPlane_mindustry_type_Sector_java_lang_Runnable)(jcontext ctx, jobject self, jobject param0, jobject param1);
+#define VTABLE_mindustry_graphics_g3d_PlanetRenderer_setPlane_mindustry_type_Sector 25
+typedef void (*func_mindustry_graphics_g3d_PlanetRenderer_setPlane_mindustry_type_Sector)(jcontext ctx, jobject self, jobject param0);
+#define VTABLE_mindustry_graphics_g3d_PlanetRenderer_fill_mindustry_type_Sector_arc_graphics_Color_float 26
+typedef void (*func_mindustry_graphics_g3d_PlanetRenderer_fill_mindustry_type_Sector_arc_graphics_Color_float)(jcontext ctx, jobject self, jobject param0, jobject param1, jfloat param2);
+#define VTABLE_mindustry_graphics_g3d_PlanetRenderer_drawSelection_mindustry_type_Sector_float 27
+typedef void (*func_mindustry_graphics_g3d_PlanetRenderer_drawSelection_mindustry_type_Sector_float)(jcontext ctx, jobject self, jobject param0, jfloat param1);
+#define VTABLE_mindustry_graphics_g3d_PlanetRenderer_drawSelection_mindustry_type_Sector_arc_graphics_Color_float_float 28
+typedef void (*func_mindustry_graphics_g3d_PlanetRenderer_drawSelection_mindustry_type_Sector_arc_graphics_Color_float_float)(jcontext ctx, jobject self, jobject param0, jobject param1, jfloat param2, jfloat param3);
+#define VTABLE_mindustry_graphics_g3d_PlanetRenderer_drawSpecialSelection_mindustry_type_Sector_arc_graphics_Color_float_float 29
+typedef void (*func_mindustry_graphics_g3d_PlanetRenderer_drawSpecialSelection_mindustry_type_Sector_arc_graphics_Color_float_float)(jcontext ctx, jobject self, jobject param0, jobject param1, jfloat param2, jfloat param3);
+#define VTABLE_mindustry_graphics_g3d_PlanetRenderer_lambda$drawPlane$0_mindustry_type_Sector_java_lang_Runnable 30
+typedef void (*func_mindustry_graphics_g3d_PlanetRenderer_lambda$drawPlane$0_mindustry_type_Sector_java_lang_Runnable)(jcontext ctx, jobject self, jobject param0, jobject param1);
+#define VTABLE_mindustry_graphics_g3d_PlanetRenderer_lambda$renderOrbit$0_arc_math_geom_Vec3_mindustry_graphics_g3d_PlanetParams_float_float 31
+typedef void (*func_mindustry_graphics_g3d_PlanetRenderer_lambda$renderOrbit$0_arc_math_geom_Vec3_mindustry_graphics_g3d_PlanetParams_float_float)(jcontext ctx, jobject self, jobject param0, jobject param1, jfloat param2, jfloat param3);
+
+void mark_mindustry_graphics_g3d_PlanetRenderer(jobject object, jint mark, jint depth);
+void clinit_mindustry_graphics_g3d_PlanetRenderer(jcontext ctx);
+void init_mindustry_graphics_g3d_PlanetRenderer(jcontext ctx, jobject self);
+void M_mindustry_graphics_g3d_PlanetRenderer_render_mindustry_graphics_g3d_PlanetParams(jcontext ctx, jobject self, jobject param0);
+void M_mindustry_graphics_g3d_PlanetRenderer_renderPlanet_mindustry_type_Planet_mindustry_graphics_g3d_PlanetParams(jcontext ctx, jobject self, jobject param0, jobject param1);
+void M_mindustry_graphics_g3d_PlanetRenderer_renderTransparent_mindustry_type_Planet_mindustry_graphics_g3d_PlanetParams(jcontext ctx, jobject self, jobject param0, jobject param1);
+void M_mindustry_graphics_g3d_PlanetRenderer_renderOrbit_mindustry_type_Planet_mindustry_graphics_g3d_PlanetParams(jcontext ctx, jobject self, jobject param0, jobject param1);
+void M_mindustry_graphics_g3d_PlanetRenderer_renderSectors_mindustry_type_Planet_mindustry_graphics_g3d_PlanetParams(jcontext ctx, jobject self, jobject param0, jobject param1);
+void M_mindustry_graphics_g3d_PlanetRenderer_drawArcLine_mindustry_type_Planet_arc_math_geom_Vec3_arc_math_geom_Vec3(jcontext ctx, jobject self, jobject param0, jobject param1, jobject param2);
+void M_mindustry_graphics_g3d_PlanetRenderer_drawArc_mindustry_type_Planet_arc_math_geom_Vec3_arc_math_geom_Vec3(jcontext ctx, jobject self, jobject param0, jobject param1, jobject param2);
+void M_mindustry_graphics_g3d_PlanetRenderer_drawArc_mindustry_type_Planet_arc_math_geom_Vec3_arc_math_geom_Vec3_arc_graphics_Color_arc_graphics_Color_float(jcontext ctx, jobject self, jobject param0, jobject param1, jobject param2, jobject param3, jobject param4, jfloat param5);
+void M_mindustry_graphics_g3d_PlanetRenderer_drawArc_mindustry_type_Planet_arc_math_geom_Vec3_arc_math_geom_Vec3_arc_graphics_Color_arc_graphics_Color_float_float_int(jcontext ctx, jobject self, jobject param0, jobject param1, jobject param2, jobject param3, jobject param4, jfloat param5, jfloat param6, jint param7);
+void M_mindustry_graphics_g3d_PlanetRenderer_drawArcLine_mindustry_type_Planet_arc_math_geom_Vec3_arc_math_geom_Vec3_arc_graphics_Color_arc_graphics_Color_float_float_int_float(jcontext ctx, jobject self, jobject param0, jobject param1, jobject param2, jobject param3, jobject param4, jfloat param5, jfloat param6, jint param7, jfloat param8);
+void M_mindustry_graphics_g3d_PlanetRenderer_drawBorders_mindustry_type_Sector_arc_graphics_Color_float(jcontext ctx, jobject self, jobject param0, jobject param1, jfloat param2);
+void M_mindustry_graphics_g3d_PlanetRenderer_drawPlane_mindustry_type_Sector_java_lang_Runnable(jcontext ctx, jobject self, jobject param0, jobject param1);
+void M_mindustry_graphics_g3d_PlanetRenderer_setPlane_mindustry_type_Sector(jcontext ctx, jobject self, jobject param0);
+void M_mindustry_graphics_g3d_PlanetRenderer_fill_mindustry_type_Sector_arc_graphics_Color_float(jcontext ctx, jobject self, jobject param0, jobject param1, jfloat param2);
+void M_mindustry_graphics_g3d_PlanetRenderer_drawSelection_mindustry_type_Sector_float(jcontext ctx, jobject self, jobject param0, jfloat param1);
+void M_mindustry_graphics_g3d_PlanetRenderer_drawSelection_mindustry_type_Sector_arc_graphics_Color_float_float(jcontext ctx, jobject self, jobject param0, jobject param1, jfloat param2, jfloat param3);
+void M_mindustry_graphics_g3d_PlanetRenderer_drawSpecialSelection_mindustry_type_Sector_arc_graphics_Color_float_float(jcontext ctx, jobject self, jobject param0, jobject param1, jfloat param2, jfloat param3);
+void M_mindustry_graphics_g3d_PlanetRenderer_dispose(jcontext ctx, jobject self);
+void M_mindustry_graphics_g3d_PlanetRenderer_lambda$drawPlane$0_mindustry_type_Sector_java_lang_Runnable(jcontext ctx, jobject self, jobject param0, jobject param1);
+void M_mindustry_graphics_g3d_PlanetRenderer_lambda$renderOrbit$0_arc_math_geom_Vec3_mindustry_graphics_g3d_PlanetParams_float_float(jcontext ctx, jobject self, jobject param0, jobject param1, jfloat param2, jfloat param3);
+
+#ifdef __cplusplus
+}
+#endif
+
+#endif

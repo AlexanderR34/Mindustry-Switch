@@ -1,0 +1,124 @@
+#ifndef HEADER_java_lang_ProcessBuilder
+#define HEADER_java_lang_ProcessBuilder
+
+#include "Clearwing.h"
+#include "java/lang/Object.h"
+
+#ifdef __cplusplus
+extern "C" {
+#endif
+
+typedef struct java_lang_ProcessBuilder {
+	java_lang_Object parent;
+	jref F_command;
+	jref F_directory;
+	jref F_environment;
+	jbool F_redirectErrorStream;
+	jref F_redirects;
+} java_lang_ProcessBuilder;
+
+extern Class class_java_lang_ProcessBuilder;
+
+extern jbool SF_java_lang_ProcessBuilder_$assertionsDisabled;
+
+#define VTABLE_java_lang_ProcessBuilder_hashCode_R_int 0
+typedef jint (*func_java_lang_ProcessBuilder_hashCode_R_int)(jcontext ctx, jobject self);
+#define VTABLE_java_lang_ProcessBuilder_equals_java_lang_Object_R_boolean 1
+typedef jbool (*func_java_lang_ProcessBuilder_equals_java_lang_Object_R_boolean)(jcontext ctx, jobject self, jobject param0);
+#define VTABLE_java_lang_ProcessBuilder_clone_R_java_lang_Object 2
+typedef jobject (*func_java_lang_ProcessBuilder_clone_R_java_lang_Object)(jcontext ctx, jobject self);
+#define VTABLE_java_lang_ProcessBuilder_getClass_R_java_lang_Class 3
+typedef jobject (*func_java_lang_ProcessBuilder_getClass_R_java_lang_Class)(jcontext ctx, jobject self);
+#define VTABLE_java_lang_ProcessBuilder_toString_R_java_lang_String 4
+typedef jobject (*func_java_lang_ProcessBuilder_toString_R_java_lang_String)(jcontext ctx, jobject self);
+#define VTABLE_java_lang_ProcessBuilder_finalize 5
+typedef void (*func_java_lang_ProcessBuilder_finalize)(jcontext ctx, jobject self);
+#define VTABLE_java_lang_ProcessBuilder_notify 6
+typedef void (*func_java_lang_ProcessBuilder_notify)(jcontext ctx, jobject self);
+#define VTABLE_java_lang_ProcessBuilder_notifyAll 7
+typedef void (*func_java_lang_ProcessBuilder_notifyAll)(jcontext ctx, jobject self);
+#define VTABLE_java_lang_ProcessBuilder_wait 8
+typedef void (*func_java_lang_ProcessBuilder_wait)(jcontext ctx, jobject self);
+#define VTABLE_java_lang_ProcessBuilder_wait_long 9
+typedef void (*func_java_lang_ProcessBuilder_wait_long)(jcontext ctx, jobject self, jlong param0);
+#define VTABLE_java_lang_ProcessBuilder_wait_long_int 10
+typedef void (*func_java_lang_ProcessBuilder_wait_long_int)(jcontext ctx, jobject self, jlong param0, jint param1);
+#define VTABLE_java_lang_ProcessBuilder_command_java_util_List_R_java_lang_ProcessBuilder 11
+typedef jobject (*func_java_lang_ProcessBuilder_command_java_util_List_R_java_lang_ProcessBuilder)(jcontext ctx, jobject self, jobject param0);
+#define VTABLE_java_lang_ProcessBuilder_command_Array1_java_lang_String_R_java_lang_ProcessBuilder 12
+typedef jobject (*func_java_lang_ProcessBuilder_command_Array1_java_lang_String_R_java_lang_ProcessBuilder)(jcontext ctx, jobject self, jobject param0);
+#define VTABLE_java_lang_ProcessBuilder_command_R_java_util_List 13
+typedef jobject (*func_java_lang_ProcessBuilder_command_R_java_util_List)(jcontext ctx, jobject self);
+#define VTABLE_java_lang_ProcessBuilder_environment_R_java_util_Map 14
+typedef jobject (*func_java_lang_ProcessBuilder_environment_R_java_util_Map)(jcontext ctx, jobject self);
+#define VTABLE_java_lang_ProcessBuilder_environment_Array1_java_lang_String_R_java_lang_ProcessBuilder 15
+typedef jobject (*func_java_lang_ProcessBuilder_environment_Array1_java_lang_String_R_java_lang_ProcessBuilder)(jcontext ctx, jobject self, jobject param0);
+#define VTABLE_java_lang_ProcessBuilder_directory_R_java_io_File 16
+typedef jobject (*func_java_lang_ProcessBuilder_directory_R_java_io_File)(jcontext ctx, jobject self);
+#define VTABLE_java_lang_ProcessBuilder_directory_java_io_File_R_java_lang_ProcessBuilder 17
+typedef jobject (*func_java_lang_ProcessBuilder_directory_java_io_File_R_java_lang_ProcessBuilder)(jcontext ctx, jobject self, jobject param0);
+#define VTABLE_java_lang_ProcessBuilder_redirects_R_Array1_java_lang_ProcessBuilder$Redirect 18
+typedef jobject (*func_java_lang_ProcessBuilder_redirects_R_Array1_java_lang_ProcessBuilder$Redirect)(jcontext ctx, jobject self);
+#define VTABLE_java_lang_ProcessBuilder_redirectInput_java_lang_ProcessBuilder$Redirect_R_java_lang_ProcessBuilder 19
+typedef jobject (*func_java_lang_ProcessBuilder_redirectInput_java_lang_ProcessBuilder$Redirect_R_java_lang_ProcessBuilder)(jcontext ctx, jobject self, jobject param0);
+#define VTABLE_java_lang_ProcessBuilder_redirectOutput_java_lang_ProcessBuilder$Redirect_R_java_lang_ProcessBuilder 20
+typedef jobject (*func_java_lang_ProcessBuilder_redirectOutput_java_lang_ProcessBuilder$Redirect_R_java_lang_ProcessBuilder)(jcontext ctx, jobject self, jobject param0);
+#define VTABLE_java_lang_ProcessBuilder_redirectError_java_lang_ProcessBuilder$Redirect_R_java_lang_ProcessBuilder 21
+typedef jobject (*func_java_lang_ProcessBuilder_redirectError_java_lang_ProcessBuilder$Redirect_R_java_lang_ProcessBuilder)(jcontext ctx, jobject self, jobject param0);
+#define VTABLE_java_lang_ProcessBuilder_redirectInput_java_io_File_R_java_lang_ProcessBuilder 22
+typedef jobject (*func_java_lang_ProcessBuilder_redirectInput_java_io_File_R_java_lang_ProcessBuilder)(jcontext ctx, jobject self, jobject param0);
+#define VTABLE_java_lang_ProcessBuilder_redirectOutput_java_io_File_R_java_lang_ProcessBuilder 23
+typedef jobject (*func_java_lang_ProcessBuilder_redirectOutput_java_io_File_R_java_lang_ProcessBuilder)(jcontext ctx, jobject self, jobject param0);
+#define VTABLE_java_lang_ProcessBuilder_redirectError_java_io_File_R_java_lang_ProcessBuilder 24
+typedef jobject (*func_java_lang_ProcessBuilder_redirectError_java_io_File_R_java_lang_ProcessBuilder)(jcontext ctx, jobject self, jobject param0);
+#define VTABLE_java_lang_ProcessBuilder_redirectInput_R_java_lang_ProcessBuilder$Redirect 25
+typedef jobject (*func_java_lang_ProcessBuilder_redirectInput_R_java_lang_ProcessBuilder$Redirect)(jcontext ctx, jobject self);
+#define VTABLE_java_lang_ProcessBuilder_redirectOutput_R_java_lang_ProcessBuilder$Redirect 26
+typedef jobject (*func_java_lang_ProcessBuilder_redirectOutput_R_java_lang_ProcessBuilder$Redirect)(jcontext ctx, jobject self);
+#define VTABLE_java_lang_ProcessBuilder_redirectError_R_java_lang_ProcessBuilder$Redirect 27
+typedef jobject (*func_java_lang_ProcessBuilder_redirectError_R_java_lang_ProcessBuilder$Redirect)(jcontext ctx, jobject self);
+#define VTABLE_java_lang_ProcessBuilder_inheritIO_R_java_lang_ProcessBuilder 28
+typedef jobject (*func_java_lang_ProcessBuilder_inheritIO_R_java_lang_ProcessBuilder)(jcontext ctx, jobject self);
+#define VTABLE_java_lang_ProcessBuilder_redirectErrorStream_R_boolean 29
+typedef jbool (*func_java_lang_ProcessBuilder_redirectErrorStream_R_boolean)(jcontext ctx, jobject self);
+#define VTABLE_java_lang_ProcessBuilder_redirectErrorStream_boolean_R_java_lang_ProcessBuilder 30
+typedef jobject (*func_java_lang_ProcessBuilder_redirectErrorStream_boolean_R_java_lang_ProcessBuilder)(jcontext ctx, jobject self, jbool param0);
+#define VTABLE_java_lang_ProcessBuilder_start_R_java_lang_Process 31
+typedef jobject (*func_java_lang_ProcessBuilder_start_R_java_lang_Process)(jcontext ctx, jobject self);
+#define VTABLE_java_lang_ProcessBuilder_start_Array1_java_lang_ProcessBuilder$Redirect_R_java_lang_Process 32
+typedef jobject (*func_java_lang_ProcessBuilder_start_Array1_java_lang_ProcessBuilder$Redirect_R_java_lang_Process)(jcontext ctx, jobject self, jobject param0);
+
+void mark_java_lang_ProcessBuilder(jobject object, jint mark, jint depth);
+void clinit_java_lang_ProcessBuilder(jcontext ctx);
+void init_java_lang_ProcessBuilder_java_util_List(jcontext ctx, jobject self, jobject param0);
+void init_java_lang_ProcessBuilder_Array1_java_lang_String(jcontext ctx, jobject self, jobject param0);
+jobject M_java_lang_ProcessBuilder_command_java_util_List_R_java_lang_ProcessBuilder(jcontext ctx, jobject self, jobject param0);
+jobject M_java_lang_ProcessBuilder_command_Array1_java_lang_String_R_java_lang_ProcessBuilder(jcontext ctx, jobject self, jobject param0);
+jobject M_java_lang_ProcessBuilder_command_R_java_util_List(jcontext ctx, jobject self);
+jobject M_java_lang_ProcessBuilder_environment_R_java_util_Map(jcontext ctx, jobject self);
+jobject M_java_lang_ProcessBuilder_environment_Array1_java_lang_String_R_java_lang_ProcessBuilder(jcontext ctx, jobject self, jobject param0);
+jobject M_java_lang_ProcessBuilder_directory_R_java_io_File(jcontext ctx, jobject self);
+jobject M_java_lang_ProcessBuilder_directory_java_io_File_R_java_lang_ProcessBuilder(jcontext ctx, jobject self, jobject param0);
+jobject M_java_lang_ProcessBuilder_redirects_R_Array1_java_lang_ProcessBuilder$Redirect(jcontext ctx, jobject self);
+jobject M_java_lang_ProcessBuilder_redirectInput_java_lang_ProcessBuilder$Redirect_R_java_lang_ProcessBuilder(jcontext ctx, jobject self, jobject param0);
+jobject M_java_lang_ProcessBuilder_redirectOutput_java_lang_ProcessBuilder$Redirect_R_java_lang_ProcessBuilder(jcontext ctx, jobject self, jobject param0);
+jobject M_java_lang_ProcessBuilder_redirectError_java_lang_ProcessBuilder$Redirect_R_java_lang_ProcessBuilder(jcontext ctx, jobject self, jobject param0);
+jobject M_java_lang_ProcessBuilder_redirectInput_java_io_File_R_java_lang_ProcessBuilder(jcontext ctx, jobject self, jobject param0);
+jobject M_java_lang_ProcessBuilder_redirectOutput_java_io_File_R_java_lang_ProcessBuilder(jcontext ctx, jobject self, jobject param0);
+jobject M_java_lang_ProcessBuilder_redirectError_java_io_File_R_java_lang_ProcessBuilder(jcontext ctx, jobject self, jobject param0);
+jobject M_java_lang_ProcessBuilder_redirectInput_R_java_lang_ProcessBuilder$Redirect(jcontext ctx, jobject self);
+jobject M_java_lang_ProcessBuilder_redirectOutput_R_java_lang_ProcessBuilder$Redirect(jcontext ctx, jobject self);
+jobject M_java_lang_ProcessBuilder_redirectError_R_java_lang_ProcessBuilder$Redirect(jcontext ctx, jobject self);
+jobject M_java_lang_ProcessBuilder_inheritIO_R_java_lang_ProcessBuilder(jcontext ctx, jobject self);
+jbool M_java_lang_ProcessBuilder_redirectErrorStream_R_boolean(jcontext ctx, jobject self);
+jobject M_java_lang_ProcessBuilder_redirectErrorStream_boolean_R_java_lang_ProcessBuilder(jcontext ctx, jobject self, jbool param0);
+jobject M_java_lang_ProcessBuilder_start_R_java_lang_Process(jcontext ctx, jobject self);
+jobject M_java_lang_ProcessBuilder_start_Array1_java_lang_ProcessBuilder$Redirect_R_java_lang_Process(jcontext ctx, jobject self, jobject param0);
+jobject SM_java_lang_ProcessBuilder_startPipeline_java_util_List_R_java_util_List(jcontext ctx, jobject param0);
+void SM_java_lang_ProcessBuilder_lambda$startPipeline$0_java_lang_Process(jcontext ctx, jobject param0);
+
+#ifdef __cplusplus
+}
+#endif
+
+#endif

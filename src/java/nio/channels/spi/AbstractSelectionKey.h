@@ -1,0 +1,85 @@
+#ifndef HEADER_java_nio_channels_spi_AbstractSelectionKey
+#define HEADER_java_nio_channels_spi_AbstractSelectionKey
+
+#include "Clearwing.h"
+#include "java/nio/channels/SelectionKey.h"
+
+#ifdef __cplusplus
+extern "C" {
+#endif
+
+typedef struct java_nio_channels_spi_AbstractSelectionKey {
+	java_nio_channels_SelectionKey parent;
+	volatile jbool F_valid;
+} java_nio_channels_spi_AbstractSelectionKey;
+
+extern Class class_java_nio_channels_spi_AbstractSelectionKey;
+
+
+#define VTABLE_java_nio_channels_spi_AbstractSelectionKey_hashCode_R_int 0
+typedef jint (*func_java_nio_channels_spi_AbstractSelectionKey_hashCode_R_int)(jcontext ctx, jobject self);
+#define VTABLE_java_nio_channels_spi_AbstractSelectionKey_equals_java_lang_Object_R_boolean 1
+typedef jbool (*func_java_nio_channels_spi_AbstractSelectionKey_equals_java_lang_Object_R_boolean)(jcontext ctx, jobject self, jobject param0);
+#define VTABLE_java_nio_channels_spi_AbstractSelectionKey_clone_R_java_lang_Object 2
+typedef jobject (*func_java_nio_channels_spi_AbstractSelectionKey_clone_R_java_lang_Object)(jcontext ctx, jobject self);
+#define VTABLE_java_nio_channels_spi_AbstractSelectionKey_getClass_R_java_lang_Class 3
+typedef jobject (*func_java_nio_channels_spi_AbstractSelectionKey_getClass_R_java_lang_Class)(jcontext ctx, jobject self);
+#define VTABLE_java_nio_channels_spi_AbstractSelectionKey_toString_R_java_lang_String 4
+typedef jobject (*func_java_nio_channels_spi_AbstractSelectionKey_toString_R_java_lang_String)(jcontext ctx, jobject self);
+#define VTABLE_java_nio_channels_spi_AbstractSelectionKey_finalize 5
+typedef void (*func_java_nio_channels_spi_AbstractSelectionKey_finalize)(jcontext ctx, jobject self);
+#define VTABLE_java_nio_channels_spi_AbstractSelectionKey_notify 6
+typedef void (*func_java_nio_channels_spi_AbstractSelectionKey_notify)(jcontext ctx, jobject self);
+#define VTABLE_java_nio_channels_spi_AbstractSelectionKey_notifyAll 7
+typedef void (*func_java_nio_channels_spi_AbstractSelectionKey_notifyAll)(jcontext ctx, jobject self);
+#define VTABLE_java_nio_channels_spi_AbstractSelectionKey_wait 8
+typedef void (*func_java_nio_channels_spi_AbstractSelectionKey_wait)(jcontext ctx, jobject self);
+#define VTABLE_java_nio_channels_spi_AbstractSelectionKey_wait_long 9
+typedef void (*func_java_nio_channels_spi_AbstractSelectionKey_wait_long)(jcontext ctx, jobject self, jlong param0);
+#define VTABLE_java_nio_channels_spi_AbstractSelectionKey_wait_long_int 10
+typedef void (*func_java_nio_channels_spi_AbstractSelectionKey_wait_long_int)(jcontext ctx, jobject self, jlong param0, jint param1);
+#define VTABLE_java_nio_channels_spi_AbstractSelectionKey_channel_R_java_nio_channels_SelectableChannel 11
+typedef jobject (*func_java_nio_channels_spi_AbstractSelectionKey_channel_R_java_nio_channels_SelectableChannel)(jcontext ctx, jobject self);
+#define VTABLE_java_nio_channels_spi_AbstractSelectionKey_selector_R_java_nio_channels_Selector 12
+typedef jobject (*func_java_nio_channels_spi_AbstractSelectionKey_selector_R_java_nio_channels_Selector)(jcontext ctx, jobject self);
+#define VTABLE_java_nio_channels_spi_AbstractSelectionKey_isValid_R_boolean 13
+typedef jbool (*func_java_nio_channels_spi_AbstractSelectionKey_isValid_R_boolean)(jcontext ctx, jobject self);
+#define VTABLE_java_nio_channels_spi_AbstractSelectionKey_cancel 14
+typedef void (*func_java_nio_channels_spi_AbstractSelectionKey_cancel)(jcontext ctx, jobject self);
+#define VTABLE_java_nio_channels_spi_AbstractSelectionKey_interestOps_R_int 15
+typedef jint (*func_java_nio_channels_spi_AbstractSelectionKey_interestOps_R_int)(jcontext ctx, jobject self);
+#define VTABLE_java_nio_channels_spi_AbstractSelectionKey_interestOps_int_R_java_nio_channels_SelectionKey 16
+typedef jobject (*func_java_nio_channels_spi_AbstractSelectionKey_interestOps_int_R_java_nio_channels_SelectionKey)(jcontext ctx, jobject self, jint param0);
+#define VTABLE_java_nio_channels_spi_AbstractSelectionKey_interestOpsOr_int_R_int 17
+typedef jint (*func_java_nio_channels_spi_AbstractSelectionKey_interestOpsOr_int_R_int)(jcontext ctx, jobject self, jint param0);
+#define VTABLE_java_nio_channels_spi_AbstractSelectionKey_interestOpsAnd_int_R_int 18
+typedef jint (*func_java_nio_channels_spi_AbstractSelectionKey_interestOpsAnd_int_R_int)(jcontext ctx, jobject self, jint param0);
+#define VTABLE_java_nio_channels_spi_AbstractSelectionKey_readyOps_R_int 19
+typedef jint (*func_java_nio_channels_spi_AbstractSelectionKey_readyOps_R_int)(jcontext ctx, jobject self);
+#define VTABLE_java_nio_channels_spi_AbstractSelectionKey_isReadable_R_boolean 20
+typedef jbool (*func_java_nio_channels_spi_AbstractSelectionKey_isReadable_R_boolean)(jcontext ctx, jobject self);
+#define VTABLE_java_nio_channels_spi_AbstractSelectionKey_isWritable_R_boolean 21
+typedef jbool (*func_java_nio_channels_spi_AbstractSelectionKey_isWritable_R_boolean)(jcontext ctx, jobject self);
+#define VTABLE_java_nio_channels_spi_AbstractSelectionKey_isConnectable_R_boolean 22
+typedef jbool (*func_java_nio_channels_spi_AbstractSelectionKey_isConnectable_R_boolean)(jcontext ctx, jobject self);
+#define VTABLE_java_nio_channels_spi_AbstractSelectionKey_isAcceptable_R_boolean 23
+typedef jbool (*func_java_nio_channels_spi_AbstractSelectionKey_isAcceptable_R_boolean)(jcontext ctx, jobject self);
+#define VTABLE_java_nio_channels_spi_AbstractSelectionKey_attach_java_lang_Object_R_java_lang_Object 24
+typedef jobject (*func_java_nio_channels_spi_AbstractSelectionKey_attach_java_lang_Object_R_java_lang_Object)(jcontext ctx, jobject self, jobject param0);
+#define VTABLE_java_nio_channels_spi_AbstractSelectionKey_attachment_R_java_lang_Object 25
+typedef jobject (*func_java_nio_channels_spi_AbstractSelectionKey_attachment_R_java_lang_Object)(jcontext ctx, jobject self);
+#define VTABLE_java_nio_channels_spi_AbstractSelectionKey_invalidate 26
+typedef void (*func_java_nio_channels_spi_AbstractSelectionKey_invalidate)(jcontext ctx, jobject self);
+
+void mark_java_nio_channels_spi_AbstractSelectionKey(jobject object, jint mark, jint depth);
+void clinit_java_nio_channels_spi_AbstractSelectionKey(jcontext ctx);
+void init_java_nio_channels_spi_AbstractSelectionKey(jcontext ctx, jobject self);
+jbool M_java_nio_channels_spi_AbstractSelectionKey_isValid_R_boolean(jcontext ctx, jobject self);
+void M_java_nio_channels_spi_AbstractSelectionKey_invalidate(jcontext ctx, jobject self);
+void M_java_nio_channels_spi_AbstractSelectionKey_cancel(jcontext ctx, jobject self);
+
+#ifdef __cplusplus
+}
+#endif
+
+#endif

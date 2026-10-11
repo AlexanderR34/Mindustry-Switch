@@ -1,0 +1,132 @@
+#ifndef HEADER_java_text_DateFormatSymbols
+#define HEADER_java_text_DateFormatSymbols
+
+#include "Clearwing.h"
+#include "java/lang/Object.h"
+#include "java/lang/Cloneable.h"
+
+#ifdef __cplusplus
+extern "C" {
+#endif
+
+typedef struct java_text_DateFormatSymbols {
+	java_lang_Object parent;
+	jref F_resourceBundle;
+	jref F_ampms;
+	jref F_months;
+	jref F_zoneStrings;
+	jref F_shortMonths;
+	jref F_weekdays;
+	jref F_shortWeekdays;
+	jref F_eras;
+} java_text_DateFormatSymbols;
+
+extern Class class_java_text_DateFormatSymbols;
+
+extern jint SF_java_text_DateFormatSymbols_ZONE_ID;
+extern jint SF_java_text_DateFormatSymbols_ZONE_LONGNAME;
+extern jint SF_java_text_DateFormatSymbols_ZONE_SHORTNAME;
+extern jint SF_java_text_DateFormatSymbols_ZONE_LONGNAME_DST;
+extern jint SF_java_text_DateFormatSymbols_ZONE_SHORTNAME_DST;
+extern jobject SF_java_text_DateFormatSymbols_L10N_ZONE_LONGNAME;
+extern jobject SF_java_text_DateFormatSymbols_L10N_ZONE_SHORTNAME;
+extern jobject SF_java_text_DateFormatSymbols_L10N_ZONE_LONGNAME_DST;
+extern jobject SF_java_text_DateFormatSymbols_L10N_ZONE_SHORTNAME_DST;
+extern jobject SF_java_text_DateFormatSymbols_L10N_WEEKDAY_LONGNAME;
+extern jobject SF_java_text_DateFormatSymbols_L10N_WEEKDAY_SHORTNAME;
+extern jobject SF_java_text_DateFormatSymbols_L10N_MONTH_LONGNAME;
+extern jobject SF_java_text_DateFormatSymbols_L10N_MONTH_SHORTNAME;
+extern jobject SF_java_text_DateFormatSymbols_L10N_AMPM;
+extern jobject SF_java_text_DateFormatSymbols_L10N_ERA;
+extern jobject SF_java_text_DateFormatSymbols_MONTHS;
+extern jobject SF_java_text_DateFormatSymbols_WEEKDAYS;
+extern jobject SF_java_text_DateFormatSymbols_AMPMS;
+extern jobject SF_java_text_DateFormatSymbols_ERAS;
+
+#define VTABLE_java_text_DateFormatSymbols_hashCode_R_int 0
+typedef jint (*func_java_text_DateFormatSymbols_hashCode_R_int)(jcontext ctx, jobject self);
+#define VTABLE_java_text_DateFormatSymbols_equals_java_lang_Object_R_boolean 1
+typedef jbool (*func_java_text_DateFormatSymbols_equals_java_lang_Object_R_boolean)(jcontext ctx, jobject self, jobject param0);
+#define VTABLE_java_text_DateFormatSymbols_clone_R_java_lang_Object 2
+typedef jobject (*func_java_text_DateFormatSymbols_clone_R_java_lang_Object)(jcontext ctx, jobject self);
+#define VTABLE_java_text_DateFormatSymbols_getClass_R_java_lang_Class 3
+typedef jobject (*func_java_text_DateFormatSymbols_getClass_R_java_lang_Class)(jcontext ctx, jobject self);
+#define VTABLE_java_text_DateFormatSymbols_toString_R_java_lang_String 4
+typedef jobject (*func_java_text_DateFormatSymbols_toString_R_java_lang_String)(jcontext ctx, jobject self);
+#define VTABLE_java_text_DateFormatSymbols_finalize 5
+typedef void (*func_java_text_DateFormatSymbols_finalize)(jcontext ctx, jobject self);
+#define VTABLE_java_text_DateFormatSymbols_notify 6
+typedef void (*func_java_text_DateFormatSymbols_notify)(jcontext ctx, jobject self);
+#define VTABLE_java_text_DateFormatSymbols_notifyAll 7
+typedef void (*func_java_text_DateFormatSymbols_notifyAll)(jcontext ctx, jobject self);
+#define VTABLE_java_text_DateFormatSymbols_wait 8
+typedef void (*func_java_text_DateFormatSymbols_wait)(jcontext ctx, jobject self);
+#define VTABLE_java_text_DateFormatSymbols_wait_long 9
+typedef void (*func_java_text_DateFormatSymbols_wait_long)(jcontext ctx, jobject self, jlong param0);
+#define VTABLE_java_text_DateFormatSymbols_wait_long_int 10
+typedef void (*func_java_text_DateFormatSymbols_wait_long_int)(jcontext ctx, jobject self, jlong param0, jint param1);
+#define VTABLE_java_text_DateFormatSymbols_getAmPmStrings_R_Array1_java_lang_String 11
+typedef jobject (*func_java_text_DateFormatSymbols_getAmPmStrings_R_Array1_java_lang_String)(jcontext ctx, jobject self);
+#define VTABLE_java_text_DateFormatSymbols_setAmPmStrings_Array1_java_lang_String 12
+typedef void (*func_java_text_DateFormatSymbols_setAmPmStrings_Array1_java_lang_String)(jcontext ctx, jobject self, jobject param0);
+#define VTABLE_java_text_DateFormatSymbols_getResourceBundle_R_java_util_Hashtable 13
+typedef jobject (*func_java_text_DateFormatSymbols_getResourceBundle_R_java_util_Hashtable)(jcontext ctx, jobject self);
+#define VTABLE_java_text_DateFormatSymbols_setResourceBundle_java_util_Hashtable 14
+typedef void (*func_java_text_DateFormatSymbols_setResourceBundle_java_util_Hashtable)(jcontext ctx, jobject self, jobject param0);
+#define VTABLE_java_text_DateFormatSymbols_getLocalizedValue_java_lang_String_java_lang_String_R_java_lang_String 15
+typedef jobject (*func_java_text_DateFormatSymbols_getLocalizedValue_java_lang_String_java_lang_String_R_java_lang_String)(jcontext ctx, jobject self, jobject param0, jobject param1);
+#define VTABLE_java_text_DateFormatSymbols_getZoneStrings_R_Array2_java_lang_String 16
+typedef jobject (*func_java_text_DateFormatSymbols_getZoneStrings_R_Array2_java_lang_String)(jcontext ctx, jobject self);
+#define VTABLE_java_text_DateFormatSymbols_setZoneStrings_Array2_java_lang_String 17
+typedef void (*func_java_text_DateFormatSymbols_setZoneStrings_Array2_java_lang_String)(jcontext ctx, jobject self, jobject param0);
+#define VTABLE_java_text_DateFormatSymbols_setShortWeekdays_Array1_java_lang_String 18
+typedef void (*func_java_text_DateFormatSymbols_setShortWeekdays_Array1_java_lang_String)(jcontext ctx, jobject self, jobject param0);
+#define VTABLE_java_text_DateFormatSymbols_createShortforms_Array1_java_lang_String_java_lang_String_R_Array1_java_lang_String 19
+typedef jobject (*func_java_text_DateFormatSymbols_createShortforms_Array1_java_lang_String_java_lang_String_R_Array1_java_lang_String)(jcontext ctx, jobject self, jobject param0, jobject param1);
+#define VTABLE_java_text_DateFormatSymbols_getShortWeekdays_R_Array1_java_lang_String 20
+typedef jobject (*func_java_text_DateFormatSymbols_getShortWeekdays_R_Array1_java_lang_String)(jcontext ctx, jobject self);
+#define VTABLE_java_text_DateFormatSymbols_getWeekdays_R_Array1_java_lang_String 21
+typedef jobject (*func_java_text_DateFormatSymbols_getWeekdays_R_Array1_java_lang_String)(jcontext ctx, jobject self);
+#define VTABLE_java_text_DateFormatSymbols_setWeekdays_Array1_java_lang_String 22
+typedef void (*func_java_text_DateFormatSymbols_setWeekdays_Array1_java_lang_String)(jcontext ctx, jobject self, jobject param0);
+#define VTABLE_java_text_DateFormatSymbols_setShortMonths_Array1_java_lang_String 23
+typedef void (*func_java_text_DateFormatSymbols_setShortMonths_Array1_java_lang_String)(jcontext ctx, jobject self, jobject param0);
+#define VTABLE_java_text_DateFormatSymbols_getShortMonths_R_Array1_java_lang_String 24
+typedef jobject (*func_java_text_DateFormatSymbols_getShortMonths_R_Array1_java_lang_String)(jcontext ctx, jobject self);
+#define VTABLE_java_text_DateFormatSymbols_setMonths_Array1_java_lang_String 25
+typedef void (*func_java_text_DateFormatSymbols_setMonths_Array1_java_lang_String)(jcontext ctx, jobject self, jobject param0);
+#define VTABLE_java_text_DateFormatSymbols_getMonths_R_Array1_java_lang_String 26
+typedef jobject (*func_java_text_DateFormatSymbols_getMonths_R_Array1_java_lang_String)(jcontext ctx, jobject self);
+#define VTABLE_java_text_DateFormatSymbols_getEras_R_Array1_java_lang_String 27
+typedef jobject (*func_java_text_DateFormatSymbols_getEras_R_Array1_java_lang_String)(jcontext ctx, jobject self);
+#define VTABLE_java_text_DateFormatSymbols_setEras_Array1_java_lang_String 28
+typedef void (*func_java_text_DateFormatSymbols_setEras_Array1_java_lang_String)(jcontext ctx, jobject self, jobject param0);
+
+void mark_java_text_DateFormatSymbols(jobject object, jint mark, jint depth);
+void clinit_java_text_DateFormatSymbols(jcontext ctx);
+void init_java_text_DateFormatSymbols(jcontext ctx, jobject self);
+jobject M_java_text_DateFormatSymbols_getAmPmStrings_R_Array1_java_lang_String(jcontext ctx, jobject self);
+void M_java_text_DateFormatSymbols_setAmPmStrings_Array1_java_lang_String(jcontext ctx, jobject self, jobject param0);
+jobject M_java_text_DateFormatSymbols_getResourceBundle_R_java_util_Hashtable(jcontext ctx, jobject self);
+void M_java_text_DateFormatSymbols_setResourceBundle_java_util_Hashtable(jcontext ctx, jobject self, jobject param0);
+jobject M_java_text_DateFormatSymbols_getLocalizedValue_java_lang_String_java_lang_String_R_java_lang_String(jcontext ctx, jobject self, jobject param0, jobject param1);
+jobject M_java_text_DateFormatSymbols_getZoneStrings_R_Array2_java_lang_String(jcontext ctx, jobject self);
+void M_java_text_DateFormatSymbols_setZoneStrings_Array2_java_lang_String(jcontext ctx, jobject self, jobject param0);
+void M_java_text_DateFormatSymbols_setShortWeekdays_Array1_java_lang_String(jcontext ctx, jobject self, jobject param0);
+jobject M_java_text_DateFormatSymbols_createShortforms_Array1_java_lang_String_java_lang_String_R_Array1_java_lang_String(jcontext ctx, jobject self, jobject param0, jobject param1);
+jobject M_java_text_DateFormatSymbols_getShortWeekdays_R_Array1_java_lang_String(jcontext ctx, jobject self);
+jobject M_java_text_DateFormatSymbols_getWeekdays_R_Array1_java_lang_String(jcontext ctx, jobject self);
+void M_java_text_DateFormatSymbols_setWeekdays_Array1_java_lang_String(jcontext ctx, jobject self, jobject param0);
+void M_java_text_DateFormatSymbols_setShortMonths_Array1_java_lang_String(jcontext ctx, jobject self, jobject param0);
+jobject M_java_text_DateFormatSymbols_getShortMonths_R_Array1_java_lang_String(jcontext ctx, jobject self);
+void M_java_text_DateFormatSymbols_setMonths_Array1_java_lang_String(jcontext ctx, jobject self, jobject param0);
+jobject M_java_text_DateFormatSymbols_getMonths_R_Array1_java_lang_String(jcontext ctx, jobject self);
+jobject M_java_text_DateFormatSymbols_getEras_R_Array1_java_lang_String(jcontext ctx, jobject self);
+void M_java_text_DateFormatSymbols_setEras_Array1_java_lang_String(jcontext ctx, jobject self, jobject param0);
+jobject M_java_text_DateFormatSymbols_clone_R_java_lang_Object(jcontext ctx, jobject self);
+
+#ifdef __cplusplus
+}
+#endif
+
+#endif

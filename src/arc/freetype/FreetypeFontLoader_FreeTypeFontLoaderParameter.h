@@ -1,0 +1,52 @@
+#ifndef HEADER_arc_freetype_FreetypeFontLoader$FreeTypeFontLoaderParameter
+#define HEADER_arc_freetype_FreetypeFontLoader$FreeTypeFontLoaderParameter
+
+#include "Clearwing.h"
+#include "arc/assets/AssetLoaderParameters.h"
+
+#ifdef __cplusplus
+extern "C" {
+#endif
+
+typedef struct arc_freetype_FreetypeFontLoader$FreeTypeFontLoaderParameter {
+	arc_assets_AssetLoaderParameters parent;
+	jref F_fontFileName;
+	jref F_fontParameters;
+} arc_freetype_FreetypeFontLoader$FreeTypeFontLoaderParameter;
+
+extern Class class_arc_freetype_FreetypeFontLoader$FreeTypeFontLoaderParameter;
+
+
+#define VTABLE_arc_freetype_FreetypeFontLoader$FreeTypeFontLoaderParameter_hashCode_R_int 0
+typedef jint (*func_arc_freetype_FreetypeFontLoader$FreeTypeFontLoaderParameter_hashCode_R_int)(jcontext ctx, jobject self);
+#define VTABLE_arc_freetype_FreetypeFontLoader$FreeTypeFontLoaderParameter_equals_java_lang_Object_R_boolean 1
+typedef jbool (*func_arc_freetype_FreetypeFontLoader$FreeTypeFontLoaderParameter_equals_java_lang_Object_R_boolean)(jcontext ctx, jobject self, jobject param0);
+#define VTABLE_arc_freetype_FreetypeFontLoader$FreeTypeFontLoaderParameter_clone_R_java_lang_Object 2
+typedef jobject (*func_arc_freetype_FreetypeFontLoader$FreeTypeFontLoaderParameter_clone_R_java_lang_Object)(jcontext ctx, jobject self);
+#define VTABLE_arc_freetype_FreetypeFontLoader$FreeTypeFontLoaderParameter_getClass_R_java_lang_Class 3
+typedef jobject (*func_arc_freetype_FreetypeFontLoader$FreeTypeFontLoaderParameter_getClass_R_java_lang_Class)(jcontext ctx, jobject self);
+#define VTABLE_arc_freetype_FreetypeFontLoader$FreeTypeFontLoaderParameter_toString_R_java_lang_String 4
+typedef jobject (*func_arc_freetype_FreetypeFontLoader$FreeTypeFontLoaderParameter_toString_R_java_lang_String)(jcontext ctx, jobject self);
+#define VTABLE_arc_freetype_FreetypeFontLoader$FreeTypeFontLoaderParameter_finalize 5
+typedef void (*func_arc_freetype_FreetypeFontLoader$FreeTypeFontLoaderParameter_finalize)(jcontext ctx, jobject self);
+#define VTABLE_arc_freetype_FreetypeFontLoader$FreeTypeFontLoaderParameter_notify 6
+typedef void (*func_arc_freetype_FreetypeFontLoader$FreeTypeFontLoaderParameter_notify)(jcontext ctx, jobject self);
+#define VTABLE_arc_freetype_FreetypeFontLoader$FreeTypeFontLoaderParameter_notifyAll 7
+typedef void (*func_arc_freetype_FreetypeFontLoader$FreeTypeFontLoaderParameter_notifyAll)(jcontext ctx, jobject self);
+#define VTABLE_arc_freetype_FreetypeFontLoader$FreeTypeFontLoaderParameter_wait 8
+typedef void (*func_arc_freetype_FreetypeFontLoader$FreeTypeFontLoaderParameter_wait)(jcontext ctx, jobject self);
+#define VTABLE_arc_freetype_FreetypeFontLoader$FreeTypeFontLoaderParameter_wait_long 9
+typedef void (*func_arc_freetype_FreetypeFontLoader$FreeTypeFontLoaderParameter_wait_long)(jcontext ctx, jobject self, jlong param0);
+#define VTABLE_arc_freetype_FreetypeFontLoader$FreeTypeFontLoaderParameter_wait_long_int 10
+typedef void (*func_arc_freetype_FreetypeFontLoader$FreeTypeFontLoaderParameter_wait_long_int)(jcontext ctx, jobject self, jlong param0, jint param1);
+
+void mark_arc_freetype_FreetypeFontLoader$FreeTypeFontLoaderParameter(jobject object, jint mark, jint depth);
+void clinit_arc_freetype_FreetypeFontLoader$FreeTypeFontLoaderParameter(jcontext ctx);
+void init_arc_freetype_FreetypeFontLoader$FreeTypeFontLoaderParameter(jcontext ctx, jobject self);
+void init_arc_freetype_FreetypeFontLoader$FreeTypeFontLoaderParameter_java_lang_String_arc_freetype_FreeTypeFontGenerator$FreeTypeFontParameter(jcontext ctx, jobject self, jobject param0, jobject param1);
+
+#ifdef __cplusplus
+}
+#endif
+
+#endif

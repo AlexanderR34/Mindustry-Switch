@@ -1,0 +1,155 @@
+#ifndef HEADER_java_util_concurrent_LinkedBlockingQueue
+#define HEADER_java_util_concurrent_LinkedBlockingQueue
+
+#include "Clearwing.h"
+#include "java/util/AbstractQueue.h"
+#include "java/util/concurrent/BlockingQueue.h"
+#include "java/io/Serializable.h"
+
+#ifdef __cplusplus
+extern "C" {
+#endif
+
+typedef struct java_util_concurrent_LinkedBlockingQueue {
+	java_util_AbstractQueue parent;
+	jint F_capacity;
+	jref F_count;
+	jref F_head;
+	jref F_last;
+	jref F_takeLock;
+	jref F_notEmpty;
+	jref F_putLock;
+	jref F_notFull;
+} java_util_concurrent_LinkedBlockingQueue;
+
+extern Class class_java_util_concurrent_LinkedBlockingQueue;
+
+extern jlong SF_java_util_concurrent_LinkedBlockingQueue_serialVersionUID;
+
+#define VTABLE_java_util_concurrent_LinkedBlockingQueue_hashCode_R_int 0
+typedef jint (*func_java_util_concurrent_LinkedBlockingQueue_hashCode_R_int)(jcontext ctx, jobject self);
+#define VTABLE_java_util_concurrent_LinkedBlockingQueue_equals_java_lang_Object_R_boolean 1
+typedef jbool (*func_java_util_concurrent_LinkedBlockingQueue_equals_java_lang_Object_R_boolean)(jcontext ctx, jobject self, jobject param0);
+#define VTABLE_java_util_concurrent_LinkedBlockingQueue_clone_R_java_lang_Object 2
+typedef jobject (*func_java_util_concurrent_LinkedBlockingQueue_clone_R_java_lang_Object)(jcontext ctx, jobject self);
+#define VTABLE_java_util_concurrent_LinkedBlockingQueue_getClass_R_java_lang_Class 3
+typedef jobject (*func_java_util_concurrent_LinkedBlockingQueue_getClass_R_java_lang_Class)(jcontext ctx, jobject self);
+#define VTABLE_java_util_concurrent_LinkedBlockingQueue_toString_R_java_lang_String 4
+typedef jobject (*func_java_util_concurrent_LinkedBlockingQueue_toString_R_java_lang_String)(jcontext ctx, jobject self);
+#define VTABLE_java_util_concurrent_LinkedBlockingQueue_finalize 5
+typedef void (*func_java_util_concurrent_LinkedBlockingQueue_finalize)(jcontext ctx, jobject self);
+#define VTABLE_java_util_concurrent_LinkedBlockingQueue_notify 6
+typedef void (*func_java_util_concurrent_LinkedBlockingQueue_notify)(jcontext ctx, jobject self);
+#define VTABLE_java_util_concurrent_LinkedBlockingQueue_notifyAll 7
+typedef void (*func_java_util_concurrent_LinkedBlockingQueue_notifyAll)(jcontext ctx, jobject self);
+#define VTABLE_java_util_concurrent_LinkedBlockingQueue_wait 8
+typedef void (*func_java_util_concurrent_LinkedBlockingQueue_wait)(jcontext ctx, jobject self);
+#define VTABLE_java_util_concurrent_LinkedBlockingQueue_wait_long 9
+typedef void (*func_java_util_concurrent_LinkedBlockingQueue_wait_long)(jcontext ctx, jobject self, jlong param0);
+#define VTABLE_java_util_concurrent_LinkedBlockingQueue_wait_long_int 10
+typedef void (*func_java_util_concurrent_LinkedBlockingQueue_wait_long_int)(jcontext ctx, jobject self, jlong param0, jint param1);
+#define VTABLE_java_util_concurrent_LinkedBlockingQueue_iterator_R_java_util_Iterator 11
+typedef jobject (*func_java_util_concurrent_LinkedBlockingQueue_iterator_R_java_util_Iterator)(jcontext ctx, jobject self);
+#define VTABLE_java_util_concurrent_LinkedBlockingQueue_forEach_java_util_function_Consumer 12
+typedef void (*func_java_util_concurrent_LinkedBlockingQueue_forEach_java_util_function_Consumer)(jcontext ctx, jobject self, jobject param0);
+#define VTABLE_java_util_concurrent_LinkedBlockingQueue_spliterator_R_java_util_Spliterator 13
+typedef jobject (*func_java_util_concurrent_LinkedBlockingQueue_spliterator_R_java_util_Spliterator)(jcontext ctx, jobject self);
+#define VTABLE_java_util_concurrent_LinkedBlockingQueue_add_java_lang_Object_R_boolean 14
+typedef jbool (*func_java_util_concurrent_LinkedBlockingQueue_add_java_lang_Object_R_boolean)(jcontext ctx, jobject self, jobject param0);
+#define VTABLE_java_util_concurrent_LinkedBlockingQueue_addAll_java_util_Collection_R_boolean 15
+typedef jbool (*func_java_util_concurrent_LinkedBlockingQueue_addAll_java_util_Collection_R_boolean)(jcontext ctx, jobject self, jobject param0);
+#define VTABLE_java_util_concurrent_LinkedBlockingQueue_clear 16
+typedef void (*func_java_util_concurrent_LinkedBlockingQueue_clear)(jcontext ctx, jobject self);
+#define VTABLE_java_util_concurrent_LinkedBlockingQueue_contains_java_lang_Object_R_boolean 17
+typedef jbool (*func_java_util_concurrent_LinkedBlockingQueue_contains_java_lang_Object_R_boolean)(jcontext ctx, jobject self, jobject param0);
+#define VTABLE_java_util_concurrent_LinkedBlockingQueue_containsAll_java_util_Collection_R_boolean 18
+typedef jbool (*func_java_util_concurrent_LinkedBlockingQueue_containsAll_java_util_Collection_R_boolean)(jcontext ctx, jobject self, jobject param0);
+#define VTABLE_java_util_concurrent_LinkedBlockingQueue_isEmpty_R_boolean 19
+typedef jbool (*func_java_util_concurrent_LinkedBlockingQueue_isEmpty_R_boolean)(jcontext ctx, jobject self);
+#define VTABLE_java_util_concurrent_LinkedBlockingQueue_remove_java_lang_Object_R_boolean 20
+typedef jbool (*func_java_util_concurrent_LinkedBlockingQueue_remove_java_lang_Object_R_boolean)(jcontext ctx, jobject self, jobject param0);
+#define VTABLE_java_util_concurrent_LinkedBlockingQueue_removeAll_java_util_Collection_R_boolean 21
+typedef jbool (*func_java_util_concurrent_LinkedBlockingQueue_removeAll_java_util_Collection_R_boolean)(jcontext ctx, jobject self, jobject param0);
+#define VTABLE_java_util_concurrent_LinkedBlockingQueue_retainAll_java_util_Collection_R_boolean 22
+typedef jbool (*func_java_util_concurrent_LinkedBlockingQueue_retainAll_java_util_Collection_R_boolean)(jcontext ctx, jobject self, jobject param0);
+#define VTABLE_java_util_concurrent_LinkedBlockingQueue_size_R_int 23
+typedef jint (*func_java_util_concurrent_LinkedBlockingQueue_size_R_int)(jcontext ctx, jobject self);
+#define VTABLE_java_util_concurrent_LinkedBlockingQueue_toArray_R_Array1_java_lang_Object 24
+typedef jobject (*func_java_util_concurrent_LinkedBlockingQueue_toArray_R_Array1_java_lang_Object)(jcontext ctx, jobject self);
+#define VTABLE_java_util_concurrent_LinkedBlockingQueue_toArray_Array1_java_lang_Object_R_Array1_java_lang_Object 25
+typedef jobject (*func_java_util_concurrent_LinkedBlockingQueue_toArray_Array1_java_lang_Object_R_Array1_java_lang_Object)(jcontext ctx, jobject self, jobject param0);
+#define VTABLE_java_util_concurrent_LinkedBlockingQueue_offer_java_lang_Object_R_boolean 26
+typedef jbool (*func_java_util_concurrent_LinkedBlockingQueue_offer_java_lang_Object_R_boolean)(jcontext ctx, jobject self, jobject param0);
+#define VTABLE_java_util_concurrent_LinkedBlockingQueue_poll_R_java_lang_Object 27
+typedef jobject (*func_java_util_concurrent_LinkedBlockingQueue_poll_R_java_lang_Object)(jcontext ctx, jobject self);
+#define VTABLE_java_util_concurrent_LinkedBlockingQueue_remove_R_java_lang_Object 28
+typedef jobject (*func_java_util_concurrent_LinkedBlockingQueue_remove_R_java_lang_Object)(jcontext ctx, jobject self);
+#define VTABLE_java_util_concurrent_LinkedBlockingQueue_peek_R_java_lang_Object 29
+typedef jobject (*func_java_util_concurrent_LinkedBlockingQueue_peek_R_java_lang_Object)(jcontext ctx, jobject self);
+#define VTABLE_java_util_concurrent_LinkedBlockingQueue_element_R_java_lang_Object 30
+typedef jobject (*func_java_util_concurrent_LinkedBlockingQueue_element_R_java_lang_Object)(jcontext ctx, jobject self);
+#define VTABLE_java_util_concurrent_LinkedBlockingQueue_put_java_lang_Object 31
+typedef void (*func_java_util_concurrent_LinkedBlockingQueue_put_java_lang_Object)(jcontext ctx, jobject self, jobject param0);
+#define VTABLE_java_util_concurrent_LinkedBlockingQueue_offer_java_lang_Object_long_java_util_concurrent_TimeUnit_R_boolean 32
+typedef jbool (*func_java_util_concurrent_LinkedBlockingQueue_offer_java_lang_Object_long_java_util_concurrent_TimeUnit_R_boolean)(jcontext ctx, jobject self, jobject param0, jlong param1, jobject param2);
+#define VTABLE_java_util_concurrent_LinkedBlockingQueue_take_R_java_lang_Object 33
+typedef jobject (*func_java_util_concurrent_LinkedBlockingQueue_take_R_java_lang_Object)(jcontext ctx, jobject self);
+#define VTABLE_java_util_concurrent_LinkedBlockingQueue_poll_long_java_util_concurrent_TimeUnit_R_java_lang_Object 34
+typedef jobject (*func_java_util_concurrent_LinkedBlockingQueue_poll_long_java_util_concurrent_TimeUnit_R_java_lang_Object)(jcontext ctx, jobject self, jlong param0, jobject param1);
+#define VTABLE_java_util_concurrent_LinkedBlockingQueue_remainingCapacity_R_int 35
+typedef jint (*func_java_util_concurrent_LinkedBlockingQueue_remainingCapacity_R_int)(jcontext ctx, jobject self);
+#define VTABLE_java_util_concurrent_LinkedBlockingQueue_drainTo_java_util_Collection_R_int 36
+typedef jint (*func_java_util_concurrent_LinkedBlockingQueue_drainTo_java_util_Collection_R_int)(jcontext ctx, jobject self, jobject param0);
+#define VTABLE_java_util_concurrent_LinkedBlockingQueue_drainTo_java_util_Collection_int_R_int 37
+typedef jint (*func_java_util_concurrent_LinkedBlockingQueue_drainTo_java_util_Collection_int_R_int)(jcontext ctx, jobject self, jobject param0, jint param1);
+#define VTABLE_java_util_concurrent_LinkedBlockingQueue_signalNotEmpty 38
+typedef void (*func_java_util_concurrent_LinkedBlockingQueue_signalNotEmpty)(jcontext ctx, jobject self);
+#define VTABLE_java_util_concurrent_LinkedBlockingQueue_signalNotFull 39
+typedef void (*func_java_util_concurrent_LinkedBlockingQueue_signalNotFull)(jcontext ctx, jobject self);
+#define VTABLE_java_util_concurrent_LinkedBlockingQueue_enqueue_java_util_concurrent_LinkedBlockingQueue$Node 40
+typedef void (*func_java_util_concurrent_LinkedBlockingQueue_enqueue_java_util_concurrent_LinkedBlockingQueue$Node)(jcontext ctx, jobject self, jobject param0);
+#define VTABLE_java_util_concurrent_LinkedBlockingQueue_dequeue_R_java_lang_Object 41
+typedef jobject (*func_java_util_concurrent_LinkedBlockingQueue_dequeue_R_java_lang_Object)(jcontext ctx, jobject self);
+#define VTABLE_java_util_concurrent_LinkedBlockingQueue_fullyLock 42
+typedef void (*func_java_util_concurrent_LinkedBlockingQueue_fullyLock)(jcontext ctx, jobject self);
+#define VTABLE_java_util_concurrent_LinkedBlockingQueue_fullyUnlock 43
+typedef void (*func_java_util_concurrent_LinkedBlockingQueue_fullyUnlock)(jcontext ctx, jobject self);
+#define VTABLE_java_util_concurrent_LinkedBlockingQueue_unlink_java_util_concurrent_LinkedBlockingQueue$Node_java_util_concurrent_LinkedBlockingQueue$Node 44
+typedef void (*func_java_util_concurrent_LinkedBlockingQueue_unlink_java_util_concurrent_LinkedBlockingQueue$Node_java_util_concurrent_LinkedBlockingQueue$Node)(jcontext ctx, jobject self, jobject param0, jobject param1);
+
+void mark_java_util_concurrent_LinkedBlockingQueue(jobject object, jint mark, jint depth);
+void clinit_java_util_concurrent_LinkedBlockingQueue(jcontext ctx);
+void M_java_util_concurrent_LinkedBlockingQueue_signalNotEmpty(jcontext ctx, jobject self);
+void M_java_util_concurrent_LinkedBlockingQueue_signalNotFull(jcontext ctx, jobject self);
+void M_java_util_concurrent_LinkedBlockingQueue_enqueue_java_util_concurrent_LinkedBlockingQueue$Node(jcontext ctx, jobject self, jobject param0);
+jobject M_java_util_concurrent_LinkedBlockingQueue_dequeue_R_java_lang_Object(jcontext ctx, jobject self);
+void M_java_util_concurrent_LinkedBlockingQueue_fullyLock(jcontext ctx, jobject self);
+void M_java_util_concurrent_LinkedBlockingQueue_fullyUnlock(jcontext ctx, jobject self);
+void init_java_util_concurrent_LinkedBlockingQueue(jcontext ctx, jobject self);
+void init_java_util_concurrent_LinkedBlockingQueue_int(jcontext ctx, jobject self, jint param0);
+void init_java_util_concurrent_LinkedBlockingQueue_java_util_Collection(jcontext ctx, jobject self, jobject param0);
+jint M_java_util_concurrent_LinkedBlockingQueue_size_R_int(jcontext ctx, jobject self);
+jint M_java_util_concurrent_LinkedBlockingQueue_remainingCapacity_R_int(jcontext ctx, jobject self);
+void M_java_util_concurrent_LinkedBlockingQueue_put_java_lang_Object(jcontext ctx, jobject self, jobject param0);
+jbool M_java_util_concurrent_LinkedBlockingQueue_offer_java_lang_Object_long_java_util_concurrent_TimeUnit_R_boolean(jcontext ctx, jobject self, jobject param0, jlong param1, jobject param2);
+jbool M_java_util_concurrent_LinkedBlockingQueue_offer_java_lang_Object_R_boolean(jcontext ctx, jobject self, jobject param0);
+jobject M_java_util_concurrent_LinkedBlockingQueue_take_R_java_lang_Object(jcontext ctx, jobject self);
+jobject M_java_util_concurrent_LinkedBlockingQueue_poll_long_java_util_concurrent_TimeUnit_R_java_lang_Object(jcontext ctx, jobject self, jlong param0, jobject param1);
+jobject M_java_util_concurrent_LinkedBlockingQueue_poll_R_java_lang_Object(jcontext ctx, jobject self);
+jobject M_java_util_concurrent_LinkedBlockingQueue_peek_R_java_lang_Object(jcontext ctx, jobject self);
+void M_java_util_concurrent_LinkedBlockingQueue_unlink_java_util_concurrent_LinkedBlockingQueue$Node_java_util_concurrent_LinkedBlockingQueue$Node(jcontext ctx, jobject self, jobject param0, jobject param1);
+jbool M_java_util_concurrent_LinkedBlockingQueue_remove_java_lang_Object_R_boolean(jcontext ctx, jobject self, jobject param0);
+jbool M_java_util_concurrent_LinkedBlockingQueue_contains_java_lang_Object_R_boolean(jcontext ctx, jobject self, jobject param0);
+jobject M_java_util_concurrent_LinkedBlockingQueue_toArray_R_Array1_java_lang_Object(jcontext ctx, jobject self);
+jobject M_java_util_concurrent_LinkedBlockingQueue_toArray_Array1_java_lang_Object_R_Array1_java_lang_Object(jcontext ctx, jobject self, jobject param0);
+jobject M_java_util_concurrent_LinkedBlockingQueue_toString_R_java_lang_String(jcontext ctx, jobject self);
+void M_java_util_concurrent_LinkedBlockingQueue_clear(jcontext ctx, jobject self);
+jint M_java_util_concurrent_LinkedBlockingQueue_drainTo_java_util_Collection_R_int(jcontext ctx, jobject self, jobject param0);
+jint M_java_util_concurrent_LinkedBlockingQueue_drainTo_java_util_Collection_int_R_int(jcontext ctx, jobject self, jobject param0, jint param1);
+jobject M_java_util_concurrent_LinkedBlockingQueue_iterator_R_java_util_Iterator(jcontext ctx, jobject self);
+
+#ifdef __cplusplus
+}
+#endif
+
+#endif

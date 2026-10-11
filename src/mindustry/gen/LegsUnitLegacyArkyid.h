@@ -1,0 +1,778 @@
+#ifndef HEADER_mindustry_gen_LegsUnitLegacyArkyid
+#define HEADER_mindustry_gen_LegsUnitLegacyArkyid
+
+#include "Clearwing.h"
+#include "mindustry/gen/LegsUnit.h"
+#include "mindustry/gen/Builderc.h"
+#include "mindustry/gen/Drawc.h"
+#include "mindustry/gen/Entityc.h"
+#include "mindustry/gen/Healthc.h"
+#include "mindustry/gen/Hitboxc.h"
+#include "mindustry/gen/Itemsc.h"
+#include "mindustry/gen/Legsc.h"
+#include "mindustry/gen/Minerc.h"
+#include "mindustry/gen/Physicsc.h"
+#include "mindustry/gen/Posc.h"
+#include "mindustry/gen/Rotc.h"
+#include "mindustry/gen/Shieldc.h"
+#include "mindustry/gen/Statusc.h"
+#include "mindustry/gen/Syncc.h"
+#include "mindustry/gen/Teamc.h"
+#include "mindustry/gen/Unitc.h"
+#include "mindustry/gen/Velc.h"
+#include "mindustry/gen/Weaponsc.h"
+
+#ifdef __cplusplus
+extern "C" {
+#endif
+
+typedef struct mindustry_gen_LegsUnitLegacyArkyid {
+	mindustry_gen_LegsUnit parent;
+} mindustry_gen_LegsUnitLegacyArkyid;
+
+extern Class class_mindustry_gen_LegsUnitLegacyArkyid;
+
+
+#define VTABLE_mindustry_gen_LegsUnitLegacyArkyid_hashCode_R_int 0
+typedef jint (*func_mindustry_gen_LegsUnitLegacyArkyid_hashCode_R_int)(jcontext ctx, jobject self);
+#define VTABLE_mindustry_gen_LegsUnitLegacyArkyid_equals_java_lang_Object_R_boolean 1
+typedef jbool (*func_mindustry_gen_LegsUnitLegacyArkyid_equals_java_lang_Object_R_boolean)(jcontext ctx, jobject self, jobject param0);
+#define VTABLE_mindustry_gen_LegsUnitLegacyArkyid_clone_R_java_lang_Object 2
+typedef jobject (*func_mindustry_gen_LegsUnitLegacyArkyid_clone_R_java_lang_Object)(jcontext ctx, jobject self);
+#define VTABLE_mindustry_gen_LegsUnitLegacyArkyid_getClass_R_java_lang_Class 3
+typedef jobject (*func_mindustry_gen_LegsUnitLegacyArkyid_getClass_R_java_lang_Class)(jcontext ctx, jobject self);
+#define VTABLE_mindustry_gen_LegsUnitLegacyArkyid_toString_R_java_lang_String 4
+typedef jobject (*func_mindustry_gen_LegsUnitLegacyArkyid_toString_R_java_lang_String)(jcontext ctx, jobject self);
+#define VTABLE_mindustry_gen_LegsUnitLegacyArkyid_finalize 5
+typedef void (*func_mindustry_gen_LegsUnitLegacyArkyid_finalize)(jcontext ctx, jobject self);
+#define VTABLE_mindustry_gen_LegsUnitLegacyArkyid_notify 6
+typedef void (*func_mindustry_gen_LegsUnitLegacyArkyid_notify)(jcontext ctx, jobject self);
+#define VTABLE_mindustry_gen_LegsUnitLegacyArkyid_notifyAll 7
+typedef void (*func_mindustry_gen_LegsUnitLegacyArkyid_notifyAll)(jcontext ctx, jobject self);
+#define VTABLE_mindustry_gen_LegsUnitLegacyArkyid_wait 8
+typedef void (*func_mindustry_gen_LegsUnitLegacyArkyid_wait)(jcontext ctx, jobject self);
+#define VTABLE_mindustry_gen_LegsUnitLegacyArkyid_wait_long 9
+typedef void (*func_mindustry_gen_LegsUnitLegacyArkyid_wait_long)(jcontext ctx, jobject self, jlong param0);
+#define VTABLE_mindustry_gen_LegsUnitLegacyArkyid_wait_long_int 10
+typedef void (*func_mindustry_gen_LegsUnitLegacyArkyid_wait_long_int)(jcontext ctx, jobject self, jlong param0, jint param1);
+#define VTABLE_mindustry_gen_LegsUnitLegacyArkyid_self_R_mindustry_gen_Entityc 11
+typedef jobject (*func_mindustry_gen_LegsUnitLegacyArkyid_self_R_mindustry_gen_Entityc)(jcontext ctx, jobject self);
+#define VTABLE_mindustry_gen_LegsUnitLegacyArkyid_as_R_java_lang_Object 12
+typedef jobject (*func_mindustry_gen_LegsUnitLegacyArkyid_as_R_java_lang_Object)(jcontext ctx, jobject self);
+#define VTABLE_mindustry_gen_LegsUnitLegacyArkyid_isAdded_R_boolean 13
+typedef jbool (*func_mindustry_gen_LegsUnitLegacyArkyid_isAdded_R_boolean)(jcontext ctx, jobject self);
+#define VTABLE_mindustry_gen_LegsUnitLegacyArkyid_isLocal_R_boolean 14
+typedef jbool (*func_mindustry_gen_LegsUnitLegacyArkyid_isLocal_R_boolean)(jcontext ctx, jobject self);
+#define VTABLE_mindustry_gen_LegsUnitLegacyArkyid_isRemote_R_boolean 15
+typedef jbool (*func_mindustry_gen_LegsUnitLegacyArkyid_isRemote_R_boolean)(jcontext ctx, jobject self);
+#define VTABLE_mindustry_gen_LegsUnitLegacyArkyid_serialize_R_boolean 16
+typedef jbool (*func_mindustry_gen_LegsUnitLegacyArkyid_serialize_R_boolean)(jcontext ctx, jobject self);
+#define VTABLE_mindustry_gen_LegsUnitLegacyArkyid_classId_R_int 17
+typedef jint (*func_mindustry_gen_LegsUnitLegacyArkyid_classId_R_int)(jcontext ctx, jobject self);
+#define VTABLE_mindustry_gen_LegsUnitLegacyArkyid_id_R_int 18
+typedef jint (*func_mindustry_gen_LegsUnitLegacyArkyid_id_R_int)(jcontext ctx, jobject self);
+#define VTABLE_mindustry_gen_LegsUnitLegacyArkyid_add 19
+typedef void (*func_mindustry_gen_LegsUnitLegacyArkyid_add)(jcontext ctx, jobject self);
+#define VTABLE_mindustry_gen_LegsUnitLegacyArkyid_afterRead 20
+typedef void (*func_mindustry_gen_LegsUnitLegacyArkyid_afterRead)(jcontext ctx, jobject self);
+#define VTABLE_mindustry_gen_LegsUnitLegacyArkyid_afterReadAll 21
+typedef void (*func_mindustry_gen_LegsUnitLegacyArkyid_afterReadAll)(jcontext ctx, jobject self);
+#define VTABLE_mindustry_gen_LegsUnitLegacyArkyid_beforeWrite 22
+typedef void (*func_mindustry_gen_LegsUnitLegacyArkyid_beforeWrite)(jcontext ctx, jobject self);
+#define VTABLE_mindustry_gen_LegsUnitLegacyArkyid_id_int 23
+typedef void (*func_mindustry_gen_LegsUnitLegacyArkyid_id_int)(jcontext ctx, jobject self, jint param0);
+#define VTABLE_mindustry_gen_LegsUnitLegacyArkyid_read_arc_util_io_Reads 24
+typedef void (*func_mindustry_gen_LegsUnitLegacyArkyid_read_arc_util_io_Reads)(jcontext ctx, jobject self, jobject param0);
+#define VTABLE_mindustry_gen_LegsUnitLegacyArkyid_remove 25
+typedef void (*func_mindustry_gen_LegsUnitLegacyArkyid_remove)(jcontext ctx, jobject self);
+#define VTABLE_mindustry_gen_LegsUnitLegacyArkyid_update 26
+typedef void (*func_mindustry_gen_LegsUnitLegacyArkyid_update)(jcontext ctx, jobject self);
+#define VTABLE_mindustry_gen_LegsUnitLegacyArkyid_write_arc_util_io_Writes 27
+typedef void (*func_mindustry_gen_LegsUnitLegacyArkyid_write_arc_util_io_Writes)(jcontext ctx, jobject self, jobject param0);
+#define VTABLE_mindustry_gen_LegsUnitLegacyArkyid_getX_R_float 28
+typedef jfloat (*func_mindustry_gen_LegsUnitLegacyArkyid_getX_R_float)(jcontext ctx, jobject self);
+#define VTABLE_mindustry_gen_LegsUnitLegacyArkyid_getY_R_float 29
+typedef jfloat (*func_mindustry_gen_LegsUnitLegacyArkyid_getY_R_float)(jcontext ctx, jobject self);
+#define VTABLE_mindustry_gen_LegsUnitLegacyArkyid_angleTo_arc_math_geom_Position_R_float 30
+typedef jfloat (*func_mindustry_gen_LegsUnitLegacyArkyid_angleTo_arc_math_geom_Position_R_float)(jcontext ctx, jobject self, jobject param0);
+#define VTABLE_mindustry_gen_LegsUnitLegacyArkyid_angleTo_float_float_R_float 31
+typedef jfloat (*func_mindustry_gen_LegsUnitLegacyArkyid_angleTo_float_float_R_float)(jcontext ctx, jobject self, jfloat param0, jfloat param1);
+#define VTABLE_mindustry_gen_LegsUnitLegacyArkyid_dst2_arc_math_geom_Position_R_float 32
+typedef jfloat (*func_mindustry_gen_LegsUnitLegacyArkyid_dst2_arc_math_geom_Position_R_float)(jcontext ctx, jobject self, jobject param0);
+#define VTABLE_mindustry_gen_LegsUnitLegacyArkyid_dst_arc_math_geom_Position_R_float 33
+typedef jfloat (*func_mindustry_gen_LegsUnitLegacyArkyid_dst_arc_math_geom_Position_R_float)(jcontext ctx, jobject self, jobject param0);
+#define VTABLE_mindustry_gen_LegsUnitLegacyArkyid_dst_float_float_R_float 34
+typedef jfloat (*func_mindustry_gen_LegsUnitLegacyArkyid_dst_float_float_R_float)(jcontext ctx, jobject self, jfloat param0, jfloat param1);
+#define VTABLE_mindustry_gen_LegsUnitLegacyArkyid_dst2_float_float_R_float 35
+typedef jfloat (*func_mindustry_gen_LegsUnitLegacyArkyid_dst2_float_float_R_float)(jcontext ctx, jobject self, jfloat param0, jfloat param1);
+#define VTABLE_mindustry_gen_LegsUnitLegacyArkyid_within_arc_math_geom_Position_float_R_boolean 36
+typedef jbool (*func_mindustry_gen_LegsUnitLegacyArkyid_within_arc_math_geom_Position_float_R_boolean)(jcontext ctx, jobject self, jobject param0, jfloat param1);
+#define VTABLE_mindustry_gen_LegsUnitLegacyArkyid_within_float_float_float_R_boolean 37
+typedef jbool (*func_mindustry_gen_LegsUnitLegacyArkyid_within_float_float_float_R_boolean)(jcontext ctx, jobject self, jfloat param0, jfloat param1, jfloat param2);
+#define VTABLE_mindustry_gen_LegsUnitLegacyArkyid_floorOn_R_mindustry_world_blocks_environment_Floor 38
+typedef jobject (*func_mindustry_gen_LegsUnitLegacyArkyid_floorOn_R_mindustry_world_blocks_environment_Floor)(jcontext ctx, jobject self);
+#define VTABLE_mindustry_gen_LegsUnitLegacyArkyid_buildOn_R_mindustry_gen_Building 39
+typedef jobject (*func_mindustry_gen_LegsUnitLegacyArkyid_buildOn_R_mindustry_gen_Building)(jcontext ctx, jobject self);
+#define VTABLE_mindustry_gen_LegsUnitLegacyArkyid_onSolid_R_boolean 40
+typedef jbool (*func_mindustry_gen_LegsUnitLegacyArkyid_onSolid_R_boolean)(jcontext ctx, jobject self);
+#define VTABLE_mindustry_gen_LegsUnitLegacyArkyid_x_R_float 41
+typedef jfloat (*func_mindustry_gen_LegsUnitLegacyArkyid_x_R_float)(jcontext ctx, jobject self);
+#define VTABLE_mindustry_gen_LegsUnitLegacyArkyid_y_R_float 42
+typedef jfloat (*func_mindustry_gen_LegsUnitLegacyArkyid_y_R_float)(jcontext ctx, jobject self);
+#define VTABLE_mindustry_gen_LegsUnitLegacyArkyid_tileX_R_int 43
+typedef jint (*func_mindustry_gen_LegsUnitLegacyArkyid_tileX_R_int)(jcontext ctx, jobject self);
+#define VTABLE_mindustry_gen_LegsUnitLegacyArkyid_tileY_R_int 44
+typedef jint (*func_mindustry_gen_LegsUnitLegacyArkyid_tileY_R_int)(jcontext ctx, jobject self);
+#define VTABLE_mindustry_gen_LegsUnitLegacyArkyid_blockOn_R_mindustry_world_Block 45
+typedef jobject (*func_mindustry_gen_LegsUnitLegacyArkyid_blockOn_R_mindustry_world_Block)(jcontext ctx, jobject self);
+#define VTABLE_mindustry_gen_LegsUnitLegacyArkyid_tileOn_R_mindustry_world_Tile 46
+typedef jobject (*func_mindustry_gen_LegsUnitLegacyArkyid_tileOn_R_mindustry_world_Tile)(jcontext ctx, jobject self);
+#define VTABLE_mindustry_gen_LegsUnitLegacyArkyid_set_arc_math_geom_Position 47
+typedef void (*func_mindustry_gen_LegsUnitLegacyArkyid_set_arc_math_geom_Position)(jcontext ctx, jobject self, jobject param0);
+#define VTABLE_mindustry_gen_LegsUnitLegacyArkyid_set_float_float 48
+typedef void (*func_mindustry_gen_LegsUnitLegacyArkyid_set_float_float)(jcontext ctx, jobject self, jfloat param0, jfloat param1);
+#define VTABLE_mindustry_gen_LegsUnitLegacyArkyid_trns_arc_math_geom_Position 49
+typedef void (*func_mindustry_gen_LegsUnitLegacyArkyid_trns_arc_math_geom_Position)(jcontext ctx, jobject self, jobject param0);
+#define VTABLE_mindustry_gen_LegsUnitLegacyArkyid_trns_float_float 50
+typedef void (*func_mindustry_gen_LegsUnitLegacyArkyid_trns_float_float)(jcontext ctx, jobject self, jfloat param0, jfloat param1);
+#define VTABLE_mindustry_gen_LegsUnitLegacyArkyid_x_float 51
+typedef void (*func_mindustry_gen_LegsUnitLegacyArkyid_x_float)(jcontext ctx, jobject self, jfloat param0);
+#define VTABLE_mindustry_gen_LegsUnitLegacyArkyid_y_float 52
+typedef void (*func_mindustry_gen_LegsUnitLegacyArkyid_y_float)(jcontext ctx, jobject self, jfloat param0);
+#define VTABLE_mindustry_gen_LegsUnitLegacyArkyid_rotation_R_float 53
+typedef jfloat (*func_mindustry_gen_LegsUnitLegacyArkyid_rotation_R_float)(jcontext ctx, jobject self);
+#define VTABLE_mindustry_gen_LegsUnitLegacyArkyid_rotation_float 54
+typedef void (*func_mindustry_gen_LegsUnitLegacyArkyid_rotation_float)(jcontext ctx, jobject self, jfloat param0);
+#define VTABLE_mindustry_gen_LegsUnitLegacyArkyid_applyDynamicStatus_R_mindustry_entities_units_StatusEntry 55
+typedef jobject (*func_mindustry_gen_LegsUnitLegacyArkyid_applyDynamicStatus_R_mindustry_entities_units_StatusEntry)(jcontext ctx, jobject self);
+#define VTABLE_mindustry_gen_LegsUnitLegacyArkyid_apply_mindustry_type_StatusEffect_float 56
+typedef void (*func_mindustry_gen_LegsUnitLegacyArkyid_apply_mindustry_type_StatusEffect_float)(jcontext ctx, jobject self, jobject param0, jfloat param1);
+#define VTABLE_mindustry_gen_LegsUnitLegacyArkyid_apply_mindustry_type_StatusEffect 57
+typedef void (*func_mindustry_gen_LegsUnitLegacyArkyid_apply_mindustry_type_StatusEffect)(jcontext ctx, jobject self, jobject param0);
+#define VTABLE_mindustry_gen_LegsUnitLegacyArkyid_unapply_mindustry_type_StatusEffect 58
+typedef void (*func_mindustry_gen_LegsUnitLegacyArkyid_unapply_mindustry_type_StatusEffect)(jcontext ctx, jobject self, jobject param0);
+#define VTABLE_mindustry_gen_LegsUnitLegacyArkyid_statusDamageMultiplier_float 59
+typedef void (*func_mindustry_gen_LegsUnitLegacyArkyid_statusDamageMultiplier_float)(jcontext ctx, jobject self, jfloat param0);
+#define VTABLE_mindustry_gen_LegsUnitLegacyArkyid_statusReloadMultiplier_float 60
+typedef void (*func_mindustry_gen_LegsUnitLegacyArkyid_statusReloadMultiplier_float)(jcontext ctx, jobject self, jfloat param0);
+#define VTABLE_mindustry_gen_LegsUnitLegacyArkyid_statusArmor_float 61
+typedef void (*func_mindustry_gen_LegsUnitLegacyArkyid_statusArmor_float)(jcontext ctx, jobject self, jfloat param0);
+#define VTABLE_mindustry_gen_LegsUnitLegacyArkyid_statusBuildSpeed_float 62
+typedef void (*func_mindustry_gen_LegsUnitLegacyArkyid_statusBuildSpeed_float)(jcontext ctx, jobject self, jfloat param0);
+#define VTABLE_mindustry_gen_LegsUnitLegacyArkyid_statusDrag_float 63
+typedef void (*func_mindustry_gen_LegsUnitLegacyArkyid_statusDrag_float)(jcontext ctx, jobject self, jfloat param0);
+#define VTABLE_mindustry_gen_LegsUnitLegacyArkyid_statusMaxHealth_float 64
+typedef void (*func_mindustry_gen_LegsUnitLegacyArkyid_statusMaxHealth_float)(jcontext ctx, jobject self, jfloat param0);
+#define VTABLE_mindustry_gen_LegsUnitLegacyArkyid_statusSpeed_float 65
+typedef void (*func_mindustry_gen_LegsUnitLegacyArkyid_statusSpeed_float)(jcontext ctx, jobject self, jfloat param0);
+#define VTABLE_mindustry_gen_LegsUnitLegacyArkyid_statusColor_R_arc_graphics_Color 66
+typedef jobject (*func_mindustry_gen_LegsUnitLegacyArkyid_statusColor_R_arc_graphics_Color)(jcontext ctx, jobject self);
+#define VTABLE_mindustry_gen_LegsUnitLegacyArkyid_statusBits_R_arc_struct_Bits 67
+typedef jobject (*func_mindustry_gen_LegsUnitLegacyArkyid_statusBits_R_arc_struct_Bits)(jcontext ctx, jobject self);
+#define VTABLE_mindustry_gen_LegsUnitLegacyArkyid_disarmed_R_boolean 68
+typedef jbool (*func_mindustry_gen_LegsUnitLegacyArkyid_disarmed_R_boolean)(jcontext ctx, jobject self);
+#define VTABLE_mindustry_gen_LegsUnitLegacyArkyid_hasEffect_mindustry_type_StatusEffect_R_boolean 69
+typedef jbool (*func_mindustry_gen_LegsUnitLegacyArkyid_hasEffect_mindustry_type_StatusEffect_R_boolean)(jcontext ctx, jobject self, jobject param0);
+#define VTABLE_mindustry_gen_LegsUnitLegacyArkyid_isBoss_R_boolean 70
+typedef jbool (*func_mindustry_gen_LegsUnitLegacyArkyid_isBoss_R_boolean)(jcontext ctx, jobject self);
+#define VTABLE_mindustry_gen_LegsUnitLegacyArkyid_isGrounded_R_boolean 71
+typedef jbool (*func_mindustry_gen_LegsUnitLegacyArkyid_isGrounded_R_boolean)(jcontext ctx, jobject self);
+#define VTABLE_mindustry_gen_LegsUnitLegacyArkyid_isImmune_mindustry_type_StatusEffect_R_boolean 72
+typedef jbool (*func_mindustry_gen_LegsUnitLegacyArkyid_isImmune_mindustry_type_StatusEffect_R_boolean)(jcontext ctx, jobject self, jobject param0);
+#define VTABLE_mindustry_gen_LegsUnitLegacyArkyid_armorOverride_R_float 73
+typedef jfloat (*func_mindustry_gen_LegsUnitLegacyArkyid_armorOverride_R_float)(jcontext ctx, jobject self);
+#define VTABLE_mindustry_gen_LegsUnitLegacyArkyid_buildSpeedMultiplier_R_float 74
+typedef jfloat (*func_mindustry_gen_LegsUnitLegacyArkyid_buildSpeedMultiplier_R_float)(jcontext ctx, jobject self);
+#define VTABLE_mindustry_gen_LegsUnitLegacyArkyid_damageMultiplier_R_float 75
+typedef jfloat (*func_mindustry_gen_LegsUnitLegacyArkyid_damageMultiplier_R_float)(jcontext ctx, jobject self);
+#define VTABLE_mindustry_gen_LegsUnitLegacyArkyid_dragMultiplier_R_float 76
+typedef jfloat (*func_mindustry_gen_LegsUnitLegacyArkyid_dragMultiplier_R_float)(jcontext ctx, jobject self);
+#define VTABLE_mindustry_gen_LegsUnitLegacyArkyid_getDuration_mindustry_type_StatusEffect_R_float 77
+typedef jfloat (*func_mindustry_gen_LegsUnitLegacyArkyid_getDuration_mindustry_type_StatusEffect_R_float)(jcontext ctx, jobject self, jobject param0);
+#define VTABLE_mindustry_gen_LegsUnitLegacyArkyid_healthMultiplier_R_float 78
+typedef jfloat (*func_mindustry_gen_LegsUnitLegacyArkyid_healthMultiplier_R_float)(jcontext ctx, jobject self);
+#define VTABLE_mindustry_gen_LegsUnitLegacyArkyid_reloadMultiplier_R_float 79
+typedef jfloat (*func_mindustry_gen_LegsUnitLegacyArkyid_reloadMultiplier_R_float)(jcontext ctx, jobject self);
+#define VTABLE_mindustry_gen_LegsUnitLegacyArkyid_speedMultiplier_R_float 80
+typedef jfloat (*func_mindustry_gen_LegsUnitLegacyArkyid_speedMultiplier_R_float)(jcontext ctx, jobject self);
+#define VTABLE_mindustry_gen_LegsUnitLegacyArkyid_armorOverride_float 81
+typedef void (*func_mindustry_gen_LegsUnitLegacyArkyid_armorOverride_float)(jcontext ctx, jobject self, jfloat param0);
+#define VTABLE_mindustry_gen_LegsUnitLegacyArkyid_buildSpeedMultiplier_float 82
+typedef void (*func_mindustry_gen_LegsUnitLegacyArkyid_buildSpeedMultiplier_float)(jcontext ctx, jobject self, jfloat param0);
+#define VTABLE_mindustry_gen_LegsUnitLegacyArkyid_clearStatuses 83
+typedef void (*func_mindustry_gen_LegsUnitLegacyArkyid_clearStatuses)(jcontext ctx, jobject self);
+#define VTABLE_mindustry_gen_LegsUnitLegacyArkyid_damageMultiplier_float 84
+typedef void (*func_mindustry_gen_LegsUnitLegacyArkyid_damageMultiplier_float)(jcontext ctx, jobject self, jfloat param0);
+#define VTABLE_mindustry_gen_LegsUnitLegacyArkyid_disarmed_boolean 85
+typedef void (*func_mindustry_gen_LegsUnitLegacyArkyid_disarmed_boolean)(jcontext ctx, jobject self, jbool param0);
+#define VTABLE_mindustry_gen_LegsUnitLegacyArkyid_dragMultiplier_float 86
+typedef void (*func_mindustry_gen_LegsUnitLegacyArkyid_dragMultiplier_float)(jcontext ctx, jobject self, jfloat param0);
+#define VTABLE_mindustry_gen_LegsUnitLegacyArkyid_draw 87
+typedef void (*func_mindustry_gen_LegsUnitLegacyArkyid_draw)(jcontext ctx, jobject self);
+#define VTABLE_mindustry_gen_LegsUnitLegacyArkyid_healthMultiplier_float 88
+typedef void (*func_mindustry_gen_LegsUnitLegacyArkyid_healthMultiplier_float)(jcontext ctx, jobject self, jfloat param0);
+#define VTABLE_mindustry_gen_LegsUnitLegacyArkyid_reloadMultiplier_float 89
+typedef void (*func_mindustry_gen_LegsUnitLegacyArkyid_reloadMultiplier_float)(jcontext ctx, jobject self, jfloat param0);
+#define VTABLE_mindustry_gen_LegsUnitLegacyArkyid_setDuration_mindustry_type_StatusEffect_float 90
+typedef void (*func_mindustry_gen_LegsUnitLegacyArkyid_setDuration_mindustry_type_StatusEffect_float)(jcontext ctx, jobject self, jobject param0, jfloat param1);
+#define VTABLE_mindustry_gen_LegsUnitLegacyArkyid_speedMultiplier_float 91
+typedef void (*func_mindustry_gen_LegsUnitLegacyArkyid_speedMultiplier_float)(jcontext ctx, jobject self, jfloat param0);
+#define VTABLE_mindustry_gen_LegsUnitLegacyArkyid_inFogTo_mindustry_game_Team_R_boolean 92
+typedef jbool (*func_mindustry_gen_LegsUnitLegacyArkyid_inFogTo_mindustry_game_Team_R_boolean)(jcontext ctx, jobject self, jobject param0);
+#define VTABLE_mindustry_gen_LegsUnitLegacyArkyid_cheating_R_boolean 93
+typedef jbool (*func_mindustry_gen_LegsUnitLegacyArkyid_cheating_R_boolean)(jcontext ctx, jobject self);
+#define VTABLE_mindustry_gen_LegsUnitLegacyArkyid_team_R_mindustry_game_Team 94
+typedef jobject (*func_mindustry_gen_LegsUnitLegacyArkyid_team_R_mindustry_game_Team)(jcontext ctx, jobject self);
+#define VTABLE_mindustry_gen_LegsUnitLegacyArkyid_closestCore_R_mindustry_world_blocks_storage_CoreBlock$CoreBuild 95
+typedef jobject (*func_mindustry_gen_LegsUnitLegacyArkyid_closestCore_R_mindustry_world_blocks_storage_CoreBlock$CoreBuild)(jcontext ctx, jobject self);
+#define VTABLE_mindustry_gen_LegsUnitLegacyArkyid_closestEnemyCore_R_mindustry_world_blocks_storage_CoreBlock$CoreBuild 96
+typedef jobject (*func_mindustry_gen_LegsUnitLegacyArkyid_closestEnemyCore_R_mindustry_world_blocks_storage_CoreBlock$CoreBuild)(jcontext ctx, jobject self);
+#define VTABLE_mindustry_gen_LegsUnitLegacyArkyid_core_R_mindustry_world_blocks_storage_CoreBlock$CoreBuild 97
+typedef jobject (*func_mindustry_gen_LegsUnitLegacyArkyid_core_R_mindustry_world_blocks_storage_CoreBlock$CoreBuild)(jcontext ctx, jobject self);
+#define VTABLE_mindustry_gen_LegsUnitLegacyArkyid_team_mindustry_game_Team 98
+typedef void (*func_mindustry_gen_LegsUnitLegacyArkyid_team_mindustry_game_Team)(jcontext ctx, jobject self, jobject param0);
+#define VTABLE_mindustry_gen_LegsUnitLegacyArkyid_buildPlan_R_mindustry_entities_units_BuildPlan 99
+typedef jobject (*func_mindustry_gen_LegsUnitLegacyArkyid_buildPlan_R_mindustry_entities_units_BuildPlan)(jcontext ctx, jobject self);
+#define VTABLE_mindustry_gen_LegsUnitLegacyArkyid_shouldSkip_mindustry_entities_units_BuildPlan_mindustry_gen_Building_R_boolean 100
+typedef jbool (*func_mindustry_gen_LegsUnitLegacyArkyid_shouldSkip_mindustry_entities_units_BuildPlan_mindustry_gen_Building_R_boolean)(jcontext ctx, jobject self, jobject param0, jobject param1);
+#define VTABLE_mindustry_gen_LegsUnitLegacyArkyid_addBuild_mindustry_entities_units_BuildPlan_boolean 101
+typedef void (*func_mindustry_gen_LegsUnitLegacyArkyid_addBuild_mindustry_entities_units_BuildPlan_boolean)(jcontext ctx, jobject self, jobject param0, jbool param1);
+#define VTABLE_mindustry_gen_LegsUnitLegacyArkyid_addBuild_mindustry_entities_units_BuildPlan 102
+typedef void (*func_mindustry_gen_LegsUnitLegacyArkyid_addBuild_mindustry_entities_units_BuildPlan)(jcontext ctx, jobject self, jobject param0);
+#define VTABLE_mindustry_gen_LegsUnitLegacyArkyid_clearBuilding 103
+typedef void (*func_mindustry_gen_LegsUnitLegacyArkyid_clearBuilding)(jcontext ctx, jobject self);
+#define VTABLE_mindustry_gen_LegsUnitLegacyArkyid_isBuilding_R_boolean 104
+typedef jbool (*func_mindustry_gen_LegsUnitLegacyArkyid_isBuilding_R_boolean)(jcontext ctx, jobject self);
+#define VTABLE_mindustry_gen_LegsUnitLegacyArkyid_plans_R_arc_struct_Queue 105
+typedef jobject (*func_mindustry_gen_LegsUnitLegacyArkyid_plans_R_arc_struct_Queue)(jcontext ctx, jobject self);
+#define VTABLE_mindustry_gen_LegsUnitLegacyArkyid_activelyBuilding_R_boolean 106
+typedef jbool (*func_mindustry_gen_LegsUnitLegacyArkyid_activelyBuilding_R_boolean)(jcontext ctx, jobject self);
+#define VTABLE_mindustry_gen_LegsUnitLegacyArkyid_canBuild_R_boolean 107
+typedef jbool (*func_mindustry_gen_LegsUnitLegacyArkyid_canBuild_R_boolean)(jcontext ctx, jobject self);
+#define VTABLE_mindustry_gen_LegsUnitLegacyArkyid_updateBuilding_R_boolean 108
+typedef jbool (*func_mindustry_gen_LegsUnitLegacyArkyid_updateBuilding_R_boolean)(jcontext ctx, jobject self);
+#define VTABLE_mindustry_gen_LegsUnitLegacyArkyid_buildAlpha_R_float 109
+typedef jfloat (*func_mindustry_gen_LegsUnitLegacyArkyid_buildAlpha_R_float)(jcontext ctx, jobject self);
+#define VTABLE_mindustry_gen_LegsUnitLegacyArkyid_buildAlpha_float 110
+typedef void (*func_mindustry_gen_LegsUnitLegacyArkyid_buildAlpha_float)(jcontext ctx, jobject self, jfloat param0);
+#define VTABLE_mindustry_gen_LegsUnitLegacyArkyid_drawBuilding 111
+typedef void (*func_mindustry_gen_LegsUnitLegacyArkyid_drawBuilding)(jcontext ctx, jobject self);
+#define VTABLE_mindustry_gen_LegsUnitLegacyArkyid_drawBuildingBeam_float_float 112
+typedef void (*func_mindustry_gen_LegsUnitLegacyArkyid_drawBuildingBeam_float_float)(jcontext ctx, jobject self, jfloat param0, jfloat param1);
+#define VTABLE_mindustry_gen_LegsUnitLegacyArkyid_drawPlan_mindustry_entities_units_BuildPlan_float 113
+typedef void (*func_mindustry_gen_LegsUnitLegacyArkyid_drawPlan_mindustry_entities_units_BuildPlan_float)(jcontext ctx, jobject self, jobject param0, jfloat param1);
+#define VTABLE_mindustry_gen_LegsUnitLegacyArkyid_drawPlanTop_mindustry_entities_units_BuildPlan_float 114
+typedef void (*func_mindustry_gen_LegsUnitLegacyArkyid_drawPlanTop_mindustry_entities_units_BuildPlan_float)(jcontext ctx, jobject self, jobject param0, jfloat param1);
+#define VTABLE_mindustry_gen_LegsUnitLegacyArkyid_plans_arc_struct_Queue 115
+typedef void (*func_mindustry_gen_LegsUnitLegacyArkyid_plans_arc_struct_Queue)(jcontext ctx, jobject self, jobject param0);
+#define VTABLE_mindustry_gen_LegsUnitLegacyArkyid_removeBuild_int_int_boolean 116
+typedef void (*func_mindustry_gen_LegsUnitLegacyArkyid_removeBuild_int_int_boolean)(jcontext ctx, jobject self, jint param0, jint param1, jbool param2);
+#define VTABLE_mindustry_gen_LegsUnitLegacyArkyid_updateBuildLogic 117
+typedef void (*func_mindustry_gen_LegsUnitLegacyArkyid_updateBuildLogic)(jcontext ctx, jobject self);
+#define VTABLE_mindustry_gen_LegsUnitLegacyArkyid_updateBuilding_boolean 118
+typedef void (*func_mindustry_gen_LegsUnitLegacyArkyid_updateBuilding_boolean)(jcontext ctx, jobject self, jbool param0);
+#define VTABLE_mindustry_gen_LegsUnitLegacyArkyid_validatePlans 119
+typedef void (*func_mindustry_gen_LegsUnitLegacyArkyid_validatePlans)(jcontext ctx, jobject self);
+#define VTABLE_mindustry_gen_LegsUnitLegacyArkyid_clipSize_R_float 120
+typedef jfloat (*func_mindustry_gen_LegsUnitLegacyArkyid_clipSize_R_float)(jcontext ctx, jobject self);
+#define VTABLE_mindustry_gen_LegsUnitLegacyArkyid_damageArmorMult_float_float 121
+typedef void (*func_mindustry_gen_LegsUnitLegacyArkyid_damageArmorMult_float_float)(jcontext ctx, jobject self, jfloat param0, jfloat param1);
+#define VTABLE_mindustry_gen_LegsUnitLegacyArkyid_damageArmorMult_float_float_boolean 122
+typedef void (*func_mindustry_gen_LegsUnitLegacyArkyid_damageArmorMult_float_float_boolean)(jcontext ctx, jobject self, jfloat param0, jfloat param1, jbool param2);
+#define VTABLE_mindustry_gen_LegsUnitLegacyArkyid_damagePierce_float 123
+typedef void (*func_mindustry_gen_LegsUnitLegacyArkyid_damagePierce_float)(jcontext ctx, jobject self, jfloat param0);
+#define VTABLE_mindustry_gen_LegsUnitLegacyArkyid_damagePierce_float_boolean 124
+typedef void (*func_mindustry_gen_LegsUnitLegacyArkyid_damagePierce_float_boolean)(jcontext ctx, jobject self, jfloat param0, jbool param1);
+#define VTABLE_mindustry_gen_LegsUnitLegacyArkyid_healFract_float 125
+typedef void (*func_mindustry_gen_LegsUnitLegacyArkyid_healFract_float)(jcontext ctx, jobject self, jfloat param0);
+#define VTABLE_mindustry_gen_LegsUnitLegacyArkyid_heal_float 126
+typedef void (*func_mindustry_gen_LegsUnitLegacyArkyid_heal_float)(jcontext ctx, jobject self, jfloat param0);
+#define VTABLE_mindustry_gen_LegsUnitLegacyArkyid_damaged_R_boolean 127
+typedef jbool (*func_mindustry_gen_LegsUnitLegacyArkyid_damaged_R_boolean)(jcontext ctx, jobject self);
+#define VTABLE_mindustry_gen_LegsUnitLegacyArkyid_dead_R_boolean 128
+typedef jbool (*func_mindustry_gen_LegsUnitLegacyArkyid_dead_R_boolean)(jcontext ctx, jobject self);
+#define VTABLE_mindustry_gen_LegsUnitLegacyArkyid_isValid_R_boolean 129
+typedef jbool (*func_mindustry_gen_LegsUnitLegacyArkyid_isValid_R_boolean)(jcontext ctx, jobject self);
+#define VTABLE_mindustry_gen_LegsUnitLegacyArkyid_health_R_float 130
+typedef jfloat (*func_mindustry_gen_LegsUnitLegacyArkyid_health_R_float)(jcontext ctx, jobject self);
+#define VTABLE_mindustry_gen_LegsUnitLegacyArkyid_healthf_R_float 131
+typedef jfloat (*func_mindustry_gen_LegsUnitLegacyArkyid_healthf_R_float)(jcontext ctx, jobject self);
+#define VTABLE_mindustry_gen_LegsUnitLegacyArkyid_hitTime_R_float 132
+typedef jfloat (*func_mindustry_gen_LegsUnitLegacyArkyid_hitTime_R_float)(jcontext ctx, jobject self);
+#define VTABLE_mindustry_gen_LegsUnitLegacyArkyid_maxHealth_R_float 133
+typedef jfloat (*func_mindustry_gen_LegsUnitLegacyArkyid_maxHealth_R_float)(jcontext ctx, jobject self);
+#define VTABLE_mindustry_gen_LegsUnitLegacyArkyid_clampHealth 134
+typedef void (*func_mindustry_gen_LegsUnitLegacyArkyid_clampHealth)(jcontext ctx, jobject self);
+#define VTABLE_mindustry_gen_LegsUnitLegacyArkyid_damage_float 135
+typedef void (*func_mindustry_gen_LegsUnitLegacyArkyid_damage_float)(jcontext ctx, jobject self, jfloat param0);
+#define VTABLE_mindustry_gen_LegsUnitLegacyArkyid_damage_float_boolean 136
+typedef void (*func_mindustry_gen_LegsUnitLegacyArkyid_damage_float_boolean)(jcontext ctx, jobject self, jfloat param0, jbool param1);
+#define VTABLE_mindustry_gen_LegsUnitLegacyArkyid_damageContinuous_float 137
+typedef void (*func_mindustry_gen_LegsUnitLegacyArkyid_damageContinuous_float)(jcontext ctx, jobject self, jfloat param0);
+#define VTABLE_mindustry_gen_LegsUnitLegacyArkyid_damageContinuousArmorMult_float_float 138
+typedef void (*func_mindustry_gen_LegsUnitLegacyArkyid_damageContinuousArmorMult_float_float)(jcontext ctx, jobject self, jfloat param0, jfloat param1);
+#define VTABLE_mindustry_gen_LegsUnitLegacyArkyid_damageContinuousPierce_float 139
+typedef void (*func_mindustry_gen_LegsUnitLegacyArkyid_damageContinuousPierce_float)(jcontext ctx, jobject self, jfloat param0);
+#define VTABLE_mindustry_gen_LegsUnitLegacyArkyid_dead_boolean 140
+typedef void (*func_mindustry_gen_LegsUnitLegacyArkyid_dead_boolean)(jcontext ctx, jobject self, jbool param0);
+#define VTABLE_mindustry_gen_LegsUnitLegacyArkyid_heal 141
+typedef void (*func_mindustry_gen_LegsUnitLegacyArkyid_heal)(jcontext ctx, jobject self);
+#define VTABLE_mindustry_gen_LegsUnitLegacyArkyid_health_float 142
+typedef void (*func_mindustry_gen_LegsUnitLegacyArkyid_health_float)(jcontext ctx, jobject self, jfloat param0);
+#define VTABLE_mindustry_gen_LegsUnitLegacyArkyid_hitTime_float 143
+typedef void (*func_mindustry_gen_LegsUnitLegacyArkyid_hitTime_float)(jcontext ctx, jobject self, jfloat param0);
+#define VTABLE_mindustry_gen_LegsUnitLegacyArkyid_kill 144
+typedef void (*func_mindustry_gen_LegsUnitLegacyArkyid_kill)(jcontext ctx, jobject self);
+#define VTABLE_mindustry_gen_LegsUnitLegacyArkyid_killed 145
+typedef void (*func_mindustry_gen_LegsUnitLegacyArkyid_killed)(jcontext ctx, jobject self);
+#define VTABLE_mindustry_gen_LegsUnitLegacyArkyid_maxHealth_float 146
+typedef void (*func_mindustry_gen_LegsUnitLegacyArkyid_maxHealth_float)(jcontext ctx, jobject self, jfloat param0);
+#define VTABLE_mindustry_gen_LegsUnitLegacyArkyid_hitbox_arc_math_geom_Rect 147
+typedef void (*func_mindustry_gen_LegsUnitLegacyArkyid_hitbox_arc_math_geom_Rect)(jcontext ctx, jobject self, jobject param0);
+#define VTABLE_mindustry_gen_LegsUnitLegacyArkyid_hitSize_R_float 148
+typedef jfloat (*func_mindustry_gen_LegsUnitLegacyArkyid_hitSize_R_float)(jcontext ctx, jobject self);
+#define VTABLE_mindustry_gen_LegsUnitLegacyArkyid_collides_mindustry_gen_Hitboxc_R_boolean 149
+typedef jbool (*func_mindustry_gen_LegsUnitLegacyArkyid_collides_mindustry_gen_Hitboxc_R_boolean)(jcontext ctx, jobject self, jobject param0);
+#define VTABLE_mindustry_gen_LegsUnitLegacyArkyid_deltaAngle_R_float 150
+typedef jfloat (*func_mindustry_gen_LegsUnitLegacyArkyid_deltaAngle_R_float)(jcontext ctx, jobject self);
+#define VTABLE_mindustry_gen_LegsUnitLegacyArkyid_deltaLen_R_float 151
+typedef jfloat (*func_mindustry_gen_LegsUnitLegacyArkyid_deltaLen_R_float)(jcontext ctx, jobject self);
+#define VTABLE_mindustry_gen_LegsUnitLegacyArkyid_deltaX_R_float 152
+typedef jfloat (*func_mindustry_gen_LegsUnitLegacyArkyid_deltaX_R_float)(jcontext ctx, jobject self);
+#define VTABLE_mindustry_gen_LegsUnitLegacyArkyid_deltaY_R_float 153
+typedef jfloat (*func_mindustry_gen_LegsUnitLegacyArkyid_deltaY_R_float)(jcontext ctx, jobject self);
+#define VTABLE_mindustry_gen_LegsUnitLegacyArkyid_lastX_R_float 154
+typedef jfloat (*func_mindustry_gen_LegsUnitLegacyArkyid_lastX_R_float)(jcontext ctx, jobject self);
+#define VTABLE_mindustry_gen_LegsUnitLegacyArkyid_lastY_R_float 155
+typedef jfloat (*func_mindustry_gen_LegsUnitLegacyArkyid_lastY_R_float)(jcontext ctx, jobject self);
+#define VTABLE_mindustry_gen_LegsUnitLegacyArkyid_collision_mindustry_gen_Hitboxc_float_float 156
+typedef void (*func_mindustry_gen_LegsUnitLegacyArkyid_collision_mindustry_gen_Hitboxc_float_float)(jcontext ctx, jobject self, jobject param0, jfloat param1, jfloat param2);
+#define VTABLE_mindustry_gen_LegsUnitLegacyArkyid_deltaX_float 157
+typedef void (*func_mindustry_gen_LegsUnitLegacyArkyid_deltaX_float)(jcontext ctx, jobject self, jfloat param0);
+#define VTABLE_mindustry_gen_LegsUnitLegacyArkyid_deltaY_float 158
+typedef void (*func_mindustry_gen_LegsUnitLegacyArkyid_deltaY_float)(jcontext ctx, jobject self, jfloat param0);
+#define VTABLE_mindustry_gen_LegsUnitLegacyArkyid_getCollisions_arc_func_Cons 159
+typedef void (*func_mindustry_gen_LegsUnitLegacyArkyid_getCollisions_arc_func_Cons)(jcontext ctx, jobject self, jobject param0);
+#define VTABLE_mindustry_gen_LegsUnitLegacyArkyid_hitSize_float 160
+typedef void (*func_mindustry_gen_LegsUnitLegacyArkyid_hitSize_float)(jcontext ctx, jobject self, jfloat param0);
+#define VTABLE_mindustry_gen_LegsUnitLegacyArkyid_hitboxTile_arc_math_geom_Rect 161
+typedef void (*func_mindustry_gen_LegsUnitLegacyArkyid_hitboxTile_arc_math_geom_Rect)(jcontext ctx, jobject self, jobject param0);
+#define VTABLE_mindustry_gen_LegsUnitLegacyArkyid_lastX_float 162
+typedef void (*func_mindustry_gen_LegsUnitLegacyArkyid_lastX_float)(jcontext ctx, jobject self, jfloat param0);
+#define VTABLE_mindustry_gen_LegsUnitLegacyArkyid_lastY_float 163
+typedef void (*func_mindustry_gen_LegsUnitLegacyArkyid_lastY_float)(jcontext ctx, jobject self, jfloat param0);
+#define VTABLE_mindustry_gen_LegsUnitLegacyArkyid_updateLastPosition 164
+typedef void (*func_mindustry_gen_LegsUnitLegacyArkyid_updateLastPosition)(jcontext ctx, jobject self);
+#define VTABLE_mindustry_gen_LegsUnitLegacyArkyid_setIndex__draw_int 165
+typedef void (*func_mindustry_gen_LegsUnitLegacyArkyid_setIndex__draw_int)(jcontext ctx, jobject self, jint param0);
+#define VTABLE_mindustry_gen_LegsUnitLegacyArkyid_setIndex__sync_int 166
+typedef void (*func_mindustry_gen_LegsUnitLegacyArkyid_setIndex__sync_int)(jcontext ctx, jobject self, jint param0);
+#define VTABLE_mindustry_gen_LegsUnitLegacyArkyid_setIndex__unit_int 167
+typedef void (*func_mindustry_gen_LegsUnitLegacyArkyid_setIndex__unit_int)(jcontext ctx, jobject self, jint param0);
+#define VTABLE_mindustry_gen_LegsUnitLegacyArkyid_acceptsItem_mindustry_type_Item_R_boolean 168
+typedef jbool (*func_mindustry_gen_LegsUnitLegacyArkyid_acceptsItem_mindustry_type_Item_R_boolean)(jcontext ctx, jobject self, jobject param0);
+#define VTABLE_mindustry_gen_LegsUnitLegacyArkyid_hasItem_R_boolean 169
+typedef jbool (*func_mindustry_gen_LegsUnitLegacyArkyid_hasItem_R_boolean)(jcontext ctx, jobject self);
+#define VTABLE_mindustry_gen_LegsUnitLegacyArkyid_itemTime_R_float 170
+typedef jfloat (*func_mindustry_gen_LegsUnitLegacyArkyid_itemTime_R_float)(jcontext ctx, jobject self);
+#define VTABLE_mindustry_gen_LegsUnitLegacyArkyid_itemCapacity_R_int 171
+typedef jint (*func_mindustry_gen_LegsUnitLegacyArkyid_itemCapacity_R_int)(jcontext ctx, jobject self);
+#define VTABLE_mindustry_gen_LegsUnitLegacyArkyid_maxAccepted_mindustry_type_Item_R_int 172
+typedef jint (*func_mindustry_gen_LegsUnitLegacyArkyid_maxAccepted_mindustry_type_Item_R_int)(jcontext ctx, jobject self, jobject param0);
+#define VTABLE_mindustry_gen_LegsUnitLegacyArkyid_item_R_mindustry_type_Item 173
+typedef jobject (*func_mindustry_gen_LegsUnitLegacyArkyid_item_R_mindustry_type_Item)(jcontext ctx, jobject self);
+#define VTABLE_mindustry_gen_LegsUnitLegacyArkyid_stack_R_mindustry_type_ItemStack 174
+typedef jobject (*func_mindustry_gen_LegsUnitLegacyArkyid_stack_R_mindustry_type_ItemStack)(jcontext ctx, jobject self);
+#define VTABLE_mindustry_gen_LegsUnitLegacyArkyid_addItem_mindustry_type_Item 175
+typedef void (*func_mindustry_gen_LegsUnitLegacyArkyid_addItem_mindustry_type_Item)(jcontext ctx, jobject self, jobject param0);
+#define VTABLE_mindustry_gen_LegsUnitLegacyArkyid_addItem_mindustry_type_Item_int 176
+typedef void (*func_mindustry_gen_LegsUnitLegacyArkyid_addItem_mindustry_type_Item_int)(jcontext ctx, jobject self, jobject param0, jint param1);
+#define VTABLE_mindustry_gen_LegsUnitLegacyArkyid_clearItem 177
+typedef void (*func_mindustry_gen_LegsUnitLegacyArkyid_clearItem)(jcontext ctx, jobject self);
+#define VTABLE_mindustry_gen_LegsUnitLegacyArkyid_itemTime_float 178
+typedef void (*func_mindustry_gen_LegsUnitLegacyArkyid_itemTime_float)(jcontext ctx, jobject self, jfloat param0);
+#define VTABLE_mindustry_gen_LegsUnitLegacyArkyid_stack_mindustry_type_ItemStack 179
+typedef void (*func_mindustry_gen_LegsUnitLegacyArkyid_stack_mindustry_type_ItemStack)(jcontext ctx, jobject self, jobject param0);
+#define VTABLE_mindustry_gen_LegsUnitLegacyArkyid_mineTile_R_mindustry_world_Tile 180
+typedef jobject (*func_mindustry_gen_LegsUnitLegacyArkyid_mineTile_R_mindustry_world_Tile)(jcontext ctx, jobject self);
+#define VTABLE_mindustry_gen_LegsUnitLegacyArkyid_canMine_R_boolean 181
+typedef jbool (*func_mindustry_gen_LegsUnitLegacyArkyid_canMine_R_boolean)(jcontext ctx, jobject self);
+#define VTABLE_mindustry_gen_LegsUnitLegacyArkyid_canMine_mindustry_type_Item_R_boolean 182
+typedef jbool (*func_mindustry_gen_LegsUnitLegacyArkyid_canMine_mindustry_type_Item_R_boolean)(jcontext ctx, jobject self, jobject param0);
+#define VTABLE_mindustry_gen_LegsUnitLegacyArkyid_mining_R_boolean 183
+typedef jbool (*func_mindustry_gen_LegsUnitLegacyArkyid_mining_R_boolean)(jcontext ctx, jobject self);
+#define VTABLE_mindustry_gen_LegsUnitLegacyArkyid_offloadImmediately_R_boolean 184
+typedef jbool (*func_mindustry_gen_LegsUnitLegacyArkyid_offloadImmediately_R_boolean)(jcontext ctx, jobject self);
+#define VTABLE_mindustry_gen_LegsUnitLegacyArkyid_validMine_mindustry_world_Tile_R_boolean 185
+typedef jbool (*func_mindustry_gen_LegsUnitLegacyArkyid_validMine_mindustry_world_Tile_R_boolean)(jcontext ctx, jobject self, jobject param0);
+#define VTABLE_mindustry_gen_LegsUnitLegacyArkyid_validMine_mindustry_world_Tile_boolean_R_boolean 186
+typedef jbool (*func_mindustry_gen_LegsUnitLegacyArkyid_validMine_mindustry_world_Tile_boolean_R_boolean)(jcontext ctx, jobject self, jobject param0, jbool param1);
+#define VTABLE_mindustry_gen_LegsUnitLegacyArkyid_mineTimer_R_float 187
+typedef jfloat (*func_mindustry_gen_LegsUnitLegacyArkyid_mineTimer_R_float)(jcontext ctx, jobject self);
+#define VTABLE_mindustry_gen_LegsUnitLegacyArkyid_getMineResult_mindustry_world_Tile_R_mindustry_type_Item 188
+typedef jobject (*func_mindustry_gen_LegsUnitLegacyArkyid_getMineResult_mindustry_world_Tile_R_mindustry_type_Item)(jcontext ctx, jobject self, jobject param0);
+#define VTABLE_mindustry_gen_LegsUnitLegacyArkyid_mineTile_mindustry_world_Tile 189
+typedef void (*func_mindustry_gen_LegsUnitLegacyArkyid_mineTile_mindustry_world_Tile)(jcontext ctx, jobject self, jobject param0);
+#define VTABLE_mindustry_gen_LegsUnitLegacyArkyid_mineTimer_float 190
+typedef void (*func_mindustry_gen_LegsUnitLegacyArkyid_mineTimer_float)(jcontext ctx, jobject self, jfloat param0);
+#define VTABLE_mindustry_gen_LegsUnitLegacyArkyid_solidity_R_mindustry_entities_EntityCollisions$SolidPred 191
+typedef jobject (*func_mindustry_gen_LegsUnitLegacyArkyid_solidity_R_mindustry_entities_EntityCollisions$SolidPred)(jcontext ctx, jobject self);
+#define VTABLE_mindustry_gen_LegsUnitLegacyArkyid_canPassOn_R_boolean 192
+typedef jbool (*func_mindustry_gen_LegsUnitLegacyArkyid_canPassOn_R_boolean)(jcontext ctx, jobject self);
+#define VTABLE_mindustry_gen_LegsUnitLegacyArkyid_canPass_int_int_R_boolean 193
+typedef jbool (*func_mindustry_gen_LegsUnitLegacyArkyid_canPass_int_int_R_boolean)(jcontext ctx, jobject self, jint param0, jint param1);
+#define VTABLE_mindustry_gen_LegsUnitLegacyArkyid_vel_R_arc_math_geom_Vec2 194
+typedef jobject (*func_mindustry_gen_LegsUnitLegacyArkyid_vel_R_arc_math_geom_Vec2)(jcontext ctx, jobject self);
+#define VTABLE_mindustry_gen_LegsUnitLegacyArkyid_ignoreSolids_R_boolean 195
+typedef jbool (*func_mindustry_gen_LegsUnitLegacyArkyid_ignoreSolids_R_boolean)(jcontext ctx, jobject self);
+#define VTABLE_mindustry_gen_LegsUnitLegacyArkyid_moving_R_boolean 196
+typedef jbool (*func_mindustry_gen_LegsUnitLegacyArkyid_moving_R_boolean)(jcontext ctx, jobject self);
+#define VTABLE_mindustry_gen_LegsUnitLegacyArkyid_drag_R_float 197
+typedef jfloat (*func_mindustry_gen_LegsUnitLegacyArkyid_drag_R_float)(jcontext ctx, jobject self);
+#define VTABLE_mindustry_gen_LegsUnitLegacyArkyid_drag_float 198
+typedef void (*func_mindustry_gen_LegsUnitLegacyArkyid_drag_float)(jcontext ctx, jobject self, jfloat param0);
+#define VTABLE_mindustry_gen_LegsUnitLegacyArkyid_move_arc_math_geom_Vec2 199
+typedef void (*func_mindustry_gen_LegsUnitLegacyArkyid_move_arc_math_geom_Vec2)(jcontext ctx, jobject self, jobject param0);
+#define VTABLE_mindustry_gen_LegsUnitLegacyArkyid_move_float_float 200
+typedef void (*func_mindustry_gen_LegsUnitLegacyArkyid_move_float_float)(jcontext ctx, jobject self, jfloat param0, jfloat param1);
+#define VTABLE_mindustry_gen_LegsUnitLegacyArkyid_vel_arc_math_geom_Vec2 201
+typedef void (*func_mindustry_gen_LegsUnitLegacyArkyid_vel_arc_math_geom_Vec2)(jcontext ctx, jobject self, jobject param0);
+#define VTABLE_mindustry_gen_LegsUnitLegacyArkyid_velAddNet_arc_math_geom_Vec2 202
+typedef void (*func_mindustry_gen_LegsUnitLegacyArkyid_velAddNet_arc_math_geom_Vec2)(jcontext ctx, jobject self, jobject param0);
+#define VTABLE_mindustry_gen_LegsUnitLegacyArkyid_velAddNet_float_float 203
+typedef void (*func_mindustry_gen_LegsUnitLegacyArkyid_velAddNet_float_float)(jcontext ctx, jobject self, jfloat param0, jfloat param1);
+#define VTABLE_mindustry_gen_LegsUnitLegacyArkyid_hasPhysicsRef_R_boolean 204
+typedef jbool (*func_mindustry_gen_LegsUnitLegacyArkyid_hasPhysicsRef_R_boolean)(jcontext ctx, jobject self);
+#define VTABLE_mindustry_gen_LegsUnitLegacyArkyid_mass_R_float 205
+typedef jfloat (*func_mindustry_gen_LegsUnitLegacyArkyid_mass_R_float)(jcontext ctx, jobject self);
+#define VTABLE_mindustry_gen_LegsUnitLegacyArkyid_hasPhysicsRef_boolean 206
+typedef void (*func_mindustry_gen_LegsUnitLegacyArkyid_hasPhysicsRef_boolean)(jcontext ctx, jobject self, jbool param0);
+#define VTABLE_mindustry_gen_LegsUnitLegacyArkyid_impulse_arc_math_geom_Vec2 207
+typedef void (*func_mindustry_gen_LegsUnitLegacyArkyid_impulse_arc_math_geom_Vec2)(jcontext ctx, jobject self, jobject param0);
+#define VTABLE_mindustry_gen_LegsUnitLegacyArkyid_impulse_float_float 208
+typedef void (*func_mindustry_gen_LegsUnitLegacyArkyid_impulse_float_float)(jcontext ctx, jobject self, jfloat param0, jfloat param1);
+#define VTABLE_mindustry_gen_LegsUnitLegacyArkyid_impulseNet_arc_math_geom_Vec2 209
+typedef void (*func_mindustry_gen_LegsUnitLegacyArkyid_impulseNet_arc_math_geom_Vec2)(jcontext ctx, jobject self, jobject param0);
+#define VTABLE_mindustry_gen_LegsUnitLegacyArkyid_shield_R_float 210
+typedef jfloat (*func_mindustry_gen_LegsUnitLegacyArkyid_shield_R_float)(jcontext ctx, jobject self);
+#define VTABLE_mindustry_gen_LegsUnitLegacyArkyid_shield_float 211
+typedef void (*func_mindustry_gen_LegsUnitLegacyArkyid_shield_float)(jcontext ctx, jobject self, jfloat param0);
+#define VTABLE_mindustry_gen_LegsUnitLegacyArkyid_shieldAlpha_R_float 212
+typedef jfloat (*func_mindustry_gen_LegsUnitLegacyArkyid_shieldAlpha_R_float)(jcontext ctx, jobject self);
+#define VTABLE_mindustry_gen_LegsUnitLegacyArkyid_shieldAlpha_float 213
+typedef void (*func_mindustry_gen_LegsUnitLegacyArkyid_shieldAlpha_float)(jcontext ctx, jobject self, jfloat param0);
+#define VTABLE_mindustry_gen_LegsUnitLegacyArkyid_armor_R_float 214
+typedef jfloat (*func_mindustry_gen_LegsUnitLegacyArkyid_armor_R_float)(jcontext ctx, jobject self);
+#define VTABLE_mindustry_gen_LegsUnitLegacyArkyid_armor_float 215
+typedef void (*func_mindustry_gen_LegsUnitLegacyArkyid_armor_float)(jcontext ctx, jobject self, jfloat param0);
+#define VTABLE_mindustry_gen_LegsUnitLegacyArkyid_rawDamage_float 216
+typedef void (*func_mindustry_gen_LegsUnitLegacyArkyid_rawDamage_float)(jcontext ctx, jobject self, jfloat param0);
+#define VTABLE_mindustry_gen_LegsUnitLegacyArkyid_isSyncHidden_mindustry_game_Team_R_boolean 217
+typedef jbool (*func_mindustry_gen_LegsUnitLegacyArkyid_isSyncHidden_mindustry_game_Team_R_boolean)(jcontext ctx, jobject self, jobject param0);
+#define VTABLE_mindustry_gen_LegsUnitLegacyArkyid_lastUpdated_R_long 218
+typedef jlong (*func_mindustry_gen_LegsUnitLegacyArkyid_lastUpdated_R_long)(jcontext ctx, jobject self);
+#define VTABLE_mindustry_gen_LegsUnitLegacyArkyid_updateSpacing_R_long 219
+typedef jlong (*func_mindustry_gen_LegsUnitLegacyArkyid_updateSpacing_R_long)(jcontext ctx, jobject self);
+#define VTABLE_mindustry_gen_LegsUnitLegacyArkyid_afterSync 220
+typedef void (*func_mindustry_gen_LegsUnitLegacyArkyid_afterSync)(jcontext ctx, jobject self);
+#define VTABLE_mindustry_gen_LegsUnitLegacyArkyid_handleSyncHidden 221
+typedef void (*func_mindustry_gen_LegsUnitLegacyArkyid_handleSyncHidden)(jcontext ctx, jobject self);
+#define VTABLE_mindustry_gen_LegsUnitLegacyArkyid_interpolate 222
+typedef void (*func_mindustry_gen_LegsUnitLegacyArkyid_interpolate)(jcontext ctx, jobject self);
+#define VTABLE_mindustry_gen_LegsUnitLegacyArkyid_lastUpdated_long 223
+typedef void (*func_mindustry_gen_LegsUnitLegacyArkyid_lastUpdated_long)(jcontext ctx, jobject self, jlong param0);
+#define VTABLE_mindustry_gen_LegsUnitLegacyArkyid_readSync_arc_util_io_Reads 224
+typedef void (*func_mindustry_gen_LegsUnitLegacyArkyid_readSync_arc_util_io_Reads)(jcontext ctx, jobject self, jobject param0);
+#define VTABLE_mindustry_gen_LegsUnitLegacyArkyid_readSyncManual_java_nio_FloatBuffer 225
+typedef void (*func_mindustry_gen_LegsUnitLegacyArkyid_readSyncManual_java_nio_FloatBuffer)(jcontext ctx, jobject self, jobject param0);
+#define VTABLE_mindustry_gen_LegsUnitLegacyArkyid_snapInterpolation 226
+typedef void (*func_mindustry_gen_LegsUnitLegacyArkyid_snapInterpolation)(jcontext ctx, jobject self);
+#define VTABLE_mindustry_gen_LegsUnitLegacyArkyid_snapSync 227
+typedef void (*func_mindustry_gen_LegsUnitLegacyArkyid_snapSync)(jcontext ctx, jobject self);
+#define VTABLE_mindustry_gen_LegsUnitLegacyArkyid_updateSpacing_long 228
+typedef void (*func_mindustry_gen_LegsUnitLegacyArkyid_updateSpacing_long)(jcontext ctx, jobject self, jlong param0);
+#define VTABLE_mindustry_gen_LegsUnitLegacyArkyid_writeSync_arc_util_io_Writes 229
+typedef void (*func_mindustry_gen_LegsUnitLegacyArkyid_writeSync_arc_util_io_Writes)(jcontext ctx, jobject self, jobject param0);
+#define VTABLE_mindustry_gen_LegsUnitLegacyArkyid_writeSyncManual_java_nio_FloatBuffer 230
+typedef void (*func_mindustry_gen_LegsUnitLegacyArkyid_writeSyncManual_java_nio_FloatBuffer)(jcontext ctx, jobject self, jobject param0);
+#define VTABLE_mindustry_gen_LegsUnitLegacyArkyid_aim_float_float 231
+typedef void (*func_mindustry_gen_LegsUnitLegacyArkyid_aim_float_float)(jcontext ctx, jobject self, jfloat param0, jfloat param1);
+#define VTABLE_mindustry_gen_LegsUnitLegacyArkyid_aim_float_float_boolean 232
+typedef void (*func_mindustry_gen_LegsUnitLegacyArkyid_aim_float_float_boolean)(jcontext ctx, jobject self, jfloat param0, jfloat param1, jbool param2);
+#define VTABLE_mindustry_gen_LegsUnitLegacyArkyid_mounts_R_Array1_mindustry_entities_units_WeaponMount 233
+typedef jobject (*func_mindustry_gen_LegsUnitLegacyArkyid_mounts_R_Array1_mindustry_entities_units_WeaponMount)(jcontext ctx, jobject self);
+#define VTABLE_mindustry_gen_LegsUnitLegacyArkyid_mounts_Array1_mindustry_entities_units_WeaponMount 234
+typedef void (*func_mindustry_gen_LegsUnitLegacyArkyid_mounts_Array1_mindustry_entities_units_WeaponMount)(jcontext ctx, jobject self, jobject param0);
+#define VTABLE_mindustry_gen_LegsUnitLegacyArkyid_canShoot_R_boolean 235
+typedef jbool (*func_mindustry_gen_LegsUnitLegacyArkyid_canShoot_R_boolean)(jcontext ctx, jobject self);
+#define VTABLE_mindustry_gen_LegsUnitLegacyArkyid_isRotate_R_boolean 236
+typedef jbool (*func_mindustry_gen_LegsUnitLegacyArkyid_isRotate_R_boolean)(jcontext ctx, jobject self);
+#define VTABLE_mindustry_gen_LegsUnitLegacyArkyid_isShooting_R_boolean 237
+typedef jbool (*func_mindustry_gen_LegsUnitLegacyArkyid_isShooting_R_boolean)(jcontext ctx, jobject self);
+#define VTABLE_mindustry_gen_LegsUnitLegacyArkyid_aimX_R_float 238
+typedef jfloat (*func_mindustry_gen_LegsUnitLegacyArkyid_aimX_R_float)(jcontext ctx, jobject self);
+#define VTABLE_mindustry_gen_LegsUnitLegacyArkyid_aimY_R_float 239
+typedef jfloat (*func_mindustry_gen_LegsUnitLegacyArkyid_aimY_R_float)(jcontext ctx, jobject self);
+#define VTABLE_mindustry_gen_LegsUnitLegacyArkyid_aim_arc_math_geom_Position 240
+typedef void (*func_mindustry_gen_LegsUnitLegacyArkyid_aim_arc_math_geom_Position)(jcontext ctx, jobject self, jobject param0);
+#define VTABLE_mindustry_gen_LegsUnitLegacyArkyid_aimX_float 241
+typedef void (*func_mindustry_gen_LegsUnitLegacyArkyid_aimX_float)(jcontext ctx, jobject self, jfloat param0);
+#define VTABLE_mindustry_gen_LegsUnitLegacyArkyid_aimY_float 242
+typedef void (*func_mindustry_gen_LegsUnitLegacyArkyid_aimY_float)(jcontext ctx, jobject self, jfloat param0);
+#define VTABLE_mindustry_gen_LegsUnitLegacyArkyid_controlWeapons_boolean_boolean 243
+typedef void (*func_mindustry_gen_LegsUnitLegacyArkyid_controlWeapons_boolean_boolean)(jcontext ctx, jobject self, jbool param0, jbool param1);
+#define VTABLE_mindustry_gen_LegsUnitLegacyArkyid_controlWeapons_boolean 244
+typedef void (*func_mindustry_gen_LegsUnitLegacyArkyid_controlWeapons_boolean)(jcontext ctx, jobject self, jbool param0);
+#define VTABLE_mindustry_gen_LegsUnitLegacyArkyid_isShooting_boolean 245
+typedef void (*func_mindustry_gen_LegsUnitLegacyArkyid_isShooting_boolean)(jcontext ctx, jobject self, jbool param0);
+#define VTABLE_mindustry_gen_LegsUnitLegacyArkyid_setWeaponRotation_float 246
+typedef void (*func_mindustry_gen_LegsUnitLegacyArkyid_setWeaponRotation_float)(jcontext ctx, jobject self, jfloat param0);
+#define VTABLE_mindustry_gen_LegsUnitLegacyArkyid_setupWeapons_mindustry_type_UnitType 247
+typedef void (*func_mindustry_gen_LegsUnitLegacyArkyid_setupWeapons_mindustry_type_UnitType)(jcontext ctx, jobject self, jobject param0);
+#define VTABLE_mindustry_gen_LegsUnitLegacyArkyid_range_R_float 248
+typedef jfloat (*func_mindustry_gen_LegsUnitLegacyArkyid_range_R_float)(jcontext ctx, jobject self);
+#define VTABLE_mindustry_gen_LegsUnitLegacyArkyid_sense_mindustry_logic_LAccess_R_double 249
+typedef jdouble (*func_mindustry_gen_LegsUnitLegacyArkyid_sense_mindustry_logic_LAccess_R_double)(jcontext ctx, jobject self, jobject param0);
+#define VTABLE_mindustry_gen_LegsUnitLegacyArkyid_sense_mindustry_ctype_Content_R_double 250
+typedef jdouble (*func_mindustry_gen_LegsUnitLegacyArkyid_sense_mindustry_ctype_Content_R_double)(jcontext ctx, jobject self, jobject param0);
+#define VTABLE_mindustry_gen_LegsUnitLegacyArkyid_senseObject_mindustry_logic_LAccess_R_java_lang_Object 251
+typedef jobject (*func_mindustry_gen_LegsUnitLegacyArkyid_senseObject_mindustry_logic_LAccess_R_java_lang_Object)(jcontext ctx, jobject self, jobject param0);
+#define VTABLE_mindustry_gen_LegsUnitLegacyArkyid_setProp_mindustry_logic_LAccess_double 252
+typedef void (*func_mindustry_gen_LegsUnitLegacyArkyid_setProp_mindustry_logic_LAccess_double)(jcontext ctx, jobject self, jobject param0, jdouble param1);
+#define VTABLE_mindustry_gen_LegsUnitLegacyArkyid_setProp_mindustry_logic_LAccess_java_lang_Object 253
+typedef void (*func_mindustry_gen_LegsUnitLegacyArkyid_setProp_mindustry_logic_LAccess_java_lang_Object)(jcontext ctx, jobject self, jobject param0, jobject param1);
+#define VTABLE_mindustry_gen_LegsUnitLegacyArkyid_setProp_mindustry_ctype_UnlockableContent_double 254
+typedef void (*func_mindustry_gen_LegsUnitLegacyArkyid_setProp_mindustry_ctype_UnlockableContent_double)(jcontext ctx, jobject self, jobject param0, jdouble param1);
+#define VTABLE_mindustry_gen_LegsUnitLegacyArkyid_displayable_R_boolean 255
+typedef jbool (*func_mindustry_gen_LegsUnitLegacyArkyid_displayable_R_boolean)(jcontext ctx, jobject self);
+#define VTABLE_mindustry_gen_LegsUnitLegacyArkyid_display_arc_scene_ui_layout_Table 256
+typedef void (*func_mindustry_gen_LegsUnitLegacyArkyid_display_arc_scene_ui_layout_Table)(jcontext ctx, jobject self, jobject param0);
+#define VTABLE_mindustry_gen_LegsUnitLegacyArkyid_icon_R_arc_graphics_g2d_TextureRegion 257
+typedef jobject (*func_mindustry_gen_LegsUnitLegacyArkyid_icon_R_arc_graphics_g2d_TextureRegion)(jcontext ctx, jobject self);
+#define VTABLE_mindustry_gen_LegsUnitLegacyArkyid_physicSize_R_float 258
+typedef jfloat (*func_mindustry_gen_LegsUnitLegacyArkyid_physicSize_R_float)(jcontext ctx, jobject self);
+#define VTABLE_mindustry_gen_LegsUnitLegacyArkyid_getControllerName_R_java_lang_String 259
+typedef jobject (*func_mindustry_gen_LegsUnitLegacyArkyid_getControllerName_R_java_lang_String)(jcontext ctx, jobject self);
+#define VTABLE_mindustry_gen_LegsUnitLegacyArkyid_speed_R_float 260
+typedef jfloat (*func_mindustry_gen_LegsUnitLegacyArkyid_speed_R_float)(jcontext ctx, jobject self);
+#define VTABLE_mindustry_gen_LegsUnitLegacyArkyid_collisionLayer_R_int 261
+typedef jint (*func_mindustry_gen_LegsUnitLegacyArkyid_collisionLayer_R_int)(jcontext ctx, jobject self);
+#define VTABLE_mindustry_gen_LegsUnitLegacyArkyid_prefRotation_R_float 262
+typedef jfloat (*func_mindustry_gen_LegsUnitLegacyArkyid_prefRotation_R_float)(jcontext ctx, jobject self);
+#define VTABLE_mindustry_gen_LegsUnitLegacyArkyid_allowCommand_R_boolean 263
+typedef jbool (*func_mindustry_gen_LegsUnitLegacyArkyid_allowCommand_R_boolean)(jcontext ctx, jobject self);
+#define VTABLE_mindustry_gen_LegsUnitLegacyArkyid_isCommandable_R_boolean 264
+typedef jbool (*func_mindustry_gen_LegsUnitLegacyArkyid_isCommandable_R_boolean)(jcontext ctx, jobject self);
+#define VTABLE_mindustry_gen_LegsUnitLegacyArkyid_canLand_R_boolean 265
+typedef jbool (*func_mindustry_gen_LegsUnitLegacyArkyid_canLand_R_boolean)(jcontext ctx, jobject self);
+#define VTABLE_mindustry_gen_LegsUnitLegacyArkyid_destroy 266
+typedef void (*func_mindustry_gen_LegsUnitLegacyArkyid_destroy)(jcontext ctx, jobject self);
+#define VTABLE_mindustry_gen_LegsUnitLegacyArkyid_unloaded 267
+typedef void (*func_mindustry_gen_LegsUnitLegacyArkyid_unloaded)(jcontext ctx, jobject self);
+#define VTABLE_mindustry_gen_LegsUnitLegacyArkyid_movePref_arc_math_geom_Vec2 268
+typedef void (*func_mindustry_gen_LegsUnitLegacyArkyid_movePref_arc_math_geom_Vec2)(jcontext ctx, jobject self, jobject param0);
+#define VTABLE_mindustry_gen_LegsUnitLegacyArkyid_hasTarget_R_boolean 269
+typedef jbool (*func_mindustry_gen_LegsUnitLegacyArkyid_hasTarget_R_boolean)(jcontext ctx, jobject self);
+#define VTABLE_mindustry_gen_LegsUnitLegacyArkyid_hasTarget_boolean 270
+typedef void (*func_mindustry_gen_LegsUnitLegacyArkyid_hasTarget_boolean)(jcontext ctx, jobject self, jbool param0);
+#define VTABLE_mindustry_gen_LegsUnitLegacyArkyid_trail_R_mindustry_graphics_Trail 271
+typedef jobject (*func_mindustry_gen_LegsUnitLegacyArkyid_trail_R_mindustry_graphics_Trail)(jcontext ctx, jobject self);
+#define VTABLE_mindustry_gen_LegsUnitLegacyArkyid_dockedType_R_mindustry_type_UnitType 272
+typedef jobject (*func_mindustry_gen_LegsUnitLegacyArkyid_dockedType_R_mindustry_type_UnitType)(jcontext ctx, jobject self);
+#define VTABLE_mindustry_gen_LegsUnitLegacyArkyid_lastDrownFloor_R_mindustry_world_blocks_environment_Floor 273
+typedef jobject (*func_mindustry_gen_LegsUnitLegacyArkyid_lastDrownFloor_R_mindustry_world_blocks_environment_Floor)(jcontext ctx, jobject self);
+#define VTABLE_mindustry_gen_LegsUnitLegacyArkyid_getPlayer_R_mindustry_gen_Player 274
+typedef jobject (*func_mindustry_gen_LegsUnitLegacyArkyid_getPlayer_R_mindustry_gen_Player)(jcontext ctx, jobject self);
+#define VTABLE_mindustry_gen_LegsUnitLegacyArkyid_canDrown_R_boolean 275
+typedef jbool (*func_mindustry_gen_LegsUnitLegacyArkyid_canDrown_R_boolean)(jcontext ctx, jobject self);
+#define VTABLE_mindustry_gen_LegsUnitLegacyArkyid_canTarget_mindustry_gen_Teamc_R_boolean 276
+typedef jbool (*func_mindustry_gen_LegsUnitLegacyArkyid_canTarget_mindustry_gen_Teamc_R_boolean)(jcontext ctx, jobject self, jobject param0);
+#define VTABLE_mindustry_gen_LegsUnitLegacyArkyid_checkTarget_boolean_boolean_R_boolean 277
+typedef jbool (*func_mindustry_gen_LegsUnitLegacyArkyid_checkTarget_boolean_boolean_R_boolean)(jcontext ctx, jobject self, jbool param0, jbool param1);
+#define VTABLE_mindustry_gen_LegsUnitLegacyArkyid_hasWeapons_R_boolean 278
+typedef jbool (*func_mindustry_gen_LegsUnitLegacyArkyid_hasWeapons_R_boolean)(jcontext ctx, jobject self);
+#define VTABLE_mindustry_gen_LegsUnitLegacyArkyid_hittable_R_boolean 279
+typedef jbool (*func_mindustry_gen_LegsUnitLegacyArkyid_hittable_R_boolean)(jcontext ctx, jobject self);
+#define VTABLE_mindustry_gen_LegsUnitLegacyArkyid_inRange_arc_math_geom_Position_R_boolean 280
+typedef jbool (*func_mindustry_gen_LegsUnitLegacyArkyid_inRange_arc_math_geom_Position_R_boolean)(jcontext ctx, jobject self, jobject param0);
+#define VTABLE_mindustry_gen_LegsUnitLegacyArkyid_isAI_R_boolean 281
+typedef jbool (*func_mindustry_gen_LegsUnitLegacyArkyid_isAI_R_boolean)(jcontext ctx, jobject self);
+#define VTABLE_mindustry_gen_LegsUnitLegacyArkyid_isEnemy_R_boolean 282
+typedef jbool (*func_mindustry_gen_LegsUnitLegacyArkyid_isEnemy_R_boolean)(jcontext ctx, jobject self);
+#define VTABLE_mindustry_gen_LegsUnitLegacyArkyid_isFlying_R_boolean 283
+typedef jbool (*func_mindustry_gen_LegsUnitLegacyArkyid_isFlying_R_boolean)(jcontext ctx, jobject self);
+#define VTABLE_mindustry_gen_LegsUnitLegacyArkyid_isMissile_R_boolean 284
+typedef jbool (*func_mindustry_gen_LegsUnitLegacyArkyid_isMissile_R_boolean)(jcontext ctx, jobject self);
+#define VTABLE_mindustry_gen_LegsUnitLegacyArkyid_isPathImpassable_int_int_R_boolean 285
+typedef jbool (*func_mindustry_gen_LegsUnitLegacyArkyid_isPathImpassable_int_int_R_boolean)(jcontext ctx, jobject self, jint param0, jint param1);
+#define VTABLE_mindustry_gen_LegsUnitLegacyArkyid_isPlayer_R_boolean 286
+typedef jbool (*func_mindustry_gen_LegsUnitLegacyArkyid_isPlayer_R_boolean)(jcontext ctx, jobject self);
+#define VTABLE_mindustry_gen_LegsUnitLegacyArkyid_killable_R_boolean 287
+typedef jbool (*func_mindustry_gen_LegsUnitLegacyArkyid_killable_R_boolean)(jcontext ctx, jobject self);
+#define VTABLE_mindustry_gen_LegsUnitLegacyArkyid_playerControllable_R_boolean 288
+typedef jbool (*func_mindustry_gen_LegsUnitLegacyArkyid_playerControllable_R_boolean)(jcontext ctx, jobject self);
+#define VTABLE_mindustry_gen_LegsUnitLegacyArkyid_shouldUpdateController_R_boolean 289
+typedef jbool (*func_mindustry_gen_LegsUnitLegacyArkyid_shouldUpdateController_R_boolean)(jcontext ctx, jobject self);
+#define VTABLE_mindustry_gen_LegsUnitLegacyArkyid_spawnedByCore_R_boolean 290
+typedef jbool (*func_mindustry_gen_LegsUnitLegacyArkyid_spawnedByCore_R_boolean)(jcontext ctx, jobject self);
+#define VTABLE_mindustry_gen_LegsUnitLegacyArkyid_targetable_mindustry_game_Team_R_boolean 291
+typedef jbool (*func_mindustry_gen_LegsUnitLegacyArkyid_targetable_mindustry_game_Team_R_boolean)(jcontext ctx, jobject self, jobject param0);
+#define VTABLE_mindustry_gen_LegsUnitLegacyArkyid_flag_R_double 292
+typedef jdouble (*func_mindustry_gen_LegsUnitLegacyArkyid_flag_R_double)(jcontext ctx, jobject self);
+#define VTABLE_mindustry_gen_LegsUnitLegacyArkyid_ammof_R_float 293
+typedef jfloat (*func_mindustry_gen_LegsUnitLegacyArkyid_ammof_R_float)(jcontext ctx, jobject self);
+#define VTABLE_mindustry_gen_LegsUnitLegacyArkyid_bounds_R_float 294
+typedef jfloat (*func_mindustry_gen_LegsUnitLegacyArkyid_bounds_R_float)(jcontext ctx, jobject self);
+#define VTABLE_mindustry_gen_LegsUnitLegacyArkyid_drownTime_R_float 295
+typedef jfloat (*func_mindustry_gen_LegsUnitLegacyArkyid_drownTime_R_float)(jcontext ctx, jobject self);
+#define VTABLE_mindustry_gen_LegsUnitLegacyArkyid_elevation_R_float 296
+typedef jfloat (*func_mindustry_gen_LegsUnitLegacyArkyid_elevation_R_float)(jcontext ctx, jobject self);
+#define VTABLE_mindustry_gen_LegsUnitLegacyArkyid_floorSpeedMultiplier_R_float 297
+typedef jfloat (*func_mindustry_gen_LegsUnitLegacyArkyid_floorSpeedMultiplier_R_float)(jcontext ctx, jobject self);
+#define VTABLE_mindustry_gen_LegsUnitLegacyArkyid_healTime_R_float 298
+typedef jfloat (*func_mindustry_gen_LegsUnitLegacyArkyid_healTime_R_float)(jcontext ctx, jobject self);
+#define VTABLE_mindustry_gen_LegsUnitLegacyArkyid_shadowAlpha_R_float 299
+typedef jfloat (*func_mindustry_gen_LegsUnitLegacyArkyid_shadowAlpha_R_float)(jcontext ctx, jobject self);
+#define VTABLE_mindustry_gen_LegsUnitLegacyArkyid_splashTimer_R_float 300
+typedef jfloat (*func_mindustry_gen_LegsUnitLegacyArkyid_splashTimer_R_float)(jcontext ctx, jobject self);
+#define VTABLE_mindustry_gen_LegsUnitLegacyArkyid_cap_R_int 301
+typedef jint (*func_mindustry_gen_LegsUnitLegacyArkyid_cap_R_int)(jcontext ctx, jobject self);
+#define VTABLE_mindustry_gen_LegsUnitLegacyArkyid_count_R_int 302
+typedef jint (*func_mindustry_gen_LegsUnitLegacyArkyid_count_R_int)(jcontext ctx, jobject self);
+#define VTABLE_mindustry_gen_LegsUnitLegacyArkyid_lastFogPos_R_int 303
+typedef jint (*func_mindustry_gen_LegsUnitLegacyArkyid_lastFogPos_R_int)(jcontext ctx, jobject self);
+#define VTABLE_mindustry_gen_LegsUnitLegacyArkyid_lastCommanded_R_java_lang_String 304
+typedef jobject (*func_mindustry_gen_LegsUnitLegacyArkyid_lastCommanded_R_java_lang_String)(jcontext ctx, jobject self);
+#define VTABLE_mindustry_gen_LegsUnitLegacyArkyid_command_R_mindustry_ai_types_CommandAI 305
+typedef jobject (*func_mindustry_gen_LegsUnitLegacyArkyid_command_R_mindustry_ai_types_CommandAI)(jcontext ctx, jobject self);
+#define VTABLE_mindustry_gen_LegsUnitLegacyArkyid_abilities_R_Array1_mindustry_entities_abilities_Ability 306
+typedef jobject (*func_mindustry_gen_LegsUnitLegacyArkyid_abilities_R_Array1_mindustry_entities_abilities_Ability)(jcontext ctx, jobject self);
+#define VTABLE_mindustry_gen_LegsUnitLegacyArkyid_controller_R_mindustry_entities_units_UnitController 307
+typedef jobject (*func_mindustry_gen_LegsUnitLegacyArkyid_controller_R_mindustry_entities_units_UnitController)(jcontext ctx, jobject self);
+#define VTABLE_mindustry_gen_LegsUnitLegacyArkyid_type_R_mindustry_type_UnitType 308
+typedef jobject (*func_mindustry_gen_LegsUnitLegacyArkyid_type_R_mindustry_type_UnitType)(jcontext ctx, jobject self);
+#define VTABLE_mindustry_gen_LegsUnitLegacyArkyid_drownFloor_R_mindustry_world_blocks_environment_Floor 309
+typedef jobject (*func_mindustry_gen_LegsUnitLegacyArkyid_drownFloor_R_mindustry_world_blocks_environment_Floor)(jcontext ctx, jobject self);
+#define VTABLE_mindustry_gen_LegsUnitLegacyArkyid_abilities_Array1_mindustry_entities_abilities_Ability 310
+typedef void (*func_mindustry_gen_LegsUnitLegacyArkyid_abilities_Array1_mindustry_entities_abilities_Ability)(jcontext ctx, jobject self, jobject param0);
+#define VTABLE_mindustry_gen_LegsUnitLegacyArkyid_aimLook_arc_math_geom_Position 311
+typedef void (*func_mindustry_gen_LegsUnitLegacyArkyid_aimLook_arc_math_geom_Position)(jcontext ctx, jobject self, jobject param0);
+#define VTABLE_mindustry_gen_LegsUnitLegacyArkyid_aimLook_float_float 312
+typedef void (*func_mindustry_gen_LegsUnitLegacyArkyid_aimLook_float_float)(jcontext ctx, jobject self, jfloat param0, jfloat param1);
+#define VTABLE_mindustry_gen_LegsUnitLegacyArkyid_approach_arc_math_geom_Vec2 313
+typedef void (*func_mindustry_gen_LegsUnitLegacyArkyid_approach_arc_math_geom_Vec2)(jcontext ctx, jobject self, jobject param0);
+#define VTABLE_mindustry_gen_LegsUnitLegacyArkyid_controller_mindustry_entities_units_UnitController 314
+typedef void (*func_mindustry_gen_LegsUnitLegacyArkyid_controller_mindustry_entities_units_UnitController)(jcontext ctx, jobject self, jobject param0);
+#define VTABLE_mindustry_gen_LegsUnitLegacyArkyid_dockedType_mindustry_type_UnitType 315
+typedef void (*func_mindustry_gen_LegsUnitLegacyArkyid_dockedType_mindustry_type_UnitType)(jcontext ctx, jobject self, jobject param0);
+#define VTABLE_mindustry_gen_LegsUnitLegacyArkyid_drownTime_float 316
+typedef void (*func_mindustry_gen_LegsUnitLegacyArkyid_drownTime_float)(jcontext ctx, jobject self, jfloat param0);
+#define VTABLE_mindustry_gen_LegsUnitLegacyArkyid_elevation_float 317
+typedef void (*func_mindustry_gen_LegsUnitLegacyArkyid_elevation_float)(jcontext ctx, jobject self, jfloat param0);
+#define VTABLE_mindustry_gen_LegsUnitLegacyArkyid_flag_double 318
+typedef void (*func_mindustry_gen_LegsUnitLegacyArkyid_flag_double)(jcontext ctx, jobject self, jdouble param0);
+#define VTABLE_mindustry_gen_LegsUnitLegacyArkyid_healTime_float 319
+typedef void (*func_mindustry_gen_LegsUnitLegacyArkyid_healTime_float)(jcontext ctx, jobject self, jfloat param0);
+#define VTABLE_mindustry_gen_LegsUnitLegacyArkyid_landed 320
+typedef void (*func_mindustry_gen_LegsUnitLegacyArkyid_landed)(jcontext ctx, jobject self);
+#define VTABLE_mindustry_gen_LegsUnitLegacyArkyid_lastCommanded_java_lang_String 321
+typedef void (*func_mindustry_gen_LegsUnitLegacyArkyid_lastCommanded_java_lang_String)(jcontext ctx, jobject self, jobject param0);
+#define VTABLE_mindustry_gen_LegsUnitLegacyArkyid_lastDrownFloor_mindustry_world_blocks_environment_Floor 322
+typedef void (*func_mindustry_gen_LegsUnitLegacyArkyid_lastDrownFloor_mindustry_world_blocks_environment_Floor)(jcontext ctx, jobject self, jobject param0);
+#define VTABLE_mindustry_gen_LegsUnitLegacyArkyid_lastFogPos_int 323
+typedef void (*func_mindustry_gen_LegsUnitLegacyArkyid_lastFogPos_int)(jcontext ctx, jobject self, jint param0);
+#define VTABLE_mindustry_gen_LegsUnitLegacyArkyid_lookAt_arc_math_geom_Position 324
+typedef void (*func_mindustry_gen_LegsUnitLegacyArkyid_lookAt_arc_math_geom_Position)(jcontext ctx, jobject self, jobject param0);
+#define VTABLE_mindustry_gen_LegsUnitLegacyArkyid_lookAt_float 325
+typedef void (*func_mindustry_gen_LegsUnitLegacyArkyid_lookAt_float)(jcontext ctx, jobject self, jfloat param0);
+#define VTABLE_mindustry_gen_LegsUnitLegacyArkyid_lookAt_float_float 326
+typedef void (*func_mindustry_gen_LegsUnitLegacyArkyid_lookAt_float_float)(jcontext ctx, jobject self, jfloat param0, jfloat param1);
+#define VTABLE_mindustry_gen_LegsUnitLegacyArkyid_moveAt_arc_math_geom_Vec2 327
+typedef void (*func_mindustry_gen_LegsUnitLegacyArkyid_moveAt_arc_math_geom_Vec2)(jcontext ctx, jobject self, jobject param0);
+#define VTABLE_mindustry_gen_LegsUnitLegacyArkyid_moveAt_arc_math_geom_Vec2_float 328
+typedef void (*func_mindustry_gen_LegsUnitLegacyArkyid_moveAt_arc_math_geom_Vec2_float)(jcontext ctx, jobject self, jobject param0, jfloat param1);
+#define VTABLE_mindustry_gen_LegsUnitLegacyArkyid_resetController 329
+typedef void (*func_mindustry_gen_LegsUnitLegacyArkyid_resetController)(jcontext ctx, jobject self);
+#define VTABLE_mindustry_gen_LegsUnitLegacyArkyid_rotateMove_arc_math_geom_Vec2 330
+typedef void (*func_mindustry_gen_LegsUnitLegacyArkyid_rotateMove_arc_math_geom_Vec2)(jcontext ctx, jobject self, jobject param0);
+#define VTABLE_mindustry_gen_LegsUnitLegacyArkyid_set_mindustry_type_UnitType_mindustry_entities_units_UnitController 331
+typedef void (*func_mindustry_gen_LegsUnitLegacyArkyid_set_mindustry_type_UnitType_mindustry_entities_units_UnitController)(jcontext ctx, jobject self, jobject param0, jobject param1);
+#define VTABLE_mindustry_gen_LegsUnitLegacyArkyid_setType_mindustry_type_UnitType 332
+typedef void (*func_mindustry_gen_LegsUnitLegacyArkyid_setType_mindustry_type_UnitType)(jcontext ctx, jobject self, jobject param0);
+#define VTABLE_mindustry_gen_LegsUnitLegacyArkyid_shadowAlpha_float 333
+typedef void (*func_mindustry_gen_LegsUnitLegacyArkyid_shadowAlpha_float)(jcontext ctx, jobject self, jfloat param0);
+#define VTABLE_mindustry_gen_LegsUnitLegacyArkyid_spawnedByCore_boolean 334
+typedef void (*func_mindustry_gen_LegsUnitLegacyArkyid_spawnedByCore_boolean)(jcontext ctx, jobject self, jbool param0);
+#define VTABLE_mindustry_gen_LegsUnitLegacyArkyid_splashTimer_float 335
+typedef void (*func_mindustry_gen_LegsUnitLegacyArkyid_splashTimer_float)(jcontext ctx, jobject self, jfloat param0);
+#define VTABLE_mindustry_gen_LegsUnitLegacyArkyid_trail_mindustry_graphics_Trail 336
+typedef void (*func_mindustry_gen_LegsUnitLegacyArkyid_trail_mindustry_graphics_Trail)(jcontext ctx, jobject self, jobject param0);
+#define VTABLE_mindustry_gen_LegsUnitLegacyArkyid_type_mindustry_type_UnitType 337
+typedef void (*func_mindustry_gen_LegsUnitLegacyArkyid_type_mindustry_type_UnitType)(jcontext ctx, jobject self, jobject param0);
+#define VTABLE_mindustry_gen_LegsUnitLegacyArkyid_updateBoosting_boolean 338
+typedef void (*func_mindustry_gen_LegsUnitLegacyArkyid_updateBoosting_boolean)(jcontext ctx, jobject self, jbool param0);
+#define VTABLE_mindustry_gen_LegsUnitLegacyArkyid_updateBoosting_boolean_boolean 339
+typedef void (*func_mindustry_gen_LegsUnitLegacyArkyid_updateBoosting_boolean_boolean)(jcontext ctx, jobject self, jbool param0, jbool param1);
+#define VTABLE_mindustry_gen_LegsUnitLegacyArkyid_updateDrowning 340
+typedef void (*func_mindustry_gen_LegsUnitLegacyArkyid_updateDrowning)(jcontext ctx, jobject self);
+#define VTABLE_mindustry_gen_LegsUnitLegacyArkyid_wobble 341
+typedef void (*func_mindustry_gen_LegsUnitLegacyArkyid_wobble)(jcontext ctx, jobject self);
+#define VTABLE_mindustry_gen_LegsUnitLegacyArkyid_legAngle_int_R_float 342
+typedef jfloat (*func_mindustry_gen_LegsUnitLegacyArkyid_legAngle_int_R_float)(jcontext ctx, jobject self, jint param0);
+#define VTABLE_mindustry_gen_LegsUnitLegacyArkyid_curMoveOffset_R_arc_math_geom_Vec2 343
+typedef jobject (*func_mindustry_gen_LegsUnitLegacyArkyid_curMoveOffset_R_arc_math_geom_Vec2)(jcontext ctx, jobject self);
+#define VTABLE_mindustry_gen_LegsUnitLegacyArkyid_legOffset_arc_math_geom_Vec2_int_R_arc_math_geom_Vec2 344
+typedef jobject (*func_mindustry_gen_LegsUnitLegacyArkyid_legOffset_arc_math_geom_Vec2_int_R_arc_math_geom_Vec2)(jcontext ctx, jobject self, jobject param0, jint param1);
+#define VTABLE_mindustry_gen_LegsUnitLegacyArkyid_baseRotation_R_float 345
+typedef jfloat (*func_mindustry_gen_LegsUnitLegacyArkyid_baseRotation_R_float)(jcontext ctx, jobject self);
+#define VTABLE_mindustry_gen_LegsUnitLegacyArkyid_defaultLegAngle_int_R_float 346
+typedef jfloat (*func_mindustry_gen_LegsUnitLegacyArkyid_defaultLegAngle_int_R_float)(jcontext ctx, jobject self, jint param0);
+#define VTABLE_mindustry_gen_LegsUnitLegacyArkyid_moveSpace_R_float 347
+typedef jfloat (*func_mindustry_gen_LegsUnitLegacyArkyid_moveSpace_R_float)(jcontext ctx, jobject self);
+#define VTABLE_mindustry_gen_LegsUnitLegacyArkyid_totalLength_R_float 348
+typedef jfloat (*func_mindustry_gen_LegsUnitLegacyArkyid_totalLength_R_float)(jcontext ctx, jobject self);
+#define VTABLE_mindustry_gen_LegsUnitLegacyArkyid_legs_R_Array1_mindustry_entities_Leg 349
+typedef jobject (*func_mindustry_gen_LegsUnitLegacyArkyid_legs_R_Array1_mindustry_entities_Leg)(jcontext ctx, jobject self);
+#define VTABLE_mindustry_gen_LegsUnitLegacyArkyid_lastDeepFloor_R_mindustry_world_blocks_environment_Floor 350
+typedef jobject (*func_mindustry_gen_LegsUnitLegacyArkyid_lastDeepFloor_R_mindustry_world_blocks_environment_Floor)(jcontext ctx, jobject self);
+#define VTABLE_mindustry_gen_LegsUnitLegacyArkyid_baseRotation_float 351
+typedef void (*func_mindustry_gen_LegsUnitLegacyArkyid_baseRotation_float)(jcontext ctx, jobject self, jfloat param0);
+#define VTABLE_mindustry_gen_LegsUnitLegacyArkyid_curMoveOffset_arc_math_geom_Vec2 352
+typedef void (*func_mindustry_gen_LegsUnitLegacyArkyid_curMoveOffset_arc_math_geom_Vec2)(jcontext ctx, jobject self, jobject param0);
+#define VTABLE_mindustry_gen_LegsUnitLegacyArkyid_lastDeepFloor_mindustry_world_blocks_environment_Floor 353
+typedef void (*func_mindustry_gen_LegsUnitLegacyArkyid_lastDeepFloor_mindustry_world_blocks_environment_Floor)(jcontext ctx, jobject self, jobject param0);
+#define VTABLE_mindustry_gen_LegsUnitLegacyArkyid_legs_Array1_mindustry_entities_Leg 354
+typedef void (*func_mindustry_gen_LegsUnitLegacyArkyid_legs_Array1_mindustry_entities_Leg)(jcontext ctx, jobject self, jobject param0);
+#define VTABLE_mindustry_gen_LegsUnitLegacyArkyid_moveSpace_float 355
+typedef void (*func_mindustry_gen_LegsUnitLegacyArkyid_moveSpace_float)(jcontext ctx, jobject self, jfloat param0);
+#define VTABLE_mindustry_gen_LegsUnitLegacyArkyid_resetLegs 356
+typedef void (*func_mindustry_gen_LegsUnitLegacyArkyid_resetLegs)(jcontext ctx, jobject self);
+#define VTABLE_mindustry_gen_LegsUnitLegacyArkyid_resetLegs_float 357
+typedef void (*func_mindustry_gen_LegsUnitLegacyArkyid_resetLegs_float)(jcontext ctx, jobject self, jfloat param0);
+#define VTABLE_mindustry_gen_LegsUnitLegacyArkyid_totalLength_float 358
+typedef void (*func_mindustry_gen_LegsUnitLegacyArkyid_totalLength_float)(jcontext ctx, jobject self, jfloat param0);
+#define VTABLE_mindustry_gen_LegsUnitLegacyArkyid_applyStatus_mindustry_type_StatusEffect_float_boolean 359
+typedef void (*func_mindustry_gen_LegsUnitLegacyArkyid_applyStatus_mindustry_type_StatusEffect_float_boolean)(jcontext ctx, jobject self, jobject param0, jfloat param1, jbool param2);
+#define VTABLE_mindustry_gen_LegsUnitLegacyArkyid_lambda$unapply$0_mindustry_type_StatusEffect_mindustry_entities_units_StatusEntry_R_boolean 360
+typedef jbool (*func_mindustry_gen_LegsUnitLegacyArkyid_lambda$unapply$0_mindustry_type_StatusEffect_mindustry_entities_units_StatusEntry_R_boolean)(jcontext ctx, jobject self, jobject param0, jobject param1);
+#define VTABLE_mindustry_gen_LegsUnitLegacyArkyid_lambda$destroy$0_float_mindustry_gen_Building_R_boolean 361
+typedef jbool (*func_mindustry_gen_LegsUnitLegacyArkyid_lambda$destroy$0_float_mindustry_gen_Building_R_boolean)(jcontext ctx, jobject self, jfloat param0, jobject param1);
+#define VTABLE_mindustry_gen_LegsUnitLegacyArkyid_lambda$clearStatuses$0_mindustry_entities_units_StatusEntry 362
+typedef void (*func_mindustry_gen_LegsUnitLegacyArkyid_lambda$clearStatuses$0_mindustry_entities_units_StatusEntry)(jcontext ctx, jobject self, jobject param0);
+#define VTABLE_mindustry_gen_LegsUnitLegacyArkyid_lambda$canLand$0_mindustry_gen_Unit_R_boolean 363
+typedef jbool (*func_mindustry_gen_LegsUnitLegacyArkyid_lambda$canLand$0_mindustry_gen_Unit_R_boolean)(jcontext ctx, jobject self, jobject param0);
+
+void mark_mindustry_gen_LegsUnitLegacyArkyid(jobject object, jint mark, jint depth);
+void clinit_mindustry_gen_LegsUnitLegacyArkyid(jcontext ctx);
+void init_mindustry_gen_LegsUnitLegacyArkyid(jcontext ctx, jobject self);
+jint M_mindustry_gen_LegsUnitLegacyArkyid_classId_R_int(jcontext ctx, jobject self);
+void M_mindustry_gen_LegsUnitLegacyArkyid_read_arc_util_io_Reads(jcontext ctx, jobject self, jobject param0);
+void M_mindustry_gen_LegsUnitLegacyArkyid_write_arc_util_io_Writes(jcontext ctx, jobject self, jobject param0);
+jbool M_mindustry_gen_LegsUnitLegacyArkyid_serialize_R_boolean(jcontext ctx, jobject self);
+jobject SM_mindustry_gen_LegsUnitLegacyArkyid_create_R_mindustry_gen_LegsUnitLegacyArkyid(jcontext ctx);
+
+#ifdef __cplusplus
+}
+#endif
+
+#endif

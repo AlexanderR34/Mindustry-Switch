@@ -1,0 +1,51 @@
+#ifndef HEADER_java_util_concurrent_ExecutorService
+#define HEADER_java_util_concurrent_ExecutorService
+
+#include "Clearwing.h"
+#include "java/lang/Object.h"
+#include "java/util/concurrent/Executor.h"
+
+#ifdef __cplusplus
+extern "C" {
+#endif
+
+typedef struct java_util_concurrent_ExecutorService {
+	java_lang_Object parent;
+} java_util_concurrent_ExecutorService;
+
+extern Class class_java_util_concurrent_ExecutorService;
+
+
+#define INDEX_java_util_concurrent_ExecutorService_shutdown 0
+typedef void (*func_java_util_concurrent_ExecutorService_shutdown)(jcontext ctx, jobject self);
+#define INDEX_java_util_concurrent_ExecutorService_shutdownNow_R_java_util_List 1
+typedef jobject (*func_java_util_concurrent_ExecutorService_shutdownNow_R_java_util_List)(jcontext ctx, jobject self);
+#define INDEX_java_util_concurrent_ExecutorService_isShutdown_R_boolean 2
+typedef jbool (*func_java_util_concurrent_ExecutorService_isShutdown_R_boolean)(jcontext ctx, jobject self);
+#define INDEX_java_util_concurrent_ExecutorService_isTerminated_R_boolean 3
+typedef jbool (*func_java_util_concurrent_ExecutorService_isTerminated_R_boolean)(jcontext ctx, jobject self);
+#define INDEX_java_util_concurrent_ExecutorService_awaitTermination_long_java_util_concurrent_TimeUnit_R_boolean 4
+typedef jbool (*func_java_util_concurrent_ExecutorService_awaitTermination_long_java_util_concurrent_TimeUnit_R_boolean)(jcontext ctx, jobject self, jlong param0, jobject param1);
+#define INDEX_java_util_concurrent_ExecutorService_submit_java_util_concurrent_Callable_R_java_util_concurrent_Future 5
+typedef jobject (*func_java_util_concurrent_ExecutorService_submit_java_util_concurrent_Callable_R_java_util_concurrent_Future)(jcontext ctx, jobject self, jobject param0);
+#define INDEX_java_util_concurrent_ExecutorService_submit_java_lang_Runnable_java_lang_Object_R_java_util_concurrent_Future 6
+typedef jobject (*func_java_util_concurrent_ExecutorService_submit_java_lang_Runnable_java_lang_Object_R_java_util_concurrent_Future)(jcontext ctx, jobject self, jobject param0, jobject param1);
+#define INDEX_java_util_concurrent_ExecutorService_submit_java_lang_Runnable_R_java_util_concurrent_Future 7
+typedef jobject (*func_java_util_concurrent_ExecutorService_submit_java_lang_Runnable_R_java_util_concurrent_Future)(jcontext ctx, jobject self, jobject param0);
+#define INDEX_java_util_concurrent_ExecutorService_invokeAll_java_util_Collection_R_java_util_List 8
+typedef jobject (*func_java_util_concurrent_ExecutorService_invokeAll_java_util_Collection_R_java_util_List)(jcontext ctx, jobject self, jobject param0);
+#define INDEX_java_util_concurrent_ExecutorService_invokeAll_java_util_Collection_long_java_util_concurrent_TimeUnit_R_java_util_List 9
+typedef jobject (*func_java_util_concurrent_ExecutorService_invokeAll_java_util_Collection_long_java_util_concurrent_TimeUnit_R_java_util_List)(jcontext ctx, jobject self, jobject param0, jlong param1, jobject param2);
+#define INDEX_java_util_concurrent_ExecutorService_invokeAny_java_util_Collection_R_java_lang_Object 10
+typedef jobject (*func_java_util_concurrent_ExecutorService_invokeAny_java_util_Collection_R_java_lang_Object)(jcontext ctx, jobject self, jobject param0);
+#define INDEX_java_util_concurrent_ExecutorService_invokeAny_java_util_Collection_long_java_util_concurrent_TimeUnit_R_java_lang_Object 11
+typedef jobject (*func_java_util_concurrent_ExecutorService_invokeAny_java_util_Collection_long_java_util_concurrent_TimeUnit_R_java_lang_Object)(jcontext ctx, jobject self, jobject param0, jlong param1, jobject param2);
+
+void mark_java_util_concurrent_ExecutorService(jobject object, jint mark, jint depth);
+void clinit_java_util_concurrent_ExecutorService(jcontext ctx);
+
+#ifdef __cplusplus
+}
+#endif
+
+#endif

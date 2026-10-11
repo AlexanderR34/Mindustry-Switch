@@ -1,0 +1,106 @@
+#ifndef HEADER_mindustry_ui_fragments_PlayerListFragment
+#define HEADER_mindustry_ui_fragments_PlayerListFragment
+
+#include "Clearwing.h"
+#include "java/lang/Object.h"
+
+#ifdef __cplusplus
+extern "C" {
+#endif
+
+typedef struct mindustry_ui_fragments_PlayerListFragment {
+	java_lang_Object parent;
+	jref F_content;
+	jbool F_visible;
+	jref F_timer;
+	jref F_search;
+	jref F_players;
+} mindustry_ui_fragments_PlayerListFragment;
+
+extern Class class_mindustry_ui_fragments_PlayerListFragment;
+
+
+#define VTABLE_mindustry_ui_fragments_PlayerListFragment_hashCode_R_int 0
+typedef jint (*func_mindustry_ui_fragments_PlayerListFragment_hashCode_R_int)(jcontext ctx, jobject self);
+#define VTABLE_mindustry_ui_fragments_PlayerListFragment_equals_java_lang_Object_R_boolean 1
+typedef jbool (*func_mindustry_ui_fragments_PlayerListFragment_equals_java_lang_Object_R_boolean)(jcontext ctx, jobject self, jobject param0);
+#define VTABLE_mindustry_ui_fragments_PlayerListFragment_clone_R_java_lang_Object 2
+typedef jobject (*func_mindustry_ui_fragments_PlayerListFragment_clone_R_java_lang_Object)(jcontext ctx, jobject self);
+#define VTABLE_mindustry_ui_fragments_PlayerListFragment_getClass_R_java_lang_Class 3
+typedef jobject (*func_mindustry_ui_fragments_PlayerListFragment_getClass_R_java_lang_Class)(jcontext ctx, jobject self);
+#define VTABLE_mindustry_ui_fragments_PlayerListFragment_toString_R_java_lang_String 4
+typedef jobject (*func_mindustry_ui_fragments_PlayerListFragment_toString_R_java_lang_String)(jcontext ctx, jobject self);
+#define VTABLE_mindustry_ui_fragments_PlayerListFragment_finalize 5
+typedef void (*func_mindustry_ui_fragments_PlayerListFragment_finalize)(jcontext ctx, jobject self);
+#define VTABLE_mindustry_ui_fragments_PlayerListFragment_notify 6
+typedef void (*func_mindustry_ui_fragments_PlayerListFragment_notify)(jcontext ctx, jobject self);
+#define VTABLE_mindustry_ui_fragments_PlayerListFragment_notifyAll 7
+typedef void (*func_mindustry_ui_fragments_PlayerListFragment_notifyAll)(jcontext ctx, jobject self);
+#define VTABLE_mindustry_ui_fragments_PlayerListFragment_wait 8
+typedef void (*func_mindustry_ui_fragments_PlayerListFragment_wait)(jcontext ctx, jobject self);
+#define VTABLE_mindustry_ui_fragments_PlayerListFragment_wait_long 9
+typedef void (*func_mindustry_ui_fragments_PlayerListFragment_wait_long)(jcontext ctx, jobject self, jlong param0);
+#define VTABLE_mindustry_ui_fragments_PlayerListFragment_wait_long_int 10
+typedef void (*func_mindustry_ui_fragments_PlayerListFragment_wait_long_int)(jcontext ctx, jobject self, jlong param0, jint param1);
+#define VTABLE_mindustry_ui_fragments_PlayerListFragment_build_arc_scene_Group 11
+typedef void (*func_mindustry_ui_fragments_PlayerListFragment_build_arc_scene_Group)(jcontext ctx, jobject self, jobject param0);
+#define VTABLE_mindustry_ui_fragments_PlayerListFragment_rebuild 12
+typedef void (*func_mindustry_ui_fragments_PlayerListFragment_rebuild)(jcontext ctx, jobject self);
+#define VTABLE_mindustry_ui_fragments_PlayerListFragment_toggle 13
+typedef void (*func_mindustry_ui_fragments_PlayerListFragment_toggle)(jcontext ctx, jobject self);
+#define VTABLE_mindustry_ui_fragments_PlayerListFragment_lambda$rebuild$1_mindustry_gen_Player_R_boolean 14
+typedef jbool (*func_mindustry_ui_fragments_PlayerListFragment_lambda$rebuild$1_mindustry_gen_Player_R_boolean)(jcontext ctx, jobject self, jobject param0);
+#define VTABLE_mindustry_ui_fragments_PlayerListFragment_lambda$build$0_arc_scene_ui_layout_Table 15
+typedef void (*func_mindustry_ui_fragments_PlayerListFragment_lambda$build$0_arc_scene_ui_layout_Table)(jcontext ctx, jobject self, jobject param0);
+#define VTABLE_mindustry_ui_fragments_PlayerListFragment_lambda$build$3_arc_scene_ui_layout_Table 16
+typedef void (*func_mindustry_ui_fragments_PlayerListFragment_lambda$build$3_arc_scene_ui_layout_Table)(jcontext ctx, jobject self, jobject param0);
+#define VTABLE_mindustry_ui_fragments_PlayerListFragment_lambda$build$6_arc_scene_ui_layout_Table 17
+typedef void (*func_mindustry_ui_fragments_PlayerListFragment_lambda$build$6_arc_scene_ui_layout_Table)(jcontext ctx, jobject self, jobject param0);
+#define VTABLE_mindustry_ui_fragments_PlayerListFragment_lambda$build$5_java_lang_String 18
+typedef void (*func_mindustry_ui_fragments_PlayerListFragment_lambda$build$5_java_lang_String)(jcontext ctx, jobject self, jobject param0);
+#define VTABLE_mindustry_ui_fragments_PlayerListFragment_lambda$build$2 19
+typedef void (*func_mindustry_ui_fragments_PlayerListFragment_lambda$build$2)(jcontext ctx, jobject self);
+#define VTABLE_mindustry_ui_fragments_PlayerListFragment_lambda$build$1_R_boolean 20
+typedef jbool (*func_mindustry_ui_fragments_PlayerListFragment_lambda$build$1_R_boolean)(jcontext ctx, jobject self);
+
+void mark_mindustry_ui_fragments_PlayerListFragment(jobject object, jint mark, jint depth);
+void clinit_mindustry_ui_fragments_PlayerListFragment(jcontext ctx);
+void init_mindustry_ui_fragments_PlayerListFragment(jcontext ctx, jobject self);
+void M_mindustry_ui_fragments_PlayerListFragment_build_arc_scene_Group(jcontext ctx, jobject self, jobject param0);
+void M_mindustry_ui_fragments_PlayerListFragment_rebuild(jcontext ctx, jobject self);
+void M_mindustry_ui_fragments_PlayerListFragment_toggle(jcontext ctx, jobject self);
+void SM_mindustry_ui_fragments_PlayerListFragment_lambda$rebuild$18_mindustry_gen_Player(jcontext ctx, jobject param0);
+void SM_mindustry_ui_fragments_PlayerListFragment_lambda$rebuild$19_mindustry_gen_Player_java_lang_String(jcontext ctx, jobject param0, jobject param1);
+void SM_mindustry_ui_fragments_PlayerListFragment_lambda$rebuild$4_mindustry_gen_Player_boolean(jcontext ctx, jobject param0, jbool param1);
+void SM_mindustry_ui_fragments_PlayerListFragment_lambda$rebuild$5_mindustry_gen_Player_arc_scene_ui_TextButton$TextButtonStyle_mindustry_ui_dialogs_BaseDialog_boolean_arc_scene_ui_layout_Table(jcontext ctx, jobject param0, jobject param1, jobject param2, jbool param3, jobject param4);
+jbool SM_mindustry_ui_fragments_PlayerListFragment_lambda$rebuild$17_mindustry_gen_Player_arc_scene_ui_TextButton_R_boolean(jcontext ctx, jobject param0, jobject param1);
+void SM_mindustry_ui_fragments_PlayerListFragment_lambda$rebuild$14_mindustry_ui_dialogs_BaseDialog_mindustry_gen_Player(jcontext ctx, jobject param0, jobject param1);
+void SM_mindustry_ui_fragments_PlayerListFragment_lambda$rebuild$16_java_lang_String_mindustry_gen_Player(jcontext ctx, jobject param0, jobject param1);
+void SM_mindustry_ui_fragments_PlayerListFragment_lambda$rebuild$15_java_lang_String_mindustry_gen_Player(jcontext ctx, jobject param0, jobject param1);
+void SM_mindustry_ui_fragments_PlayerListFragment_lambda$rebuild$11_mindustry_gen_Player_mindustry_ui_dialogs_BaseDialog(jcontext ctx, jobject param0, jobject param1);
+jbool SM_mindustry_ui_fragments_PlayerListFragment_lambda$rebuild$13_mindustry_gen_Player_mindustry_game_Team_arc_scene_ui_ImageButton_R_boolean(jcontext ctx, jobject param0, jobject param1, jobject param2);
+void SM_mindustry_ui_fragments_PlayerListFragment_lambda$rebuild$12_mindustry_gen_Player_mindustry_game_Team_mindustry_ui_dialogs_BaseDialog(jcontext ctx, jobject param0, jobject param1, jobject param2);
+void SM_mindustry_ui_fragments_PlayerListFragment_lambda$rebuild$10_mindustry_gen_Player_mindustry_ui_dialogs_BaseDialog(jcontext ctx, jobject param0, jobject param1);
+void SM_mindustry_ui_fragments_PlayerListFragment_lambda$rebuild$8_mindustry_gen_Player_mindustry_ui_dialogs_BaseDialog(jcontext ctx, jobject param0, jobject param1);
+void SM_mindustry_ui_fragments_PlayerListFragment_lambda$rebuild$9_mindustry_gen_Player(jcontext ctx, jobject param0);
+void SM_mindustry_ui_fragments_PlayerListFragment_lambda$rebuild$6_mindustry_gen_Player_mindustry_ui_dialogs_BaseDialog(jcontext ctx, jobject param0, jobject param1);
+void SM_mindustry_ui_fragments_PlayerListFragment_lambda$rebuild$7_mindustry_gen_Player(jcontext ctx, jobject param0);
+jbool SM_mindustry_ui_fragments_PlayerListFragment_lambda$rebuild$3_mindustry_gen_Player_R_boolean(jcontext ctx, jobject param0);
+void SM_mindustry_ui_fragments_PlayerListFragment_lambda$rebuild$2_mindustry_gen_Player_boolean(jcontext ctx, jobject param0, jbool param1);
+jbool M_mindustry_ui_fragments_PlayerListFragment_lambda$rebuild$1_mindustry_gen_Player_R_boolean(jcontext ctx, jobject self, jobject param0);
+jbool SM_mindustry_ui_fragments_PlayerListFragment_lambda$rebuild$0_mindustry_gen_Player_R_boolean(jcontext ctx, jobject param0);
+void M_mindustry_ui_fragments_PlayerListFragment_lambda$build$0_arc_scene_ui_layout_Table(jcontext ctx, jobject self, jobject param0);
+void M_mindustry_ui_fragments_PlayerListFragment_lambda$build$3_arc_scene_ui_layout_Table(jcontext ctx, jobject self, jobject param0);
+void M_mindustry_ui_fragments_PlayerListFragment_lambda$build$6_arc_scene_ui_layout_Table(jcontext ctx, jobject self, jobject param0);
+jbool SM_mindustry_ui_fragments_PlayerListFragment_lambda$build$8_arc_scene_ui_TextButton_R_boolean(jcontext ctx, jobject param0);
+jbool SM_mindustry_ui_fragments_PlayerListFragment_lambda$build$7_arc_scene_ui_TextButton_R_boolean(jcontext ctx, jobject param0);
+void M_mindustry_ui_fragments_PlayerListFragment_lambda$build$5_java_lang_String(jcontext ctx, jobject self, jobject param0);
+jobject SM_mindustry_ui_fragments_PlayerListFragment_lambda$build$4_R_java_lang_CharSequence(jcontext ctx);
+void M_mindustry_ui_fragments_PlayerListFragment_lambda$build$2(jcontext ctx, jobject self);
+jbool M_mindustry_ui_fragments_PlayerListFragment_lambda$build$1_R_boolean(jcontext ctx, jobject self);
+
+#ifdef __cplusplus
+}
+#endif
+
+#endif

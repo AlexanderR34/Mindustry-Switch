@@ -1,0 +1,727 @@
+#ifndef HEADER_mindustry_entities_comp_TankComp
+#define HEADER_mindustry_entities_comp_TankComp
+
+#include "Clearwing.h"
+#include "java/lang/Object.h"
+#include "mindustry/gen/Posc.h"
+#include "mindustry/gen/Hitboxc.h"
+#include "mindustry/gen/Unitc.h"
+#include "mindustry/gen/ElevationMovec.h"
+
+#ifdef __cplusplus
+extern "C" {
+#endif
+
+typedef struct mindustry_entities_comp_TankComp {
+	java_lang_Object parent;
+	jfloat F_x;
+	jfloat F_y;
+	jfloat F_hitSize;
+	jfloat F_rotation;
+	jfloat F_speedMultiplier;
+	jbool F_disarmed;
+	jref F_type;
+	jref F_team;
+	jfloat F_treadEffectTime;
+	jfloat F_lastSlowdown;
+	jfloat F_treadTime;
+	jbool F_walked;
+	jref F_lastDeepFloor;
+} mindustry_entities_comp_TankComp;
+
+extern Class class_mindustry_entities_comp_TankComp;
+
+
+#define VTABLE_mindustry_entities_comp_TankComp_hashCode_R_int 0
+typedef jint (*func_mindustry_entities_comp_TankComp_hashCode_R_int)(jcontext ctx, jobject self);
+#define VTABLE_mindustry_entities_comp_TankComp_equals_java_lang_Object_R_boolean 1
+typedef jbool (*func_mindustry_entities_comp_TankComp_equals_java_lang_Object_R_boolean)(jcontext ctx, jobject self, jobject param0);
+#define VTABLE_mindustry_entities_comp_TankComp_clone_R_java_lang_Object 2
+typedef jobject (*func_mindustry_entities_comp_TankComp_clone_R_java_lang_Object)(jcontext ctx, jobject self);
+#define VTABLE_mindustry_entities_comp_TankComp_getClass_R_java_lang_Class 3
+typedef jobject (*func_mindustry_entities_comp_TankComp_getClass_R_java_lang_Class)(jcontext ctx, jobject self);
+#define VTABLE_mindustry_entities_comp_TankComp_toString_R_java_lang_String 4
+typedef jobject (*func_mindustry_entities_comp_TankComp_toString_R_java_lang_String)(jcontext ctx, jobject self);
+#define VTABLE_mindustry_entities_comp_TankComp_finalize 5
+typedef void (*func_mindustry_entities_comp_TankComp_finalize)(jcontext ctx, jobject self);
+#define VTABLE_mindustry_entities_comp_TankComp_notify 6
+typedef void (*func_mindustry_entities_comp_TankComp_notify)(jcontext ctx, jobject self);
+#define VTABLE_mindustry_entities_comp_TankComp_notifyAll 7
+typedef void (*func_mindustry_entities_comp_TankComp_notifyAll)(jcontext ctx, jobject self);
+#define VTABLE_mindustry_entities_comp_TankComp_wait 8
+typedef void (*func_mindustry_entities_comp_TankComp_wait)(jcontext ctx, jobject self);
+#define VTABLE_mindustry_entities_comp_TankComp_wait_long 9
+typedef void (*func_mindustry_entities_comp_TankComp_wait_long)(jcontext ctx, jobject self, jlong param0);
+#define VTABLE_mindustry_entities_comp_TankComp_wait_long_int 10
+typedef void (*func_mindustry_entities_comp_TankComp_wait_long_int)(jcontext ctx, jobject self, jlong param0, jint param1);
+#define VTABLE_mindustry_entities_comp_TankComp_getX_R_float 11
+typedef jfloat (*func_mindustry_entities_comp_TankComp_getX_R_float)(jcontext ctx, jobject self);
+#define VTABLE_mindustry_entities_comp_TankComp_getY_R_float 12
+typedef jfloat (*func_mindustry_entities_comp_TankComp_getY_R_float)(jcontext ctx, jobject self);
+#define VTABLE_mindustry_entities_comp_TankComp_angleTo_arc_math_geom_Position_R_float 13
+typedef jfloat (*func_mindustry_entities_comp_TankComp_angleTo_arc_math_geom_Position_R_float)(jcontext ctx, jobject self, jobject param0);
+#define VTABLE_mindustry_entities_comp_TankComp_angleTo_float_float_R_float 14
+typedef jfloat (*func_mindustry_entities_comp_TankComp_angleTo_float_float_R_float)(jcontext ctx, jobject self, jfloat param0, jfloat param1);
+#define VTABLE_mindustry_entities_comp_TankComp_dst2_arc_math_geom_Position_R_float 15
+typedef jfloat (*func_mindustry_entities_comp_TankComp_dst2_arc_math_geom_Position_R_float)(jcontext ctx, jobject self, jobject param0);
+#define VTABLE_mindustry_entities_comp_TankComp_dst_arc_math_geom_Position_R_float 16
+typedef jfloat (*func_mindustry_entities_comp_TankComp_dst_arc_math_geom_Position_R_float)(jcontext ctx, jobject self, jobject param0);
+#define VTABLE_mindustry_entities_comp_TankComp_dst_float_float_R_float 17
+typedef jfloat (*func_mindustry_entities_comp_TankComp_dst_float_float_R_float)(jcontext ctx, jobject self, jfloat param0, jfloat param1);
+#define VTABLE_mindustry_entities_comp_TankComp_dst2_float_float_R_float 18
+typedef jfloat (*func_mindustry_entities_comp_TankComp_dst2_float_float_R_float)(jcontext ctx, jobject self, jfloat param0, jfloat param1);
+#define VTABLE_mindustry_entities_comp_TankComp_within_arc_math_geom_Position_float_R_boolean 19
+typedef jbool (*func_mindustry_entities_comp_TankComp_within_arc_math_geom_Position_float_R_boolean)(jcontext ctx, jobject self, jobject param0, jfloat param1);
+#define VTABLE_mindustry_entities_comp_TankComp_within_float_float_float_R_boolean 20
+typedef jbool (*func_mindustry_entities_comp_TankComp_within_float_float_float_R_boolean)(jcontext ctx, jobject self, jfloat param0, jfloat param1, jfloat param2);
+#define VTABLE_mindustry_entities_comp_TankComp_self_R_mindustry_gen_Entityc 21
+typedef jobject (*func_mindustry_entities_comp_TankComp_self_R_mindustry_gen_Entityc)(jcontext ctx, jobject self);
+#define VTABLE_mindustry_entities_comp_TankComp_as_R_java_lang_Object 22
+typedef jobject (*func_mindustry_entities_comp_TankComp_as_R_java_lang_Object)(jcontext ctx, jobject self);
+#define VTABLE_mindustry_entities_comp_TankComp_isAdded_R_boolean 23
+typedef jbool (*func_mindustry_entities_comp_TankComp_isAdded_R_boolean)(jcontext ctx, jobject self);
+#define VTABLE_mindustry_entities_comp_TankComp_isLocal_R_boolean 24
+typedef jbool (*func_mindustry_entities_comp_TankComp_isLocal_R_boolean)(jcontext ctx, jobject self);
+#define VTABLE_mindustry_entities_comp_TankComp_isRemote_R_boolean 25
+typedef jbool (*func_mindustry_entities_comp_TankComp_isRemote_R_boolean)(jcontext ctx, jobject self);
+#define VTABLE_mindustry_entities_comp_TankComp_serialize_R_boolean 26
+typedef jbool (*func_mindustry_entities_comp_TankComp_serialize_R_boolean)(jcontext ctx, jobject self);
+#define VTABLE_mindustry_entities_comp_TankComp_classId_R_int 27
+typedef jint (*func_mindustry_entities_comp_TankComp_classId_R_int)(jcontext ctx, jobject self);
+#define VTABLE_mindustry_entities_comp_TankComp_id_R_int 28
+typedef jint (*func_mindustry_entities_comp_TankComp_id_R_int)(jcontext ctx, jobject self);
+#define VTABLE_mindustry_entities_comp_TankComp_add 29
+typedef void (*func_mindustry_entities_comp_TankComp_add)(jcontext ctx, jobject self);
+#define VTABLE_mindustry_entities_comp_TankComp_afterRead 30
+typedef void (*func_mindustry_entities_comp_TankComp_afterRead)(jcontext ctx, jobject self);
+#define VTABLE_mindustry_entities_comp_TankComp_afterReadAll 31
+typedef void (*func_mindustry_entities_comp_TankComp_afterReadAll)(jcontext ctx, jobject self);
+#define VTABLE_mindustry_entities_comp_TankComp_beforeWrite 32
+typedef void (*func_mindustry_entities_comp_TankComp_beforeWrite)(jcontext ctx, jobject self);
+#define VTABLE_mindustry_entities_comp_TankComp_id_int 33
+typedef void (*func_mindustry_entities_comp_TankComp_id_int)(jcontext ctx, jobject self, jint param0);
+#define VTABLE_mindustry_entities_comp_TankComp_read_arc_util_io_Reads 34
+typedef void (*func_mindustry_entities_comp_TankComp_read_arc_util_io_Reads)(jcontext ctx, jobject self, jobject param0);
+#define VTABLE_mindustry_entities_comp_TankComp_remove 35
+typedef void (*func_mindustry_entities_comp_TankComp_remove)(jcontext ctx, jobject self);
+#define VTABLE_mindustry_entities_comp_TankComp_update 36
+typedef void (*func_mindustry_entities_comp_TankComp_update)(jcontext ctx, jobject self);
+#define VTABLE_mindustry_entities_comp_TankComp_write_arc_util_io_Writes 37
+typedef void (*func_mindustry_entities_comp_TankComp_write_arc_util_io_Writes)(jcontext ctx, jobject self, jobject param0);
+#define VTABLE_mindustry_entities_comp_TankComp_floorOn_R_mindustry_world_blocks_environment_Floor 38
+typedef jobject (*func_mindustry_entities_comp_TankComp_floorOn_R_mindustry_world_blocks_environment_Floor)(jcontext ctx, jobject self);
+#define VTABLE_mindustry_entities_comp_TankComp_buildOn_R_mindustry_gen_Building 39
+typedef jobject (*func_mindustry_entities_comp_TankComp_buildOn_R_mindustry_gen_Building)(jcontext ctx, jobject self);
+#define VTABLE_mindustry_entities_comp_TankComp_onSolid_R_boolean 40
+typedef jbool (*func_mindustry_entities_comp_TankComp_onSolid_R_boolean)(jcontext ctx, jobject self);
+#define VTABLE_mindustry_entities_comp_TankComp_x_R_float 41
+typedef jfloat (*func_mindustry_entities_comp_TankComp_x_R_float)(jcontext ctx, jobject self);
+#define VTABLE_mindustry_entities_comp_TankComp_y_R_float 42
+typedef jfloat (*func_mindustry_entities_comp_TankComp_y_R_float)(jcontext ctx, jobject self);
+#define VTABLE_mindustry_entities_comp_TankComp_tileX_R_int 43
+typedef jint (*func_mindustry_entities_comp_TankComp_tileX_R_int)(jcontext ctx, jobject self);
+#define VTABLE_mindustry_entities_comp_TankComp_tileY_R_int 44
+typedef jint (*func_mindustry_entities_comp_TankComp_tileY_R_int)(jcontext ctx, jobject self);
+#define VTABLE_mindustry_entities_comp_TankComp_blockOn_R_mindustry_world_Block 45
+typedef jobject (*func_mindustry_entities_comp_TankComp_blockOn_R_mindustry_world_Block)(jcontext ctx, jobject self);
+#define VTABLE_mindustry_entities_comp_TankComp_tileOn_R_mindustry_world_Tile 46
+typedef jobject (*func_mindustry_entities_comp_TankComp_tileOn_R_mindustry_world_Tile)(jcontext ctx, jobject self);
+#define VTABLE_mindustry_entities_comp_TankComp_set_arc_math_geom_Position 47
+typedef void (*func_mindustry_entities_comp_TankComp_set_arc_math_geom_Position)(jcontext ctx, jobject self, jobject param0);
+#define VTABLE_mindustry_entities_comp_TankComp_set_float_float 48
+typedef void (*func_mindustry_entities_comp_TankComp_set_float_float)(jcontext ctx, jobject self, jfloat param0, jfloat param1);
+#define VTABLE_mindustry_entities_comp_TankComp_trns_arc_math_geom_Position 49
+typedef void (*func_mindustry_entities_comp_TankComp_trns_arc_math_geom_Position)(jcontext ctx, jobject self, jobject param0);
+#define VTABLE_mindustry_entities_comp_TankComp_trns_float_float 50
+typedef void (*func_mindustry_entities_comp_TankComp_trns_float_float)(jcontext ctx, jobject self, jfloat param0, jfloat param1);
+#define VTABLE_mindustry_entities_comp_TankComp_x_float 51
+typedef void (*func_mindustry_entities_comp_TankComp_x_float)(jcontext ctx, jobject self, jfloat param0);
+#define VTABLE_mindustry_entities_comp_TankComp_y_float 52
+typedef void (*func_mindustry_entities_comp_TankComp_y_float)(jcontext ctx, jobject self, jfloat param0);
+#define VTABLE_mindustry_entities_comp_TankComp_hitbox_arc_math_geom_Rect 53
+typedef void (*func_mindustry_entities_comp_TankComp_hitbox_arc_math_geom_Rect)(jcontext ctx, jobject self, jobject param0);
+#define VTABLE_mindustry_entities_comp_TankComp_hitSize_R_float 54
+typedef jfloat (*func_mindustry_entities_comp_TankComp_hitSize_R_float)(jcontext ctx, jobject self);
+#define VTABLE_mindustry_entities_comp_TankComp_collides_mindustry_gen_Hitboxc_R_boolean 55
+typedef jbool (*func_mindustry_entities_comp_TankComp_collides_mindustry_gen_Hitboxc_R_boolean)(jcontext ctx, jobject self, jobject param0);
+#define VTABLE_mindustry_entities_comp_TankComp_deltaAngle_R_float 56
+typedef jfloat (*func_mindustry_entities_comp_TankComp_deltaAngle_R_float)(jcontext ctx, jobject self);
+#define VTABLE_mindustry_entities_comp_TankComp_deltaLen_R_float 57
+typedef jfloat (*func_mindustry_entities_comp_TankComp_deltaLen_R_float)(jcontext ctx, jobject self);
+#define VTABLE_mindustry_entities_comp_TankComp_deltaX_R_float 58
+typedef jfloat (*func_mindustry_entities_comp_TankComp_deltaX_R_float)(jcontext ctx, jobject self);
+#define VTABLE_mindustry_entities_comp_TankComp_deltaY_R_float 59
+typedef jfloat (*func_mindustry_entities_comp_TankComp_deltaY_R_float)(jcontext ctx, jobject self);
+#define VTABLE_mindustry_entities_comp_TankComp_lastX_R_float 60
+typedef jfloat (*func_mindustry_entities_comp_TankComp_lastX_R_float)(jcontext ctx, jobject self);
+#define VTABLE_mindustry_entities_comp_TankComp_lastY_R_float 61
+typedef jfloat (*func_mindustry_entities_comp_TankComp_lastY_R_float)(jcontext ctx, jobject self);
+#define VTABLE_mindustry_entities_comp_TankComp_collision_mindustry_gen_Hitboxc_float_float 62
+typedef void (*func_mindustry_entities_comp_TankComp_collision_mindustry_gen_Hitboxc_float_float)(jcontext ctx, jobject self, jobject param0, jfloat param1, jfloat param2);
+#define VTABLE_mindustry_entities_comp_TankComp_deltaX_float 63
+typedef void (*func_mindustry_entities_comp_TankComp_deltaX_float)(jcontext ctx, jobject self, jfloat param0);
+#define VTABLE_mindustry_entities_comp_TankComp_deltaY_float 64
+typedef void (*func_mindustry_entities_comp_TankComp_deltaY_float)(jcontext ctx, jobject self, jfloat param0);
+#define VTABLE_mindustry_entities_comp_TankComp_getCollisions_arc_func_Cons 65
+typedef void (*func_mindustry_entities_comp_TankComp_getCollisions_arc_func_Cons)(jcontext ctx, jobject self, jobject param0);
+#define VTABLE_mindustry_entities_comp_TankComp_hitSize_float 66
+typedef void (*func_mindustry_entities_comp_TankComp_hitSize_float)(jcontext ctx, jobject self, jfloat param0);
+#define VTABLE_mindustry_entities_comp_TankComp_hitboxTile_arc_math_geom_Rect 67
+typedef void (*func_mindustry_entities_comp_TankComp_hitboxTile_arc_math_geom_Rect)(jcontext ctx, jobject self, jobject param0);
+#define VTABLE_mindustry_entities_comp_TankComp_lastX_float 68
+typedef void (*func_mindustry_entities_comp_TankComp_lastX_float)(jcontext ctx, jobject self, jfloat param0);
+#define VTABLE_mindustry_entities_comp_TankComp_lastY_float 69
+typedef void (*func_mindustry_entities_comp_TankComp_lastY_float)(jcontext ctx, jobject self, jfloat param0);
+#define VTABLE_mindustry_entities_comp_TankComp_updateLastPosition 70
+typedef void (*func_mindustry_entities_comp_TankComp_updateLastPosition)(jcontext ctx, jobject self);
+#define VTABLE_mindustry_entities_comp_TankComp_rotation_R_float 71
+typedef jfloat (*func_mindustry_entities_comp_TankComp_rotation_R_float)(jcontext ctx, jobject self);
+#define VTABLE_mindustry_entities_comp_TankComp_rotation_float 72
+typedef void (*func_mindustry_entities_comp_TankComp_rotation_float)(jcontext ctx, jobject self, jfloat param0);
+#define VTABLE_mindustry_entities_comp_TankComp_applyDynamicStatus_R_mindustry_entities_units_StatusEntry 73
+typedef jobject (*func_mindustry_entities_comp_TankComp_applyDynamicStatus_R_mindustry_entities_units_StatusEntry)(jcontext ctx, jobject self);
+#define VTABLE_mindustry_entities_comp_TankComp_apply_mindustry_type_StatusEffect_float 74
+typedef void (*func_mindustry_entities_comp_TankComp_apply_mindustry_type_StatusEffect_float)(jcontext ctx, jobject self, jobject param0, jfloat param1);
+#define VTABLE_mindustry_entities_comp_TankComp_apply_mindustry_type_StatusEffect 75
+typedef void (*func_mindustry_entities_comp_TankComp_apply_mindustry_type_StatusEffect)(jcontext ctx, jobject self, jobject param0);
+#define VTABLE_mindustry_entities_comp_TankComp_unapply_mindustry_type_StatusEffect 76
+typedef void (*func_mindustry_entities_comp_TankComp_unapply_mindustry_type_StatusEffect)(jcontext ctx, jobject self, jobject param0);
+#define VTABLE_mindustry_entities_comp_TankComp_statusDamageMultiplier_float 77
+typedef void (*func_mindustry_entities_comp_TankComp_statusDamageMultiplier_float)(jcontext ctx, jobject self, jfloat param0);
+#define VTABLE_mindustry_entities_comp_TankComp_statusReloadMultiplier_float 78
+typedef void (*func_mindustry_entities_comp_TankComp_statusReloadMultiplier_float)(jcontext ctx, jobject self, jfloat param0);
+#define VTABLE_mindustry_entities_comp_TankComp_statusArmor_float 79
+typedef void (*func_mindustry_entities_comp_TankComp_statusArmor_float)(jcontext ctx, jobject self, jfloat param0);
+#define VTABLE_mindustry_entities_comp_TankComp_statusBuildSpeed_float 80
+typedef void (*func_mindustry_entities_comp_TankComp_statusBuildSpeed_float)(jcontext ctx, jobject self, jfloat param0);
+#define VTABLE_mindustry_entities_comp_TankComp_statusDrag_float 81
+typedef void (*func_mindustry_entities_comp_TankComp_statusDrag_float)(jcontext ctx, jobject self, jfloat param0);
+#define VTABLE_mindustry_entities_comp_TankComp_statusMaxHealth_float 82
+typedef void (*func_mindustry_entities_comp_TankComp_statusMaxHealth_float)(jcontext ctx, jobject self, jfloat param0);
+#define VTABLE_mindustry_entities_comp_TankComp_statusSpeed_float 83
+typedef void (*func_mindustry_entities_comp_TankComp_statusSpeed_float)(jcontext ctx, jobject self, jfloat param0);
+#define VTABLE_mindustry_entities_comp_TankComp_statusColor_R_arc_graphics_Color 84
+typedef jobject (*func_mindustry_entities_comp_TankComp_statusColor_R_arc_graphics_Color)(jcontext ctx, jobject self);
+#define VTABLE_mindustry_entities_comp_TankComp_statusBits_R_arc_struct_Bits 85
+typedef jobject (*func_mindustry_entities_comp_TankComp_statusBits_R_arc_struct_Bits)(jcontext ctx, jobject self);
+#define VTABLE_mindustry_entities_comp_TankComp_disarmed_R_boolean 86
+typedef jbool (*func_mindustry_entities_comp_TankComp_disarmed_R_boolean)(jcontext ctx, jobject self);
+#define VTABLE_mindustry_entities_comp_TankComp_hasEffect_mindustry_type_StatusEffect_R_boolean 87
+typedef jbool (*func_mindustry_entities_comp_TankComp_hasEffect_mindustry_type_StatusEffect_R_boolean)(jcontext ctx, jobject self, jobject param0);
+#define VTABLE_mindustry_entities_comp_TankComp_isBoss_R_boolean 88
+typedef jbool (*func_mindustry_entities_comp_TankComp_isBoss_R_boolean)(jcontext ctx, jobject self);
+#define VTABLE_mindustry_entities_comp_TankComp_isGrounded_R_boolean 89
+typedef jbool (*func_mindustry_entities_comp_TankComp_isGrounded_R_boolean)(jcontext ctx, jobject self);
+#define VTABLE_mindustry_entities_comp_TankComp_isImmune_mindustry_type_StatusEffect_R_boolean 90
+typedef jbool (*func_mindustry_entities_comp_TankComp_isImmune_mindustry_type_StatusEffect_R_boolean)(jcontext ctx, jobject self, jobject param0);
+#define VTABLE_mindustry_entities_comp_TankComp_armorOverride_R_float 91
+typedef jfloat (*func_mindustry_entities_comp_TankComp_armorOverride_R_float)(jcontext ctx, jobject self);
+#define VTABLE_mindustry_entities_comp_TankComp_buildSpeedMultiplier_R_float 92
+typedef jfloat (*func_mindustry_entities_comp_TankComp_buildSpeedMultiplier_R_float)(jcontext ctx, jobject self);
+#define VTABLE_mindustry_entities_comp_TankComp_damageMultiplier_R_float 93
+typedef jfloat (*func_mindustry_entities_comp_TankComp_damageMultiplier_R_float)(jcontext ctx, jobject self);
+#define VTABLE_mindustry_entities_comp_TankComp_dragMultiplier_R_float 94
+typedef jfloat (*func_mindustry_entities_comp_TankComp_dragMultiplier_R_float)(jcontext ctx, jobject self);
+#define VTABLE_mindustry_entities_comp_TankComp_getDuration_mindustry_type_StatusEffect_R_float 95
+typedef jfloat (*func_mindustry_entities_comp_TankComp_getDuration_mindustry_type_StatusEffect_R_float)(jcontext ctx, jobject self, jobject param0);
+#define VTABLE_mindustry_entities_comp_TankComp_healthMultiplier_R_float 96
+typedef jfloat (*func_mindustry_entities_comp_TankComp_healthMultiplier_R_float)(jcontext ctx, jobject self);
+#define VTABLE_mindustry_entities_comp_TankComp_reloadMultiplier_R_float 97
+typedef jfloat (*func_mindustry_entities_comp_TankComp_reloadMultiplier_R_float)(jcontext ctx, jobject self);
+#define VTABLE_mindustry_entities_comp_TankComp_speedMultiplier_R_float 98
+typedef jfloat (*func_mindustry_entities_comp_TankComp_speedMultiplier_R_float)(jcontext ctx, jobject self);
+#define VTABLE_mindustry_entities_comp_TankComp_armorOverride_float 99
+typedef void (*func_mindustry_entities_comp_TankComp_armorOverride_float)(jcontext ctx, jobject self, jfloat param0);
+#define VTABLE_mindustry_entities_comp_TankComp_buildSpeedMultiplier_float 100
+typedef void (*func_mindustry_entities_comp_TankComp_buildSpeedMultiplier_float)(jcontext ctx, jobject self, jfloat param0);
+#define VTABLE_mindustry_entities_comp_TankComp_clearStatuses 101
+typedef void (*func_mindustry_entities_comp_TankComp_clearStatuses)(jcontext ctx, jobject self);
+#define VTABLE_mindustry_entities_comp_TankComp_damageMultiplier_float 102
+typedef void (*func_mindustry_entities_comp_TankComp_damageMultiplier_float)(jcontext ctx, jobject self, jfloat param0);
+#define VTABLE_mindustry_entities_comp_TankComp_disarmed_boolean 103
+typedef void (*func_mindustry_entities_comp_TankComp_disarmed_boolean)(jcontext ctx, jobject self, jbool param0);
+#define VTABLE_mindustry_entities_comp_TankComp_dragMultiplier_float 104
+typedef void (*func_mindustry_entities_comp_TankComp_dragMultiplier_float)(jcontext ctx, jobject self, jfloat param0);
+#define VTABLE_mindustry_entities_comp_TankComp_draw 105
+typedef void (*func_mindustry_entities_comp_TankComp_draw)(jcontext ctx, jobject self);
+#define VTABLE_mindustry_entities_comp_TankComp_healthMultiplier_float 106
+typedef void (*func_mindustry_entities_comp_TankComp_healthMultiplier_float)(jcontext ctx, jobject self, jfloat param0);
+#define VTABLE_mindustry_entities_comp_TankComp_reloadMultiplier_float 107
+typedef void (*func_mindustry_entities_comp_TankComp_reloadMultiplier_float)(jcontext ctx, jobject self, jfloat param0);
+#define VTABLE_mindustry_entities_comp_TankComp_setDuration_mindustry_type_StatusEffect_float 108
+typedef void (*func_mindustry_entities_comp_TankComp_setDuration_mindustry_type_StatusEffect_float)(jcontext ctx, jobject self, jobject param0, jfloat param1);
+#define VTABLE_mindustry_entities_comp_TankComp_speedMultiplier_float 109
+typedef void (*func_mindustry_entities_comp_TankComp_speedMultiplier_float)(jcontext ctx, jobject self, jfloat param0);
+#define VTABLE_mindustry_entities_comp_TankComp_inFogTo_mindustry_game_Team_R_boolean 110
+typedef jbool (*func_mindustry_entities_comp_TankComp_inFogTo_mindustry_game_Team_R_boolean)(jcontext ctx, jobject self, jobject param0);
+#define VTABLE_mindustry_entities_comp_TankComp_cheating_R_boolean 111
+typedef jbool (*func_mindustry_entities_comp_TankComp_cheating_R_boolean)(jcontext ctx, jobject self);
+#define VTABLE_mindustry_entities_comp_TankComp_team_R_mindustry_game_Team 112
+typedef jobject (*func_mindustry_entities_comp_TankComp_team_R_mindustry_game_Team)(jcontext ctx, jobject self);
+#define VTABLE_mindustry_entities_comp_TankComp_closestCore_R_mindustry_world_blocks_storage_CoreBlock$CoreBuild 113
+typedef jobject (*func_mindustry_entities_comp_TankComp_closestCore_R_mindustry_world_blocks_storage_CoreBlock$CoreBuild)(jcontext ctx, jobject self);
+#define VTABLE_mindustry_entities_comp_TankComp_closestEnemyCore_R_mindustry_world_blocks_storage_CoreBlock$CoreBuild 114
+typedef jobject (*func_mindustry_entities_comp_TankComp_closestEnemyCore_R_mindustry_world_blocks_storage_CoreBlock$CoreBuild)(jcontext ctx, jobject self);
+#define VTABLE_mindustry_entities_comp_TankComp_core_R_mindustry_world_blocks_storage_CoreBlock$CoreBuild 115
+typedef jobject (*func_mindustry_entities_comp_TankComp_core_R_mindustry_world_blocks_storage_CoreBlock$CoreBuild)(jcontext ctx, jobject self);
+#define VTABLE_mindustry_entities_comp_TankComp_team_mindustry_game_Team 116
+typedef void (*func_mindustry_entities_comp_TankComp_team_mindustry_game_Team)(jcontext ctx, jobject self, jobject param0);
+#define VTABLE_mindustry_entities_comp_TankComp_buildPlan_R_mindustry_entities_units_BuildPlan 117
+typedef jobject (*func_mindustry_entities_comp_TankComp_buildPlan_R_mindustry_entities_units_BuildPlan)(jcontext ctx, jobject self);
+#define VTABLE_mindustry_entities_comp_TankComp_shouldSkip_mindustry_entities_units_BuildPlan_mindustry_gen_Building_R_boolean 118
+typedef jbool (*func_mindustry_entities_comp_TankComp_shouldSkip_mindustry_entities_units_BuildPlan_mindustry_gen_Building_R_boolean)(jcontext ctx, jobject self, jobject param0, jobject param1);
+#define VTABLE_mindustry_entities_comp_TankComp_addBuild_mindustry_entities_units_BuildPlan_boolean 119
+typedef void (*func_mindustry_entities_comp_TankComp_addBuild_mindustry_entities_units_BuildPlan_boolean)(jcontext ctx, jobject self, jobject param0, jbool param1);
+#define VTABLE_mindustry_entities_comp_TankComp_addBuild_mindustry_entities_units_BuildPlan 120
+typedef void (*func_mindustry_entities_comp_TankComp_addBuild_mindustry_entities_units_BuildPlan)(jcontext ctx, jobject self, jobject param0);
+#define VTABLE_mindustry_entities_comp_TankComp_clearBuilding 121
+typedef void (*func_mindustry_entities_comp_TankComp_clearBuilding)(jcontext ctx, jobject self);
+#define VTABLE_mindustry_entities_comp_TankComp_isBuilding_R_boolean 122
+typedef jbool (*func_mindustry_entities_comp_TankComp_isBuilding_R_boolean)(jcontext ctx, jobject self);
+#define VTABLE_mindustry_entities_comp_TankComp_plans_R_arc_struct_Queue 123
+typedef jobject (*func_mindustry_entities_comp_TankComp_plans_R_arc_struct_Queue)(jcontext ctx, jobject self);
+#define VTABLE_mindustry_entities_comp_TankComp_activelyBuilding_R_boolean 124
+typedef jbool (*func_mindustry_entities_comp_TankComp_activelyBuilding_R_boolean)(jcontext ctx, jobject self);
+#define VTABLE_mindustry_entities_comp_TankComp_canBuild_R_boolean 125
+typedef jbool (*func_mindustry_entities_comp_TankComp_canBuild_R_boolean)(jcontext ctx, jobject self);
+#define VTABLE_mindustry_entities_comp_TankComp_updateBuilding_R_boolean 126
+typedef jbool (*func_mindustry_entities_comp_TankComp_updateBuilding_R_boolean)(jcontext ctx, jobject self);
+#define VTABLE_mindustry_entities_comp_TankComp_buildAlpha_R_float 127
+typedef jfloat (*func_mindustry_entities_comp_TankComp_buildAlpha_R_float)(jcontext ctx, jobject self);
+#define VTABLE_mindustry_entities_comp_TankComp_buildAlpha_float 128
+typedef void (*func_mindustry_entities_comp_TankComp_buildAlpha_float)(jcontext ctx, jobject self, jfloat param0);
+#define VTABLE_mindustry_entities_comp_TankComp_drawBuilding 129
+typedef void (*func_mindustry_entities_comp_TankComp_drawBuilding)(jcontext ctx, jobject self);
+#define VTABLE_mindustry_entities_comp_TankComp_drawBuildingBeam_float_float 130
+typedef void (*func_mindustry_entities_comp_TankComp_drawBuildingBeam_float_float)(jcontext ctx, jobject self, jfloat param0, jfloat param1);
+#define VTABLE_mindustry_entities_comp_TankComp_drawPlan_mindustry_entities_units_BuildPlan_float 131
+typedef void (*func_mindustry_entities_comp_TankComp_drawPlan_mindustry_entities_units_BuildPlan_float)(jcontext ctx, jobject self, jobject param0, jfloat param1);
+#define VTABLE_mindustry_entities_comp_TankComp_drawPlanTop_mindustry_entities_units_BuildPlan_float 132
+typedef void (*func_mindustry_entities_comp_TankComp_drawPlanTop_mindustry_entities_units_BuildPlan_float)(jcontext ctx, jobject self, jobject param0, jfloat param1);
+#define VTABLE_mindustry_entities_comp_TankComp_plans_arc_struct_Queue 133
+typedef void (*func_mindustry_entities_comp_TankComp_plans_arc_struct_Queue)(jcontext ctx, jobject self, jobject param0);
+#define VTABLE_mindustry_entities_comp_TankComp_removeBuild_int_int_boolean 134
+typedef void (*func_mindustry_entities_comp_TankComp_removeBuild_int_int_boolean)(jcontext ctx, jobject self, jint param0, jint param1, jbool param2);
+#define VTABLE_mindustry_entities_comp_TankComp_updateBuildLogic 135
+typedef void (*func_mindustry_entities_comp_TankComp_updateBuildLogic)(jcontext ctx, jobject self);
+#define VTABLE_mindustry_entities_comp_TankComp_updateBuilding_boolean 136
+typedef void (*func_mindustry_entities_comp_TankComp_updateBuilding_boolean)(jcontext ctx, jobject self, jbool param0);
+#define VTABLE_mindustry_entities_comp_TankComp_validatePlans 137
+typedef void (*func_mindustry_entities_comp_TankComp_validatePlans)(jcontext ctx, jobject self);
+#define VTABLE_mindustry_entities_comp_TankComp_clipSize_R_float 138
+typedef jfloat (*func_mindustry_entities_comp_TankComp_clipSize_R_float)(jcontext ctx, jobject self);
+#define VTABLE_mindustry_entities_comp_TankComp_damageArmorMult_float_float 139
+typedef void (*func_mindustry_entities_comp_TankComp_damageArmorMult_float_float)(jcontext ctx, jobject self, jfloat param0, jfloat param1);
+#define VTABLE_mindustry_entities_comp_TankComp_damageArmorMult_float_float_boolean 140
+typedef void (*func_mindustry_entities_comp_TankComp_damageArmorMult_float_float_boolean)(jcontext ctx, jobject self, jfloat param0, jfloat param1, jbool param2);
+#define VTABLE_mindustry_entities_comp_TankComp_damagePierce_float 141
+typedef void (*func_mindustry_entities_comp_TankComp_damagePierce_float)(jcontext ctx, jobject self, jfloat param0);
+#define VTABLE_mindustry_entities_comp_TankComp_damagePierce_float_boolean 142
+typedef void (*func_mindustry_entities_comp_TankComp_damagePierce_float_boolean)(jcontext ctx, jobject self, jfloat param0, jbool param1);
+#define VTABLE_mindustry_entities_comp_TankComp_healFract_float 143
+typedef void (*func_mindustry_entities_comp_TankComp_healFract_float)(jcontext ctx, jobject self, jfloat param0);
+#define VTABLE_mindustry_entities_comp_TankComp_heal_float 144
+typedef void (*func_mindustry_entities_comp_TankComp_heal_float)(jcontext ctx, jobject self, jfloat param0);
+#define VTABLE_mindustry_entities_comp_TankComp_damaged_R_boolean 145
+typedef jbool (*func_mindustry_entities_comp_TankComp_damaged_R_boolean)(jcontext ctx, jobject self);
+#define VTABLE_mindustry_entities_comp_TankComp_dead_R_boolean 146
+typedef jbool (*func_mindustry_entities_comp_TankComp_dead_R_boolean)(jcontext ctx, jobject self);
+#define VTABLE_mindustry_entities_comp_TankComp_isValid_R_boolean 147
+typedef jbool (*func_mindustry_entities_comp_TankComp_isValid_R_boolean)(jcontext ctx, jobject self);
+#define VTABLE_mindustry_entities_comp_TankComp_health_R_float 148
+typedef jfloat (*func_mindustry_entities_comp_TankComp_health_R_float)(jcontext ctx, jobject self);
+#define VTABLE_mindustry_entities_comp_TankComp_healthf_R_float 149
+typedef jfloat (*func_mindustry_entities_comp_TankComp_healthf_R_float)(jcontext ctx, jobject self);
+#define VTABLE_mindustry_entities_comp_TankComp_hitTime_R_float 150
+typedef jfloat (*func_mindustry_entities_comp_TankComp_hitTime_R_float)(jcontext ctx, jobject self);
+#define VTABLE_mindustry_entities_comp_TankComp_maxHealth_R_float 151
+typedef jfloat (*func_mindustry_entities_comp_TankComp_maxHealth_R_float)(jcontext ctx, jobject self);
+#define VTABLE_mindustry_entities_comp_TankComp_clampHealth 152
+typedef void (*func_mindustry_entities_comp_TankComp_clampHealth)(jcontext ctx, jobject self);
+#define VTABLE_mindustry_entities_comp_TankComp_damage_float 153
+typedef void (*func_mindustry_entities_comp_TankComp_damage_float)(jcontext ctx, jobject self, jfloat param0);
+#define VTABLE_mindustry_entities_comp_TankComp_damage_float_boolean 154
+typedef void (*func_mindustry_entities_comp_TankComp_damage_float_boolean)(jcontext ctx, jobject self, jfloat param0, jbool param1);
+#define VTABLE_mindustry_entities_comp_TankComp_damageContinuous_float 155
+typedef void (*func_mindustry_entities_comp_TankComp_damageContinuous_float)(jcontext ctx, jobject self, jfloat param0);
+#define VTABLE_mindustry_entities_comp_TankComp_damageContinuousArmorMult_float_float 156
+typedef void (*func_mindustry_entities_comp_TankComp_damageContinuousArmorMult_float_float)(jcontext ctx, jobject self, jfloat param0, jfloat param1);
+#define VTABLE_mindustry_entities_comp_TankComp_damageContinuousPierce_float 157
+typedef void (*func_mindustry_entities_comp_TankComp_damageContinuousPierce_float)(jcontext ctx, jobject self, jfloat param0);
+#define VTABLE_mindustry_entities_comp_TankComp_dead_boolean 158
+typedef void (*func_mindustry_entities_comp_TankComp_dead_boolean)(jcontext ctx, jobject self, jbool param0);
+#define VTABLE_mindustry_entities_comp_TankComp_heal 159
+typedef void (*func_mindustry_entities_comp_TankComp_heal)(jcontext ctx, jobject self);
+#define VTABLE_mindustry_entities_comp_TankComp_health_float 160
+typedef void (*func_mindustry_entities_comp_TankComp_health_float)(jcontext ctx, jobject self, jfloat param0);
+#define VTABLE_mindustry_entities_comp_TankComp_hitTime_float 161
+typedef void (*func_mindustry_entities_comp_TankComp_hitTime_float)(jcontext ctx, jobject self, jfloat param0);
+#define VTABLE_mindustry_entities_comp_TankComp_kill 162
+typedef void (*func_mindustry_entities_comp_TankComp_kill)(jcontext ctx, jobject self);
+#define VTABLE_mindustry_entities_comp_TankComp_killed 163
+typedef void (*func_mindustry_entities_comp_TankComp_killed)(jcontext ctx, jobject self);
+#define VTABLE_mindustry_entities_comp_TankComp_maxHealth_float 164
+typedef void (*func_mindustry_entities_comp_TankComp_maxHealth_float)(jcontext ctx, jobject self, jfloat param0);
+#define VTABLE_mindustry_entities_comp_TankComp_acceptsItem_mindustry_type_Item_R_boolean 165
+typedef jbool (*func_mindustry_entities_comp_TankComp_acceptsItem_mindustry_type_Item_R_boolean)(jcontext ctx, jobject self, jobject param0);
+#define VTABLE_mindustry_entities_comp_TankComp_hasItem_R_boolean 166
+typedef jbool (*func_mindustry_entities_comp_TankComp_hasItem_R_boolean)(jcontext ctx, jobject self);
+#define VTABLE_mindustry_entities_comp_TankComp_itemTime_R_float 167
+typedef jfloat (*func_mindustry_entities_comp_TankComp_itemTime_R_float)(jcontext ctx, jobject self);
+#define VTABLE_mindustry_entities_comp_TankComp_itemCapacity_R_int 168
+typedef jint (*func_mindustry_entities_comp_TankComp_itemCapacity_R_int)(jcontext ctx, jobject self);
+#define VTABLE_mindustry_entities_comp_TankComp_maxAccepted_mindustry_type_Item_R_int 169
+typedef jint (*func_mindustry_entities_comp_TankComp_maxAccepted_mindustry_type_Item_R_int)(jcontext ctx, jobject self, jobject param0);
+#define VTABLE_mindustry_entities_comp_TankComp_item_R_mindustry_type_Item 170
+typedef jobject (*func_mindustry_entities_comp_TankComp_item_R_mindustry_type_Item)(jcontext ctx, jobject self);
+#define VTABLE_mindustry_entities_comp_TankComp_stack_R_mindustry_type_ItemStack 171
+typedef jobject (*func_mindustry_entities_comp_TankComp_stack_R_mindustry_type_ItemStack)(jcontext ctx, jobject self);
+#define VTABLE_mindustry_entities_comp_TankComp_addItem_mindustry_type_Item 172
+typedef void (*func_mindustry_entities_comp_TankComp_addItem_mindustry_type_Item)(jcontext ctx, jobject self, jobject param0);
+#define VTABLE_mindustry_entities_comp_TankComp_addItem_mindustry_type_Item_int 173
+typedef void (*func_mindustry_entities_comp_TankComp_addItem_mindustry_type_Item_int)(jcontext ctx, jobject self, jobject param0, jint param1);
+#define VTABLE_mindustry_entities_comp_TankComp_clearItem 174
+typedef void (*func_mindustry_entities_comp_TankComp_clearItem)(jcontext ctx, jobject self);
+#define VTABLE_mindustry_entities_comp_TankComp_itemTime_float 175
+typedef void (*func_mindustry_entities_comp_TankComp_itemTime_float)(jcontext ctx, jobject self, jfloat param0);
+#define VTABLE_mindustry_entities_comp_TankComp_stack_mindustry_type_ItemStack 176
+typedef void (*func_mindustry_entities_comp_TankComp_stack_mindustry_type_ItemStack)(jcontext ctx, jobject self, jobject param0);
+#define VTABLE_mindustry_entities_comp_TankComp_mineTile_R_mindustry_world_Tile 177
+typedef jobject (*func_mindustry_entities_comp_TankComp_mineTile_R_mindustry_world_Tile)(jcontext ctx, jobject self);
+#define VTABLE_mindustry_entities_comp_TankComp_canMine_R_boolean 178
+typedef jbool (*func_mindustry_entities_comp_TankComp_canMine_R_boolean)(jcontext ctx, jobject self);
+#define VTABLE_mindustry_entities_comp_TankComp_canMine_mindustry_type_Item_R_boolean 179
+typedef jbool (*func_mindustry_entities_comp_TankComp_canMine_mindustry_type_Item_R_boolean)(jcontext ctx, jobject self, jobject param0);
+#define VTABLE_mindustry_entities_comp_TankComp_mining_R_boolean 180
+typedef jbool (*func_mindustry_entities_comp_TankComp_mining_R_boolean)(jcontext ctx, jobject self);
+#define VTABLE_mindustry_entities_comp_TankComp_offloadImmediately_R_boolean 181
+typedef jbool (*func_mindustry_entities_comp_TankComp_offloadImmediately_R_boolean)(jcontext ctx, jobject self);
+#define VTABLE_mindustry_entities_comp_TankComp_validMine_mindustry_world_Tile_R_boolean 182
+typedef jbool (*func_mindustry_entities_comp_TankComp_validMine_mindustry_world_Tile_R_boolean)(jcontext ctx, jobject self, jobject param0);
+#define VTABLE_mindustry_entities_comp_TankComp_validMine_mindustry_world_Tile_boolean_R_boolean 183
+typedef jbool (*func_mindustry_entities_comp_TankComp_validMine_mindustry_world_Tile_boolean_R_boolean)(jcontext ctx, jobject self, jobject param0, jbool param1);
+#define VTABLE_mindustry_entities_comp_TankComp_mineTimer_R_float 184
+typedef jfloat (*func_mindustry_entities_comp_TankComp_mineTimer_R_float)(jcontext ctx, jobject self);
+#define VTABLE_mindustry_entities_comp_TankComp_getMineResult_mindustry_world_Tile_R_mindustry_type_Item 185
+typedef jobject (*func_mindustry_entities_comp_TankComp_getMineResult_mindustry_world_Tile_R_mindustry_type_Item)(jcontext ctx, jobject self, jobject param0);
+#define VTABLE_mindustry_entities_comp_TankComp_mineTile_mindustry_world_Tile 186
+typedef void (*func_mindustry_entities_comp_TankComp_mineTile_mindustry_world_Tile)(jcontext ctx, jobject self, jobject param0);
+#define VTABLE_mindustry_entities_comp_TankComp_mineTimer_float 187
+typedef void (*func_mindustry_entities_comp_TankComp_mineTimer_float)(jcontext ctx, jobject self, jfloat param0);
+#define VTABLE_mindustry_entities_comp_TankComp_solidity_R_mindustry_entities_EntityCollisions$SolidPred 188
+typedef jobject (*func_mindustry_entities_comp_TankComp_solidity_R_mindustry_entities_EntityCollisions$SolidPred)(jcontext ctx, jobject self);
+#define VTABLE_mindustry_entities_comp_TankComp_canPassOn_R_boolean 189
+typedef jbool (*func_mindustry_entities_comp_TankComp_canPassOn_R_boolean)(jcontext ctx, jobject self);
+#define VTABLE_mindustry_entities_comp_TankComp_canPass_int_int_R_boolean 190
+typedef jbool (*func_mindustry_entities_comp_TankComp_canPass_int_int_R_boolean)(jcontext ctx, jobject self, jint param0, jint param1);
+#define VTABLE_mindustry_entities_comp_TankComp_vel_R_arc_math_geom_Vec2 191
+typedef jobject (*func_mindustry_entities_comp_TankComp_vel_R_arc_math_geom_Vec2)(jcontext ctx, jobject self);
+#define VTABLE_mindustry_entities_comp_TankComp_ignoreSolids_R_boolean 192
+typedef jbool (*func_mindustry_entities_comp_TankComp_ignoreSolids_R_boolean)(jcontext ctx, jobject self);
+#define VTABLE_mindustry_entities_comp_TankComp_moving_R_boolean 193
+typedef jbool (*func_mindustry_entities_comp_TankComp_moving_R_boolean)(jcontext ctx, jobject self);
+#define VTABLE_mindustry_entities_comp_TankComp_drag_R_float 194
+typedef jfloat (*func_mindustry_entities_comp_TankComp_drag_R_float)(jcontext ctx, jobject self);
+#define VTABLE_mindustry_entities_comp_TankComp_drag_float 195
+typedef void (*func_mindustry_entities_comp_TankComp_drag_float)(jcontext ctx, jobject self, jfloat param0);
+#define VTABLE_mindustry_entities_comp_TankComp_move_arc_math_geom_Vec2 196
+typedef void (*func_mindustry_entities_comp_TankComp_move_arc_math_geom_Vec2)(jcontext ctx, jobject self, jobject param0);
+#define VTABLE_mindustry_entities_comp_TankComp_move_float_float 197
+typedef void (*func_mindustry_entities_comp_TankComp_move_float_float)(jcontext ctx, jobject self, jfloat param0, jfloat param1);
+#define VTABLE_mindustry_entities_comp_TankComp_vel_arc_math_geom_Vec2 198
+typedef void (*func_mindustry_entities_comp_TankComp_vel_arc_math_geom_Vec2)(jcontext ctx, jobject self, jobject param0);
+#define VTABLE_mindustry_entities_comp_TankComp_velAddNet_arc_math_geom_Vec2 199
+typedef void (*func_mindustry_entities_comp_TankComp_velAddNet_arc_math_geom_Vec2)(jcontext ctx, jobject self, jobject param0);
+#define VTABLE_mindustry_entities_comp_TankComp_velAddNet_float_float 200
+typedef void (*func_mindustry_entities_comp_TankComp_velAddNet_float_float)(jcontext ctx, jobject self, jfloat param0, jfloat param1);
+#define VTABLE_mindustry_entities_comp_TankComp_hasPhysicsRef_R_boolean 201
+typedef jbool (*func_mindustry_entities_comp_TankComp_hasPhysicsRef_R_boolean)(jcontext ctx, jobject self);
+#define VTABLE_mindustry_entities_comp_TankComp_mass_R_float 202
+typedef jfloat (*func_mindustry_entities_comp_TankComp_mass_R_float)(jcontext ctx, jobject self);
+#define VTABLE_mindustry_entities_comp_TankComp_hasPhysicsRef_boolean 203
+typedef void (*func_mindustry_entities_comp_TankComp_hasPhysicsRef_boolean)(jcontext ctx, jobject self, jbool param0);
+#define VTABLE_mindustry_entities_comp_TankComp_impulse_arc_math_geom_Vec2 204
+typedef void (*func_mindustry_entities_comp_TankComp_impulse_arc_math_geom_Vec2)(jcontext ctx, jobject self, jobject param0);
+#define VTABLE_mindustry_entities_comp_TankComp_impulse_float_float 205
+typedef void (*func_mindustry_entities_comp_TankComp_impulse_float_float)(jcontext ctx, jobject self, jfloat param0, jfloat param1);
+#define VTABLE_mindustry_entities_comp_TankComp_impulseNet_arc_math_geom_Vec2 206
+typedef void (*func_mindustry_entities_comp_TankComp_impulseNet_arc_math_geom_Vec2)(jcontext ctx, jobject self, jobject param0);
+#define VTABLE_mindustry_entities_comp_TankComp_shield_R_float 207
+typedef jfloat (*func_mindustry_entities_comp_TankComp_shield_R_float)(jcontext ctx, jobject self);
+#define VTABLE_mindustry_entities_comp_TankComp_shield_float 208
+typedef void (*func_mindustry_entities_comp_TankComp_shield_float)(jcontext ctx, jobject self, jfloat param0);
+#define VTABLE_mindustry_entities_comp_TankComp_shieldAlpha_R_float 209
+typedef jfloat (*func_mindustry_entities_comp_TankComp_shieldAlpha_R_float)(jcontext ctx, jobject self);
+#define VTABLE_mindustry_entities_comp_TankComp_shieldAlpha_float 210
+typedef void (*func_mindustry_entities_comp_TankComp_shieldAlpha_float)(jcontext ctx, jobject self, jfloat param0);
+#define VTABLE_mindustry_entities_comp_TankComp_armor_R_float 211
+typedef jfloat (*func_mindustry_entities_comp_TankComp_armor_R_float)(jcontext ctx, jobject self);
+#define VTABLE_mindustry_entities_comp_TankComp_armor_float 212
+typedef void (*func_mindustry_entities_comp_TankComp_armor_float)(jcontext ctx, jobject self, jfloat param0);
+#define VTABLE_mindustry_entities_comp_TankComp_rawDamage_float 213
+typedef void (*func_mindustry_entities_comp_TankComp_rawDamage_float)(jcontext ctx, jobject self, jfloat param0);
+#define VTABLE_mindustry_entities_comp_TankComp_isSyncHidden_mindustry_game_Team_R_boolean 214
+typedef jbool (*func_mindustry_entities_comp_TankComp_isSyncHidden_mindustry_game_Team_R_boolean)(jcontext ctx, jobject self, jobject param0);
+#define VTABLE_mindustry_entities_comp_TankComp_lastUpdated_R_long 215
+typedef jlong (*func_mindustry_entities_comp_TankComp_lastUpdated_R_long)(jcontext ctx, jobject self);
+#define VTABLE_mindustry_entities_comp_TankComp_updateSpacing_R_long 216
+typedef jlong (*func_mindustry_entities_comp_TankComp_updateSpacing_R_long)(jcontext ctx, jobject self);
+#define VTABLE_mindustry_entities_comp_TankComp_afterSync 217
+typedef void (*func_mindustry_entities_comp_TankComp_afterSync)(jcontext ctx, jobject self);
+#define VTABLE_mindustry_entities_comp_TankComp_handleSyncHidden 218
+typedef void (*func_mindustry_entities_comp_TankComp_handleSyncHidden)(jcontext ctx, jobject self);
+#define VTABLE_mindustry_entities_comp_TankComp_interpolate 219
+typedef void (*func_mindustry_entities_comp_TankComp_interpolate)(jcontext ctx, jobject self);
+#define VTABLE_mindustry_entities_comp_TankComp_lastUpdated_long 220
+typedef void (*func_mindustry_entities_comp_TankComp_lastUpdated_long)(jcontext ctx, jobject self, jlong param0);
+#define VTABLE_mindustry_entities_comp_TankComp_readSync_arc_util_io_Reads 221
+typedef void (*func_mindustry_entities_comp_TankComp_readSync_arc_util_io_Reads)(jcontext ctx, jobject self, jobject param0);
+#define VTABLE_mindustry_entities_comp_TankComp_readSyncManual_java_nio_FloatBuffer 222
+typedef void (*func_mindustry_entities_comp_TankComp_readSyncManual_java_nio_FloatBuffer)(jcontext ctx, jobject self, jobject param0);
+#define VTABLE_mindustry_entities_comp_TankComp_snapInterpolation 223
+typedef void (*func_mindustry_entities_comp_TankComp_snapInterpolation)(jcontext ctx, jobject self);
+#define VTABLE_mindustry_entities_comp_TankComp_snapSync 224
+typedef void (*func_mindustry_entities_comp_TankComp_snapSync)(jcontext ctx, jobject self);
+#define VTABLE_mindustry_entities_comp_TankComp_updateSpacing_long 225
+typedef void (*func_mindustry_entities_comp_TankComp_updateSpacing_long)(jcontext ctx, jobject self, jlong param0);
+#define VTABLE_mindustry_entities_comp_TankComp_writeSync_arc_util_io_Writes 226
+typedef void (*func_mindustry_entities_comp_TankComp_writeSync_arc_util_io_Writes)(jcontext ctx, jobject self, jobject param0);
+#define VTABLE_mindustry_entities_comp_TankComp_writeSyncManual_java_nio_FloatBuffer 227
+typedef void (*func_mindustry_entities_comp_TankComp_writeSyncManual_java_nio_FloatBuffer)(jcontext ctx, jobject self, jobject param0);
+#define VTABLE_mindustry_entities_comp_TankComp_aim_float_float 228
+typedef void (*func_mindustry_entities_comp_TankComp_aim_float_float)(jcontext ctx, jobject self, jfloat param0, jfloat param1);
+#define VTABLE_mindustry_entities_comp_TankComp_aim_float_float_boolean 229
+typedef void (*func_mindustry_entities_comp_TankComp_aim_float_float_boolean)(jcontext ctx, jobject self, jfloat param0, jfloat param1, jbool param2);
+#define VTABLE_mindustry_entities_comp_TankComp_mounts_R_Array1_mindustry_entities_units_WeaponMount 230
+typedef jobject (*func_mindustry_entities_comp_TankComp_mounts_R_Array1_mindustry_entities_units_WeaponMount)(jcontext ctx, jobject self);
+#define VTABLE_mindustry_entities_comp_TankComp_mounts_Array1_mindustry_entities_units_WeaponMount 231
+typedef void (*func_mindustry_entities_comp_TankComp_mounts_Array1_mindustry_entities_units_WeaponMount)(jcontext ctx, jobject self, jobject param0);
+#define VTABLE_mindustry_entities_comp_TankComp_canShoot_R_boolean 232
+typedef jbool (*func_mindustry_entities_comp_TankComp_canShoot_R_boolean)(jcontext ctx, jobject self);
+#define VTABLE_mindustry_entities_comp_TankComp_isRotate_R_boolean 233
+typedef jbool (*func_mindustry_entities_comp_TankComp_isRotate_R_boolean)(jcontext ctx, jobject self);
+#define VTABLE_mindustry_entities_comp_TankComp_isShooting_R_boolean 234
+typedef jbool (*func_mindustry_entities_comp_TankComp_isShooting_R_boolean)(jcontext ctx, jobject self);
+#define VTABLE_mindustry_entities_comp_TankComp_aimX_R_float 235
+typedef jfloat (*func_mindustry_entities_comp_TankComp_aimX_R_float)(jcontext ctx, jobject self);
+#define VTABLE_mindustry_entities_comp_TankComp_aimY_R_float 236
+typedef jfloat (*func_mindustry_entities_comp_TankComp_aimY_R_float)(jcontext ctx, jobject self);
+#define VTABLE_mindustry_entities_comp_TankComp_aim_arc_math_geom_Position 237
+typedef void (*func_mindustry_entities_comp_TankComp_aim_arc_math_geom_Position)(jcontext ctx, jobject self, jobject param0);
+#define VTABLE_mindustry_entities_comp_TankComp_aimX_float 238
+typedef void (*func_mindustry_entities_comp_TankComp_aimX_float)(jcontext ctx, jobject self, jfloat param0);
+#define VTABLE_mindustry_entities_comp_TankComp_aimY_float 239
+typedef void (*func_mindustry_entities_comp_TankComp_aimY_float)(jcontext ctx, jobject self, jfloat param0);
+#define VTABLE_mindustry_entities_comp_TankComp_controlWeapons_boolean_boolean 240
+typedef void (*func_mindustry_entities_comp_TankComp_controlWeapons_boolean_boolean)(jcontext ctx, jobject self, jbool param0, jbool param1);
+#define VTABLE_mindustry_entities_comp_TankComp_controlWeapons_boolean 241
+typedef void (*func_mindustry_entities_comp_TankComp_controlWeapons_boolean)(jcontext ctx, jobject self, jbool param0);
+#define VTABLE_mindustry_entities_comp_TankComp_isShooting_boolean 242
+typedef void (*func_mindustry_entities_comp_TankComp_isShooting_boolean)(jcontext ctx, jobject self, jbool param0);
+#define VTABLE_mindustry_entities_comp_TankComp_setWeaponRotation_float 243
+typedef void (*func_mindustry_entities_comp_TankComp_setWeaponRotation_float)(jcontext ctx, jobject self, jfloat param0);
+#define VTABLE_mindustry_entities_comp_TankComp_setupWeapons_mindustry_type_UnitType 244
+typedef void (*func_mindustry_entities_comp_TankComp_setupWeapons_mindustry_type_UnitType)(jcontext ctx, jobject self, jobject param0);
+#define VTABLE_mindustry_entities_comp_TankComp_range_R_float 245
+typedef jfloat (*func_mindustry_entities_comp_TankComp_range_R_float)(jcontext ctx, jobject self);
+#define VTABLE_mindustry_entities_comp_TankComp_sense_mindustry_logic_LAccess_R_double 246
+typedef jdouble (*func_mindustry_entities_comp_TankComp_sense_mindustry_logic_LAccess_R_double)(jcontext ctx, jobject self, jobject param0);
+#define VTABLE_mindustry_entities_comp_TankComp_sense_mindustry_ctype_Content_R_double 247
+typedef jdouble (*func_mindustry_entities_comp_TankComp_sense_mindustry_ctype_Content_R_double)(jcontext ctx, jobject self, jobject param0);
+#define VTABLE_mindustry_entities_comp_TankComp_senseObject_mindustry_logic_LAccess_R_java_lang_Object 248
+typedef jobject (*func_mindustry_entities_comp_TankComp_senseObject_mindustry_logic_LAccess_R_java_lang_Object)(jcontext ctx, jobject self, jobject param0);
+#define VTABLE_mindustry_entities_comp_TankComp_setProp_mindustry_logic_LAccess_double 249
+typedef void (*func_mindustry_entities_comp_TankComp_setProp_mindustry_logic_LAccess_double)(jcontext ctx, jobject self, jobject param0, jdouble param1);
+#define VTABLE_mindustry_entities_comp_TankComp_setProp_mindustry_logic_LAccess_java_lang_Object 250
+typedef void (*func_mindustry_entities_comp_TankComp_setProp_mindustry_logic_LAccess_java_lang_Object)(jcontext ctx, jobject self, jobject param0, jobject param1);
+#define VTABLE_mindustry_entities_comp_TankComp_setProp_mindustry_ctype_UnlockableContent_double 251
+typedef void (*func_mindustry_entities_comp_TankComp_setProp_mindustry_ctype_UnlockableContent_double)(jcontext ctx, jobject self, jobject param0, jdouble param1);
+#define VTABLE_mindustry_entities_comp_TankComp_displayable_R_boolean 252
+typedef jbool (*func_mindustry_entities_comp_TankComp_displayable_R_boolean)(jcontext ctx, jobject self);
+#define VTABLE_mindustry_entities_comp_TankComp_display_arc_scene_ui_layout_Table 253
+typedef void (*func_mindustry_entities_comp_TankComp_display_arc_scene_ui_layout_Table)(jcontext ctx, jobject self, jobject param0);
+#define VTABLE_mindustry_entities_comp_TankComp_icon_R_arc_graphics_g2d_TextureRegion 254
+typedef jobject (*func_mindustry_entities_comp_TankComp_icon_R_arc_graphics_g2d_TextureRegion)(jcontext ctx, jobject self);
+#define VTABLE_mindustry_entities_comp_TankComp_physicSize_R_float 255
+typedef jfloat (*func_mindustry_entities_comp_TankComp_physicSize_R_float)(jcontext ctx, jobject self);
+#define VTABLE_mindustry_entities_comp_TankComp_getControllerName_R_java_lang_String 256
+typedef jobject (*func_mindustry_entities_comp_TankComp_getControllerName_R_java_lang_String)(jcontext ctx, jobject self);
+#define VTABLE_mindustry_entities_comp_TankComp_speed_R_float 257
+typedef jfloat (*func_mindustry_entities_comp_TankComp_speed_R_float)(jcontext ctx, jobject self);
+#define VTABLE_mindustry_entities_comp_TankComp_collisionLayer_R_int 258
+typedef jint (*func_mindustry_entities_comp_TankComp_collisionLayer_R_int)(jcontext ctx, jobject self);
+#define VTABLE_mindustry_entities_comp_TankComp_prefRotation_R_float 259
+typedef jfloat (*func_mindustry_entities_comp_TankComp_prefRotation_R_float)(jcontext ctx, jobject self);
+#define VTABLE_mindustry_entities_comp_TankComp_allowCommand_R_boolean 260
+typedef jbool (*func_mindustry_entities_comp_TankComp_allowCommand_R_boolean)(jcontext ctx, jobject self);
+#define VTABLE_mindustry_entities_comp_TankComp_isCommandable_R_boolean 261
+typedef jbool (*func_mindustry_entities_comp_TankComp_isCommandable_R_boolean)(jcontext ctx, jobject self);
+#define VTABLE_mindustry_entities_comp_TankComp_canLand_R_boolean 262
+typedef jbool (*func_mindustry_entities_comp_TankComp_canLand_R_boolean)(jcontext ctx, jobject self);
+#define VTABLE_mindustry_entities_comp_TankComp_destroy 263
+typedef void (*func_mindustry_entities_comp_TankComp_destroy)(jcontext ctx, jobject self);
+#define VTABLE_mindustry_entities_comp_TankComp_unloaded 264
+typedef void (*func_mindustry_entities_comp_TankComp_unloaded)(jcontext ctx, jobject self);
+#define VTABLE_mindustry_entities_comp_TankComp_movePref_arc_math_geom_Vec2 265
+typedef void (*func_mindustry_entities_comp_TankComp_movePref_arc_math_geom_Vec2)(jcontext ctx, jobject self, jobject param0);
+#define VTABLE_mindustry_entities_comp_TankComp_hasTarget_R_boolean 266
+typedef jbool (*func_mindustry_entities_comp_TankComp_hasTarget_R_boolean)(jcontext ctx, jobject self);
+#define VTABLE_mindustry_entities_comp_TankComp_hasTarget_boolean 267
+typedef void (*func_mindustry_entities_comp_TankComp_hasTarget_boolean)(jcontext ctx, jobject self, jbool param0);
+#define VTABLE_mindustry_entities_comp_TankComp_trail_R_mindustry_graphics_Trail 268
+typedef jobject (*func_mindustry_entities_comp_TankComp_trail_R_mindustry_graphics_Trail)(jcontext ctx, jobject self);
+#define VTABLE_mindustry_entities_comp_TankComp_dockedType_R_mindustry_type_UnitType 269
+typedef jobject (*func_mindustry_entities_comp_TankComp_dockedType_R_mindustry_type_UnitType)(jcontext ctx, jobject self);
+#define VTABLE_mindustry_entities_comp_TankComp_lastDrownFloor_R_mindustry_world_blocks_environment_Floor 270
+typedef jobject (*func_mindustry_entities_comp_TankComp_lastDrownFloor_R_mindustry_world_blocks_environment_Floor)(jcontext ctx, jobject self);
+#define VTABLE_mindustry_entities_comp_TankComp_getPlayer_R_mindustry_gen_Player 271
+typedef jobject (*func_mindustry_entities_comp_TankComp_getPlayer_R_mindustry_gen_Player)(jcontext ctx, jobject self);
+#define VTABLE_mindustry_entities_comp_TankComp_canDrown_R_boolean 272
+typedef jbool (*func_mindustry_entities_comp_TankComp_canDrown_R_boolean)(jcontext ctx, jobject self);
+#define VTABLE_mindustry_entities_comp_TankComp_canTarget_mindustry_gen_Teamc_R_boolean 273
+typedef jbool (*func_mindustry_entities_comp_TankComp_canTarget_mindustry_gen_Teamc_R_boolean)(jcontext ctx, jobject self, jobject param0);
+#define VTABLE_mindustry_entities_comp_TankComp_checkTarget_boolean_boolean_R_boolean 274
+typedef jbool (*func_mindustry_entities_comp_TankComp_checkTarget_boolean_boolean_R_boolean)(jcontext ctx, jobject self, jbool param0, jbool param1);
+#define VTABLE_mindustry_entities_comp_TankComp_hasWeapons_R_boolean 275
+typedef jbool (*func_mindustry_entities_comp_TankComp_hasWeapons_R_boolean)(jcontext ctx, jobject self);
+#define VTABLE_mindustry_entities_comp_TankComp_hittable_R_boolean 276
+typedef jbool (*func_mindustry_entities_comp_TankComp_hittable_R_boolean)(jcontext ctx, jobject self);
+#define VTABLE_mindustry_entities_comp_TankComp_inRange_arc_math_geom_Position_R_boolean 277
+typedef jbool (*func_mindustry_entities_comp_TankComp_inRange_arc_math_geom_Position_R_boolean)(jcontext ctx, jobject self, jobject param0);
+#define VTABLE_mindustry_entities_comp_TankComp_isAI_R_boolean 278
+typedef jbool (*func_mindustry_entities_comp_TankComp_isAI_R_boolean)(jcontext ctx, jobject self);
+#define VTABLE_mindustry_entities_comp_TankComp_isEnemy_R_boolean 279
+typedef jbool (*func_mindustry_entities_comp_TankComp_isEnemy_R_boolean)(jcontext ctx, jobject self);
+#define VTABLE_mindustry_entities_comp_TankComp_isFlying_R_boolean 280
+typedef jbool (*func_mindustry_entities_comp_TankComp_isFlying_R_boolean)(jcontext ctx, jobject self);
+#define VTABLE_mindustry_entities_comp_TankComp_isMissile_R_boolean 281
+typedef jbool (*func_mindustry_entities_comp_TankComp_isMissile_R_boolean)(jcontext ctx, jobject self);
+#define VTABLE_mindustry_entities_comp_TankComp_isPathImpassable_int_int_R_boolean 282
+typedef jbool (*func_mindustry_entities_comp_TankComp_isPathImpassable_int_int_R_boolean)(jcontext ctx, jobject self, jint param0, jint param1);
+#define VTABLE_mindustry_entities_comp_TankComp_isPlayer_R_boolean 283
+typedef jbool (*func_mindustry_entities_comp_TankComp_isPlayer_R_boolean)(jcontext ctx, jobject self);
+#define VTABLE_mindustry_entities_comp_TankComp_killable_R_boolean 284
+typedef jbool (*func_mindustry_entities_comp_TankComp_killable_R_boolean)(jcontext ctx, jobject self);
+#define VTABLE_mindustry_entities_comp_TankComp_playerControllable_R_boolean 285
+typedef jbool (*func_mindustry_entities_comp_TankComp_playerControllable_R_boolean)(jcontext ctx, jobject self);
+#define VTABLE_mindustry_entities_comp_TankComp_shouldUpdateController_R_boolean 286
+typedef jbool (*func_mindustry_entities_comp_TankComp_shouldUpdateController_R_boolean)(jcontext ctx, jobject self);
+#define VTABLE_mindustry_entities_comp_TankComp_spawnedByCore_R_boolean 287
+typedef jbool (*func_mindustry_entities_comp_TankComp_spawnedByCore_R_boolean)(jcontext ctx, jobject self);
+#define VTABLE_mindustry_entities_comp_TankComp_targetable_mindustry_game_Team_R_boolean 288
+typedef jbool (*func_mindustry_entities_comp_TankComp_targetable_mindustry_game_Team_R_boolean)(jcontext ctx, jobject self, jobject param0);
+#define VTABLE_mindustry_entities_comp_TankComp_flag_R_double 289
+typedef jdouble (*func_mindustry_entities_comp_TankComp_flag_R_double)(jcontext ctx, jobject self);
+#define VTABLE_mindustry_entities_comp_TankComp_ammof_R_float 290
+typedef jfloat (*func_mindustry_entities_comp_TankComp_ammof_R_float)(jcontext ctx, jobject self);
+#define VTABLE_mindustry_entities_comp_TankComp_bounds_R_float 291
+typedef jfloat (*func_mindustry_entities_comp_TankComp_bounds_R_float)(jcontext ctx, jobject self);
+#define VTABLE_mindustry_entities_comp_TankComp_drownTime_R_float 292
+typedef jfloat (*func_mindustry_entities_comp_TankComp_drownTime_R_float)(jcontext ctx, jobject self);
+#define VTABLE_mindustry_entities_comp_TankComp_elevation_R_float 293
+typedef jfloat (*func_mindustry_entities_comp_TankComp_elevation_R_float)(jcontext ctx, jobject self);
+#define VTABLE_mindustry_entities_comp_TankComp_floorSpeedMultiplier_R_float 294
+typedef jfloat (*func_mindustry_entities_comp_TankComp_floorSpeedMultiplier_R_float)(jcontext ctx, jobject self);
+#define VTABLE_mindustry_entities_comp_TankComp_healTime_R_float 295
+typedef jfloat (*func_mindustry_entities_comp_TankComp_healTime_R_float)(jcontext ctx, jobject self);
+#define VTABLE_mindustry_entities_comp_TankComp_shadowAlpha_R_float 296
+typedef jfloat (*func_mindustry_entities_comp_TankComp_shadowAlpha_R_float)(jcontext ctx, jobject self);
+#define VTABLE_mindustry_entities_comp_TankComp_splashTimer_R_float 297
+typedef jfloat (*func_mindustry_entities_comp_TankComp_splashTimer_R_float)(jcontext ctx, jobject self);
+#define VTABLE_mindustry_entities_comp_TankComp_cap_R_int 298
+typedef jint (*func_mindustry_entities_comp_TankComp_cap_R_int)(jcontext ctx, jobject self);
+#define VTABLE_mindustry_entities_comp_TankComp_count_R_int 299
+typedef jint (*func_mindustry_entities_comp_TankComp_count_R_int)(jcontext ctx, jobject self);
+#define VTABLE_mindustry_entities_comp_TankComp_lastFogPos_R_int 300
+typedef jint (*func_mindustry_entities_comp_TankComp_lastFogPos_R_int)(jcontext ctx, jobject self);
+#define VTABLE_mindustry_entities_comp_TankComp_lastCommanded_R_java_lang_String 301
+typedef jobject (*func_mindustry_entities_comp_TankComp_lastCommanded_R_java_lang_String)(jcontext ctx, jobject self);
+#define VTABLE_mindustry_entities_comp_TankComp_command_R_mindustry_ai_types_CommandAI 302
+typedef jobject (*func_mindustry_entities_comp_TankComp_command_R_mindustry_ai_types_CommandAI)(jcontext ctx, jobject self);
+#define VTABLE_mindustry_entities_comp_TankComp_abilities_R_Array1_mindustry_entities_abilities_Ability 303
+typedef jobject (*func_mindustry_entities_comp_TankComp_abilities_R_Array1_mindustry_entities_abilities_Ability)(jcontext ctx, jobject self);
+#define VTABLE_mindustry_entities_comp_TankComp_controller_R_mindustry_entities_units_UnitController 304
+typedef jobject (*func_mindustry_entities_comp_TankComp_controller_R_mindustry_entities_units_UnitController)(jcontext ctx, jobject self);
+#define VTABLE_mindustry_entities_comp_TankComp_type_R_mindustry_type_UnitType 305
+typedef jobject (*func_mindustry_entities_comp_TankComp_type_R_mindustry_type_UnitType)(jcontext ctx, jobject self);
+#define VTABLE_mindustry_entities_comp_TankComp_drownFloor_R_mindustry_world_blocks_environment_Floor 306
+typedef jobject (*func_mindustry_entities_comp_TankComp_drownFloor_R_mindustry_world_blocks_environment_Floor)(jcontext ctx, jobject self);
+#define VTABLE_mindustry_entities_comp_TankComp_abilities_Array1_mindustry_entities_abilities_Ability 307
+typedef void (*func_mindustry_entities_comp_TankComp_abilities_Array1_mindustry_entities_abilities_Ability)(jcontext ctx, jobject self, jobject param0);
+#define VTABLE_mindustry_entities_comp_TankComp_aimLook_arc_math_geom_Position 308
+typedef void (*func_mindustry_entities_comp_TankComp_aimLook_arc_math_geom_Position)(jcontext ctx, jobject self, jobject param0);
+#define VTABLE_mindustry_entities_comp_TankComp_aimLook_float_float 309
+typedef void (*func_mindustry_entities_comp_TankComp_aimLook_float_float)(jcontext ctx, jobject self, jfloat param0, jfloat param1);
+#define VTABLE_mindustry_entities_comp_TankComp_approach_arc_math_geom_Vec2 310
+typedef void (*func_mindustry_entities_comp_TankComp_approach_arc_math_geom_Vec2)(jcontext ctx, jobject self, jobject param0);
+#define VTABLE_mindustry_entities_comp_TankComp_controller_mindustry_entities_units_UnitController 311
+typedef void (*func_mindustry_entities_comp_TankComp_controller_mindustry_entities_units_UnitController)(jcontext ctx, jobject self, jobject param0);
+#define VTABLE_mindustry_entities_comp_TankComp_dockedType_mindustry_type_UnitType 312
+typedef void (*func_mindustry_entities_comp_TankComp_dockedType_mindustry_type_UnitType)(jcontext ctx, jobject self, jobject param0);
+#define VTABLE_mindustry_entities_comp_TankComp_drownTime_float 313
+typedef void (*func_mindustry_entities_comp_TankComp_drownTime_float)(jcontext ctx, jobject self, jfloat param0);
+#define VTABLE_mindustry_entities_comp_TankComp_elevation_float 314
+typedef void (*func_mindustry_entities_comp_TankComp_elevation_float)(jcontext ctx, jobject self, jfloat param0);
+#define VTABLE_mindustry_entities_comp_TankComp_flag_double 315
+typedef void (*func_mindustry_entities_comp_TankComp_flag_double)(jcontext ctx, jobject self, jdouble param0);
+#define VTABLE_mindustry_entities_comp_TankComp_healTime_float 316
+typedef void (*func_mindustry_entities_comp_TankComp_healTime_float)(jcontext ctx, jobject self, jfloat param0);
+#define VTABLE_mindustry_entities_comp_TankComp_landed 317
+typedef void (*func_mindustry_entities_comp_TankComp_landed)(jcontext ctx, jobject self);
+#define VTABLE_mindustry_entities_comp_TankComp_lastCommanded_java_lang_String 318
+typedef void (*func_mindustry_entities_comp_TankComp_lastCommanded_java_lang_String)(jcontext ctx, jobject self, jobject param0);
+#define VTABLE_mindustry_entities_comp_TankComp_lastDrownFloor_mindustry_world_blocks_environment_Floor 319
+typedef void (*func_mindustry_entities_comp_TankComp_lastDrownFloor_mindustry_world_blocks_environment_Floor)(jcontext ctx, jobject self, jobject param0);
+#define VTABLE_mindustry_entities_comp_TankComp_lastFogPos_int 320
+typedef void (*func_mindustry_entities_comp_TankComp_lastFogPos_int)(jcontext ctx, jobject self, jint param0);
+#define VTABLE_mindustry_entities_comp_TankComp_lookAt_arc_math_geom_Position 321
+typedef void (*func_mindustry_entities_comp_TankComp_lookAt_arc_math_geom_Position)(jcontext ctx, jobject self, jobject param0);
+#define VTABLE_mindustry_entities_comp_TankComp_lookAt_float 322
+typedef void (*func_mindustry_entities_comp_TankComp_lookAt_float)(jcontext ctx, jobject self, jfloat param0);
+#define VTABLE_mindustry_entities_comp_TankComp_lookAt_float_float 323
+typedef void (*func_mindustry_entities_comp_TankComp_lookAt_float_float)(jcontext ctx, jobject self, jfloat param0, jfloat param1);
+#define VTABLE_mindustry_entities_comp_TankComp_moveAt_arc_math_geom_Vec2 324
+typedef void (*func_mindustry_entities_comp_TankComp_moveAt_arc_math_geom_Vec2)(jcontext ctx, jobject self, jobject param0);
+#define VTABLE_mindustry_entities_comp_TankComp_moveAt_arc_math_geom_Vec2_float 325
+typedef void (*func_mindustry_entities_comp_TankComp_moveAt_arc_math_geom_Vec2_float)(jcontext ctx, jobject self, jobject param0, jfloat param1);
+#define VTABLE_mindustry_entities_comp_TankComp_resetController 326
+typedef void (*func_mindustry_entities_comp_TankComp_resetController)(jcontext ctx, jobject self);
+#define VTABLE_mindustry_entities_comp_TankComp_rotateMove_arc_math_geom_Vec2 327
+typedef void (*func_mindustry_entities_comp_TankComp_rotateMove_arc_math_geom_Vec2)(jcontext ctx, jobject self, jobject param0);
+#define VTABLE_mindustry_entities_comp_TankComp_set_mindustry_type_UnitType_mindustry_entities_units_UnitController 328
+typedef void (*func_mindustry_entities_comp_TankComp_set_mindustry_type_UnitType_mindustry_entities_units_UnitController)(jcontext ctx, jobject self, jobject param0, jobject param1);
+#define VTABLE_mindustry_entities_comp_TankComp_setType_mindustry_type_UnitType 329
+typedef void (*func_mindustry_entities_comp_TankComp_setType_mindustry_type_UnitType)(jcontext ctx, jobject self, jobject param0);
+#define VTABLE_mindustry_entities_comp_TankComp_shadowAlpha_float 330
+typedef void (*func_mindustry_entities_comp_TankComp_shadowAlpha_float)(jcontext ctx, jobject self, jfloat param0);
+#define VTABLE_mindustry_entities_comp_TankComp_spawnedByCore_boolean 331
+typedef void (*func_mindustry_entities_comp_TankComp_spawnedByCore_boolean)(jcontext ctx, jobject self, jbool param0);
+#define VTABLE_mindustry_entities_comp_TankComp_splashTimer_float 332
+typedef void (*func_mindustry_entities_comp_TankComp_splashTimer_float)(jcontext ctx, jobject self, jfloat param0);
+#define VTABLE_mindustry_entities_comp_TankComp_trail_mindustry_graphics_Trail 333
+typedef void (*func_mindustry_entities_comp_TankComp_trail_mindustry_graphics_Trail)(jcontext ctx, jobject self, jobject param0);
+#define VTABLE_mindustry_entities_comp_TankComp_type_mindustry_type_UnitType 334
+typedef void (*func_mindustry_entities_comp_TankComp_type_mindustry_type_UnitType)(jcontext ctx, jobject self, jobject param0);
+#define VTABLE_mindustry_entities_comp_TankComp_updateBoosting_boolean 335
+typedef void (*func_mindustry_entities_comp_TankComp_updateBoosting_boolean)(jcontext ctx, jobject self, jbool param0);
+#define VTABLE_mindustry_entities_comp_TankComp_updateBoosting_boolean_boolean 336
+typedef void (*func_mindustry_entities_comp_TankComp_updateBoosting_boolean_boolean)(jcontext ctx, jobject self, jbool param0, jbool param1);
+#define VTABLE_mindustry_entities_comp_TankComp_updateDrowning 337
+typedef void (*func_mindustry_entities_comp_TankComp_updateDrowning)(jcontext ctx, jobject self);
+#define VTABLE_mindustry_entities_comp_TankComp_wobble 338
+typedef void (*func_mindustry_entities_comp_TankComp_wobble)(jcontext ctx, jobject self);
+
+void mark_mindustry_entities_comp_TankComp(jobject object, jint mark, jint depth);
+void clinit_mindustry_entities_comp_TankComp(jcontext ctx);
+void init_mindustry_entities_comp_TankComp(jcontext ctx, jobject self);
+void M_mindustry_entities_comp_TankComp_update(jcontext ctx, jobject self);
+jfloat M_mindustry_entities_comp_TankComp_floorSpeedMultiplier_R_float(jcontext ctx, jobject self);
+jobject M_mindustry_entities_comp_TankComp_drownFloor_R_mindustry_world_blocks_environment_Floor(jcontext ctx, jobject self);
+void M_mindustry_entities_comp_TankComp_moveAt_arc_math_geom_Vec2_float(jcontext ctx, jobject self, jobject param0, jfloat param1);
+void M_mindustry_entities_comp_TankComp_approach_arc_math_geom_Vec2(jcontext ctx, jobject self, jobject param0);
+
+#ifdef __cplusplus
+}
+#endif
+
+#endif

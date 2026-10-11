@@ -1,0 +1,39 @@
+{
+    "mainClass": "mindustry.switchplatform.SwitchLauncher",
+    "generateProjectFiles": true,
+    "reflective": [
+        "arc.struct.*",
+        "arc.util.*",
+        "arc.math.*",
+        "arc.graphics.*",
+        "arc.scene.*",
+        "mindustry.**",
+        "mindustry.gen.**",
+        "mindustry.type.**",
+        "mindustry.world.**",
+        "mindustry.content.**",
+        "mindustry.entities.**",
+        "mindustry.ui.**"
+    ],
+    "intrinsics": [
+        "java/nio/channels/spi/SelectorProvider.openDatagramChannel()Ljava/nio/channels/DatagramChannel;",
+        "java/nio/channels/SocketChannel.configureBlocking(Z)Ljava/nio/channels/SelectableChannel;",
+        "java/nio/channels/SocketChannel.socket()Ljava/net/Socket;",
+        "sun/misc/Unsafe.objectFieldOffset(Ljava/lang/reflect/Field;)J",
+        "mindustry/mod/ModClassLoader.registerAsParallelCapable()Z",
+        "java/text/StringCharacterIterator.<init>(Ljava/lang/String;)V",
+        "java/nio/ByteBuffer.put(ILjava/nio/ByteBuffer;II)Ljava/nio/ByteBuffer;",
+        "java/nio/channels/spi/SelectorProvider.openServerSocketChannel()Ljava/nio/channels/ServerSocketChannel;",
+        "java/util/concurrent/Executors.newFixedThreadPool(I)Ljava/util/concurrent/ExecutorService;",
+        "java/net/MulticastSocket.leaveGroup(Ljava/net/InetAddress;)V",
+        "java/util/concurrent/Executors.newScheduledThreadPool(I)Ljava/util/concurrent/ScheduledExecutorService;",
+        "java/lang/Class.getProtectionDomain()Ljava/security/ProtectionDomain;",
+        "java/security/DigestInputStream.<init>(Ljava/io/InputStream;Ljava/security/MessageDigest;)V",
+        "javax/naming/directory/InitialDirContext.<init>(Ljava/util/Hashtable;)V",
+        "java/net/DatagramSocket.<init>()V",
+        "mindustry/core/Platform$1.getClassLoadingLock(Ljava/lang/String;)Ljava/lang/Object;",
+        "java/net/SocketTimeoutException.<init>(Ljava/lang/String;)V",
+        "java/io/OutputStreamWriter.<init>(Ljava/io/OutputStream;Ljava/nio/charset/Charset;)V",
+        "java/util/concurrent/CountDownLatch.<init>(I)V"
+    ]
+}

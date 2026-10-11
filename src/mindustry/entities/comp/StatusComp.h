@@ -1,0 +1,220 @@
+#ifndef HEADER_mindustry_entities_comp_StatusComp
+#define HEADER_mindustry_entities_comp_StatusComp
+
+#include "Clearwing.h"
+#include "java/lang/Object.h"
+#include "mindustry/gen/Posc.h"
+
+#ifdef __cplusplus
+extern "C" {
+#endif
+
+typedef struct mindustry_entities_comp_StatusComp {
+	java_lang_Object parent;
+	jref F_statuses;
+	jref F_applied;
+	jfloat F_speedMultiplier;
+	jfloat F_damageMultiplier;
+	jfloat F_healthMultiplier;
+	jfloat F_reloadMultiplier;
+	jfloat F_buildSpeedMultiplier;
+	jfloat F_dragMultiplier;
+	jfloat F_armorOverride;
+	jbool F_disarmed;
+	jref F_type;
+	jfloat F_maxHealth;
+} mindustry_entities_comp_StatusComp;
+
+extern Class class_mindustry_entities_comp_StatusComp;
+
+
+#define VTABLE_mindustry_entities_comp_StatusComp_hashCode_R_int 0
+typedef jint (*func_mindustry_entities_comp_StatusComp_hashCode_R_int)(jcontext ctx, jobject self);
+#define VTABLE_mindustry_entities_comp_StatusComp_equals_java_lang_Object_R_boolean 1
+typedef jbool (*func_mindustry_entities_comp_StatusComp_equals_java_lang_Object_R_boolean)(jcontext ctx, jobject self, jobject param0);
+#define VTABLE_mindustry_entities_comp_StatusComp_clone_R_java_lang_Object 2
+typedef jobject (*func_mindustry_entities_comp_StatusComp_clone_R_java_lang_Object)(jcontext ctx, jobject self);
+#define VTABLE_mindustry_entities_comp_StatusComp_getClass_R_java_lang_Class 3
+typedef jobject (*func_mindustry_entities_comp_StatusComp_getClass_R_java_lang_Class)(jcontext ctx, jobject self);
+#define VTABLE_mindustry_entities_comp_StatusComp_toString_R_java_lang_String 4
+typedef jobject (*func_mindustry_entities_comp_StatusComp_toString_R_java_lang_String)(jcontext ctx, jobject self);
+#define VTABLE_mindustry_entities_comp_StatusComp_finalize 5
+typedef void (*func_mindustry_entities_comp_StatusComp_finalize)(jcontext ctx, jobject self);
+#define VTABLE_mindustry_entities_comp_StatusComp_notify 6
+typedef void (*func_mindustry_entities_comp_StatusComp_notify)(jcontext ctx, jobject self);
+#define VTABLE_mindustry_entities_comp_StatusComp_notifyAll 7
+typedef void (*func_mindustry_entities_comp_StatusComp_notifyAll)(jcontext ctx, jobject self);
+#define VTABLE_mindustry_entities_comp_StatusComp_wait 8
+typedef void (*func_mindustry_entities_comp_StatusComp_wait)(jcontext ctx, jobject self);
+#define VTABLE_mindustry_entities_comp_StatusComp_wait_long 9
+typedef void (*func_mindustry_entities_comp_StatusComp_wait_long)(jcontext ctx, jobject self, jlong param0);
+#define VTABLE_mindustry_entities_comp_StatusComp_wait_long_int 10
+typedef void (*func_mindustry_entities_comp_StatusComp_wait_long_int)(jcontext ctx, jobject self, jlong param0, jint param1);
+#define VTABLE_mindustry_entities_comp_StatusComp_getX_R_float 11
+typedef jfloat (*func_mindustry_entities_comp_StatusComp_getX_R_float)(jcontext ctx, jobject self);
+#define VTABLE_mindustry_entities_comp_StatusComp_getY_R_float 12
+typedef jfloat (*func_mindustry_entities_comp_StatusComp_getY_R_float)(jcontext ctx, jobject self);
+#define VTABLE_mindustry_entities_comp_StatusComp_angleTo_arc_math_geom_Position_R_float 13
+typedef jfloat (*func_mindustry_entities_comp_StatusComp_angleTo_arc_math_geom_Position_R_float)(jcontext ctx, jobject self, jobject param0);
+#define VTABLE_mindustry_entities_comp_StatusComp_angleTo_float_float_R_float 14
+typedef jfloat (*func_mindustry_entities_comp_StatusComp_angleTo_float_float_R_float)(jcontext ctx, jobject self, jfloat param0, jfloat param1);
+#define VTABLE_mindustry_entities_comp_StatusComp_dst2_arc_math_geom_Position_R_float 15
+typedef jfloat (*func_mindustry_entities_comp_StatusComp_dst2_arc_math_geom_Position_R_float)(jcontext ctx, jobject self, jobject param0);
+#define VTABLE_mindustry_entities_comp_StatusComp_dst_arc_math_geom_Position_R_float 16
+typedef jfloat (*func_mindustry_entities_comp_StatusComp_dst_arc_math_geom_Position_R_float)(jcontext ctx, jobject self, jobject param0);
+#define VTABLE_mindustry_entities_comp_StatusComp_dst_float_float_R_float 17
+typedef jfloat (*func_mindustry_entities_comp_StatusComp_dst_float_float_R_float)(jcontext ctx, jobject self, jfloat param0, jfloat param1);
+#define VTABLE_mindustry_entities_comp_StatusComp_dst2_float_float_R_float 18
+typedef jfloat (*func_mindustry_entities_comp_StatusComp_dst2_float_float_R_float)(jcontext ctx, jobject self, jfloat param0, jfloat param1);
+#define VTABLE_mindustry_entities_comp_StatusComp_within_arc_math_geom_Position_float_R_boolean 19
+typedef jbool (*func_mindustry_entities_comp_StatusComp_within_arc_math_geom_Position_float_R_boolean)(jcontext ctx, jobject self, jobject param0, jfloat param1);
+#define VTABLE_mindustry_entities_comp_StatusComp_within_float_float_float_R_boolean 20
+typedef jbool (*func_mindustry_entities_comp_StatusComp_within_float_float_float_R_boolean)(jcontext ctx, jobject self, jfloat param0, jfloat param1, jfloat param2);
+#define VTABLE_mindustry_entities_comp_StatusComp_self_R_mindustry_gen_Entityc 21
+typedef jobject (*func_mindustry_entities_comp_StatusComp_self_R_mindustry_gen_Entityc)(jcontext ctx, jobject self);
+#define VTABLE_mindustry_entities_comp_StatusComp_as_R_java_lang_Object 22
+typedef jobject (*func_mindustry_entities_comp_StatusComp_as_R_java_lang_Object)(jcontext ctx, jobject self);
+#define VTABLE_mindustry_entities_comp_StatusComp_isAdded_R_boolean 23
+typedef jbool (*func_mindustry_entities_comp_StatusComp_isAdded_R_boolean)(jcontext ctx, jobject self);
+#define VTABLE_mindustry_entities_comp_StatusComp_isLocal_R_boolean 24
+typedef jbool (*func_mindustry_entities_comp_StatusComp_isLocal_R_boolean)(jcontext ctx, jobject self);
+#define VTABLE_mindustry_entities_comp_StatusComp_isRemote_R_boolean 25
+typedef jbool (*func_mindustry_entities_comp_StatusComp_isRemote_R_boolean)(jcontext ctx, jobject self);
+#define VTABLE_mindustry_entities_comp_StatusComp_serialize_R_boolean 26
+typedef jbool (*func_mindustry_entities_comp_StatusComp_serialize_R_boolean)(jcontext ctx, jobject self);
+#define VTABLE_mindustry_entities_comp_StatusComp_classId_R_int 27
+typedef jint (*func_mindustry_entities_comp_StatusComp_classId_R_int)(jcontext ctx, jobject self);
+#define VTABLE_mindustry_entities_comp_StatusComp_id_R_int 28
+typedef jint (*func_mindustry_entities_comp_StatusComp_id_R_int)(jcontext ctx, jobject self);
+#define VTABLE_mindustry_entities_comp_StatusComp_add 29
+typedef void (*func_mindustry_entities_comp_StatusComp_add)(jcontext ctx, jobject self);
+#define VTABLE_mindustry_entities_comp_StatusComp_afterRead 30
+typedef void (*func_mindustry_entities_comp_StatusComp_afterRead)(jcontext ctx, jobject self);
+#define VTABLE_mindustry_entities_comp_StatusComp_afterReadAll 31
+typedef void (*func_mindustry_entities_comp_StatusComp_afterReadAll)(jcontext ctx, jobject self);
+#define VTABLE_mindustry_entities_comp_StatusComp_beforeWrite 32
+typedef void (*func_mindustry_entities_comp_StatusComp_beforeWrite)(jcontext ctx, jobject self);
+#define VTABLE_mindustry_entities_comp_StatusComp_id_int 33
+typedef void (*func_mindustry_entities_comp_StatusComp_id_int)(jcontext ctx, jobject self, jint param0);
+#define VTABLE_mindustry_entities_comp_StatusComp_read_arc_util_io_Reads 34
+typedef void (*func_mindustry_entities_comp_StatusComp_read_arc_util_io_Reads)(jcontext ctx, jobject self, jobject param0);
+#define VTABLE_mindustry_entities_comp_StatusComp_remove 35
+typedef void (*func_mindustry_entities_comp_StatusComp_remove)(jcontext ctx, jobject self);
+#define VTABLE_mindustry_entities_comp_StatusComp_update 36
+typedef void (*func_mindustry_entities_comp_StatusComp_update)(jcontext ctx, jobject self);
+#define VTABLE_mindustry_entities_comp_StatusComp_write_arc_util_io_Writes 37
+typedef void (*func_mindustry_entities_comp_StatusComp_write_arc_util_io_Writes)(jcontext ctx, jobject self, jobject param0);
+#define VTABLE_mindustry_entities_comp_StatusComp_floorOn_R_mindustry_world_blocks_environment_Floor 38
+typedef jobject (*func_mindustry_entities_comp_StatusComp_floorOn_R_mindustry_world_blocks_environment_Floor)(jcontext ctx, jobject self);
+#define VTABLE_mindustry_entities_comp_StatusComp_buildOn_R_mindustry_gen_Building 39
+typedef jobject (*func_mindustry_entities_comp_StatusComp_buildOn_R_mindustry_gen_Building)(jcontext ctx, jobject self);
+#define VTABLE_mindustry_entities_comp_StatusComp_onSolid_R_boolean 40
+typedef jbool (*func_mindustry_entities_comp_StatusComp_onSolid_R_boolean)(jcontext ctx, jobject self);
+#define VTABLE_mindustry_entities_comp_StatusComp_x_R_float 41
+typedef jfloat (*func_mindustry_entities_comp_StatusComp_x_R_float)(jcontext ctx, jobject self);
+#define VTABLE_mindustry_entities_comp_StatusComp_y_R_float 42
+typedef jfloat (*func_mindustry_entities_comp_StatusComp_y_R_float)(jcontext ctx, jobject self);
+#define VTABLE_mindustry_entities_comp_StatusComp_tileX_R_int 43
+typedef jint (*func_mindustry_entities_comp_StatusComp_tileX_R_int)(jcontext ctx, jobject self);
+#define VTABLE_mindustry_entities_comp_StatusComp_tileY_R_int 44
+typedef jint (*func_mindustry_entities_comp_StatusComp_tileY_R_int)(jcontext ctx, jobject self);
+#define VTABLE_mindustry_entities_comp_StatusComp_blockOn_R_mindustry_world_Block 45
+typedef jobject (*func_mindustry_entities_comp_StatusComp_blockOn_R_mindustry_world_Block)(jcontext ctx, jobject self);
+#define VTABLE_mindustry_entities_comp_StatusComp_tileOn_R_mindustry_world_Tile 46
+typedef jobject (*func_mindustry_entities_comp_StatusComp_tileOn_R_mindustry_world_Tile)(jcontext ctx, jobject self);
+#define VTABLE_mindustry_entities_comp_StatusComp_set_arc_math_geom_Position 47
+typedef void (*func_mindustry_entities_comp_StatusComp_set_arc_math_geom_Position)(jcontext ctx, jobject self, jobject param0);
+#define VTABLE_mindustry_entities_comp_StatusComp_set_float_float 48
+typedef void (*func_mindustry_entities_comp_StatusComp_set_float_float)(jcontext ctx, jobject self, jfloat param0, jfloat param1);
+#define VTABLE_mindustry_entities_comp_StatusComp_trns_arc_math_geom_Position 49
+typedef void (*func_mindustry_entities_comp_StatusComp_trns_arc_math_geom_Position)(jcontext ctx, jobject self, jobject param0);
+#define VTABLE_mindustry_entities_comp_StatusComp_trns_float_float 50
+typedef void (*func_mindustry_entities_comp_StatusComp_trns_float_float)(jcontext ctx, jobject self, jfloat param0, jfloat param1);
+#define VTABLE_mindustry_entities_comp_StatusComp_x_float 51
+typedef void (*func_mindustry_entities_comp_StatusComp_x_float)(jcontext ctx, jobject self, jfloat param0);
+#define VTABLE_mindustry_entities_comp_StatusComp_y_float 52
+typedef void (*func_mindustry_entities_comp_StatusComp_y_float)(jcontext ctx, jobject self, jfloat param0);
+#define VTABLE_mindustry_entities_comp_StatusComp_apply_mindustry_type_StatusEffect 53
+typedef void (*func_mindustry_entities_comp_StatusComp_apply_mindustry_type_StatusEffect)(jcontext ctx, jobject self, jobject param0);
+#define VTABLE_mindustry_entities_comp_StatusComp_apply_mindustry_type_StatusEffect_float 54
+typedef void (*func_mindustry_entities_comp_StatusComp_apply_mindustry_type_StatusEffect_float)(jcontext ctx, jobject self, jobject param0, jfloat param1);
+#define VTABLE_mindustry_entities_comp_StatusComp_getDuration_mindustry_type_StatusEffect_R_float 55
+typedef jfloat (*func_mindustry_entities_comp_StatusComp_getDuration_mindustry_type_StatusEffect_R_float)(jcontext ctx, jobject self, jobject param0);
+#define VTABLE_mindustry_entities_comp_StatusComp_setDuration_mindustry_type_StatusEffect_float 56
+typedef void (*func_mindustry_entities_comp_StatusComp_setDuration_mindustry_type_StatusEffect_float)(jcontext ctx, jobject self, jobject param0, jfloat param1);
+#define VTABLE_mindustry_entities_comp_StatusComp_applyStatus_mindustry_type_StatusEffect_float_boolean 57
+typedef void (*func_mindustry_entities_comp_StatusComp_applyStatus_mindustry_type_StatusEffect_float_boolean)(jcontext ctx, jobject self, jobject param0, jfloat param1, jbool param2);
+#define VTABLE_mindustry_entities_comp_StatusComp_clearStatuses 58
+typedef void (*func_mindustry_entities_comp_StatusComp_clearStatuses)(jcontext ctx, jobject self);
+#define VTABLE_mindustry_entities_comp_StatusComp_unapply_mindustry_type_StatusEffect 59
+typedef void (*func_mindustry_entities_comp_StatusComp_unapply_mindustry_type_StatusEffect)(jcontext ctx, jobject self, jobject param0);
+#define VTABLE_mindustry_entities_comp_StatusComp_isBoss_R_boolean 60
+typedef jbool (*func_mindustry_entities_comp_StatusComp_isBoss_R_boolean)(jcontext ctx, jobject self);
+#define VTABLE_mindustry_entities_comp_StatusComp_isImmune_mindustry_type_StatusEffect_R_boolean 61
+typedef jbool (*func_mindustry_entities_comp_StatusComp_isImmune_mindustry_type_StatusEffect_R_boolean)(jcontext ctx, jobject self, jobject param0);
+#define VTABLE_mindustry_entities_comp_StatusComp_statusColor_R_arc_graphics_Color 62
+typedef jobject (*func_mindustry_entities_comp_StatusComp_statusColor_R_arc_graphics_Color)(jcontext ctx, jobject self);
+#define VTABLE_mindustry_entities_comp_StatusComp_applyDynamicStatus_R_mindustry_entities_units_StatusEntry 63
+typedef jobject (*func_mindustry_entities_comp_StatusComp_applyDynamicStatus_R_mindustry_entities_units_StatusEntry)(jcontext ctx, jobject self);
+#define VTABLE_mindustry_entities_comp_StatusComp_statusSpeed_float 64
+typedef void (*func_mindustry_entities_comp_StatusComp_statusSpeed_float)(jcontext ctx, jobject self, jfloat param0);
+#define VTABLE_mindustry_entities_comp_StatusComp_statusDamageMultiplier_float 65
+typedef void (*func_mindustry_entities_comp_StatusComp_statusDamageMultiplier_float)(jcontext ctx, jobject self, jfloat param0);
+#define VTABLE_mindustry_entities_comp_StatusComp_statusReloadMultiplier_float 66
+typedef void (*func_mindustry_entities_comp_StatusComp_statusReloadMultiplier_float)(jcontext ctx, jobject self, jfloat param0);
+#define VTABLE_mindustry_entities_comp_StatusComp_statusMaxHealth_float 67
+typedef void (*func_mindustry_entities_comp_StatusComp_statusMaxHealth_float)(jcontext ctx, jobject self, jfloat param0);
+#define VTABLE_mindustry_entities_comp_StatusComp_statusBuildSpeed_float 68
+typedef void (*func_mindustry_entities_comp_StatusComp_statusBuildSpeed_float)(jcontext ctx, jobject self, jfloat param0);
+#define VTABLE_mindustry_entities_comp_StatusComp_statusDrag_float 69
+typedef void (*func_mindustry_entities_comp_StatusComp_statusDrag_float)(jcontext ctx, jobject self, jfloat param0);
+#define VTABLE_mindustry_entities_comp_StatusComp_statusArmor_float 70
+typedef void (*func_mindustry_entities_comp_StatusComp_statusArmor_float)(jcontext ctx, jobject self, jfloat param0);
+#define VTABLE_mindustry_entities_comp_StatusComp_isGrounded_R_boolean 71
+typedef jbool (*func_mindustry_entities_comp_StatusComp_isGrounded_R_boolean)(jcontext ctx, jobject self);
+#define VTABLE_mindustry_entities_comp_StatusComp_statusBits_R_arc_struct_Bits 72
+typedef jobject (*func_mindustry_entities_comp_StatusComp_statusBits_R_arc_struct_Bits)(jcontext ctx, jobject self);
+#define VTABLE_mindustry_entities_comp_StatusComp_draw 73
+typedef void (*func_mindustry_entities_comp_StatusComp_draw)(jcontext ctx, jobject self);
+#define VTABLE_mindustry_entities_comp_StatusComp_hasEffect_mindustry_type_StatusEffect_R_boolean 74
+typedef jbool (*func_mindustry_entities_comp_StatusComp_hasEffect_mindustry_type_StatusEffect_R_boolean)(jcontext ctx, jobject self, jobject param0);
+#define VTABLE_mindustry_entities_comp_StatusComp_lambda$unapply$0_mindustry_type_StatusEffect_mindustry_entities_units_StatusEntry_R_boolean 75
+typedef jbool (*func_mindustry_entities_comp_StatusComp_lambda$unapply$0_mindustry_type_StatusEffect_mindustry_entities_units_StatusEntry_R_boolean)(jcontext ctx, jobject self, jobject param0, jobject param1);
+#define VTABLE_mindustry_entities_comp_StatusComp_lambda$clearStatuses$0_mindustry_entities_units_StatusEntry 76
+typedef void (*func_mindustry_entities_comp_StatusComp_lambda$clearStatuses$0_mindustry_entities_units_StatusEntry)(jcontext ctx, jobject self, jobject param0);
+
+void mark_mindustry_entities_comp_StatusComp(jobject object, jint mark, jint depth);
+void clinit_mindustry_entities_comp_StatusComp(jcontext ctx);
+void init_mindustry_entities_comp_StatusComp(jcontext ctx, jobject self);
+void M_mindustry_entities_comp_StatusComp_apply_mindustry_type_StatusEffect(jcontext ctx, jobject self, jobject param0);
+void M_mindustry_entities_comp_StatusComp_apply_mindustry_type_StatusEffect_float(jcontext ctx, jobject self, jobject param0, jfloat param1);
+jfloat M_mindustry_entities_comp_StatusComp_getDuration_mindustry_type_StatusEffect_R_float(jcontext ctx, jobject self, jobject param0);
+void M_mindustry_entities_comp_StatusComp_setDuration_mindustry_type_StatusEffect_float(jcontext ctx, jobject self, jobject param0, jfloat param1);
+void M_mindustry_entities_comp_StatusComp_applyStatus_mindustry_type_StatusEffect_float_boolean(jcontext ctx, jobject self, jobject param0, jfloat param1, jbool param2);
+void M_mindustry_entities_comp_StatusComp_clearStatuses(jcontext ctx, jobject self);
+void M_mindustry_entities_comp_StatusComp_unapply_mindustry_type_StatusEffect(jcontext ctx, jobject self, jobject param0);
+jbool M_mindustry_entities_comp_StatusComp_isBoss_R_boolean(jcontext ctx, jobject self);
+jbool M_mindustry_entities_comp_StatusComp_isImmune_mindustry_type_StatusEffect_R_boolean(jcontext ctx, jobject self, jobject param0);
+jobject M_mindustry_entities_comp_StatusComp_statusColor_R_arc_graphics_Color(jcontext ctx, jobject self);
+jobject M_mindustry_entities_comp_StatusComp_applyDynamicStatus_R_mindustry_entities_units_StatusEntry(jcontext ctx, jobject self);
+void M_mindustry_entities_comp_StatusComp_statusSpeed_float(jcontext ctx, jobject self, jfloat param0);
+void M_mindustry_entities_comp_StatusComp_statusDamageMultiplier_float(jcontext ctx, jobject self, jfloat param0);
+void M_mindustry_entities_comp_StatusComp_statusReloadMultiplier_float(jcontext ctx, jobject self, jfloat param0);
+void M_mindustry_entities_comp_StatusComp_statusMaxHealth_float(jcontext ctx, jobject self, jfloat param0);
+void M_mindustry_entities_comp_StatusComp_statusBuildSpeed_float(jcontext ctx, jobject self, jfloat param0);
+void M_mindustry_entities_comp_StatusComp_statusDrag_float(jcontext ctx, jobject self, jfloat param0);
+void M_mindustry_entities_comp_StatusComp_statusArmor_float(jcontext ctx, jobject self, jfloat param0);
+void M_mindustry_entities_comp_StatusComp_update(jcontext ctx, jobject self);
+jobject M_mindustry_entities_comp_StatusComp_statusBits_R_arc_struct_Bits(jcontext ctx, jobject self);
+void M_mindustry_entities_comp_StatusComp_draw(jcontext ctx, jobject self);
+jbool M_mindustry_entities_comp_StatusComp_hasEffect_mindustry_type_StatusEffect_R_boolean(jcontext ctx, jobject self, jobject param0);
+jbool SM_mindustry_entities_comp_StatusComp_lambda$applyDynamicStatus$0_mindustry_entities_units_StatusEntry_R_boolean(jcontext ctx, jobject param0);
+jbool M_mindustry_entities_comp_StatusComp_lambda$unapply$0_mindustry_type_StatusEffect_mindustry_entities_units_StatusEntry_R_boolean(jcontext ctx, jobject self, jobject param0, jobject param1);
+void M_mindustry_entities_comp_StatusComp_lambda$clearStatuses$0_mindustry_entities_units_StatusEntry(jcontext ctx, jobject self, jobject param0);
+jbool SM_mindustry_entities_comp_StatusComp_lambda$getDuration$0_mindustry_type_StatusEffect_mindustry_entities_units_StatusEntry_R_boolean(jcontext ctx, jobject param0, jobject param1);
+
+#ifdef __cplusplus
+}
+#endif
+
+#endif

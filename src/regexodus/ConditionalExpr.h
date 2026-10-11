@@ -1,0 +1,77 @@
+#ifndef HEADER_regexodus_ConditionalExpr
+#define HEADER_regexodus_ConditionalExpr
+
+#include "Clearwing.h"
+#include "regexodus/Group.h"
+#include "java/io/Serializable.h"
+
+#ifdef __cplusplus
+extern "C" {
+#endif
+
+typedef struct regexodus_ConditionalExpr {
+	regexodus_Group parent;
+	jref F_node;
+	jbool F_newBranchStarted;
+	jbool F_linkAsBranch;
+} regexodus_ConditionalExpr;
+
+extern Class class_regexodus_ConditionalExpr;
+
+extern jlong SF_regexodus_ConditionalExpr_serialVersionUID;
+
+#define VTABLE_regexodus_ConditionalExpr_hashCode_R_int 0
+typedef jint (*func_regexodus_ConditionalExpr_hashCode_R_int)(jcontext ctx, jobject self);
+#define VTABLE_regexodus_ConditionalExpr_equals_java_lang_Object_R_boolean 1
+typedef jbool (*func_regexodus_ConditionalExpr_equals_java_lang_Object_R_boolean)(jcontext ctx, jobject self, jobject param0);
+#define VTABLE_regexodus_ConditionalExpr_clone_R_java_lang_Object 2
+typedef jobject (*func_regexodus_ConditionalExpr_clone_R_java_lang_Object)(jcontext ctx, jobject self);
+#define VTABLE_regexodus_ConditionalExpr_getClass_R_java_lang_Class 3
+typedef jobject (*func_regexodus_ConditionalExpr_getClass_R_java_lang_Class)(jcontext ctx, jobject self);
+#define VTABLE_regexodus_ConditionalExpr_toString_R_java_lang_String 4
+typedef jobject (*func_regexodus_ConditionalExpr_toString_R_java_lang_String)(jcontext ctx, jobject self);
+#define VTABLE_regexodus_ConditionalExpr_finalize 5
+typedef void (*func_regexodus_ConditionalExpr_finalize)(jcontext ctx, jobject self);
+#define VTABLE_regexodus_ConditionalExpr_notify 6
+typedef void (*func_regexodus_ConditionalExpr_notify)(jcontext ctx, jobject self);
+#define VTABLE_regexodus_ConditionalExpr_notifyAll 7
+typedef void (*func_regexodus_ConditionalExpr_notifyAll)(jcontext ctx, jobject self);
+#define VTABLE_regexodus_ConditionalExpr_wait 8
+typedef void (*func_regexodus_ConditionalExpr_wait)(jcontext ctx, jobject self);
+#define VTABLE_regexodus_ConditionalExpr_wait_long 9
+typedef void (*func_regexodus_ConditionalExpr_wait_long)(jcontext ctx, jobject self, jlong param0);
+#define VTABLE_regexodus_ConditionalExpr_wait_long_int 10
+typedef void (*func_regexodus_ConditionalExpr_wait_long_int)(jcontext ctx, jobject self, jlong param0, jint param1);
+#define VTABLE_regexodus_ConditionalExpr_append_int_int_Array1_char_Array1_int_Array1_int_java_util_ArrayList_java_util_HashMap 11
+typedef void (*func_regexodus_ConditionalExpr_append_int_int_Array1_char_Array1_int_Array1_int_java_util_ArrayList_java_util_HashMap)(jcontext ctx, jobject self, jint param0, jint param1, jobject param2, jobject param3, jobject param4, jobject param5, jobject param6);
+#define VTABLE_regexodus_ConditionalExpr_append_regexodus_Term_R_regexodus_Term 12
+typedef jobject (*func_regexodus_ConditionalExpr_append_regexodus_Term_R_regexodus_Term)(jcontext ctx, jobject self, jobject param0);
+#define VTABLE_regexodus_ConditionalExpr_replaceCurrent_regexodus_Term_R_regexodus_Term 13
+typedef jobject (*func_regexodus_ConditionalExpr_replaceCurrent_regexodus_Term_R_regexodus_Term)(jcontext ctx, jobject self, jobject param0);
+#define VTABLE_regexodus_ConditionalExpr_newBranch 14
+typedef void (*func_regexodus_ConditionalExpr_newBranch)(jcontext ctx, jobject self);
+#define VTABLE_regexodus_ConditionalExpr_close 15
+typedef void (*func_regexodus_ConditionalExpr_close)(jcontext ctx, jobject self);
+#define VTABLE_regexodus_ConditionalExpr_startNewBranch 16
+typedef void (*func_regexodus_ConditionalExpr_startNewBranch)(jcontext ctx, jobject self);
+#define VTABLE_regexodus_ConditionalExpr_parseTerm_Array1_char_int_int_regexodus_Term_int_R_int 17
+typedef jint (*func_regexodus_ConditionalExpr_parseTerm_Array1_char_int_int_regexodus_Term_int_R_int)(jcontext ctx, jobject self, jobject param0, jint param1, jint param2, jobject param3, jint param4);
+#define VTABLE_regexodus_ConditionalExpr_toStringAll_R_java_lang_String 18
+typedef jobject (*func_regexodus_ConditionalExpr_toStringAll_R_java_lang_String)(jcontext ctx, jobject self);
+#define VTABLE_regexodus_ConditionalExpr_toStringAll_java_util_ArrayList_R_java_lang_String 19
+typedef jobject (*func_regexodus_ConditionalExpr_toStringAll_java_util_ArrayList_R_java_lang_String)(jcontext ctx, jobject self, jobject param0);
+
+void mark_regexodus_ConditionalExpr(jobject object, jint mark, jint depth);
+void clinit_regexodus_ConditionalExpr(jcontext ctx);
+void init_regexodus_ConditionalExpr_regexodus_Lookahead(jcontext ctx, jobject self, jobject param0);
+void init_regexodus_ConditionalExpr_regexodus_Lookbehind(jcontext ctx, jobject self, jobject param0);
+void init_regexodus_ConditionalExpr_int(jcontext ctx, jobject self, jint param0);
+void M_regexodus_ConditionalExpr_startNewBranch(jcontext ctx, jobject self);
+jbool M_regexodus_ConditionalExpr_equals_java_lang_Object_R_boolean(jcontext ctx, jobject self, jobject param0);
+jint M_regexodus_ConditionalExpr_hashCode_R_int(jcontext ctx, jobject self);
+
+#ifdef __cplusplus
+}
+#endif
+
+#endif

@@ -1,0 +1,188 @@
+#ifndef HEADER_mindustry_world_modules_ItemModule
+#define HEADER_mindustry_world_modules_ItemModule
+
+#include "Clearwing.h"
+#include "mindustry/world/modules/BlockModule.h"
+
+#ifdef __cplusplus
+extern "C" {
+#endif
+
+typedef struct mindustry_world_modules_ItemModule {
+	mindustry_world_modules_BlockModule parent;
+	jref F_items;
+	jint F_total;
+	jint F_takeRotation;
+	jref F_flow;
+} mindustry_world_modules_ItemModule;
+
+extern Class class_mindustry_world_modules_ItemModule;
+
+extern jobject SF_mindustry_world_modules_ItemModule_empty;
+extern jint SF_mindustry_world_modules_ItemModule_flowWindowSize;
+extern jfloat SF_mindustry_world_modules_ItemModule_flowPollInterval;
+extern jfloat SF_mindustry_world_modules_ItemModule_flowVisualRefreshInterval;
+extern jobject SF_mindustry_world_modules_ItemModule_cacheFlow;
+extern jobject SF_mindustry_world_modules_ItemModule_cacheSums;
+extern jobject SF_mindustry_world_modules_ItemModule_displayFlow;
+extern jobject SF_mindustry_world_modules_ItemModule_cacheBits;
+extern jobject SF_mindustry_world_modules_ItemModule_flowTimer;
+
+#define VTABLE_mindustry_world_modules_ItemModule_hashCode_R_int 0
+typedef jint (*func_mindustry_world_modules_ItemModule_hashCode_R_int)(jcontext ctx, jobject self);
+#define VTABLE_mindustry_world_modules_ItemModule_equals_java_lang_Object_R_boolean 1
+typedef jbool (*func_mindustry_world_modules_ItemModule_equals_java_lang_Object_R_boolean)(jcontext ctx, jobject self, jobject param0);
+#define VTABLE_mindustry_world_modules_ItemModule_clone_R_java_lang_Object 2
+typedef jobject (*func_mindustry_world_modules_ItemModule_clone_R_java_lang_Object)(jcontext ctx, jobject self);
+#define VTABLE_mindustry_world_modules_ItemModule_getClass_R_java_lang_Class 3
+typedef jobject (*func_mindustry_world_modules_ItemModule_getClass_R_java_lang_Class)(jcontext ctx, jobject self);
+#define VTABLE_mindustry_world_modules_ItemModule_toString_R_java_lang_String 4
+typedef jobject (*func_mindustry_world_modules_ItemModule_toString_R_java_lang_String)(jcontext ctx, jobject self);
+#define VTABLE_mindustry_world_modules_ItemModule_finalize 5
+typedef void (*func_mindustry_world_modules_ItemModule_finalize)(jcontext ctx, jobject self);
+#define VTABLE_mindustry_world_modules_ItemModule_notify 6
+typedef void (*func_mindustry_world_modules_ItemModule_notify)(jcontext ctx, jobject self);
+#define VTABLE_mindustry_world_modules_ItemModule_notifyAll 7
+typedef void (*func_mindustry_world_modules_ItemModule_notifyAll)(jcontext ctx, jobject self);
+#define VTABLE_mindustry_world_modules_ItemModule_wait 8
+typedef void (*func_mindustry_world_modules_ItemModule_wait)(jcontext ctx, jobject self);
+#define VTABLE_mindustry_world_modules_ItemModule_wait_long 9
+typedef void (*func_mindustry_world_modules_ItemModule_wait_long)(jcontext ctx, jobject self, jlong param0);
+#define VTABLE_mindustry_world_modules_ItemModule_wait_long_int 10
+typedef void (*func_mindustry_world_modules_ItemModule_wait_long_int)(jcontext ctx, jobject self, jlong param0, jint param1);
+#define VTABLE_mindustry_world_modules_ItemModule_write_arc_util_io_Writes 11
+typedef void (*func_mindustry_world_modules_ItemModule_write_arc_util_io_Writes)(jcontext ctx, jobject self, jobject param0);
+#define VTABLE_mindustry_world_modules_ItemModule_read_arc_util_io_Reads_boolean 12
+typedef void (*func_mindustry_world_modules_ItemModule_read_arc_util_io_Reads_boolean)(jcontext ctx, jobject self, jobject param0, jbool param1);
+#define VTABLE_mindustry_world_modules_ItemModule_read_arc_util_io_Reads 13
+typedef void (*func_mindustry_world_modules_ItemModule_read_arc_util_io_Reads)(jcontext ctx, jobject self, jobject param0);
+#define VTABLE_mindustry_world_modules_ItemModule_copy_R_mindustry_world_modules_ItemModule 14
+typedef jobject (*func_mindustry_world_modules_ItemModule_copy_R_mindustry_world_modules_ItemModule)(jcontext ctx, jobject self);
+#define VTABLE_mindustry_world_modules_ItemModule_set_mindustry_world_modules_ItemModule 15
+typedef void (*func_mindustry_world_modules_ItemModule_set_mindustry_world_modules_ItemModule)(jcontext ctx, jobject self, jobject param0);
+#define VTABLE_mindustry_world_modules_ItemModule_updateFlow 16
+typedef void (*func_mindustry_world_modules_ItemModule_updateFlow)(jcontext ctx, jobject self);
+#define VTABLE_mindustry_world_modules_ItemModule_stopFlow 17
+typedef void (*func_mindustry_world_modules_ItemModule_stopFlow)(jcontext ctx, jobject self);
+#define VTABLE_mindustry_world_modules_ItemModule_length_R_int 18
+typedef jint (*func_mindustry_world_modules_ItemModule_length_R_int)(jcontext ctx, jobject self);
+#define VTABLE_mindustry_world_modules_ItemModule_getFlowRate_mindustry_type_Item_R_float 19
+typedef jfloat (*func_mindustry_world_modules_ItemModule_getFlowRate_mindustry_type_Item_R_float)(jcontext ctx, jobject self, jobject param0);
+#define VTABLE_mindustry_world_modules_ItemModule_hasFlowItem_mindustry_type_Item_R_boolean 20
+typedef jbool (*func_mindustry_world_modules_ItemModule_hasFlowItem_mindustry_type_Item_R_boolean)(jcontext ctx, jobject self, jobject param0);
+#define VTABLE_mindustry_world_modules_ItemModule_each_mindustry_world_modules_ItemModule$ItemConsumer 21
+typedef void (*func_mindustry_world_modules_ItemModule_each_mindustry_world_modules_ItemModule$ItemConsumer)(jcontext ctx, jobject self, jobject param0);
+#define VTABLE_mindustry_world_modules_ItemModule_sum_mindustry_world_modules_ItemModule$ItemCalculator_R_float 22
+typedef jfloat (*func_mindustry_world_modules_ItemModule_sum_mindustry_world_modules_ItemModule$ItemCalculator_R_float)(jcontext ctx, jobject self, jobject param0);
+#define VTABLE_mindustry_world_modules_ItemModule_has_int_R_boolean 23
+typedef jbool (*func_mindustry_world_modules_ItemModule_has_int_R_boolean)(jcontext ctx, jobject self, jint param0);
+#define VTABLE_mindustry_world_modules_ItemModule_has_mindustry_type_Item_R_boolean 24
+typedef jbool (*func_mindustry_world_modules_ItemModule_has_mindustry_type_Item_R_boolean)(jcontext ctx, jobject self, jobject param0);
+#define VTABLE_mindustry_world_modules_ItemModule_has_mindustry_type_Item_int_R_boolean 25
+typedef jbool (*func_mindustry_world_modules_ItemModule_has_mindustry_type_Item_int_R_boolean)(jcontext ctx, jobject self, jobject param0, jint param1);
+#define VTABLE_mindustry_world_modules_ItemModule_has_Array1_mindustry_type_ItemStack_R_boolean 26
+typedef jbool (*func_mindustry_world_modules_ItemModule_has_Array1_mindustry_type_ItemStack_R_boolean)(jcontext ctx, jobject self, jobject param0);
+#define VTABLE_mindustry_world_modules_ItemModule_has_mindustry_type_ItemSeq_R_boolean 27
+typedef jbool (*func_mindustry_world_modules_ItemModule_has_mindustry_type_ItemSeq_R_boolean)(jcontext ctx, jobject self, jobject param0);
+#define VTABLE_mindustry_world_modules_ItemModule_has_java_lang_Iterable_R_boolean 28
+typedef jbool (*func_mindustry_world_modules_ItemModule_has_java_lang_Iterable_R_boolean)(jcontext ctx, jobject self, jobject param0);
+#define VTABLE_mindustry_world_modules_ItemModule_has_Array1_mindustry_type_ItemStack_float_R_boolean 29
+typedef jbool (*func_mindustry_world_modules_ItemModule_has_Array1_mindustry_type_ItemStack_float_R_boolean)(jcontext ctx, jobject self, jobject param0, jfloat param1);
+#define VTABLE_mindustry_world_modules_ItemModule_hasOne_Array1_mindustry_type_ItemStack_R_boolean 30
+typedef jbool (*func_mindustry_world_modules_ItemModule_hasOne_Array1_mindustry_type_ItemStack_R_boolean)(jcontext ctx, jobject self, jobject param0);
+#define VTABLE_mindustry_world_modules_ItemModule_empty_R_boolean 31
+typedef jbool (*func_mindustry_world_modules_ItemModule_empty_R_boolean)(jcontext ctx, jobject self);
+#define VTABLE_mindustry_world_modules_ItemModule_total_R_int 32
+typedef jint (*func_mindustry_world_modules_ItemModule_total_R_int)(jcontext ctx, jobject self);
+#define VTABLE_mindustry_world_modules_ItemModule_any_R_boolean 33
+typedef jbool (*func_mindustry_world_modules_ItemModule_any_R_boolean)(jcontext ctx, jobject self);
+#define VTABLE_mindustry_world_modules_ItemModule_first_R_mindustry_type_Item 34
+typedef jobject (*func_mindustry_world_modules_ItemModule_first_R_mindustry_type_Item)(jcontext ctx, jobject self);
+#define VTABLE_mindustry_world_modules_ItemModule_take_R_mindustry_type_Item 35
+typedef jobject (*func_mindustry_world_modules_ItemModule_take_R_mindustry_type_Item)(jcontext ctx, jobject self);
+#define VTABLE_mindustry_world_modules_ItemModule_get_int_R_int 36
+typedef jint (*func_mindustry_world_modules_ItemModule_get_int_R_int)(jcontext ctx, jobject self, jint param0);
+#define VTABLE_mindustry_world_modules_ItemModule_get_mindustry_type_Item_R_int 37
+typedef jint (*func_mindustry_world_modules_ItemModule_get_mindustry_type_Item_R_int)(jcontext ctx, jobject self, jobject param0);
+#define VTABLE_mindustry_world_modules_ItemModule_set_mindustry_type_Item_int 38
+typedef void (*func_mindustry_world_modules_ItemModule_set_mindustry_type_Item_int)(jcontext ctx, jobject self, jobject param0, jint param1);
+#define VTABLE_mindustry_world_modules_ItemModule_add_java_lang_Iterable 39
+typedef void (*func_mindustry_world_modules_ItemModule_add_java_lang_Iterable)(jcontext ctx, jobject self, jobject param0);
+#define VTABLE_mindustry_world_modules_ItemModule_add_mindustry_type_ItemSeq 40
+typedef void (*func_mindustry_world_modules_ItemModule_add_mindustry_type_ItemSeq)(jcontext ctx, jobject self, jobject param0);
+#define VTABLE_mindustry_world_modules_ItemModule_add_mindustry_world_modules_ItemModule 41
+typedef void (*func_mindustry_world_modules_ItemModule_add_mindustry_world_modules_ItemModule)(jcontext ctx, jobject self, jobject param0);
+#define VTABLE_mindustry_world_modules_ItemModule_add_mindustry_type_Item_int 42
+typedef void (*func_mindustry_world_modules_ItemModule_add_mindustry_type_Item_int)(jcontext ctx, jobject self, jobject param0, jint param1);
+#define VTABLE_mindustry_world_modules_ItemModule_add_int_int 43
+typedef void (*func_mindustry_world_modules_ItemModule_add_int_int)(jcontext ctx, jobject self, jint param0, jint param1);
+#define VTABLE_mindustry_world_modules_ItemModule_handleFlow_mindustry_type_Item_int 44
+typedef void (*func_mindustry_world_modules_ItemModule_handleFlow_mindustry_type_Item_int)(jcontext ctx, jobject self, jobject param0, jint param1);
+#define VTABLE_mindustry_world_modules_ItemModule_undoFlow_mindustry_type_Item 45
+typedef void (*func_mindustry_world_modules_ItemModule_undoFlow_mindustry_type_Item)(jcontext ctx, jobject self, jobject param0);
+#define VTABLE_mindustry_world_modules_ItemModule_remove_mindustry_type_Item_int 46
+typedef void (*func_mindustry_world_modules_ItemModule_remove_mindustry_type_Item_int)(jcontext ctx, jobject self, jobject param0, jint param1);
+#define VTABLE_mindustry_world_modules_ItemModule_remove_Array1_mindustry_type_ItemStack 47
+typedef void (*func_mindustry_world_modules_ItemModule_remove_Array1_mindustry_type_ItemStack)(jcontext ctx, jobject self, jobject param0);
+#define VTABLE_mindustry_world_modules_ItemModule_remove_mindustry_type_ItemSeq 48
+typedef void (*func_mindustry_world_modules_ItemModule_remove_mindustry_type_ItemSeq)(jcontext ctx, jobject self, jobject param0);
+#define VTABLE_mindustry_world_modules_ItemModule_remove_java_lang_Iterable 49
+typedef void (*func_mindustry_world_modules_ItemModule_remove_java_lang_Iterable)(jcontext ctx, jobject self, jobject param0);
+#define VTABLE_mindustry_world_modules_ItemModule_remove_mindustry_type_ItemStack 50
+typedef void (*func_mindustry_world_modules_ItemModule_remove_mindustry_type_ItemStack)(jcontext ctx, jobject self, jobject param0);
+#define VTABLE_mindustry_world_modules_ItemModule_clear 51
+typedef void (*func_mindustry_world_modules_ItemModule_clear)(jcontext ctx, jobject self);
+#define VTABLE_mindustry_world_modules_ItemModule_checkArrayCapacity_int 52
+typedef void (*func_mindustry_world_modules_ItemModule_checkArrayCapacity_int)(jcontext ctx, jobject self, jint param0);
+
+void mark_mindustry_world_modules_ItemModule(jobject object, jint mark, jint depth);
+void clinit_mindustry_world_modules_ItemModule(jcontext ctx);
+void init_mindustry_world_modules_ItemModule(jcontext ctx, jobject self);
+jobject M_mindustry_world_modules_ItemModule_copy_R_mindustry_world_modules_ItemModule(jcontext ctx, jobject self);
+void M_mindustry_world_modules_ItemModule_set_mindustry_world_modules_ItemModule(jcontext ctx, jobject self, jobject param0);
+void M_mindustry_world_modules_ItemModule_updateFlow(jcontext ctx, jobject self);
+void M_mindustry_world_modules_ItemModule_stopFlow(jcontext ctx, jobject self);
+jint M_mindustry_world_modules_ItemModule_length_R_int(jcontext ctx, jobject self);
+jfloat M_mindustry_world_modules_ItemModule_getFlowRate_mindustry_type_Item_R_float(jcontext ctx, jobject self, jobject param0);
+jbool M_mindustry_world_modules_ItemModule_hasFlowItem_mindustry_type_Item_R_boolean(jcontext ctx, jobject self, jobject param0);
+void M_mindustry_world_modules_ItemModule_each_mindustry_world_modules_ItemModule$ItemConsumer(jcontext ctx, jobject self, jobject param0);
+jfloat M_mindustry_world_modules_ItemModule_sum_mindustry_world_modules_ItemModule$ItemCalculator_R_float(jcontext ctx, jobject self, jobject param0);
+jbool M_mindustry_world_modules_ItemModule_has_int_R_boolean(jcontext ctx, jobject self, jint param0);
+jbool M_mindustry_world_modules_ItemModule_has_mindustry_type_Item_R_boolean(jcontext ctx, jobject self, jobject param0);
+jbool M_mindustry_world_modules_ItemModule_has_mindustry_type_Item_int_R_boolean(jcontext ctx, jobject self, jobject param0, jint param1);
+jbool M_mindustry_world_modules_ItemModule_has_Array1_mindustry_type_ItemStack_R_boolean(jcontext ctx, jobject self, jobject param0);
+jbool M_mindustry_world_modules_ItemModule_has_mindustry_type_ItemSeq_R_boolean(jcontext ctx, jobject self, jobject param0);
+jbool M_mindustry_world_modules_ItemModule_has_java_lang_Iterable_R_boolean(jcontext ctx, jobject self, jobject param0);
+jbool M_mindustry_world_modules_ItemModule_has_Array1_mindustry_type_ItemStack_float_R_boolean(jcontext ctx, jobject self, jobject param0, jfloat param1);
+jbool M_mindustry_world_modules_ItemModule_hasOne_Array1_mindustry_type_ItemStack_R_boolean(jcontext ctx, jobject self, jobject param0);
+jbool M_mindustry_world_modules_ItemModule_empty_R_boolean(jcontext ctx, jobject self);
+jint M_mindustry_world_modules_ItemModule_total_R_int(jcontext ctx, jobject self);
+jbool M_mindustry_world_modules_ItemModule_any_R_boolean(jcontext ctx, jobject self);
+jobject M_mindustry_world_modules_ItemModule_first_R_mindustry_type_Item(jcontext ctx, jobject self);
+jobject M_mindustry_world_modules_ItemModule_take_R_mindustry_type_Item(jcontext ctx, jobject self);
+jint M_mindustry_world_modules_ItemModule_get_int_R_int(jcontext ctx, jobject self, jint param0);
+jint M_mindustry_world_modules_ItemModule_get_mindustry_type_Item_R_int(jcontext ctx, jobject self, jobject param0);
+void M_mindustry_world_modules_ItemModule_set_mindustry_type_Item_int(jcontext ctx, jobject self, jobject param0, jint param1);
+void M_mindustry_world_modules_ItemModule_add_java_lang_Iterable(jcontext ctx, jobject self, jobject param0);
+void M_mindustry_world_modules_ItemModule_add_mindustry_type_ItemSeq(jcontext ctx, jobject self, jobject param0);
+void M_mindustry_world_modules_ItemModule_add_mindustry_world_modules_ItemModule(jcontext ctx, jobject self, jobject param0);
+void M_mindustry_world_modules_ItemModule_add_mindustry_type_Item_int(jcontext ctx, jobject self, jobject param0, jint param1);
+void M_mindustry_world_modules_ItemModule_add_int_int(jcontext ctx, jobject self, jint param0, jint param1);
+void M_mindustry_world_modules_ItemModule_handleFlow_mindustry_type_Item_int(jcontext ctx, jobject self, jobject param0, jint param1);
+void M_mindustry_world_modules_ItemModule_undoFlow_mindustry_type_Item(jcontext ctx, jobject self, jobject param0);
+void M_mindustry_world_modules_ItemModule_remove_mindustry_type_Item_int(jcontext ctx, jobject self, jobject param0, jint param1);
+void M_mindustry_world_modules_ItemModule_remove_Array1_mindustry_type_ItemStack(jcontext ctx, jobject self, jobject param0);
+void M_mindustry_world_modules_ItemModule_remove_mindustry_type_ItemSeq(jcontext ctx, jobject self, jobject param0);
+void M_mindustry_world_modules_ItemModule_remove_java_lang_Iterable(jcontext ctx, jobject self, jobject param0);
+void M_mindustry_world_modules_ItemModule_remove_mindustry_type_ItemStack(jcontext ctx, jobject self, jobject param0);
+void M_mindustry_world_modules_ItemModule_clear(jcontext ctx, jobject self);
+void M_mindustry_world_modules_ItemModule_checkArrayCapacity_int(jcontext ctx, jobject self, jint param0);
+void M_mindustry_world_modules_ItemModule_write_arc_util_io_Writes(jcontext ctx, jobject self, jobject param0);
+void M_mindustry_world_modules_ItemModule_read_arc_util_io_Reads_boolean(jcontext ctx, jobject self, jobject param0, jbool param1);
+jobject M_mindustry_world_modules_ItemModule_toString_R_java_lang_String(jcontext ctx, jobject self);
+
+#ifdef __cplusplus
+}
+#endif
+
+#endif

@@ -1,0 +1,83 @@
+#ifndef HEADER_mindustry_world_consumers_ConsumePayloads
+#define HEADER_mindustry_world_consumers_ConsumePayloads
+
+#include "Clearwing.h"
+#include "mindustry/world/consumers/Consume.h"
+
+#ifdef __cplusplus
+extern "C" {
+#endif
+
+typedef struct mindustry_world_consumers_ConsumePayloads {
+	mindustry_world_consumers_Consume parent;
+	jref F_payloads;
+} mindustry_world_consumers_ConsumePayloads;
+
+extern Class class_mindustry_world_consumers_ConsumePayloads;
+
+
+#define VTABLE_mindustry_world_consumers_ConsumePayloads_hashCode_R_int 0
+typedef jint (*func_mindustry_world_consumers_ConsumePayloads_hashCode_R_int)(jcontext ctx, jobject self);
+#define VTABLE_mindustry_world_consumers_ConsumePayloads_equals_java_lang_Object_R_boolean 1
+typedef jbool (*func_mindustry_world_consumers_ConsumePayloads_equals_java_lang_Object_R_boolean)(jcontext ctx, jobject self, jobject param0);
+#define VTABLE_mindustry_world_consumers_ConsumePayloads_clone_R_java_lang_Object 2
+typedef jobject (*func_mindustry_world_consumers_ConsumePayloads_clone_R_java_lang_Object)(jcontext ctx, jobject self);
+#define VTABLE_mindustry_world_consumers_ConsumePayloads_getClass_R_java_lang_Class 3
+typedef jobject (*func_mindustry_world_consumers_ConsumePayloads_getClass_R_java_lang_Class)(jcontext ctx, jobject self);
+#define VTABLE_mindustry_world_consumers_ConsumePayloads_toString_R_java_lang_String 4
+typedef jobject (*func_mindustry_world_consumers_ConsumePayloads_toString_R_java_lang_String)(jcontext ctx, jobject self);
+#define VTABLE_mindustry_world_consumers_ConsumePayloads_finalize 5
+typedef void (*func_mindustry_world_consumers_ConsumePayloads_finalize)(jcontext ctx, jobject self);
+#define VTABLE_mindustry_world_consumers_ConsumePayloads_notify 6
+typedef void (*func_mindustry_world_consumers_ConsumePayloads_notify)(jcontext ctx, jobject self);
+#define VTABLE_mindustry_world_consumers_ConsumePayloads_notifyAll 7
+typedef void (*func_mindustry_world_consumers_ConsumePayloads_notifyAll)(jcontext ctx, jobject self);
+#define VTABLE_mindustry_world_consumers_ConsumePayloads_wait 8
+typedef void (*func_mindustry_world_consumers_ConsumePayloads_wait)(jcontext ctx, jobject self);
+#define VTABLE_mindustry_world_consumers_ConsumePayloads_wait_long 9
+typedef void (*func_mindustry_world_consumers_ConsumePayloads_wait_long)(jcontext ctx, jobject self, jlong param0);
+#define VTABLE_mindustry_world_consumers_ConsumePayloads_wait_long_int 10
+typedef void (*func_mindustry_world_consumers_ConsumePayloads_wait_long_int)(jcontext ctx, jobject self, jlong param0, jint param1);
+#define VTABLE_mindustry_world_consumers_ConsumePayloads_apply_mindustry_world_Block 11
+typedef void (*func_mindustry_world_consumers_ConsumePayloads_apply_mindustry_world_Block)(jcontext ctx, jobject self, jobject param0);
+#define VTABLE_mindustry_world_consumers_ConsumePayloads_optional_boolean_boolean_R_mindustry_world_consumers_Consume 12
+typedef jobject (*func_mindustry_world_consumers_ConsumePayloads_optional_boolean_boolean_R_mindustry_world_consumers_Consume)(jcontext ctx, jobject self, jbool param0, jbool param1);
+#define VTABLE_mindustry_world_consumers_ConsumePayloads_boost_R_mindustry_world_consumers_Consume 13
+typedef jobject (*func_mindustry_world_consumers_ConsumePayloads_boost_R_mindustry_world_consumers_Consume)(jcontext ctx, jobject self);
+#define VTABLE_mindustry_world_consumers_ConsumePayloads_update_boolean_R_mindustry_world_consumers_Consume 14
+typedef jobject (*func_mindustry_world_consumers_ConsumePayloads_update_boolean_R_mindustry_world_consumers_Consume)(jcontext ctx, jobject self, jbool param0);
+#define VTABLE_mindustry_world_consumers_ConsumePayloads_ignore_R_boolean 15
+typedef jbool (*func_mindustry_world_consumers_ConsumePayloads_ignore_R_boolean)(jcontext ctx, jobject self);
+#define VTABLE_mindustry_world_consumers_ConsumePayloads_build_mindustry_gen_Building_arc_scene_ui_layout_Table 16
+typedef void (*func_mindustry_world_consumers_ConsumePayloads_build_mindustry_gen_Building_arc_scene_ui_layout_Table)(jcontext ctx, jobject self, jobject param0, jobject param1);
+#define VTABLE_mindustry_world_consumers_ConsumePayloads_trigger_mindustry_gen_Building 17
+typedef void (*func_mindustry_world_consumers_ConsumePayloads_trigger_mindustry_gen_Building)(jcontext ctx, jobject self, jobject param0);
+#define VTABLE_mindustry_world_consumers_ConsumePayloads_update_mindustry_gen_Building 18
+typedef void (*func_mindustry_world_consumers_ConsumePayloads_update_mindustry_gen_Building)(jcontext ctx, jobject self, jobject param0);
+#define VTABLE_mindustry_world_consumers_ConsumePayloads_efficiency_mindustry_gen_Building_R_float 19
+typedef jfloat (*func_mindustry_world_consumers_ConsumePayloads_efficiency_mindustry_gen_Building_R_float)(jcontext ctx, jobject self, jobject param0);
+#define VTABLE_mindustry_world_consumers_ConsumePayloads_efficiencyMultiplier_mindustry_gen_Building_R_float 20
+typedef jfloat (*func_mindustry_world_consumers_ConsumePayloads_efficiencyMultiplier_mindustry_gen_Building_R_float)(jcontext ctx, jobject self, jobject param0);
+#define VTABLE_mindustry_world_consumers_ConsumePayloads_display_mindustry_world_meta_Stats 21
+typedef void (*func_mindustry_world_consumers_ConsumePayloads_display_mindustry_world_meta_Stats)(jcontext ctx, jobject self, jobject param0);
+#define VTABLE_mindustry_world_consumers_ConsumePayloads_lambda$build$0_mindustry_gen_Building_mindustry_type_PayloadSeq_arc_scene_ui_layout_Table 22
+typedef void (*func_mindustry_world_consumers_ConsumePayloads_lambda$build$0_mindustry_gen_Building_mindustry_type_PayloadSeq_arc_scene_ui_layout_Table)(jcontext ctx, jobject self, jobject param0, jobject param1, jobject param2);
+#define VTABLE_mindustry_world_consumers_ConsumePayloads_lambda$build$1_mindustry_type_PayloadSeq_mindustry_type_PayloadStack_mindustry_gen_Building_R_boolean 23
+typedef jbool (*func_mindustry_world_consumers_ConsumePayloads_lambda$build$1_mindustry_type_PayloadSeq_mindustry_type_PayloadStack_mindustry_gen_Building_R_boolean)(jcontext ctx, jobject self, jobject param0, jobject param1, jobject param2);
+
+void mark_mindustry_world_consumers_ConsumePayloads(jobject object, jint mark, jint depth);
+void clinit_mindustry_world_consumers_ConsumePayloads(jcontext ctx);
+void init_mindustry_world_consumers_ConsumePayloads_arc_struct_Seq(jcontext ctx, jobject self, jobject param0);
+jfloat M_mindustry_world_consumers_ConsumePayloads_efficiency_mindustry_gen_Building_R_float(jcontext ctx, jobject self, jobject param0);
+void M_mindustry_world_consumers_ConsumePayloads_trigger_mindustry_gen_Building(jcontext ctx, jobject self, jobject param0);
+void M_mindustry_world_consumers_ConsumePayloads_display_mindustry_world_meta_Stats(jcontext ctx, jobject self, jobject param0);
+void M_mindustry_world_consumers_ConsumePayloads_build_mindustry_gen_Building_arc_scene_ui_layout_Table(jcontext ctx, jobject self, jobject param0, jobject param1);
+void M_mindustry_world_consumers_ConsumePayloads_lambda$build$0_mindustry_gen_Building_mindustry_type_PayloadSeq_arc_scene_ui_layout_Table(jcontext ctx, jobject self, jobject param0, jobject param1, jobject param2);
+jbool M_mindustry_world_consumers_ConsumePayloads_lambda$build$1_mindustry_type_PayloadSeq_mindustry_type_PayloadStack_mindustry_gen_Building_R_boolean(jcontext ctx, jobject self, jobject param0, jobject param1, jobject param2);
+void SM_mindustry_world_consumers_ConsumePayloads_lambda$display$0_mindustry_type_PayloadStack_arc_scene_ui_layout_Table(jcontext ctx, jobject param0, jobject param1);
+
+#ifdef __cplusplus
+}
+#endif
+
+#endif

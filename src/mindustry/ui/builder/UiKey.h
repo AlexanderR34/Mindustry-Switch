@@ -1,0 +1,128 @@
+#ifndef HEADER_mindustry_ui_builder_UiKey
+#define HEADER_mindustry_ui_builder_UiKey
+
+#include "Clearwing.h"
+#include "java/lang/Enum.h"
+
+#ifdef __cplusplus
+extern "C" {
+#endif
+
+typedef struct mindustry_ui_builder_UiKey {
+	java_lang_Enum parent;
+} mindustry_ui_builder_UiKey;
+
+extern Class class_mindustry_ui_builder_UiKey;
+
+extern jobject SF_mindustry_ui_builder_UiKey_table;
+extern jobject SF_mindustry_ui_builder_UiKey_pane;
+extern jobject SF_mindustry_ui_builder_UiKey_stack;
+extern jobject SF_mindustry_ui_builder_UiKey_label;
+extern jobject SF_mindustry_ui_builder_UiKey_image;
+extern jobject SF_mindustry_ui_builder_UiKey_button;
+extern jobject SF_mindustry_ui_builder_UiKey_imageButton;
+extern jobject SF_mindustry_ui_builder_UiKey_field;
+extern jobject SF_mindustry_ui_builder_UiKey_check;
+extern jobject SF_mindustry_ui_builder_UiKey_slider;
+extern jobject SF_mindustry_ui_builder_UiKey_space;
+extern jobject SF_mindustry_ui_builder_UiKey_defaults;
+extern jobject SF_mindustry_ui_builder_UiKey_buttonTable;
+extern jobject SF_mindustry_ui_builder_UiKey_row;
+extern jobject SF_mindustry_ui_builder_UiKey_text;
+extern jobject SF_mindustry_ui_builder_UiKey_wrap;
+extern jobject SF_mindustry_ui_builder_UiKey_region;
+extern jobject SF_mindustry_ui_builder_UiKey_icon;
+extern jobject SF_mindustry_ui_builder_UiKey_placeholder;
+extern jobject SF_mindustry_ui_builder_UiKey_scaling;
+extern jobject SF_mindustry_ui_builder_UiKey_background;
+extern jobject SF_mindustry_ui_builder_UiKey_margin;
+extern jobject SF_mindustry_ui_builder_UiKey_id;
+extern jobject SF_mindustry_ui_builder_UiKey_hint;
+extern jobject SF_mindustry_ui_builder_UiKey_maxLength;
+extern jobject SF_mindustry_ui_builder_UiKey_checked;
+extern jobject SF_mindustry_ui_builder_UiKey_min;
+extern jobject SF_mindustry_ui_builder_UiKey_max;
+extern jobject SF_mindustry_ui_builder_UiKey_step;
+extern jobject SF_mindustry_ui_builder_UiKey_defaultValue;
+extern jobject SF_mindustry_ui_builder_UiKey_clicked;
+extern jobject SF_mindustry_ui_builder_UiKey_enter;
+extern jobject SF_mindustry_ui_builder_UiKey_style;
+extern jobject SF_mindustry_ui_builder_UiKey_group;
+extern jobject SF_mindustry_ui_builder_UiKey_condition;
+extern jobject SF_mindustry_ui_builder_UiKey_color;
+extern jobject SF_mindustry_ui_builder_UiKey_disabled;
+extern jobject SF_mindustry_ui_builder_UiKey_grow;
+extern jobject SF_mindustry_ui_builder_UiKey_growX;
+extern jobject SF_mindustry_ui_builder_UiKey_growY;
+extern jobject SF_mindustry_ui_builder_UiKey_fill;
+extern jobject SF_mindustry_ui_builder_UiKey_fillX;
+extern jobject SF_mindustry_ui_builder_UiKey_fillY;
+extern jobject SF_mindustry_ui_builder_UiKey_expand;
+extern jobject SF_mindustry_ui_builder_UiKey_expandX;
+extern jobject SF_mindustry_ui_builder_UiKey_expandY;
+extern jobject SF_mindustry_ui_builder_UiKey_width;
+extern jobject SF_mindustry_ui_builder_UiKey_height;
+extern jobject SF_mindustry_ui_builder_UiKey_size;
+extern jobject SF_mindustry_ui_builder_UiKey_minWidth;
+extern jobject SF_mindustry_ui_builder_UiKey_maxWidth;
+extern jobject SF_mindustry_ui_builder_UiKey_minHeight;
+extern jobject SF_mindustry_ui_builder_UiKey_maxHeight;
+extern jobject SF_mindustry_ui_builder_UiKey_pad;
+extern jobject SF_mindustry_ui_builder_UiKey_padTop;
+extern jobject SF_mindustry_ui_builder_UiKey_padLeft;
+extern jobject SF_mindustry_ui_builder_UiKey_padBottom;
+extern jobject SF_mindustry_ui_builder_UiKey_padRight;
+extern jobject SF_mindustry_ui_builder_UiKey_align;
+extern jobject SF_mindustry_ui_builder_UiKey_labelAlign;
+extern jobject SF_mindustry_ui_builder_UiKey_colspan;
+extern jobject SF_mindustry_ui_builder_UiKey_uniform;
+extern jobject SF_mindustry_ui_builder_UiKey_uniformX;
+extern jobject SF_mindustry_ui_builder_UiKey_uniformY;
+extern jobject SF_mindustry_ui_builder_UiKey_all;
+extern jobject SF_mindustry_ui_builder_UiKey_$VALUES;
+
+#define VTABLE_mindustry_ui_builder_UiKey_hashCode_R_int 0
+typedef jint (*func_mindustry_ui_builder_UiKey_hashCode_R_int)(jcontext ctx, jobject self);
+#define VTABLE_mindustry_ui_builder_UiKey_equals_java_lang_Object_R_boolean 1
+typedef jbool (*func_mindustry_ui_builder_UiKey_equals_java_lang_Object_R_boolean)(jcontext ctx, jobject self, jobject param0);
+#define VTABLE_mindustry_ui_builder_UiKey_clone_R_java_lang_Object 2
+typedef jobject (*func_mindustry_ui_builder_UiKey_clone_R_java_lang_Object)(jcontext ctx, jobject self);
+#define VTABLE_mindustry_ui_builder_UiKey_getClass_R_java_lang_Class 3
+typedef jobject (*func_mindustry_ui_builder_UiKey_getClass_R_java_lang_Class)(jcontext ctx, jobject self);
+#define VTABLE_mindustry_ui_builder_UiKey_toString_R_java_lang_String 4
+typedef jobject (*func_mindustry_ui_builder_UiKey_toString_R_java_lang_String)(jcontext ctx, jobject self);
+#define VTABLE_mindustry_ui_builder_UiKey_finalize 5
+typedef void (*func_mindustry_ui_builder_UiKey_finalize)(jcontext ctx, jobject self);
+#define VTABLE_mindustry_ui_builder_UiKey_notify 6
+typedef void (*func_mindustry_ui_builder_UiKey_notify)(jcontext ctx, jobject self);
+#define VTABLE_mindustry_ui_builder_UiKey_notifyAll 7
+typedef void (*func_mindustry_ui_builder_UiKey_notifyAll)(jcontext ctx, jobject self);
+#define VTABLE_mindustry_ui_builder_UiKey_wait 8
+typedef void (*func_mindustry_ui_builder_UiKey_wait)(jcontext ctx, jobject self);
+#define VTABLE_mindustry_ui_builder_UiKey_wait_long 9
+typedef void (*func_mindustry_ui_builder_UiKey_wait_long)(jcontext ctx, jobject self, jlong param0);
+#define VTABLE_mindustry_ui_builder_UiKey_wait_long_int 10
+typedef void (*func_mindustry_ui_builder_UiKey_wait_long_int)(jcontext ctx, jobject self, jlong param0, jint param1);
+#define VTABLE_mindustry_ui_builder_UiKey_compareTo_java_lang_Object_R_int 11
+typedef jint (*func_mindustry_ui_builder_UiKey_compareTo_java_lang_Object_R_int)(jcontext ctx, jobject self, jobject param0);
+#define VTABLE_mindustry_ui_builder_UiKey_compareTo_java_lang_Enum_R_int 12
+typedef jint (*func_mindustry_ui_builder_UiKey_compareTo_java_lang_Enum_R_int)(jcontext ctx, jobject self, jobject param0);
+#define VTABLE_mindustry_ui_builder_UiKey_name_R_java_lang_String 13
+typedef jobject (*func_mindustry_ui_builder_UiKey_name_R_java_lang_String)(jcontext ctx, jobject self);
+#define VTABLE_mindustry_ui_builder_UiKey_ordinal_R_int 14
+typedef jint (*func_mindustry_ui_builder_UiKey_ordinal_R_int)(jcontext ctx, jobject self);
+#define VTABLE_mindustry_ui_builder_UiKey_getDeclaringClass_R_java_lang_Class 15
+typedef jobject (*func_mindustry_ui_builder_UiKey_getDeclaringClass_R_java_lang_Class)(jcontext ctx, jobject self);
+
+void mark_mindustry_ui_builder_UiKey(jobject object, jint mark, jint depth);
+void clinit_mindustry_ui_builder_UiKey(jcontext ctx);
+jobject SM_mindustry_ui_builder_UiKey_values_R_Array1_mindustry_ui_builder_UiKey(jcontext ctx);
+jobject SM_mindustry_ui_builder_UiKey_valueOf_java_lang_String_R_mindustry_ui_builder_UiKey(jcontext ctx, jobject param0);
+void init_mindustry_ui_builder_UiKey_java_lang_String_int(jcontext ctx, jobject self, jobject param0, jint param1);
+jobject SM_mindustry_ui_builder_UiKey_$values_R_Array1_mindustry_ui_builder_UiKey(jcontext ctx);
+
+#ifdef __cplusplus
+}
+#endif
+
+#endif

@@ -1,0 +1,97 @@
+#ifndef HEADER_mindustry_ui_dialogs_ResearchDialog$5
+#define HEADER_mindustry_ui_dialogs_ResearchDialog$5
+
+#include "Clearwing.h"
+#include "mindustry/ui/layout/BranchTreeLayout.h"
+
+#ifdef __cplusplus
+extern "C" {
+#endif
+
+typedef struct mindustry_ui_dialogs_ResearchDialog$5 {
+	mindustry_ui_layout_BranchTreeLayout parent;
+	jfloat F_val$spacing;
+	jref F_this$0;
+} mindustry_ui_dialogs_ResearchDialog$5;
+
+extern Class class_mindustry_ui_dialogs_ResearchDialog$5;
+
+
+#define VTABLE_mindustry_ui_dialogs_ResearchDialog$5_hashCode_R_int 0
+typedef jint (*func_mindustry_ui_dialogs_ResearchDialog$5_hashCode_R_int)(jcontext ctx, jobject self);
+#define VTABLE_mindustry_ui_dialogs_ResearchDialog$5_equals_java_lang_Object_R_boolean 1
+typedef jbool (*func_mindustry_ui_dialogs_ResearchDialog$5_equals_java_lang_Object_R_boolean)(jcontext ctx, jobject self, jobject param0);
+#define VTABLE_mindustry_ui_dialogs_ResearchDialog$5_clone_R_java_lang_Object 2
+typedef jobject (*func_mindustry_ui_dialogs_ResearchDialog$5_clone_R_java_lang_Object)(jcontext ctx, jobject self);
+#define VTABLE_mindustry_ui_dialogs_ResearchDialog$5_getClass_R_java_lang_Class 3
+typedef jobject (*func_mindustry_ui_dialogs_ResearchDialog$5_getClass_R_java_lang_Class)(jcontext ctx, jobject self);
+#define VTABLE_mindustry_ui_dialogs_ResearchDialog$5_toString_R_java_lang_String 4
+typedef jobject (*func_mindustry_ui_dialogs_ResearchDialog$5_toString_R_java_lang_String)(jcontext ctx, jobject self);
+#define VTABLE_mindustry_ui_dialogs_ResearchDialog$5_finalize 5
+typedef void (*func_mindustry_ui_dialogs_ResearchDialog$5_finalize)(jcontext ctx, jobject self);
+#define VTABLE_mindustry_ui_dialogs_ResearchDialog$5_notify 6
+typedef void (*func_mindustry_ui_dialogs_ResearchDialog$5_notify)(jcontext ctx, jobject self);
+#define VTABLE_mindustry_ui_dialogs_ResearchDialog$5_notifyAll 7
+typedef void (*func_mindustry_ui_dialogs_ResearchDialog$5_notifyAll)(jcontext ctx, jobject self);
+#define VTABLE_mindustry_ui_dialogs_ResearchDialog$5_wait 8
+typedef void (*func_mindustry_ui_dialogs_ResearchDialog$5_wait)(jcontext ctx, jobject self);
+#define VTABLE_mindustry_ui_dialogs_ResearchDialog$5_wait_long 9
+typedef void (*func_mindustry_ui_dialogs_ResearchDialog$5_wait_long)(jcontext ctx, jobject self, jlong param0);
+#define VTABLE_mindustry_ui_dialogs_ResearchDialog$5_wait_long_int 10
+typedef void (*func_mindustry_ui_dialogs_ResearchDialog$5_wait_long_int)(jcontext ctx, jobject self, jlong param0, jint param1);
+#define VTABLE_mindustry_ui_dialogs_ResearchDialog$5_layout_mindustry_ui_layout_TreeLayout$TreeNode 11
+typedef void (*func_mindustry_ui_dialogs_ResearchDialog$5_layout_mindustry_ui_layout_TreeLayout$TreeNode)(jcontext ctx, jobject self, jobject param0);
+#define VTABLE_mindustry_ui_dialogs_ResearchDialog$5_getWidthOrHeightOfNode_mindustry_ui_layout_TreeLayout$TreeNode_boolean_R_float 12
+typedef jfloat (*func_mindustry_ui_dialogs_ResearchDialog$5_getWidthOrHeightOfNode_mindustry_ui_layout_TreeLayout$TreeNode_boolean_R_float)(jcontext ctx, jobject self, jobject param0, jbool param1);
+#define VTABLE_mindustry_ui_dialogs_ResearchDialog$5_getNodeThickness_mindustry_ui_layout_TreeLayout$TreeNode_R_float 13
+typedef jfloat (*func_mindustry_ui_dialogs_ResearchDialog$5_getNodeThickness_mindustry_ui_layout_TreeLayout$TreeNode_R_float)(jcontext ctx, jobject self, jobject param0);
+#define VTABLE_mindustry_ui_dialogs_ResearchDialog$5_getNodeSize_mindustry_ui_layout_TreeLayout$TreeNode_R_float 14
+typedef jfloat (*func_mindustry_ui_dialogs_ResearchDialog$5_getNodeSize_mindustry_ui_layout_TreeLayout$TreeNode_R_float)(jcontext ctx, jobject self, jobject param0);
+#define VTABLE_mindustry_ui_dialogs_ResearchDialog$5_isLevelChangeInYAxis_R_boolean 15
+typedef jbool (*func_mindustry_ui_dialogs_ResearchDialog$5_isLevelChangeInYAxis_R_boolean)(jcontext ctx, jobject self);
+#define VTABLE_mindustry_ui_dialogs_ResearchDialog$5_getLevelChangeSign_R_int 16
+typedef jint (*func_mindustry_ui_dialogs_ResearchDialog$5_getLevelChangeSign_R_int)(jcontext ctx, jobject self);
+#define VTABLE_mindustry_ui_dialogs_ResearchDialog$5_updateBounds_mindustry_ui_layout_TreeLayout$TreeNode_float_float 17
+typedef void (*func_mindustry_ui_dialogs_ResearchDialog$5_updateBounds_mindustry_ui_layout_TreeLayout$TreeNode_float_float)(jcontext ctx, jobject self, jobject param0, jfloat param1, jfloat param2);
+#define VTABLE_mindustry_ui_dialogs_ResearchDialog$5_getBounds_R_arc_math_geom_Rect 18
+typedef jobject (*func_mindustry_ui_dialogs_ResearchDialog$5_getBounds_R_arc_math_geom_Rect)(jcontext ctx, jobject self);
+#define VTABLE_mindustry_ui_dialogs_ResearchDialog$5_calcSizeOfLevels_mindustry_ui_layout_TreeLayout$TreeNode_int 19
+typedef void (*func_mindustry_ui_dialogs_ResearchDialog$5_calcSizeOfLevels_mindustry_ui_layout_TreeLayout$TreeNode_int)(jcontext ctx, jobject self, jobject param0, jint param1);
+#define VTABLE_mindustry_ui_dialogs_ResearchDialog$5_getLevelCount_R_int 20
+typedef jint (*func_mindustry_ui_dialogs_ResearchDialog$5_getLevelCount_R_int)(jcontext ctx, jobject self);
+#define VTABLE_mindustry_ui_dialogs_ResearchDialog$5_getGapBetweenNodes_mindustry_ui_layout_TreeLayout$TreeNode_mindustry_ui_layout_TreeLayout$TreeNode_R_float 21
+typedef jfloat (*func_mindustry_ui_dialogs_ResearchDialog$5_getGapBetweenNodes_mindustry_ui_layout_TreeLayout$TreeNode_mindustry_ui_layout_TreeLayout$TreeNode_R_float)(jcontext ctx, jobject self, jobject param0, jobject param1);
+#define VTABLE_mindustry_ui_dialogs_ResearchDialog$5_getSizeOfLevel_int_R_float 22
+typedef jfloat (*func_mindustry_ui_dialogs_ResearchDialog$5_getSizeOfLevel_int_R_float)(jcontext ctx, jobject self, jint param0);
+#define VTABLE_mindustry_ui_dialogs_ResearchDialog$5_getAncestor_mindustry_ui_layout_TreeLayout$TreeNode_R_mindustry_ui_layout_TreeLayout$TreeNode 23
+typedef jobject (*func_mindustry_ui_dialogs_ResearchDialog$5_getAncestor_mindustry_ui_layout_TreeLayout$TreeNode_R_mindustry_ui_layout_TreeLayout$TreeNode)(jcontext ctx, jobject self, jobject param0);
+#define VTABLE_mindustry_ui_dialogs_ResearchDialog$5_getDistance_mindustry_ui_layout_TreeLayout$TreeNode_mindustry_ui_layout_TreeLayout$TreeNode_R_float 24
+typedef jfloat (*func_mindustry_ui_dialogs_ResearchDialog$5_getDistance_mindustry_ui_layout_TreeLayout$TreeNode_mindustry_ui_layout_TreeLayout$TreeNode_R_float)(jcontext ctx, jobject self, jobject param0, jobject param1);
+#define VTABLE_mindustry_ui_dialogs_ResearchDialog$5_nextLeft_mindustry_ui_layout_TreeLayout$TreeNode_R_mindustry_ui_layout_TreeLayout$TreeNode 25
+typedef jobject (*func_mindustry_ui_dialogs_ResearchDialog$5_nextLeft_mindustry_ui_layout_TreeLayout$TreeNode_R_mindustry_ui_layout_TreeLayout$TreeNode)(jcontext ctx, jobject self, jobject param0);
+#define VTABLE_mindustry_ui_dialogs_ResearchDialog$5_nextRight_mindustry_ui_layout_TreeLayout$TreeNode_R_mindustry_ui_layout_TreeLayout$TreeNode 26
+typedef jobject (*func_mindustry_ui_dialogs_ResearchDialog$5_nextRight_mindustry_ui_layout_TreeLayout$TreeNode_R_mindustry_ui_layout_TreeLayout$TreeNode)(jcontext ctx, jobject self, jobject param0);
+#define VTABLE_mindustry_ui_dialogs_ResearchDialog$5_getNumber_mindustry_ui_layout_TreeLayout$TreeNode_mindustry_ui_layout_TreeLayout$TreeNode_R_int 27
+typedef jint (*func_mindustry_ui_dialogs_ResearchDialog$5_getNumber_mindustry_ui_layout_TreeLayout$TreeNode_mindustry_ui_layout_TreeLayout$TreeNode_R_int)(jcontext ctx, jobject self, jobject param0, jobject param1);
+#define VTABLE_mindustry_ui_dialogs_ResearchDialog$5_ancestor_mindustry_ui_layout_TreeLayout$TreeNode_mindustry_ui_layout_TreeLayout$TreeNode_mindustry_ui_layout_TreeLayout$TreeNode_R_mindustry_ui_layout_TreeLayout$TreeNode 28
+typedef jobject (*func_mindustry_ui_dialogs_ResearchDialog$5_ancestor_mindustry_ui_layout_TreeLayout$TreeNode_mindustry_ui_layout_TreeLayout$TreeNode_mindustry_ui_layout_TreeLayout$TreeNode_R_mindustry_ui_layout_TreeLayout$TreeNode)(jcontext ctx, jobject self, jobject param0, jobject param1, jobject param2);
+#define VTABLE_mindustry_ui_dialogs_ResearchDialog$5_moveSubtree_mindustry_ui_layout_TreeLayout$TreeNode_mindustry_ui_layout_TreeLayout$TreeNode_mindustry_ui_layout_TreeLayout$TreeNode_float 29
+typedef void (*func_mindustry_ui_dialogs_ResearchDialog$5_moveSubtree_mindustry_ui_layout_TreeLayout$TreeNode_mindustry_ui_layout_TreeLayout$TreeNode_mindustry_ui_layout_TreeLayout$TreeNode_float)(jcontext ctx, jobject self, jobject param0, jobject param1, jobject param2, jfloat param3);
+#define VTABLE_mindustry_ui_dialogs_ResearchDialog$5_apportion_mindustry_ui_layout_TreeLayout$TreeNode_mindustry_ui_layout_TreeLayout$TreeNode_mindustry_ui_layout_TreeLayout$TreeNode_mindustry_ui_layout_TreeLayout$TreeNode_R_mindustry_ui_layout_TreeLayout$TreeNode 30
+typedef jobject (*func_mindustry_ui_dialogs_ResearchDialog$5_apportion_mindustry_ui_layout_TreeLayout$TreeNode_mindustry_ui_layout_TreeLayout$TreeNode_mindustry_ui_layout_TreeLayout$TreeNode_mindustry_ui_layout_TreeLayout$TreeNode_R_mindustry_ui_layout_TreeLayout$TreeNode)(jcontext ctx, jobject self, jobject param0, jobject param1, jobject param2, jobject param3);
+#define VTABLE_mindustry_ui_dialogs_ResearchDialog$5_executeShifts_mindustry_ui_layout_TreeLayout$TreeNode 31
+typedef void (*func_mindustry_ui_dialogs_ResearchDialog$5_executeShifts_mindustry_ui_layout_TreeLayout$TreeNode)(jcontext ctx, jobject self, jobject param0);
+#define VTABLE_mindustry_ui_dialogs_ResearchDialog$5_firstWalk_mindustry_ui_layout_TreeLayout$TreeNode_mindustry_ui_layout_TreeLayout$TreeNode 32
+typedef void (*func_mindustry_ui_dialogs_ResearchDialog$5_firstWalk_mindustry_ui_layout_TreeLayout$TreeNode_mindustry_ui_layout_TreeLayout$TreeNode)(jcontext ctx, jobject self, jobject param0, jobject param1);
+#define VTABLE_mindustry_ui_dialogs_ResearchDialog$5_secondWalk_mindustry_ui_layout_TreeLayout$TreeNode_float_int_float 33
+typedef void (*func_mindustry_ui_dialogs_ResearchDialog$5_secondWalk_mindustry_ui_layout_TreeLayout$TreeNode_float_int_float)(jcontext ctx, jobject self, jobject param0, jfloat param1, jint param2, jfloat param3);
+
+void mark_mindustry_ui_dialogs_ResearchDialog$5(jobject object, jint mark, jint depth);
+void clinit_mindustry_ui_dialogs_ResearchDialog$5(jcontext ctx);
+void init_mindustry_ui_dialogs_ResearchDialog$5_mindustry_ui_dialogs_ResearchDialog_float(jcontext ctx, jobject self, jobject param0, jfloat param1);
+
+#ifdef __cplusplus
+}
+#endif
+
+#endif

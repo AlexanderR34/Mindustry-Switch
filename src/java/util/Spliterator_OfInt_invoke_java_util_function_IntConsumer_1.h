@@ -1,0 +1,57 @@
+#ifndef HEADER_java_util_Spliterator$OfInt_invoke_java_util_function_IntConsumer_1
+#define HEADER_java_util_Spliterator$OfInt_invoke_java_util_function_IntConsumer_1
+
+#include "Clearwing.h"
+#include "java/lang/Object.h"
+#include "java/util/function/IntConsumer.h"
+
+#ifdef __cplusplus
+extern "C" {
+#endif
+
+typedef struct java_util_Spliterator$OfInt_invoke_java_util_function_IntConsumer_1 {
+	java_lang_Object parent;
+	jref F_field0;
+} java_util_Spliterator$OfInt_invoke_java_util_function_IntConsumer_1;
+
+extern Class class_java_util_Spliterator$OfInt_invoke_java_util_function_IntConsumer_1;
+
+
+#define VTABLE_java_util_Spliterator$OfInt_invoke_java_util_function_IntConsumer_1_hashCode_R_int 0
+typedef jint (*func_java_util_Spliterator$OfInt_invoke_java_util_function_IntConsumer_1_hashCode_R_int)(jcontext ctx, jobject self);
+#define VTABLE_java_util_Spliterator$OfInt_invoke_java_util_function_IntConsumer_1_equals_java_lang_Object_R_boolean 1
+typedef jbool (*func_java_util_Spliterator$OfInt_invoke_java_util_function_IntConsumer_1_equals_java_lang_Object_R_boolean)(jcontext ctx, jobject self, jobject param0);
+#define VTABLE_java_util_Spliterator$OfInt_invoke_java_util_function_IntConsumer_1_clone_R_java_lang_Object 2
+typedef jobject (*func_java_util_Spliterator$OfInt_invoke_java_util_function_IntConsumer_1_clone_R_java_lang_Object)(jcontext ctx, jobject self);
+#define VTABLE_java_util_Spliterator$OfInt_invoke_java_util_function_IntConsumer_1_getClass_R_java_lang_Class 3
+typedef jobject (*func_java_util_Spliterator$OfInt_invoke_java_util_function_IntConsumer_1_getClass_R_java_lang_Class)(jcontext ctx, jobject self);
+#define VTABLE_java_util_Spliterator$OfInt_invoke_java_util_function_IntConsumer_1_toString_R_java_lang_String 4
+typedef jobject (*func_java_util_Spliterator$OfInt_invoke_java_util_function_IntConsumer_1_toString_R_java_lang_String)(jcontext ctx, jobject self);
+#define VTABLE_java_util_Spliterator$OfInt_invoke_java_util_function_IntConsumer_1_finalize 5
+typedef void (*func_java_util_Spliterator$OfInt_invoke_java_util_function_IntConsumer_1_finalize)(jcontext ctx, jobject self);
+#define VTABLE_java_util_Spliterator$OfInt_invoke_java_util_function_IntConsumer_1_notify 6
+typedef void (*func_java_util_Spliterator$OfInt_invoke_java_util_function_IntConsumer_1_notify)(jcontext ctx, jobject self);
+#define VTABLE_java_util_Spliterator$OfInt_invoke_java_util_function_IntConsumer_1_notifyAll 7
+typedef void (*func_java_util_Spliterator$OfInt_invoke_java_util_function_IntConsumer_1_notifyAll)(jcontext ctx, jobject self);
+#define VTABLE_java_util_Spliterator$OfInt_invoke_java_util_function_IntConsumer_1_wait 8
+typedef void (*func_java_util_Spliterator$OfInt_invoke_java_util_function_IntConsumer_1_wait)(jcontext ctx, jobject self);
+#define VTABLE_java_util_Spliterator$OfInt_invoke_java_util_function_IntConsumer_1_wait_long 9
+typedef void (*func_java_util_Spliterator$OfInt_invoke_java_util_function_IntConsumer_1_wait_long)(jcontext ctx, jobject self, jlong param0);
+#define VTABLE_java_util_Spliterator$OfInt_invoke_java_util_function_IntConsumer_1_wait_long_int 10
+typedef void (*func_java_util_Spliterator$OfInt_invoke_java_util_function_IntConsumer_1_wait_long_int)(jcontext ctx, jobject self, jlong param0, jint param1);
+#define VTABLE_java_util_Spliterator$OfInt_invoke_java_util_function_IntConsumer_1_accept_int 11
+typedef void (*func_java_util_Spliterator$OfInt_invoke_java_util_function_IntConsumer_1_accept_int)(jcontext ctx, jobject self, jint param0);
+#define VTABLE_java_util_Spliterator$OfInt_invoke_java_util_function_IntConsumer_1_andThen_java_util_function_IntConsumer_R_java_util_function_IntConsumer 12
+typedef jobject (*func_java_util_Spliterator$OfInt_invoke_java_util_function_IntConsumer_1_andThen_java_util_function_IntConsumer_R_java_util_function_IntConsumer)(jcontext ctx, jobject self, jobject param0);
+#define VTABLE_java_util_Spliterator$OfInt_invoke_java_util_function_IntConsumer_1_lambda$andThen$0_java_util_function_IntConsumer_int 13
+typedef void (*func_java_util_Spliterator$OfInt_invoke_java_util_function_IntConsumer_1_lambda$andThen$0_java_util_function_IntConsumer_int)(jcontext ctx, jobject self, jobject param0, jint param1);
+
+void mark_java_util_Spliterator$OfInt_invoke_java_util_function_IntConsumer_1(jobject object, jint mark, jint depth);
+void clinit_java_util_Spliterator$OfInt_invoke_java_util_function_IntConsumer_1(jcontext ctx);
+void M_java_util_Spliterator$OfInt_invoke_java_util_function_IntConsumer_1_accept_int(jcontext ctx, jobject self, jint param0);
+
+#ifdef __cplusplus
+}
+#endif
+
+#endif

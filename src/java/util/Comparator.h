@@ -1,0 +1,68 @@
+#ifndef HEADER_java_util_Comparator
+#define HEADER_java_util_Comparator
+
+#include "Clearwing.h"
+#include "java/lang/Object.h"
+
+#ifdef __cplusplus
+extern "C" {
+#endif
+
+typedef struct java_util_Comparator {
+	java_lang_Object parent;
+} java_util_Comparator;
+
+extern Class class_java_util_Comparator;
+
+
+#define INDEX_java_util_Comparator_compare_java_lang_Object_java_lang_Object_R_int 0
+typedef jint (*func_java_util_Comparator_compare_java_lang_Object_java_lang_Object_R_int)(jcontext ctx, jobject self, jobject param0, jobject param1);
+#define INDEX_java_util_Comparator_equals_java_lang_Object_R_boolean 1
+typedef jbool (*func_java_util_Comparator_equals_java_lang_Object_R_boolean)(jcontext ctx, jobject self, jobject param0);
+#define INDEX_java_util_Comparator_reversed_R_java_util_Comparator 2
+typedef jobject (*func_java_util_Comparator_reversed_R_java_util_Comparator)(jcontext ctx, jobject self);
+#define INDEX_java_util_Comparator_thenComparing_java_util_Comparator_R_java_util_Comparator 3
+typedef jobject (*func_java_util_Comparator_thenComparing_java_util_Comparator_R_java_util_Comparator)(jcontext ctx, jobject self, jobject param0);
+#define INDEX_java_util_Comparator_thenComparing_java_util_function_Function_java_util_Comparator_R_java_util_Comparator 4
+typedef jobject (*func_java_util_Comparator_thenComparing_java_util_function_Function_java_util_Comparator_R_java_util_Comparator)(jcontext ctx, jobject self, jobject param0, jobject param1);
+#define INDEX_java_util_Comparator_thenComparing_java_util_function_Function_R_java_util_Comparator 5
+typedef jobject (*func_java_util_Comparator_thenComparing_java_util_function_Function_R_java_util_Comparator)(jcontext ctx, jobject self, jobject param0);
+#define INDEX_java_util_Comparator_thenComparingInt_java_util_function_ToIntFunction_R_java_util_Comparator 6
+typedef jobject (*func_java_util_Comparator_thenComparingInt_java_util_function_ToIntFunction_R_java_util_Comparator)(jcontext ctx, jobject self, jobject param0);
+#define INDEX_java_util_Comparator_thenComparingLong_java_util_function_ToLongFunction_R_java_util_Comparator 7
+typedef jobject (*func_java_util_Comparator_thenComparingLong_java_util_function_ToLongFunction_R_java_util_Comparator)(jcontext ctx, jobject self, jobject param0);
+#define INDEX_java_util_Comparator_thenComparingDouble_java_util_function_ToDoubleFunction_R_java_util_Comparator 8
+typedef jobject (*func_java_util_Comparator_thenComparingDouble_java_util_function_ToDoubleFunction_R_java_util_Comparator)(jcontext ctx, jobject self, jobject param0);
+#define INDEX_java_util_Comparator_lambda$thenComparing$0_java_util_Comparator_java_lang_Object_java_lang_Object_R_int 23
+typedef jint (*func_java_util_Comparator_lambda$thenComparing$0_java_util_Comparator_java_lang_Object_java_lang_Object_R_int)(jcontext ctx, jobject self, jobject param0, jobject param1, jobject param2);
+
+void mark_java_util_Comparator(jobject object, jint mark, jint depth);
+void clinit_java_util_Comparator(jcontext ctx);
+jobject M_java_util_Comparator_reversed_R_java_util_Comparator(jcontext ctx, jobject self);
+jobject M_java_util_Comparator_thenComparing_java_util_Comparator_R_java_util_Comparator(jcontext ctx, jobject self, jobject param0);
+jobject M_java_util_Comparator_thenComparing_java_util_function_Function_java_util_Comparator_R_java_util_Comparator(jcontext ctx, jobject self, jobject param0, jobject param1);
+jobject M_java_util_Comparator_thenComparing_java_util_function_Function_R_java_util_Comparator(jcontext ctx, jobject self, jobject param0);
+jobject M_java_util_Comparator_thenComparingInt_java_util_function_ToIntFunction_R_java_util_Comparator(jcontext ctx, jobject self, jobject param0);
+jobject M_java_util_Comparator_thenComparingLong_java_util_function_ToLongFunction_R_java_util_Comparator(jcontext ctx, jobject self, jobject param0);
+jobject M_java_util_Comparator_thenComparingDouble_java_util_function_ToDoubleFunction_R_java_util_Comparator(jcontext ctx, jobject self, jobject param0);
+jobject SM_java_util_Comparator_reverseOrder_R_java_util_Comparator(jcontext ctx);
+jobject SM_java_util_Comparator_naturalOrder_R_java_util_Comparator(jcontext ctx);
+jobject SM_java_util_Comparator_nullsFirst_java_util_Comparator_R_java_util_Comparator(jcontext ctx, jobject param0);
+jobject SM_java_util_Comparator_nullsLast_java_util_Comparator_R_java_util_Comparator(jcontext ctx, jobject param0);
+jobject SM_java_util_Comparator_comparing_java_util_function_Function_java_util_Comparator_R_java_util_Comparator(jcontext ctx, jobject param0, jobject param1);
+jobject SM_java_util_Comparator_comparing_java_util_function_Function_R_java_util_Comparator(jcontext ctx, jobject param0);
+jobject SM_java_util_Comparator_comparingInt_java_util_function_ToIntFunction_R_java_util_Comparator(jcontext ctx, jobject param0);
+jobject SM_java_util_Comparator_comparingLong_java_util_function_ToLongFunction_R_java_util_Comparator(jcontext ctx, jobject param0);
+jobject SM_java_util_Comparator_comparingDouble_java_util_function_ToDoubleFunction_R_java_util_Comparator(jcontext ctx, jobject param0);
+jint SM_java_util_Comparator_lambda$comparingDouble$5_java_util_function_ToDoubleFunction_java_lang_Object_java_lang_Object_R_int(jcontext ctx, jobject param0, jobject param1, jobject param2);
+jint SM_java_util_Comparator_lambda$comparingLong$4_java_util_function_ToLongFunction_java_lang_Object_java_lang_Object_R_int(jcontext ctx, jobject param0, jobject param1, jobject param2);
+jint SM_java_util_Comparator_lambda$comparingInt$3_java_util_function_ToIntFunction_java_lang_Object_java_lang_Object_R_int(jcontext ctx, jobject param0, jobject param1, jobject param2);
+jint SM_java_util_Comparator_lambda$comparing$2_java_util_function_Function_java_lang_Object_java_lang_Object_R_int(jcontext ctx, jobject param0, jobject param1, jobject param2);
+jint SM_java_util_Comparator_lambda$comparing$1_java_util_Comparator_java_util_function_Function_java_lang_Object_java_lang_Object_R_int(jcontext ctx, jobject param0, jobject param1, jobject param2, jobject param3);
+jint M_java_util_Comparator_lambda$thenComparing$0_java_util_Comparator_java_lang_Object_java_lang_Object_R_int(jcontext ctx, jobject self, jobject param0, jobject param1, jobject param2);
+
+#ifdef __cplusplus
+}
+#endif
+
+#endif

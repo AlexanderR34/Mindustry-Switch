@@ -1,0 +1,52 @@
+#ifndef HEADER_arc_scene_actions_Actions_invoke_arc_func_Prov_47
+#define HEADER_arc_scene_actions_Actions_invoke_arc_func_Prov_47
+
+#include "Clearwing.h"
+#include "java/lang/Object.h"
+#include "arc/func/Prov.h"
+
+#ifdef __cplusplus
+extern "C" {
+#endif
+
+typedef struct arc_scene_actions_Actions_invoke_arc_func_Prov_47 {
+	java_lang_Object parent;
+} arc_scene_actions_Actions_invoke_arc_func_Prov_47;
+
+extern Class class_arc_scene_actions_Actions_invoke_arc_func_Prov_47;
+
+
+#define VTABLE_arc_scene_actions_Actions_invoke_arc_func_Prov_47_hashCode_R_int 0
+typedef jint (*func_arc_scene_actions_Actions_invoke_arc_func_Prov_47_hashCode_R_int)(jcontext ctx, jobject self);
+#define VTABLE_arc_scene_actions_Actions_invoke_arc_func_Prov_47_equals_java_lang_Object_R_boolean 1
+typedef jbool (*func_arc_scene_actions_Actions_invoke_arc_func_Prov_47_equals_java_lang_Object_R_boolean)(jcontext ctx, jobject self, jobject param0);
+#define VTABLE_arc_scene_actions_Actions_invoke_arc_func_Prov_47_clone_R_java_lang_Object 2
+typedef jobject (*func_arc_scene_actions_Actions_invoke_arc_func_Prov_47_clone_R_java_lang_Object)(jcontext ctx, jobject self);
+#define VTABLE_arc_scene_actions_Actions_invoke_arc_func_Prov_47_getClass_R_java_lang_Class 3
+typedef jobject (*func_arc_scene_actions_Actions_invoke_arc_func_Prov_47_getClass_R_java_lang_Class)(jcontext ctx, jobject self);
+#define VTABLE_arc_scene_actions_Actions_invoke_arc_func_Prov_47_toString_R_java_lang_String 4
+typedef jobject (*func_arc_scene_actions_Actions_invoke_arc_func_Prov_47_toString_R_java_lang_String)(jcontext ctx, jobject self);
+#define VTABLE_arc_scene_actions_Actions_invoke_arc_func_Prov_47_finalize 5
+typedef void (*func_arc_scene_actions_Actions_invoke_arc_func_Prov_47_finalize)(jcontext ctx, jobject self);
+#define VTABLE_arc_scene_actions_Actions_invoke_arc_func_Prov_47_notify 6
+typedef void (*func_arc_scene_actions_Actions_invoke_arc_func_Prov_47_notify)(jcontext ctx, jobject self);
+#define VTABLE_arc_scene_actions_Actions_invoke_arc_func_Prov_47_notifyAll 7
+typedef void (*func_arc_scene_actions_Actions_invoke_arc_func_Prov_47_notifyAll)(jcontext ctx, jobject self);
+#define VTABLE_arc_scene_actions_Actions_invoke_arc_func_Prov_47_wait 8
+typedef void (*func_arc_scene_actions_Actions_invoke_arc_func_Prov_47_wait)(jcontext ctx, jobject self);
+#define VTABLE_arc_scene_actions_Actions_invoke_arc_func_Prov_47_wait_long 9
+typedef void (*func_arc_scene_actions_Actions_invoke_arc_func_Prov_47_wait_long)(jcontext ctx, jobject self, jlong param0);
+#define VTABLE_arc_scene_actions_Actions_invoke_arc_func_Prov_47_wait_long_int 10
+typedef void (*func_arc_scene_actions_Actions_invoke_arc_func_Prov_47_wait_long_int)(jcontext ctx, jobject self, jlong param0, jint param1);
+#define VTABLE_arc_scene_actions_Actions_invoke_arc_func_Prov_47_get_R_java_lang_Object 11
+typedef jobject (*func_arc_scene_actions_Actions_invoke_arc_func_Prov_47_get_R_java_lang_Object)(jcontext ctx, jobject self);
+
+void mark_arc_scene_actions_Actions_invoke_arc_func_Prov_47(jobject object, jint mark, jint depth);
+void clinit_arc_scene_actions_Actions_invoke_arc_func_Prov_47(jcontext ctx);
+jobject M_arc_scene_actions_Actions_invoke_arc_func_Prov_47_get_R_java_lang_Object(jcontext ctx, jobject self);
+
+#ifdef __cplusplus
+}
+#endif
+
+#endif

@@ -1,0 +1,164 @@
+#ifndef HEADER_mindustry_graphics_Pal
+#define HEADER_mindustry_graphics_Pal
+
+#include "Clearwing.h"
+#include "java/lang/Object.h"
+
+#ifdef __cplusplus
+extern "C" {
+#endif
+
+typedef struct mindustry_graphics_Pal {
+	java_lang_Object parent;
+} mindustry_graphics_Pal;
+
+extern Class class_mindustry_graphics_Pal;
+
+extern jobject SF_mindustry_graphics_Pal_water;
+extern jobject SF_mindustry_graphics_Pal_darkOutline;
+extern jobject SF_mindustry_graphics_Pal_thoriumPink;
+extern jobject SF_mindustry_graphics_Pal_coalBlack;
+extern jobject SF_mindustry_graphics_Pal_items;
+extern jobject SF_mindustry_graphics_Pal_command;
+extern jobject SF_mindustry_graphics_Pal_sap;
+extern jobject SF_mindustry_graphics_Pal_sapBullet;
+extern jobject SF_mindustry_graphics_Pal_sapBulletBack;
+extern jobject SF_mindustry_graphics_Pal_suppress;
+extern jobject SF_mindustry_graphics_Pal_regen;
+extern jobject SF_mindustry_graphics_Pal_reactorPurple;
+extern jobject SF_mindustry_graphics_Pal_reactorPurple2;
+extern jobject SF_mindustry_graphics_Pal_spore;
+extern jobject SF_mindustry_graphics_Pal_shield;
+extern jobject SF_mindustry_graphics_Pal_bulletYellow;
+extern jobject SF_mindustry_graphics_Pal_bulletYellowBack;
+extern jobject SF_mindustry_graphics_Pal_darkMetal;
+extern jobject SF_mindustry_graphics_Pal_darkerMetal;
+extern jobject SF_mindustry_graphics_Pal_darkestMetal;
+extern jobject SF_mindustry_graphics_Pal_missileYellow;
+extern jobject SF_mindustry_graphics_Pal_missileYellowBack;
+extern jobject SF_mindustry_graphics_Pal_meltdownHit;
+extern jobject SF_mindustry_graphics_Pal_plastaniumBack;
+extern jobject SF_mindustry_graphics_Pal_plastaniumFront;
+extern jobject SF_mindustry_graphics_Pal_lightFlame;
+extern jobject SF_mindustry_graphics_Pal_darkFlame;
+extern jobject SF_mindustry_graphics_Pal_lightPyraFlame;
+extern jobject SF_mindustry_graphics_Pal_darkPyraFlame;
+extern jobject SF_mindustry_graphics_Pal_turretHeat;
+extern jobject SF_mindustry_graphics_Pal_lightOrange;
+extern jobject SF_mindustry_graphics_Pal_lightishOrange;
+extern jobject SF_mindustry_graphics_Pal_lighterOrange;
+extern jobject SF_mindustry_graphics_Pal_lightishGray;
+extern jobject SF_mindustry_graphics_Pal_darkishGray;
+extern jobject SF_mindustry_graphics_Pal_darkerGray;
+extern jobject SF_mindustry_graphics_Pal_darkestGray;
+extern jobject SF_mindustry_graphics_Pal_darkestestGray;
+extern jobject SF_mindustry_graphics_Pal_shadow;
+extern jobject SF_mindustry_graphics_Pal_ammo;
+extern jobject SF_mindustry_graphics_Pal_rubble;
+extern jobject SF_mindustry_graphics_Pal_boostTo;
+extern jobject SF_mindustry_graphics_Pal_boostFrom;
+extern jobject SF_mindustry_graphics_Pal_lancerLaser;
+extern jobject SF_mindustry_graphics_Pal_stoneGray;
+extern jobject SF_mindustry_graphics_Pal_engine;
+extern jobject SF_mindustry_graphics_Pal_yellowBoltFront;
+extern jobject SF_mindustry_graphics_Pal_health;
+extern jobject SF_mindustry_graphics_Pal_heal;
+extern jobject SF_mindustry_graphics_Pal_bar;
+extern jobject SF_mindustry_graphics_Pal_accent;
+extern jobject SF_mindustry_graphics_Pal_stat;
+extern jobject SF_mindustry_graphics_Pal_negativeStat;
+extern jobject SF_mindustry_graphics_Pal_gray;
+extern jobject SF_mindustry_graphics_Pal_metalGrayDark;
+extern jobject SF_mindustry_graphics_Pal_accentBack;
+extern jobject SF_mindustry_graphics_Pal_place;
+extern jobject SF_mindustry_graphics_Pal_remove;
+extern jobject SF_mindustry_graphics_Pal_noplace;
+extern jobject SF_mindustry_graphics_Pal_removeBack;
+extern jobject SF_mindustry_graphics_Pal_placeRotate;
+extern jobject SF_mindustry_graphics_Pal_breakInvalid;
+extern jobject SF_mindustry_graphics_Pal_range;
+extern jobject SF_mindustry_graphics_Pal_power;
+extern jobject SF_mindustry_graphics_Pal_powerBar;
+extern jobject SF_mindustry_graphics_Pal_powerLight;
+extern jobject SF_mindustry_graphics_Pal_placing;
+extern jobject SF_mindustry_graphics_Pal_unitFront;
+extern jobject SF_mindustry_graphics_Pal_unitBack;
+extern jobject SF_mindustry_graphics_Pal_lightTrail;
+extern jobject SF_mindustry_graphics_Pal_surge;
+extern jobject SF_mindustry_graphics_Pal_plastanium;
+extern jobject SF_mindustry_graphics_Pal_redSpark;
+extern jobject SF_mindustry_graphics_Pal_orangeSpark;
+extern jobject SF_mindustry_graphics_Pal_redDust;
+extern jobject SF_mindustry_graphics_Pal_redderDust;
+extern jobject SF_mindustry_graphics_Pal_plasticSmoke;
+extern jobject SF_mindustry_graphics_Pal_adminChat;
+extern jobject SF_mindustry_graphics_Pal_neoplasmOutline;
+extern jobject SF_mindustry_graphics_Pal_neoplasm1;
+extern jobject SF_mindustry_graphics_Pal_neoplasmMid;
+extern jobject SF_mindustry_graphics_Pal_neoplasm2;
+extern jobject SF_mindustry_graphics_Pal_neoplasmAcid;
+extern jobject SF_mindustry_graphics_Pal_neoplasmAcidGlow;
+extern jobject SF_mindustry_graphics_Pal_logicBlocks;
+extern jobject SF_mindustry_graphics_Pal_logicControl;
+extern jobject SF_mindustry_graphics_Pal_logicOperations;
+extern jobject SF_mindustry_graphics_Pal_logicIo;
+extern jobject SF_mindustry_graphics_Pal_logicUnits;
+extern jobject SF_mindustry_graphics_Pal_logicWorld;
+extern jobject SF_mindustry_graphics_Pal_berylShot;
+extern jobject SF_mindustry_graphics_Pal_tungstenShot;
+extern jobject SF_mindustry_graphics_Pal_plasticBurn;
+extern jobject SF_mindustry_graphics_Pal_muddy;
+extern jobject SF_mindustry_graphics_Pal_redLight;
+extern jobject SF_mindustry_graphics_Pal_slagOrange;
+extern jobject SF_mindustry_graphics_Pal_techBlue;
+extern jobject SF_mindustry_graphics_Pal_vent;
+extern jobject SF_mindustry_graphics_Pal_vent2;
+extern jobject SF_mindustry_graphics_Pal_copperAmmoFront;
+extern jobject SF_mindustry_graphics_Pal_copperAmmoBack;
+extern jobject SF_mindustry_graphics_Pal_graphiteAmmoBack;
+extern jobject SF_mindustry_graphics_Pal_graphiteAmmoFront;
+extern jobject SF_mindustry_graphics_Pal_siliconAmmoBack;
+extern jobject SF_mindustry_graphics_Pal_siliconAmmoFront;
+extern jobject SF_mindustry_graphics_Pal_glassAmmoBack;
+extern jobject SF_mindustry_graphics_Pal_glassAmmoFront;
+extern jobject SF_mindustry_graphics_Pal_scrapAmmoFront;
+extern jobject SF_mindustry_graphics_Pal_scrapAmmoBack;
+extern jobject SF_mindustry_graphics_Pal_surgeAmmoFront;
+extern jobject SF_mindustry_graphics_Pal_surgeAmmoBack;
+extern jobject SF_mindustry_graphics_Pal_blastAmmoBack;
+extern jobject SF_mindustry_graphics_Pal_blastAmmoFront;
+extern jobject SF_mindustry_graphics_Pal_thoriumAmmoBack;
+extern jobject SF_mindustry_graphics_Pal_thoriumAmmoFront;
+
+#define VTABLE_mindustry_graphics_Pal_hashCode_R_int 0
+typedef jint (*func_mindustry_graphics_Pal_hashCode_R_int)(jcontext ctx, jobject self);
+#define VTABLE_mindustry_graphics_Pal_equals_java_lang_Object_R_boolean 1
+typedef jbool (*func_mindustry_graphics_Pal_equals_java_lang_Object_R_boolean)(jcontext ctx, jobject self, jobject param0);
+#define VTABLE_mindustry_graphics_Pal_clone_R_java_lang_Object 2
+typedef jobject (*func_mindustry_graphics_Pal_clone_R_java_lang_Object)(jcontext ctx, jobject self);
+#define VTABLE_mindustry_graphics_Pal_getClass_R_java_lang_Class 3
+typedef jobject (*func_mindustry_graphics_Pal_getClass_R_java_lang_Class)(jcontext ctx, jobject self);
+#define VTABLE_mindustry_graphics_Pal_toString_R_java_lang_String 4
+typedef jobject (*func_mindustry_graphics_Pal_toString_R_java_lang_String)(jcontext ctx, jobject self);
+#define VTABLE_mindustry_graphics_Pal_finalize 5
+typedef void (*func_mindustry_graphics_Pal_finalize)(jcontext ctx, jobject self);
+#define VTABLE_mindustry_graphics_Pal_notify 6
+typedef void (*func_mindustry_graphics_Pal_notify)(jcontext ctx, jobject self);
+#define VTABLE_mindustry_graphics_Pal_notifyAll 7
+typedef void (*func_mindustry_graphics_Pal_notifyAll)(jcontext ctx, jobject self);
+#define VTABLE_mindustry_graphics_Pal_wait 8
+typedef void (*func_mindustry_graphics_Pal_wait)(jcontext ctx, jobject self);
+#define VTABLE_mindustry_graphics_Pal_wait_long 9
+typedef void (*func_mindustry_graphics_Pal_wait_long)(jcontext ctx, jobject self, jlong param0);
+#define VTABLE_mindustry_graphics_Pal_wait_long_int 10
+typedef void (*func_mindustry_graphics_Pal_wait_long_int)(jcontext ctx, jobject self, jlong param0, jint param1);
+
+void mark_mindustry_graphics_Pal(jobject object, jint mark, jint depth);
+void clinit_mindustry_graphics_Pal(jcontext ctx);
+void init_mindustry_graphics_Pal(jcontext ctx, jobject self);
+
+#ifdef __cplusplus
+}
+#endif
+
+#endif

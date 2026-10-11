@@ -1,0 +1,184 @@
+#ifndef HEADER_java_text_SimpleDateFormat
+#define HEADER_java_text_SimpleDateFormat
+
+#include "Clearwing.h"
+#include "java/text/DateFormat.h"
+
+#ifdef __cplusplus
+extern "C" {
+#endif
+
+typedef struct java_text_SimpleDateFormat {
+	java_text_DateFormat parent;
+	jref F_dateFormatSymbols;
+	jref F_pattern;
+	jref F_patternTokens;
+} java_text_SimpleDateFormat;
+
+extern Class class_java_text_SimpleDateFormat;
+
+extern jchar SF_java_text_SimpleDateFormat_ERA_LETTER;
+extern jchar SF_java_text_SimpleDateFormat_YEAR_LETTER;
+extern jchar SF_java_text_SimpleDateFormat_MONTH_LETTER;
+extern jchar SF_java_text_SimpleDateFormat_WEEK_IN_YEAR_LETTER;
+extern jchar SF_java_text_SimpleDateFormat_WEEK_IN_MONTH_LETTER;
+extern jchar SF_java_text_SimpleDateFormat_DAY_IN_YEAR_LETTER;
+extern jchar SF_java_text_SimpleDateFormat_DAY_LETTER;
+extern jchar SF_java_text_SimpleDateFormat_DOW_IN_MONTH_LETTER;
+extern jchar SF_java_text_SimpleDateFormat_DAY_OF_WEEK_LETTER;
+extern jchar SF_java_text_SimpleDateFormat_AMPM_LETTER;
+extern jchar SF_java_text_SimpleDateFormat_HOUR_LETTER;
+extern jchar SF_java_text_SimpleDateFormat_HOUR_1_LETTER;
+extern jchar SF_java_text_SimpleDateFormat_HOUR12_LETTER;
+extern jchar SF_java_text_SimpleDateFormat_HOUR12_1_LETTER;
+extern jchar SF_java_text_SimpleDateFormat_MINUTE_LETTER;
+extern jchar SF_java_text_SimpleDateFormat_SECOND_LETTER;
+extern jchar SF_java_text_SimpleDateFormat_MILLISECOND_LETTER;
+extern jchar SF_java_text_SimpleDateFormat_TIMEZONE_LETTER;
+extern jchar SF_java_text_SimpleDateFormat_TIMEZONE822_LETTER;
+extern jchar SF_java_text_SimpleDateFormat_LITERAL_LETTER;
+extern jchar SF_java_text_SimpleDateFormat_EXPLICIT_LITERAL;
+extern jchar SF_java_text_SimpleDateFormat_SIGN_POSITIVE;
+extern jchar SF_java_text_SimpleDateFormat_SIGN_NEGATIVE;
+extern jint SF_java_text_SimpleDateFormat_MILLIS_TO_MINUTES;
+extern jobject SF_java_text_SimpleDateFormat_PATTERN_LETTERS;
+extern jobject SF_java_text_SimpleDateFormat_GMT;
+extern jint SF_java_text_SimpleDateFormat_ERA;
+extern jint SF_java_text_SimpleDateFormat_WEEK_OF_MONTH;
+extern jint SF_java_text_SimpleDateFormat_WEEK_OF_YEAR;
+extern jint SF_java_text_SimpleDateFormat_DAY_OF_WEEK_IN_MONTH;
+extern jint SF_java_text_SimpleDateFormat_DAY_OF_YEAR;
+
+#define VTABLE_java_text_SimpleDateFormat_hashCode_R_int 0
+typedef jint (*func_java_text_SimpleDateFormat_hashCode_R_int)(jcontext ctx, jobject self);
+#define VTABLE_java_text_SimpleDateFormat_equals_java_lang_Object_R_boolean 1
+typedef jbool (*func_java_text_SimpleDateFormat_equals_java_lang_Object_R_boolean)(jcontext ctx, jobject self, jobject param0);
+#define VTABLE_java_text_SimpleDateFormat_clone_R_java_lang_Object 2
+typedef jobject (*func_java_text_SimpleDateFormat_clone_R_java_lang_Object)(jcontext ctx, jobject self);
+#define VTABLE_java_text_SimpleDateFormat_getClass_R_java_lang_Class 3
+typedef jobject (*func_java_text_SimpleDateFormat_getClass_R_java_lang_Class)(jcontext ctx, jobject self);
+#define VTABLE_java_text_SimpleDateFormat_toString_R_java_lang_String 4
+typedef jobject (*func_java_text_SimpleDateFormat_toString_R_java_lang_String)(jcontext ctx, jobject self);
+#define VTABLE_java_text_SimpleDateFormat_finalize 5
+typedef void (*func_java_text_SimpleDateFormat_finalize)(jcontext ctx, jobject self);
+#define VTABLE_java_text_SimpleDateFormat_notify 6
+typedef void (*func_java_text_SimpleDateFormat_notify)(jcontext ctx, jobject self);
+#define VTABLE_java_text_SimpleDateFormat_notifyAll 7
+typedef void (*func_java_text_SimpleDateFormat_notifyAll)(jcontext ctx, jobject self);
+#define VTABLE_java_text_SimpleDateFormat_wait 8
+typedef void (*func_java_text_SimpleDateFormat_wait)(jcontext ctx, jobject self);
+#define VTABLE_java_text_SimpleDateFormat_wait_long 9
+typedef void (*func_java_text_SimpleDateFormat_wait_long)(jcontext ctx, jobject self, jlong param0);
+#define VTABLE_java_text_SimpleDateFormat_wait_long_int 10
+typedef void (*func_java_text_SimpleDateFormat_wait_long_int)(jcontext ctx, jobject self, jlong param0, jint param1);
+#define VTABLE_java_text_SimpleDateFormat_format_java_lang_Object_R_java_lang_String 11
+typedef jobject (*func_java_text_SimpleDateFormat_format_java_lang_Object_R_java_lang_String)(jcontext ctx, jobject self, jobject param0);
+#define VTABLE_java_text_SimpleDateFormat_parseObject_java_lang_String_R_java_lang_Object 12
+typedef jobject (*func_java_text_SimpleDateFormat_parseObject_java_lang_String_R_java_lang_Object)(jcontext ctx, jobject self, jobject param0);
+#define VTABLE_java_text_SimpleDateFormat_format_java_lang_Object_java_lang_StringBuffer_R_java_lang_String 13
+typedef jobject (*func_java_text_SimpleDateFormat_format_java_lang_Object_java_lang_StringBuffer_R_java_lang_String)(jcontext ctx, jobject self, jobject param0, jobject param1);
+#define VTABLE_java_text_SimpleDateFormat_format_java_util_Date_R_java_lang_String 14
+typedef jobject (*func_java_text_SimpleDateFormat_format_java_util_Date_R_java_lang_String)(jcontext ctx, jobject self, jobject param0);
+#define VTABLE_java_text_SimpleDateFormat_format_java_util_Date_java_lang_StringBuffer_R_java_lang_String 15
+typedef jobject (*func_java_text_SimpleDateFormat_format_java_util_Date_java_lang_StringBuffer_R_java_lang_String)(jcontext ctx, jobject self, jobject param0, jobject param1);
+#define VTABLE_java_text_SimpleDateFormat_parse_java_lang_String_R_java_util_Date 16
+typedef jobject (*func_java_text_SimpleDateFormat_parse_java_lang_String_R_java_util_Date)(jcontext ctx, jobject self, jobject param0);
+#define VTABLE_java_text_SimpleDateFormat_setTimeZone_java_util_TimeZone 17
+typedef void (*func_java_text_SimpleDateFormat_setTimeZone_java_util_TimeZone)(jcontext ctx, jobject self, jobject param0);
+#define VTABLE_java_text_SimpleDateFormat_toPattern_R_java_lang_String 18
+typedef jobject (*func_java_text_SimpleDateFormat_toPattern_R_java_lang_String)(jcontext ctx, jobject self);
+#define VTABLE_java_text_SimpleDateFormat_getDateFormatSymbols_R_java_text_DateFormatSymbols 19
+typedef jobject (*func_java_text_SimpleDateFormat_getDateFormatSymbols_R_java_text_DateFormatSymbols)(jcontext ctx, jobject self);
+#define VTABLE_java_text_SimpleDateFormat_setDateFormatSymbols_java_text_DateFormatSymbols 20
+typedef void (*func_java_text_SimpleDateFormat_setDateFormatSymbols_java_text_DateFormatSymbols)(jcontext ctx, jobject self, jobject param0);
+#define VTABLE_java_text_SimpleDateFormat_applyPattern_java_lang_String 21
+typedef void (*func_java_text_SimpleDateFormat_applyPattern_java_lang_String)(jcontext ctx, jobject self, jobject param0);
+#define VTABLE_java_text_SimpleDateFormat_getPatternTokens_R_java_util_List 22
+typedef jobject (*func_java_text_SimpleDateFormat_getPatternTokens_R_java_util_List)(jcontext ctx, jobject self);
+#define VTABLE_java_text_SimpleDateFormat_getTimeZoneDisplayNames_java_lang_String_R_Array1_java_lang_String 23
+typedef jobject (*func_java_text_SimpleDateFormat_getTimeZoneDisplayNames_java_lang_String_R_Array1_java_lang_String)(jcontext ctx, jobject self, jobject param0);
+#define VTABLE_java_text_SimpleDateFormat_leftPad_int_int_R_java_lang_String 24
+typedef jobject (*func_java_text_SimpleDateFormat_leftPad_int_int_R_java_lang_String)(jcontext ctx, jobject self, jint param0, jint param1);
+#define VTABLE_java_text_SimpleDateFormat_parseHour_java_lang_String_char_int_R_int 25
+typedef jint (*func_java_text_SimpleDateFormat_parseHour_java_lang_String_char_int_R_int)(jcontext ctx, jobject self, jobject param0, jchar param1, jint param2);
+#define VTABLE_java_text_SimpleDateFormat_validateNumber_int_int_java_lang_String_int_int 26
+typedef void (*func_java_text_SimpleDateFormat_validateNumber_int_int_java_lang_String_int_int)(jcontext ctx, jobject self, jint param0, jint param1, jobject param2, jint param3, jint param4);
+#define VTABLE_java_text_SimpleDateFormat_throwInvalid_java_lang_String_int_R_int 27
+typedef jint (*func_java_text_SimpleDateFormat_throwInvalid_java_lang_String_int_R_int)(jcontext ctx, jobject self, jobject param0, jint param1);
+#define VTABLE_java_text_SimpleDateFormat_parseNumber_java_lang_String_int_java_lang_String_int_int_R_int 28
+typedef jint (*func_java_text_SimpleDateFormat_parseNumber_java_lang_String_int_java_lang_String_int_int_R_int)(jcontext ctx, jobject self, jobject param0, jint param1, jobject param2, jint param3, jint param4);
+#define VTABLE_java_text_SimpleDateFormat_getDSTOffset_java_util_Calendar_R_int 29
+typedef jint (*func_java_text_SimpleDateFormat_getDSTOffset_java_util_Calendar_R_int)(jcontext ctx, jobject self, jobject param0);
+#define VTABLE_java_text_SimpleDateFormat_getOffsetInMinutes_java_util_Calendar_java_util_TimeZone_R_int 30
+typedef jint (*func_java_text_SimpleDateFormat_getOffsetInMinutes_java_util_Calendar_java_util_TimeZone_R_int)(jcontext ctx, jobject self, jobject param0, jobject param1);
+#define VTABLE_java_text_SimpleDateFormat_readLiteral_java_lang_String_int_java_lang_String_R_java_lang_String 31
+typedef jobject (*func_java_text_SimpleDateFormat_readLiteral_java_lang_String_int_java_lang_String_R_java_lang_String)(jcontext ctx, jobject self, jobject param0, jint param1, jobject param2);
+#define VTABLE_java_text_SimpleDateFormat_readNumber_java_lang_String_int_java_lang_String_boolean_R_java_lang_String 32
+typedef jobject (*func_java_text_SimpleDateFormat_readNumber_java_lang_String_int_java_lang_String_boolean_R_java_lang_String)(jcontext ctx, jobject self, jobject param0, jint param1, jobject param2, jbool param3);
+#define VTABLE_java_text_SimpleDateFormat_parseYear_java_lang_String_java_lang_String_int_R_int 33
+typedef jint (*func_java_text_SimpleDateFormat_parseYear_java_lang_String_java_lang_String_int_R_int)(jcontext ctx, jobject self, jobject param0, jobject param1, jint param2);
+#define VTABLE_java_text_SimpleDateFormat_readDayOfWeek_java_lang_String_int_R_java_lang_String 34
+typedef jobject (*func_java_text_SimpleDateFormat_readDayOfWeek_java_lang_String_int_R_java_lang_String)(jcontext ctx, jobject self, jobject param0, jint param1);
+#define VTABLE_java_text_SimpleDateFormat_readAmPmMarker_java_lang_String_int_R_java_lang_String 35
+typedef jobject (*func_java_text_SimpleDateFormat_readAmPmMarker_java_lang_String_int_R_java_lang_String)(jcontext ctx, jobject self, jobject param0, jint param1);
+#define VTABLE_java_text_SimpleDateFormat_parseAmPmMarker_java_lang_String_int_R_int 36
+typedef jint (*func_java_text_SimpleDateFormat_parseAmPmMarker_java_lang_String_int_R_int)(jcontext ctx, jobject self, jobject param0, jint param1);
+#define VTABLE_java_text_SimpleDateFormat_readMonth_java_lang_String_int_java_lang_String_boolean_R_java_lang_String 37
+typedef jobject (*func_java_text_SimpleDateFormat_readMonth_java_lang_String_int_java_lang_String_boolean_R_java_lang_String)(jcontext ctx, jobject self, jobject param0, jint param1, jobject param2, jbool param3);
+#define VTABLE_java_text_SimpleDateFormat_parseMonth_java_lang_String_int_R_int 38
+typedef jint (*func_java_text_SimpleDateFormat_parseMonth_java_lang_String_int_R_int)(jcontext ctx, jobject self, jobject param0, jint param1);
+#define VTABLE_java_text_SimpleDateFormat_readTimeZone_java_lang_String_int_R_java_lang_String 39
+typedef jobject (*func_java_text_SimpleDateFormat_readTimeZone_java_lang_String_int_R_java_lang_String)(jcontext ctx, jobject self, jobject param0, jint param1);
+#define VTABLE_java_text_SimpleDateFormat_parseTimeZone_java_lang_String_int_R_int 40
+typedef jint (*func_java_text_SimpleDateFormat_parseTimeZone_java_lang_String_int_R_int)(jcontext ctx, jobject self, jobject param0, jint param1);
+#define VTABLE_java_text_SimpleDateFormat_findEndText_java_lang_String_int_R_int 41
+typedef jint (*func_java_text_SimpleDateFormat_findEndText_java_lang_String_int_R_int)(jcontext ctx, jobject self, jobject param0, jint param1);
+#define VTABLE_java_text_SimpleDateFormat_isAlpha_char_R_boolean 42
+typedef jbool (*func_java_text_SimpleDateFormat_isAlpha_char_R_boolean)(jcontext ctx, jobject self, jchar param0);
+#define VTABLE_java_text_SimpleDateFormat_isNumeric_char_R_boolean 43
+typedef jbool (*func_java_text_SimpleDateFormat_isNumeric_char_R_boolean)(jcontext ctx, jobject self, jchar param0);
+#define VTABLE_java_text_SimpleDateFormat_parseDatePattern_java_lang_String_R_java_util_List 44
+typedef jobject (*func_java_text_SimpleDateFormat_parseDatePattern_java_lang_String_R_java_util_List)(jcontext ctx, jobject self, jobject param0);
+
+void mark_java_text_SimpleDateFormat(jobject object, jint mark, jint depth);
+void clinit_java_text_SimpleDateFormat(jcontext ctx);
+void init_java_text_SimpleDateFormat(jcontext ctx, jobject self);
+void init_java_text_SimpleDateFormat_java_lang_String(jcontext ctx, jobject self, jobject param0);
+void init_java_text_SimpleDateFormat_java_lang_String_java_util_Locale(jcontext ctx, jobject self, jobject param0, jobject param1);
+jobject M_java_text_SimpleDateFormat_toPattern_R_java_lang_String(jcontext ctx, jobject self);
+jobject M_java_text_SimpleDateFormat_getDateFormatSymbols_R_java_text_DateFormatSymbols(jcontext ctx, jobject self);
+void M_java_text_SimpleDateFormat_setDateFormatSymbols_java_text_DateFormatSymbols(jcontext ctx, jobject self, jobject param0);
+void M_java_text_SimpleDateFormat_applyPattern_java_lang_String(jcontext ctx, jobject self, jobject param0);
+jobject M_java_text_SimpleDateFormat_getPatternTokens_R_java_util_List(jcontext ctx, jobject self);
+jobject M_java_text_SimpleDateFormat_clone_R_java_lang_Object(jcontext ctx, jobject self);
+jobject M_java_text_SimpleDateFormat_format_java_util_Date_R_java_lang_String(jcontext ctx, jobject self, jobject param0);
+jobject M_java_text_SimpleDateFormat_format_java_util_Date_java_lang_StringBuffer_R_java_lang_String(jcontext ctx, jobject self, jobject param0, jobject param1);
+jobject M_java_text_SimpleDateFormat_getTimeZoneDisplayNames_java_lang_String_R_Array1_java_lang_String(jcontext ctx, jobject self, jobject param0);
+jobject M_java_text_SimpleDateFormat_leftPad_int_int_R_java_lang_String(jcontext ctx, jobject self, jint param0, jint param1);
+jobject M_java_text_SimpleDateFormat_parse_java_lang_String_R_java_util_Date(jcontext ctx, jobject self, jobject param0);
+jint M_java_text_SimpleDateFormat_parseHour_java_lang_String_char_int_R_int(jcontext ctx, jobject self, jobject param0, jchar param1, jint param2);
+void M_java_text_SimpleDateFormat_validateNumber_int_int_java_lang_String_int_int(jcontext ctx, jobject self, jint param0, jint param1, jobject param2, jint param3, jint param4);
+jint M_java_text_SimpleDateFormat_throwInvalid_java_lang_String_int_R_int(jcontext ctx, jobject self, jobject param0, jint param1);
+jint M_java_text_SimpleDateFormat_parseNumber_java_lang_String_int_java_lang_String_int_int_R_int(jcontext ctx, jobject self, jobject param0, jint param1, jobject param2, jint param3, jint param4);
+jint M_java_text_SimpleDateFormat_getDSTOffset_java_util_Calendar_R_int(jcontext ctx, jobject self, jobject param0);
+jint M_java_text_SimpleDateFormat_getOffsetInMinutes_java_util_Calendar_java_util_TimeZone_R_int(jcontext ctx, jobject self, jobject param0, jobject param1);
+jobject M_java_text_SimpleDateFormat_readLiteral_java_lang_String_int_java_lang_String_R_java_lang_String(jcontext ctx, jobject self, jobject param0, jint param1, jobject param2);
+jobject M_java_text_SimpleDateFormat_readNumber_java_lang_String_int_java_lang_String_boolean_R_java_lang_String(jcontext ctx, jobject self, jobject param0, jint param1, jobject param2, jbool param3);
+jint M_java_text_SimpleDateFormat_parseYear_java_lang_String_java_lang_String_int_R_int(jcontext ctx, jobject self, jobject param0, jobject param1, jint param2);
+jobject M_java_text_SimpleDateFormat_readDayOfWeek_java_lang_String_int_R_java_lang_String(jcontext ctx, jobject self, jobject param0, jint param1);
+jobject M_java_text_SimpleDateFormat_readAmPmMarker_java_lang_String_int_R_java_lang_String(jcontext ctx, jobject self, jobject param0, jint param1);
+jint M_java_text_SimpleDateFormat_parseAmPmMarker_java_lang_String_int_R_int(jcontext ctx, jobject self, jobject param0, jint param1);
+jobject M_java_text_SimpleDateFormat_readMonth_java_lang_String_int_java_lang_String_boolean_R_java_lang_String(jcontext ctx, jobject self, jobject param0, jint param1, jobject param2, jbool param3);
+jint M_java_text_SimpleDateFormat_parseMonth_java_lang_String_int_R_int(jcontext ctx, jobject self, jobject param0, jint param1);
+jobject M_java_text_SimpleDateFormat_readTimeZone_java_lang_String_int_R_java_lang_String(jcontext ctx, jobject self, jobject param0, jint param1);
+jint M_java_text_SimpleDateFormat_parseTimeZone_java_lang_String_int_R_int(jcontext ctx, jobject self, jobject param0, jint param1);
+jint M_java_text_SimpleDateFormat_findEndText_java_lang_String_int_R_int(jcontext ctx, jobject self, jobject param0, jint param1);
+jbool M_java_text_SimpleDateFormat_isAlpha_char_R_boolean(jcontext ctx, jobject self, jchar param0);
+jbool M_java_text_SimpleDateFormat_isNumeric_char_R_boolean(jcontext ctx, jobject self, jchar param0);
+jobject M_java_text_SimpleDateFormat_parseDatePattern_java_lang_String_R_java_util_List(jcontext ctx, jobject self, jobject param0);
+
+#ifdef __cplusplus
+}
+#endif
+
+#endif

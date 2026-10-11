@@ -1,0 +1,135 @@
+#ifndef HEADER_mindustry_io_versions_Save10
+#define HEADER_mindustry_io_versions_Save10
+
+#include "Clearwing.h"
+#include "mindustry/io/SaveVersion.h"
+
+#ifdef __cplusplus
+extern "C" {
+#endif
+
+typedef struct mindustry_io_versions_Save10 {
+	mindustry_io_SaveVersion parent;
+} mindustry_io_versions_Save10;
+
+extern Class class_mindustry_io_versions_Save10;
+
+
+#define VTABLE_mindustry_io_versions_Save10_hashCode_R_int 0
+typedef jint (*func_mindustry_io_versions_Save10_hashCode_R_int)(jcontext ctx, jobject self);
+#define VTABLE_mindustry_io_versions_Save10_equals_java_lang_Object_R_boolean 1
+typedef jbool (*func_mindustry_io_versions_Save10_equals_java_lang_Object_R_boolean)(jcontext ctx, jobject self, jobject param0);
+#define VTABLE_mindustry_io_versions_Save10_clone_R_java_lang_Object 2
+typedef jobject (*func_mindustry_io_versions_Save10_clone_R_java_lang_Object)(jcontext ctx, jobject self);
+#define VTABLE_mindustry_io_versions_Save10_getClass_R_java_lang_Class 3
+typedef jobject (*func_mindustry_io_versions_Save10_getClass_R_java_lang_Class)(jcontext ctx, jobject self);
+#define VTABLE_mindustry_io_versions_Save10_toString_R_java_lang_String 4
+typedef jobject (*func_mindustry_io_versions_Save10_toString_R_java_lang_String)(jcontext ctx, jobject self);
+#define VTABLE_mindustry_io_versions_Save10_finalize 5
+typedef void (*func_mindustry_io_versions_Save10_finalize)(jcontext ctx, jobject self);
+#define VTABLE_mindustry_io_versions_Save10_notify 6
+typedef void (*func_mindustry_io_versions_Save10_notify)(jcontext ctx, jobject self);
+#define VTABLE_mindustry_io_versions_Save10_notifyAll 7
+typedef void (*func_mindustry_io_versions_Save10_notifyAll)(jcontext ctx, jobject self);
+#define VTABLE_mindustry_io_versions_Save10_wait 8
+typedef void (*func_mindustry_io_versions_Save10_wait)(jcontext ctx, jobject self);
+#define VTABLE_mindustry_io_versions_Save10_wait_long 9
+typedef void (*func_mindustry_io_versions_Save10_wait_long)(jcontext ctx, jobject self, jlong param0);
+#define VTABLE_mindustry_io_versions_Save10_wait_long_int 10
+typedef void (*func_mindustry_io_versions_Save10_wait_long_int)(jcontext ctx, jobject self, jlong param0, jint param1);
+#define VTABLE_mindustry_io_versions_Save10_readRegion_java_lang_String_java_io_DataInput_arc_util_io_CounterInputStream_mindustry_io_SaveFileReader$IORunner 11
+typedef void (*func_mindustry_io_versions_Save10_readRegion_java_lang_String_java_io_DataInput_arc_util_io_CounterInputStream_mindustry_io_SaveFileReader$IORunner)(jcontext ctx, jobject self, jobject param0, jobject param1, jobject param2, jobject param3);
+#define VTABLE_mindustry_io_versions_Save10_writeRegion_java_lang_String_java_io_DataOutput_mindustry_io_SaveFileReader$IORunner 12
+typedef void (*func_mindustry_io_versions_Save10_writeRegion_java_lang_String_java_io_DataOutput_mindustry_io_SaveFileReader$IORunner)(jcontext ctx, jobject self, jobject param0, jobject param1, jobject param2);
+#define VTABLE_mindustry_io_versions_Save10_writeChunk_java_io_DataOutput_mindustry_io_SaveFileReader$IORunner 13
+typedef void (*func_mindustry_io_versions_Save10_writeChunk_java_io_DataOutput_mindustry_io_SaveFileReader$IORunner)(jcontext ctx, jobject self, jobject param0, jobject param1);
+#define VTABLE_mindustry_io_versions_Save10_readChunk_java_io_DataInput_mindustry_io_SaveFileReader$IORunnerLength_R_int 14
+typedef jint (*func_mindustry_io_versions_Save10_readChunk_java_io_DataInput_mindustry_io_SaveFileReader$IORunnerLength_R_int)(jcontext ctx, jobject self, jobject param0, jobject param1);
+#define VTABLE_mindustry_io_versions_Save10_readChunkReads_java_io_DataInput_mindustry_io_SaveFileReader$IORunnerLength_R_int 15
+typedef jint (*func_mindustry_io_versions_Save10_readChunkReads_java_io_DataInput_mindustry_io_SaveFileReader$IORunnerLength_R_int)(jcontext ctx, jobject self, jobject param0, jobject param1);
+#define VTABLE_mindustry_io_versions_Save10_skipChunk_java_io_DataInput 16
+typedef void (*func_mindustry_io_versions_Save10_skipChunk_java_io_DataInput)(jcontext ctx, jobject self, jobject param0);
+#define VTABLE_mindustry_io_versions_Save10_readLegacyShortChunk_java_io_DataInput_mindustry_io_SaveFileReader$IORunnerLength_R_int 17
+typedef jint (*func_mindustry_io_versions_Save10_readLegacyShortChunk_java_io_DataInput_mindustry_io_SaveFileReader$IORunnerLength_R_int)(jcontext ctx, jobject self, jobject param0, jobject param1);
+#define VTABLE_mindustry_io_versions_Save10_skipLegacyShortChunk_java_io_DataInput 18
+typedef void (*func_mindustry_io_versions_Save10_skipLegacyShortChunk_java_io_DataInput)(jcontext ctx, jobject self, jobject param0);
+#define VTABLE_mindustry_io_versions_Save10_writeStringMap_java_io_DataOutput_arc_struct_ObjectMap 19
+typedef void (*func_mindustry_io_versions_Save10_writeStringMap_java_io_DataOutput_arc_struct_ObjectMap)(jcontext ctx, jobject self, jobject param0, jobject param1);
+#define VTABLE_mindustry_io_versions_Save10_readStringMap_java_io_DataInput_R_arc_struct_StringMap 20
+typedef jobject (*func_mindustry_io_versions_Save10_readStringMap_java_io_DataInput_R_arc_struct_StringMap)(jcontext ctx, jobject self, jobject param0);
+#define VTABLE_mindustry_io_versions_Save10_read_java_io_DataInputStream_arc_util_io_CounterInputStream_mindustry_io_SaveReadState 21
+typedef void (*func_mindustry_io_versions_Save10_read_java_io_DataInputStream_arc_util_io_CounterInputStream_mindustry_io_SaveReadState)(jcontext ctx, jobject self, jobject param0, jobject param1, jobject param2);
+#define VTABLE_mindustry_io_versions_Save10_write_java_io_DataOutputStream_mindustry_io_SaveOptions 22
+typedef void (*func_mindustry_io_versions_Save10_write_java_io_DataOutputStream_mindustry_io_SaveOptions)(jcontext ctx, jobject self, jobject param0, jobject param1);
+#define VTABLE_mindustry_io_versions_Save10_getMeta_java_io_DataInput_R_mindustry_io_SaveMeta 23
+typedef jobject (*func_mindustry_io_versions_Save10_getMeta_java_io_DataInput_R_mindustry_io_SaveMeta)(jcontext ctx, jobject self, jobject param0);
+#define VTABLE_mindustry_io_versions_Save10_writeCustomChunks_java_io_DataOutput_boolean 24
+typedef void (*func_mindustry_io_versions_Save10_writeCustomChunks_java_io_DataOutput_boolean)(jcontext ctx, jobject self, jobject param0, jbool param1);
+#define VTABLE_mindustry_io_versions_Save10_readCustomChunks_java_io_DataInput 25
+typedef void (*func_mindustry_io_versions_Save10_readCustomChunks_java_io_DataInput)(jcontext ctx, jobject self, jobject param0);
+#define VTABLE_mindustry_io_versions_Save10_writeMeta_java_io_DataOutput_arc_struct_StringMap 26
+typedef void (*func_mindustry_io_versions_Save10_writeMeta_java_io_DataOutput_arc_struct_StringMap)(jcontext ctx, jobject self, jobject param0, jobject param1);
+#define VTABLE_mindustry_io_versions_Save10_readMeta_java_io_DataInput_mindustry_io_SaveReadState 27
+typedef void (*func_mindustry_io_versions_Save10_readMeta_java_io_DataInput_mindustry_io_SaveReadState)(jcontext ctx, jobject self, jobject param0, jobject param1);
+#define VTABLE_mindustry_io_versions_Save10_readRules_mindustry_io_SaveReadState 28
+typedef void (*func_mindustry_io_versions_Save10_readRules_mindustry_io_SaveReadState)(jcontext ctx, jobject self, jobject param0);
+#define VTABLE_mindustry_io_versions_Save10_writeMap_java_io_DataOutput 29
+typedef void (*func_mindustry_io_versions_Save10_writeMap_java_io_DataOutput)(jcontext ctx, jobject self, jobject param0);
+#define VTABLE_mindustry_io_versions_Save10_readMap_java_io_DataInput_mindustry_io_SaveReadState 30
+typedef void (*func_mindustry_io_versions_Save10_readMap_java_io_DataInput_mindustry_io_SaveReadState)(jcontext ctx, jobject self, jobject param0, jobject param1);
+#define VTABLE_mindustry_io_versions_Save10_writeTeamBlocks_java_io_DataOutput 31
+typedef void (*func_mindustry_io_versions_Save10_writeTeamBlocks_java_io_DataOutput)(jcontext ctx, jobject self, jobject param0);
+#define VTABLE_mindustry_io_versions_Save10_writeWorldEntities_java_io_DataOutput 32
+typedef void (*func_mindustry_io_versions_Save10_writeWorldEntities_java_io_DataOutput)(jcontext ctx, jobject self, jobject param0);
+#define VTABLE_mindustry_io_versions_Save10_writeWorldEntities_java_io_DataOutput_arc_func_Boolf 33
+typedef void (*func_mindustry_io_versions_Save10_writeWorldEntities_java_io_DataOutput_arc_func_Boolf)(jcontext ctx, jobject self, jobject param0, jobject param1);
+#define VTABLE_mindustry_io_versions_Save10_writeEntity_mindustry_gen_Entityc_java_io_DataOutput 34
+typedef void (*func_mindustry_io_versions_Save10_writeEntity_mindustry_gen_Entityc_java_io_DataOutput)(jcontext ctx, jobject self, jobject param0, jobject param1);
+#define VTABLE_mindustry_io_versions_Save10_writeEntityMapping_java_io_DataOutput 35
+typedef void (*func_mindustry_io_versions_Save10_writeEntityMapping_java_io_DataOutput)(jcontext ctx, jobject self, jobject param0);
+#define VTABLE_mindustry_io_versions_Save10_writeEntities_java_io_DataOutput 36
+typedef void (*func_mindustry_io_versions_Save10_writeEntities_java_io_DataOutput)(jcontext ctx, jobject self, jobject param0);
+#define VTABLE_mindustry_io_versions_Save10_writeMarkers_java_io_DataOutput 37
+typedef void (*func_mindustry_io_versions_Save10_writeMarkers_java_io_DataOutput)(jcontext ctx, jobject self, jobject param0);
+#define VTABLE_mindustry_io_versions_Save10_readMarkers_java_io_DataInput 38
+typedef void (*func_mindustry_io_versions_Save10_readMarkers_java_io_DataInput)(jcontext ctx, jobject self, jobject param0);
+#define VTABLE_mindustry_io_versions_Save10_readTeamBlocks_java_io_DataInput 39
+typedef void (*func_mindustry_io_versions_Save10_readTeamBlocks_java_io_DataInput)(jcontext ctx, jobject self, jobject param0);
+#define VTABLE_mindustry_io_versions_Save10_readWorldEntities_java_io_DataInput_Array1_arc_func_Prov_mindustry_io_SaveReadState 40
+typedef void (*func_mindustry_io_versions_Save10_readWorldEntities_java_io_DataInput_Array1_arc_func_Prov_mindustry_io_SaveReadState)(jcontext ctx, jobject self, jobject param0, jobject param1, jobject param2);
+#define VTABLE_mindustry_io_versions_Save10_readEntityMapping_java_io_DataInput_R_Array1_arc_func_Prov 41
+typedef jobject (*func_mindustry_io_versions_Save10_readEntityMapping_java_io_DataInput_R_Array1_arc_func_Prov)(jcontext ctx, jobject self, jobject param0);
+#define VTABLE_mindustry_io_versions_Save10_readEntities_java_io_DataInput_mindustry_io_SaveReadState 42
+typedef void (*func_mindustry_io_versions_Save10_readEntities_java_io_DataInput_mindustry_io_SaveReadState)(jcontext ctx, jobject self, jobject param0, jobject param1);
+#define VTABLE_mindustry_io_versions_Save10_readDataPatches_java_io_DataInput_mindustry_io_SaveReadState 43
+typedef void (*func_mindustry_io_versions_Save10_readDataPatches_java_io_DataInput_mindustry_io_SaveReadState)(jcontext ctx, jobject self, jobject param0, jobject param1);
+#define VTABLE_mindustry_io_versions_Save10_writeDataPatches_java_io_DataOutput_boolean 44
+typedef void (*func_mindustry_io_versions_Save10_writeDataPatches_java_io_DataOutput_boolean)(jcontext ctx, jobject self, jobject param0, jbool param1);
+#define VTABLE_mindustry_io_versions_Save10_readContentHeader_java_io_DataInput 45
+typedef void (*func_mindustry_io_versions_Save10_readContentHeader_java_io_DataInput)(jcontext ctx, jobject self, jobject param0);
+#define VTABLE_mindustry_io_versions_Save10_writeContentHeader_java_io_DataOutput 46
+typedef void (*func_mindustry_io_versions_Save10_writeContentHeader_java_io_DataOutput)(jcontext ctx, jobject self, jobject param0);
+#define VTABLE_mindustry_io_versions_Save10_lambda$write$2_java_io_DataOutput 47
+typedef void (*func_mindustry_io_versions_Save10_lambda$write$2_java_io_DataOutput)(jcontext ctx, jobject self, jobject param0);
+#define VTABLE_mindustry_io_versions_Save10_lambda$write$1_mindustry_io_SaveOptions_java_io_DataOutput 48
+typedef void (*func_mindustry_io_versions_Save10_lambda$write$1_mindustry_io_SaveOptions_java_io_DataOutput)(jcontext ctx, jobject self, jobject param0, jobject param1);
+#define VTABLE_mindustry_io_versions_Save10_lambda$write$0_mindustry_io_SaveOptions_java_io_DataOutput 49
+typedef void (*func_mindustry_io_versions_Save10_lambda$write$0_mindustry_io_SaveOptions_java_io_DataOutput)(jcontext ctx, jobject self, jobject param0, jobject param1);
+#define VTABLE_mindustry_io_versions_Save10_lambda$read$3_mindustry_io_SaveReadState_java_io_DataInput 50
+typedef void (*func_mindustry_io_versions_Save10_lambda$read$3_mindustry_io_SaveReadState_java_io_DataInput)(jcontext ctx, jobject self, jobject param0, jobject param1);
+#define VTABLE_mindustry_io_versions_Save10_lambda$read$2_mindustry_io_SaveReadState_java_io_DataInput 51
+typedef void (*func_mindustry_io_versions_Save10_lambda$read$2_mindustry_io_SaveReadState_java_io_DataInput)(jcontext ctx, jobject self, jobject param0, jobject param1);
+#define VTABLE_mindustry_io_versions_Save10_lambda$read$1_mindustry_io_SaveReadState_java_io_DataInput 52
+typedef void (*func_mindustry_io_versions_Save10_lambda$read$1_mindustry_io_SaveReadState_java_io_DataInput)(jcontext ctx, jobject self, jobject param0, jobject param1);
+#define VTABLE_mindustry_io_versions_Save10_lambda$read$0_mindustry_io_SaveReadState_java_io_DataInput 53
+typedef void (*func_mindustry_io_versions_Save10_lambda$read$0_mindustry_io_SaveReadState_java_io_DataInput)(jcontext ctx, jobject self, jobject param0, jobject param1);
+
+void mark_mindustry_io_versions_Save10(jobject object, jint mark, jint depth);
+void clinit_mindustry_io_versions_Save10(jcontext ctx);
+void init_mindustry_io_versions_Save10(jcontext ctx, jobject self);
+
+#ifdef __cplusplus
+}
+#endif
+
+#endif

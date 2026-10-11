@@ -1,0 +1,187 @@
+#ifndef HEADER_mindustry_ai_BlockIndexer
+#define HEADER_mindustry_ai_BlockIndexer
+
+#include "Clearwing.h"
+#include "java/lang/Object.h"
+
+#ifdef __cplusplus
+extern "C" {
+#endif
+
+typedef struct mindustry_ai_BlockIndexer {
+	java_lang_Object parent;
+	jint F_quadWidth;
+	jint F_quadHeight;
+	jref F_ores;
+	jref F_wallOres;
+	jref F_damagedTiles;
+	jref F_allPresentOres;
+	jref F_allOres;
+	jref F_allWallOres;
+	jref F_activeTeams;
+	jref F_flagMap;
+	jref F_blocksPresent;
+	jref F_breturnArray;
+	jref F_floorMap;
+} mindustry_ai_BlockIndexer;
+
+extern Class class_mindustry_ai_BlockIndexer;
+
+extern jint SF_mindustry_ai_BlockIndexer_quadrantSize;
+extern jobject SF_mindustry_ai_BlockIndexer_rect;
+extern jbool SF_mindustry_ai_BlockIndexer_returnBool;
+
+#define VTABLE_mindustry_ai_BlockIndexer_hashCode_R_int 0
+typedef jint (*func_mindustry_ai_BlockIndexer_hashCode_R_int)(jcontext ctx, jobject self);
+#define VTABLE_mindustry_ai_BlockIndexer_equals_java_lang_Object_R_boolean 1
+typedef jbool (*func_mindustry_ai_BlockIndexer_equals_java_lang_Object_R_boolean)(jcontext ctx, jobject self, jobject param0);
+#define VTABLE_mindustry_ai_BlockIndexer_clone_R_java_lang_Object 2
+typedef jobject (*func_mindustry_ai_BlockIndexer_clone_R_java_lang_Object)(jcontext ctx, jobject self);
+#define VTABLE_mindustry_ai_BlockIndexer_getClass_R_java_lang_Class 3
+typedef jobject (*func_mindustry_ai_BlockIndexer_getClass_R_java_lang_Class)(jcontext ctx, jobject self);
+#define VTABLE_mindustry_ai_BlockIndexer_toString_R_java_lang_String 4
+typedef jobject (*func_mindustry_ai_BlockIndexer_toString_R_java_lang_String)(jcontext ctx, jobject self);
+#define VTABLE_mindustry_ai_BlockIndexer_finalize 5
+typedef void (*func_mindustry_ai_BlockIndexer_finalize)(jcontext ctx, jobject self);
+#define VTABLE_mindustry_ai_BlockIndexer_notify 6
+typedef void (*func_mindustry_ai_BlockIndexer_notify)(jcontext ctx, jobject self);
+#define VTABLE_mindustry_ai_BlockIndexer_notifyAll 7
+typedef void (*func_mindustry_ai_BlockIndexer_notifyAll)(jcontext ctx, jobject self);
+#define VTABLE_mindustry_ai_BlockIndexer_wait 8
+typedef void (*func_mindustry_ai_BlockIndexer_wait)(jcontext ctx, jobject self);
+#define VTABLE_mindustry_ai_BlockIndexer_wait_long 9
+typedef void (*func_mindustry_ai_BlockIndexer_wait_long)(jcontext ctx, jobject self, jlong param0);
+#define VTABLE_mindustry_ai_BlockIndexer_wait_long_int 10
+typedef void (*func_mindustry_ai_BlockIndexer_wait_long_int)(jcontext ctx, jobject self, jlong param0, jint param1);
+#define VTABLE_mindustry_ai_BlockIndexer_getAllPresentOres_R_arc_struct_Seq 11
+typedef jobject (*func_mindustry_ai_BlockIndexer_getAllPresentOres_R_arc_struct_Seq)(jcontext ctx, jobject self);
+#define VTABLE_mindustry_ai_BlockIndexer_updatePresentOres 12
+typedef void (*func_mindustry_ai_BlockIndexer_updatePresentOres)(jcontext ctx, jobject self);
+#define VTABLE_mindustry_ai_BlockIndexer_removeFloorIndex_mindustry_world_Tile_mindustry_world_blocks_environment_Floor 13
+typedef void (*func_mindustry_ai_BlockIndexer_removeFloorIndex_mindustry_world_Tile_mindustry_world_blocks_environment_Floor)(jcontext ctx, jobject self, jobject param0, jobject param1);
+#define VTABLE_mindustry_ai_BlockIndexer_addFloorIndex_mindustry_world_Tile_mindustry_world_blocks_environment_Floor 14
+typedef void (*func_mindustry_ai_BlockIndexer_addFloorIndex_mindustry_world_Tile_mindustry_world_blocks_environment_Floor)(jcontext ctx, jobject self, jobject param0, jobject param1);
+#define VTABLE_mindustry_ai_BlockIndexer_getFlaggedFloors_mindustry_world_meta_BlockFlag_R_arc_struct_Seq 15
+typedef jobject (*func_mindustry_ai_BlockIndexer_getFlaggedFloors_mindustry_world_meta_BlockFlag_R_arc_struct_Seq)(jcontext ctx, jobject self, jobject param0);
+#define VTABLE_mindustry_ai_BlockIndexer_removeIndex_mindustry_world_Tile 16
+typedef void (*func_mindustry_ai_BlockIndexer_removeIndex_mindustry_world_Tile)(jcontext ctx, jobject self, jobject param0);
+#define VTABLE_mindustry_ai_BlockIndexer_addIndex_mindustry_world_Tile 17
+typedef void (*func_mindustry_ai_BlockIndexer_addIndex_mindustry_world_Tile)(jcontext ctx, jobject self, jobject param0);
+#define VTABLE_mindustry_ai_BlockIndexer_isBlockPresent_mindustry_world_Block_R_boolean 18
+typedef jbool (*func_mindustry_ai_BlockIndexer_isBlockPresent_mindustry_world_Block_R_boolean)(jcontext ctx, jobject self, jobject param0);
+#define VTABLE_mindustry_ai_BlockIndexer_clearFlags 19
+typedef void (*func_mindustry_ai_BlockIndexer_clearFlags)(jcontext ctx, jobject self);
+#define VTABLE_mindustry_ai_BlockIndexer_getFlagged_mindustry_game_Team_R_Array1_arc_struct_Seq 20
+typedef jobject (*func_mindustry_ai_BlockIndexer_getFlagged_mindustry_game_Team_R_Array1_arc_struct_Seq)(jcontext ctx, jobject self, jobject param0);
+#define VTABLE_mindustry_ai_BlockIndexer_hasOre_mindustry_type_Item_R_boolean 21
+typedef jbool (*func_mindustry_ai_BlockIndexer_hasOre_mindustry_type_Item_R_boolean)(jcontext ctx, jobject self, jobject param0);
+#define VTABLE_mindustry_ai_BlockIndexer_hasWallOre_mindustry_type_Item_R_boolean 22
+typedef jbool (*func_mindustry_ai_BlockIndexer_hasWallOre_mindustry_type_Item_R_boolean)(jcontext ctx, jobject self, jobject param0);
+#define VTABLE_mindustry_ai_BlockIndexer_getDamaged_mindustry_game_Team_R_arc_struct_Seq 23
+typedef jobject (*func_mindustry_ai_BlockIndexer_getDamaged_mindustry_game_Team_R_arc_struct_Seq)(jcontext ctx, jobject self, jobject param0);
+#define VTABLE_mindustry_ai_BlockIndexer_getFlagged_mindustry_game_Team_mindustry_world_meta_BlockFlag_R_arc_struct_Seq 24
+typedef jobject (*func_mindustry_ai_BlockIndexer_getFlagged_mindustry_game_Team_mindustry_world_meta_BlockFlag_R_arc_struct_Seq)(jcontext ctx, jobject self, jobject param0, jobject param1);
+#define VTABLE_mindustry_ai_BlockIndexer_findClosestFlag_float_float_mindustry_game_Team_mindustry_world_meta_BlockFlag_R_mindustry_gen_Building 25
+typedef jobject (*func_mindustry_ai_BlockIndexer_findClosestFlag_float_float_mindustry_game_Team_mindustry_world_meta_BlockFlag_R_mindustry_gen_Building)(jcontext ctx, jobject self, jfloat param0, jfloat param1, jobject param2, jobject param3);
+#define VTABLE_mindustry_ai_BlockIndexer_eachBlock_mindustry_gen_Teamc_float_arc_func_Boolf_arc_func_Cons_R_boolean 26
+typedef jbool (*func_mindustry_ai_BlockIndexer_eachBlock_mindustry_gen_Teamc_float_arc_func_Boolf_arc_func_Cons_R_boolean)(jcontext ctx, jobject self, jobject param0, jfloat param1, jobject param2, jobject param3);
+#define VTABLE_mindustry_ai_BlockIndexer_eachBlock_mindustry_game_Team_float_float_float_arc_func_Boolf_arc_func_Cons_R_boolean 27
+typedef jbool (*func_mindustry_ai_BlockIndexer_eachBlock_mindustry_game_Team_float_float_float_arc_func_Boolf_arc_func_Cons_R_boolean)(jcontext ctx, jobject self, jobject param0, jfloat param1, jfloat param2, jfloat param3, jobject param4, jobject param5);
+#define VTABLE_mindustry_ai_BlockIndexer_eachBlock_mindustry_game_Team_arc_math_geom_Rect_arc_func_Boolf_arc_func_Cons_R_boolean 28
+typedef jbool (*func_mindustry_ai_BlockIndexer_eachBlock_mindustry_game_Team_arc_math_geom_Rect_arc_func_Boolf_arc_func_Cons_R_boolean)(jcontext ctx, jobject self, jobject param0, jobject param1, jobject param2, jobject param3);
+#define VTABLE_mindustry_ai_BlockIndexer_getEnemy_mindustry_game_Team_mindustry_world_meta_BlockFlag_R_arc_struct_Seq 29
+typedef jobject (*func_mindustry_ai_BlockIndexer_getEnemy_mindustry_game_Team_mindustry_world_meta_BlockFlag_R_arc_struct_Seq)(jcontext ctx, jobject self, jobject param0, jobject param1);
+#define VTABLE_mindustry_ai_BlockIndexer_notifyHealthChanged_mindustry_gen_Building 30
+typedef void (*func_mindustry_ai_BlockIndexer_notifyHealthChanged_mindustry_gen_Building)(jcontext ctx, jobject self, jobject param0);
+#define VTABLE_mindustry_ai_BlockIndexer_allBuildings_float_float_float_arc_func_Cons 31
+typedef void (*func_mindustry_ai_BlockIndexer_allBuildings_float_float_float_arc_func_Cons)(jcontext ctx, jobject self, jfloat param0, jfloat param1, jfloat param2, jobject param3);
+#define VTABLE_mindustry_ai_BlockIndexer_findEnemyTile_mindustry_game_Team_float_float_float_mindustry_entities_Units$BuildingPriorityf_arc_func_Boolf_R_mindustry_gen_Building 32
+typedef jobject (*func_mindustry_ai_BlockIndexer_findEnemyTile_mindustry_game_Team_float_float_float_mindustry_entities_Units$BuildingPriorityf_arc_func_Boolf_R_mindustry_gen_Building)(jcontext ctx, jobject self, jobject param0, jfloat param1, jfloat param2, jfloat param3, jobject param4, jobject param5);
+#define VTABLE_mindustry_ai_BlockIndexer_findEnemyTile_mindustry_game_Team_float_float_float_mindustry_entities_Units$BuildingPriorityf_arc_func_Boolf_mindustry_game_Team_R_mindustry_gen_Building 33
+typedef jobject (*func_mindustry_ai_BlockIndexer_findEnemyTile_mindustry_game_Team_float_float_float_mindustry_entities_Units$BuildingPriorityf_arc_func_Boolf_mindustry_game_Team_R_mindustry_gen_Building)(jcontext ctx, jobject self, jobject param0, jfloat param1, jfloat param2, jfloat param3, jobject param4, jobject param5, jobject param6);
+#define VTABLE_mindustry_ai_BlockIndexer_findEnemyTile_mindustry_game_Team_float_float_float_arc_func_Boolf_R_mindustry_gen_Building 34
+typedef jobject (*func_mindustry_ai_BlockIndexer_findEnemyTile_mindustry_game_Team_float_float_float_arc_func_Boolf_R_mindustry_gen_Building)(jcontext ctx, jobject self, jobject param0, jfloat param1, jfloat param2, jfloat param3, jobject param4);
+#define VTABLE_mindustry_ai_BlockIndexer_findTile_mindustry_game_Team_float_float_float_arc_func_Boolf_R_mindustry_gen_Building 35
+typedef jobject (*func_mindustry_ai_BlockIndexer_findTile_mindustry_game_Team_float_float_float_arc_func_Boolf_R_mindustry_gen_Building)(jcontext ctx, jobject self, jobject param0, jfloat param1, jfloat param2, jfloat param3, jobject param4);
+#define VTABLE_mindustry_ai_BlockIndexer_findTile_mindustry_game_Team_float_float_float_arc_func_Boolf_boolean_R_mindustry_gen_Building 36
+typedef jobject (*func_mindustry_ai_BlockIndexer_findTile_mindustry_game_Team_float_float_float_arc_func_Boolf_boolean_R_mindustry_gen_Building)(jcontext ctx, jobject self, jobject param0, jfloat param1, jfloat param2, jfloat param3, jobject param4, jbool param5);
+#define VTABLE_mindustry_ai_BlockIndexer_findTile_mindustry_game_Team_float_float_float_arc_func_Boolf_boolean_mindustry_game_Team_R_mindustry_gen_Building 37
+typedef jobject (*func_mindustry_ai_BlockIndexer_findTile_mindustry_game_Team_float_float_float_arc_func_Boolf_boolean_mindustry_game_Team_R_mindustry_gen_Building)(jcontext ctx, jobject self, jobject param0, jfloat param1, jfloat param2, jfloat param3, jobject param4, jbool param5, jobject param6);
+#define VTABLE_mindustry_ai_BlockIndexer_findClosestOre_float_float_mindustry_type_Item_R_mindustry_world_Tile 38
+typedef jobject (*func_mindustry_ai_BlockIndexer_findClosestOre_float_float_mindustry_type_Item_R_mindustry_world_Tile)(jcontext ctx, jobject self, jfloat param0, jfloat param1, jobject param2);
+#define VTABLE_mindustry_ai_BlockIndexer_findClosestWallOre_float_float_mindustry_type_Item_R_mindustry_world_Tile 39
+typedef jobject (*func_mindustry_ai_BlockIndexer_findClosestWallOre_float_float_mindustry_type_Item_R_mindustry_world_Tile)(jcontext ctx, jobject self, jfloat param0, jfloat param1, jobject param2);
+#define VTABLE_mindustry_ai_BlockIndexer_findClosestOre_mindustry_gen_Unit_mindustry_type_Item_R_mindustry_world_Tile 40
+typedef jobject (*func_mindustry_ai_BlockIndexer_findClosestOre_mindustry_gen_Unit_mindustry_type_Item_R_mindustry_world_Tile)(jcontext ctx, jobject self, jobject param0, jobject param1);
+#define VTABLE_mindustry_ai_BlockIndexer_findClosestWallOre_mindustry_gen_Unit_mindustry_type_Item_R_mindustry_world_Tile 41
+typedef jobject (*func_mindustry_ai_BlockIndexer_findClosestWallOre_mindustry_gen_Unit_mindustry_type_Item_R_mindustry_world_Tile)(jcontext ctx, jobject self, jobject param0, jobject param1);
+#define VTABLE_mindustry_ai_BlockIndexer_process_mindustry_world_Tile 42
+typedef void (*func_mindustry_ai_BlockIndexer_process_mindustry_world_Tile)(jcontext ctx, jobject self, jobject param0);
+#define VTABLE_mindustry_ai_BlockIndexer_lambda$eachBlock$2_arc_func_Boolf_mindustry_gen_Building 43
+typedef void (*func_mindustry_ai_BlockIndexer_lambda$eachBlock$2_arc_func_Boolf_mindustry_gen_Building)(jcontext ctx, jobject self, jobject param0, jobject param1);
+#define VTABLE_mindustry_ai_BlockIndexer_lambda$eachBlock$1_float_float_float_arc_func_Boolf_mindustry_gen_Building 44
+typedef void (*func_mindustry_ai_BlockIndexer_lambda$eachBlock$1_float_float_float_arc_func_Boolf_mindustry_gen_Building)(jcontext ctx, jobject self, jfloat param0, jfloat param1, jfloat param2, jobject param3, jobject param4);
+#define VTABLE_mindustry_ai_BlockIndexer_lambda$addIndex$0_mindustry_world_Tile 45
+typedef void (*func_mindustry_ai_BlockIndexer_lambda$addIndex$0_mindustry_world_Tile)(jcontext ctx, jobject self, jobject param0);
+#define VTABLE_mindustry_ai_BlockIndexer_lambda$new$3_mindustry_game_EventType$WorldLoadEvent 46
+typedef void (*func_mindustry_ai_BlockIndexer_lambda$new$3_mindustry_game_EventType$WorldLoadEvent)(jcontext ctx, jobject self, jobject param0);
+#define VTABLE_mindustry_ai_BlockIndexer_lambda$new$2_mindustry_game_EventType$TileFloorChangeEvent 47
+typedef void (*func_mindustry_ai_BlockIndexer_lambda$new$2_mindustry_game_EventType$TileFloorChangeEvent)(jcontext ctx, jobject self, jobject param0);
+#define VTABLE_mindustry_ai_BlockIndexer_lambda$new$1_mindustry_game_EventType$TileChangeEvent 48
+typedef void (*func_mindustry_ai_BlockIndexer_lambda$new$1_mindustry_game_EventType$TileChangeEvent)(jcontext ctx, jobject self, jobject param0);
+#define VTABLE_mindustry_ai_BlockIndexer_lambda$new$0_mindustry_game_EventType$TilePreChangeEvent 49
+typedef void (*func_mindustry_ai_BlockIndexer_lambda$new$0_mindustry_game_EventType$TilePreChangeEvent)(jcontext ctx, jobject self, jobject param0);
+
+void mark_mindustry_ai_BlockIndexer(jobject object, jint mark, jint depth);
+void clinit_mindustry_ai_BlockIndexer(jcontext ctx);
+void init_mindustry_ai_BlockIndexer(jcontext ctx, jobject self);
+jobject M_mindustry_ai_BlockIndexer_getAllPresentOres_R_arc_struct_Seq(jcontext ctx, jobject self);
+void M_mindustry_ai_BlockIndexer_updatePresentOres(jcontext ctx, jobject self);
+void M_mindustry_ai_BlockIndexer_removeFloorIndex_mindustry_world_Tile_mindustry_world_blocks_environment_Floor(jcontext ctx, jobject self, jobject param0, jobject param1);
+void M_mindustry_ai_BlockIndexer_addFloorIndex_mindustry_world_Tile_mindustry_world_blocks_environment_Floor(jcontext ctx, jobject self, jobject param0, jobject param1);
+jobject M_mindustry_ai_BlockIndexer_getFlaggedFloors_mindustry_world_meta_BlockFlag_R_arc_struct_Seq(jcontext ctx, jobject self, jobject param0);
+void M_mindustry_ai_BlockIndexer_removeIndex_mindustry_world_Tile(jcontext ctx, jobject self, jobject param0);
+void M_mindustry_ai_BlockIndexer_addIndex_mindustry_world_Tile(jcontext ctx, jobject self, jobject param0);
+jbool M_mindustry_ai_BlockIndexer_isBlockPresent_mindustry_world_Block_R_boolean(jcontext ctx, jobject self, jobject param0);
+void M_mindustry_ai_BlockIndexer_clearFlags(jcontext ctx, jobject self);
+jobject M_mindustry_ai_BlockIndexer_getFlagged_mindustry_game_Team_R_Array1_arc_struct_Seq(jcontext ctx, jobject self, jobject param0);
+jbool M_mindustry_ai_BlockIndexer_hasOre_mindustry_type_Item_R_boolean(jcontext ctx, jobject self, jobject param0);
+jbool M_mindustry_ai_BlockIndexer_hasWallOre_mindustry_type_Item_R_boolean(jcontext ctx, jobject self, jobject param0);
+jobject M_mindustry_ai_BlockIndexer_getDamaged_mindustry_game_Team_R_arc_struct_Seq(jcontext ctx, jobject self, jobject param0);
+jobject M_mindustry_ai_BlockIndexer_getFlagged_mindustry_game_Team_mindustry_world_meta_BlockFlag_R_arc_struct_Seq(jcontext ctx, jobject self, jobject param0, jobject param1);
+jobject M_mindustry_ai_BlockIndexer_findClosestFlag_float_float_mindustry_game_Team_mindustry_world_meta_BlockFlag_R_mindustry_gen_Building(jcontext ctx, jobject self, jfloat param0, jfloat param1, jobject param2, jobject param3);
+jbool M_mindustry_ai_BlockIndexer_eachBlock_mindustry_gen_Teamc_float_arc_func_Boolf_arc_func_Cons_R_boolean(jcontext ctx, jobject self, jobject param0, jfloat param1, jobject param2, jobject param3);
+jbool M_mindustry_ai_BlockIndexer_eachBlock_mindustry_game_Team_float_float_float_arc_func_Boolf_arc_func_Cons_R_boolean(jcontext ctx, jobject self, jobject param0, jfloat param1, jfloat param2, jfloat param3, jobject param4, jobject param5);
+jbool M_mindustry_ai_BlockIndexer_eachBlock_mindustry_game_Team_arc_math_geom_Rect_arc_func_Boolf_arc_func_Cons_R_boolean(jcontext ctx, jobject self, jobject param0, jobject param1, jobject param2, jobject param3);
+jobject M_mindustry_ai_BlockIndexer_getEnemy_mindustry_game_Team_mindustry_world_meta_BlockFlag_R_arc_struct_Seq(jcontext ctx, jobject self, jobject param0, jobject param1);
+void M_mindustry_ai_BlockIndexer_notifyHealthChanged_mindustry_gen_Building(jcontext ctx, jobject self, jobject param0);
+void M_mindustry_ai_BlockIndexer_allBuildings_float_float_float_arc_func_Cons(jcontext ctx, jobject self, jfloat param0, jfloat param1, jfloat param2, jobject param3);
+jobject M_mindustry_ai_BlockIndexer_findEnemyTile_mindustry_game_Team_float_float_float_mindustry_entities_Units$BuildingPriorityf_arc_func_Boolf_R_mindustry_gen_Building(jcontext ctx, jobject self, jobject param0, jfloat param1, jfloat param2, jfloat param3, jobject param4, jobject param5);
+jobject M_mindustry_ai_BlockIndexer_findEnemyTile_mindustry_game_Team_float_float_float_mindustry_entities_Units$BuildingPriorityf_arc_func_Boolf_mindustry_game_Team_R_mindustry_gen_Building(jcontext ctx, jobject self, jobject param0, jfloat param1, jfloat param2, jfloat param3, jobject param4, jobject param5, jobject param6);
+jobject M_mindustry_ai_BlockIndexer_findEnemyTile_mindustry_game_Team_float_float_float_arc_func_Boolf_R_mindustry_gen_Building(jcontext ctx, jobject self, jobject param0, jfloat param1, jfloat param2, jfloat param3, jobject param4);
+jobject M_mindustry_ai_BlockIndexer_findTile_mindustry_game_Team_float_float_float_arc_func_Boolf_R_mindustry_gen_Building(jcontext ctx, jobject self, jobject param0, jfloat param1, jfloat param2, jfloat param3, jobject param4);
+jobject M_mindustry_ai_BlockIndexer_findTile_mindustry_game_Team_float_float_float_arc_func_Boolf_boolean_R_mindustry_gen_Building(jcontext ctx, jobject self, jobject param0, jfloat param1, jfloat param2, jfloat param3, jobject param4, jbool param5);
+jobject M_mindustry_ai_BlockIndexer_findTile_mindustry_game_Team_float_float_float_arc_func_Boolf_boolean_mindustry_game_Team_R_mindustry_gen_Building(jcontext ctx, jobject self, jobject param0, jfloat param1, jfloat param2, jfloat param3, jobject param4, jbool param5, jobject param6);
+jobject M_mindustry_ai_BlockIndexer_findClosestOre_float_float_mindustry_type_Item_R_mindustry_world_Tile(jcontext ctx, jobject self, jfloat param0, jfloat param1, jobject param2);
+jobject M_mindustry_ai_BlockIndexer_findClosestWallOre_float_float_mindustry_type_Item_R_mindustry_world_Tile(jcontext ctx, jobject self, jfloat param0, jfloat param1, jobject param2);
+jobject M_mindustry_ai_BlockIndexer_findClosestOre_mindustry_gen_Unit_mindustry_type_Item_R_mindustry_world_Tile(jcontext ctx, jobject self, jobject param0, jobject param1);
+jobject M_mindustry_ai_BlockIndexer_findClosestWallOre_mindustry_gen_Unit_mindustry_type_Item_R_mindustry_world_Tile(jcontext ctx, jobject self, jobject param0, jobject param1);
+void M_mindustry_ai_BlockIndexer_process_mindustry_world_Tile(jcontext ctx, jobject self, jobject param0);
+jobject SM_mindustry_ai_BlockIndexer_lambda$process$0_R_arc_struct_Seq(jcontext ctx);
+jbool SM_mindustry_ai_BlockIndexer_lambda$findEnemyTile$0_arc_func_Boolf_mindustry_game_Team_mindustry_gen_Building_R_boolean(jcontext ctx, jobject param0, jobject param1, jobject param2);
+void M_mindustry_ai_BlockIndexer_lambda$eachBlock$2_arc_func_Boolf_mindustry_gen_Building(jcontext ctx, jobject self, jobject param0, jobject param1);
+void M_mindustry_ai_BlockIndexer_lambda$eachBlock$1_float_float_float_arc_func_Boolf_mindustry_gen_Building(jcontext ctx, jobject self, jfloat param0, jfloat param1, jfloat param2, jobject param3, jobject param4);
+void SM_mindustry_ai_BlockIndexer_lambda$eachBlock$0_arc_func_Boolf_arc_func_Cons_mindustry_gen_Building(jcontext ctx, jobject param0, jobject param1, jobject param2);
+jbool SM_mindustry_ai_BlockIndexer_lambda$getDamaged$0_mindustry_gen_Building_R_boolean(jcontext ctx, jobject param0);
+void M_mindustry_ai_BlockIndexer_lambda$addIndex$0_mindustry_world_Tile(jcontext ctx, jobject self, jobject param0);
+jobject SM_mindustry_ai_BlockIndexer_lambda$removeIndex$0_R_arc_struct_Seq(jcontext ctx);
+void M_mindustry_ai_BlockIndexer_lambda$new$3_mindustry_game_EventType$WorldLoadEvent(jcontext ctx, jobject self, jobject param0);
+void M_mindustry_ai_BlockIndexer_lambda$new$2_mindustry_game_EventType$TileFloorChangeEvent(jcontext ctx, jobject self, jobject param0);
+void M_mindustry_ai_BlockIndexer_lambda$new$1_mindustry_game_EventType$TileChangeEvent(jcontext ctx, jobject self, jobject param0);
+void M_mindustry_ai_BlockIndexer_lambda$new$0_mindustry_game_EventType$TilePreChangeEvent(jcontext ctx, jobject self, jobject param0);
+
+#ifdef __cplusplus
+}
+#endif
+
+#endif

@@ -1,0 +1,726 @@
+#ifndef HEADER_mindustry_entities_comp_WaterMoveComp
+#define HEADER_mindustry_entities_comp_WaterMoveComp
+
+#include "Clearwing.h"
+#include "java/lang/Object.h"
+#include "mindustry/gen/Posc.h"
+#include "mindustry/gen/Velc.h"
+#include "mindustry/gen/Hitboxc.h"
+#include "mindustry/gen/Unitc.h"
+
+#ifdef __cplusplus
+extern "C" {
+#endif
+
+typedef struct mindustry_entities_comp_WaterMoveComp {
+	java_lang_Object parent;
+	jfloat F_x;
+	jfloat F_y;
+	jfloat F_rotation;
+	jfloat F_speedMultiplier;
+	jref F_type;
+	jref F_tleft;
+	jref F_tright;
+	jref F_trailColor;
+} mindustry_entities_comp_WaterMoveComp;
+
+extern Class class_mindustry_entities_comp_WaterMoveComp;
+
+
+#define VTABLE_mindustry_entities_comp_WaterMoveComp_hashCode_R_int 0
+typedef jint (*func_mindustry_entities_comp_WaterMoveComp_hashCode_R_int)(jcontext ctx, jobject self);
+#define VTABLE_mindustry_entities_comp_WaterMoveComp_equals_java_lang_Object_R_boolean 1
+typedef jbool (*func_mindustry_entities_comp_WaterMoveComp_equals_java_lang_Object_R_boolean)(jcontext ctx, jobject self, jobject param0);
+#define VTABLE_mindustry_entities_comp_WaterMoveComp_clone_R_java_lang_Object 2
+typedef jobject (*func_mindustry_entities_comp_WaterMoveComp_clone_R_java_lang_Object)(jcontext ctx, jobject self);
+#define VTABLE_mindustry_entities_comp_WaterMoveComp_getClass_R_java_lang_Class 3
+typedef jobject (*func_mindustry_entities_comp_WaterMoveComp_getClass_R_java_lang_Class)(jcontext ctx, jobject self);
+#define VTABLE_mindustry_entities_comp_WaterMoveComp_toString_R_java_lang_String 4
+typedef jobject (*func_mindustry_entities_comp_WaterMoveComp_toString_R_java_lang_String)(jcontext ctx, jobject self);
+#define VTABLE_mindustry_entities_comp_WaterMoveComp_finalize 5
+typedef void (*func_mindustry_entities_comp_WaterMoveComp_finalize)(jcontext ctx, jobject self);
+#define VTABLE_mindustry_entities_comp_WaterMoveComp_notify 6
+typedef void (*func_mindustry_entities_comp_WaterMoveComp_notify)(jcontext ctx, jobject self);
+#define VTABLE_mindustry_entities_comp_WaterMoveComp_notifyAll 7
+typedef void (*func_mindustry_entities_comp_WaterMoveComp_notifyAll)(jcontext ctx, jobject self);
+#define VTABLE_mindustry_entities_comp_WaterMoveComp_wait 8
+typedef void (*func_mindustry_entities_comp_WaterMoveComp_wait)(jcontext ctx, jobject self);
+#define VTABLE_mindustry_entities_comp_WaterMoveComp_wait_long 9
+typedef void (*func_mindustry_entities_comp_WaterMoveComp_wait_long)(jcontext ctx, jobject self, jlong param0);
+#define VTABLE_mindustry_entities_comp_WaterMoveComp_wait_long_int 10
+typedef void (*func_mindustry_entities_comp_WaterMoveComp_wait_long_int)(jcontext ctx, jobject self, jlong param0, jint param1);
+#define VTABLE_mindustry_entities_comp_WaterMoveComp_getX_R_float 11
+typedef jfloat (*func_mindustry_entities_comp_WaterMoveComp_getX_R_float)(jcontext ctx, jobject self);
+#define VTABLE_mindustry_entities_comp_WaterMoveComp_getY_R_float 12
+typedef jfloat (*func_mindustry_entities_comp_WaterMoveComp_getY_R_float)(jcontext ctx, jobject self);
+#define VTABLE_mindustry_entities_comp_WaterMoveComp_angleTo_arc_math_geom_Position_R_float 13
+typedef jfloat (*func_mindustry_entities_comp_WaterMoveComp_angleTo_arc_math_geom_Position_R_float)(jcontext ctx, jobject self, jobject param0);
+#define VTABLE_mindustry_entities_comp_WaterMoveComp_angleTo_float_float_R_float 14
+typedef jfloat (*func_mindustry_entities_comp_WaterMoveComp_angleTo_float_float_R_float)(jcontext ctx, jobject self, jfloat param0, jfloat param1);
+#define VTABLE_mindustry_entities_comp_WaterMoveComp_dst2_arc_math_geom_Position_R_float 15
+typedef jfloat (*func_mindustry_entities_comp_WaterMoveComp_dst2_arc_math_geom_Position_R_float)(jcontext ctx, jobject self, jobject param0);
+#define VTABLE_mindustry_entities_comp_WaterMoveComp_dst_arc_math_geom_Position_R_float 16
+typedef jfloat (*func_mindustry_entities_comp_WaterMoveComp_dst_arc_math_geom_Position_R_float)(jcontext ctx, jobject self, jobject param0);
+#define VTABLE_mindustry_entities_comp_WaterMoveComp_dst_float_float_R_float 17
+typedef jfloat (*func_mindustry_entities_comp_WaterMoveComp_dst_float_float_R_float)(jcontext ctx, jobject self, jfloat param0, jfloat param1);
+#define VTABLE_mindustry_entities_comp_WaterMoveComp_dst2_float_float_R_float 18
+typedef jfloat (*func_mindustry_entities_comp_WaterMoveComp_dst2_float_float_R_float)(jcontext ctx, jobject self, jfloat param0, jfloat param1);
+#define VTABLE_mindustry_entities_comp_WaterMoveComp_within_arc_math_geom_Position_float_R_boolean 19
+typedef jbool (*func_mindustry_entities_comp_WaterMoveComp_within_arc_math_geom_Position_float_R_boolean)(jcontext ctx, jobject self, jobject param0, jfloat param1);
+#define VTABLE_mindustry_entities_comp_WaterMoveComp_within_float_float_float_R_boolean 20
+typedef jbool (*func_mindustry_entities_comp_WaterMoveComp_within_float_float_float_R_boolean)(jcontext ctx, jobject self, jfloat param0, jfloat param1, jfloat param2);
+#define VTABLE_mindustry_entities_comp_WaterMoveComp_self_R_mindustry_gen_Entityc 21
+typedef jobject (*func_mindustry_entities_comp_WaterMoveComp_self_R_mindustry_gen_Entityc)(jcontext ctx, jobject self);
+#define VTABLE_mindustry_entities_comp_WaterMoveComp_as_R_java_lang_Object 22
+typedef jobject (*func_mindustry_entities_comp_WaterMoveComp_as_R_java_lang_Object)(jcontext ctx, jobject self);
+#define VTABLE_mindustry_entities_comp_WaterMoveComp_isAdded_R_boolean 23
+typedef jbool (*func_mindustry_entities_comp_WaterMoveComp_isAdded_R_boolean)(jcontext ctx, jobject self);
+#define VTABLE_mindustry_entities_comp_WaterMoveComp_isLocal_R_boolean 24
+typedef jbool (*func_mindustry_entities_comp_WaterMoveComp_isLocal_R_boolean)(jcontext ctx, jobject self);
+#define VTABLE_mindustry_entities_comp_WaterMoveComp_isRemote_R_boolean 25
+typedef jbool (*func_mindustry_entities_comp_WaterMoveComp_isRemote_R_boolean)(jcontext ctx, jobject self);
+#define VTABLE_mindustry_entities_comp_WaterMoveComp_serialize_R_boolean 26
+typedef jbool (*func_mindustry_entities_comp_WaterMoveComp_serialize_R_boolean)(jcontext ctx, jobject self);
+#define VTABLE_mindustry_entities_comp_WaterMoveComp_classId_R_int 27
+typedef jint (*func_mindustry_entities_comp_WaterMoveComp_classId_R_int)(jcontext ctx, jobject self);
+#define VTABLE_mindustry_entities_comp_WaterMoveComp_id_R_int 28
+typedef jint (*func_mindustry_entities_comp_WaterMoveComp_id_R_int)(jcontext ctx, jobject self);
+#define VTABLE_mindustry_entities_comp_WaterMoveComp_add 29
+typedef void (*func_mindustry_entities_comp_WaterMoveComp_add)(jcontext ctx, jobject self);
+#define VTABLE_mindustry_entities_comp_WaterMoveComp_afterRead 30
+typedef void (*func_mindustry_entities_comp_WaterMoveComp_afterRead)(jcontext ctx, jobject self);
+#define VTABLE_mindustry_entities_comp_WaterMoveComp_afterReadAll 31
+typedef void (*func_mindustry_entities_comp_WaterMoveComp_afterReadAll)(jcontext ctx, jobject self);
+#define VTABLE_mindustry_entities_comp_WaterMoveComp_beforeWrite 32
+typedef void (*func_mindustry_entities_comp_WaterMoveComp_beforeWrite)(jcontext ctx, jobject self);
+#define VTABLE_mindustry_entities_comp_WaterMoveComp_id_int 33
+typedef void (*func_mindustry_entities_comp_WaterMoveComp_id_int)(jcontext ctx, jobject self, jint param0);
+#define VTABLE_mindustry_entities_comp_WaterMoveComp_read_arc_util_io_Reads 34
+typedef void (*func_mindustry_entities_comp_WaterMoveComp_read_arc_util_io_Reads)(jcontext ctx, jobject self, jobject param0);
+#define VTABLE_mindustry_entities_comp_WaterMoveComp_remove 35
+typedef void (*func_mindustry_entities_comp_WaterMoveComp_remove)(jcontext ctx, jobject self);
+#define VTABLE_mindustry_entities_comp_WaterMoveComp_update 36
+typedef void (*func_mindustry_entities_comp_WaterMoveComp_update)(jcontext ctx, jobject self);
+#define VTABLE_mindustry_entities_comp_WaterMoveComp_write_arc_util_io_Writes 37
+typedef void (*func_mindustry_entities_comp_WaterMoveComp_write_arc_util_io_Writes)(jcontext ctx, jobject self, jobject param0);
+#define VTABLE_mindustry_entities_comp_WaterMoveComp_floorOn_R_mindustry_world_blocks_environment_Floor 38
+typedef jobject (*func_mindustry_entities_comp_WaterMoveComp_floorOn_R_mindustry_world_blocks_environment_Floor)(jcontext ctx, jobject self);
+#define VTABLE_mindustry_entities_comp_WaterMoveComp_buildOn_R_mindustry_gen_Building 39
+typedef jobject (*func_mindustry_entities_comp_WaterMoveComp_buildOn_R_mindustry_gen_Building)(jcontext ctx, jobject self);
+#define VTABLE_mindustry_entities_comp_WaterMoveComp_onSolid_R_boolean 40
+typedef jbool (*func_mindustry_entities_comp_WaterMoveComp_onSolid_R_boolean)(jcontext ctx, jobject self);
+#define VTABLE_mindustry_entities_comp_WaterMoveComp_x_R_float 41
+typedef jfloat (*func_mindustry_entities_comp_WaterMoveComp_x_R_float)(jcontext ctx, jobject self);
+#define VTABLE_mindustry_entities_comp_WaterMoveComp_y_R_float 42
+typedef jfloat (*func_mindustry_entities_comp_WaterMoveComp_y_R_float)(jcontext ctx, jobject self);
+#define VTABLE_mindustry_entities_comp_WaterMoveComp_tileX_R_int 43
+typedef jint (*func_mindustry_entities_comp_WaterMoveComp_tileX_R_int)(jcontext ctx, jobject self);
+#define VTABLE_mindustry_entities_comp_WaterMoveComp_tileY_R_int 44
+typedef jint (*func_mindustry_entities_comp_WaterMoveComp_tileY_R_int)(jcontext ctx, jobject self);
+#define VTABLE_mindustry_entities_comp_WaterMoveComp_blockOn_R_mindustry_world_Block 45
+typedef jobject (*func_mindustry_entities_comp_WaterMoveComp_blockOn_R_mindustry_world_Block)(jcontext ctx, jobject self);
+#define VTABLE_mindustry_entities_comp_WaterMoveComp_tileOn_R_mindustry_world_Tile 46
+typedef jobject (*func_mindustry_entities_comp_WaterMoveComp_tileOn_R_mindustry_world_Tile)(jcontext ctx, jobject self);
+#define VTABLE_mindustry_entities_comp_WaterMoveComp_set_arc_math_geom_Position 47
+typedef void (*func_mindustry_entities_comp_WaterMoveComp_set_arc_math_geom_Position)(jcontext ctx, jobject self, jobject param0);
+#define VTABLE_mindustry_entities_comp_WaterMoveComp_set_float_float 48
+typedef void (*func_mindustry_entities_comp_WaterMoveComp_set_float_float)(jcontext ctx, jobject self, jfloat param0, jfloat param1);
+#define VTABLE_mindustry_entities_comp_WaterMoveComp_trns_arc_math_geom_Position 49
+typedef void (*func_mindustry_entities_comp_WaterMoveComp_trns_arc_math_geom_Position)(jcontext ctx, jobject self, jobject param0);
+#define VTABLE_mindustry_entities_comp_WaterMoveComp_trns_float_float 50
+typedef void (*func_mindustry_entities_comp_WaterMoveComp_trns_float_float)(jcontext ctx, jobject self, jfloat param0, jfloat param1);
+#define VTABLE_mindustry_entities_comp_WaterMoveComp_x_float 51
+typedef void (*func_mindustry_entities_comp_WaterMoveComp_x_float)(jcontext ctx, jobject self, jfloat param0);
+#define VTABLE_mindustry_entities_comp_WaterMoveComp_y_float 52
+typedef void (*func_mindustry_entities_comp_WaterMoveComp_y_float)(jcontext ctx, jobject self, jfloat param0);
+#define VTABLE_mindustry_entities_comp_WaterMoveComp_solidity_R_mindustry_entities_EntityCollisions$SolidPred 53
+typedef jobject (*func_mindustry_entities_comp_WaterMoveComp_solidity_R_mindustry_entities_EntityCollisions$SolidPred)(jcontext ctx, jobject self);
+#define VTABLE_mindustry_entities_comp_WaterMoveComp_canPassOn_R_boolean 54
+typedef jbool (*func_mindustry_entities_comp_WaterMoveComp_canPassOn_R_boolean)(jcontext ctx, jobject self);
+#define VTABLE_mindustry_entities_comp_WaterMoveComp_canPass_int_int_R_boolean 55
+typedef jbool (*func_mindustry_entities_comp_WaterMoveComp_canPass_int_int_R_boolean)(jcontext ctx, jobject self, jint param0, jint param1);
+#define VTABLE_mindustry_entities_comp_WaterMoveComp_vel_R_arc_math_geom_Vec2 56
+typedef jobject (*func_mindustry_entities_comp_WaterMoveComp_vel_R_arc_math_geom_Vec2)(jcontext ctx, jobject self);
+#define VTABLE_mindustry_entities_comp_WaterMoveComp_ignoreSolids_R_boolean 57
+typedef jbool (*func_mindustry_entities_comp_WaterMoveComp_ignoreSolids_R_boolean)(jcontext ctx, jobject self);
+#define VTABLE_mindustry_entities_comp_WaterMoveComp_moving_R_boolean 58
+typedef jbool (*func_mindustry_entities_comp_WaterMoveComp_moving_R_boolean)(jcontext ctx, jobject self);
+#define VTABLE_mindustry_entities_comp_WaterMoveComp_drag_R_float 59
+typedef jfloat (*func_mindustry_entities_comp_WaterMoveComp_drag_R_float)(jcontext ctx, jobject self);
+#define VTABLE_mindustry_entities_comp_WaterMoveComp_drag_float 60
+typedef void (*func_mindustry_entities_comp_WaterMoveComp_drag_float)(jcontext ctx, jobject self, jfloat param0);
+#define VTABLE_mindustry_entities_comp_WaterMoveComp_move_arc_math_geom_Vec2 61
+typedef void (*func_mindustry_entities_comp_WaterMoveComp_move_arc_math_geom_Vec2)(jcontext ctx, jobject self, jobject param0);
+#define VTABLE_mindustry_entities_comp_WaterMoveComp_move_float_float 62
+typedef void (*func_mindustry_entities_comp_WaterMoveComp_move_float_float)(jcontext ctx, jobject self, jfloat param0, jfloat param1);
+#define VTABLE_mindustry_entities_comp_WaterMoveComp_vel_arc_math_geom_Vec2 63
+typedef void (*func_mindustry_entities_comp_WaterMoveComp_vel_arc_math_geom_Vec2)(jcontext ctx, jobject self, jobject param0);
+#define VTABLE_mindustry_entities_comp_WaterMoveComp_velAddNet_arc_math_geom_Vec2 64
+typedef void (*func_mindustry_entities_comp_WaterMoveComp_velAddNet_arc_math_geom_Vec2)(jcontext ctx, jobject self, jobject param0);
+#define VTABLE_mindustry_entities_comp_WaterMoveComp_velAddNet_float_float 65
+typedef void (*func_mindustry_entities_comp_WaterMoveComp_velAddNet_float_float)(jcontext ctx, jobject self, jfloat param0, jfloat param1);
+#define VTABLE_mindustry_entities_comp_WaterMoveComp_hitbox_arc_math_geom_Rect 66
+typedef void (*func_mindustry_entities_comp_WaterMoveComp_hitbox_arc_math_geom_Rect)(jcontext ctx, jobject self, jobject param0);
+#define VTABLE_mindustry_entities_comp_WaterMoveComp_hitSize_R_float 67
+typedef jfloat (*func_mindustry_entities_comp_WaterMoveComp_hitSize_R_float)(jcontext ctx, jobject self);
+#define VTABLE_mindustry_entities_comp_WaterMoveComp_collides_mindustry_gen_Hitboxc_R_boolean 68
+typedef jbool (*func_mindustry_entities_comp_WaterMoveComp_collides_mindustry_gen_Hitboxc_R_boolean)(jcontext ctx, jobject self, jobject param0);
+#define VTABLE_mindustry_entities_comp_WaterMoveComp_deltaAngle_R_float 69
+typedef jfloat (*func_mindustry_entities_comp_WaterMoveComp_deltaAngle_R_float)(jcontext ctx, jobject self);
+#define VTABLE_mindustry_entities_comp_WaterMoveComp_deltaLen_R_float 70
+typedef jfloat (*func_mindustry_entities_comp_WaterMoveComp_deltaLen_R_float)(jcontext ctx, jobject self);
+#define VTABLE_mindustry_entities_comp_WaterMoveComp_deltaX_R_float 71
+typedef jfloat (*func_mindustry_entities_comp_WaterMoveComp_deltaX_R_float)(jcontext ctx, jobject self);
+#define VTABLE_mindustry_entities_comp_WaterMoveComp_deltaY_R_float 72
+typedef jfloat (*func_mindustry_entities_comp_WaterMoveComp_deltaY_R_float)(jcontext ctx, jobject self);
+#define VTABLE_mindustry_entities_comp_WaterMoveComp_lastX_R_float 73
+typedef jfloat (*func_mindustry_entities_comp_WaterMoveComp_lastX_R_float)(jcontext ctx, jobject self);
+#define VTABLE_mindustry_entities_comp_WaterMoveComp_lastY_R_float 74
+typedef jfloat (*func_mindustry_entities_comp_WaterMoveComp_lastY_R_float)(jcontext ctx, jobject self);
+#define VTABLE_mindustry_entities_comp_WaterMoveComp_collision_mindustry_gen_Hitboxc_float_float 75
+typedef void (*func_mindustry_entities_comp_WaterMoveComp_collision_mindustry_gen_Hitboxc_float_float)(jcontext ctx, jobject self, jobject param0, jfloat param1, jfloat param2);
+#define VTABLE_mindustry_entities_comp_WaterMoveComp_deltaX_float 76
+typedef void (*func_mindustry_entities_comp_WaterMoveComp_deltaX_float)(jcontext ctx, jobject self, jfloat param0);
+#define VTABLE_mindustry_entities_comp_WaterMoveComp_deltaY_float 77
+typedef void (*func_mindustry_entities_comp_WaterMoveComp_deltaY_float)(jcontext ctx, jobject self, jfloat param0);
+#define VTABLE_mindustry_entities_comp_WaterMoveComp_getCollisions_arc_func_Cons 78
+typedef void (*func_mindustry_entities_comp_WaterMoveComp_getCollisions_arc_func_Cons)(jcontext ctx, jobject self, jobject param0);
+#define VTABLE_mindustry_entities_comp_WaterMoveComp_hitSize_float 79
+typedef void (*func_mindustry_entities_comp_WaterMoveComp_hitSize_float)(jcontext ctx, jobject self, jfloat param0);
+#define VTABLE_mindustry_entities_comp_WaterMoveComp_hitboxTile_arc_math_geom_Rect 80
+typedef void (*func_mindustry_entities_comp_WaterMoveComp_hitboxTile_arc_math_geom_Rect)(jcontext ctx, jobject self, jobject param0);
+#define VTABLE_mindustry_entities_comp_WaterMoveComp_lastX_float 81
+typedef void (*func_mindustry_entities_comp_WaterMoveComp_lastX_float)(jcontext ctx, jobject self, jfloat param0);
+#define VTABLE_mindustry_entities_comp_WaterMoveComp_lastY_float 82
+typedef void (*func_mindustry_entities_comp_WaterMoveComp_lastY_float)(jcontext ctx, jobject self, jfloat param0);
+#define VTABLE_mindustry_entities_comp_WaterMoveComp_updateLastPosition 83
+typedef void (*func_mindustry_entities_comp_WaterMoveComp_updateLastPosition)(jcontext ctx, jobject self);
+#define VTABLE_mindustry_entities_comp_WaterMoveComp_rotation_R_float 84
+typedef jfloat (*func_mindustry_entities_comp_WaterMoveComp_rotation_R_float)(jcontext ctx, jobject self);
+#define VTABLE_mindustry_entities_comp_WaterMoveComp_rotation_float 85
+typedef void (*func_mindustry_entities_comp_WaterMoveComp_rotation_float)(jcontext ctx, jobject self, jfloat param0);
+#define VTABLE_mindustry_entities_comp_WaterMoveComp_applyDynamicStatus_R_mindustry_entities_units_StatusEntry 86
+typedef jobject (*func_mindustry_entities_comp_WaterMoveComp_applyDynamicStatus_R_mindustry_entities_units_StatusEntry)(jcontext ctx, jobject self);
+#define VTABLE_mindustry_entities_comp_WaterMoveComp_apply_mindustry_type_StatusEffect_float 87
+typedef void (*func_mindustry_entities_comp_WaterMoveComp_apply_mindustry_type_StatusEffect_float)(jcontext ctx, jobject self, jobject param0, jfloat param1);
+#define VTABLE_mindustry_entities_comp_WaterMoveComp_apply_mindustry_type_StatusEffect 88
+typedef void (*func_mindustry_entities_comp_WaterMoveComp_apply_mindustry_type_StatusEffect)(jcontext ctx, jobject self, jobject param0);
+#define VTABLE_mindustry_entities_comp_WaterMoveComp_unapply_mindustry_type_StatusEffect 89
+typedef void (*func_mindustry_entities_comp_WaterMoveComp_unapply_mindustry_type_StatusEffect)(jcontext ctx, jobject self, jobject param0);
+#define VTABLE_mindustry_entities_comp_WaterMoveComp_statusDamageMultiplier_float 90
+typedef void (*func_mindustry_entities_comp_WaterMoveComp_statusDamageMultiplier_float)(jcontext ctx, jobject self, jfloat param0);
+#define VTABLE_mindustry_entities_comp_WaterMoveComp_statusReloadMultiplier_float 91
+typedef void (*func_mindustry_entities_comp_WaterMoveComp_statusReloadMultiplier_float)(jcontext ctx, jobject self, jfloat param0);
+#define VTABLE_mindustry_entities_comp_WaterMoveComp_statusArmor_float 92
+typedef void (*func_mindustry_entities_comp_WaterMoveComp_statusArmor_float)(jcontext ctx, jobject self, jfloat param0);
+#define VTABLE_mindustry_entities_comp_WaterMoveComp_statusBuildSpeed_float 93
+typedef void (*func_mindustry_entities_comp_WaterMoveComp_statusBuildSpeed_float)(jcontext ctx, jobject self, jfloat param0);
+#define VTABLE_mindustry_entities_comp_WaterMoveComp_statusDrag_float 94
+typedef void (*func_mindustry_entities_comp_WaterMoveComp_statusDrag_float)(jcontext ctx, jobject self, jfloat param0);
+#define VTABLE_mindustry_entities_comp_WaterMoveComp_statusMaxHealth_float 95
+typedef void (*func_mindustry_entities_comp_WaterMoveComp_statusMaxHealth_float)(jcontext ctx, jobject self, jfloat param0);
+#define VTABLE_mindustry_entities_comp_WaterMoveComp_statusSpeed_float 96
+typedef void (*func_mindustry_entities_comp_WaterMoveComp_statusSpeed_float)(jcontext ctx, jobject self, jfloat param0);
+#define VTABLE_mindustry_entities_comp_WaterMoveComp_statusColor_R_arc_graphics_Color 97
+typedef jobject (*func_mindustry_entities_comp_WaterMoveComp_statusColor_R_arc_graphics_Color)(jcontext ctx, jobject self);
+#define VTABLE_mindustry_entities_comp_WaterMoveComp_statusBits_R_arc_struct_Bits 98
+typedef jobject (*func_mindustry_entities_comp_WaterMoveComp_statusBits_R_arc_struct_Bits)(jcontext ctx, jobject self);
+#define VTABLE_mindustry_entities_comp_WaterMoveComp_disarmed_R_boolean 99
+typedef jbool (*func_mindustry_entities_comp_WaterMoveComp_disarmed_R_boolean)(jcontext ctx, jobject self);
+#define VTABLE_mindustry_entities_comp_WaterMoveComp_hasEffect_mindustry_type_StatusEffect_R_boolean 100
+typedef jbool (*func_mindustry_entities_comp_WaterMoveComp_hasEffect_mindustry_type_StatusEffect_R_boolean)(jcontext ctx, jobject self, jobject param0);
+#define VTABLE_mindustry_entities_comp_WaterMoveComp_isBoss_R_boolean 101
+typedef jbool (*func_mindustry_entities_comp_WaterMoveComp_isBoss_R_boolean)(jcontext ctx, jobject self);
+#define VTABLE_mindustry_entities_comp_WaterMoveComp_isGrounded_R_boolean 102
+typedef jbool (*func_mindustry_entities_comp_WaterMoveComp_isGrounded_R_boolean)(jcontext ctx, jobject self);
+#define VTABLE_mindustry_entities_comp_WaterMoveComp_isImmune_mindustry_type_StatusEffect_R_boolean 103
+typedef jbool (*func_mindustry_entities_comp_WaterMoveComp_isImmune_mindustry_type_StatusEffect_R_boolean)(jcontext ctx, jobject self, jobject param0);
+#define VTABLE_mindustry_entities_comp_WaterMoveComp_armorOverride_R_float 104
+typedef jfloat (*func_mindustry_entities_comp_WaterMoveComp_armorOverride_R_float)(jcontext ctx, jobject self);
+#define VTABLE_mindustry_entities_comp_WaterMoveComp_buildSpeedMultiplier_R_float 105
+typedef jfloat (*func_mindustry_entities_comp_WaterMoveComp_buildSpeedMultiplier_R_float)(jcontext ctx, jobject self);
+#define VTABLE_mindustry_entities_comp_WaterMoveComp_damageMultiplier_R_float 106
+typedef jfloat (*func_mindustry_entities_comp_WaterMoveComp_damageMultiplier_R_float)(jcontext ctx, jobject self);
+#define VTABLE_mindustry_entities_comp_WaterMoveComp_dragMultiplier_R_float 107
+typedef jfloat (*func_mindustry_entities_comp_WaterMoveComp_dragMultiplier_R_float)(jcontext ctx, jobject self);
+#define VTABLE_mindustry_entities_comp_WaterMoveComp_getDuration_mindustry_type_StatusEffect_R_float 108
+typedef jfloat (*func_mindustry_entities_comp_WaterMoveComp_getDuration_mindustry_type_StatusEffect_R_float)(jcontext ctx, jobject self, jobject param0);
+#define VTABLE_mindustry_entities_comp_WaterMoveComp_healthMultiplier_R_float 109
+typedef jfloat (*func_mindustry_entities_comp_WaterMoveComp_healthMultiplier_R_float)(jcontext ctx, jobject self);
+#define VTABLE_mindustry_entities_comp_WaterMoveComp_reloadMultiplier_R_float 110
+typedef jfloat (*func_mindustry_entities_comp_WaterMoveComp_reloadMultiplier_R_float)(jcontext ctx, jobject self);
+#define VTABLE_mindustry_entities_comp_WaterMoveComp_speedMultiplier_R_float 111
+typedef jfloat (*func_mindustry_entities_comp_WaterMoveComp_speedMultiplier_R_float)(jcontext ctx, jobject self);
+#define VTABLE_mindustry_entities_comp_WaterMoveComp_armorOverride_float 112
+typedef void (*func_mindustry_entities_comp_WaterMoveComp_armorOverride_float)(jcontext ctx, jobject self, jfloat param0);
+#define VTABLE_mindustry_entities_comp_WaterMoveComp_buildSpeedMultiplier_float 113
+typedef void (*func_mindustry_entities_comp_WaterMoveComp_buildSpeedMultiplier_float)(jcontext ctx, jobject self, jfloat param0);
+#define VTABLE_mindustry_entities_comp_WaterMoveComp_clearStatuses 114
+typedef void (*func_mindustry_entities_comp_WaterMoveComp_clearStatuses)(jcontext ctx, jobject self);
+#define VTABLE_mindustry_entities_comp_WaterMoveComp_damageMultiplier_float 115
+typedef void (*func_mindustry_entities_comp_WaterMoveComp_damageMultiplier_float)(jcontext ctx, jobject self, jfloat param0);
+#define VTABLE_mindustry_entities_comp_WaterMoveComp_disarmed_boolean 116
+typedef void (*func_mindustry_entities_comp_WaterMoveComp_disarmed_boolean)(jcontext ctx, jobject self, jbool param0);
+#define VTABLE_mindustry_entities_comp_WaterMoveComp_dragMultiplier_float 117
+typedef void (*func_mindustry_entities_comp_WaterMoveComp_dragMultiplier_float)(jcontext ctx, jobject self, jfloat param0);
+#define VTABLE_mindustry_entities_comp_WaterMoveComp_draw 118
+typedef void (*func_mindustry_entities_comp_WaterMoveComp_draw)(jcontext ctx, jobject self);
+#define VTABLE_mindustry_entities_comp_WaterMoveComp_healthMultiplier_float 119
+typedef void (*func_mindustry_entities_comp_WaterMoveComp_healthMultiplier_float)(jcontext ctx, jobject self, jfloat param0);
+#define VTABLE_mindustry_entities_comp_WaterMoveComp_reloadMultiplier_float 120
+typedef void (*func_mindustry_entities_comp_WaterMoveComp_reloadMultiplier_float)(jcontext ctx, jobject self, jfloat param0);
+#define VTABLE_mindustry_entities_comp_WaterMoveComp_setDuration_mindustry_type_StatusEffect_float 121
+typedef void (*func_mindustry_entities_comp_WaterMoveComp_setDuration_mindustry_type_StatusEffect_float)(jcontext ctx, jobject self, jobject param0, jfloat param1);
+#define VTABLE_mindustry_entities_comp_WaterMoveComp_speedMultiplier_float 122
+typedef void (*func_mindustry_entities_comp_WaterMoveComp_speedMultiplier_float)(jcontext ctx, jobject self, jfloat param0);
+#define VTABLE_mindustry_entities_comp_WaterMoveComp_inFogTo_mindustry_game_Team_R_boolean 123
+typedef jbool (*func_mindustry_entities_comp_WaterMoveComp_inFogTo_mindustry_game_Team_R_boolean)(jcontext ctx, jobject self, jobject param0);
+#define VTABLE_mindustry_entities_comp_WaterMoveComp_cheating_R_boolean 124
+typedef jbool (*func_mindustry_entities_comp_WaterMoveComp_cheating_R_boolean)(jcontext ctx, jobject self);
+#define VTABLE_mindustry_entities_comp_WaterMoveComp_team_R_mindustry_game_Team 125
+typedef jobject (*func_mindustry_entities_comp_WaterMoveComp_team_R_mindustry_game_Team)(jcontext ctx, jobject self);
+#define VTABLE_mindustry_entities_comp_WaterMoveComp_closestCore_R_mindustry_world_blocks_storage_CoreBlock$CoreBuild 126
+typedef jobject (*func_mindustry_entities_comp_WaterMoveComp_closestCore_R_mindustry_world_blocks_storage_CoreBlock$CoreBuild)(jcontext ctx, jobject self);
+#define VTABLE_mindustry_entities_comp_WaterMoveComp_closestEnemyCore_R_mindustry_world_blocks_storage_CoreBlock$CoreBuild 127
+typedef jobject (*func_mindustry_entities_comp_WaterMoveComp_closestEnemyCore_R_mindustry_world_blocks_storage_CoreBlock$CoreBuild)(jcontext ctx, jobject self);
+#define VTABLE_mindustry_entities_comp_WaterMoveComp_core_R_mindustry_world_blocks_storage_CoreBlock$CoreBuild 128
+typedef jobject (*func_mindustry_entities_comp_WaterMoveComp_core_R_mindustry_world_blocks_storage_CoreBlock$CoreBuild)(jcontext ctx, jobject self);
+#define VTABLE_mindustry_entities_comp_WaterMoveComp_team_mindustry_game_Team 129
+typedef void (*func_mindustry_entities_comp_WaterMoveComp_team_mindustry_game_Team)(jcontext ctx, jobject self, jobject param0);
+#define VTABLE_mindustry_entities_comp_WaterMoveComp_buildPlan_R_mindustry_entities_units_BuildPlan 130
+typedef jobject (*func_mindustry_entities_comp_WaterMoveComp_buildPlan_R_mindustry_entities_units_BuildPlan)(jcontext ctx, jobject self);
+#define VTABLE_mindustry_entities_comp_WaterMoveComp_shouldSkip_mindustry_entities_units_BuildPlan_mindustry_gen_Building_R_boolean 131
+typedef jbool (*func_mindustry_entities_comp_WaterMoveComp_shouldSkip_mindustry_entities_units_BuildPlan_mindustry_gen_Building_R_boolean)(jcontext ctx, jobject self, jobject param0, jobject param1);
+#define VTABLE_mindustry_entities_comp_WaterMoveComp_addBuild_mindustry_entities_units_BuildPlan_boolean 132
+typedef void (*func_mindustry_entities_comp_WaterMoveComp_addBuild_mindustry_entities_units_BuildPlan_boolean)(jcontext ctx, jobject self, jobject param0, jbool param1);
+#define VTABLE_mindustry_entities_comp_WaterMoveComp_addBuild_mindustry_entities_units_BuildPlan 133
+typedef void (*func_mindustry_entities_comp_WaterMoveComp_addBuild_mindustry_entities_units_BuildPlan)(jcontext ctx, jobject self, jobject param0);
+#define VTABLE_mindustry_entities_comp_WaterMoveComp_clearBuilding 134
+typedef void (*func_mindustry_entities_comp_WaterMoveComp_clearBuilding)(jcontext ctx, jobject self);
+#define VTABLE_mindustry_entities_comp_WaterMoveComp_isBuilding_R_boolean 135
+typedef jbool (*func_mindustry_entities_comp_WaterMoveComp_isBuilding_R_boolean)(jcontext ctx, jobject self);
+#define VTABLE_mindustry_entities_comp_WaterMoveComp_plans_R_arc_struct_Queue 136
+typedef jobject (*func_mindustry_entities_comp_WaterMoveComp_plans_R_arc_struct_Queue)(jcontext ctx, jobject self);
+#define VTABLE_mindustry_entities_comp_WaterMoveComp_activelyBuilding_R_boolean 137
+typedef jbool (*func_mindustry_entities_comp_WaterMoveComp_activelyBuilding_R_boolean)(jcontext ctx, jobject self);
+#define VTABLE_mindustry_entities_comp_WaterMoveComp_canBuild_R_boolean 138
+typedef jbool (*func_mindustry_entities_comp_WaterMoveComp_canBuild_R_boolean)(jcontext ctx, jobject self);
+#define VTABLE_mindustry_entities_comp_WaterMoveComp_updateBuilding_R_boolean 139
+typedef jbool (*func_mindustry_entities_comp_WaterMoveComp_updateBuilding_R_boolean)(jcontext ctx, jobject self);
+#define VTABLE_mindustry_entities_comp_WaterMoveComp_buildAlpha_R_float 140
+typedef jfloat (*func_mindustry_entities_comp_WaterMoveComp_buildAlpha_R_float)(jcontext ctx, jobject self);
+#define VTABLE_mindustry_entities_comp_WaterMoveComp_buildAlpha_float 141
+typedef void (*func_mindustry_entities_comp_WaterMoveComp_buildAlpha_float)(jcontext ctx, jobject self, jfloat param0);
+#define VTABLE_mindustry_entities_comp_WaterMoveComp_drawBuilding 142
+typedef void (*func_mindustry_entities_comp_WaterMoveComp_drawBuilding)(jcontext ctx, jobject self);
+#define VTABLE_mindustry_entities_comp_WaterMoveComp_drawBuildingBeam_float_float 143
+typedef void (*func_mindustry_entities_comp_WaterMoveComp_drawBuildingBeam_float_float)(jcontext ctx, jobject self, jfloat param0, jfloat param1);
+#define VTABLE_mindustry_entities_comp_WaterMoveComp_drawPlan_mindustry_entities_units_BuildPlan_float 144
+typedef void (*func_mindustry_entities_comp_WaterMoveComp_drawPlan_mindustry_entities_units_BuildPlan_float)(jcontext ctx, jobject self, jobject param0, jfloat param1);
+#define VTABLE_mindustry_entities_comp_WaterMoveComp_drawPlanTop_mindustry_entities_units_BuildPlan_float 145
+typedef void (*func_mindustry_entities_comp_WaterMoveComp_drawPlanTop_mindustry_entities_units_BuildPlan_float)(jcontext ctx, jobject self, jobject param0, jfloat param1);
+#define VTABLE_mindustry_entities_comp_WaterMoveComp_plans_arc_struct_Queue 146
+typedef void (*func_mindustry_entities_comp_WaterMoveComp_plans_arc_struct_Queue)(jcontext ctx, jobject self, jobject param0);
+#define VTABLE_mindustry_entities_comp_WaterMoveComp_removeBuild_int_int_boolean 147
+typedef void (*func_mindustry_entities_comp_WaterMoveComp_removeBuild_int_int_boolean)(jcontext ctx, jobject self, jint param0, jint param1, jbool param2);
+#define VTABLE_mindustry_entities_comp_WaterMoveComp_updateBuildLogic 148
+typedef void (*func_mindustry_entities_comp_WaterMoveComp_updateBuildLogic)(jcontext ctx, jobject self);
+#define VTABLE_mindustry_entities_comp_WaterMoveComp_updateBuilding_boolean 149
+typedef void (*func_mindustry_entities_comp_WaterMoveComp_updateBuilding_boolean)(jcontext ctx, jobject self, jbool param0);
+#define VTABLE_mindustry_entities_comp_WaterMoveComp_validatePlans 150
+typedef void (*func_mindustry_entities_comp_WaterMoveComp_validatePlans)(jcontext ctx, jobject self);
+#define VTABLE_mindustry_entities_comp_WaterMoveComp_clipSize_R_float 151
+typedef jfloat (*func_mindustry_entities_comp_WaterMoveComp_clipSize_R_float)(jcontext ctx, jobject self);
+#define VTABLE_mindustry_entities_comp_WaterMoveComp_damageArmorMult_float_float 152
+typedef void (*func_mindustry_entities_comp_WaterMoveComp_damageArmorMult_float_float)(jcontext ctx, jobject self, jfloat param0, jfloat param1);
+#define VTABLE_mindustry_entities_comp_WaterMoveComp_damageArmorMult_float_float_boolean 153
+typedef void (*func_mindustry_entities_comp_WaterMoveComp_damageArmorMult_float_float_boolean)(jcontext ctx, jobject self, jfloat param0, jfloat param1, jbool param2);
+#define VTABLE_mindustry_entities_comp_WaterMoveComp_damagePierce_float 154
+typedef void (*func_mindustry_entities_comp_WaterMoveComp_damagePierce_float)(jcontext ctx, jobject self, jfloat param0);
+#define VTABLE_mindustry_entities_comp_WaterMoveComp_damagePierce_float_boolean 155
+typedef void (*func_mindustry_entities_comp_WaterMoveComp_damagePierce_float_boolean)(jcontext ctx, jobject self, jfloat param0, jbool param1);
+#define VTABLE_mindustry_entities_comp_WaterMoveComp_healFract_float 156
+typedef void (*func_mindustry_entities_comp_WaterMoveComp_healFract_float)(jcontext ctx, jobject self, jfloat param0);
+#define VTABLE_mindustry_entities_comp_WaterMoveComp_heal_float 157
+typedef void (*func_mindustry_entities_comp_WaterMoveComp_heal_float)(jcontext ctx, jobject self, jfloat param0);
+#define VTABLE_mindustry_entities_comp_WaterMoveComp_damaged_R_boolean 158
+typedef jbool (*func_mindustry_entities_comp_WaterMoveComp_damaged_R_boolean)(jcontext ctx, jobject self);
+#define VTABLE_mindustry_entities_comp_WaterMoveComp_dead_R_boolean 159
+typedef jbool (*func_mindustry_entities_comp_WaterMoveComp_dead_R_boolean)(jcontext ctx, jobject self);
+#define VTABLE_mindustry_entities_comp_WaterMoveComp_isValid_R_boolean 160
+typedef jbool (*func_mindustry_entities_comp_WaterMoveComp_isValid_R_boolean)(jcontext ctx, jobject self);
+#define VTABLE_mindustry_entities_comp_WaterMoveComp_health_R_float 161
+typedef jfloat (*func_mindustry_entities_comp_WaterMoveComp_health_R_float)(jcontext ctx, jobject self);
+#define VTABLE_mindustry_entities_comp_WaterMoveComp_healthf_R_float 162
+typedef jfloat (*func_mindustry_entities_comp_WaterMoveComp_healthf_R_float)(jcontext ctx, jobject self);
+#define VTABLE_mindustry_entities_comp_WaterMoveComp_hitTime_R_float 163
+typedef jfloat (*func_mindustry_entities_comp_WaterMoveComp_hitTime_R_float)(jcontext ctx, jobject self);
+#define VTABLE_mindustry_entities_comp_WaterMoveComp_maxHealth_R_float 164
+typedef jfloat (*func_mindustry_entities_comp_WaterMoveComp_maxHealth_R_float)(jcontext ctx, jobject self);
+#define VTABLE_mindustry_entities_comp_WaterMoveComp_clampHealth 165
+typedef void (*func_mindustry_entities_comp_WaterMoveComp_clampHealth)(jcontext ctx, jobject self);
+#define VTABLE_mindustry_entities_comp_WaterMoveComp_damage_float 166
+typedef void (*func_mindustry_entities_comp_WaterMoveComp_damage_float)(jcontext ctx, jobject self, jfloat param0);
+#define VTABLE_mindustry_entities_comp_WaterMoveComp_damage_float_boolean 167
+typedef void (*func_mindustry_entities_comp_WaterMoveComp_damage_float_boolean)(jcontext ctx, jobject self, jfloat param0, jbool param1);
+#define VTABLE_mindustry_entities_comp_WaterMoveComp_damageContinuous_float 168
+typedef void (*func_mindustry_entities_comp_WaterMoveComp_damageContinuous_float)(jcontext ctx, jobject self, jfloat param0);
+#define VTABLE_mindustry_entities_comp_WaterMoveComp_damageContinuousArmorMult_float_float 169
+typedef void (*func_mindustry_entities_comp_WaterMoveComp_damageContinuousArmorMult_float_float)(jcontext ctx, jobject self, jfloat param0, jfloat param1);
+#define VTABLE_mindustry_entities_comp_WaterMoveComp_damageContinuousPierce_float 170
+typedef void (*func_mindustry_entities_comp_WaterMoveComp_damageContinuousPierce_float)(jcontext ctx, jobject self, jfloat param0);
+#define VTABLE_mindustry_entities_comp_WaterMoveComp_dead_boolean 171
+typedef void (*func_mindustry_entities_comp_WaterMoveComp_dead_boolean)(jcontext ctx, jobject self, jbool param0);
+#define VTABLE_mindustry_entities_comp_WaterMoveComp_heal 172
+typedef void (*func_mindustry_entities_comp_WaterMoveComp_heal)(jcontext ctx, jobject self);
+#define VTABLE_mindustry_entities_comp_WaterMoveComp_health_float 173
+typedef void (*func_mindustry_entities_comp_WaterMoveComp_health_float)(jcontext ctx, jobject self, jfloat param0);
+#define VTABLE_mindustry_entities_comp_WaterMoveComp_hitTime_float 174
+typedef void (*func_mindustry_entities_comp_WaterMoveComp_hitTime_float)(jcontext ctx, jobject self, jfloat param0);
+#define VTABLE_mindustry_entities_comp_WaterMoveComp_kill 175
+typedef void (*func_mindustry_entities_comp_WaterMoveComp_kill)(jcontext ctx, jobject self);
+#define VTABLE_mindustry_entities_comp_WaterMoveComp_killed 176
+typedef void (*func_mindustry_entities_comp_WaterMoveComp_killed)(jcontext ctx, jobject self);
+#define VTABLE_mindustry_entities_comp_WaterMoveComp_maxHealth_float 177
+typedef void (*func_mindustry_entities_comp_WaterMoveComp_maxHealth_float)(jcontext ctx, jobject self, jfloat param0);
+#define VTABLE_mindustry_entities_comp_WaterMoveComp_acceptsItem_mindustry_type_Item_R_boolean 178
+typedef jbool (*func_mindustry_entities_comp_WaterMoveComp_acceptsItem_mindustry_type_Item_R_boolean)(jcontext ctx, jobject self, jobject param0);
+#define VTABLE_mindustry_entities_comp_WaterMoveComp_hasItem_R_boolean 179
+typedef jbool (*func_mindustry_entities_comp_WaterMoveComp_hasItem_R_boolean)(jcontext ctx, jobject self);
+#define VTABLE_mindustry_entities_comp_WaterMoveComp_itemTime_R_float 180
+typedef jfloat (*func_mindustry_entities_comp_WaterMoveComp_itemTime_R_float)(jcontext ctx, jobject self);
+#define VTABLE_mindustry_entities_comp_WaterMoveComp_itemCapacity_R_int 181
+typedef jint (*func_mindustry_entities_comp_WaterMoveComp_itemCapacity_R_int)(jcontext ctx, jobject self);
+#define VTABLE_mindustry_entities_comp_WaterMoveComp_maxAccepted_mindustry_type_Item_R_int 182
+typedef jint (*func_mindustry_entities_comp_WaterMoveComp_maxAccepted_mindustry_type_Item_R_int)(jcontext ctx, jobject self, jobject param0);
+#define VTABLE_mindustry_entities_comp_WaterMoveComp_item_R_mindustry_type_Item 183
+typedef jobject (*func_mindustry_entities_comp_WaterMoveComp_item_R_mindustry_type_Item)(jcontext ctx, jobject self);
+#define VTABLE_mindustry_entities_comp_WaterMoveComp_stack_R_mindustry_type_ItemStack 184
+typedef jobject (*func_mindustry_entities_comp_WaterMoveComp_stack_R_mindustry_type_ItemStack)(jcontext ctx, jobject self);
+#define VTABLE_mindustry_entities_comp_WaterMoveComp_addItem_mindustry_type_Item 185
+typedef void (*func_mindustry_entities_comp_WaterMoveComp_addItem_mindustry_type_Item)(jcontext ctx, jobject self, jobject param0);
+#define VTABLE_mindustry_entities_comp_WaterMoveComp_addItem_mindustry_type_Item_int 186
+typedef void (*func_mindustry_entities_comp_WaterMoveComp_addItem_mindustry_type_Item_int)(jcontext ctx, jobject self, jobject param0, jint param1);
+#define VTABLE_mindustry_entities_comp_WaterMoveComp_clearItem 187
+typedef void (*func_mindustry_entities_comp_WaterMoveComp_clearItem)(jcontext ctx, jobject self);
+#define VTABLE_mindustry_entities_comp_WaterMoveComp_itemTime_float 188
+typedef void (*func_mindustry_entities_comp_WaterMoveComp_itemTime_float)(jcontext ctx, jobject self, jfloat param0);
+#define VTABLE_mindustry_entities_comp_WaterMoveComp_stack_mindustry_type_ItemStack 189
+typedef void (*func_mindustry_entities_comp_WaterMoveComp_stack_mindustry_type_ItemStack)(jcontext ctx, jobject self, jobject param0);
+#define VTABLE_mindustry_entities_comp_WaterMoveComp_mineTile_R_mindustry_world_Tile 190
+typedef jobject (*func_mindustry_entities_comp_WaterMoveComp_mineTile_R_mindustry_world_Tile)(jcontext ctx, jobject self);
+#define VTABLE_mindustry_entities_comp_WaterMoveComp_canMine_R_boolean 191
+typedef jbool (*func_mindustry_entities_comp_WaterMoveComp_canMine_R_boolean)(jcontext ctx, jobject self);
+#define VTABLE_mindustry_entities_comp_WaterMoveComp_canMine_mindustry_type_Item_R_boolean 192
+typedef jbool (*func_mindustry_entities_comp_WaterMoveComp_canMine_mindustry_type_Item_R_boolean)(jcontext ctx, jobject self, jobject param0);
+#define VTABLE_mindustry_entities_comp_WaterMoveComp_mining_R_boolean 193
+typedef jbool (*func_mindustry_entities_comp_WaterMoveComp_mining_R_boolean)(jcontext ctx, jobject self);
+#define VTABLE_mindustry_entities_comp_WaterMoveComp_offloadImmediately_R_boolean 194
+typedef jbool (*func_mindustry_entities_comp_WaterMoveComp_offloadImmediately_R_boolean)(jcontext ctx, jobject self);
+#define VTABLE_mindustry_entities_comp_WaterMoveComp_validMine_mindustry_world_Tile_R_boolean 195
+typedef jbool (*func_mindustry_entities_comp_WaterMoveComp_validMine_mindustry_world_Tile_R_boolean)(jcontext ctx, jobject self, jobject param0);
+#define VTABLE_mindustry_entities_comp_WaterMoveComp_validMine_mindustry_world_Tile_boolean_R_boolean 196
+typedef jbool (*func_mindustry_entities_comp_WaterMoveComp_validMine_mindustry_world_Tile_boolean_R_boolean)(jcontext ctx, jobject self, jobject param0, jbool param1);
+#define VTABLE_mindustry_entities_comp_WaterMoveComp_mineTimer_R_float 197
+typedef jfloat (*func_mindustry_entities_comp_WaterMoveComp_mineTimer_R_float)(jcontext ctx, jobject self);
+#define VTABLE_mindustry_entities_comp_WaterMoveComp_getMineResult_mindustry_world_Tile_R_mindustry_type_Item 198
+typedef jobject (*func_mindustry_entities_comp_WaterMoveComp_getMineResult_mindustry_world_Tile_R_mindustry_type_Item)(jcontext ctx, jobject self, jobject param0);
+#define VTABLE_mindustry_entities_comp_WaterMoveComp_mineTile_mindustry_world_Tile 199
+typedef void (*func_mindustry_entities_comp_WaterMoveComp_mineTile_mindustry_world_Tile)(jcontext ctx, jobject self, jobject param0);
+#define VTABLE_mindustry_entities_comp_WaterMoveComp_mineTimer_float 200
+typedef void (*func_mindustry_entities_comp_WaterMoveComp_mineTimer_float)(jcontext ctx, jobject self, jfloat param0);
+#define VTABLE_mindustry_entities_comp_WaterMoveComp_hasPhysicsRef_R_boolean 201
+typedef jbool (*func_mindustry_entities_comp_WaterMoveComp_hasPhysicsRef_R_boolean)(jcontext ctx, jobject self);
+#define VTABLE_mindustry_entities_comp_WaterMoveComp_mass_R_float 202
+typedef jfloat (*func_mindustry_entities_comp_WaterMoveComp_mass_R_float)(jcontext ctx, jobject self);
+#define VTABLE_mindustry_entities_comp_WaterMoveComp_hasPhysicsRef_boolean 203
+typedef void (*func_mindustry_entities_comp_WaterMoveComp_hasPhysicsRef_boolean)(jcontext ctx, jobject self, jbool param0);
+#define VTABLE_mindustry_entities_comp_WaterMoveComp_impulse_arc_math_geom_Vec2 204
+typedef void (*func_mindustry_entities_comp_WaterMoveComp_impulse_arc_math_geom_Vec2)(jcontext ctx, jobject self, jobject param0);
+#define VTABLE_mindustry_entities_comp_WaterMoveComp_impulse_float_float 205
+typedef void (*func_mindustry_entities_comp_WaterMoveComp_impulse_float_float)(jcontext ctx, jobject self, jfloat param0, jfloat param1);
+#define VTABLE_mindustry_entities_comp_WaterMoveComp_impulseNet_arc_math_geom_Vec2 206
+typedef void (*func_mindustry_entities_comp_WaterMoveComp_impulseNet_arc_math_geom_Vec2)(jcontext ctx, jobject self, jobject param0);
+#define VTABLE_mindustry_entities_comp_WaterMoveComp_shield_R_float 207
+typedef jfloat (*func_mindustry_entities_comp_WaterMoveComp_shield_R_float)(jcontext ctx, jobject self);
+#define VTABLE_mindustry_entities_comp_WaterMoveComp_shield_float 208
+typedef void (*func_mindustry_entities_comp_WaterMoveComp_shield_float)(jcontext ctx, jobject self, jfloat param0);
+#define VTABLE_mindustry_entities_comp_WaterMoveComp_shieldAlpha_R_float 209
+typedef jfloat (*func_mindustry_entities_comp_WaterMoveComp_shieldAlpha_R_float)(jcontext ctx, jobject self);
+#define VTABLE_mindustry_entities_comp_WaterMoveComp_shieldAlpha_float 210
+typedef void (*func_mindustry_entities_comp_WaterMoveComp_shieldAlpha_float)(jcontext ctx, jobject self, jfloat param0);
+#define VTABLE_mindustry_entities_comp_WaterMoveComp_armor_R_float 211
+typedef jfloat (*func_mindustry_entities_comp_WaterMoveComp_armor_R_float)(jcontext ctx, jobject self);
+#define VTABLE_mindustry_entities_comp_WaterMoveComp_armor_float 212
+typedef void (*func_mindustry_entities_comp_WaterMoveComp_armor_float)(jcontext ctx, jobject self, jfloat param0);
+#define VTABLE_mindustry_entities_comp_WaterMoveComp_rawDamage_float 213
+typedef void (*func_mindustry_entities_comp_WaterMoveComp_rawDamage_float)(jcontext ctx, jobject self, jfloat param0);
+#define VTABLE_mindustry_entities_comp_WaterMoveComp_isSyncHidden_mindustry_game_Team_R_boolean 214
+typedef jbool (*func_mindustry_entities_comp_WaterMoveComp_isSyncHidden_mindustry_game_Team_R_boolean)(jcontext ctx, jobject self, jobject param0);
+#define VTABLE_mindustry_entities_comp_WaterMoveComp_lastUpdated_R_long 215
+typedef jlong (*func_mindustry_entities_comp_WaterMoveComp_lastUpdated_R_long)(jcontext ctx, jobject self);
+#define VTABLE_mindustry_entities_comp_WaterMoveComp_updateSpacing_R_long 216
+typedef jlong (*func_mindustry_entities_comp_WaterMoveComp_updateSpacing_R_long)(jcontext ctx, jobject self);
+#define VTABLE_mindustry_entities_comp_WaterMoveComp_afterSync 217
+typedef void (*func_mindustry_entities_comp_WaterMoveComp_afterSync)(jcontext ctx, jobject self);
+#define VTABLE_mindustry_entities_comp_WaterMoveComp_handleSyncHidden 218
+typedef void (*func_mindustry_entities_comp_WaterMoveComp_handleSyncHidden)(jcontext ctx, jobject self);
+#define VTABLE_mindustry_entities_comp_WaterMoveComp_interpolate 219
+typedef void (*func_mindustry_entities_comp_WaterMoveComp_interpolate)(jcontext ctx, jobject self);
+#define VTABLE_mindustry_entities_comp_WaterMoveComp_lastUpdated_long 220
+typedef void (*func_mindustry_entities_comp_WaterMoveComp_lastUpdated_long)(jcontext ctx, jobject self, jlong param0);
+#define VTABLE_mindustry_entities_comp_WaterMoveComp_readSync_arc_util_io_Reads 221
+typedef void (*func_mindustry_entities_comp_WaterMoveComp_readSync_arc_util_io_Reads)(jcontext ctx, jobject self, jobject param0);
+#define VTABLE_mindustry_entities_comp_WaterMoveComp_readSyncManual_java_nio_FloatBuffer 222
+typedef void (*func_mindustry_entities_comp_WaterMoveComp_readSyncManual_java_nio_FloatBuffer)(jcontext ctx, jobject self, jobject param0);
+#define VTABLE_mindustry_entities_comp_WaterMoveComp_snapInterpolation 223
+typedef void (*func_mindustry_entities_comp_WaterMoveComp_snapInterpolation)(jcontext ctx, jobject self);
+#define VTABLE_mindustry_entities_comp_WaterMoveComp_snapSync 224
+typedef void (*func_mindustry_entities_comp_WaterMoveComp_snapSync)(jcontext ctx, jobject self);
+#define VTABLE_mindustry_entities_comp_WaterMoveComp_updateSpacing_long 225
+typedef void (*func_mindustry_entities_comp_WaterMoveComp_updateSpacing_long)(jcontext ctx, jobject self, jlong param0);
+#define VTABLE_mindustry_entities_comp_WaterMoveComp_writeSync_arc_util_io_Writes 226
+typedef void (*func_mindustry_entities_comp_WaterMoveComp_writeSync_arc_util_io_Writes)(jcontext ctx, jobject self, jobject param0);
+#define VTABLE_mindustry_entities_comp_WaterMoveComp_writeSyncManual_java_nio_FloatBuffer 227
+typedef void (*func_mindustry_entities_comp_WaterMoveComp_writeSyncManual_java_nio_FloatBuffer)(jcontext ctx, jobject self, jobject param0);
+#define VTABLE_mindustry_entities_comp_WaterMoveComp_aim_float_float 228
+typedef void (*func_mindustry_entities_comp_WaterMoveComp_aim_float_float)(jcontext ctx, jobject self, jfloat param0, jfloat param1);
+#define VTABLE_mindustry_entities_comp_WaterMoveComp_aim_float_float_boolean 229
+typedef void (*func_mindustry_entities_comp_WaterMoveComp_aim_float_float_boolean)(jcontext ctx, jobject self, jfloat param0, jfloat param1, jbool param2);
+#define VTABLE_mindustry_entities_comp_WaterMoveComp_mounts_R_Array1_mindustry_entities_units_WeaponMount 230
+typedef jobject (*func_mindustry_entities_comp_WaterMoveComp_mounts_R_Array1_mindustry_entities_units_WeaponMount)(jcontext ctx, jobject self);
+#define VTABLE_mindustry_entities_comp_WaterMoveComp_mounts_Array1_mindustry_entities_units_WeaponMount 231
+typedef void (*func_mindustry_entities_comp_WaterMoveComp_mounts_Array1_mindustry_entities_units_WeaponMount)(jcontext ctx, jobject self, jobject param0);
+#define VTABLE_mindustry_entities_comp_WaterMoveComp_canShoot_R_boolean 232
+typedef jbool (*func_mindustry_entities_comp_WaterMoveComp_canShoot_R_boolean)(jcontext ctx, jobject self);
+#define VTABLE_mindustry_entities_comp_WaterMoveComp_isRotate_R_boolean 233
+typedef jbool (*func_mindustry_entities_comp_WaterMoveComp_isRotate_R_boolean)(jcontext ctx, jobject self);
+#define VTABLE_mindustry_entities_comp_WaterMoveComp_isShooting_R_boolean 234
+typedef jbool (*func_mindustry_entities_comp_WaterMoveComp_isShooting_R_boolean)(jcontext ctx, jobject self);
+#define VTABLE_mindustry_entities_comp_WaterMoveComp_aimX_R_float 235
+typedef jfloat (*func_mindustry_entities_comp_WaterMoveComp_aimX_R_float)(jcontext ctx, jobject self);
+#define VTABLE_mindustry_entities_comp_WaterMoveComp_aimY_R_float 236
+typedef jfloat (*func_mindustry_entities_comp_WaterMoveComp_aimY_R_float)(jcontext ctx, jobject self);
+#define VTABLE_mindustry_entities_comp_WaterMoveComp_aim_arc_math_geom_Position 237
+typedef void (*func_mindustry_entities_comp_WaterMoveComp_aim_arc_math_geom_Position)(jcontext ctx, jobject self, jobject param0);
+#define VTABLE_mindustry_entities_comp_WaterMoveComp_aimX_float 238
+typedef void (*func_mindustry_entities_comp_WaterMoveComp_aimX_float)(jcontext ctx, jobject self, jfloat param0);
+#define VTABLE_mindustry_entities_comp_WaterMoveComp_aimY_float 239
+typedef void (*func_mindustry_entities_comp_WaterMoveComp_aimY_float)(jcontext ctx, jobject self, jfloat param0);
+#define VTABLE_mindustry_entities_comp_WaterMoveComp_controlWeapons_boolean_boolean 240
+typedef void (*func_mindustry_entities_comp_WaterMoveComp_controlWeapons_boolean_boolean)(jcontext ctx, jobject self, jbool param0, jbool param1);
+#define VTABLE_mindustry_entities_comp_WaterMoveComp_controlWeapons_boolean 241
+typedef void (*func_mindustry_entities_comp_WaterMoveComp_controlWeapons_boolean)(jcontext ctx, jobject self, jbool param0);
+#define VTABLE_mindustry_entities_comp_WaterMoveComp_isShooting_boolean 242
+typedef void (*func_mindustry_entities_comp_WaterMoveComp_isShooting_boolean)(jcontext ctx, jobject self, jbool param0);
+#define VTABLE_mindustry_entities_comp_WaterMoveComp_setWeaponRotation_float 243
+typedef void (*func_mindustry_entities_comp_WaterMoveComp_setWeaponRotation_float)(jcontext ctx, jobject self, jfloat param0);
+#define VTABLE_mindustry_entities_comp_WaterMoveComp_setupWeapons_mindustry_type_UnitType 244
+typedef void (*func_mindustry_entities_comp_WaterMoveComp_setupWeapons_mindustry_type_UnitType)(jcontext ctx, jobject self, jobject param0);
+#define VTABLE_mindustry_entities_comp_WaterMoveComp_range_R_float 245
+typedef jfloat (*func_mindustry_entities_comp_WaterMoveComp_range_R_float)(jcontext ctx, jobject self);
+#define VTABLE_mindustry_entities_comp_WaterMoveComp_sense_mindustry_logic_LAccess_R_double 246
+typedef jdouble (*func_mindustry_entities_comp_WaterMoveComp_sense_mindustry_logic_LAccess_R_double)(jcontext ctx, jobject self, jobject param0);
+#define VTABLE_mindustry_entities_comp_WaterMoveComp_sense_mindustry_ctype_Content_R_double 247
+typedef jdouble (*func_mindustry_entities_comp_WaterMoveComp_sense_mindustry_ctype_Content_R_double)(jcontext ctx, jobject self, jobject param0);
+#define VTABLE_mindustry_entities_comp_WaterMoveComp_senseObject_mindustry_logic_LAccess_R_java_lang_Object 248
+typedef jobject (*func_mindustry_entities_comp_WaterMoveComp_senseObject_mindustry_logic_LAccess_R_java_lang_Object)(jcontext ctx, jobject self, jobject param0);
+#define VTABLE_mindustry_entities_comp_WaterMoveComp_setProp_mindustry_logic_LAccess_double 249
+typedef void (*func_mindustry_entities_comp_WaterMoveComp_setProp_mindustry_logic_LAccess_double)(jcontext ctx, jobject self, jobject param0, jdouble param1);
+#define VTABLE_mindustry_entities_comp_WaterMoveComp_setProp_mindustry_logic_LAccess_java_lang_Object 250
+typedef void (*func_mindustry_entities_comp_WaterMoveComp_setProp_mindustry_logic_LAccess_java_lang_Object)(jcontext ctx, jobject self, jobject param0, jobject param1);
+#define VTABLE_mindustry_entities_comp_WaterMoveComp_setProp_mindustry_ctype_UnlockableContent_double 251
+typedef void (*func_mindustry_entities_comp_WaterMoveComp_setProp_mindustry_ctype_UnlockableContent_double)(jcontext ctx, jobject self, jobject param0, jdouble param1);
+#define VTABLE_mindustry_entities_comp_WaterMoveComp_displayable_R_boolean 252
+typedef jbool (*func_mindustry_entities_comp_WaterMoveComp_displayable_R_boolean)(jcontext ctx, jobject self);
+#define VTABLE_mindustry_entities_comp_WaterMoveComp_display_arc_scene_ui_layout_Table 253
+typedef void (*func_mindustry_entities_comp_WaterMoveComp_display_arc_scene_ui_layout_Table)(jcontext ctx, jobject self, jobject param0);
+#define VTABLE_mindustry_entities_comp_WaterMoveComp_icon_R_arc_graphics_g2d_TextureRegion 254
+typedef jobject (*func_mindustry_entities_comp_WaterMoveComp_icon_R_arc_graphics_g2d_TextureRegion)(jcontext ctx, jobject self);
+#define VTABLE_mindustry_entities_comp_WaterMoveComp_physicSize_R_float 255
+typedef jfloat (*func_mindustry_entities_comp_WaterMoveComp_physicSize_R_float)(jcontext ctx, jobject self);
+#define VTABLE_mindustry_entities_comp_WaterMoveComp_getControllerName_R_java_lang_String 256
+typedef jobject (*func_mindustry_entities_comp_WaterMoveComp_getControllerName_R_java_lang_String)(jcontext ctx, jobject self);
+#define VTABLE_mindustry_entities_comp_WaterMoveComp_speed_R_float 257
+typedef jfloat (*func_mindustry_entities_comp_WaterMoveComp_speed_R_float)(jcontext ctx, jobject self);
+#define VTABLE_mindustry_entities_comp_WaterMoveComp_collisionLayer_R_int 258
+typedef jint (*func_mindustry_entities_comp_WaterMoveComp_collisionLayer_R_int)(jcontext ctx, jobject self);
+#define VTABLE_mindustry_entities_comp_WaterMoveComp_prefRotation_R_float 259
+typedef jfloat (*func_mindustry_entities_comp_WaterMoveComp_prefRotation_R_float)(jcontext ctx, jobject self);
+#define VTABLE_mindustry_entities_comp_WaterMoveComp_allowCommand_R_boolean 260
+typedef jbool (*func_mindustry_entities_comp_WaterMoveComp_allowCommand_R_boolean)(jcontext ctx, jobject self);
+#define VTABLE_mindustry_entities_comp_WaterMoveComp_isCommandable_R_boolean 261
+typedef jbool (*func_mindustry_entities_comp_WaterMoveComp_isCommandable_R_boolean)(jcontext ctx, jobject self);
+#define VTABLE_mindustry_entities_comp_WaterMoveComp_canLand_R_boolean 262
+typedef jbool (*func_mindustry_entities_comp_WaterMoveComp_canLand_R_boolean)(jcontext ctx, jobject self);
+#define VTABLE_mindustry_entities_comp_WaterMoveComp_destroy 263
+typedef void (*func_mindustry_entities_comp_WaterMoveComp_destroy)(jcontext ctx, jobject self);
+#define VTABLE_mindustry_entities_comp_WaterMoveComp_unloaded 264
+typedef void (*func_mindustry_entities_comp_WaterMoveComp_unloaded)(jcontext ctx, jobject self);
+#define VTABLE_mindustry_entities_comp_WaterMoveComp_movePref_arc_math_geom_Vec2 265
+typedef void (*func_mindustry_entities_comp_WaterMoveComp_movePref_arc_math_geom_Vec2)(jcontext ctx, jobject self, jobject param0);
+#define VTABLE_mindustry_entities_comp_WaterMoveComp_hasTarget_R_boolean 266
+typedef jbool (*func_mindustry_entities_comp_WaterMoveComp_hasTarget_R_boolean)(jcontext ctx, jobject self);
+#define VTABLE_mindustry_entities_comp_WaterMoveComp_hasTarget_boolean 267
+typedef void (*func_mindustry_entities_comp_WaterMoveComp_hasTarget_boolean)(jcontext ctx, jobject self, jbool param0);
+#define VTABLE_mindustry_entities_comp_WaterMoveComp_trail_R_mindustry_graphics_Trail 268
+typedef jobject (*func_mindustry_entities_comp_WaterMoveComp_trail_R_mindustry_graphics_Trail)(jcontext ctx, jobject self);
+#define VTABLE_mindustry_entities_comp_WaterMoveComp_dockedType_R_mindustry_type_UnitType 269
+typedef jobject (*func_mindustry_entities_comp_WaterMoveComp_dockedType_R_mindustry_type_UnitType)(jcontext ctx, jobject self);
+#define VTABLE_mindustry_entities_comp_WaterMoveComp_lastDrownFloor_R_mindustry_world_blocks_environment_Floor 270
+typedef jobject (*func_mindustry_entities_comp_WaterMoveComp_lastDrownFloor_R_mindustry_world_blocks_environment_Floor)(jcontext ctx, jobject self);
+#define VTABLE_mindustry_entities_comp_WaterMoveComp_getPlayer_R_mindustry_gen_Player 271
+typedef jobject (*func_mindustry_entities_comp_WaterMoveComp_getPlayer_R_mindustry_gen_Player)(jcontext ctx, jobject self);
+#define VTABLE_mindustry_entities_comp_WaterMoveComp_canDrown_R_boolean 272
+typedef jbool (*func_mindustry_entities_comp_WaterMoveComp_canDrown_R_boolean)(jcontext ctx, jobject self);
+#define VTABLE_mindustry_entities_comp_WaterMoveComp_canTarget_mindustry_gen_Teamc_R_boolean 273
+typedef jbool (*func_mindustry_entities_comp_WaterMoveComp_canTarget_mindustry_gen_Teamc_R_boolean)(jcontext ctx, jobject self, jobject param0);
+#define VTABLE_mindustry_entities_comp_WaterMoveComp_checkTarget_boolean_boolean_R_boolean 274
+typedef jbool (*func_mindustry_entities_comp_WaterMoveComp_checkTarget_boolean_boolean_R_boolean)(jcontext ctx, jobject self, jbool param0, jbool param1);
+#define VTABLE_mindustry_entities_comp_WaterMoveComp_hasWeapons_R_boolean 275
+typedef jbool (*func_mindustry_entities_comp_WaterMoveComp_hasWeapons_R_boolean)(jcontext ctx, jobject self);
+#define VTABLE_mindustry_entities_comp_WaterMoveComp_hittable_R_boolean 276
+typedef jbool (*func_mindustry_entities_comp_WaterMoveComp_hittable_R_boolean)(jcontext ctx, jobject self);
+#define VTABLE_mindustry_entities_comp_WaterMoveComp_inRange_arc_math_geom_Position_R_boolean 277
+typedef jbool (*func_mindustry_entities_comp_WaterMoveComp_inRange_arc_math_geom_Position_R_boolean)(jcontext ctx, jobject self, jobject param0);
+#define VTABLE_mindustry_entities_comp_WaterMoveComp_isAI_R_boolean 278
+typedef jbool (*func_mindustry_entities_comp_WaterMoveComp_isAI_R_boolean)(jcontext ctx, jobject self);
+#define VTABLE_mindustry_entities_comp_WaterMoveComp_isEnemy_R_boolean 279
+typedef jbool (*func_mindustry_entities_comp_WaterMoveComp_isEnemy_R_boolean)(jcontext ctx, jobject self);
+#define VTABLE_mindustry_entities_comp_WaterMoveComp_isFlying_R_boolean 280
+typedef jbool (*func_mindustry_entities_comp_WaterMoveComp_isFlying_R_boolean)(jcontext ctx, jobject self);
+#define VTABLE_mindustry_entities_comp_WaterMoveComp_isMissile_R_boolean 281
+typedef jbool (*func_mindustry_entities_comp_WaterMoveComp_isMissile_R_boolean)(jcontext ctx, jobject self);
+#define VTABLE_mindustry_entities_comp_WaterMoveComp_isPathImpassable_int_int_R_boolean 282
+typedef jbool (*func_mindustry_entities_comp_WaterMoveComp_isPathImpassable_int_int_R_boolean)(jcontext ctx, jobject self, jint param0, jint param1);
+#define VTABLE_mindustry_entities_comp_WaterMoveComp_isPlayer_R_boolean 283
+typedef jbool (*func_mindustry_entities_comp_WaterMoveComp_isPlayer_R_boolean)(jcontext ctx, jobject self);
+#define VTABLE_mindustry_entities_comp_WaterMoveComp_killable_R_boolean 284
+typedef jbool (*func_mindustry_entities_comp_WaterMoveComp_killable_R_boolean)(jcontext ctx, jobject self);
+#define VTABLE_mindustry_entities_comp_WaterMoveComp_playerControllable_R_boolean 285
+typedef jbool (*func_mindustry_entities_comp_WaterMoveComp_playerControllable_R_boolean)(jcontext ctx, jobject self);
+#define VTABLE_mindustry_entities_comp_WaterMoveComp_shouldUpdateController_R_boolean 286
+typedef jbool (*func_mindustry_entities_comp_WaterMoveComp_shouldUpdateController_R_boolean)(jcontext ctx, jobject self);
+#define VTABLE_mindustry_entities_comp_WaterMoveComp_spawnedByCore_R_boolean 287
+typedef jbool (*func_mindustry_entities_comp_WaterMoveComp_spawnedByCore_R_boolean)(jcontext ctx, jobject self);
+#define VTABLE_mindustry_entities_comp_WaterMoveComp_targetable_mindustry_game_Team_R_boolean 288
+typedef jbool (*func_mindustry_entities_comp_WaterMoveComp_targetable_mindustry_game_Team_R_boolean)(jcontext ctx, jobject self, jobject param0);
+#define VTABLE_mindustry_entities_comp_WaterMoveComp_flag_R_double 289
+typedef jdouble (*func_mindustry_entities_comp_WaterMoveComp_flag_R_double)(jcontext ctx, jobject self);
+#define VTABLE_mindustry_entities_comp_WaterMoveComp_ammof_R_float 290
+typedef jfloat (*func_mindustry_entities_comp_WaterMoveComp_ammof_R_float)(jcontext ctx, jobject self);
+#define VTABLE_mindustry_entities_comp_WaterMoveComp_bounds_R_float 291
+typedef jfloat (*func_mindustry_entities_comp_WaterMoveComp_bounds_R_float)(jcontext ctx, jobject self);
+#define VTABLE_mindustry_entities_comp_WaterMoveComp_drownTime_R_float 292
+typedef jfloat (*func_mindustry_entities_comp_WaterMoveComp_drownTime_R_float)(jcontext ctx, jobject self);
+#define VTABLE_mindustry_entities_comp_WaterMoveComp_elevation_R_float 293
+typedef jfloat (*func_mindustry_entities_comp_WaterMoveComp_elevation_R_float)(jcontext ctx, jobject self);
+#define VTABLE_mindustry_entities_comp_WaterMoveComp_floorSpeedMultiplier_R_float 294
+typedef jfloat (*func_mindustry_entities_comp_WaterMoveComp_floorSpeedMultiplier_R_float)(jcontext ctx, jobject self);
+#define VTABLE_mindustry_entities_comp_WaterMoveComp_healTime_R_float 295
+typedef jfloat (*func_mindustry_entities_comp_WaterMoveComp_healTime_R_float)(jcontext ctx, jobject self);
+#define VTABLE_mindustry_entities_comp_WaterMoveComp_shadowAlpha_R_float 296
+typedef jfloat (*func_mindustry_entities_comp_WaterMoveComp_shadowAlpha_R_float)(jcontext ctx, jobject self);
+#define VTABLE_mindustry_entities_comp_WaterMoveComp_splashTimer_R_float 297
+typedef jfloat (*func_mindustry_entities_comp_WaterMoveComp_splashTimer_R_float)(jcontext ctx, jobject self);
+#define VTABLE_mindustry_entities_comp_WaterMoveComp_cap_R_int 298
+typedef jint (*func_mindustry_entities_comp_WaterMoveComp_cap_R_int)(jcontext ctx, jobject self);
+#define VTABLE_mindustry_entities_comp_WaterMoveComp_count_R_int 299
+typedef jint (*func_mindustry_entities_comp_WaterMoveComp_count_R_int)(jcontext ctx, jobject self);
+#define VTABLE_mindustry_entities_comp_WaterMoveComp_lastFogPos_R_int 300
+typedef jint (*func_mindustry_entities_comp_WaterMoveComp_lastFogPos_R_int)(jcontext ctx, jobject self);
+#define VTABLE_mindustry_entities_comp_WaterMoveComp_lastCommanded_R_java_lang_String 301
+typedef jobject (*func_mindustry_entities_comp_WaterMoveComp_lastCommanded_R_java_lang_String)(jcontext ctx, jobject self);
+#define VTABLE_mindustry_entities_comp_WaterMoveComp_command_R_mindustry_ai_types_CommandAI 302
+typedef jobject (*func_mindustry_entities_comp_WaterMoveComp_command_R_mindustry_ai_types_CommandAI)(jcontext ctx, jobject self);
+#define VTABLE_mindustry_entities_comp_WaterMoveComp_abilities_R_Array1_mindustry_entities_abilities_Ability 303
+typedef jobject (*func_mindustry_entities_comp_WaterMoveComp_abilities_R_Array1_mindustry_entities_abilities_Ability)(jcontext ctx, jobject self);
+#define VTABLE_mindustry_entities_comp_WaterMoveComp_controller_R_mindustry_entities_units_UnitController 304
+typedef jobject (*func_mindustry_entities_comp_WaterMoveComp_controller_R_mindustry_entities_units_UnitController)(jcontext ctx, jobject self);
+#define VTABLE_mindustry_entities_comp_WaterMoveComp_type_R_mindustry_type_UnitType 305
+typedef jobject (*func_mindustry_entities_comp_WaterMoveComp_type_R_mindustry_type_UnitType)(jcontext ctx, jobject self);
+#define VTABLE_mindustry_entities_comp_WaterMoveComp_drownFloor_R_mindustry_world_blocks_environment_Floor 306
+typedef jobject (*func_mindustry_entities_comp_WaterMoveComp_drownFloor_R_mindustry_world_blocks_environment_Floor)(jcontext ctx, jobject self);
+#define VTABLE_mindustry_entities_comp_WaterMoveComp_abilities_Array1_mindustry_entities_abilities_Ability 307
+typedef void (*func_mindustry_entities_comp_WaterMoveComp_abilities_Array1_mindustry_entities_abilities_Ability)(jcontext ctx, jobject self, jobject param0);
+#define VTABLE_mindustry_entities_comp_WaterMoveComp_aimLook_arc_math_geom_Position 308
+typedef void (*func_mindustry_entities_comp_WaterMoveComp_aimLook_arc_math_geom_Position)(jcontext ctx, jobject self, jobject param0);
+#define VTABLE_mindustry_entities_comp_WaterMoveComp_aimLook_float_float 309
+typedef void (*func_mindustry_entities_comp_WaterMoveComp_aimLook_float_float)(jcontext ctx, jobject self, jfloat param0, jfloat param1);
+#define VTABLE_mindustry_entities_comp_WaterMoveComp_approach_arc_math_geom_Vec2 310
+typedef void (*func_mindustry_entities_comp_WaterMoveComp_approach_arc_math_geom_Vec2)(jcontext ctx, jobject self, jobject param0);
+#define VTABLE_mindustry_entities_comp_WaterMoveComp_controller_mindustry_entities_units_UnitController 311
+typedef void (*func_mindustry_entities_comp_WaterMoveComp_controller_mindustry_entities_units_UnitController)(jcontext ctx, jobject self, jobject param0);
+#define VTABLE_mindustry_entities_comp_WaterMoveComp_dockedType_mindustry_type_UnitType 312
+typedef void (*func_mindustry_entities_comp_WaterMoveComp_dockedType_mindustry_type_UnitType)(jcontext ctx, jobject self, jobject param0);
+#define VTABLE_mindustry_entities_comp_WaterMoveComp_drownTime_float 313
+typedef void (*func_mindustry_entities_comp_WaterMoveComp_drownTime_float)(jcontext ctx, jobject self, jfloat param0);
+#define VTABLE_mindustry_entities_comp_WaterMoveComp_elevation_float 314
+typedef void (*func_mindustry_entities_comp_WaterMoveComp_elevation_float)(jcontext ctx, jobject self, jfloat param0);
+#define VTABLE_mindustry_entities_comp_WaterMoveComp_flag_double 315
+typedef void (*func_mindustry_entities_comp_WaterMoveComp_flag_double)(jcontext ctx, jobject self, jdouble param0);
+#define VTABLE_mindustry_entities_comp_WaterMoveComp_healTime_float 316
+typedef void (*func_mindustry_entities_comp_WaterMoveComp_healTime_float)(jcontext ctx, jobject self, jfloat param0);
+#define VTABLE_mindustry_entities_comp_WaterMoveComp_landed 317
+typedef void (*func_mindustry_entities_comp_WaterMoveComp_landed)(jcontext ctx, jobject self);
+#define VTABLE_mindustry_entities_comp_WaterMoveComp_lastCommanded_java_lang_String 318
+typedef void (*func_mindustry_entities_comp_WaterMoveComp_lastCommanded_java_lang_String)(jcontext ctx, jobject self, jobject param0);
+#define VTABLE_mindustry_entities_comp_WaterMoveComp_lastDrownFloor_mindustry_world_blocks_environment_Floor 319
+typedef void (*func_mindustry_entities_comp_WaterMoveComp_lastDrownFloor_mindustry_world_blocks_environment_Floor)(jcontext ctx, jobject self, jobject param0);
+#define VTABLE_mindustry_entities_comp_WaterMoveComp_lastFogPos_int 320
+typedef void (*func_mindustry_entities_comp_WaterMoveComp_lastFogPos_int)(jcontext ctx, jobject self, jint param0);
+#define VTABLE_mindustry_entities_comp_WaterMoveComp_lookAt_arc_math_geom_Position 321
+typedef void (*func_mindustry_entities_comp_WaterMoveComp_lookAt_arc_math_geom_Position)(jcontext ctx, jobject self, jobject param0);
+#define VTABLE_mindustry_entities_comp_WaterMoveComp_lookAt_float 322
+typedef void (*func_mindustry_entities_comp_WaterMoveComp_lookAt_float)(jcontext ctx, jobject self, jfloat param0);
+#define VTABLE_mindustry_entities_comp_WaterMoveComp_lookAt_float_float 323
+typedef void (*func_mindustry_entities_comp_WaterMoveComp_lookAt_float_float)(jcontext ctx, jobject self, jfloat param0, jfloat param1);
+#define VTABLE_mindustry_entities_comp_WaterMoveComp_moveAt_arc_math_geom_Vec2 324
+typedef void (*func_mindustry_entities_comp_WaterMoveComp_moveAt_arc_math_geom_Vec2)(jcontext ctx, jobject self, jobject param0);
+#define VTABLE_mindustry_entities_comp_WaterMoveComp_moveAt_arc_math_geom_Vec2_float 325
+typedef void (*func_mindustry_entities_comp_WaterMoveComp_moveAt_arc_math_geom_Vec2_float)(jcontext ctx, jobject self, jobject param0, jfloat param1);
+#define VTABLE_mindustry_entities_comp_WaterMoveComp_resetController 326
+typedef void (*func_mindustry_entities_comp_WaterMoveComp_resetController)(jcontext ctx, jobject self);
+#define VTABLE_mindustry_entities_comp_WaterMoveComp_rotateMove_arc_math_geom_Vec2 327
+typedef void (*func_mindustry_entities_comp_WaterMoveComp_rotateMove_arc_math_geom_Vec2)(jcontext ctx, jobject self, jobject param0);
+#define VTABLE_mindustry_entities_comp_WaterMoveComp_set_mindustry_type_UnitType_mindustry_entities_units_UnitController 328
+typedef void (*func_mindustry_entities_comp_WaterMoveComp_set_mindustry_type_UnitType_mindustry_entities_units_UnitController)(jcontext ctx, jobject self, jobject param0, jobject param1);
+#define VTABLE_mindustry_entities_comp_WaterMoveComp_setType_mindustry_type_UnitType 329
+typedef void (*func_mindustry_entities_comp_WaterMoveComp_setType_mindustry_type_UnitType)(jcontext ctx, jobject self, jobject param0);
+#define VTABLE_mindustry_entities_comp_WaterMoveComp_shadowAlpha_float 330
+typedef void (*func_mindustry_entities_comp_WaterMoveComp_shadowAlpha_float)(jcontext ctx, jobject self, jfloat param0);
+#define VTABLE_mindustry_entities_comp_WaterMoveComp_spawnedByCore_boolean 331
+typedef void (*func_mindustry_entities_comp_WaterMoveComp_spawnedByCore_boolean)(jcontext ctx, jobject self, jbool param0);
+#define VTABLE_mindustry_entities_comp_WaterMoveComp_splashTimer_float 332
+typedef void (*func_mindustry_entities_comp_WaterMoveComp_splashTimer_float)(jcontext ctx, jobject self, jfloat param0);
+#define VTABLE_mindustry_entities_comp_WaterMoveComp_trail_mindustry_graphics_Trail 333
+typedef void (*func_mindustry_entities_comp_WaterMoveComp_trail_mindustry_graphics_Trail)(jcontext ctx, jobject self, jobject param0);
+#define VTABLE_mindustry_entities_comp_WaterMoveComp_type_mindustry_type_UnitType 334
+typedef void (*func_mindustry_entities_comp_WaterMoveComp_type_mindustry_type_UnitType)(jcontext ctx, jobject self, jobject param0);
+#define VTABLE_mindustry_entities_comp_WaterMoveComp_updateBoosting_boolean 335
+typedef void (*func_mindustry_entities_comp_WaterMoveComp_updateBoosting_boolean)(jcontext ctx, jobject self, jbool param0);
+#define VTABLE_mindustry_entities_comp_WaterMoveComp_updateBoosting_boolean_boolean 336
+typedef void (*func_mindustry_entities_comp_WaterMoveComp_updateBoosting_boolean_boolean)(jcontext ctx, jobject self, jbool param0, jbool param1);
+#define VTABLE_mindustry_entities_comp_WaterMoveComp_updateDrowning 337
+typedef void (*func_mindustry_entities_comp_WaterMoveComp_updateDrowning)(jcontext ctx, jobject self);
+#define VTABLE_mindustry_entities_comp_WaterMoveComp_wobble 338
+typedef void (*func_mindustry_entities_comp_WaterMoveComp_wobble)(jcontext ctx, jobject self);
+#define VTABLE_mindustry_entities_comp_WaterMoveComp_onLiquid_R_boolean 339
+typedef jbool (*func_mindustry_entities_comp_WaterMoveComp_onLiquid_R_boolean)(jcontext ctx, jobject self);
+
+void mark_mindustry_entities_comp_WaterMoveComp(jobject object, jint mark, jint depth);
+void clinit_mindustry_entities_comp_WaterMoveComp(jcontext ctx);
+void init_mindustry_entities_comp_WaterMoveComp(jcontext ctx, jobject self);
+void M_mindustry_entities_comp_WaterMoveComp_update(jcontext ctx, jobject self);
+void M_mindustry_entities_comp_WaterMoveComp_add(jcontext ctx, jobject self);
+void M_mindustry_entities_comp_WaterMoveComp_draw(jcontext ctx, jobject self);
+jobject M_mindustry_entities_comp_WaterMoveComp_solidity_R_mindustry_entities_EntityCollisions$SolidPred(jcontext ctx, jobject self);
+jbool M_mindustry_entities_comp_WaterMoveComp_onSolid_R_boolean(jcontext ctx, jobject self);
+jfloat M_mindustry_entities_comp_WaterMoveComp_floorSpeedMultiplier_R_float(jcontext ctx, jobject self);
+jbool M_mindustry_entities_comp_WaterMoveComp_onLiquid_R_boolean(jcontext ctx, jobject self);
+
+#ifdef __cplusplus
+}
+#endif
+
+#endif

@@ -1,0 +1,498 @@
+#ifndef HEADER_arc_graphics_GL30
+#define HEADER_arc_graphics_GL30
+
+#include "Clearwing.h"
+#include "java/lang/Object.h"
+#include "arc/graphics/GL20.h"
+
+#ifdef __cplusplus
+extern "C" {
+#endif
+
+typedef struct arc_graphics_GL30 {
+	java_lang_Object parent;
+} arc_graphics_GL30;
+
+extern Class class_arc_graphics_GL30;
+
+extern jint SF_arc_graphics_GL30_GL_READ_BUFFER;
+extern jint SF_arc_graphics_GL30_GL_UNPACK_ROW_LENGTH;
+extern jint SF_arc_graphics_GL30_GL_UNPACK_SKIP_ROWS;
+extern jint SF_arc_graphics_GL30_GL_UNPACK_SKIP_PIXELS;
+extern jint SF_arc_graphics_GL30_GL_PACK_ROW_LENGTH;
+extern jint SF_arc_graphics_GL30_GL_PACK_SKIP_ROWS;
+extern jint SF_arc_graphics_GL30_GL_PACK_SKIP_PIXELS;
+extern jint SF_arc_graphics_GL30_GL_COLOR;
+extern jint SF_arc_graphics_GL30_GL_DEPTH;
+extern jint SF_arc_graphics_GL30_GL_STENCIL;
+extern jint SF_arc_graphics_GL30_GL_RED;
+extern jint SF_arc_graphics_GL30_GL_RGB8;
+extern jint SF_arc_graphics_GL30_GL_RGBA8;
+extern jint SF_arc_graphics_GL30_GL_RGB10_A2;
+extern jint SF_arc_graphics_GL30_GL_TEXTURE_BINDING_3D;
+extern jint SF_arc_graphics_GL30_GL_UNPACK_SKIP_IMAGES;
+extern jint SF_arc_graphics_GL30_GL_UNPACK_IMAGE_HEIGHT;
+extern jint SF_arc_graphics_GL30_GL_TEXTURE_3D;
+extern jint SF_arc_graphics_GL30_GL_TEXTURE_WRAP_R;
+extern jint SF_arc_graphics_GL30_GL_MAX_3D_TEXTURE_SIZE;
+extern jint SF_arc_graphics_GL30_GL_UNSIGNED_INT_2_10_10_10_REV;
+extern jint SF_arc_graphics_GL30_GL_MAX_ELEMENTS_VERTICES;
+extern jint SF_arc_graphics_GL30_GL_MAX_ELEMENTS_INDICES;
+extern jint SF_arc_graphics_GL30_GL_TEXTURE_MIN_LOD;
+extern jint SF_arc_graphics_GL30_GL_TEXTURE_MAX_LOD;
+extern jint SF_arc_graphics_GL30_GL_TEXTURE_BASE_LEVEL;
+extern jint SF_arc_graphics_GL30_GL_TEXTURE_MAX_LEVEL;
+extern jint SF_arc_graphics_GL30_GL_MIN;
+extern jint SF_arc_graphics_GL30_GL_MAX;
+extern jint SF_arc_graphics_GL30_GL_DEPTH_COMPONENT24;
+extern jint SF_arc_graphics_GL30_GL_MAX_TEXTURE_LOD_BIAS;
+extern jint SF_arc_graphics_GL30_GL_TEXTURE_COMPARE_MODE;
+extern jint SF_arc_graphics_GL30_GL_TEXTURE_COMPARE_FUNC;
+extern jint SF_arc_graphics_GL30_GL_CURRENT_QUERY;
+extern jint SF_arc_graphics_GL30_GL_QUERY_RESULT;
+extern jint SF_arc_graphics_GL30_GL_QUERY_RESULT_AVAILABLE;
+extern jint SF_arc_graphics_GL30_GL_BUFFER_MAPPED;
+extern jint SF_arc_graphics_GL30_GL_BUFFER_MAP_POINTER;
+extern jint SF_arc_graphics_GL30_GL_STREAM_READ;
+extern jint SF_arc_graphics_GL30_GL_STREAM_COPY;
+extern jint SF_arc_graphics_GL30_GL_STATIC_READ;
+extern jint SF_arc_graphics_GL30_GL_STATIC_COPY;
+extern jint SF_arc_graphics_GL30_GL_DYNAMIC_READ;
+extern jint SF_arc_graphics_GL30_GL_DYNAMIC_COPY;
+extern jint SF_arc_graphics_GL30_GL_MAX_DRAW_BUFFERS;
+extern jint SF_arc_graphics_GL30_GL_DRAW_BUFFER0;
+extern jint SF_arc_graphics_GL30_GL_DRAW_BUFFER1;
+extern jint SF_arc_graphics_GL30_GL_DRAW_BUFFER2;
+extern jint SF_arc_graphics_GL30_GL_DRAW_BUFFER3;
+extern jint SF_arc_graphics_GL30_GL_DRAW_BUFFER4;
+extern jint SF_arc_graphics_GL30_GL_DRAW_BUFFER5;
+extern jint SF_arc_graphics_GL30_GL_DRAW_BUFFER6;
+extern jint SF_arc_graphics_GL30_GL_DRAW_BUFFER7;
+extern jint SF_arc_graphics_GL30_GL_DRAW_BUFFER8;
+extern jint SF_arc_graphics_GL30_GL_DRAW_BUFFER9;
+extern jint SF_arc_graphics_GL30_GL_DRAW_BUFFER10;
+extern jint SF_arc_graphics_GL30_GL_DRAW_BUFFER11;
+extern jint SF_arc_graphics_GL30_GL_DRAW_BUFFER12;
+extern jint SF_arc_graphics_GL30_GL_DRAW_BUFFER13;
+extern jint SF_arc_graphics_GL30_GL_DRAW_BUFFER14;
+extern jint SF_arc_graphics_GL30_GL_DRAW_BUFFER15;
+extern jint SF_arc_graphics_GL30_GL_MAX_FRAGMENT_UNIFORM_COMPONENTS;
+extern jint SF_arc_graphics_GL30_GL_MAX_VERTEX_UNIFORM_COMPONENTS;
+extern jint SF_arc_graphics_GL30_GL_SAMPLER_3D;
+extern jint SF_arc_graphics_GL30_GL_SAMPLER_2D_SHADOW;
+extern jint SF_arc_graphics_GL30_GL_FRAGMENT_SHADER_DERIVATIVE_HINT;
+extern jint SF_arc_graphics_GL30_GL_PIXEL_PACK_BUFFER;
+extern jint SF_arc_graphics_GL30_GL_PIXEL_UNPACK_BUFFER;
+extern jint SF_arc_graphics_GL30_GL_PIXEL_PACK_BUFFER_BINDING;
+extern jint SF_arc_graphics_GL30_GL_PIXEL_UNPACK_BUFFER_BINDING;
+extern jint SF_arc_graphics_GL30_GL_FLOAT_MAT2x3;
+extern jint SF_arc_graphics_GL30_GL_FLOAT_MAT2x4;
+extern jint SF_arc_graphics_GL30_GL_FLOAT_MAT3x2;
+extern jint SF_arc_graphics_GL30_GL_FLOAT_MAT3x4;
+extern jint SF_arc_graphics_GL30_GL_FLOAT_MAT4x2;
+extern jint SF_arc_graphics_GL30_GL_FLOAT_MAT4x3;
+extern jint SF_arc_graphics_GL30_GL_SRGB;
+extern jint SF_arc_graphics_GL30_GL_SRGB8;
+extern jint SF_arc_graphics_GL30_GL_SRGB8_ALPHA8;
+extern jint SF_arc_graphics_GL30_GL_COMPARE_REF_TO_TEXTURE;
+extern jint SF_arc_graphics_GL30_GL_MAJOR_VERSION;
+extern jint SF_arc_graphics_GL30_GL_MINOR_VERSION;
+extern jint SF_arc_graphics_GL30_GL_NUM_EXTENSIONS;
+extern jint SF_arc_graphics_GL30_GL_RGBA32F;
+extern jint SF_arc_graphics_GL30_GL_RGB32F;
+extern jint SF_arc_graphics_GL30_GL_RGBA16F;
+extern jint SF_arc_graphics_GL30_GL_RGB16F;
+extern jint SF_arc_graphics_GL30_GL_VERTEX_ATTRIB_ARRAY_INTEGER;
+extern jint SF_arc_graphics_GL30_GL_MAX_ARRAY_TEXTURE_LAYERS;
+extern jint SF_arc_graphics_GL30_GL_MIN_PROGRAM_TEXEL_OFFSET;
+extern jint SF_arc_graphics_GL30_GL_MAX_PROGRAM_TEXEL_OFFSET;
+extern jint SF_arc_graphics_GL30_GL_MAX_VARYING_COMPONENTS;
+extern jint SF_arc_graphics_GL30_GL_TEXTURE_2D_ARRAY;
+extern jint SF_arc_graphics_GL30_GL_TEXTURE_BINDING_2D_ARRAY;
+extern jint SF_arc_graphics_GL30_GL_R11F_G11F_B10F;
+extern jint SF_arc_graphics_GL30_GL_UNSIGNED_INT_10F_11F_11F_REV;
+extern jint SF_arc_graphics_GL30_GL_RGB9_E5;
+extern jint SF_arc_graphics_GL30_GL_UNSIGNED_INT_5_9_9_9_REV;
+extern jint SF_arc_graphics_GL30_GL_TRANSFORM_FEEDBACK_VARYING_MAX_LENGTH;
+extern jint SF_arc_graphics_GL30_GL_TRANSFORM_FEEDBACK_BUFFER_MODE;
+extern jint SF_arc_graphics_GL30_GL_MAX_TRANSFORM_FEEDBACK_SEPARATE_COMPONENTS;
+extern jint SF_arc_graphics_GL30_GL_TRANSFORM_FEEDBACK_VARYINGS;
+extern jint SF_arc_graphics_GL30_GL_TRANSFORM_FEEDBACK_BUFFER_START;
+extern jint SF_arc_graphics_GL30_GL_TRANSFORM_FEEDBACK_BUFFER_SIZE;
+extern jint SF_arc_graphics_GL30_GL_TRANSFORM_FEEDBACK_PRIMITIVES_WRITTEN;
+extern jint SF_arc_graphics_GL30_GL_RASTERIZER_DISCARD;
+extern jint SF_arc_graphics_GL30_GL_MAX_TRANSFORM_FEEDBACK_INTERLEAVED_COMPONENTS;
+extern jint SF_arc_graphics_GL30_GL_MAX_TRANSFORM_FEEDBACK_SEPARATE_ATTRIBS;
+extern jint SF_arc_graphics_GL30_GL_INTERLEAVED_ATTRIBS;
+extern jint SF_arc_graphics_GL30_GL_SEPARATE_ATTRIBS;
+extern jint SF_arc_graphics_GL30_GL_TRANSFORM_FEEDBACK_BUFFER;
+extern jint SF_arc_graphics_GL30_GL_TRANSFORM_FEEDBACK_BUFFER_BINDING;
+extern jint SF_arc_graphics_GL30_GL_RGBA32UI;
+extern jint SF_arc_graphics_GL30_GL_RGB32UI;
+extern jint SF_arc_graphics_GL30_GL_RGBA16UI;
+extern jint SF_arc_graphics_GL30_GL_RGB16UI;
+extern jint SF_arc_graphics_GL30_GL_RGBA8UI;
+extern jint SF_arc_graphics_GL30_GL_RGB8UI;
+extern jint SF_arc_graphics_GL30_GL_RGBA32I;
+extern jint SF_arc_graphics_GL30_GL_RGB32I;
+extern jint SF_arc_graphics_GL30_GL_RGBA16I;
+extern jint SF_arc_graphics_GL30_GL_RGB16I;
+extern jint SF_arc_graphics_GL30_GL_RGBA8I;
+extern jint SF_arc_graphics_GL30_GL_RGB8I;
+extern jint SF_arc_graphics_GL30_GL_RED_INTEGER;
+extern jint SF_arc_graphics_GL30_GL_RGB_INTEGER;
+extern jint SF_arc_graphics_GL30_GL_RGBA_INTEGER;
+extern jint SF_arc_graphics_GL30_GL_SAMPLER_2D_ARRAY;
+extern jint SF_arc_graphics_GL30_GL_SAMPLER_2D_ARRAY_SHADOW;
+extern jint SF_arc_graphics_GL30_GL_SAMPLER_CUBE_SHADOW;
+extern jint SF_arc_graphics_GL30_GL_UNSIGNED_INT_VEC2;
+extern jint SF_arc_graphics_GL30_GL_UNSIGNED_INT_VEC3;
+extern jint SF_arc_graphics_GL30_GL_UNSIGNED_INT_VEC4;
+extern jint SF_arc_graphics_GL30_GL_INT_SAMPLER_2D;
+extern jint SF_arc_graphics_GL30_GL_INT_SAMPLER_3D;
+extern jint SF_arc_graphics_GL30_GL_INT_SAMPLER_CUBE;
+extern jint SF_arc_graphics_GL30_GL_INT_SAMPLER_2D_ARRAY;
+extern jint SF_arc_graphics_GL30_GL_UNSIGNED_INT_SAMPLER_2D;
+extern jint SF_arc_graphics_GL30_GL_UNSIGNED_INT_SAMPLER_3D;
+extern jint SF_arc_graphics_GL30_GL_UNSIGNED_INT_SAMPLER_CUBE;
+extern jint SF_arc_graphics_GL30_GL_UNSIGNED_INT_SAMPLER_2D_ARRAY;
+extern jint SF_arc_graphics_GL30_GL_BUFFER_ACCESS_FLAGS;
+extern jint SF_arc_graphics_GL30_GL_BUFFER_MAP_LENGTH;
+extern jint SF_arc_graphics_GL30_GL_BUFFER_MAP_OFFSET;
+extern jint SF_arc_graphics_GL30_GL_DEPTH_COMPONENT32F;
+extern jint SF_arc_graphics_GL30_GL_DEPTH32F_STENCIL8;
+extern jint SF_arc_graphics_GL30_GL_FLOAT_32_UNSIGNED_INT_24_8_REV;
+extern jint SF_arc_graphics_GL30_GL_FRAMEBUFFER_ATTACHMENT_COLOR_ENCODING;
+extern jint SF_arc_graphics_GL30_GL_FRAMEBUFFER_ATTACHMENT_COMPONENT_TYPE;
+extern jint SF_arc_graphics_GL30_GL_FRAMEBUFFER_ATTACHMENT_RED_SIZE;
+extern jint SF_arc_graphics_GL30_GL_FRAMEBUFFER_ATTACHMENT_GREEN_SIZE;
+extern jint SF_arc_graphics_GL30_GL_FRAMEBUFFER_ATTACHMENT_BLUE_SIZE;
+extern jint SF_arc_graphics_GL30_GL_FRAMEBUFFER_ATTACHMENT_ALPHA_SIZE;
+extern jint SF_arc_graphics_GL30_GL_FRAMEBUFFER_ATTACHMENT_DEPTH_SIZE;
+extern jint SF_arc_graphics_GL30_GL_FRAMEBUFFER_ATTACHMENT_STENCIL_SIZE;
+extern jint SF_arc_graphics_GL30_GL_FRAMEBUFFER_DEFAULT;
+extern jint SF_arc_graphics_GL30_GL_FRAMEBUFFER_UNDEFINED;
+extern jint SF_arc_graphics_GL30_GL_DEPTH_STENCIL_ATTACHMENT;
+extern jint SF_arc_graphics_GL30_GL_DEPTH_STENCIL;
+extern jint SF_arc_graphics_GL30_GL_UNSIGNED_INT_24_8;
+extern jint SF_arc_graphics_GL30_GL_DEPTH24_STENCIL8;
+extern jint SF_arc_graphics_GL30_GL_UNSIGNED_NORMALIZED;
+extern jint SF_arc_graphics_GL30_GL_DRAW_FRAMEBUFFER_BINDING;
+extern jint SF_arc_graphics_GL30_GL_READ_FRAMEBUFFER;
+extern jint SF_arc_graphics_GL30_GL_DRAW_FRAMEBUFFER;
+extern jint SF_arc_graphics_GL30_GL_READ_FRAMEBUFFER_BINDING;
+extern jint SF_arc_graphics_GL30_GL_RENDERBUFFER_SAMPLES;
+extern jint SF_arc_graphics_GL30_GL_FRAMEBUFFER_ATTACHMENT_TEXTURE_LAYER;
+extern jint SF_arc_graphics_GL30_GL_MAX_COLOR_ATTACHMENTS;
+extern jint SF_arc_graphics_GL30_GL_COLOR_ATTACHMENT1;
+extern jint SF_arc_graphics_GL30_GL_COLOR_ATTACHMENT2;
+extern jint SF_arc_graphics_GL30_GL_COLOR_ATTACHMENT3;
+extern jint SF_arc_graphics_GL30_GL_COLOR_ATTACHMENT4;
+extern jint SF_arc_graphics_GL30_GL_COLOR_ATTACHMENT5;
+extern jint SF_arc_graphics_GL30_GL_COLOR_ATTACHMENT6;
+extern jint SF_arc_graphics_GL30_GL_COLOR_ATTACHMENT7;
+extern jint SF_arc_graphics_GL30_GL_COLOR_ATTACHMENT8;
+extern jint SF_arc_graphics_GL30_GL_COLOR_ATTACHMENT9;
+extern jint SF_arc_graphics_GL30_GL_COLOR_ATTACHMENT10;
+extern jint SF_arc_graphics_GL30_GL_COLOR_ATTACHMENT11;
+extern jint SF_arc_graphics_GL30_GL_COLOR_ATTACHMENT12;
+extern jint SF_arc_graphics_GL30_GL_COLOR_ATTACHMENT13;
+extern jint SF_arc_graphics_GL30_GL_COLOR_ATTACHMENT14;
+extern jint SF_arc_graphics_GL30_GL_COLOR_ATTACHMENT15;
+extern jint SF_arc_graphics_GL30_GL_FRAMEBUFFER_INCOMPLETE_MULTISAMPLE;
+extern jint SF_arc_graphics_GL30_GL_MAX_SAMPLES;
+extern jint SF_arc_graphics_GL30_GL_HALF_FLOAT;
+extern jint SF_arc_graphics_GL30_GL_MAP_READ_BIT;
+extern jint SF_arc_graphics_GL30_GL_MAP_WRITE_BIT;
+extern jint SF_arc_graphics_GL30_GL_MAP_INVALIDATE_RANGE_BIT;
+extern jint SF_arc_graphics_GL30_GL_MAP_INVALIDATE_BUFFER_BIT;
+extern jint SF_arc_graphics_GL30_GL_MAP_FLUSH_EXPLICIT_BIT;
+extern jint SF_arc_graphics_GL30_GL_MAP_UNSYNCHRONIZED_BIT;
+extern jint SF_arc_graphics_GL30_GL_RG;
+extern jint SF_arc_graphics_GL30_GL_RG_INTEGER;
+extern jint SF_arc_graphics_GL30_GL_R8;
+extern jint SF_arc_graphics_GL30_GL_RG8;
+extern jint SF_arc_graphics_GL30_GL_R16F;
+extern jint SF_arc_graphics_GL30_GL_R32F;
+extern jint SF_arc_graphics_GL30_GL_RG16F;
+extern jint SF_arc_graphics_GL30_GL_RG32F;
+extern jint SF_arc_graphics_GL30_GL_R8I;
+extern jint SF_arc_graphics_GL30_GL_R8UI;
+extern jint SF_arc_graphics_GL30_GL_R16I;
+extern jint SF_arc_graphics_GL30_GL_R16UI;
+extern jint SF_arc_graphics_GL30_GL_R32I;
+extern jint SF_arc_graphics_GL30_GL_R32UI;
+extern jint SF_arc_graphics_GL30_GL_RG8I;
+extern jint SF_arc_graphics_GL30_GL_RG8UI;
+extern jint SF_arc_graphics_GL30_GL_RG16I;
+extern jint SF_arc_graphics_GL30_GL_RG16UI;
+extern jint SF_arc_graphics_GL30_GL_RG32I;
+extern jint SF_arc_graphics_GL30_GL_RG32UI;
+extern jint SF_arc_graphics_GL30_GL_VERTEX_ARRAY_BINDING;
+extern jint SF_arc_graphics_GL30_GL_R8_SNORM;
+extern jint SF_arc_graphics_GL30_GL_RG8_SNORM;
+extern jint SF_arc_graphics_GL30_GL_RGB8_SNORM;
+extern jint SF_arc_graphics_GL30_GL_RGBA8_SNORM;
+extern jint SF_arc_graphics_GL30_GL_SIGNED_NORMALIZED;
+extern jint SF_arc_graphics_GL30_GL_PRIMITIVE_RESTART_FIXED_INDEX;
+extern jint SF_arc_graphics_GL30_GL_COPY_READ_BUFFER;
+extern jint SF_arc_graphics_GL30_GL_COPY_WRITE_BUFFER;
+extern jint SF_arc_graphics_GL30_GL_COPY_READ_BUFFER_BINDING;
+extern jint SF_arc_graphics_GL30_GL_COPY_WRITE_BUFFER_BINDING;
+extern jint SF_arc_graphics_GL30_GL_UNIFORM_BUFFER;
+extern jint SF_arc_graphics_GL30_GL_UNIFORM_BUFFER_BINDING;
+extern jint SF_arc_graphics_GL30_GL_UNIFORM_BUFFER_START;
+extern jint SF_arc_graphics_GL30_GL_UNIFORM_BUFFER_SIZE;
+extern jint SF_arc_graphics_GL30_GL_MAX_VERTEX_UNIFORM_BLOCKS;
+extern jint SF_arc_graphics_GL30_GL_MAX_FRAGMENT_UNIFORM_BLOCKS;
+extern jint SF_arc_graphics_GL30_GL_MAX_COMBINED_UNIFORM_BLOCKS;
+extern jint SF_arc_graphics_GL30_GL_MAX_UNIFORM_BUFFER_BINDINGS;
+extern jint SF_arc_graphics_GL30_GL_MAX_UNIFORM_BLOCK_SIZE;
+extern jint SF_arc_graphics_GL30_GL_MAX_COMBINED_VERTEX_UNIFORM_COMPONENTS;
+extern jint SF_arc_graphics_GL30_GL_MAX_COMBINED_FRAGMENT_UNIFORM_COMPONENTS;
+extern jint SF_arc_graphics_GL30_GL_UNIFORM_BUFFER_OFFSET_ALIGNMENT;
+extern jint SF_arc_graphics_GL30_GL_ACTIVE_UNIFORM_BLOCK_MAX_NAME_LENGTH;
+extern jint SF_arc_graphics_GL30_GL_ACTIVE_UNIFORM_BLOCKS;
+extern jint SF_arc_graphics_GL30_GL_UNIFORM_TYPE;
+extern jint SF_arc_graphics_GL30_GL_UNIFORM_SIZE;
+extern jint SF_arc_graphics_GL30_GL_UNIFORM_NAME_LENGTH;
+extern jint SF_arc_graphics_GL30_GL_UNIFORM_BLOCK_INDEX;
+extern jint SF_arc_graphics_GL30_GL_UNIFORM_OFFSET;
+extern jint SF_arc_graphics_GL30_GL_UNIFORM_ARRAY_STRIDE;
+extern jint SF_arc_graphics_GL30_GL_UNIFORM_MATRIX_STRIDE;
+extern jint SF_arc_graphics_GL30_GL_UNIFORM_IS_ROW_MAJOR;
+extern jint SF_arc_graphics_GL30_GL_UNIFORM_BLOCK_BINDING;
+extern jint SF_arc_graphics_GL30_GL_UNIFORM_BLOCK_DATA_SIZE;
+extern jint SF_arc_graphics_GL30_GL_UNIFORM_BLOCK_NAME_LENGTH;
+extern jint SF_arc_graphics_GL30_GL_UNIFORM_BLOCK_ACTIVE_UNIFORMS;
+extern jint SF_arc_graphics_GL30_GL_UNIFORM_BLOCK_ACTIVE_UNIFORM_INDICES;
+extern jint SF_arc_graphics_GL30_GL_UNIFORM_BLOCK_REFERENCED_BY_VERTEX_SHADER;
+extern jint SF_arc_graphics_GL30_GL_UNIFORM_BLOCK_REFERENCED_BY_FRAGMENT_SHADER;
+extern jint SF_arc_graphics_GL30_GL_INVALID_INDEX;
+extern jint SF_arc_graphics_GL30_GL_MAX_VERTEX_OUTPUT_COMPONENTS;
+extern jint SF_arc_graphics_GL30_GL_MAX_FRAGMENT_INPUT_COMPONENTS;
+extern jint SF_arc_graphics_GL30_GL_MAX_SERVER_WAIT_TIMEOUT;
+extern jint SF_arc_graphics_GL30_GL_OBJECT_TYPE;
+extern jint SF_arc_graphics_GL30_GL_SYNC_CONDITION;
+extern jint SF_arc_graphics_GL30_GL_SYNC_STATUS;
+extern jint SF_arc_graphics_GL30_GL_SYNC_FLAGS;
+extern jint SF_arc_graphics_GL30_GL_SYNC_FENCE;
+extern jint SF_arc_graphics_GL30_GL_SYNC_GPU_COMMANDS_COMPLETE;
+extern jint SF_arc_graphics_GL30_GL_UNSIGNALED;
+extern jint SF_arc_graphics_GL30_GL_SIGNALED;
+extern jint SF_arc_graphics_GL30_GL_ALREADY_SIGNALED;
+extern jint SF_arc_graphics_GL30_GL_TIMEOUT_EXPIRED;
+extern jint SF_arc_graphics_GL30_GL_CONDITION_SATISFIED;
+extern jint SF_arc_graphics_GL30_GL_WAIT_FAILED;
+extern jint SF_arc_graphics_GL30_GL_SYNC_FLUSH_COMMANDS_BIT;
+extern jlong SF_arc_graphics_GL30_GL_TIMEOUT_IGNORED;
+extern jint SF_arc_graphics_GL30_GL_VERTEX_ATTRIB_ARRAY_DIVISOR;
+extern jint SF_arc_graphics_GL30_GL_ANY_SAMPLES_PASSED;
+extern jint SF_arc_graphics_GL30_GL_ANY_SAMPLES_PASSED_CONSERVATIVE;
+extern jint SF_arc_graphics_GL30_GL_SAMPLER_BINDING;
+extern jint SF_arc_graphics_GL30_GL_RGB10_A2UI;
+extern jint SF_arc_graphics_GL30_GL_TEXTURE_SWIZZLE_R;
+extern jint SF_arc_graphics_GL30_GL_TEXTURE_SWIZZLE_G;
+extern jint SF_arc_graphics_GL30_GL_TEXTURE_SWIZZLE_B;
+extern jint SF_arc_graphics_GL30_GL_TEXTURE_SWIZZLE_A;
+extern jint SF_arc_graphics_GL30_GL_GREEN;
+extern jint SF_arc_graphics_GL30_GL_BLUE;
+extern jint SF_arc_graphics_GL30_GL_INT_2_10_10_10_REV;
+extern jint SF_arc_graphics_GL30_GL_TRANSFORM_FEEDBACK;
+extern jint SF_arc_graphics_GL30_GL_TRANSFORM_FEEDBACK_PAUSED;
+extern jint SF_arc_graphics_GL30_GL_TRANSFORM_FEEDBACK_ACTIVE;
+extern jint SF_arc_graphics_GL30_GL_TRANSFORM_FEEDBACK_BINDING;
+extern jint SF_arc_graphics_GL30_GL_PROGRAM_BINARY_RETRIEVABLE_HINT;
+extern jint SF_arc_graphics_GL30_GL_PROGRAM_BINARY_LENGTH;
+extern jint SF_arc_graphics_GL30_GL_NUM_PROGRAM_BINARY_FORMATS;
+extern jint SF_arc_graphics_GL30_GL_PROGRAM_BINARY_FORMATS;
+extern jint SF_arc_graphics_GL30_GL_COMPRESSED_R11_EAC;
+extern jint SF_arc_graphics_GL30_GL_COMPRESSED_SIGNED_R11_EAC;
+extern jint SF_arc_graphics_GL30_GL_COMPRESSED_RG11_EAC;
+extern jint SF_arc_graphics_GL30_GL_COMPRESSED_SIGNED_RG11_EAC;
+extern jint SF_arc_graphics_GL30_GL_COMPRESSED_RGB8_ETC2;
+extern jint SF_arc_graphics_GL30_GL_COMPRESSED_SRGB8_ETC2;
+extern jint SF_arc_graphics_GL30_GL_COMPRESSED_RGB8_PUNCHTHROUGH_ALPHA1_ETC2;
+extern jint SF_arc_graphics_GL30_GL_COMPRESSED_SRGB8_PUNCHTHROUGH_ALPHA1_ETC2;
+extern jint SF_arc_graphics_GL30_GL_COMPRESSED_RGBA8_ETC2_EAC;
+extern jint SF_arc_graphics_GL30_GL_COMPRESSED_SRGB8_ALPHA8_ETC2_EAC;
+extern jint SF_arc_graphics_GL30_GL_TEXTURE_IMMUTABLE_FORMAT;
+extern jint SF_arc_graphics_GL30_GL_MAX_ELEMENT_INDEX;
+extern jint SF_arc_graphics_GL30_GL_NUM_SAMPLE_COUNTS;
+extern jint SF_arc_graphics_GL30_GL_TEXTURE_IMMUTABLE_LEVELS;
+
+#define INDEX_arc_graphics_GL30_glReadBuffer_int 0
+typedef void (*func_arc_graphics_GL30_glReadBuffer_int)(jcontext ctx, jobject self, jint param0);
+#define INDEX_arc_graphics_GL30_glDrawRangeElements_int_int_int_int_int_java_nio_Buffer 1
+typedef void (*func_arc_graphics_GL30_glDrawRangeElements_int_int_int_int_int_java_nio_Buffer)(jcontext ctx, jobject self, jint param0, jint param1, jint param2, jint param3, jint param4, jobject param5);
+#define INDEX_arc_graphics_GL30_glDrawRangeElements_int_int_int_int_int_int 2
+typedef void (*func_arc_graphics_GL30_glDrawRangeElements_int_int_int_int_int_int)(jcontext ctx, jobject self, jint param0, jint param1, jint param2, jint param3, jint param4, jint param5);
+#define INDEX_arc_graphics_GL30_glTexImage3D_int_int_int_int_int_int_int_int_int_java_nio_Buffer 3
+typedef void (*func_arc_graphics_GL30_glTexImage3D_int_int_int_int_int_int_int_int_int_java_nio_Buffer)(jcontext ctx, jobject self, jint param0, jint param1, jint param2, jint param3, jint param4, jint param5, jint param6, jint param7, jint param8, jobject param9);
+#define INDEX_arc_graphics_GL30_glTexImage3D_int_int_int_int_int_int_int_int_int_int 4
+typedef void (*func_arc_graphics_GL30_glTexImage3D_int_int_int_int_int_int_int_int_int_int)(jcontext ctx, jobject self, jint param0, jint param1, jint param2, jint param3, jint param4, jint param5, jint param6, jint param7, jint param8, jint param9);
+#define INDEX_arc_graphics_GL30_glTexSubImage3D_int_int_int_int_int_int_int_int_int_int_java_nio_Buffer 5
+typedef void (*func_arc_graphics_GL30_glTexSubImage3D_int_int_int_int_int_int_int_int_int_int_java_nio_Buffer)(jcontext ctx, jobject self, jint param0, jint param1, jint param2, jint param3, jint param4, jint param5, jint param6, jint param7, jint param8, jint param9, jobject param10);
+#define INDEX_arc_graphics_GL30_glTexSubImage3D_int_int_int_int_int_int_int_int_int_int_int 6
+typedef void (*func_arc_graphics_GL30_glTexSubImage3D_int_int_int_int_int_int_int_int_int_int_int)(jcontext ctx, jobject self, jint param0, jint param1, jint param2, jint param3, jint param4, jint param5, jint param6, jint param7, jint param8, jint param9, jint param10);
+#define INDEX_arc_graphics_GL30_glCopyTexSubImage3D_int_int_int_int_int_int_int_int_int 7
+typedef void (*func_arc_graphics_GL30_glCopyTexSubImage3D_int_int_int_int_int_int_int_int_int)(jcontext ctx, jobject self, jint param0, jint param1, jint param2, jint param3, jint param4, jint param5, jint param6, jint param7, jint param8);
+#define INDEX_arc_graphics_GL30_glGenQueries_int_java_nio_IntBuffer 8
+typedef void (*func_arc_graphics_GL30_glGenQueries_int_java_nio_IntBuffer)(jcontext ctx, jobject self, jint param0, jobject param1);
+#define INDEX_arc_graphics_GL30_glDeleteQueries_int_java_nio_IntBuffer 9
+typedef void (*func_arc_graphics_GL30_glDeleteQueries_int_java_nio_IntBuffer)(jcontext ctx, jobject self, jint param0, jobject param1);
+#define INDEX_arc_graphics_GL30_glIsQuery_int_R_boolean 10
+typedef jbool (*func_arc_graphics_GL30_glIsQuery_int_R_boolean)(jcontext ctx, jobject self, jint param0);
+#define INDEX_arc_graphics_GL30_glBeginQuery_int_int 11
+typedef void (*func_arc_graphics_GL30_glBeginQuery_int_int)(jcontext ctx, jobject self, jint param0, jint param1);
+#define INDEX_arc_graphics_GL30_glEndQuery_int 12
+typedef void (*func_arc_graphics_GL30_glEndQuery_int)(jcontext ctx, jobject self, jint param0);
+#define INDEX_arc_graphics_GL30_glGetQueryiv_int_int_java_nio_IntBuffer 13
+typedef void (*func_arc_graphics_GL30_glGetQueryiv_int_int_java_nio_IntBuffer)(jcontext ctx, jobject self, jint param0, jint param1, jobject param2);
+#define INDEX_arc_graphics_GL30_glGetQueryObjectuiv_int_int_java_nio_IntBuffer 14
+typedef void (*func_arc_graphics_GL30_glGetQueryObjectuiv_int_int_java_nio_IntBuffer)(jcontext ctx, jobject self, jint param0, jint param1, jobject param2);
+#define INDEX_arc_graphics_GL30_glUnmapBuffer_int_R_boolean 15
+typedef jbool (*func_arc_graphics_GL30_glUnmapBuffer_int_R_boolean)(jcontext ctx, jobject self, jint param0);
+#define INDEX_arc_graphics_GL30_glGetBufferPointerv_int_int_R_java_nio_Buffer 16
+typedef jobject (*func_arc_graphics_GL30_glGetBufferPointerv_int_int_R_java_nio_Buffer)(jcontext ctx, jobject self, jint param0, jint param1);
+#define INDEX_arc_graphics_GL30_glDrawBuffers_int_java_nio_IntBuffer 17
+typedef void (*func_arc_graphics_GL30_glDrawBuffers_int_java_nio_IntBuffer)(jcontext ctx, jobject self, jint param0, jobject param1);
+#define INDEX_arc_graphics_GL30_glUniformMatrix2x3fv_int_int_boolean_java_nio_FloatBuffer 18
+typedef void (*func_arc_graphics_GL30_glUniformMatrix2x3fv_int_int_boolean_java_nio_FloatBuffer)(jcontext ctx, jobject self, jint param0, jint param1, jbool param2, jobject param3);
+#define INDEX_arc_graphics_GL30_glUniformMatrix3x2fv_int_int_boolean_java_nio_FloatBuffer 19
+typedef void (*func_arc_graphics_GL30_glUniformMatrix3x2fv_int_int_boolean_java_nio_FloatBuffer)(jcontext ctx, jobject self, jint param0, jint param1, jbool param2, jobject param3);
+#define INDEX_arc_graphics_GL30_glUniformMatrix2x4fv_int_int_boolean_java_nio_FloatBuffer 20
+typedef void (*func_arc_graphics_GL30_glUniformMatrix2x4fv_int_int_boolean_java_nio_FloatBuffer)(jcontext ctx, jobject self, jint param0, jint param1, jbool param2, jobject param3);
+#define INDEX_arc_graphics_GL30_glUniformMatrix4x2fv_int_int_boolean_java_nio_FloatBuffer 21
+typedef void (*func_arc_graphics_GL30_glUniformMatrix4x2fv_int_int_boolean_java_nio_FloatBuffer)(jcontext ctx, jobject self, jint param0, jint param1, jbool param2, jobject param3);
+#define INDEX_arc_graphics_GL30_glUniformMatrix3x4fv_int_int_boolean_java_nio_FloatBuffer 22
+typedef void (*func_arc_graphics_GL30_glUniformMatrix3x4fv_int_int_boolean_java_nio_FloatBuffer)(jcontext ctx, jobject self, jint param0, jint param1, jbool param2, jobject param3);
+#define INDEX_arc_graphics_GL30_glUniformMatrix4x3fv_int_int_boolean_java_nio_FloatBuffer 23
+typedef void (*func_arc_graphics_GL30_glUniformMatrix4x3fv_int_int_boolean_java_nio_FloatBuffer)(jcontext ctx, jobject self, jint param0, jint param1, jbool param2, jobject param3);
+#define INDEX_arc_graphics_GL30_glBlitFramebuffer_int_int_int_int_int_int_int_int_int_int 24
+typedef void (*func_arc_graphics_GL30_glBlitFramebuffer_int_int_int_int_int_int_int_int_int_int)(jcontext ctx, jobject self, jint param0, jint param1, jint param2, jint param3, jint param4, jint param5, jint param6, jint param7, jint param8, jint param9);
+#define INDEX_arc_graphics_GL30_glRenderbufferStorageMultisample_int_int_int_int_int 25
+typedef void (*func_arc_graphics_GL30_glRenderbufferStorageMultisample_int_int_int_int_int)(jcontext ctx, jobject self, jint param0, jint param1, jint param2, jint param3, jint param4);
+#define INDEX_arc_graphics_GL30_glFramebufferTextureLayer_int_int_int_int_int 26
+typedef void (*func_arc_graphics_GL30_glFramebufferTextureLayer_int_int_int_int_int)(jcontext ctx, jobject self, jint param0, jint param1, jint param2, jint param3, jint param4);
+#define INDEX_arc_graphics_GL30_glFlushMappedBufferRange_int_int_int 27
+typedef void (*func_arc_graphics_GL30_glFlushMappedBufferRange_int_int_int)(jcontext ctx, jobject self, jint param0, jint param1, jint param2);
+#define INDEX_arc_graphics_GL30_glBindVertexArray_int 28
+typedef void (*func_arc_graphics_GL30_glBindVertexArray_int)(jcontext ctx, jobject self, jint param0);
+#define INDEX_arc_graphics_GL30_glDeleteVertexArrays_int_java_nio_IntBuffer 29
+typedef void (*func_arc_graphics_GL30_glDeleteVertexArrays_int_java_nio_IntBuffer)(jcontext ctx, jobject self, jint param0, jobject param1);
+#define INDEX_arc_graphics_GL30_glGenVertexArrays_int_java_nio_IntBuffer 30
+typedef void (*func_arc_graphics_GL30_glGenVertexArrays_int_java_nio_IntBuffer)(jcontext ctx, jobject self, jint param0, jobject param1);
+#define INDEX_arc_graphics_GL30_glIsVertexArray_int_R_boolean 31
+typedef jbool (*func_arc_graphics_GL30_glIsVertexArray_int_R_boolean)(jcontext ctx, jobject self, jint param0);
+#define INDEX_arc_graphics_GL30_glBeginTransformFeedback_int 32
+typedef void (*func_arc_graphics_GL30_glBeginTransformFeedback_int)(jcontext ctx, jobject self, jint param0);
+#define INDEX_arc_graphics_GL30_glEndTransformFeedback 33
+typedef void (*func_arc_graphics_GL30_glEndTransformFeedback)(jcontext ctx, jobject self);
+#define INDEX_arc_graphics_GL30_glBindBufferRange_int_int_int_int_int 34
+typedef void (*func_arc_graphics_GL30_glBindBufferRange_int_int_int_int_int)(jcontext ctx, jobject self, jint param0, jint param1, jint param2, jint param3, jint param4);
+#define INDEX_arc_graphics_GL30_glBindBufferBase_int_int_int 35
+typedef void (*func_arc_graphics_GL30_glBindBufferBase_int_int_int)(jcontext ctx, jobject self, jint param0, jint param1, jint param2);
+#define INDEX_arc_graphics_GL30_glTransformFeedbackVaryings_int_Array1_java_lang_String_int 36
+typedef void (*func_arc_graphics_GL30_glTransformFeedbackVaryings_int_Array1_java_lang_String_int)(jcontext ctx, jobject self, jint param0, jobject param1, jint param2);
+#define INDEX_arc_graphics_GL30_glVertexAttribIPointer_int_int_int_int_int 37
+typedef void (*func_arc_graphics_GL30_glVertexAttribIPointer_int_int_int_int_int)(jcontext ctx, jobject self, jint param0, jint param1, jint param2, jint param3, jint param4);
+#define INDEX_arc_graphics_GL30_glGetVertexAttribIiv_int_int_java_nio_IntBuffer 38
+typedef void (*func_arc_graphics_GL30_glGetVertexAttribIiv_int_int_java_nio_IntBuffer)(jcontext ctx, jobject self, jint param0, jint param1, jobject param2);
+#define INDEX_arc_graphics_GL30_glGetVertexAttribIuiv_int_int_java_nio_IntBuffer 39
+typedef void (*func_arc_graphics_GL30_glGetVertexAttribIuiv_int_int_java_nio_IntBuffer)(jcontext ctx, jobject self, jint param0, jint param1, jobject param2);
+#define INDEX_arc_graphics_GL30_glVertexAttribI4i_int_int_int_int_int 40
+typedef void (*func_arc_graphics_GL30_glVertexAttribI4i_int_int_int_int_int)(jcontext ctx, jobject self, jint param0, jint param1, jint param2, jint param3, jint param4);
+#define INDEX_arc_graphics_GL30_glVertexAttribI4ui_int_int_int_int_int 41
+typedef void (*func_arc_graphics_GL30_glVertexAttribI4ui_int_int_int_int_int)(jcontext ctx, jobject self, jint param0, jint param1, jint param2, jint param3, jint param4);
+#define INDEX_arc_graphics_GL30_glGetUniformuiv_int_int_java_nio_IntBuffer 42
+typedef void (*func_arc_graphics_GL30_glGetUniformuiv_int_int_java_nio_IntBuffer)(jcontext ctx, jobject self, jint param0, jint param1, jobject param2);
+#define INDEX_arc_graphics_GL30_glGetFragDataLocation_int_java_lang_String_R_int 43
+typedef jint (*func_arc_graphics_GL30_glGetFragDataLocation_int_java_lang_String_R_int)(jcontext ctx, jobject self, jint param0, jobject param1);
+#define INDEX_arc_graphics_GL30_glUniform1uiv_int_int_java_nio_IntBuffer 44
+typedef void (*func_arc_graphics_GL30_glUniform1uiv_int_int_java_nio_IntBuffer)(jcontext ctx, jobject self, jint param0, jint param1, jobject param2);
+#define INDEX_arc_graphics_GL30_glUniform3uiv_int_int_java_nio_IntBuffer 45
+typedef void (*func_arc_graphics_GL30_glUniform3uiv_int_int_java_nio_IntBuffer)(jcontext ctx, jobject self, jint param0, jint param1, jobject param2);
+#define INDEX_arc_graphics_GL30_glUniform4uiv_int_int_java_nio_IntBuffer 46
+typedef void (*func_arc_graphics_GL30_glUniform4uiv_int_int_java_nio_IntBuffer)(jcontext ctx, jobject self, jint param0, jint param1, jobject param2);
+#define INDEX_arc_graphics_GL30_glClearBufferiv_int_int_java_nio_IntBuffer 47
+typedef void (*func_arc_graphics_GL30_glClearBufferiv_int_int_java_nio_IntBuffer)(jcontext ctx, jobject self, jint param0, jint param1, jobject param2);
+#define INDEX_arc_graphics_GL30_glClearBufferuiv_int_int_java_nio_IntBuffer 48
+typedef void (*func_arc_graphics_GL30_glClearBufferuiv_int_int_java_nio_IntBuffer)(jcontext ctx, jobject self, jint param0, jint param1, jobject param2);
+#define INDEX_arc_graphics_GL30_glClearBufferfv_int_int_java_nio_FloatBuffer 49
+typedef void (*func_arc_graphics_GL30_glClearBufferfv_int_int_java_nio_FloatBuffer)(jcontext ctx, jobject self, jint param0, jint param1, jobject param2);
+#define INDEX_arc_graphics_GL30_glClearBufferfi_int_int_float_int 50
+typedef void (*func_arc_graphics_GL30_glClearBufferfi_int_int_float_int)(jcontext ctx, jobject self, jint param0, jint param1, jfloat param2, jint param3);
+#define INDEX_arc_graphics_GL30_glGetStringi_int_int_R_java_lang_String 51
+typedef jobject (*func_arc_graphics_GL30_glGetStringi_int_int_R_java_lang_String)(jcontext ctx, jobject self, jint param0, jint param1);
+#define INDEX_arc_graphics_GL30_glCopyBufferSubData_int_int_int_int_int 52
+typedef void (*func_arc_graphics_GL30_glCopyBufferSubData_int_int_int_int_int)(jcontext ctx, jobject self, jint param0, jint param1, jint param2, jint param3, jint param4);
+#define INDEX_arc_graphics_GL30_glGetUniformIndices_int_Array1_java_lang_String_java_nio_IntBuffer 53
+typedef void (*func_arc_graphics_GL30_glGetUniformIndices_int_Array1_java_lang_String_java_nio_IntBuffer)(jcontext ctx, jobject self, jint param0, jobject param1, jobject param2);
+#define INDEX_arc_graphics_GL30_glGetActiveUniformsiv_int_int_java_nio_IntBuffer_int_java_nio_IntBuffer 54
+typedef void (*func_arc_graphics_GL30_glGetActiveUniformsiv_int_int_java_nio_IntBuffer_int_java_nio_IntBuffer)(jcontext ctx, jobject self, jint param0, jint param1, jobject param2, jint param3, jobject param4);
+#define INDEX_arc_graphics_GL30_glGetUniformBlockIndex_int_java_lang_String_R_int 55
+typedef jint (*func_arc_graphics_GL30_glGetUniformBlockIndex_int_java_lang_String_R_int)(jcontext ctx, jobject self, jint param0, jobject param1);
+#define INDEX_arc_graphics_GL30_glGetActiveUniformBlockiv_int_int_int_java_nio_IntBuffer 56
+typedef void (*func_arc_graphics_GL30_glGetActiveUniformBlockiv_int_int_int_java_nio_IntBuffer)(jcontext ctx, jobject self, jint param0, jint param1, jint param2, jobject param3);
+#define INDEX_arc_graphics_GL30_glGetActiveUniformBlockName_int_int_java_nio_Buffer_java_nio_Buffer 57
+typedef void (*func_arc_graphics_GL30_glGetActiveUniformBlockName_int_int_java_nio_Buffer_java_nio_Buffer)(jcontext ctx, jobject self, jint param0, jint param1, jobject param2, jobject param3);
+#define INDEX_arc_graphics_GL30_glUniformBlockBinding_int_int_int 58
+typedef void (*func_arc_graphics_GL30_glUniformBlockBinding_int_int_int)(jcontext ctx, jobject self, jint param0, jint param1, jint param2);
+#define INDEX_arc_graphics_GL30_glDrawArraysInstanced_int_int_int_int 59
+typedef void (*func_arc_graphics_GL30_glDrawArraysInstanced_int_int_int_int)(jcontext ctx, jobject self, jint param0, jint param1, jint param2, jint param3);
+#define INDEX_arc_graphics_GL30_glDrawElementsInstanced_int_int_int_int_int 60
+typedef void (*func_arc_graphics_GL30_glDrawElementsInstanced_int_int_int_int_int)(jcontext ctx, jobject self, jint param0, jint param1, jint param2, jint param3, jint param4);
+#define INDEX_arc_graphics_GL30_glGetInteger64v_int_java_nio_LongBuffer 61
+typedef void (*func_arc_graphics_GL30_glGetInteger64v_int_java_nio_LongBuffer)(jcontext ctx, jobject self, jint param0, jobject param1);
+#define INDEX_arc_graphics_GL30_glGetBufferParameteri64v_int_int_java_nio_LongBuffer 62
+typedef void (*func_arc_graphics_GL30_glGetBufferParameteri64v_int_int_java_nio_LongBuffer)(jcontext ctx, jobject self, jint param0, jint param1, jobject param2);
+#define INDEX_arc_graphics_GL30_glGenSamplers_int_java_nio_IntBuffer 63
+typedef void (*func_arc_graphics_GL30_glGenSamplers_int_java_nio_IntBuffer)(jcontext ctx, jobject self, jint param0, jobject param1);
+#define INDEX_arc_graphics_GL30_glDeleteSamplers_int_java_nio_IntBuffer 64
+typedef void (*func_arc_graphics_GL30_glDeleteSamplers_int_java_nio_IntBuffer)(jcontext ctx, jobject self, jint param0, jobject param1);
+#define INDEX_arc_graphics_GL30_glIsSampler_int_R_boolean 65
+typedef jbool (*func_arc_graphics_GL30_glIsSampler_int_R_boolean)(jcontext ctx, jobject self, jint param0);
+#define INDEX_arc_graphics_GL30_glBindSampler_int_int 66
+typedef void (*func_arc_graphics_GL30_glBindSampler_int_int)(jcontext ctx, jobject self, jint param0, jint param1);
+#define INDEX_arc_graphics_GL30_glSamplerParameteri_int_int_int 67
+typedef void (*func_arc_graphics_GL30_glSamplerParameteri_int_int_int)(jcontext ctx, jobject self, jint param0, jint param1, jint param2);
+#define INDEX_arc_graphics_GL30_glSamplerParameteriv_int_int_java_nio_IntBuffer 68
+typedef void (*func_arc_graphics_GL30_glSamplerParameteriv_int_int_java_nio_IntBuffer)(jcontext ctx, jobject self, jint param0, jint param1, jobject param2);
+#define INDEX_arc_graphics_GL30_glSamplerParameterf_int_int_float 69
+typedef void (*func_arc_graphics_GL30_glSamplerParameterf_int_int_float)(jcontext ctx, jobject self, jint param0, jint param1, jfloat param2);
+#define INDEX_arc_graphics_GL30_glSamplerParameterfv_int_int_java_nio_FloatBuffer 70
+typedef void (*func_arc_graphics_GL30_glSamplerParameterfv_int_int_java_nio_FloatBuffer)(jcontext ctx, jobject self, jint param0, jint param1, jobject param2);
+#define INDEX_arc_graphics_GL30_glGetSamplerParameteriv_int_int_java_nio_IntBuffer 71
+typedef void (*func_arc_graphics_GL30_glGetSamplerParameteriv_int_int_java_nio_IntBuffer)(jcontext ctx, jobject self, jint param0, jint param1, jobject param2);
+#define INDEX_arc_graphics_GL30_glGetSamplerParameterfv_int_int_java_nio_FloatBuffer 72
+typedef void (*func_arc_graphics_GL30_glGetSamplerParameterfv_int_int_java_nio_FloatBuffer)(jcontext ctx, jobject self, jint param0, jint param1, jobject param2);
+#define INDEX_arc_graphics_GL30_glVertexAttribDivisor_int_int 73
+typedef void (*func_arc_graphics_GL30_glVertexAttribDivisor_int_int)(jcontext ctx, jobject self, jint param0, jint param1);
+#define INDEX_arc_graphics_GL30_glBindTransformFeedback_int_int 74
+typedef void (*func_arc_graphics_GL30_glBindTransformFeedback_int_int)(jcontext ctx, jobject self, jint param0, jint param1);
+#define INDEX_arc_graphics_GL30_glDeleteTransformFeedbacks_int_java_nio_IntBuffer 75
+typedef void (*func_arc_graphics_GL30_glDeleteTransformFeedbacks_int_java_nio_IntBuffer)(jcontext ctx, jobject self, jint param0, jobject param1);
+#define INDEX_arc_graphics_GL30_glGenTransformFeedbacks_int_java_nio_IntBuffer 76
+typedef void (*func_arc_graphics_GL30_glGenTransformFeedbacks_int_java_nio_IntBuffer)(jcontext ctx, jobject self, jint param0, jobject param1);
+#define INDEX_arc_graphics_GL30_glIsTransformFeedback_int_R_boolean 77
+typedef jbool (*func_arc_graphics_GL30_glIsTransformFeedback_int_R_boolean)(jcontext ctx, jobject self, jint param0);
+#define INDEX_arc_graphics_GL30_glPauseTransformFeedback 78
+typedef void (*func_arc_graphics_GL30_glPauseTransformFeedback)(jcontext ctx, jobject self);
+#define INDEX_arc_graphics_GL30_glResumeTransformFeedback 79
+typedef void (*func_arc_graphics_GL30_glResumeTransformFeedback)(jcontext ctx, jobject self);
+#define INDEX_arc_graphics_GL30_glProgramParameteri_int_int_int 80
+typedef void (*func_arc_graphics_GL30_glProgramParameteri_int_int_int)(jcontext ctx, jobject self, jint param0, jint param1, jint param2);
+#define INDEX_arc_graphics_GL30_glInvalidateFramebuffer_int_int_java_nio_IntBuffer 81
+typedef void (*func_arc_graphics_GL30_glInvalidateFramebuffer_int_int_java_nio_IntBuffer)(jcontext ctx, jobject self, jint param0, jint param1, jobject param2);
+#define INDEX_arc_graphics_GL30_glInvalidateSubFramebuffer_int_int_java_nio_IntBuffer_int_int_int_int 82
+typedef void (*func_arc_graphics_GL30_glInvalidateSubFramebuffer_int_int_java_nio_IntBuffer_int_int_int_int)(jcontext ctx, jobject self, jint param0, jint param1, jobject param2, jint param3, jint param4, jint param5, jint param6);
+
+void mark_arc_graphics_GL30(jobject object, jint mark, jint depth);
+void clinit_arc_graphics_GL30(jcontext ctx);
+
+#ifdef __cplusplus
+}
+#endif
+
+#endif

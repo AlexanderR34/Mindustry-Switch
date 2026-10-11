@@ -1,0 +1,85 @@
+#ifndef HEADER_mindustry_editor_data_MapAudioView
+#define HEADER_mindustry_editor_data_MapAudioView
+
+#include "Clearwing.h"
+#include "java/lang/Object.h"
+#include "mindustry/editor/data/AssetView.h"
+
+#ifdef __cplusplus
+extern "C" {
+#endif
+
+typedef struct mindustry_editor_data_MapAudioView {
+	java_lang_Object parent;
+	jref F_type;
+	jref F_lastPlaying;
+} mindustry_editor_data_MapAudioView;
+
+extern Class class_mindustry_editor_data_MapAudioView;
+
+
+#define VTABLE_mindustry_editor_data_MapAudioView_hashCode_R_int 0
+typedef jint (*func_mindustry_editor_data_MapAudioView_hashCode_R_int)(jcontext ctx, jobject self);
+#define VTABLE_mindustry_editor_data_MapAudioView_equals_java_lang_Object_R_boolean 1
+typedef jbool (*func_mindustry_editor_data_MapAudioView_equals_java_lang_Object_R_boolean)(jcontext ctx, jobject self, jobject param0);
+#define VTABLE_mindustry_editor_data_MapAudioView_clone_R_java_lang_Object 2
+typedef jobject (*func_mindustry_editor_data_MapAudioView_clone_R_java_lang_Object)(jcontext ctx, jobject self);
+#define VTABLE_mindustry_editor_data_MapAudioView_getClass_R_java_lang_Class 3
+typedef jobject (*func_mindustry_editor_data_MapAudioView_getClass_R_java_lang_Class)(jcontext ctx, jobject self);
+#define VTABLE_mindustry_editor_data_MapAudioView_toString_R_java_lang_String 4
+typedef jobject (*func_mindustry_editor_data_MapAudioView_toString_R_java_lang_String)(jcontext ctx, jobject self);
+#define VTABLE_mindustry_editor_data_MapAudioView_finalize 5
+typedef void (*func_mindustry_editor_data_MapAudioView_finalize)(jcontext ctx, jobject self);
+#define VTABLE_mindustry_editor_data_MapAudioView_notify 6
+typedef void (*func_mindustry_editor_data_MapAudioView_notify)(jcontext ctx, jobject self);
+#define VTABLE_mindustry_editor_data_MapAudioView_notifyAll 7
+typedef void (*func_mindustry_editor_data_MapAudioView_notifyAll)(jcontext ctx, jobject self);
+#define VTABLE_mindustry_editor_data_MapAudioView_wait 8
+typedef void (*func_mindustry_editor_data_MapAudioView_wait)(jcontext ctx, jobject self);
+#define VTABLE_mindustry_editor_data_MapAudioView_wait_long 9
+typedef void (*func_mindustry_editor_data_MapAudioView_wait_long)(jcontext ctx, jobject self, jlong param0);
+#define VTABLE_mindustry_editor_data_MapAudioView_wait_long_int 10
+typedef void (*func_mindustry_editor_data_MapAudioView_wait_long_int)(jcontext ctx, jobject self, jlong param0, jint param1);
+#define VTABLE_mindustry_editor_data_MapAudioView_build_mindustry_editor_data_MapAssetsDialog_arc_scene_ui_layout_Table 11
+typedef void (*func_mindustry_editor_data_MapAudioView_build_mindustry_editor_data_MapAssetsDialog_arc_scene_ui_layout_Table)(jcontext ctx, jobject self, jobject param0, jobject param1);
+#define VTABLE_mindustry_editor_data_MapAudioView_buildButtons_mindustry_editor_data_MapAssetsDialog_arc_scene_ui_layout_Table 12
+typedef void (*func_mindustry_editor_data_MapAudioView_buildButtons_mindustry_editor_data_MapAssetsDialog_arc_scene_ui_layout_Table)(jcontext ctx, jobject self, jobject param0, jobject param1);
+#define VTABLE_mindustry_editor_data_MapAudioView_lambda$buildButtons$0_mindustry_editor_data_MapAssetsDialog 13
+typedef void (*func_mindustry_editor_data_MapAudioView_lambda$buildButtons$0_mindustry_editor_data_MapAssetsDialog)(jcontext ctx, jobject self, jobject param0);
+#define VTABLE_mindustry_editor_data_MapAudioView_lambda$buildButtons$1_mindustry_editor_data_MapAssetsDialog_Array1_arc_files_Fi 14
+typedef void (*func_mindustry_editor_data_MapAudioView_lambda$buildButtons$1_mindustry_editor_data_MapAssetsDialog_Array1_arc_files_Fi)(jcontext ctx, jobject self, jobject param0, jobject param1);
+#define VTABLE_mindustry_editor_data_MapAudioView_lambda$build$3_mindustry_mod_data_DataAsset_arc_audio_AudioSource_float_arc_scene_ui_layout_Table 15
+typedef void (*func_mindustry_editor_data_MapAudioView_lambda$build$3_mindustry_mod_data_DataAsset_arc_audio_AudioSource_float_arc_scene_ui_layout_Table)(jcontext ctx, jobject self, jobject param0, jobject param1, jfloat param2, jobject param3);
+#define VTABLE_mindustry_editor_data_MapAudioView_lambda$build$7_arc_audio_Music_arc_scene_ui_Slider_R_boolean 16
+typedef jbool (*func_mindustry_editor_data_MapAudioView_lambda$build$7_arc_audio_Music_arc_scene_ui_Slider_R_boolean)(jcontext ctx, jobject self, jobject param0, jobject param1);
+#define VTABLE_mindustry_editor_data_MapAudioView_lambda$build$6_arc_audio_Music_float 17
+typedef void (*func_mindustry_editor_data_MapAudioView_lambda$build$6_arc_audio_Music_float)(jcontext ctx, jobject self, jobject param0, jfloat param1);
+#define VTABLE_mindustry_editor_data_MapAudioView_lambda$build$1_arc_audio_AudioSource 18
+typedef void (*func_mindustry_editor_data_MapAudioView_lambda$build$1_arc_audio_AudioSource)(jcontext ctx, jobject self, jobject param0);
+
+void mark_mindustry_editor_data_MapAudioView(jobject object, jint mark, jint depth);
+void clinit_mindustry_editor_data_MapAudioView(jcontext ctx);
+void init_mindustry_editor_data_MapAudioView_mindustry_mod_data_DataAssetType(jcontext ctx, jobject self, jobject param0);
+void M_mindustry_editor_data_MapAudioView_build_mindustry_editor_data_MapAssetsDialog_arc_scene_ui_layout_Table(jcontext ctx, jobject self, jobject param0, jobject param1);
+void M_mindustry_editor_data_MapAudioView_buildButtons_mindustry_editor_data_MapAssetsDialog_arc_scene_ui_layout_Table(jcontext ctx, jobject self, jobject param0, jobject param1);
+void M_mindustry_editor_data_MapAudioView_lambda$buildButtons$0_mindustry_editor_data_MapAssetsDialog(jcontext ctx, jobject self, jobject param0);
+void M_mindustry_editor_data_MapAudioView_lambda$buildButtons$1_mindustry_editor_data_MapAssetsDialog_Array1_arc_files_Fi(jcontext ctx, jobject self, jobject param0, jobject param1);
+jbool SM_mindustry_editor_data_MapAudioView_lambda$buildButtons$2_java_lang_String_java_lang_String_mindustry_mod_data_DataAsset_R_boolean(jcontext ctx, jobject param0, jobject param1, jobject param2);
+void SM_mindustry_editor_data_MapAudioView_lambda$build$10_arc_struct_Seq_mindustry_mod_data_DataAsset_mindustry_editor_data_MapAssetsDialog(jcontext ctx, jobject param0, jobject param1, jobject param2);
+void SM_mindustry_editor_data_MapAudioView_lambda$build$11_arc_struct_Seq_mindustry_mod_data_DataAsset_mindustry_editor_data_MapAssetsDialog(jcontext ctx, jobject param0, jobject param1, jobject param2);
+void SM_mindustry_editor_data_MapAudioView_lambda$build$9_mindustry_mod_data_DataAsset_arc_files_Fi(jcontext ctx, jobject param0, jobject param1);
+void M_mindustry_editor_data_MapAudioView_lambda$build$3_mindustry_mod_data_DataAsset_arc_audio_AudioSource_float_arc_scene_ui_layout_Table(jcontext ctx, jobject self, jobject param0, jobject param1, jfloat param2, jobject param3);
+jobject SM_mindustry_editor_data_MapAudioView_lambda$build$8_arc_scene_ui_Slider_R_java_lang_CharSequence(jcontext ctx, jobject param0);
+jbool M_mindustry_editor_data_MapAudioView_lambda$build$7_arc_audio_Music_arc_scene_ui_Slider_R_boolean(jcontext ctx, jobject self, jobject param0, jobject param1);
+void M_mindustry_editor_data_MapAudioView_lambda$build$6_arc_audio_Music_float(jcontext ctx, jobject self, jobject param0, jfloat param1);
+void SM_mindustry_editor_data_MapAudioView_lambda$build$4_mindustry_mod_data_DataAsset_arc_audio_AudioSource_float_arc_scene_ui_layout_Table(jcontext ctx, jobject param0, jobject param1, jfloat param2, jobject param3);
+void SM_mindustry_editor_data_MapAudioView_lambda$build$5_arc_scene_ui_layout_Table_arc_audio_AudioSource(jcontext ctx, jobject param0, jobject param1);
+void SM_mindustry_editor_data_MapAudioView_lambda$build$2_arc_audio_AudioSource_arc_scene_ui_ImageButton(jcontext ctx, jobject param0, jobject param1);
+void M_mindustry_editor_data_MapAudioView_lambda$build$1_arc_audio_AudioSource(jcontext ctx, jobject self, jobject param0);
+void SM_mindustry_editor_data_MapAudioView_lambda$build$0_arc_files_Fi(jcontext ctx, jobject param0);
+
+#ifdef __cplusplus
+}
+#endif
+
+#endif

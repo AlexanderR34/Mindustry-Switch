@@ -1,0 +1,93 @@
+#ifndef HEADER_rhino_EmbeddedSlotMap
+#define HEADER_rhino_EmbeddedSlotMap
+
+#include "Clearwing.h"
+#include "java/lang/Object.h"
+#include "rhino/SlotMap.h"
+
+#ifdef __cplusplus
+extern "C" {
+#endif
+
+typedef struct rhino_EmbeddedSlotMap {
+	java_lang_Object parent;
+	jref F_slots;
+	jref F_firstAdded;
+	jref F_lastAdded;
+	jint F_count;
+} rhino_EmbeddedSlotMap;
+
+extern Class class_rhino_EmbeddedSlotMap;
+
+extern jint SF_rhino_EmbeddedSlotMap_INITIAL_SLOT_SIZE;
+
+#define VTABLE_rhino_EmbeddedSlotMap_hashCode_R_int 0
+typedef jint (*func_rhino_EmbeddedSlotMap_hashCode_R_int)(jcontext ctx, jobject self);
+#define VTABLE_rhino_EmbeddedSlotMap_equals_java_lang_Object_R_boolean 1
+typedef jbool (*func_rhino_EmbeddedSlotMap_equals_java_lang_Object_R_boolean)(jcontext ctx, jobject self, jobject param0);
+#define VTABLE_rhino_EmbeddedSlotMap_clone_R_java_lang_Object 2
+typedef jobject (*func_rhino_EmbeddedSlotMap_clone_R_java_lang_Object)(jcontext ctx, jobject self);
+#define VTABLE_rhino_EmbeddedSlotMap_getClass_R_java_lang_Class 3
+typedef jobject (*func_rhino_EmbeddedSlotMap_getClass_R_java_lang_Class)(jcontext ctx, jobject self);
+#define VTABLE_rhino_EmbeddedSlotMap_toString_R_java_lang_String 4
+typedef jobject (*func_rhino_EmbeddedSlotMap_toString_R_java_lang_String)(jcontext ctx, jobject self);
+#define VTABLE_rhino_EmbeddedSlotMap_finalize 5
+typedef void (*func_rhino_EmbeddedSlotMap_finalize)(jcontext ctx, jobject self);
+#define VTABLE_rhino_EmbeddedSlotMap_notify 6
+typedef void (*func_rhino_EmbeddedSlotMap_notify)(jcontext ctx, jobject self);
+#define VTABLE_rhino_EmbeddedSlotMap_notifyAll 7
+typedef void (*func_rhino_EmbeddedSlotMap_notifyAll)(jcontext ctx, jobject self);
+#define VTABLE_rhino_EmbeddedSlotMap_wait 8
+typedef void (*func_rhino_EmbeddedSlotMap_wait)(jcontext ctx, jobject self);
+#define VTABLE_rhino_EmbeddedSlotMap_wait_long 9
+typedef void (*func_rhino_EmbeddedSlotMap_wait_long)(jcontext ctx, jobject self, jlong param0);
+#define VTABLE_rhino_EmbeddedSlotMap_wait_long_int 10
+typedef void (*func_rhino_EmbeddedSlotMap_wait_long_int)(jcontext ctx, jobject self, jlong param0, jint param1);
+#define VTABLE_rhino_EmbeddedSlotMap_iterator_R_java_util_Iterator 11
+typedef jobject (*func_rhino_EmbeddedSlotMap_iterator_R_java_util_Iterator)(jcontext ctx, jobject self);
+#define VTABLE_rhino_EmbeddedSlotMap_forEach_java_util_function_Consumer 12
+typedef void (*func_rhino_EmbeddedSlotMap_forEach_java_util_function_Consumer)(jcontext ctx, jobject self, jobject param0);
+#define VTABLE_rhino_EmbeddedSlotMap_spliterator_R_java_util_Spliterator 13
+typedef jobject (*func_rhino_EmbeddedSlotMap_spliterator_R_java_util_Spliterator)(jcontext ctx, jobject self);
+#define VTABLE_rhino_EmbeddedSlotMap_size_R_int 14
+typedef jint (*func_rhino_EmbeddedSlotMap_size_R_int)(jcontext ctx, jobject self);
+#define VTABLE_rhino_EmbeddedSlotMap_isEmpty_R_boolean 15
+typedef jbool (*func_rhino_EmbeddedSlotMap_isEmpty_R_boolean)(jcontext ctx, jobject self);
+#define VTABLE_rhino_EmbeddedSlotMap_get_java_lang_Object_int_rhino_ScriptableObject$SlotAccess_R_rhino_ScriptableObject$Slot 16
+typedef jobject (*func_rhino_EmbeddedSlotMap_get_java_lang_Object_int_rhino_ScriptableObject$SlotAccess_R_rhino_ScriptableObject$Slot)(jcontext ctx, jobject self, jobject param0, jint param1, jobject param2);
+#define VTABLE_rhino_EmbeddedSlotMap_query_java_lang_Object_int_R_rhino_ScriptableObject$Slot 17
+typedef jobject (*func_rhino_EmbeddedSlotMap_query_java_lang_Object_int_R_rhino_ScriptableObject$Slot)(jcontext ctx, jobject self, jobject param0, jint param1);
+#define VTABLE_rhino_EmbeddedSlotMap_addSlot_rhino_ScriptableObject$Slot 18
+typedef void (*func_rhino_EmbeddedSlotMap_addSlot_rhino_ScriptableObject$Slot)(jcontext ctx, jobject self, jobject param0);
+#define VTABLE_rhino_EmbeddedSlotMap_remove_java_lang_Object_int 19
+typedef void (*func_rhino_EmbeddedSlotMap_remove_java_lang_Object_int)(jcontext ctx, jobject self, jobject param0, jint param1);
+#define VTABLE_rhino_EmbeddedSlotMap_createSlot_java_lang_Object_int_rhino_ScriptableObject$SlotAccess_rhino_ScriptableObject$Slot_R_rhino_ScriptableObject$Slot 20
+typedef jobject (*func_rhino_EmbeddedSlotMap_createSlot_java_lang_Object_int_rhino_ScriptableObject$SlotAccess_rhino_ScriptableObject$Slot_R_rhino_ScriptableObject$Slot)(jcontext ctx, jobject self, jobject param0, jint param1, jobject param2, jobject param3);
+#define VTABLE_rhino_EmbeddedSlotMap_insertNewSlot_rhino_ScriptableObject$Slot 21
+typedef void (*func_rhino_EmbeddedSlotMap_insertNewSlot_rhino_ScriptableObject$Slot)(jcontext ctx, jobject self, jobject param0);
+#define VTABLE_rhino_EmbeddedSlotMap_copyTable_Array1_rhino_ScriptableObject$Slot_Array1_rhino_ScriptableObject$Slot 22
+typedef void (*func_rhino_EmbeddedSlotMap_copyTable_Array1_rhino_ScriptableObject$Slot_Array1_rhino_ScriptableObject$Slot)(jcontext ctx, jobject self, jobject param0, jobject param1);
+#define VTABLE_rhino_EmbeddedSlotMap_addKnownAbsentSlot_Array1_rhino_ScriptableObject$Slot_rhino_ScriptableObject$Slot 23
+typedef void (*func_rhino_EmbeddedSlotMap_addKnownAbsentSlot_Array1_rhino_ScriptableObject$Slot_rhino_ScriptableObject$Slot)(jcontext ctx, jobject self, jobject param0, jobject param1);
+
+void mark_rhino_EmbeddedSlotMap(jobject object, jint mark, jint depth);
+void clinit_rhino_EmbeddedSlotMap(jcontext ctx);
+void init_rhino_EmbeddedSlotMap(jcontext ctx, jobject self);
+jint M_rhino_EmbeddedSlotMap_size_R_int(jcontext ctx, jobject self);
+jbool M_rhino_EmbeddedSlotMap_isEmpty_R_boolean(jcontext ctx, jobject self);
+jobject M_rhino_EmbeddedSlotMap_iterator_R_java_util_Iterator(jcontext ctx, jobject self);
+jobject M_rhino_EmbeddedSlotMap_query_java_lang_Object_int_R_rhino_ScriptableObject$Slot(jcontext ctx, jobject self, jobject param0, jint param1);
+jobject M_rhino_EmbeddedSlotMap_get_java_lang_Object_int_rhino_ScriptableObject$SlotAccess_R_rhino_ScriptableObject$Slot(jcontext ctx, jobject self, jobject param0, jint param1, jobject param2);
+jobject M_rhino_EmbeddedSlotMap_createSlot_java_lang_Object_int_rhino_ScriptableObject$SlotAccess_rhino_ScriptableObject$Slot_R_rhino_ScriptableObject$Slot(jcontext ctx, jobject self, jobject param0, jint param1, jobject param2, jobject param3);
+void M_rhino_EmbeddedSlotMap_addSlot_rhino_ScriptableObject$Slot(jcontext ctx, jobject self, jobject param0);
+void M_rhino_EmbeddedSlotMap_insertNewSlot_rhino_ScriptableObject$Slot(jcontext ctx, jobject self, jobject param0);
+void M_rhino_EmbeddedSlotMap_remove_java_lang_Object_int(jcontext ctx, jobject self, jobject param0, jint param1);
+void M_rhino_EmbeddedSlotMap_copyTable_Array1_rhino_ScriptableObject$Slot_Array1_rhino_ScriptableObject$Slot(jcontext ctx, jobject self, jobject param0, jobject param1);
+void M_rhino_EmbeddedSlotMap_addKnownAbsentSlot_Array1_rhino_ScriptableObject$Slot_rhino_ScriptableObject$Slot(jcontext ctx, jobject self, jobject param0, jobject param1);
+jint SM_rhino_EmbeddedSlotMap_getSlotIndex_int_int_R_int(jcontext ctx, jint param0, jint param1);
+
+#ifdef __cplusplus
+}
+#endif
+
+#endif

@@ -1,0 +1,115 @@
+#ifndef HEADER_arc_graphics_gl_FrameBufferCubemap
+#define HEADER_arc_graphics_gl_FrameBufferCubemap
+
+#include "Clearwing.h"
+#include "arc/graphics/gl/GLFrameBuffer.h"
+
+#ifdef __cplusplus
+extern "C" {
+#endif
+
+typedef struct arc_graphics_gl_FrameBufferCubemap {
+	arc_graphics_gl_GLFrameBuffer parent;
+} arc_graphics_gl_FrameBufferCubemap;
+
+extern Class class_arc_graphics_gl_FrameBufferCubemap;
+
+
+#define VTABLE_arc_graphics_gl_FrameBufferCubemap_hashCode_R_int 0
+typedef jint (*func_arc_graphics_gl_FrameBufferCubemap_hashCode_R_int)(jcontext ctx, jobject self);
+#define VTABLE_arc_graphics_gl_FrameBufferCubemap_equals_java_lang_Object_R_boolean 1
+typedef jbool (*func_arc_graphics_gl_FrameBufferCubemap_equals_java_lang_Object_R_boolean)(jcontext ctx, jobject self, jobject param0);
+#define VTABLE_arc_graphics_gl_FrameBufferCubemap_clone_R_java_lang_Object 2
+typedef jobject (*func_arc_graphics_gl_FrameBufferCubemap_clone_R_java_lang_Object)(jcontext ctx, jobject self);
+#define VTABLE_arc_graphics_gl_FrameBufferCubemap_getClass_R_java_lang_Class 3
+typedef jobject (*func_arc_graphics_gl_FrameBufferCubemap_getClass_R_java_lang_Class)(jcontext ctx, jobject self);
+#define VTABLE_arc_graphics_gl_FrameBufferCubemap_toString_R_java_lang_String 4
+typedef jobject (*func_arc_graphics_gl_FrameBufferCubemap_toString_R_java_lang_String)(jcontext ctx, jobject self);
+#define VTABLE_arc_graphics_gl_FrameBufferCubemap_finalize 5
+typedef void (*func_arc_graphics_gl_FrameBufferCubemap_finalize)(jcontext ctx, jobject self);
+#define VTABLE_arc_graphics_gl_FrameBufferCubemap_notify 6
+typedef void (*func_arc_graphics_gl_FrameBufferCubemap_notify)(jcontext ctx, jobject self);
+#define VTABLE_arc_graphics_gl_FrameBufferCubemap_notifyAll 7
+typedef void (*func_arc_graphics_gl_FrameBufferCubemap_notifyAll)(jcontext ctx, jobject self);
+#define VTABLE_arc_graphics_gl_FrameBufferCubemap_wait 8
+typedef void (*func_arc_graphics_gl_FrameBufferCubemap_wait)(jcontext ctx, jobject self);
+#define VTABLE_arc_graphics_gl_FrameBufferCubemap_wait_long 9
+typedef void (*func_arc_graphics_gl_FrameBufferCubemap_wait_long)(jcontext ctx, jobject self, jlong param0);
+#define VTABLE_arc_graphics_gl_FrameBufferCubemap_wait_long_int 10
+typedef void (*func_arc_graphics_gl_FrameBufferCubemap_wait_long_int)(jcontext ctx, jobject self, jlong param0, jint param1);
+#define VTABLE_arc_graphics_gl_FrameBufferCubemap_dispose 11
+typedef void (*func_arc_graphics_gl_FrameBufferCubemap_dispose)(jcontext ctx, jobject self);
+#define VTABLE_arc_graphics_gl_FrameBufferCubemap_isDisposed_R_boolean 12
+typedef jbool (*func_arc_graphics_gl_FrameBufferCubemap_isDisposed_R_boolean)(jcontext ctx, jobject self);
+#define VTABLE_arc_graphics_gl_FrameBufferCubemap_getTexture_R_arc_graphics_GLTexture 13
+typedef jobject (*func_arc_graphics_gl_FrameBufferCubemap_getTexture_R_arc_graphics_GLTexture)(jcontext ctx, jobject self);
+#define VTABLE_arc_graphics_gl_FrameBufferCubemap_getTextureAttachments_R_arc_struct_Seq 14
+typedef jobject (*func_arc_graphics_gl_FrameBufferCubemap_getTextureAttachments_R_arc_struct_Seq)(jcontext ctx, jobject self);
+#define VTABLE_arc_graphics_gl_FrameBufferCubemap_createTexture_arc_graphics_gl_GLFrameBuffer$FrameBufferTextureAttachmentSpec_R_arc_graphics_GLTexture 15
+typedef jobject (*func_arc_graphics_gl_FrameBufferCubemap_createTexture_arc_graphics_gl_GLFrameBuffer$FrameBufferTextureAttachmentSpec_R_arc_graphics_GLTexture)(jcontext ctx, jobject self, jobject param0);
+#define VTABLE_arc_graphics_gl_FrameBufferCubemap_disposeTexture_arc_graphics_GLTexture 16
+typedef void (*func_arc_graphics_gl_FrameBufferCubemap_disposeTexture_arc_graphics_GLTexture)(jcontext ctx, jobject self, jobject param0);
+#define VTABLE_arc_graphics_gl_FrameBufferCubemap_attachTexture_int_arc_graphics_GLTexture 17
+typedef void (*func_arc_graphics_gl_FrameBufferCubemap_attachTexture_int_arc_graphics_GLTexture)(jcontext ctx, jobject self, jint param0, jobject param1);
+#define VTABLE_arc_graphics_gl_FrameBufferCubemap_build 18
+typedef void (*func_arc_graphics_gl_FrameBufferCubemap_build)(jcontext ctx, jobject self);
+#define VTABLE_arc_graphics_gl_FrameBufferCubemap_checkValidBuilder 19
+typedef void (*func_arc_graphics_gl_FrameBufferCubemap_checkValidBuilder)(jcontext ctx, jobject self);
+#define VTABLE_arc_graphics_gl_FrameBufferCubemap_bind 20
+typedef void (*func_arc_graphics_gl_FrameBufferCubemap_bind)(jcontext ctx, jobject self);
+#define VTABLE_arc_graphics_gl_FrameBufferCubemap_isBound_R_boolean 21
+typedef jbool (*func_arc_graphics_gl_FrameBufferCubemap_isBound_R_boolean)(jcontext ctx, jobject self);
+#define VTABLE_arc_graphics_gl_FrameBufferCubemap_begin_arc_graphics_Color 22
+typedef void (*func_arc_graphics_gl_FrameBufferCubemap_begin_arc_graphics_Color)(jcontext ctx, jobject self, jobject param0);
+#define VTABLE_arc_graphics_gl_FrameBufferCubemap_begin 23
+typedef void (*func_arc_graphics_gl_FrameBufferCubemap_begin)(jcontext ctx, jobject self);
+#define VTABLE_arc_graphics_gl_FrameBufferCubemap_beginBind 24
+typedef void (*func_arc_graphics_gl_FrameBufferCubemap_beginBind)(jcontext ctx, jobject self);
+#define VTABLE_arc_graphics_gl_FrameBufferCubemap_setFrameBufferViewport 25
+typedef void (*func_arc_graphics_gl_FrameBufferCubemap_setFrameBufferViewport)(jcontext ctx, jobject self);
+#define VTABLE_arc_graphics_gl_FrameBufferCubemap_end 26
+typedef void (*func_arc_graphics_gl_FrameBufferCubemap_end)(jcontext ctx, jobject self);
+#define VTABLE_arc_graphics_gl_FrameBufferCubemap_endBind 27
+typedef void (*func_arc_graphics_gl_FrameBufferCubemap_endBind)(jcontext ctx, jobject self);
+#define VTABLE_arc_graphics_gl_FrameBufferCubemap_getFramebufferHandle_R_int 28
+typedef jint (*func_arc_graphics_gl_FrameBufferCubemap_getFramebufferHandle_R_int)(jcontext ctx, jobject self);
+#define VTABLE_arc_graphics_gl_FrameBufferCubemap_getDepthBufferHandle_R_int 29
+typedef jint (*func_arc_graphics_gl_FrameBufferCubemap_getDepthBufferHandle_R_int)(jcontext ctx, jobject self);
+#define VTABLE_arc_graphics_gl_FrameBufferCubemap_getStencilBufferHandle_R_int 30
+typedef jint (*func_arc_graphics_gl_FrameBufferCubemap_getStencilBufferHandle_R_int)(jcontext ctx, jobject self);
+#define VTABLE_arc_graphics_gl_FrameBufferCubemap_getDepthStencilPackedBuffer_R_int 31
+typedef jint (*func_arc_graphics_gl_FrameBufferCubemap_getDepthStencilPackedBuffer_R_int)(jcontext ctx, jobject self);
+#define VTABLE_arc_graphics_gl_FrameBufferCubemap_getHeight_R_int 32
+typedef jint (*func_arc_graphics_gl_FrameBufferCubemap_getHeight_R_int)(jcontext ctx, jobject self);
+#define VTABLE_arc_graphics_gl_FrameBufferCubemap_getWidth_R_int 33
+typedef jint (*func_arc_graphics_gl_FrameBufferCubemap_getWidth_R_int)(jcontext ctx, jobject self);
+#define VTABLE_arc_graphics_gl_FrameBufferCubemap_createTexture_arc_graphics_gl_GLFrameBuffer$FrameBufferTextureAttachmentSpec_R_arc_graphics_Cubemap 34
+typedef jobject (*func_arc_graphics_gl_FrameBufferCubemap_createTexture_arc_graphics_gl_GLFrameBuffer$FrameBufferTextureAttachmentSpec_R_arc_graphics_Cubemap)(jcontext ctx, jobject self, jobject param0);
+#define VTABLE_arc_graphics_gl_FrameBufferCubemap_disposeTexture_arc_graphics_Cubemap 35
+typedef void (*func_arc_graphics_gl_FrameBufferCubemap_disposeTexture_arc_graphics_Cubemap)(jcontext ctx, jobject self, jobject param0);
+#define VTABLE_arc_graphics_gl_FrameBufferCubemap_attachTexture_int_arc_graphics_Cubemap 36
+typedef void (*func_arc_graphics_gl_FrameBufferCubemap_attachTexture_int_arc_graphics_Cubemap)(jcontext ctx, jobject self, jint param0, jobject param1);
+#define VTABLE_arc_graphics_gl_FrameBufferCubemap_eachSide_arc_func_Cons 37
+typedef void (*func_arc_graphics_gl_FrameBufferCubemap_eachSide_arc_func_Cons)(jcontext ctx, jobject self, jobject param0);
+#define VTABLE_arc_graphics_gl_FrameBufferCubemap_bindSide_arc_graphics_Cubemap$CubemapSide 38
+typedef void (*func_arc_graphics_gl_FrameBufferCubemap_bindSide_arc_graphics_Cubemap$CubemapSide)(jcontext ctx, jobject self, jobject param0);
+
+void mark_arc_graphics_gl_FrameBufferCubemap(jobject object, jint mark, jint depth);
+void clinit_arc_graphics_gl_FrameBufferCubemap(jcontext ctx);
+void init_arc_graphics_gl_FrameBufferCubemap_arc_graphics_gl_GLFrameBuffer$GLFrameBufferBuilder(jcontext ctx, jobject self, jobject param0);
+void init_arc_graphics_gl_FrameBufferCubemap_arc_graphics_Pixmap$Format_int_int_boolean(jcontext ctx, jobject self, jobject param0, jint param1, jint param2, jbool param3);
+void init_arc_graphics_gl_FrameBufferCubemap_arc_graphics_Pixmap$Format_int_int_boolean_boolean(jcontext ctx, jobject self, jobject param0, jint param1, jint param2, jbool param3, jbool param4);
+jobject M_arc_graphics_gl_FrameBufferCubemap_createTexture_arc_graphics_gl_GLFrameBuffer$FrameBufferTextureAttachmentSpec_R_arc_graphics_Cubemap(jcontext ctx, jobject self, jobject param0);
+void M_arc_graphics_gl_FrameBufferCubemap_disposeTexture_arc_graphics_Cubemap(jcontext ctx, jobject self, jobject param0);
+void M_arc_graphics_gl_FrameBufferCubemap_attachTexture_int_arc_graphics_Cubemap(jcontext ctx, jobject self, jint param0, jobject param1);
+void M_arc_graphics_gl_FrameBufferCubemap_eachSide_arc_func_Cons(jcontext ctx, jobject self, jobject param0);
+void M_arc_graphics_gl_FrameBufferCubemap_bindSide_arc_graphics_Cubemap$CubemapSide(jcontext ctx, jobject self, jobject param0);
+void M_arc_graphics_gl_FrameBufferCubemap_attachTexture_int_arc_graphics_GLTexture(jcontext ctx, jobject self, jint param0, jobject param1);
+void M_arc_graphics_gl_FrameBufferCubemap_disposeTexture_arc_graphics_GLTexture(jcontext ctx, jobject self, jobject param0);
+jobject M_arc_graphics_gl_FrameBufferCubemap_createTexture_arc_graphics_gl_GLFrameBuffer$FrameBufferTextureAttachmentSpec_R_arc_graphics_GLTexture(jcontext ctx, jobject self, jobject param0);
+
+#ifdef __cplusplus
+}
+#endif
+
+#endif

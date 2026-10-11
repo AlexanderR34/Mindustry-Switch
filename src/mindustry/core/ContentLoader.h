@@ -1,0 +1,212 @@
+#ifndef HEADER_mindustry_core_ContentLoader
+#define HEADER_mindustry_core_ContentLoader
+
+#include "Clearwing.h"
+#include "java/lang/Object.h"
+
+#ifdef __cplusplus
+extern "C" {
+#endif
+
+typedef struct mindustry_core_ContentLoader {
+	java_lang_Object parent;
+	jref F_contentNameMap;
+	jref F_contentMap;
+	jref F_nameMap;
+	jref F_temporaryMapper;
+	jref F_currentMod;
+	jref F_lastAdded;
+	jref F_initialization;
+} mindustry_core_ContentLoader;
+
+extern Class class_mindustry_core_ContentLoader;
+
+
+#define VTABLE_mindustry_core_ContentLoader_hashCode_R_int 0
+typedef jint (*func_mindustry_core_ContentLoader_hashCode_R_int)(jcontext ctx, jobject self);
+#define VTABLE_mindustry_core_ContentLoader_equals_java_lang_Object_R_boolean 1
+typedef jbool (*func_mindustry_core_ContentLoader_equals_java_lang_Object_R_boolean)(jcontext ctx, jobject self, jobject param0);
+#define VTABLE_mindustry_core_ContentLoader_clone_R_java_lang_Object 2
+typedef jobject (*func_mindustry_core_ContentLoader_clone_R_java_lang_Object)(jcontext ctx, jobject self);
+#define VTABLE_mindustry_core_ContentLoader_getClass_R_java_lang_Class 3
+typedef jobject (*func_mindustry_core_ContentLoader_getClass_R_java_lang_Class)(jcontext ctx, jobject self);
+#define VTABLE_mindustry_core_ContentLoader_toString_R_java_lang_String 4
+typedef jobject (*func_mindustry_core_ContentLoader_toString_R_java_lang_String)(jcontext ctx, jobject self);
+#define VTABLE_mindustry_core_ContentLoader_finalize 5
+typedef void (*func_mindustry_core_ContentLoader_finalize)(jcontext ctx, jobject self);
+#define VTABLE_mindustry_core_ContentLoader_notify 6
+typedef void (*func_mindustry_core_ContentLoader_notify)(jcontext ctx, jobject self);
+#define VTABLE_mindustry_core_ContentLoader_notifyAll 7
+typedef void (*func_mindustry_core_ContentLoader_notifyAll)(jcontext ctx, jobject self);
+#define VTABLE_mindustry_core_ContentLoader_wait 8
+typedef void (*func_mindustry_core_ContentLoader_wait)(jcontext ctx, jobject self);
+#define VTABLE_mindustry_core_ContentLoader_wait_long 9
+typedef void (*func_mindustry_core_ContentLoader_wait_long)(jcontext ctx, jobject self, jlong param0);
+#define VTABLE_mindustry_core_ContentLoader_wait_long_int 10
+typedef void (*func_mindustry_core_ContentLoader_wait_long_int)(jcontext ctx, jobject self, jlong param0, jint param1);
+#define VTABLE_mindustry_core_ContentLoader_copy_R_mindustry_core_ContentLoader 11
+typedef jobject (*func_mindustry_core_ContentLoader_copy_R_mindustry_core_ContentLoader)(jcontext ctx, jobject self);
+#define VTABLE_mindustry_core_ContentLoader_createBaseContent 12
+typedef void (*func_mindustry_core_ContentLoader_createBaseContent)(jcontext ctx, jobject self);
+#define VTABLE_mindustry_core_ContentLoader_createModContent 13
+typedef void (*func_mindustry_core_ContentLoader_createModContent)(jcontext ctx, jobject self);
+#define VTABLE_mindustry_core_ContentLoader_logContent 14
+typedef void (*func_mindustry_core_ContentLoader_logContent)(jcontext ctx, jobject self);
+#define VTABLE_mindustry_core_ContentLoader_init 15
+typedef void (*func_mindustry_core_ContentLoader_init)(jcontext ctx, jobject self);
+#define VTABLE_mindustry_core_ContentLoader_load 16
+typedef void (*func_mindustry_core_ContentLoader_load)(jcontext ctx, jobject self);
+#define VTABLE_mindustry_core_ContentLoader_initialize_arc_func_Cons 17
+typedef void (*func_mindustry_core_ContentLoader_initialize_arc_func_Cons)(jcontext ctx, jobject self, jobject param0);
+#define VTABLE_mindustry_core_ContentLoader_loadColors 18
+typedef void (*func_mindustry_core_ContentLoader_loadColors)(jcontext ctx, jobject self);
+#define VTABLE_mindustry_core_ContentLoader_getLastAdded_R_mindustry_ctype_Content 19
+typedef jobject (*func_mindustry_core_ContentLoader_getLastAdded_R_mindustry_ctype_Content)(jcontext ctx, jobject self);
+#define VTABLE_mindustry_core_ContentLoader_removeLast 20
+typedef void (*func_mindustry_core_ContentLoader_removeLast)(jcontext ctx, jobject self);
+#define VTABLE_mindustry_core_ContentLoader_handleContent_mindustry_ctype_Content 21
+typedef void (*func_mindustry_core_ContentLoader_handleContent_mindustry_ctype_Content)(jcontext ctx, jobject self, jobject param0);
+#define VTABLE_mindustry_core_ContentLoader_setCurrentMod_mindustry_mod_Mods$LoadedMod 22
+typedef void (*func_mindustry_core_ContentLoader_setCurrentMod_mindustry_mod_Mods$LoadedMod)(jcontext ctx, jobject self, jobject param0);
+#define VTABLE_mindustry_core_ContentLoader_transformName_java_lang_String_R_java_lang_String 23
+typedef jobject (*func_mindustry_core_ContentLoader_transformName_java_lang_String_R_java_lang_String)(jcontext ctx, jobject self, jobject param0);
+#define VTABLE_mindustry_core_ContentLoader_handleMappableContent_mindustry_ctype_MappableContent 24
+typedef void (*func_mindustry_core_ContentLoader_handleMappableContent_mindustry_ctype_MappableContent)(jcontext ctx, jobject self, jobject param0);
+#define VTABLE_mindustry_core_ContentLoader_setTemporaryMapper_Array2_mindustry_ctype_MappableContent 25
+typedef void (*func_mindustry_core_ContentLoader_setTemporaryMapper_Array2_mindustry_ctype_MappableContent)(jcontext ctx, jobject self, jobject param0);
+#define VTABLE_mindustry_core_ContentLoader_byName_java_lang_String_R_mindustry_ctype_MappableContent 26
+typedef jobject (*func_mindustry_core_ContentLoader_byName_java_lang_String_R_mindustry_ctype_MappableContent)(jcontext ctx, jobject self, jobject param0);
+#define VTABLE_mindustry_core_ContentLoader_getContentMap_R_Array1_arc_struct_Seq 27
+typedef jobject (*func_mindustry_core_ContentLoader_getContentMap_R_Array1_arc_struct_Seq)(jcontext ctx, jobject self);
+#define VTABLE_mindustry_core_ContentLoader_each_arc_func_Cons 28
+typedef void (*func_mindustry_core_ContentLoader_each_arc_func_Cons)(jcontext ctx, jobject self, jobject param0);
+#define VTABLE_mindustry_core_ContentLoader_getByName_mindustry_ctype_ContentType_java_lang_String_R_mindustry_ctype_MappableContent 29
+typedef jobject (*func_mindustry_core_ContentLoader_getByName_mindustry_ctype_ContentType_java_lang_String_R_mindustry_ctype_MappableContent)(jcontext ctx, jobject self, jobject param0, jobject param1);
+#define VTABLE_mindustry_core_ContentLoader_getByID_mindustry_ctype_ContentType_int_R_mindustry_ctype_Content 30
+typedef jobject (*func_mindustry_core_ContentLoader_getByID_mindustry_ctype_ContentType_int_R_mindustry_ctype_Content)(jcontext ctx, jobject self, jobject param0, jint param1);
+#define VTABLE_mindustry_core_ContentLoader_getBy_mindustry_ctype_ContentType_R_arc_struct_Seq 31
+typedef jobject (*func_mindustry_core_ContentLoader_getBy_mindustry_ctype_ContentType_R_arc_struct_Seq)(jcontext ctx, jobject self, jobject param0);
+#define VTABLE_mindustry_core_ContentLoader_getNamesBy_mindustry_ctype_ContentType_R_arc_struct_ObjectMap 32
+typedef jobject (*func_mindustry_core_ContentLoader_getNamesBy_mindustry_ctype_ContentType_R_arc_struct_ObjectMap)(jcontext ctx, jobject self, jobject param0);
+#define VTABLE_mindustry_core_ContentLoader_remove_mindustry_ctype_Content 33
+typedef void (*func_mindustry_core_ContentLoader_remove_mindustry_ctype_Content)(jcontext ctx, jobject self, jobject param0);
+#define VTABLE_mindustry_core_ContentLoader_blocks_R_arc_struct_Seq 34
+typedef jobject (*func_mindustry_core_ContentLoader_blocks_R_arc_struct_Seq)(jcontext ctx, jobject self);
+#define VTABLE_mindustry_core_ContentLoader_block_int_R_mindustry_world_Block 35
+typedef jobject (*func_mindustry_core_ContentLoader_block_int_R_mindustry_world_Block)(jcontext ctx, jobject self, jint param0);
+#define VTABLE_mindustry_core_ContentLoader_block_java_lang_String_R_mindustry_world_Block 36
+typedef jobject (*func_mindustry_core_ContentLoader_block_java_lang_String_R_mindustry_world_Block)(jcontext ctx, jobject self, jobject param0);
+#define VTABLE_mindustry_core_ContentLoader_items_R_arc_struct_Seq 37
+typedef jobject (*func_mindustry_core_ContentLoader_items_R_arc_struct_Seq)(jcontext ctx, jobject self);
+#define VTABLE_mindustry_core_ContentLoader_item_int_R_mindustry_type_Item 38
+typedef jobject (*func_mindustry_core_ContentLoader_item_int_R_mindustry_type_Item)(jcontext ctx, jobject self, jint param0);
+#define VTABLE_mindustry_core_ContentLoader_item_java_lang_String_R_mindustry_type_Item 39
+typedef jobject (*func_mindustry_core_ContentLoader_item_java_lang_String_R_mindustry_type_Item)(jcontext ctx, jobject self, jobject param0);
+#define VTABLE_mindustry_core_ContentLoader_liquids_R_arc_struct_Seq 40
+typedef jobject (*func_mindustry_core_ContentLoader_liquids_R_arc_struct_Seq)(jcontext ctx, jobject self);
+#define VTABLE_mindustry_core_ContentLoader_liquid_int_R_mindustry_type_Liquid 41
+typedef jobject (*func_mindustry_core_ContentLoader_liquid_int_R_mindustry_type_Liquid)(jcontext ctx, jobject self, jint param0);
+#define VTABLE_mindustry_core_ContentLoader_liquid_java_lang_String_R_mindustry_type_Liquid 42
+typedef jobject (*func_mindustry_core_ContentLoader_liquid_java_lang_String_R_mindustry_type_Liquid)(jcontext ctx, jobject self, jobject param0);
+#define VTABLE_mindustry_core_ContentLoader_bullets_R_arc_struct_Seq 43
+typedef jobject (*func_mindustry_core_ContentLoader_bullets_R_arc_struct_Seq)(jcontext ctx, jobject self);
+#define VTABLE_mindustry_core_ContentLoader_bullet_int_R_mindustry_entities_bullet_BulletType 44
+typedef jobject (*func_mindustry_core_ContentLoader_bullet_int_R_mindustry_entities_bullet_BulletType)(jcontext ctx, jobject self, jint param0);
+#define VTABLE_mindustry_core_ContentLoader_statusEffects_R_arc_struct_Seq 45
+typedef jobject (*func_mindustry_core_ContentLoader_statusEffects_R_arc_struct_Seq)(jcontext ctx, jobject self);
+#define VTABLE_mindustry_core_ContentLoader_statusEffect_java_lang_String_R_mindustry_type_StatusEffect 46
+typedef jobject (*func_mindustry_core_ContentLoader_statusEffect_java_lang_String_R_mindustry_type_StatusEffect)(jcontext ctx, jobject self, jobject param0);
+#define VTABLE_mindustry_core_ContentLoader_sectors_R_arc_struct_Seq 47
+typedef jobject (*func_mindustry_core_ContentLoader_sectors_R_arc_struct_Seq)(jcontext ctx, jobject self);
+#define VTABLE_mindustry_core_ContentLoader_sector_java_lang_String_R_mindustry_type_SectorPreset 48
+typedef jobject (*func_mindustry_core_ContentLoader_sector_java_lang_String_R_mindustry_type_SectorPreset)(jcontext ctx, jobject self, jobject param0);
+#define VTABLE_mindustry_core_ContentLoader_units_R_arc_struct_Seq 49
+typedef jobject (*func_mindustry_core_ContentLoader_units_R_arc_struct_Seq)(jcontext ctx, jobject self);
+#define VTABLE_mindustry_core_ContentLoader_unit_int_R_mindustry_type_UnitType 50
+typedef jobject (*func_mindustry_core_ContentLoader_unit_int_R_mindustry_type_UnitType)(jcontext ctx, jobject self, jint param0);
+#define VTABLE_mindustry_core_ContentLoader_unit_java_lang_String_R_mindustry_type_UnitType 51
+typedef jobject (*func_mindustry_core_ContentLoader_unit_java_lang_String_R_mindustry_type_UnitType)(jcontext ctx, jobject self, jobject param0);
+#define VTABLE_mindustry_core_ContentLoader_planets_R_arc_struct_Seq 52
+typedef jobject (*func_mindustry_core_ContentLoader_planets_R_arc_struct_Seq)(jcontext ctx, jobject self);
+#define VTABLE_mindustry_core_ContentLoader_planet_java_lang_String_R_mindustry_type_Planet 53
+typedef jobject (*func_mindustry_core_ContentLoader_planet_java_lang_String_R_mindustry_type_Planet)(jcontext ctx, jobject self, jobject param0);
+#define VTABLE_mindustry_core_ContentLoader_weathers_R_arc_struct_Seq 54
+typedef jobject (*func_mindustry_core_ContentLoader_weathers_R_arc_struct_Seq)(jcontext ctx, jobject self);
+#define VTABLE_mindustry_core_ContentLoader_weather_java_lang_String_R_mindustry_type_Weather 55
+typedef jobject (*func_mindustry_core_ContentLoader_weather_java_lang_String_R_mindustry_type_Weather)(jcontext ctx, jobject self, jobject param0);
+#define VTABLE_mindustry_core_ContentLoader_unitStances_R_arc_struct_Seq 56
+typedef jobject (*func_mindustry_core_ContentLoader_unitStances_R_arc_struct_Seq)(jcontext ctx, jobject self);
+#define VTABLE_mindustry_core_ContentLoader_unitStance_int_R_mindustry_ai_UnitStance 57
+typedef jobject (*func_mindustry_core_ContentLoader_unitStance_int_R_mindustry_ai_UnitStance)(jcontext ctx, jobject self, jint param0);
+#define VTABLE_mindustry_core_ContentLoader_unitStance_java_lang_String_R_mindustry_ai_UnitStance 58
+typedef jobject (*func_mindustry_core_ContentLoader_unitStance_java_lang_String_R_mindustry_ai_UnitStance)(jcontext ctx, jobject self, jobject param0);
+#define VTABLE_mindustry_core_ContentLoader_unitCommands_R_arc_struct_Seq 59
+typedef jobject (*func_mindustry_core_ContentLoader_unitCommands_R_arc_struct_Seq)(jcontext ctx, jobject self);
+#define VTABLE_mindustry_core_ContentLoader_unitCommand_int_R_mindustry_ai_UnitCommand 60
+typedef jobject (*func_mindustry_core_ContentLoader_unitCommand_int_R_mindustry_ai_UnitCommand)(jcontext ctx, jobject self, jint param0);
+#define VTABLE_mindustry_core_ContentLoader_unitCommand_java_lang_String_R_mindustry_ai_UnitCommand 61
+typedef jobject (*func_mindustry_core_ContentLoader_unitCommand_java_lang_String_R_mindustry_ai_UnitCommand)(jcontext ctx, jobject self, jobject param0);
+#define VTABLE_mindustry_core_ContentLoader_lambda$logContent$0_mindustry_ctype_ContentType_R_int 62
+typedef jint (*func_mindustry_core_ContentLoader_lambda$logContent$0_mindustry_ctype_ContentType_R_int)(jcontext ctx, jobject self, jobject param0);
+
+void mark_mindustry_core_ContentLoader(jobject object, jint mark, jint depth);
+void clinit_mindustry_core_ContentLoader(jcontext ctx);
+void init_mindustry_core_ContentLoader(jcontext ctx, jobject self);
+jobject M_mindustry_core_ContentLoader_copy_R_mindustry_core_ContentLoader(jcontext ctx, jobject self);
+void M_mindustry_core_ContentLoader_createBaseContent(jcontext ctx, jobject self);
+void M_mindustry_core_ContentLoader_createModContent(jcontext ctx, jobject self);
+void M_mindustry_core_ContentLoader_logContent(jcontext ctx, jobject self);
+void M_mindustry_core_ContentLoader_init(jcontext ctx, jobject self);
+void M_mindustry_core_ContentLoader_load(jcontext ctx, jobject self);
+void M_mindustry_core_ContentLoader_initialize_arc_func_Cons(jcontext ctx, jobject self, jobject param0);
+void M_mindustry_core_ContentLoader_loadColors(jcontext ctx, jobject self);
+jobject M_mindustry_core_ContentLoader_getLastAdded_R_mindustry_ctype_Content(jcontext ctx, jobject self);
+void M_mindustry_core_ContentLoader_removeLast(jcontext ctx, jobject self);
+void M_mindustry_core_ContentLoader_handleContent_mindustry_ctype_Content(jcontext ctx, jobject self, jobject param0);
+void M_mindustry_core_ContentLoader_setCurrentMod_mindustry_mod_Mods$LoadedMod(jcontext ctx, jobject self, jobject param0);
+jobject M_mindustry_core_ContentLoader_transformName_java_lang_String_R_java_lang_String(jcontext ctx, jobject self, jobject param0);
+void M_mindustry_core_ContentLoader_handleMappableContent_mindustry_ctype_MappableContent(jcontext ctx, jobject self, jobject param0);
+void M_mindustry_core_ContentLoader_setTemporaryMapper_Array2_mindustry_ctype_MappableContent(jcontext ctx, jobject self, jobject param0);
+jobject M_mindustry_core_ContentLoader_byName_java_lang_String_R_mindustry_ctype_MappableContent(jcontext ctx, jobject self, jobject param0);
+jobject M_mindustry_core_ContentLoader_getContentMap_R_Array1_arc_struct_Seq(jcontext ctx, jobject self);
+void M_mindustry_core_ContentLoader_each_arc_func_Cons(jcontext ctx, jobject self, jobject param0);
+jobject M_mindustry_core_ContentLoader_getByName_mindustry_ctype_ContentType_java_lang_String_R_mindustry_ctype_MappableContent(jcontext ctx, jobject self, jobject param0, jobject param1);
+jobject M_mindustry_core_ContentLoader_getByID_mindustry_ctype_ContentType_int_R_mindustry_ctype_Content(jcontext ctx, jobject self, jobject param0, jint param1);
+jobject M_mindustry_core_ContentLoader_getBy_mindustry_ctype_ContentType_R_arc_struct_Seq(jcontext ctx, jobject self, jobject param0);
+jobject M_mindustry_core_ContentLoader_getNamesBy_mindustry_ctype_ContentType_R_arc_struct_ObjectMap(jcontext ctx, jobject self, jobject param0);
+void M_mindustry_core_ContentLoader_remove_mindustry_ctype_Content(jcontext ctx, jobject self, jobject param0);
+jobject M_mindustry_core_ContentLoader_blocks_R_arc_struct_Seq(jcontext ctx, jobject self);
+jobject M_mindustry_core_ContentLoader_block_int_R_mindustry_world_Block(jcontext ctx, jobject self, jint param0);
+jobject M_mindustry_core_ContentLoader_block_java_lang_String_R_mindustry_world_Block(jcontext ctx, jobject self, jobject param0);
+jobject M_mindustry_core_ContentLoader_items_R_arc_struct_Seq(jcontext ctx, jobject self);
+jobject M_mindustry_core_ContentLoader_item_int_R_mindustry_type_Item(jcontext ctx, jobject self, jint param0);
+jobject M_mindustry_core_ContentLoader_item_java_lang_String_R_mindustry_type_Item(jcontext ctx, jobject self, jobject param0);
+jobject M_mindustry_core_ContentLoader_liquids_R_arc_struct_Seq(jcontext ctx, jobject self);
+jobject M_mindustry_core_ContentLoader_liquid_int_R_mindustry_type_Liquid(jcontext ctx, jobject self, jint param0);
+jobject M_mindustry_core_ContentLoader_liquid_java_lang_String_R_mindustry_type_Liquid(jcontext ctx, jobject self, jobject param0);
+jobject M_mindustry_core_ContentLoader_bullets_R_arc_struct_Seq(jcontext ctx, jobject self);
+jobject M_mindustry_core_ContentLoader_bullet_int_R_mindustry_entities_bullet_BulletType(jcontext ctx, jobject self, jint param0);
+jobject M_mindustry_core_ContentLoader_statusEffects_R_arc_struct_Seq(jcontext ctx, jobject self);
+jobject M_mindustry_core_ContentLoader_statusEffect_java_lang_String_R_mindustry_type_StatusEffect(jcontext ctx, jobject self, jobject param0);
+jobject M_mindustry_core_ContentLoader_sectors_R_arc_struct_Seq(jcontext ctx, jobject self);
+jobject M_mindustry_core_ContentLoader_sector_java_lang_String_R_mindustry_type_SectorPreset(jcontext ctx, jobject self, jobject param0);
+jobject M_mindustry_core_ContentLoader_units_R_arc_struct_Seq(jcontext ctx, jobject self);
+jobject M_mindustry_core_ContentLoader_unit_int_R_mindustry_type_UnitType(jcontext ctx, jobject self, jint param0);
+jobject M_mindustry_core_ContentLoader_unit_java_lang_String_R_mindustry_type_UnitType(jcontext ctx, jobject self, jobject param0);
+jobject M_mindustry_core_ContentLoader_planets_R_arc_struct_Seq(jcontext ctx, jobject self);
+jobject M_mindustry_core_ContentLoader_planet_java_lang_String_R_mindustry_type_Planet(jcontext ctx, jobject self, jobject param0);
+jobject M_mindustry_core_ContentLoader_weathers_R_arc_struct_Seq(jcontext ctx, jobject self);
+jobject M_mindustry_core_ContentLoader_weather_java_lang_String_R_mindustry_type_Weather(jcontext ctx, jobject self, jobject param0);
+jobject M_mindustry_core_ContentLoader_unitStances_R_arc_struct_Seq(jcontext ctx, jobject self);
+jobject M_mindustry_core_ContentLoader_unitStance_int_R_mindustry_ai_UnitStance(jcontext ctx, jobject self, jint param0);
+jobject M_mindustry_core_ContentLoader_unitStance_java_lang_String_R_mindustry_ai_UnitStance(jcontext ctx, jobject self, jobject param0);
+jobject M_mindustry_core_ContentLoader_unitCommands_R_arc_struct_Seq(jcontext ctx, jobject self);
+jobject M_mindustry_core_ContentLoader_unitCommand_int_R_mindustry_ai_UnitCommand(jcontext ctx, jobject self, jint param0);
+jobject M_mindustry_core_ContentLoader_unitCommand_java_lang_String_R_mindustry_ai_UnitCommand(jcontext ctx, jobject self, jobject param0);
+jint M_mindustry_core_ContentLoader_lambda$logContent$0_mindustry_ctype_ContentType_R_int(jcontext ctx, jobject self, jobject param0);
+
+#ifdef __cplusplus
+}
+#endif
+
+#endif

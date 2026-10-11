@@ -1,0 +1,74 @@
+#ifndef HEADER_java_lang_reflect_AccessibleObject
+#define HEADER_java_lang_reflect_AccessibleObject
+
+#include "Clearwing.h"
+#include "java/lang/Object.h"
+#include "java/lang/reflect/AnnotatedElement.h"
+
+#ifdef __cplusplus
+extern "C" {
+#endif
+
+typedef struct java_lang_reflect_AccessibleObject {
+	java_lang_Object parent;
+} java_lang_reflect_AccessibleObject;
+
+extern Class class_java_lang_reflect_AccessibleObject;
+
+
+#define VTABLE_java_lang_reflect_AccessibleObject_hashCode_R_int 0
+typedef jint (*func_java_lang_reflect_AccessibleObject_hashCode_R_int)(jcontext ctx, jobject self);
+#define VTABLE_java_lang_reflect_AccessibleObject_equals_java_lang_Object_R_boolean 1
+typedef jbool (*func_java_lang_reflect_AccessibleObject_equals_java_lang_Object_R_boolean)(jcontext ctx, jobject self, jobject param0);
+#define VTABLE_java_lang_reflect_AccessibleObject_clone_R_java_lang_Object 2
+typedef jobject (*func_java_lang_reflect_AccessibleObject_clone_R_java_lang_Object)(jcontext ctx, jobject self);
+#define VTABLE_java_lang_reflect_AccessibleObject_getClass_R_java_lang_Class 3
+typedef jobject (*func_java_lang_reflect_AccessibleObject_getClass_R_java_lang_Class)(jcontext ctx, jobject self);
+#define VTABLE_java_lang_reflect_AccessibleObject_toString_R_java_lang_String 4
+typedef jobject (*func_java_lang_reflect_AccessibleObject_toString_R_java_lang_String)(jcontext ctx, jobject self);
+#define VTABLE_java_lang_reflect_AccessibleObject_finalize 5
+typedef void (*func_java_lang_reflect_AccessibleObject_finalize)(jcontext ctx, jobject self);
+#define VTABLE_java_lang_reflect_AccessibleObject_notify 6
+typedef void (*func_java_lang_reflect_AccessibleObject_notify)(jcontext ctx, jobject self);
+#define VTABLE_java_lang_reflect_AccessibleObject_notifyAll 7
+typedef void (*func_java_lang_reflect_AccessibleObject_notifyAll)(jcontext ctx, jobject self);
+#define VTABLE_java_lang_reflect_AccessibleObject_wait 8
+typedef void (*func_java_lang_reflect_AccessibleObject_wait)(jcontext ctx, jobject self);
+#define VTABLE_java_lang_reflect_AccessibleObject_wait_long 9
+typedef void (*func_java_lang_reflect_AccessibleObject_wait_long)(jcontext ctx, jobject self, jlong param0);
+#define VTABLE_java_lang_reflect_AccessibleObject_wait_long_int 10
+typedef void (*func_java_lang_reflect_AccessibleObject_wait_long_int)(jcontext ctx, jobject self, jlong param0, jint param1);
+#define VTABLE_java_lang_reflect_AccessibleObject_isAnnotationPresent_java_lang_Class_R_boolean 11
+typedef jbool (*func_java_lang_reflect_AccessibleObject_isAnnotationPresent_java_lang_Class_R_boolean)(jcontext ctx, jobject self, jobject param0);
+#define VTABLE_java_lang_reflect_AccessibleObject_getAnnotation_java_lang_Class_R_java_lang_annotation_Annotation 12
+typedef jobject (*func_java_lang_reflect_AccessibleObject_getAnnotation_java_lang_Class_R_java_lang_annotation_Annotation)(jcontext ctx, jobject self, jobject param0);
+#define VTABLE_java_lang_reflect_AccessibleObject_getAnnotations_R_Array1_java_lang_annotation_Annotation 13
+typedef jobject (*func_java_lang_reflect_AccessibleObject_getAnnotations_R_Array1_java_lang_annotation_Annotation)(jcontext ctx, jobject self);
+#define VTABLE_java_lang_reflect_AccessibleObject_getDeclaredAnnotations_R_Array1_java_lang_annotation_Annotation 14
+typedef jobject (*func_java_lang_reflect_AccessibleObject_getDeclaredAnnotations_R_Array1_java_lang_annotation_Annotation)(jcontext ctx, jobject self);
+#define VTABLE_java_lang_reflect_AccessibleObject_setAccessible_boolean 15
+typedef void (*func_java_lang_reflect_AccessibleObject_setAccessible_boolean)(jcontext ctx, jobject self, jbool param0);
+#define VTABLE_java_lang_reflect_AccessibleObject_trySetAccessible_R_boolean 16
+typedef jbool (*func_java_lang_reflect_AccessibleObject_trySetAccessible_R_boolean)(jcontext ctx, jobject self);
+#define VTABLE_java_lang_reflect_AccessibleObject_isAccessible_R_boolean 17
+typedef jbool (*func_java_lang_reflect_AccessibleObject_isAccessible_R_boolean)(jcontext ctx, jobject self);
+#define VTABLE_java_lang_reflect_AccessibleObject_canAccess_java_lang_Object_R_boolean 18
+typedef jbool (*func_java_lang_reflect_AccessibleObject_canAccess_java_lang_Object_R_boolean)(jcontext ctx, jobject self, jobject param0);
+
+void mark_java_lang_reflect_AccessibleObject(jobject object, jint mark, jint depth);
+void clinit_java_lang_reflect_AccessibleObject(jcontext ctx);
+void init_java_lang_reflect_AccessibleObject(jcontext ctx, jobject self);
+jobject M_java_lang_reflect_AccessibleObject_getAnnotation_java_lang_Class_R_java_lang_annotation_Annotation(jcontext ctx, jobject self, jobject param0);
+jobject M_java_lang_reflect_AccessibleObject_getAnnotations_R_Array1_java_lang_annotation_Annotation(jcontext ctx, jobject self);
+jobject M_java_lang_reflect_AccessibleObject_getDeclaredAnnotations_R_Array1_java_lang_annotation_Annotation(jcontext ctx, jobject self);
+void SM_java_lang_reflect_AccessibleObject_setAccessible_Array1_java_lang_reflect_AccessibleObject_boolean(jcontext ctx, jobject param0, jbool param1);
+void M_java_lang_reflect_AccessibleObject_setAccessible_boolean(jcontext ctx, jobject self, jbool param0);
+jbool M_java_lang_reflect_AccessibleObject_trySetAccessible_R_boolean(jcontext ctx, jobject self);
+jbool M_java_lang_reflect_AccessibleObject_isAccessible_R_boolean(jcontext ctx, jobject self);
+jbool M_java_lang_reflect_AccessibleObject_canAccess_java_lang_Object_R_boolean(jcontext ctx, jobject self, jobject param0);
+
+#ifdef __cplusplus
+}
+#endif
+
+#endif

@@ -1,0 +1,227 @@
+#ifndef HEADER_arc_assets_AssetManager
+#define HEADER_arc_assets_AssetManager
+
+#include "Clearwing.h"
+#include "java/lang/Object.h"
+#include "arc/util/Disposable.h"
+
+#ifdef __cplusplus
+extern "C" {
+#endif
+
+typedef struct arc_assets_AssetManager {
+	java_lang_Object parent;
+	jref F_assets;
+	jref F_assetTypes;
+	jref F_assetDependencies;
+	jref F_injected;
+	jref F_loaders;
+	jref F_loadQueue;
+	jref F_executor;
+	jref F_tasks;
+	jref F_resolver;
+	jref F_listener;
+	jint F_loaded;
+	jint F_toLoad;
+	jint F_peakTasks;
+} arc_assets_AssetManager;
+
+extern Class class_arc_assets_AssetManager;
+
+
+#define VTABLE_arc_assets_AssetManager_hashCode_R_int 0
+typedef jint (*func_arc_assets_AssetManager_hashCode_R_int)(jcontext ctx, jobject self);
+#define VTABLE_arc_assets_AssetManager_equals_java_lang_Object_R_boolean 1
+typedef jbool (*func_arc_assets_AssetManager_equals_java_lang_Object_R_boolean)(jcontext ctx, jobject self, jobject param0);
+#define VTABLE_arc_assets_AssetManager_clone_R_java_lang_Object 2
+typedef jobject (*func_arc_assets_AssetManager_clone_R_java_lang_Object)(jcontext ctx, jobject self);
+#define VTABLE_arc_assets_AssetManager_getClass_R_java_lang_Class 3
+typedef jobject (*func_arc_assets_AssetManager_getClass_R_java_lang_Class)(jcontext ctx, jobject self);
+#define VTABLE_arc_assets_AssetManager_toString_R_java_lang_String 4
+typedef jobject (*func_arc_assets_AssetManager_toString_R_java_lang_String)(jcontext ctx, jobject self);
+#define VTABLE_arc_assets_AssetManager_finalize 5
+typedef void (*func_arc_assets_AssetManager_finalize)(jcontext ctx, jobject self);
+#define VTABLE_arc_assets_AssetManager_notify 6
+typedef void (*func_arc_assets_AssetManager_notify)(jcontext ctx, jobject self);
+#define VTABLE_arc_assets_AssetManager_notifyAll 7
+typedef void (*func_arc_assets_AssetManager_notifyAll)(jcontext ctx, jobject self);
+#define VTABLE_arc_assets_AssetManager_wait 8
+typedef void (*func_arc_assets_AssetManager_wait)(jcontext ctx, jobject self);
+#define VTABLE_arc_assets_AssetManager_wait_long 9
+typedef void (*func_arc_assets_AssetManager_wait_long)(jcontext ctx, jobject self, jlong param0);
+#define VTABLE_arc_assets_AssetManager_wait_long_int 10
+typedef void (*func_arc_assets_AssetManager_wait_long_int)(jcontext ctx, jobject self, jlong param0, jint param1);
+#define VTABLE_arc_assets_AssetManager_dispose 11
+typedef void (*func_arc_assets_AssetManager_dispose)(jcontext ctx, jobject self);
+#define VTABLE_arc_assets_AssetManager_isDisposed_R_boolean 12
+typedef jbool (*func_arc_assets_AssetManager_isDisposed_R_boolean)(jcontext ctx, jobject self);
+#define VTABLE_arc_assets_AssetManager_getFileHandleResolver_R_arc_assets_loaders_FileHandleResolver 13
+typedef jobject (*func_arc_assets_AssetManager_getFileHandleResolver_R_arc_assets_loaders_FileHandleResolver)(jcontext ctx, jobject self);
+#define VTABLE_arc_assets_AssetManager_get_java_lang_String_R_java_lang_Object 14
+typedef jobject (*func_arc_assets_AssetManager_get_java_lang_String_R_java_lang_Object)(jcontext ctx, jobject self, jobject param0);
+#define VTABLE_arc_assets_AssetManager_get_java_lang_String_java_lang_Class_R_java_lang_Object 15
+typedef jobject (*func_arc_assets_AssetManager_get_java_lang_String_java_lang_Class_R_java_lang_Object)(jcontext ctx, jobject self, jobject param0, jobject param1);
+#define VTABLE_arc_assets_AssetManager_getOrNull_java_lang_String_java_lang_Class_R_java_lang_Object 16
+typedef jobject (*func_arc_assets_AssetManager_getOrNull_java_lang_String_java_lang_Class_R_java_lang_Object)(jcontext ctx, jobject self, jobject param0, jobject param1);
+#define VTABLE_arc_assets_AssetManager_getAll_java_lang_Class_arc_struct_Seq_R_arc_struct_Seq 17
+typedef jobject (*func_arc_assets_AssetManager_getAll_java_lang_Class_arc_struct_Seq_R_arc_struct_Seq)(jcontext ctx, jobject self, jobject param0, jobject param1);
+#define VTABLE_arc_assets_AssetManager_getAllEntries_java_lang_Class_arc_struct_Seq_R_arc_struct_Seq 18
+typedef jobject (*func_arc_assets_AssetManager_getAllEntries_java_lang_Class_arc_struct_Seq_R_arc_struct_Seq)(jcontext ctx, jobject self, jobject param0, jobject param1);
+#define VTABLE_arc_assets_AssetManager_get_arc_assets_AssetDescriptor_R_java_lang_Object 19
+typedef jobject (*func_arc_assets_AssetManager_get_arc_assets_AssetDescriptor_R_java_lang_Object)(jcontext ctx, jobject self, jobject param0);
+#define VTABLE_arc_assets_AssetManager_contains_java_lang_String_R_boolean 20
+typedef jbool (*func_arc_assets_AssetManager_contains_java_lang_String_R_boolean)(jcontext ctx, jobject self, jobject param0);
+#define VTABLE_arc_assets_AssetManager_contains_java_lang_String_java_lang_Class_R_boolean 21
+typedef jbool (*func_arc_assets_AssetManager_contains_java_lang_String_java_lang_Class_R_boolean)(jcontext ctx, jobject self, jobject param0, jobject param1);
+#define VTABLE_arc_assets_AssetManager_unload_java_lang_String 22
+typedef void (*func_arc_assets_AssetManager_unload_java_lang_String)(jcontext ctx, jobject self, jobject param0);
+#define VTABLE_arc_assets_AssetManager_containsAsset_java_lang_Object_R_boolean 23
+typedef jbool (*func_arc_assets_AssetManager_containsAsset_java_lang_Object_R_boolean)(jcontext ctx, jobject self, jobject param0);
+#define VTABLE_arc_assets_AssetManager_getAssetFileName_java_lang_Object_R_java_lang_String 24
+typedef jobject (*func_arc_assets_AssetManager_getAssetFileName_java_lang_Object_R_java_lang_String)(jcontext ctx, jobject self, jobject param0);
+#define VTABLE_arc_assets_AssetManager_isLoaded_arc_assets_AssetDescriptor_R_boolean 25
+typedef jbool (*func_arc_assets_AssetManager_isLoaded_arc_assets_AssetDescriptor_R_boolean)(jcontext ctx, jobject self, jobject param0);
+#define VTABLE_arc_assets_AssetManager_isLoaded_java_lang_String_R_boolean 26
+typedef jbool (*func_arc_assets_AssetManager_isLoaded_java_lang_String_R_boolean)(jcontext ctx, jobject self, jobject param0);
+#define VTABLE_arc_assets_AssetManager_isLoaded_java_lang_String_java_lang_Class_R_boolean 27
+typedef jbool (*func_arc_assets_AssetManager_isLoaded_java_lang_String_java_lang_Class_R_boolean)(jcontext ctx, jobject self, jobject param0, jobject param1);
+#define VTABLE_arc_assets_AssetManager_getLoader_java_lang_Class_R_arc_assets_loaders_AssetLoader 28
+typedef jobject (*func_arc_assets_AssetManager_getLoader_java_lang_Class_R_arc_assets_loaders_AssetLoader)(jcontext ctx, jobject self, jobject param0);
+#define VTABLE_arc_assets_AssetManager_getLoader_java_lang_Class_java_lang_String_R_arc_assets_loaders_AssetLoader 29
+typedef jobject (*func_arc_assets_AssetManager_getLoader_java_lang_Class_java_lang_String_R_arc_assets_loaders_AssetLoader)(jcontext ctx, jobject self, jobject param0, jobject param1);
+#define VTABLE_arc_assets_AssetManager_load_java_lang_String_java_lang_Class_R_arc_assets_AssetDescriptor 30
+typedef jobject (*func_arc_assets_AssetManager_load_java_lang_String_java_lang_Class_R_arc_assets_AssetDescriptor)(jcontext ctx, jobject self, jobject param0, jobject param1);
+#define VTABLE_arc_assets_AssetManager_loadRun_java_lang_String_java_lang_Class_java_lang_Runnable_R_arc_assets_AssetDescriptor 31
+typedef jobject (*func_arc_assets_AssetManager_loadRun_java_lang_String_java_lang_Class_java_lang_Runnable_R_arc_assets_AssetDescriptor)(jcontext ctx, jobject self, jobject param0, jobject param1, jobject param2);
+#define VTABLE_arc_assets_AssetManager_loadRun_java_lang_String_java_lang_Class_java_lang_Runnable_java_lang_Runnable_R_arc_assets_AssetDescriptor 32
+typedef jobject (*func_arc_assets_AssetManager_loadRun_java_lang_String_java_lang_Class_java_lang_Runnable_java_lang_Runnable_R_arc_assets_AssetDescriptor)(jcontext ctx, jobject self, jobject param0, jobject param1, jobject param2, jobject param3);
+#define VTABLE_arc_assets_AssetManager_load_arc_assets_Loadable_R_arc_assets_AssetDescriptor 33
+typedef jobject (*func_arc_assets_AssetManager_load_arc_assets_Loadable_R_arc_assets_AssetDescriptor)(jcontext ctx, jobject self, jobject param0);
+#define VTABLE_arc_assets_AssetManager_load_java_lang_String_java_lang_Class_arc_assets_AssetLoaderParameters_R_arc_assets_AssetDescriptor 34
+typedef jobject (*func_arc_assets_AssetManager_load_java_lang_String_java_lang_Class_arc_assets_AssetLoaderParameters_R_arc_assets_AssetDescriptor)(jcontext ctx, jobject self, jobject param0, jobject param1, jobject param2);
+#define VTABLE_arc_assets_AssetManager_load_arc_assets_AssetDescriptor_R_arc_assets_AssetDescriptor 35
+typedef jobject (*func_arc_assets_AssetManager_load_arc_assets_AssetDescriptor_R_arc_assets_AssetDescriptor)(jcontext ctx, jobject self, jobject param0);
+#define VTABLE_arc_assets_AssetManager_update_R_boolean 36
+typedef jbool (*func_arc_assets_AssetManager_update_R_boolean)(jcontext ctx, jobject self);
+#define VTABLE_arc_assets_AssetManager_getCurrentLoading_R_arc_assets_AssetDescriptor 37
+typedef jobject (*func_arc_assets_AssetManager_getCurrentLoading_R_arc_assets_AssetDescriptor)(jcontext ctx, jobject self);
+#define VTABLE_arc_assets_AssetManager_update_int_R_boolean 38
+typedef jbool (*func_arc_assets_AssetManager_update_int_R_boolean)(jcontext ctx, jobject self, jint param0);
+#define VTABLE_arc_assets_AssetManager_isFinished_R_boolean 39
+typedef jbool (*func_arc_assets_AssetManager_isFinished_R_boolean)(jcontext ctx, jobject self);
+#define VTABLE_arc_assets_AssetManager_finishLoading 40
+typedef void (*func_arc_assets_AssetManager_finishLoading)(jcontext ctx, jobject self);
+#define VTABLE_arc_assets_AssetManager_finishLoadingAsset_arc_assets_AssetDescriptor 41
+typedef void (*func_arc_assets_AssetManager_finishLoadingAsset_arc_assets_AssetDescriptor)(jcontext ctx, jobject self, jobject param0);
+#define VTABLE_arc_assets_AssetManager_finishLoadingAsset_java_lang_String 42
+typedef void (*func_arc_assets_AssetManager_finishLoadingAsset_java_lang_String)(jcontext ctx, jobject self, jobject param0);
+#define VTABLE_arc_assets_AssetManager_injectDependencies_java_lang_String_arc_struct_Seq 43
+typedef void (*func_arc_assets_AssetManager_injectDependencies_java_lang_String_arc_struct_Seq)(jcontext ctx, jobject self, jobject param0, jobject param1);
+#define VTABLE_arc_assets_AssetManager_injectDependency_java_lang_String_arc_assets_AssetDescriptor 44
+typedef void (*func_arc_assets_AssetManager_injectDependency_java_lang_String_arc_assets_AssetDescriptor)(jcontext ctx, jobject self, jobject param0, jobject param1);
+#define VTABLE_arc_assets_AssetManager_nextTask 45
+typedef void (*func_arc_assets_AssetManager_nextTask)(jcontext ctx, jobject self);
+#define VTABLE_arc_assets_AssetManager_addTask_arc_assets_AssetDescriptor 46
+typedef void (*func_arc_assets_AssetManager_addTask_arc_assets_AssetDescriptor)(jcontext ctx, jobject self, jobject param0);
+#define VTABLE_arc_assets_AssetManager_addAsset_java_lang_String_java_lang_Class_java_lang_Object 47
+typedef void (*func_arc_assets_AssetManager_addAsset_java_lang_String_java_lang_Class_java_lang_Object)(jcontext ctx, jobject self, jobject param0, jobject param1, jobject param2);
+#define VTABLE_arc_assets_AssetManager_updateTask_R_boolean 48
+typedef jbool (*func_arc_assets_AssetManager_updateTask_R_boolean)(jcontext ctx, jobject self);
+#define VTABLE_arc_assets_AssetManager_taskFailed_arc_assets_AssetDescriptor_java_lang_RuntimeException 49
+typedef void (*func_arc_assets_AssetManager_taskFailed_arc_assets_AssetDescriptor_java_lang_RuntimeException)(jcontext ctx, jobject self, jobject param0, jobject param1);
+#define VTABLE_arc_assets_AssetManager_incrementRefCountedDependencies_java_lang_String 50
+typedef void (*func_arc_assets_AssetManager_incrementRefCountedDependencies_java_lang_String)(jcontext ctx, jobject self, jobject param0);
+#define VTABLE_arc_assets_AssetManager_handleTaskError_java_lang_Throwable 51
+typedef void (*func_arc_assets_AssetManager_handleTaskError_java_lang_Throwable)(jcontext ctx, jobject self, jobject param0);
+#define VTABLE_arc_assets_AssetManager_setLoader_java_lang_Class_arc_assets_loaders_AssetLoader 52
+typedef void (*func_arc_assets_AssetManager_setLoader_java_lang_Class_arc_assets_loaders_AssetLoader)(jcontext ctx, jobject self, jobject param0, jobject param1);
+#define VTABLE_arc_assets_AssetManager_setLoader_java_lang_Class_java_lang_String_arc_assets_loaders_AssetLoader 53
+typedef void (*func_arc_assets_AssetManager_setLoader_java_lang_Class_java_lang_String_arc_assets_loaders_AssetLoader)(jcontext ctx, jobject self, jobject param0, jobject param1, jobject param2);
+#define VTABLE_arc_assets_AssetManager_getLoadedAssets_R_int 54
+typedef jint (*func_arc_assets_AssetManager_getLoadedAssets_R_int)(jcontext ctx, jobject self);
+#define VTABLE_arc_assets_AssetManager_getQueuedAssets_R_int 55
+typedef jint (*func_arc_assets_AssetManager_getQueuedAssets_R_int)(jcontext ctx, jobject self);
+#define VTABLE_arc_assets_AssetManager_getProgress_R_float 56
+typedef jfloat (*func_arc_assets_AssetManager_getProgress_R_float)(jcontext ctx, jobject self);
+#define VTABLE_arc_assets_AssetManager_setErrorListener_arc_assets_AssetErrorListener 57
+typedef void (*func_arc_assets_AssetManager_setErrorListener_arc_assets_AssetErrorListener)(jcontext ctx, jobject self, jobject param0);
+#define VTABLE_arc_assets_AssetManager_clear 58
+typedef void (*func_arc_assets_AssetManager_clear)(jcontext ctx, jobject self);
+#define VTABLE_arc_assets_AssetManager_getReferenceCount_java_lang_String_R_int 59
+typedef jint (*func_arc_assets_AssetManager_getReferenceCount_java_lang_String_R_int)(jcontext ctx, jobject self, jobject param0);
+#define VTABLE_arc_assets_AssetManager_setReferenceCount_java_lang_String_int 60
+typedef void (*func_arc_assets_AssetManager_setReferenceCount_java_lang_String_int)(jcontext ctx, jobject self, jobject param0, jint param1);
+#define VTABLE_arc_assets_AssetManager_getDiagnostics_R_java_lang_String 61
+typedef jobject (*func_arc_assets_AssetManager_getDiagnostics_R_java_lang_String)(jcontext ctx, jobject self);
+#define VTABLE_arc_assets_AssetManager_getAssetNames_R_arc_struct_Seq 62
+typedef jobject (*func_arc_assets_AssetManager_getAssetNames_R_arc_struct_Seq)(jcontext ctx, jobject self);
+#define VTABLE_arc_assets_AssetManager_getDependencies_java_lang_String_R_arc_struct_Seq 63
+typedef jobject (*func_arc_assets_AssetManager_getDependencies_java_lang_String_R_arc_struct_Seq)(jcontext ctx, jobject self, jobject param0);
+#define VTABLE_arc_assets_AssetManager_getAssetType_java_lang_String_R_java_lang_Class 64
+typedef jobject (*func_arc_assets_AssetManager_getAssetType_java_lang_String_R_java_lang_Class)(jcontext ctx, jobject self, jobject param0);
+
+void mark_arc_assets_AssetManager(jobject object, jint mark, jint depth);
+void clinit_arc_assets_AssetManager(jcontext ctx);
+void init_arc_assets_AssetManager(jcontext ctx, jobject self);
+void init_arc_assets_AssetManager_arc_assets_loaders_FileHandleResolver(jcontext ctx, jobject self, jobject param0);
+void init_arc_assets_AssetManager_arc_assets_loaders_FileHandleResolver_boolean(jcontext ctx, jobject self, jobject param0, jbool param1);
+jobject M_arc_assets_AssetManager_getFileHandleResolver_R_arc_assets_loaders_FileHandleResolver(jcontext ctx, jobject self);
+jobject M_arc_assets_AssetManager_get_java_lang_String_R_java_lang_Object(jcontext ctx, jobject self, jobject param0);
+jobject M_arc_assets_AssetManager_get_java_lang_String_java_lang_Class_R_java_lang_Object(jcontext ctx, jobject self, jobject param0, jobject param1);
+jobject M_arc_assets_AssetManager_getOrNull_java_lang_String_java_lang_Class_R_java_lang_Object(jcontext ctx, jobject self, jobject param0, jobject param1);
+jobject M_arc_assets_AssetManager_getAll_java_lang_Class_arc_struct_Seq_R_arc_struct_Seq(jcontext ctx, jobject self, jobject param0, jobject param1);
+jobject M_arc_assets_AssetManager_getAllEntries_java_lang_Class_arc_struct_Seq_R_arc_struct_Seq(jcontext ctx, jobject self, jobject param0, jobject param1);
+jobject M_arc_assets_AssetManager_get_arc_assets_AssetDescriptor_R_java_lang_Object(jcontext ctx, jobject self, jobject param0);
+jbool M_arc_assets_AssetManager_contains_java_lang_String_R_boolean(jcontext ctx, jobject self, jobject param0);
+jbool M_arc_assets_AssetManager_contains_java_lang_String_java_lang_Class_R_boolean(jcontext ctx, jobject self, jobject param0, jobject param1);
+void M_arc_assets_AssetManager_unload_java_lang_String(jcontext ctx, jobject self, jobject param0);
+jbool M_arc_assets_AssetManager_containsAsset_java_lang_Object_R_boolean(jcontext ctx, jobject self, jobject param0);
+jobject M_arc_assets_AssetManager_getAssetFileName_java_lang_Object_R_java_lang_String(jcontext ctx, jobject self, jobject param0);
+jbool M_arc_assets_AssetManager_isLoaded_arc_assets_AssetDescriptor_R_boolean(jcontext ctx, jobject self, jobject param0);
+jbool M_arc_assets_AssetManager_isLoaded_java_lang_String_R_boolean(jcontext ctx, jobject self, jobject param0);
+jbool M_arc_assets_AssetManager_isLoaded_java_lang_String_java_lang_Class_R_boolean(jcontext ctx, jobject self, jobject param0, jobject param1);
+jobject M_arc_assets_AssetManager_getLoader_java_lang_Class_R_arc_assets_loaders_AssetLoader(jcontext ctx, jobject self, jobject param0);
+jobject M_arc_assets_AssetManager_getLoader_java_lang_Class_java_lang_String_R_arc_assets_loaders_AssetLoader(jcontext ctx, jobject self, jobject param0, jobject param1);
+jobject M_arc_assets_AssetManager_load_java_lang_String_java_lang_Class_R_arc_assets_AssetDescriptor(jcontext ctx, jobject self, jobject param0, jobject param1);
+jobject M_arc_assets_AssetManager_loadRun_java_lang_String_java_lang_Class_java_lang_Runnable_R_arc_assets_AssetDescriptor(jcontext ctx, jobject self, jobject param0, jobject param1, jobject param2);
+jobject M_arc_assets_AssetManager_loadRun_java_lang_String_java_lang_Class_java_lang_Runnable_java_lang_Runnable_R_arc_assets_AssetDescriptor(jcontext ctx, jobject self, jobject param0, jobject param1, jobject param2, jobject param3);
+jobject M_arc_assets_AssetManager_load_arc_assets_Loadable_R_arc_assets_AssetDescriptor(jcontext ctx, jobject self, jobject param0);
+jobject M_arc_assets_AssetManager_load_java_lang_String_java_lang_Class_arc_assets_AssetLoaderParameters_R_arc_assets_AssetDescriptor(jcontext ctx, jobject self, jobject param0, jobject param1, jobject param2);
+jobject M_arc_assets_AssetManager_load_arc_assets_AssetDescriptor_R_arc_assets_AssetDescriptor(jcontext ctx, jobject self, jobject param0);
+jbool M_arc_assets_AssetManager_update_R_boolean(jcontext ctx, jobject self);
+jobject M_arc_assets_AssetManager_getCurrentLoading_R_arc_assets_AssetDescriptor(jcontext ctx, jobject self);
+jbool M_arc_assets_AssetManager_update_int_R_boolean(jcontext ctx, jobject self, jint param0);
+jbool M_arc_assets_AssetManager_isFinished_R_boolean(jcontext ctx, jobject self);
+void M_arc_assets_AssetManager_finishLoading(jcontext ctx, jobject self);
+void M_arc_assets_AssetManager_finishLoadingAsset_arc_assets_AssetDescriptor(jcontext ctx, jobject self, jobject param0);
+void M_arc_assets_AssetManager_finishLoadingAsset_java_lang_String(jcontext ctx, jobject self, jobject param0);
+void M_arc_assets_AssetManager_injectDependencies_java_lang_String_arc_struct_Seq(jcontext ctx, jobject self, jobject param0, jobject param1);
+void M_arc_assets_AssetManager_injectDependency_java_lang_String_arc_assets_AssetDescriptor(jcontext ctx, jobject self, jobject param0, jobject param1);
+void M_arc_assets_AssetManager_nextTask(jcontext ctx, jobject self);
+void M_arc_assets_AssetManager_addTask_arc_assets_AssetDescriptor(jcontext ctx, jobject self, jobject param0);
+void M_arc_assets_AssetManager_addAsset_java_lang_String_java_lang_Class_java_lang_Object(jcontext ctx, jobject self, jobject param0, jobject param1, jobject param2);
+jbool M_arc_assets_AssetManager_updateTask_R_boolean(jcontext ctx, jobject self);
+void M_arc_assets_AssetManager_taskFailed_arc_assets_AssetDescriptor_java_lang_RuntimeException(jcontext ctx, jobject self, jobject param0, jobject param1);
+void M_arc_assets_AssetManager_incrementRefCountedDependencies_java_lang_String(jcontext ctx, jobject self, jobject param0);
+void M_arc_assets_AssetManager_handleTaskError_java_lang_Throwable(jcontext ctx, jobject self, jobject param0);
+void M_arc_assets_AssetManager_setLoader_java_lang_Class_arc_assets_loaders_AssetLoader(jcontext ctx, jobject self, jobject param0, jobject param1);
+void M_arc_assets_AssetManager_setLoader_java_lang_Class_java_lang_String_arc_assets_loaders_AssetLoader(jcontext ctx, jobject self, jobject param0, jobject param1, jobject param2);
+jint M_arc_assets_AssetManager_getLoadedAssets_R_int(jcontext ctx, jobject self);
+jint M_arc_assets_AssetManager_getQueuedAssets_R_int(jcontext ctx, jobject self);
+jfloat M_arc_assets_AssetManager_getProgress_R_float(jcontext ctx, jobject self);
+void M_arc_assets_AssetManager_setErrorListener_arc_assets_AssetErrorListener(jcontext ctx, jobject self, jobject param0);
+void M_arc_assets_AssetManager_dispose(jcontext ctx, jobject self);
+void M_arc_assets_AssetManager_clear(jcontext ctx, jobject self);
+jint M_arc_assets_AssetManager_getReferenceCount_java_lang_String_R_int(jcontext ctx, jobject self, jobject param0);
+void M_arc_assets_AssetManager_setReferenceCount_java_lang_String_int(jcontext ctx, jobject self, jobject param0, jint param1);
+jobject M_arc_assets_AssetManager_getDiagnostics_R_java_lang_String(jcontext ctx, jobject self);
+jobject M_arc_assets_AssetManager_getAssetNames_R_arc_struct_Seq(jcontext ctx, jobject self);
+jobject M_arc_assets_AssetManager_getDependencies_java_lang_String_R_arc_struct_Seq(jcontext ctx, jobject self, jobject param0);
+jobject M_arc_assets_AssetManager_getAssetType_java_lang_String_R_java_lang_Class(jcontext ctx, jobject self, jobject param0);
+void SM_arc_assets_AssetManager_lambda$loadRun$0(jcontext ctx);
+
+#ifdef __cplusplus
+}
+#endif
+
+#endif

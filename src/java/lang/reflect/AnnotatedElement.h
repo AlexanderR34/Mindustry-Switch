@@ -1,0 +1,35 @@
+#ifndef HEADER_java_lang_reflect_AnnotatedElement
+#define HEADER_java_lang_reflect_AnnotatedElement
+
+#include "Clearwing.h"
+#include "java/lang/Object.h"
+
+#ifdef __cplusplus
+extern "C" {
+#endif
+
+typedef struct java_lang_reflect_AnnotatedElement {
+	java_lang_Object parent;
+} java_lang_reflect_AnnotatedElement;
+
+extern Class class_java_lang_reflect_AnnotatedElement;
+
+
+#define INDEX_java_lang_reflect_AnnotatedElement_isAnnotationPresent_java_lang_Class_R_boolean 0
+typedef jbool (*func_java_lang_reflect_AnnotatedElement_isAnnotationPresent_java_lang_Class_R_boolean)(jcontext ctx, jobject self, jobject param0);
+#define INDEX_java_lang_reflect_AnnotatedElement_getAnnotation_java_lang_Class_R_java_lang_annotation_Annotation 1
+typedef jobject (*func_java_lang_reflect_AnnotatedElement_getAnnotation_java_lang_Class_R_java_lang_annotation_Annotation)(jcontext ctx, jobject self, jobject param0);
+#define INDEX_java_lang_reflect_AnnotatedElement_getAnnotations_R_Array1_java_lang_annotation_Annotation 2
+typedef jobject (*func_java_lang_reflect_AnnotatedElement_getAnnotations_R_Array1_java_lang_annotation_Annotation)(jcontext ctx, jobject self);
+#define INDEX_java_lang_reflect_AnnotatedElement_getDeclaredAnnotations_R_Array1_java_lang_annotation_Annotation 3
+typedef jobject (*func_java_lang_reflect_AnnotatedElement_getDeclaredAnnotations_R_Array1_java_lang_annotation_Annotation)(jcontext ctx, jobject self);
+
+void mark_java_lang_reflect_AnnotatedElement(jobject object, jint mark, jint depth);
+void clinit_java_lang_reflect_AnnotatedElement(jcontext ctx);
+jbool M_java_lang_reflect_AnnotatedElement_isAnnotationPresent_java_lang_Class_R_boolean(jcontext ctx, jobject self, jobject param0);
+
+#ifdef __cplusplus
+}
+#endif
+
+#endif

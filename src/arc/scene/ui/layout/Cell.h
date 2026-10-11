@@ -1,0 +1,385 @@
+#ifndef HEADER_arc_scene_ui_layout_Cell
+#define HEADER_arc_scene_ui_layout_Cell
+
+#include "Clearwing.h"
+#include "java/lang/Object.h"
+#include "arc/util/pooling/Pool_Poolable.h"
+
+#ifdef __cplusplus
+extern "C" {
+#endif
+
+typedef struct arc_scene_ui_layout_Cell {
+	java_lang_Object parent;
+	jfloat F_minWidth;
+	jfloat F_minHeight;
+	jfloat F_maxWidth;
+	jfloat F_maxHeight;
+	jfloat F_padTop;
+	jfloat F_padLeft;
+	jfloat F_padBottom;
+	jfloat F_padRight;
+	jfloat F_fillX;
+	jfloat F_fillY;
+	jint F_align;
+	jint F_expandX;
+	jint F_expandY;
+	jint F_colspan;
+	jbool F_uniformX;
+	jbool F_uniformY;
+	jref F_element;
+	jfloat F_elementX;
+	jfloat F_elementY;
+	jfloat F_elementWidth;
+	jfloat F_elementHeight;
+	jbool F_endRow;
+	jint F_column;
+	jint F_row;
+	jint F_cellAboveIndex;
+	jfloat F_computedPadTop;
+	jfloat F_computedPadLeft;
+	jfloat F_computedPadBottom;
+	jfloat F_computedPadRight;
+	jref F_table;
+} arc_scene_ui_layout_Cell;
+
+extern Class class_arc_scene_ui_layout_Cell;
+
+extern jbool SF_arc_scene_ui_layout_Cell_dset;
+extern jobject SF_arc_scene_ui_layout_Cell_defaults;
+extern jfloat SF_arc_scene_ui_layout_Cell_unset;
+
+#define VTABLE_arc_scene_ui_layout_Cell_hashCode_R_int 0
+typedef jint (*func_arc_scene_ui_layout_Cell_hashCode_R_int)(jcontext ctx, jobject self);
+#define VTABLE_arc_scene_ui_layout_Cell_equals_java_lang_Object_R_boolean 1
+typedef jbool (*func_arc_scene_ui_layout_Cell_equals_java_lang_Object_R_boolean)(jcontext ctx, jobject self, jobject param0);
+#define VTABLE_arc_scene_ui_layout_Cell_clone_R_java_lang_Object 2
+typedef jobject (*func_arc_scene_ui_layout_Cell_clone_R_java_lang_Object)(jcontext ctx, jobject self);
+#define VTABLE_arc_scene_ui_layout_Cell_getClass_R_java_lang_Class 3
+typedef jobject (*func_arc_scene_ui_layout_Cell_getClass_R_java_lang_Class)(jcontext ctx, jobject self);
+#define VTABLE_arc_scene_ui_layout_Cell_toString_R_java_lang_String 4
+typedef jobject (*func_arc_scene_ui_layout_Cell_toString_R_java_lang_String)(jcontext ctx, jobject self);
+#define VTABLE_arc_scene_ui_layout_Cell_finalize 5
+typedef void (*func_arc_scene_ui_layout_Cell_finalize)(jcontext ctx, jobject self);
+#define VTABLE_arc_scene_ui_layout_Cell_notify 6
+typedef void (*func_arc_scene_ui_layout_Cell_notify)(jcontext ctx, jobject self);
+#define VTABLE_arc_scene_ui_layout_Cell_notifyAll 7
+typedef void (*func_arc_scene_ui_layout_Cell_notifyAll)(jcontext ctx, jobject self);
+#define VTABLE_arc_scene_ui_layout_Cell_wait 8
+typedef void (*func_arc_scene_ui_layout_Cell_wait)(jcontext ctx, jobject self);
+#define VTABLE_arc_scene_ui_layout_Cell_wait_long 9
+typedef void (*func_arc_scene_ui_layout_Cell_wait_long)(jcontext ctx, jobject self, jlong param0);
+#define VTABLE_arc_scene_ui_layout_Cell_wait_long_int 10
+typedef void (*func_arc_scene_ui_layout_Cell_wait_long_int)(jcontext ctx, jobject self, jlong param0, jint param1);
+#define VTABLE_arc_scene_ui_layout_Cell_reset 11
+typedef void (*func_arc_scene_ui_layout_Cell_reset)(jcontext ctx, jobject self);
+#define VTABLE_arc_scene_ui_layout_Cell_setLayout_arc_scene_ui_layout_Table 12
+typedef void (*func_arc_scene_ui_layout_Cell_setLayout_arc_scene_ui_layout_Table)(jcontext ctx, jobject self, jobject param0);
+#define VTABLE_arc_scene_ui_layout_Cell_setElement_arc_scene_Element_R_arc_scene_ui_layout_Cell 13
+typedef jobject (*func_arc_scene_ui_layout_Cell_setElement_arc_scene_Element_R_arc_scene_ui_layout_Cell)(jcontext ctx, jobject self, jobject param0);
+#define VTABLE_arc_scene_ui_layout_Cell_clearElement_R_arc_scene_ui_layout_Cell 14
+typedef jobject (*func_arc_scene_ui_layout_Cell_clearElement_R_arc_scene_ui_layout_Cell)(jcontext ctx, jobject self);
+#define VTABLE_arc_scene_ui_layout_Cell_with_arc_func_Cons_R_arc_scene_ui_layout_Cell 15
+typedef jobject (*func_arc_scene_ui_layout_Cell_with_arc_func_Cons_R_arc_scene_ui_layout_Cell)(jcontext ctx, jobject self, jobject param0);
+#define VTABLE_arc_scene_ui_layout_Cell_self_arc_func_Cons_R_arc_scene_ui_layout_Cell 16
+typedef jobject (*func_arc_scene_ui_layout_Cell_self_arc_func_Cons_R_arc_scene_ui_layout_Cell)(jcontext ctx, jobject self, jobject param0);
+#define VTABLE_arc_scene_ui_layout_Cell_get_R_arc_scene_Element 17
+typedef jobject (*func_arc_scene_ui_layout_Cell_get_R_arc_scene_Element)(jcontext ctx, jobject self);
+#define VTABLE_arc_scene_ui_layout_Cell_hasElement_R_boolean 18
+typedef jbool (*func_arc_scene_ui_layout_Cell_hasElement_R_boolean)(jcontext ctx, jobject self);
+#define VTABLE_arc_scene_ui_layout_Cell_prefWidth_R_float 19
+typedef jfloat (*func_arc_scene_ui_layout_Cell_prefWidth_R_float)(jcontext ctx, jobject self);
+#define VTABLE_arc_scene_ui_layout_Cell_prefHeight_R_float 20
+typedef jfloat (*func_arc_scene_ui_layout_Cell_prefHeight_R_float)(jcontext ctx, jobject self);
+#define VTABLE_arc_scene_ui_layout_Cell_maxWidth_R_float 21
+typedef jfloat (*func_arc_scene_ui_layout_Cell_maxWidth_R_float)(jcontext ctx, jobject self);
+#define VTABLE_arc_scene_ui_layout_Cell_maxHeight_R_float 22
+typedef jfloat (*func_arc_scene_ui_layout_Cell_maxHeight_R_float)(jcontext ctx, jobject self);
+#define VTABLE_arc_scene_ui_layout_Cell_minWidth_R_float 23
+typedef jfloat (*func_arc_scene_ui_layout_Cell_minWidth_R_float)(jcontext ctx, jobject self);
+#define VTABLE_arc_scene_ui_layout_Cell_minHeight_R_float 24
+typedef jfloat (*func_arc_scene_ui_layout_Cell_minHeight_R_float)(jcontext ctx, jobject self);
+#define VTABLE_arc_scene_ui_layout_Cell_tooltip_java_lang_String_R_arc_scene_ui_layout_Cell 25
+typedef jobject (*func_arc_scene_ui_layout_Cell_tooltip_java_lang_String_R_arc_scene_ui_layout_Cell)(jcontext ctx, jobject self, jobject param0);
+#define VTABLE_arc_scene_ui_layout_Cell_tooltip_java_lang_String_boolean_R_arc_scene_ui_layout_Cell 26
+typedef jobject (*func_arc_scene_ui_layout_Cell_tooltip_java_lang_String_boolean_R_arc_scene_ui_layout_Cell)(jcontext ctx, jobject self, jobject param0, jbool param1);
+#define VTABLE_arc_scene_ui_layout_Cell_tooltip_arc_func_Cons_R_arc_scene_ui_layout_Cell 27
+typedef jobject (*func_arc_scene_ui_layout_Cell_tooltip_arc_func_Cons_R_arc_scene_ui_layout_Cell)(jcontext ctx, jobject self, jobject param0);
+#define VTABLE_arc_scene_ui_layout_Cell_tooltip_boolean_arc_func_Cons_R_arc_scene_ui_layout_Cell 28
+typedef jobject (*func_arc_scene_ui_layout_Cell_tooltip_boolean_arc_func_Cons_R_arc_scene_ui_layout_Cell)(jcontext ctx, jobject self, jbool param0, jobject param1);
+#define VTABLE_arc_scene_ui_layout_Cell_size_float_R_arc_scene_ui_layout_Cell 29
+typedef jobject (*func_arc_scene_ui_layout_Cell_size_float_R_arc_scene_ui_layout_Cell)(jcontext ctx, jobject self, jfloat param0);
+#define VTABLE_arc_scene_ui_layout_Cell_size_float_float_R_arc_scene_ui_layout_Cell 30
+typedef jobject (*func_arc_scene_ui_layout_Cell_size_float_float_R_arc_scene_ui_layout_Cell)(jcontext ctx, jobject self, jfloat param0, jfloat param1);
+#define VTABLE_arc_scene_ui_layout_Cell_name_java_lang_String_R_arc_scene_ui_layout_Cell 31
+typedef jobject (*func_arc_scene_ui_layout_Cell_name_java_lang_String_R_arc_scene_ui_layout_Cell)(jcontext ctx, jobject self, jobject param0);
+#define VTABLE_arc_scene_ui_layout_Cell_update_arc_func_Cons_R_arc_scene_ui_layout_Cell 32
+typedef jobject (*func_arc_scene_ui_layout_Cell_update_arc_func_Cons_R_arc_scene_ui_layout_Cell)(jcontext ctx, jobject self, jobject param0);
+#define VTABLE_arc_scene_ui_layout_Cell_disabled_arc_func_Boolf_R_arc_scene_ui_layout_Cell 33
+typedef jobject (*func_arc_scene_ui_layout_Cell_disabled_arc_func_Boolf_R_arc_scene_ui_layout_Cell)(jcontext ctx, jobject self, jobject param0);
+#define VTABLE_arc_scene_ui_layout_Cell_scrollX_boolean_R_arc_scene_ui_layout_Cell 34
+typedef jobject (*func_arc_scene_ui_layout_Cell_scrollX_boolean_R_arc_scene_ui_layout_Cell)(jcontext ctx, jobject self, jbool param0);
+#define VTABLE_arc_scene_ui_layout_Cell_scrollY_boolean_R_arc_scene_ui_layout_Cell 35
+typedef jobject (*func_arc_scene_ui_layout_Cell_scrollY_boolean_R_arc_scene_ui_layout_Cell)(jcontext ctx, jobject self, jbool param0);
+#define VTABLE_arc_scene_ui_layout_Cell_disabled_boolean_R_arc_scene_ui_layout_Cell 36
+typedef jobject (*func_arc_scene_ui_layout_Cell_disabled_boolean_R_arc_scene_ui_layout_Cell)(jcontext ctx, jobject self, jbool param0);
+#define VTABLE_arc_scene_ui_layout_Cell_touchable_arc_scene_event_Touchable_R_arc_scene_ui_layout_Cell 37
+typedef jobject (*func_arc_scene_ui_layout_Cell_touchable_arc_scene_event_Touchable_R_arc_scene_ui_layout_Cell)(jcontext ctx, jobject self, jobject param0);
+#define VTABLE_arc_scene_ui_layout_Cell_touchable_arc_func_Prov_R_arc_scene_ui_layout_Cell 38
+typedef jobject (*func_arc_scene_ui_layout_Cell_touchable_arc_func_Prov_R_arc_scene_ui_layout_Cell)(jcontext ctx, jobject self, jobject param0);
+#define VTABLE_arc_scene_ui_layout_Cell_visible_arc_func_Boolp_R_arc_scene_ui_layout_Cell 39
+typedef jobject (*func_arc_scene_ui_layout_Cell_visible_arc_func_Boolp_R_arc_scene_ui_layout_Cell)(jcontext ctx, jobject self, jobject param0);
+#define VTABLE_arc_scene_ui_layout_Cell_visible_boolean_R_arc_scene_ui_layout_Cell 40
+typedef jobject (*func_arc_scene_ui_layout_Cell_visible_boolean_R_arc_scene_ui_layout_Cell)(jcontext ctx, jobject self, jbool param0);
+#define VTABLE_arc_scene_ui_layout_Cell_scaling_arc_util_Scaling_R_arc_scene_ui_layout_Cell 41
+typedef jobject (*func_arc_scene_ui_layout_Cell_scaling_arc_util_Scaling_R_arc_scene_ui_layout_Cell)(jcontext ctx, jobject self, jobject param0);
+#define VTABLE_arc_scene_ui_layout_Cell_valid_arc_scene_ui_TextField$TextFieldValidator_R_arc_scene_ui_layout_Cell 42
+typedef jobject (*func_arc_scene_ui_layout_Cell_valid_arc_scene_ui_TextField$TextFieldValidator_R_arc_scene_ui_layout_Cell)(jcontext ctx, jobject self, jobject param0);
+#define VTABLE_arc_scene_ui_layout_Cell_maxTextLength_int_R_arc_scene_ui_layout_Cell 43
+typedef jobject (*func_arc_scene_ui_layout_Cell_maxTextLength_int_R_arc_scene_ui_layout_Cell)(jcontext ctx, jobject self, jint param0);
+#define VTABLE_arc_scene_ui_layout_Cell_wrap_R_arc_scene_ui_layout_Cell 44
+typedef jobject (*func_arc_scene_ui_layout_Cell_wrap_R_arc_scene_ui_layout_Cell)(jcontext ctx, jobject self);
+#define VTABLE_arc_scene_ui_layout_Cell_wrap_boolean_R_arc_scene_ui_layout_Cell 45
+typedef jobject (*func_arc_scene_ui_layout_Cell_wrap_boolean_R_arc_scene_ui_layout_Cell)(jcontext ctx, jobject self, jbool param0);
+#define VTABLE_arc_scene_ui_layout_Cell_ellipsis_boolean_R_arc_scene_ui_layout_Cell 46
+typedef jobject (*func_arc_scene_ui_layout_Cell_ellipsis_boolean_R_arc_scene_ui_layout_Cell)(jcontext ctx, jobject self, jbool param0);
+#define VTABLE_arc_scene_ui_layout_Cell_labelAlign_int_int_R_arc_scene_ui_layout_Cell 47
+typedef jobject (*func_arc_scene_ui_layout_Cell_labelAlign_int_int_R_arc_scene_ui_layout_Cell)(jcontext ctx, jobject self, jint param0, jint param1);
+#define VTABLE_arc_scene_ui_layout_Cell_labelAlign_int_R_arc_scene_ui_layout_Cell 48
+typedef jobject (*func_arc_scene_ui_layout_Cell_labelAlign_int_R_arc_scene_ui_layout_Cell)(jcontext ctx, jobject self, jint param0);
+#define VTABLE_arc_scene_ui_layout_Cell_group_arc_scene_ui_ButtonGroup_R_arc_scene_ui_layout_Cell 49
+typedef jobject (*func_arc_scene_ui_layout_Cell_group_arc_scene_ui_ButtonGroup_R_arc_scene_ui_layout_Cell)(jcontext ctx, jobject self, jobject param0);
+#define VTABLE_arc_scene_ui_layout_Cell_wrapLabel_boolean_R_arc_scene_ui_layout_Cell 50
+typedef jobject (*func_arc_scene_ui_layout_Cell_wrapLabel_boolean_R_arc_scene_ui_layout_Cell)(jcontext ctx, jobject self, jbool param0);
+#define VTABLE_arc_scene_ui_layout_Cell_checked_boolean_R_arc_scene_ui_layout_Cell 51
+typedef jobject (*func_arc_scene_ui_layout_Cell_checked_boolean_R_arc_scene_ui_layout_Cell)(jcontext ctx, jobject self, jbool param0);
+#define VTABLE_arc_scene_ui_layout_Cell_checked_arc_func_Boolf_R_arc_scene_ui_layout_Cell 52
+typedef jobject (*func_arc_scene_ui_layout_Cell_checked_arc_func_Boolf_R_arc_scene_ui_layout_Cell)(jcontext ctx, jobject self, jobject param0);
+#define VTABLE_arc_scene_ui_layout_Cell_fontScale_float_R_arc_scene_ui_layout_Cell 53
+typedef jobject (*func_arc_scene_ui_layout_Cell_fontScale_float_R_arc_scene_ui_layout_Cell)(jcontext ctx, jobject self, jfloat param0);
+#define VTABLE_arc_scene_ui_layout_Cell_color_arc_graphics_Color_R_arc_scene_ui_layout_Cell 54
+typedef jobject (*func_arc_scene_ui_layout_Cell_color_arc_graphics_Color_R_arc_scene_ui_layout_Cell)(jcontext ctx, jobject self, jobject param0);
+#define VTABLE_arc_scene_ui_layout_Cell_margin_float_R_arc_scene_ui_layout_Cell 55
+typedef jobject (*func_arc_scene_ui_layout_Cell_margin_float_R_arc_scene_ui_layout_Cell)(jcontext ctx, jobject self, jfloat param0);
+#define VTABLE_arc_scene_ui_layout_Cell_marginTop_float_R_arc_scene_ui_layout_Cell 56
+typedef jobject (*func_arc_scene_ui_layout_Cell_marginTop_float_R_arc_scene_ui_layout_Cell)(jcontext ctx, jobject self, jfloat param0);
+#define VTABLE_arc_scene_ui_layout_Cell_marginBottom_float_R_arc_scene_ui_layout_Cell 57
+typedef jobject (*func_arc_scene_ui_layout_Cell_marginBottom_float_R_arc_scene_ui_layout_Cell)(jcontext ctx, jobject self, jfloat param0);
+#define VTABLE_arc_scene_ui_layout_Cell_marginLeft_float_R_arc_scene_ui_layout_Cell 58
+typedef jobject (*func_arc_scene_ui_layout_Cell_marginLeft_float_R_arc_scene_ui_layout_Cell)(jcontext ctx, jobject self, jfloat param0);
+#define VTABLE_arc_scene_ui_layout_Cell_marginRight_float_R_arc_scene_ui_layout_Cell 59
+typedef jobject (*func_arc_scene_ui_layout_Cell_marginRight_float_R_arc_scene_ui_layout_Cell)(jcontext ctx, jobject self, jfloat param0);
+#define VTABLE_arc_scene_ui_layout_Cell_width_float_R_arc_scene_ui_layout_Cell 60
+typedef jobject (*func_arc_scene_ui_layout_Cell_width_float_R_arc_scene_ui_layout_Cell)(jcontext ctx, jobject self, jfloat param0);
+#define VTABLE_arc_scene_ui_layout_Cell_style_arc_scene_style_Style_R_arc_scene_ui_layout_Cell 61
+typedef jobject (*func_arc_scene_ui_layout_Cell_style_arc_scene_style_Style_R_arc_scene_ui_layout_Cell)(jcontext ctx, jobject self, jobject param0);
+#define VTABLE_arc_scene_ui_layout_Cell_height_float_R_arc_scene_ui_layout_Cell 62
+typedef jobject (*func_arc_scene_ui_layout_Cell_height_float_R_arc_scene_ui_layout_Cell)(jcontext ctx, jobject self, jfloat param0);
+#define VTABLE_arc_scene_ui_layout_Cell_minSize_float_R_arc_scene_ui_layout_Cell 63
+typedef jobject (*func_arc_scene_ui_layout_Cell_minSize_float_R_arc_scene_ui_layout_Cell)(jcontext ctx, jobject self, jfloat param0);
+#define VTABLE_arc_scene_ui_layout_Cell_minSize_float_float_R_arc_scene_ui_layout_Cell 64
+typedef jobject (*func_arc_scene_ui_layout_Cell_minSize_float_float_R_arc_scene_ui_layout_Cell)(jcontext ctx, jobject self, jfloat param0, jfloat param1);
+#define VTABLE_arc_scene_ui_layout_Cell_minWidth_float_R_arc_scene_ui_layout_Cell 65
+typedef jobject (*func_arc_scene_ui_layout_Cell_minWidth_float_R_arc_scene_ui_layout_Cell)(jcontext ctx, jobject self, jfloat param0);
+#define VTABLE_arc_scene_ui_layout_Cell_minHeight_float_R_arc_scene_ui_layout_Cell 66
+typedef jobject (*func_arc_scene_ui_layout_Cell_minHeight_float_R_arc_scene_ui_layout_Cell)(jcontext ctx, jobject self, jfloat param0);
+#define VTABLE_arc_scene_ui_layout_Cell_maxSize_float_R_arc_scene_ui_layout_Cell 67
+typedef jobject (*func_arc_scene_ui_layout_Cell_maxSize_float_R_arc_scene_ui_layout_Cell)(jcontext ctx, jobject self, jfloat param0);
+#define VTABLE_arc_scene_ui_layout_Cell_maxSize_float_float_R_arc_scene_ui_layout_Cell 68
+typedef jobject (*func_arc_scene_ui_layout_Cell_maxSize_float_float_R_arc_scene_ui_layout_Cell)(jcontext ctx, jobject self, jfloat param0, jfloat param1);
+#define VTABLE_arc_scene_ui_layout_Cell_maxWidth_float_R_arc_scene_ui_layout_Cell 69
+typedef jobject (*func_arc_scene_ui_layout_Cell_maxWidth_float_R_arc_scene_ui_layout_Cell)(jcontext ctx, jobject self, jfloat param0);
+#define VTABLE_arc_scene_ui_layout_Cell_maxHeight_float_R_arc_scene_ui_layout_Cell 70
+typedef jobject (*func_arc_scene_ui_layout_Cell_maxHeight_float_R_arc_scene_ui_layout_Cell)(jcontext ctx, jobject self, jfloat param0);
+#define VTABLE_arc_scene_ui_layout_Cell_pad_float_R_arc_scene_ui_layout_Cell 71
+typedef jobject (*func_arc_scene_ui_layout_Cell_pad_float_R_arc_scene_ui_layout_Cell)(jcontext ctx, jobject self, jfloat param0);
+#define VTABLE_arc_scene_ui_layout_Cell_pad_float_float_float_float_R_arc_scene_ui_layout_Cell 72
+typedef jobject (*func_arc_scene_ui_layout_Cell_pad_float_float_float_float_R_arc_scene_ui_layout_Cell)(jcontext ctx, jobject self, jfloat param0, jfloat param1, jfloat param2, jfloat param3);
+#define VTABLE_arc_scene_ui_layout_Cell_padTop_float_R_arc_scene_ui_layout_Cell 73
+typedef jobject (*func_arc_scene_ui_layout_Cell_padTop_float_R_arc_scene_ui_layout_Cell)(jcontext ctx, jobject self, jfloat param0);
+#define VTABLE_arc_scene_ui_layout_Cell_padLeft_float_R_arc_scene_ui_layout_Cell 74
+typedef jobject (*func_arc_scene_ui_layout_Cell_padLeft_float_R_arc_scene_ui_layout_Cell)(jcontext ctx, jobject self, jfloat param0);
+#define VTABLE_arc_scene_ui_layout_Cell_padBottom_float_R_arc_scene_ui_layout_Cell 75
+typedef jobject (*func_arc_scene_ui_layout_Cell_padBottom_float_R_arc_scene_ui_layout_Cell)(jcontext ctx, jobject self, jfloat param0);
+#define VTABLE_arc_scene_ui_layout_Cell_padRight_float_R_arc_scene_ui_layout_Cell 76
+typedef jobject (*func_arc_scene_ui_layout_Cell_padRight_float_R_arc_scene_ui_layout_Cell)(jcontext ctx, jobject self, jfloat param0);
+#define VTABLE_arc_scene_ui_layout_Cell_fill_R_arc_scene_ui_layout_Cell 77
+typedef jobject (*func_arc_scene_ui_layout_Cell_fill_R_arc_scene_ui_layout_Cell)(jcontext ctx, jobject self);
+#define VTABLE_arc_scene_ui_layout_Cell_fillX_R_arc_scene_ui_layout_Cell 78
+typedef jobject (*func_arc_scene_ui_layout_Cell_fillX_R_arc_scene_ui_layout_Cell)(jcontext ctx, jobject self);
+#define VTABLE_arc_scene_ui_layout_Cell_fillY_R_arc_scene_ui_layout_Cell 79
+typedef jobject (*func_arc_scene_ui_layout_Cell_fillY_R_arc_scene_ui_layout_Cell)(jcontext ctx, jobject self);
+#define VTABLE_arc_scene_ui_layout_Cell_fill_float_float_R_arc_scene_ui_layout_Cell 80
+typedef jobject (*func_arc_scene_ui_layout_Cell_fill_float_float_R_arc_scene_ui_layout_Cell)(jcontext ctx, jobject self, jfloat param0, jfloat param1);
+#define VTABLE_arc_scene_ui_layout_Cell_fill_boolean_boolean_R_arc_scene_ui_layout_Cell 81
+typedef jobject (*func_arc_scene_ui_layout_Cell_fill_boolean_boolean_R_arc_scene_ui_layout_Cell)(jcontext ctx, jobject self, jbool param0, jbool param1);
+#define VTABLE_arc_scene_ui_layout_Cell_fill_boolean_R_arc_scene_ui_layout_Cell 82
+typedef jobject (*func_arc_scene_ui_layout_Cell_fill_boolean_R_arc_scene_ui_layout_Cell)(jcontext ctx, jobject self, jbool param0);
+#define VTABLE_arc_scene_ui_layout_Cell_align_int_R_arc_scene_ui_layout_Cell 83
+typedef jobject (*func_arc_scene_ui_layout_Cell_align_int_R_arc_scene_ui_layout_Cell)(jcontext ctx, jobject self, jint param0);
+#define VTABLE_arc_scene_ui_layout_Cell_center_R_arc_scene_ui_layout_Cell 84
+typedef jobject (*func_arc_scene_ui_layout_Cell_center_R_arc_scene_ui_layout_Cell)(jcontext ctx, jobject self);
+#define VTABLE_arc_scene_ui_layout_Cell_top_R_arc_scene_ui_layout_Cell 85
+typedef jobject (*func_arc_scene_ui_layout_Cell_top_R_arc_scene_ui_layout_Cell)(jcontext ctx, jobject self);
+#define VTABLE_arc_scene_ui_layout_Cell_left_R_arc_scene_ui_layout_Cell 86
+typedef jobject (*func_arc_scene_ui_layout_Cell_left_R_arc_scene_ui_layout_Cell)(jcontext ctx, jobject self);
+#define VTABLE_arc_scene_ui_layout_Cell_bottom_R_arc_scene_ui_layout_Cell 87
+typedef jobject (*func_arc_scene_ui_layout_Cell_bottom_R_arc_scene_ui_layout_Cell)(jcontext ctx, jobject self);
+#define VTABLE_arc_scene_ui_layout_Cell_right_R_arc_scene_ui_layout_Cell 88
+typedef jobject (*func_arc_scene_ui_layout_Cell_right_R_arc_scene_ui_layout_Cell)(jcontext ctx, jobject self);
+#define VTABLE_arc_scene_ui_layout_Cell_grow_R_arc_scene_ui_layout_Cell 89
+typedef jobject (*func_arc_scene_ui_layout_Cell_grow_R_arc_scene_ui_layout_Cell)(jcontext ctx, jobject self);
+#define VTABLE_arc_scene_ui_layout_Cell_growX_R_arc_scene_ui_layout_Cell 90
+typedef jobject (*func_arc_scene_ui_layout_Cell_growX_R_arc_scene_ui_layout_Cell)(jcontext ctx, jobject self);
+#define VTABLE_arc_scene_ui_layout_Cell_growY_R_arc_scene_ui_layout_Cell 91
+typedef jobject (*func_arc_scene_ui_layout_Cell_growY_R_arc_scene_ui_layout_Cell)(jcontext ctx, jobject self);
+#define VTABLE_arc_scene_ui_layout_Cell_expand_R_arc_scene_ui_layout_Cell 92
+typedef jobject (*func_arc_scene_ui_layout_Cell_expand_R_arc_scene_ui_layout_Cell)(jcontext ctx, jobject self);
+#define VTABLE_arc_scene_ui_layout_Cell_expandX_R_arc_scene_ui_layout_Cell 93
+typedef jobject (*func_arc_scene_ui_layout_Cell_expandX_R_arc_scene_ui_layout_Cell)(jcontext ctx, jobject self);
+#define VTABLE_arc_scene_ui_layout_Cell_expandY_R_arc_scene_ui_layout_Cell 94
+typedef jobject (*func_arc_scene_ui_layout_Cell_expandY_R_arc_scene_ui_layout_Cell)(jcontext ctx, jobject self);
+#define VTABLE_arc_scene_ui_layout_Cell_expand_int_int_R_arc_scene_ui_layout_Cell 95
+typedef jobject (*func_arc_scene_ui_layout_Cell_expand_int_int_R_arc_scene_ui_layout_Cell)(jcontext ctx, jobject self, jint param0, jint param1);
+#define VTABLE_arc_scene_ui_layout_Cell_expand_boolean_boolean_R_arc_scene_ui_layout_Cell 96
+typedef jobject (*func_arc_scene_ui_layout_Cell_expand_boolean_boolean_R_arc_scene_ui_layout_Cell)(jcontext ctx, jobject self, jbool param0, jbool param1);
+#define VTABLE_arc_scene_ui_layout_Cell_colspan_int_R_arc_scene_ui_layout_Cell 97
+typedef jobject (*func_arc_scene_ui_layout_Cell_colspan_int_R_arc_scene_ui_layout_Cell)(jcontext ctx, jobject self, jint param0);
+#define VTABLE_arc_scene_ui_layout_Cell_uniform_R_arc_scene_ui_layout_Cell 98
+typedef jobject (*func_arc_scene_ui_layout_Cell_uniform_R_arc_scene_ui_layout_Cell)(jcontext ctx, jobject self);
+#define VTABLE_arc_scene_ui_layout_Cell_uniformX_R_arc_scene_ui_layout_Cell 99
+typedef jobject (*func_arc_scene_ui_layout_Cell_uniformX_R_arc_scene_ui_layout_Cell)(jcontext ctx, jobject self);
+#define VTABLE_arc_scene_ui_layout_Cell_uniformY_R_arc_scene_ui_layout_Cell 100
+typedef jobject (*func_arc_scene_ui_layout_Cell_uniformY_R_arc_scene_ui_layout_Cell)(jcontext ctx, jobject self);
+#define VTABLE_arc_scene_ui_layout_Cell_uniform_boolean_boolean_R_arc_scene_ui_layout_Cell 101
+typedef jobject (*func_arc_scene_ui_layout_Cell_uniform_boolean_boolean_R_arc_scene_ui_layout_Cell)(jcontext ctx, jobject self, jbool param0, jbool param1);
+#define VTABLE_arc_scene_ui_layout_Cell_setBounds_float_float_float_float 102
+typedef void (*func_arc_scene_ui_layout_Cell_setBounds_float_float_float_float)(jcontext ctx, jobject self, jfloat param0, jfloat param1, jfloat param2, jfloat param3);
+#define VTABLE_arc_scene_ui_layout_Cell_isEndRow_R_boolean 103
+typedef jbool (*func_arc_scene_ui_layout_Cell_isEndRow_R_boolean)(jcontext ctx, jobject self);
+#define VTABLE_arc_scene_ui_layout_Cell_row 104
+typedef void (*func_arc_scene_ui_layout_Cell_row)(jcontext ctx, jobject self);
+#define VTABLE_arc_scene_ui_layout_Cell_getTable_R_arc_scene_ui_layout_Table 105
+typedef jobject (*func_arc_scene_ui_layout_Cell_getTable_R_arc_scene_ui_layout_Table)(jcontext ctx, jobject self);
+#define VTABLE_arc_scene_ui_layout_Cell_clear 106
+typedef void (*func_arc_scene_ui_layout_Cell_clear)(jcontext ctx, jobject self);
+#define VTABLE_arc_scene_ui_layout_Cell_scl_float_R_float 107
+typedef jfloat (*func_arc_scene_ui_layout_Cell_scl_float_R_float)(jcontext ctx, jobject self, jfloat param0);
+#define VTABLE_arc_scene_ui_layout_Cell_set_arc_scene_ui_layout_Cell_R_arc_scene_ui_layout_Cell 108
+typedef jobject (*func_arc_scene_ui_layout_Cell_set_arc_scene_ui_layout_Cell_R_arc_scene_ui_layout_Cell)(jcontext ctx, jobject self, jobject param0);
+#define VTABLE_arc_scene_ui_layout_Cell_lambda$disabled$1_arc_func_Boolf_arc_scene_Element 109
+typedef void (*func_arc_scene_ui_layout_Cell_lambda$disabled$1_arc_func_Boolf_arc_scene_Element)(jcontext ctx, jobject self, jobject param0, jobject param1);
+
+void mark_arc_scene_ui_layout_Cell(jobject object, jint mark, jint depth);
+void clinit_arc_scene_ui_layout_Cell(jcontext ctx);
+void init_arc_scene_ui_layout_Cell(jcontext ctx, jobject self);
+jobject SM_arc_scene_ui_layout_Cell_defaults_R_arc_scene_ui_layout_Cell(jcontext ctx);
+void M_arc_scene_ui_layout_Cell_setLayout_arc_scene_ui_layout_Table(jcontext ctx, jobject self, jobject param0);
+jobject M_arc_scene_ui_layout_Cell_setElement_arc_scene_Element_R_arc_scene_ui_layout_Cell(jcontext ctx, jobject self, jobject param0);
+jobject M_arc_scene_ui_layout_Cell_clearElement_R_arc_scene_ui_layout_Cell(jcontext ctx, jobject self);
+jobject M_arc_scene_ui_layout_Cell_with_arc_func_Cons_R_arc_scene_ui_layout_Cell(jcontext ctx, jobject self, jobject param0);
+jobject M_arc_scene_ui_layout_Cell_self_arc_func_Cons_R_arc_scene_ui_layout_Cell(jcontext ctx, jobject self, jobject param0);
+jobject M_arc_scene_ui_layout_Cell_get_R_arc_scene_Element(jcontext ctx, jobject self);
+jbool M_arc_scene_ui_layout_Cell_hasElement_R_boolean(jcontext ctx, jobject self);
+jfloat M_arc_scene_ui_layout_Cell_prefWidth_R_float(jcontext ctx, jobject self);
+jfloat M_arc_scene_ui_layout_Cell_prefHeight_R_float(jcontext ctx, jobject self);
+jfloat M_arc_scene_ui_layout_Cell_maxWidth_R_float(jcontext ctx, jobject self);
+jfloat M_arc_scene_ui_layout_Cell_maxHeight_R_float(jcontext ctx, jobject self);
+jfloat M_arc_scene_ui_layout_Cell_minWidth_R_float(jcontext ctx, jobject self);
+jfloat M_arc_scene_ui_layout_Cell_minHeight_R_float(jcontext ctx, jobject self);
+jobject M_arc_scene_ui_layout_Cell_tooltip_java_lang_String_R_arc_scene_ui_layout_Cell(jcontext ctx, jobject self, jobject param0);
+jobject M_arc_scene_ui_layout_Cell_tooltip_java_lang_String_boolean_R_arc_scene_ui_layout_Cell(jcontext ctx, jobject self, jobject param0, jbool param1);
+jobject M_arc_scene_ui_layout_Cell_tooltip_arc_func_Cons_R_arc_scene_ui_layout_Cell(jcontext ctx, jobject self, jobject param0);
+jobject M_arc_scene_ui_layout_Cell_tooltip_boolean_arc_func_Cons_R_arc_scene_ui_layout_Cell(jcontext ctx, jobject self, jbool param0, jobject param1);
+jobject M_arc_scene_ui_layout_Cell_size_float_R_arc_scene_ui_layout_Cell(jcontext ctx, jobject self, jfloat param0);
+jobject M_arc_scene_ui_layout_Cell_size_float_float_R_arc_scene_ui_layout_Cell(jcontext ctx, jobject self, jfloat param0, jfloat param1);
+jobject M_arc_scene_ui_layout_Cell_name_java_lang_String_R_arc_scene_ui_layout_Cell(jcontext ctx, jobject self, jobject param0);
+jobject M_arc_scene_ui_layout_Cell_update_arc_func_Cons_R_arc_scene_ui_layout_Cell(jcontext ctx, jobject self, jobject param0);
+jobject M_arc_scene_ui_layout_Cell_disabled_arc_func_Boolf_R_arc_scene_ui_layout_Cell(jcontext ctx, jobject self, jobject param0);
+jobject M_arc_scene_ui_layout_Cell_scrollX_boolean_R_arc_scene_ui_layout_Cell(jcontext ctx, jobject self, jbool param0);
+jobject M_arc_scene_ui_layout_Cell_scrollY_boolean_R_arc_scene_ui_layout_Cell(jcontext ctx, jobject self, jbool param0);
+jobject M_arc_scene_ui_layout_Cell_disabled_boolean_R_arc_scene_ui_layout_Cell(jcontext ctx, jobject self, jbool param0);
+jobject M_arc_scene_ui_layout_Cell_touchable_arc_scene_event_Touchable_R_arc_scene_ui_layout_Cell(jcontext ctx, jobject self, jobject param0);
+jobject M_arc_scene_ui_layout_Cell_touchable_arc_func_Prov_R_arc_scene_ui_layout_Cell(jcontext ctx, jobject self, jobject param0);
+jobject M_arc_scene_ui_layout_Cell_visible_arc_func_Boolp_R_arc_scene_ui_layout_Cell(jcontext ctx, jobject self, jobject param0);
+jobject M_arc_scene_ui_layout_Cell_visible_boolean_R_arc_scene_ui_layout_Cell(jcontext ctx, jobject self, jbool param0);
+jobject M_arc_scene_ui_layout_Cell_scaling_arc_util_Scaling_R_arc_scene_ui_layout_Cell(jcontext ctx, jobject self, jobject param0);
+jobject M_arc_scene_ui_layout_Cell_valid_arc_scene_ui_TextField$TextFieldValidator_R_arc_scene_ui_layout_Cell(jcontext ctx, jobject self, jobject param0);
+jobject M_arc_scene_ui_layout_Cell_maxTextLength_int_R_arc_scene_ui_layout_Cell(jcontext ctx, jobject self, jint param0);
+jobject M_arc_scene_ui_layout_Cell_wrap_R_arc_scene_ui_layout_Cell(jcontext ctx, jobject self);
+jobject M_arc_scene_ui_layout_Cell_wrap_boolean_R_arc_scene_ui_layout_Cell(jcontext ctx, jobject self, jbool param0);
+jobject M_arc_scene_ui_layout_Cell_ellipsis_boolean_R_arc_scene_ui_layout_Cell(jcontext ctx, jobject self, jbool param0);
+jobject M_arc_scene_ui_layout_Cell_labelAlign_int_int_R_arc_scene_ui_layout_Cell(jcontext ctx, jobject self, jint param0, jint param1);
+jobject M_arc_scene_ui_layout_Cell_labelAlign_int_R_arc_scene_ui_layout_Cell(jcontext ctx, jobject self, jint param0);
+jobject M_arc_scene_ui_layout_Cell_group_arc_scene_ui_ButtonGroup_R_arc_scene_ui_layout_Cell(jcontext ctx, jobject self, jobject param0);
+jobject M_arc_scene_ui_layout_Cell_wrapLabel_boolean_R_arc_scene_ui_layout_Cell(jcontext ctx, jobject self, jbool param0);
+jobject M_arc_scene_ui_layout_Cell_checked_boolean_R_arc_scene_ui_layout_Cell(jcontext ctx, jobject self, jbool param0);
+jobject M_arc_scene_ui_layout_Cell_checked_arc_func_Boolf_R_arc_scene_ui_layout_Cell(jcontext ctx, jobject self, jobject param0);
+jobject M_arc_scene_ui_layout_Cell_fontScale_float_R_arc_scene_ui_layout_Cell(jcontext ctx, jobject self, jfloat param0);
+jobject M_arc_scene_ui_layout_Cell_color_arc_graphics_Color_R_arc_scene_ui_layout_Cell(jcontext ctx, jobject self, jobject param0);
+jobject M_arc_scene_ui_layout_Cell_margin_float_R_arc_scene_ui_layout_Cell(jcontext ctx, jobject self, jfloat param0);
+jobject M_arc_scene_ui_layout_Cell_marginTop_float_R_arc_scene_ui_layout_Cell(jcontext ctx, jobject self, jfloat param0);
+jobject M_arc_scene_ui_layout_Cell_marginBottom_float_R_arc_scene_ui_layout_Cell(jcontext ctx, jobject self, jfloat param0);
+jobject M_arc_scene_ui_layout_Cell_marginLeft_float_R_arc_scene_ui_layout_Cell(jcontext ctx, jobject self, jfloat param0);
+jobject M_arc_scene_ui_layout_Cell_marginRight_float_R_arc_scene_ui_layout_Cell(jcontext ctx, jobject self, jfloat param0);
+jobject M_arc_scene_ui_layout_Cell_width_float_R_arc_scene_ui_layout_Cell(jcontext ctx, jobject self, jfloat param0);
+jobject M_arc_scene_ui_layout_Cell_style_arc_scene_style_Style_R_arc_scene_ui_layout_Cell(jcontext ctx, jobject self, jobject param0);
+jobject M_arc_scene_ui_layout_Cell_height_float_R_arc_scene_ui_layout_Cell(jcontext ctx, jobject self, jfloat param0);
+jobject M_arc_scene_ui_layout_Cell_minSize_float_R_arc_scene_ui_layout_Cell(jcontext ctx, jobject self, jfloat param0);
+jobject M_arc_scene_ui_layout_Cell_minSize_float_float_R_arc_scene_ui_layout_Cell(jcontext ctx, jobject self, jfloat param0, jfloat param1);
+jobject M_arc_scene_ui_layout_Cell_minWidth_float_R_arc_scene_ui_layout_Cell(jcontext ctx, jobject self, jfloat param0);
+jobject M_arc_scene_ui_layout_Cell_minHeight_float_R_arc_scene_ui_layout_Cell(jcontext ctx, jobject self, jfloat param0);
+jobject M_arc_scene_ui_layout_Cell_maxSize_float_R_arc_scene_ui_layout_Cell(jcontext ctx, jobject self, jfloat param0);
+jobject M_arc_scene_ui_layout_Cell_maxSize_float_float_R_arc_scene_ui_layout_Cell(jcontext ctx, jobject self, jfloat param0, jfloat param1);
+jobject M_arc_scene_ui_layout_Cell_maxWidth_float_R_arc_scene_ui_layout_Cell(jcontext ctx, jobject self, jfloat param0);
+jobject M_arc_scene_ui_layout_Cell_maxHeight_float_R_arc_scene_ui_layout_Cell(jcontext ctx, jobject self, jfloat param0);
+jobject M_arc_scene_ui_layout_Cell_pad_float_R_arc_scene_ui_layout_Cell(jcontext ctx, jobject self, jfloat param0);
+jobject M_arc_scene_ui_layout_Cell_pad_float_float_float_float_R_arc_scene_ui_layout_Cell(jcontext ctx, jobject self, jfloat param0, jfloat param1, jfloat param2, jfloat param3);
+jobject M_arc_scene_ui_layout_Cell_padTop_float_R_arc_scene_ui_layout_Cell(jcontext ctx, jobject self, jfloat param0);
+jobject M_arc_scene_ui_layout_Cell_padLeft_float_R_arc_scene_ui_layout_Cell(jcontext ctx, jobject self, jfloat param0);
+jobject M_arc_scene_ui_layout_Cell_padBottom_float_R_arc_scene_ui_layout_Cell(jcontext ctx, jobject self, jfloat param0);
+jobject M_arc_scene_ui_layout_Cell_padRight_float_R_arc_scene_ui_layout_Cell(jcontext ctx, jobject self, jfloat param0);
+jobject M_arc_scene_ui_layout_Cell_fill_R_arc_scene_ui_layout_Cell(jcontext ctx, jobject self);
+jobject M_arc_scene_ui_layout_Cell_fillX_R_arc_scene_ui_layout_Cell(jcontext ctx, jobject self);
+jobject M_arc_scene_ui_layout_Cell_fillY_R_arc_scene_ui_layout_Cell(jcontext ctx, jobject self);
+jobject M_arc_scene_ui_layout_Cell_fill_float_float_R_arc_scene_ui_layout_Cell(jcontext ctx, jobject self, jfloat param0, jfloat param1);
+jobject M_arc_scene_ui_layout_Cell_fill_boolean_boolean_R_arc_scene_ui_layout_Cell(jcontext ctx, jobject self, jbool param0, jbool param1);
+jobject M_arc_scene_ui_layout_Cell_fill_boolean_R_arc_scene_ui_layout_Cell(jcontext ctx, jobject self, jbool param0);
+jobject M_arc_scene_ui_layout_Cell_align_int_R_arc_scene_ui_layout_Cell(jcontext ctx, jobject self, jint param0);
+jobject M_arc_scene_ui_layout_Cell_center_R_arc_scene_ui_layout_Cell(jcontext ctx, jobject self);
+jobject M_arc_scene_ui_layout_Cell_top_R_arc_scene_ui_layout_Cell(jcontext ctx, jobject self);
+jobject M_arc_scene_ui_layout_Cell_left_R_arc_scene_ui_layout_Cell(jcontext ctx, jobject self);
+jobject M_arc_scene_ui_layout_Cell_bottom_R_arc_scene_ui_layout_Cell(jcontext ctx, jobject self);
+jobject M_arc_scene_ui_layout_Cell_right_R_arc_scene_ui_layout_Cell(jcontext ctx, jobject self);
+jobject M_arc_scene_ui_layout_Cell_grow_R_arc_scene_ui_layout_Cell(jcontext ctx, jobject self);
+jobject M_arc_scene_ui_layout_Cell_growX_R_arc_scene_ui_layout_Cell(jcontext ctx, jobject self);
+jobject M_arc_scene_ui_layout_Cell_growY_R_arc_scene_ui_layout_Cell(jcontext ctx, jobject self);
+jobject M_arc_scene_ui_layout_Cell_expand_R_arc_scene_ui_layout_Cell(jcontext ctx, jobject self);
+jobject M_arc_scene_ui_layout_Cell_expandX_R_arc_scene_ui_layout_Cell(jcontext ctx, jobject self);
+jobject M_arc_scene_ui_layout_Cell_expandY_R_arc_scene_ui_layout_Cell(jcontext ctx, jobject self);
+jobject M_arc_scene_ui_layout_Cell_expand_int_int_R_arc_scene_ui_layout_Cell(jcontext ctx, jobject self, jint param0, jint param1);
+jobject M_arc_scene_ui_layout_Cell_expand_boolean_boolean_R_arc_scene_ui_layout_Cell(jcontext ctx, jobject self, jbool param0, jbool param1);
+jobject M_arc_scene_ui_layout_Cell_colspan_int_R_arc_scene_ui_layout_Cell(jcontext ctx, jobject self, jint param0);
+jobject M_arc_scene_ui_layout_Cell_uniform_R_arc_scene_ui_layout_Cell(jcontext ctx, jobject self);
+jobject M_arc_scene_ui_layout_Cell_uniformX_R_arc_scene_ui_layout_Cell(jcontext ctx, jobject self);
+jobject M_arc_scene_ui_layout_Cell_uniformY_R_arc_scene_ui_layout_Cell(jcontext ctx, jobject self);
+jobject M_arc_scene_ui_layout_Cell_uniform_boolean_boolean_R_arc_scene_ui_layout_Cell(jcontext ctx, jobject self, jbool param0, jbool param1);
+void M_arc_scene_ui_layout_Cell_setBounds_float_float_float_float(jcontext ctx, jobject self, jfloat param0, jfloat param1, jfloat param2, jfloat param3);
+jbool M_arc_scene_ui_layout_Cell_isEndRow_R_boolean(jcontext ctx, jobject self);
+void M_arc_scene_ui_layout_Cell_row(jcontext ctx, jobject self);
+jobject M_arc_scene_ui_layout_Cell_getTable_R_arc_scene_ui_layout_Table(jcontext ctx, jobject self);
+void M_arc_scene_ui_layout_Cell_clear(jcontext ctx, jobject self);
+jfloat M_arc_scene_ui_layout_Cell_scl_float_R_float(jcontext ctx, jobject self, jfloat param0);
+void M_arc_scene_ui_layout_Cell_reset(jcontext ctx, jobject self);
+jobject M_arc_scene_ui_layout_Cell_set_arc_scene_ui_layout_Cell_R_arc_scene_ui_layout_Cell(jcontext ctx, jobject self, jobject param0);
+jobject M_arc_scene_ui_layout_Cell_toString_R_java_lang_String(jcontext ctx, jobject self);
+void SM_arc_scene_ui_layout_Cell_lambda$checked$0_arc_scene_Element_arc_func_Boolf(jcontext ctx, jobject param0, jobject param1);
+void M_arc_scene_ui_layout_Cell_lambda$disabled$1_arc_func_Boolf_arc_scene_Element(jcontext ctx, jobject self, jobject param0, jobject param1);
+jbool SM_arc_scene_ui_layout_Cell_lambda$disabled$0_arc_func_Boolf_arc_scene_Element_R_boolean(jcontext ctx, jobject param0, jobject param1);
+void SM_arc_scene_ui_layout_Cell_lambda$update$0_arc_func_Cons_arc_scene_Element(jcontext ctx, jobject param0, jobject param1);
+
+#ifdef __cplusplus
+}
+#endif
+
+#endif

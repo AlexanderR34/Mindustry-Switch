@@ -1,0 +1,137 @@
+#ifndef HEADER_java_util_concurrent_ForkJoinTask$AdaptedCallable
+#define HEADER_java_util_concurrent_ForkJoinTask$AdaptedCallable
+
+#include "Clearwing.h"
+#include "java/util/concurrent/ForkJoinTask.h"
+#include "java/util/concurrent/RunnableFuture.h"
+
+#ifdef __cplusplus
+extern "C" {
+#endif
+
+typedef struct java_util_concurrent_ForkJoinTask$AdaptedCallable {
+	java_util_concurrent_ForkJoinTask parent;
+	jref F_callable;
+	jref F_result;
+} java_util_concurrent_ForkJoinTask$AdaptedCallable;
+
+extern Class class_java_util_concurrent_ForkJoinTask$AdaptedCallable;
+
+extern jlong SF_java_util_concurrent_ForkJoinTask$AdaptedCallable_serialVersionUID;
+
+#define VTABLE_java_util_concurrent_ForkJoinTask$AdaptedCallable_hashCode_R_int 0
+typedef jint (*func_java_util_concurrent_ForkJoinTask$AdaptedCallable_hashCode_R_int)(jcontext ctx, jobject self);
+#define VTABLE_java_util_concurrent_ForkJoinTask$AdaptedCallable_equals_java_lang_Object_R_boolean 1
+typedef jbool (*func_java_util_concurrent_ForkJoinTask$AdaptedCallable_equals_java_lang_Object_R_boolean)(jcontext ctx, jobject self, jobject param0);
+#define VTABLE_java_util_concurrent_ForkJoinTask$AdaptedCallable_clone_R_java_lang_Object 2
+typedef jobject (*func_java_util_concurrent_ForkJoinTask$AdaptedCallable_clone_R_java_lang_Object)(jcontext ctx, jobject self);
+#define VTABLE_java_util_concurrent_ForkJoinTask$AdaptedCallable_getClass_R_java_lang_Class 3
+typedef jobject (*func_java_util_concurrent_ForkJoinTask$AdaptedCallable_getClass_R_java_lang_Class)(jcontext ctx, jobject self);
+#define VTABLE_java_util_concurrent_ForkJoinTask$AdaptedCallable_toString_R_java_lang_String 4
+typedef jobject (*func_java_util_concurrent_ForkJoinTask$AdaptedCallable_toString_R_java_lang_String)(jcontext ctx, jobject self);
+#define VTABLE_java_util_concurrent_ForkJoinTask$AdaptedCallable_finalize 5
+typedef void (*func_java_util_concurrent_ForkJoinTask$AdaptedCallable_finalize)(jcontext ctx, jobject self);
+#define VTABLE_java_util_concurrent_ForkJoinTask$AdaptedCallable_notify 6
+typedef void (*func_java_util_concurrent_ForkJoinTask$AdaptedCallable_notify)(jcontext ctx, jobject self);
+#define VTABLE_java_util_concurrent_ForkJoinTask$AdaptedCallable_notifyAll 7
+typedef void (*func_java_util_concurrent_ForkJoinTask$AdaptedCallable_notifyAll)(jcontext ctx, jobject self);
+#define VTABLE_java_util_concurrent_ForkJoinTask$AdaptedCallable_wait 8
+typedef void (*func_java_util_concurrent_ForkJoinTask$AdaptedCallable_wait)(jcontext ctx, jobject self);
+#define VTABLE_java_util_concurrent_ForkJoinTask$AdaptedCallable_wait_long 9
+typedef void (*func_java_util_concurrent_ForkJoinTask$AdaptedCallable_wait_long)(jcontext ctx, jobject self, jlong param0);
+#define VTABLE_java_util_concurrent_ForkJoinTask$AdaptedCallable_wait_long_int 10
+typedef void (*func_java_util_concurrent_ForkJoinTask$AdaptedCallable_wait_long_int)(jcontext ctx, jobject self, jlong param0, jint param1);
+#define VTABLE_java_util_concurrent_ForkJoinTask$AdaptedCallable_cancel_boolean_R_boolean 11
+typedef jbool (*func_java_util_concurrent_ForkJoinTask$AdaptedCallable_cancel_boolean_R_boolean)(jcontext ctx, jobject self, jbool param0);
+#define VTABLE_java_util_concurrent_ForkJoinTask$AdaptedCallable_isCancelled_R_boolean 12
+typedef jbool (*func_java_util_concurrent_ForkJoinTask$AdaptedCallable_isCancelled_R_boolean)(jcontext ctx, jobject self);
+#define VTABLE_java_util_concurrent_ForkJoinTask$AdaptedCallable_isDone_R_boolean 13
+typedef jbool (*func_java_util_concurrent_ForkJoinTask$AdaptedCallable_isDone_R_boolean)(jcontext ctx, jobject self);
+#define VTABLE_java_util_concurrent_ForkJoinTask$AdaptedCallable_get_R_java_lang_Object 14
+typedef jobject (*func_java_util_concurrent_ForkJoinTask$AdaptedCallable_get_R_java_lang_Object)(jcontext ctx, jobject self);
+#define VTABLE_java_util_concurrent_ForkJoinTask$AdaptedCallable_get_long_java_util_concurrent_TimeUnit_R_java_lang_Object 15
+typedef jobject (*func_java_util_concurrent_ForkJoinTask$AdaptedCallable_get_long_java_util_concurrent_TimeUnit_R_java_lang_Object)(jcontext ctx, jobject self, jlong param0, jobject param1);
+#define VTABLE_java_util_concurrent_ForkJoinTask$AdaptedCallable_setCompletion_int_R_int 16
+typedef jint (*func_java_util_concurrent_ForkJoinTask$AdaptedCallable_setCompletion_int_R_int)(jcontext ctx, jobject self, jint param0);
+#define VTABLE_java_util_concurrent_ForkJoinTask$AdaptedCallable_doExec_R_int 17
+typedef jint (*func_java_util_concurrent_ForkJoinTask$AdaptedCallable_doExec_R_int)(jcontext ctx, jobject self);
+#define VTABLE_java_util_concurrent_ForkJoinTask$AdaptedCallable_internalWait_long 18
+typedef void (*func_java_util_concurrent_ForkJoinTask$AdaptedCallable_internalWait_long)(jcontext ctx, jobject self, jlong param0);
+#define VTABLE_java_util_concurrent_ForkJoinTask$AdaptedCallable_externalAwaitDone_R_int 19
+typedef jint (*func_java_util_concurrent_ForkJoinTask$AdaptedCallable_externalAwaitDone_R_int)(jcontext ctx, jobject self);
+#define VTABLE_java_util_concurrent_ForkJoinTask$AdaptedCallable_externalInterruptibleAwaitDone_R_int 20
+typedef jint (*func_java_util_concurrent_ForkJoinTask$AdaptedCallable_externalInterruptibleAwaitDone_R_int)(jcontext ctx, jobject self);
+#define VTABLE_java_util_concurrent_ForkJoinTask$AdaptedCallable_doJoin_R_int 21
+typedef jint (*func_java_util_concurrent_ForkJoinTask$AdaptedCallable_doJoin_R_int)(jcontext ctx, jobject self);
+#define VTABLE_java_util_concurrent_ForkJoinTask$AdaptedCallable_doInvoke_R_int 22
+typedef jint (*func_java_util_concurrent_ForkJoinTask$AdaptedCallable_doInvoke_R_int)(jcontext ctx, jobject self);
+#define VTABLE_java_util_concurrent_ForkJoinTask$AdaptedCallable_recordExceptionalCompletion_java_lang_Throwable_R_int 23
+typedef jint (*func_java_util_concurrent_ForkJoinTask$AdaptedCallable_recordExceptionalCompletion_java_lang_Throwable_R_int)(jcontext ctx, jobject self, jobject param0);
+#define VTABLE_java_util_concurrent_ForkJoinTask$AdaptedCallable_setExceptionalCompletion_java_lang_Throwable_R_int 24
+typedef jint (*func_java_util_concurrent_ForkJoinTask$AdaptedCallable_setExceptionalCompletion_java_lang_Throwable_R_int)(jcontext ctx, jobject self, jobject param0);
+#define VTABLE_java_util_concurrent_ForkJoinTask$AdaptedCallable_internalPropagateException_java_lang_Throwable 25
+typedef void (*func_java_util_concurrent_ForkJoinTask$AdaptedCallable_internalPropagateException_java_lang_Throwable)(jcontext ctx, jobject self, jobject param0);
+#define VTABLE_java_util_concurrent_ForkJoinTask$AdaptedCallable_clearExceptionalCompletion 26
+typedef void (*func_java_util_concurrent_ForkJoinTask$AdaptedCallable_clearExceptionalCompletion)(jcontext ctx, jobject self);
+#define VTABLE_java_util_concurrent_ForkJoinTask$AdaptedCallable_getThrowableException_R_java_lang_Throwable 27
+typedef jobject (*func_java_util_concurrent_ForkJoinTask$AdaptedCallable_getThrowableException_R_java_lang_Throwable)(jcontext ctx, jobject self);
+#define VTABLE_java_util_concurrent_ForkJoinTask$AdaptedCallable_reportException_int 28
+typedef void (*func_java_util_concurrent_ForkJoinTask$AdaptedCallable_reportException_int)(jcontext ctx, jobject self, jint param0);
+#define VTABLE_java_util_concurrent_ForkJoinTask$AdaptedCallable_fork_R_java_util_concurrent_ForkJoinTask 29
+typedef jobject (*func_java_util_concurrent_ForkJoinTask$AdaptedCallable_fork_R_java_util_concurrent_ForkJoinTask)(jcontext ctx, jobject self);
+#define VTABLE_java_util_concurrent_ForkJoinTask$AdaptedCallable_join_R_java_lang_Object 30
+typedef jobject (*func_java_util_concurrent_ForkJoinTask$AdaptedCallable_join_R_java_lang_Object)(jcontext ctx, jobject self);
+#define VTABLE_java_util_concurrent_ForkJoinTask$AdaptedCallable_invoke_R_java_lang_Object 31
+typedef jobject (*func_java_util_concurrent_ForkJoinTask$AdaptedCallable_invoke_R_java_lang_Object)(jcontext ctx, jobject self);
+#define VTABLE_java_util_concurrent_ForkJoinTask$AdaptedCallable_isCompletedAbnormally_R_boolean 32
+typedef jbool (*func_java_util_concurrent_ForkJoinTask$AdaptedCallable_isCompletedAbnormally_R_boolean)(jcontext ctx, jobject self);
+#define VTABLE_java_util_concurrent_ForkJoinTask$AdaptedCallable_isCompletedNormally_R_boolean 33
+typedef jbool (*func_java_util_concurrent_ForkJoinTask$AdaptedCallable_isCompletedNormally_R_boolean)(jcontext ctx, jobject self);
+#define VTABLE_java_util_concurrent_ForkJoinTask$AdaptedCallable_getException_R_java_lang_Throwable 34
+typedef jobject (*func_java_util_concurrent_ForkJoinTask$AdaptedCallable_getException_R_java_lang_Throwable)(jcontext ctx, jobject self);
+#define VTABLE_java_util_concurrent_ForkJoinTask$AdaptedCallable_completeExceptionally_java_lang_Throwable 35
+typedef void (*func_java_util_concurrent_ForkJoinTask$AdaptedCallable_completeExceptionally_java_lang_Throwable)(jcontext ctx, jobject self, jobject param0);
+#define VTABLE_java_util_concurrent_ForkJoinTask$AdaptedCallable_complete_java_lang_Object 36
+typedef void (*func_java_util_concurrent_ForkJoinTask$AdaptedCallable_complete_java_lang_Object)(jcontext ctx, jobject self, jobject param0);
+#define VTABLE_java_util_concurrent_ForkJoinTask$AdaptedCallable_quietlyComplete 37
+typedef void (*func_java_util_concurrent_ForkJoinTask$AdaptedCallable_quietlyComplete)(jcontext ctx, jobject self);
+#define VTABLE_java_util_concurrent_ForkJoinTask$AdaptedCallable_quietlyJoin 38
+typedef void (*func_java_util_concurrent_ForkJoinTask$AdaptedCallable_quietlyJoin)(jcontext ctx, jobject self);
+#define VTABLE_java_util_concurrent_ForkJoinTask$AdaptedCallable_quietlyInvoke 39
+typedef void (*func_java_util_concurrent_ForkJoinTask$AdaptedCallable_quietlyInvoke)(jcontext ctx, jobject self);
+#define VTABLE_java_util_concurrent_ForkJoinTask$AdaptedCallable_reinitialize 40
+typedef void (*func_java_util_concurrent_ForkJoinTask$AdaptedCallable_reinitialize)(jcontext ctx, jobject self);
+#define VTABLE_java_util_concurrent_ForkJoinTask$AdaptedCallable_tryUnfork_R_boolean 41
+typedef jbool (*func_java_util_concurrent_ForkJoinTask$AdaptedCallable_tryUnfork_R_boolean)(jcontext ctx, jobject self);
+#define VTABLE_java_util_concurrent_ForkJoinTask$AdaptedCallable_getRawResult_R_java_lang_Object 42
+typedef jobject (*func_java_util_concurrent_ForkJoinTask$AdaptedCallable_getRawResult_R_java_lang_Object)(jcontext ctx, jobject self);
+#define VTABLE_java_util_concurrent_ForkJoinTask$AdaptedCallable_setRawResult_java_lang_Object 43
+typedef void (*func_java_util_concurrent_ForkJoinTask$AdaptedCallable_setRawResult_java_lang_Object)(jcontext ctx, jobject self, jobject param0);
+#define VTABLE_java_util_concurrent_ForkJoinTask$AdaptedCallable_exec_R_boolean 44
+typedef jbool (*func_java_util_concurrent_ForkJoinTask$AdaptedCallable_exec_R_boolean)(jcontext ctx, jobject self);
+#define VTABLE_java_util_concurrent_ForkJoinTask$AdaptedCallable_getForkJoinTaskTag_R_short 45
+typedef jshort (*func_java_util_concurrent_ForkJoinTask$AdaptedCallable_getForkJoinTaskTag_R_short)(jcontext ctx, jobject self);
+#define VTABLE_java_util_concurrent_ForkJoinTask$AdaptedCallable_setForkJoinTaskTag_short_R_short 46
+typedef jshort (*func_java_util_concurrent_ForkJoinTask$AdaptedCallable_setForkJoinTaskTag_short_R_short)(jcontext ctx, jobject self, jshort param0);
+#define VTABLE_java_util_concurrent_ForkJoinTask$AdaptedCallable_compareAndSetForkJoinTaskTag_short_short_R_boolean 47
+typedef jbool (*func_java_util_concurrent_ForkJoinTask$AdaptedCallable_compareAndSetForkJoinTaskTag_short_short_R_boolean)(jcontext ctx, jobject self, jshort param0, jshort param1);
+#define VTABLE_java_util_concurrent_ForkJoinTask$AdaptedCallable_writeObject_java_io_ObjectOutputStream 48
+typedef void (*func_java_util_concurrent_ForkJoinTask$AdaptedCallable_writeObject_java_io_ObjectOutputStream)(jcontext ctx, jobject self, jobject param0);
+#define VTABLE_java_util_concurrent_ForkJoinTask$AdaptedCallable_readObject_java_io_ObjectInputStream 49
+typedef void (*func_java_util_concurrent_ForkJoinTask$AdaptedCallable_readObject_java_io_ObjectInputStream)(jcontext ctx, jobject self, jobject param0);
+#define VTABLE_java_util_concurrent_ForkJoinTask$AdaptedCallable_run 50
+typedef void (*func_java_util_concurrent_ForkJoinTask$AdaptedCallable_run)(jcontext ctx, jobject self);
+
+void mark_java_util_concurrent_ForkJoinTask$AdaptedCallable(jobject object, jint mark, jint depth);
+void clinit_java_util_concurrent_ForkJoinTask$AdaptedCallable(jcontext ctx);
+void init_java_util_concurrent_ForkJoinTask$AdaptedCallable_java_util_concurrent_Callable(jcontext ctx, jobject self, jobject param0);
+jobject M_java_util_concurrent_ForkJoinTask$AdaptedCallable_getRawResult_R_java_lang_Object(jcontext ctx, jobject self);
+void M_java_util_concurrent_ForkJoinTask$AdaptedCallable_setRawResult_java_lang_Object(jcontext ctx, jobject self, jobject param0);
+jbool M_java_util_concurrent_ForkJoinTask$AdaptedCallable_exec_R_boolean(jcontext ctx, jobject self);
+void M_java_util_concurrent_ForkJoinTask$AdaptedCallable_run(jcontext ctx, jobject self);
+
+#ifdef __cplusplus
+}
+#endif
+
+#endif

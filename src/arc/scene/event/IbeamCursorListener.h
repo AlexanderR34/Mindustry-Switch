@@ -1,0 +1,113 @@
+#ifndef HEADER_arc_scene_event_IbeamCursorListener
+#define HEADER_arc_scene_event_IbeamCursorListener
+
+#include "Clearwing.h"
+#include "arc/scene/event/ClickListener.h"
+
+#ifdef __cplusplus
+extern "C" {
+#endif
+
+typedef struct arc_scene_event_IbeamCursorListener {
+	arc_scene_event_ClickListener parent;
+} arc_scene_event_IbeamCursorListener;
+
+extern Class class_arc_scene_event_IbeamCursorListener;
+
+
+#define VTABLE_arc_scene_event_IbeamCursorListener_hashCode_R_int 0
+typedef jint (*func_arc_scene_event_IbeamCursorListener_hashCode_R_int)(jcontext ctx, jobject self);
+#define VTABLE_arc_scene_event_IbeamCursorListener_equals_java_lang_Object_R_boolean 1
+typedef jbool (*func_arc_scene_event_IbeamCursorListener_equals_java_lang_Object_R_boolean)(jcontext ctx, jobject self, jobject param0);
+#define VTABLE_arc_scene_event_IbeamCursorListener_clone_R_java_lang_Object 2
+typedef jobject (*func_arc_scene_event_IbeamCursorListener_clone_R_java_lang_Object)(jcontext ctx, jobject self);
+#define VTABLE_arc_scene_event_IbeamCursorListener_getClass_R_java_lang_Class 3
+typedef jobject (*func_arc_scene_event_IbeamCursorListener_getClass_R_java_lang_Class)(jcontext ctx, jobject self);
+#define VTABLE_arc_scene_event_IbeamCursorListener_toString_R_java_lang_String 4
+typedef jobject (*func_arc_scene_event_IbeamCursorListener_toString_R_java_lang_String)(jcontext ctx, jobject self);
+#define VTABLE_arc_scene_event_IbeamCursorListener_finalize 5
+typedef void (*func_arc_scene_event_IbeamCursorListener_finalize)(jcontext ctx, jobject self);
+#define VTABLE_arc_scene_event_IbeamCursorListener_notify 6
+typedef void (*func_arc_scene_event_IbeamCursorListener_notify)(jcontext ctx, jobject self);
+#define VTABLE_arc_scene_event_IbeamCursorListener_notifyAll 7
+typedef void (*func_arc_scene_event_IbeamCursorListener_notifyAll)(jcontext ctx, jobject self);
+#define VTABLE_arc_scene_event_IbeamCursorListener_wait 8
+typedef void (*func_arc_scene_event_IbeamCursorListener_wait)(jcontext ctx, jobject self);
+#define VTABLE_arc_scene_event_IbeamCursorListener_wait_long 9
+typedef void (*func_arc_scene_event_IbeamCursorListener_wait_long)(jcontext ctx, jobject self, jlong param0);
+#define VTABLE_arc_scene_event_IbeamCursorListener_wait_long_int 10
+typedef void (*func_arc_scene_event_IbeamCursorListener_wait_long_int)(jcontext ctx, jobject self, jlong param0, jint param1);
+#define VTABLE_arc_scene_event_IbeamCursorListener_handle_arc_scene_event_SceneEvent_R_boolean 11
+typedef jbool (*func_arc_scene_event_IbeamCursorListener_handle_arc_scene_event_SceneEvent_R_boolean)(jcontext ctx, jobject self, jobject param0);
+#define VTABLE_arc_scene_event_IbeamCursorListener_touchDown_arc_scene_event_InputEvent_float_float_int_arc_input_KeyCode_R_boolean 12
+typedef jbool (*func_arc_scene_event_IbeamCursorListener_touchDown_arc_scene_event_InputEvent_float_float_int_arc_input_KeyCode_R_boolean)(jcontext ctx, jobject self, jobject param0, jfloat param1, jfloat param2, jint param3, jobject param4);
+#define VTABLE_arc_scene_event_IbeamCursorListener_touchUp_arc_scene_event_InputEvent_float_float_int_arc_input_KeyCode 13
+typedef void (*func_arc_scene_event_IbeamCursorListener_touchUp_arc_scene_event_InputEvent_float_float_int_arc_input_KeyCode)(jcontext ctx, jobject self, jobject param0, jfloat param1, jfloat param2, jint param3, jobject param4);
+#define VTABLE_arc_scene_event_IbeamCursorListener_touchDragged_arc_scene_event_InputEvent_float_float_int 14
+typedef void (*func_arc_scene_event_IbeamCursorListener_touchDragged_arc_scene_event_InputEvent_float_float_int)(jcontext ctx, jobject self, jobject param0, jfloat param1, jfloat param2, jint param3);
+#define VTABLE_arc_scene_event_IbeamCursorListener_mouseMoved_arc_scene_event_InputEvent_float_float_R_boolean 15
+typedef jbool (*func_arc_scene_event_IbeamCursorListener_mouseMoved_arc_scene_event_InputEvent_float_float_R_boolean)(jcontext ctx, jobject self, jobject param0, jfloat param1, jfloat param2);
+#define VTABLE_arc_scene_event_IbeamCursorListener_enter_arc_scene_event_InputEvent_float_float_int_arc_scene_Element 16
+typedef void (*func_arc_scene_event_IbeamCursorListener_enter_arc_scene_event_InputEvent_float_float_int_arc_scene_Element)(jcontext ctx, jobject self, jobject param0, jfloat param1, jfloat param2, jint param3, jobject param4);
+#define VTABLE_arc_scene_event_IbeamCursorListener_exit_arc_scene_event_InputEvent_float_float_int_arc_scene_Element 17
+typedef void (*func_arc_scene_event_IbeamCursorListener_exit_arc_scene_event_InputEvent_float_float_int_arc_scene_Element)(jcontext ctx, jobject self, jobject param0, jfloat param1, jfloat param2, jint param3, jobject param4);
+#define VTABLE_arc_scene_event_IbeamCursorListener_scrolled_arc_scene_event_InputEvent_float_float_float_float_R_boolean 18
+typedef jbool (*func_arc_scene_event_IbeamCursorListener_scrolled_arc_scene_event_InputEvent_float_float_float_float_R_boolean)(jcontext ctx, jobject self, jobject param0, jfloat param1, jfloat param2, jfloat param3, jfloat param4);
+#define VTABLE_arc_scene_event_IbeamCursorListener_keyDown_arc_scene_event_InputEvent_arc_input_KeyCode_R_boolean 19
+typedef jbool (*func_arc_scene_event_IbeamCursorListener_keyDown_arc_scene_event_InputEvent_arc_input_KeyCode_R_boolean)(jcontext ctx, jobject self, jobject param0, jobject param1);
+#define VTABLE_arc_scene_event_IbeamCursorListener_keyUp_arc_scene_event_InputEvent_arc_input_KeyCode_R_boolean 20
+typedef jbool (*func_arc_scene_event_IbeamCursorListener_keyUp_arc_scene_event_InputEvent_arc_input_KeyCode_R_boolean)(jcontext ctx, jobject self, jobject param0, jobject param1);
+#define VTABLE_arc_scene_event_IbeamCursorListener_keyTyped_arc_scene_event_InputEvent_char_R_boolean 21
+typedef jbool (*func_arc_scene_event_IbeamCursorListener_keyTyped_arc_scene_event_InputEvent_char_R_boolean)(jcontext ctx, jobject self, jobject param0, jchar param1);
+#define VTABLE_arc_scene_event_IbeamCursorListener_cancel 22
+typedef void (*func_arc_scene_event_IbeamCursorListener_cancel)(jcontext ctx, jobject self);
+#define VTABLE_arc_scene_event_IbeamCursorListener_clicked_arc_scene_event_InputEvent_float_float 23
+typedef void (*func_arc_scene_event_IbeamCursorListener_clicked_arc_scene_event_InputEvent_float_float)(jcontext ctx, jobject self, jobject param0, jfloat param1, jfloat param2);
+#define VTABLE_arc_scene_event_IbeamCursorListener_isOver_arc_scene_Element_float_float_R_boolean 24
+typedef jbool (*func_arc_scene_event_IbeamCursorListener_isOver_arc_scene_Element_float_float_R_boolean)(jcontext ctx, jobject self, jobject param0, jfloat param1, jfloat param2);
+#define VTABLE_arc_scene_event_IbeamCursorListener_inTapSquare_float_float_R_boolean 25
+typedef jbool (*func_arc_scene_event_IbeamCursorListener_inTapSquare_float_float_R_boolean)(jcontext ctx, jobject self, jfloat param0, jfloat param1);
+#define VTABLE_arc_scene_event_IbeamCursorListener_inTapSquare_R_boolean 26
+typedef jbool (*func_arc_scene_event_IbeamCursorListener_inTapSquare_R_boolean)(jcontext ctx, jobject self);
+#define VTABLE_arc_scene_event_IbeamCursorListener_invalidateTapSquare 27
+typedef void (*func_arc_scene_event_IbeamCursorListener_invalidateTapSquare)(jcontext ctx, jobject self);
+#define VTABLE_arc_scene_event_IbeamCursorListener_isPressed_R_boolean 28
+typedef jbool (*func_arc_scene_event_IbeamCursorListener_isPressed_R_boolean)(jcontext ctx, jobject self);
+#define VTABLE_arc_scene_event_IbeamCursorListener_isVisualPressed_R_boolean 29
+typedef jbool (*func_arc_scene_event_IbeamCursorListener_isVisualPressed_R_boolean)(jcontext ctx, jobject self);
+#define VTABLE_arc_scene_event_IbeamCursorListener_isOver_R_boolean 30
+typedef jbool (*func_arc_scene_event_IbeamCursorListener_isOver_R_boolean)(jcontext ctx, jobject self);
+#define VTABLE_arc_scene_event_IbeamCursorListener_getTapSquareSize_R_float 31
+typedef jfloat (*func_arc_scene_event_IbeamCursorListener_getTapSquareSize_R_float)(jcontext ctx, jobject self);
+#define VTABLE_arc_scene_event_IbeamCursorListener_setTapSquareSize_float 32
+typedef void (*func_arc_scene_event_IbeamCursorListener_setTapSquareSize_float)(jcontext ctx, jobject self, jfloat param0);
+#define VTABLE_arc_scene_event_IbeamCursorListener_setTapCountInterval_float 33
+typedef void (*func_arc_scene_event_IbeamCursorListener_setTapCountInterval_float)(jcontext ctx, jobject self, jfloat param0);
+#define VTABLE_arc_scene_event_IbeamCursorListener_getTapCount_R_int 34
+typedef jint (*func_arc_scene_event_IbeamCursorListener_getTapCount_R_int)(jcontext ctx, jobject self);
+#define VTABLE_arc_scene_event_IbeamCursorListener_setTapCount_int 35
+typedef void (*func_arc_scene_event_IbeamCursorListener_setTapCount_int)(jcontext ctx, jobject self, jint param0);
+#define VTABLE_arc_scene_event_IbeamCursorListener_getTouchDownX_R_float 36
+typedef jfloat (*func_arc_scene_event_IbeamCursorListener_getTouchDownX_R_float)(jcontext ctx, jobject self);
+#define VTABLE_arc_scene_event_IbeamCursorListener_getTouchDownY_R_float 37
+typedef jfloat (*func_arc_scene_event_IbeamCursorListener_getTouchDownY_R_float)(jcontext ctx, jobject self);
+#define VTABLE_arc_scene_event_IbeamCursorListener_getPressedButton_R_arc_input_KeyCode 38
+typedef jobject (*func_arc_scene_event_IbeamCursorListener_getPressedButton_R_arc_input_KeyCode)(jcontext ctx, jobject self);
+#define VTABLE_arc_scene_event_IbeamCursorListener_getPressedPointer_R_int 39
+typedef jint (*func_arc_scene_event_IbeamCursorListener_getPressedPointer_R_int)(jcontext ctx, jobject self);
+#define VTABLE_arc_scene_event_IbeamCursorListener_getButton_R_arc_input_KeyCode 40
+typedef jobject (*func_arc_scene_event_IbeamCursorListener_getButton_R_arc_input_KeyCode)(jcontext ctx, jobject self);
+#define VTABLE_arc_scene_event_IbeamCursorListener_setButton_arc_input_KeyCode 41
+typedef void (*func_arc_scene_event_IbeamCursorListener_setButton_arc_input_KeyCode)(jcontext ctx, jobject self, jobject param0);
+
+void mark_arc_scene_event_IbeamCursorListener(jobject object, jint mark, jint depth);
+void clinit_arc_scene_event_IbeamCursorListener(jcontext ctx);
+void init_arc_scene_event_IbeamCursorListener(jcontext ctx, jobject self);
+void M_arc_scene_event_IbeamCursorListener_enter_arc_scene_event_InputEvent_float_float_int_arc_scene_Element(jcontext ctx, jobject self, jobject param0, jfloat param1, jfloat param2, jint param3, jobject param4);
+void M_arc_scene_event_IbeamCursorListener_exit_arc_scene_event_InputEvent_float_float_int_arc_scene_Element(jcontext ctx, jobject self, jobject param0, jfloat param1, jfloat param2, jint param3, jobject param4);
+
+#ifdef __cplusplus
+}
+#endif
+
+#endif

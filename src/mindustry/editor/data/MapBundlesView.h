@@ -1,0 +1,80 @@
+#ifndef HEADER_mindustry_editor_data_MapBundlesView
+#define HEADER_mindustry_editor_data_MapBundlesView
+
+#include "Clearwing.h"
+#include "java/lang/Object.h"
+#include "mindustry/editor/data/AssetView.h"
+
+#ifdef __cplusplus
+extern "C" {
+#endif
+
+typedef struct mindustry_editor_data_MapBundlesView {
+	java_lang_Object parent;
+} mindustry_editor_data_MapBundlesView;
+
+extern Class class_mindustry_editor_data_MapBundlesView;
+
+
+#define VTABLE_mindustry_editor_data_MapBundlesView_hashCode_R_int 0
+typedef jint (*func_mindustry_editor_data_MapBundlesView_hashCode_R_int)(jcontext ctx, jobject self);
+#define VTABLE_mindustry_editor_data_MapBundlesView_equals_java_lang_Object_R_boolean 1
+typedef jbool (*func_mindustry_editor_data_MapBundlesView_equals_java_lang_Object_R_boolean)(jcontext ctx, jobject self, jobject param0);
+#define VTABLE_mindustry_editor_data_MapBundlesView_clone_R_java_lang_Object 2
+typedef jobject (*func_mindustry_editor_data_MapBundlesView_clone_R_java_lang_Object)(jcontext ctx, jobject self);
+#define VTABLE_mindustry_editor_data_MapBundlesView_getClass_R_java_lang_Class 3
+typedef jobject (*func_mindustry_editor_data_MapBundlesView_getClass_R_java_lang_Class)(jcontext ctx, jobject self);
+#define VTABLE_mindustry_editor_data_MapBundlesView_toString_R_java_lang_String 4
+typedef jobject (*func_mindustry_editor_data_MapBundlesView_toString_R_java_lang_String)(jcontext ctx, jobject self);
+#define VTABLE_mindustry_editor_data_MapBundlesView_finalize 5
+typedef void (*func_mindustry_editor_data_MapBundlesView_finalize)(jcontext ctx, jobject self);
+#define VTABLE_mindustry_editor_data_MapBundlesView_notify 6
+typedef void (*func_mindustry_editor_data_MapBundlesView_notify)(jcontext ctx, jobject self);
+#define VTABLE_mindustry_editor_data_MapBundlesView_notifyAll 7
+typedef void (*func_mindustry_editor_data_MapBundlesView_notifyAll)(jcontext ctx, jobject self);
+#define VTABLE_mindustry_editor_data_MapBundlesView_wait 8
+typedef void (*func_mindustry_editor_data_MapBundlesView_wait)(jcontext ctx, jobject self);
+#define VTABLE_mindustry_editor_data_MapBundlesView_wait_long 9
+typedef void (*func_mindustry_editor_data_MapBundlesView_wait_long)(jcontext ctx, jobject self, jlong param0);
+#define VTABLE_mindustry_editor_data_MapBundlesView_wait_long_int 10
+typedef void (*func_mindustry_editor_data_MapBundlesView_wait_long_int)(jcontext ctx, jobject self, jlong param0, jint param1);
+#define VTABLE_mindustry_editor_data_MapBundlesView_build_mindustry_editor_data_MapAssetsDialog_arc_scene_ui_layout_Table 11
+typedef void (*func_mindustry_editor_data_MapBundlesView_build_mindustry_editor_data_MapAssetsDialog_arc_scene_ui_layout_Table)(jcontext ctx, jobject self, jobject param0, jobject param1);
+#define VTABLE_mindustry_editor_data_MapBundlesView_buildButtons_mindustry_editor_data_MapAssetsDialog_arc_scene_ui_layout_Table 12
+typedef void (*func_mindustry_editor_data_MapBundlesView_buildButtons_mindustry_editor_data_MapAssetsDialog_arc_scene_ui_layout_Table)(jcontext ctx, jobject self, jobject param0, jobject param1);
+
+void mark_mindustry_editor_data_MapBundlesView(jobject object, jint mark, jint depth);
+void clinit_mindustry_editor_data_MapBundlesView(jcontext ctx);
+void init_mindustry_editor_data_MapBundlesView(jcontext ctx, jobject self);
+void M_mindustry_editor_data_MapBundlesView_build_mindustry_editor_data_MapAssetsDialog_arc_scene_ui_layout_Table(jcontext ctx, jobject self, jobject param0, jobject param1);
+void M_mindustry_editor_data_MapBundlesView_buildButtons_mindustry_editor_data_MapAssetsDialog_arc_scene_ui_layout_Table(jcontext ctx, jobject self, jobject param0, jobject param1);
+void SM_mindustry_editor_data_MapBundlesView_lambda$buildButtons$0_mindustry_editor_data_MapAssetsDialog(jcontext ctx, jobject param0);
+void SM_mindustry_editor_data_MapBundlesView_lambda$buildButtons$1_mindustry_editor_data_MapAssetsDialog_Array1_arc_files_Fi(jcontext ctx, jobject param0, jobject param1);
+void SM_mindustry_editor_data_MapBundlesView_lambda$build$20_arc_struct_Seq_mindustry_mod_data_BundleAsset_mindustry_editor_data_MapAssetsDialog(jcontext ctx, jobject param0, jobject param1, jobject param2);
+void SM_mindustry_editor_data_MapBundlesView_lambda$build$21_arc_struct_Seq_mindustry_mod_data_BundleAsset_mindustry_editor_data_MapAssetsDialog(jcontext ctx, jobject param0, jobject param1, jobject param2);
+void SM_mindustry_editor_data_MapBundlesView_lambda$build$14_arc_files_Fi_mindustry_mod_data_BundleAsset(jcontext ctx, jobject param0, jobject param1);
+void SM_mindustry_editor_data_MapBundlesView_lambda$build$15_mindustry_ui_dialogs_BaseDialog_arc_files_Fi_mindustry_mod_data_BundleAsset_arc_scene_ui_layout_Table(jcontext ctx, jobject param0, jobject param1, jobject param2, jobject param3);
+void SM_mindustry_editor_data_MapBundlesView_lambda$build$16_mindustry_ui_dialogs_BaseDialog_arc_files_Fi_mindustry_mod_data_BundleAsset_arc_scene_ui_layout_Table(jcontext ctx, jobject param0, jobject param1, jobject param2, jobject param3);
+void SM_mindustry_editor_data_MapBundlesView_lambda$build$19_mindustry_ui_dialogs_BaseDialog_mindustry_mod_data_BundleAsset_arc_files_Fi(jcontext ctx, jobject param0, jobject param1, jobject param2);
+jbool SM_mindustry_editor_data_MapBundlesView_lambda$build$18_arc_scene_ui_TextButton_R_boolean(jcontext ctx, jobject param0);
+void SM_mindustry_editor_data_MapBundlesView_lambda$build$17_mindustry_ui_dialogs_BaseDialog_arc_files_Fi(jcontext ctx, jobject param0, jobject param1);
+void SM_mindustry_editor_data_MapBundlesView_lambda$build$6_mindustry_mod_data_BundleAsset_mindustry_editor_data_MapAssetsDialog(jcontext ctx, jobject param0, jobject param1);
+void SM_mindustry_editor_data_MapBundlesView_lambda$build$8_mindustry_ui_dialogs_BaseDialog_arc_func_Cons_arc_scene_ui_layout_Table(jcontext ctx, jobject param0, jobject param1, jobject param2);
+void SM_mindustry_editor_data_MapBundlesView_lambda$build$9_mindustry_ui_dialogs_BaseDialog_arc_func_Cons_arc_scene_ui_layout_Table(jcontext ctx, jobject param0, jobject param1, jobject param2);
+void SM_mindustry_editor_data_MapBundlesView_lambda$build$12_mindustry_ui_dialogs_BaseDialog_arc_func_Cons(jcontext ctx, jobject param0, jobject param1);
+void SM_mindustry_editor_data_MapBundlesView_lambda$build$13_mindustry_ui_dialogs_BaseDialog_arc_func_Cons_arc_files_Fi(jcontext ctx, jobject param0, jobject param1, jobject param2);
+jbool SM_mindustry_editor_data_MapBundlesView_lambda$build$11_arc_scene_ui_TextButton_R_boolean(jcontext ctx, jobject param0);
+void SM_mindustry_editor_data_MapBundlesView_lambda$build$10_mindustry_ui_dialogs_BaseDialog_arc_func_Cons(jcontext ctx, jobject param0, jobject param1);
+void SM_mindustry_editor_data_MapBundlesView_lambda$build$7_mindustry_mod_data_BundleAsset_mindustry_editor_data_MapAssetsDialog_java_lang_String(jcontext ctx, jobject param0, jobject param1, jobject param2);
+jbool SM_mindustry_editor_data_MapBundlesView_lambda$build$5_arc_files_Fi_arc_scene_ui_TextButton_R_boolean(jcontext ctx, jobject param0, jobject param1);
+void SM_mindustry_editor_data_MapBundlesView_lambda$build$4_arc_scene_ui_TextButton(jcontext ctx, jobject param0);
+void SM_mindustry_editor_data_MapBundlesView_lambda$build$1_mindustry_mod_data_BundleAsset_arc_files_Fi(jcontext ctx, jobject param0, jobject param1);
+void SM_mindustry_editor_data_MapBundlesView_lambda$build$2_arc_files_Fi_arc_scene_ui_layout_Table(jcontext ctx, jobject param0, jobject param1);
+void SM_mindustry_editor_data_MapBundlesView_lambda$build$3_arc_files_Fi_arc_scene_ui_layout_Table(jcontext ctx, jobject param0, jobject param1);
+void SM_mindustry_editor_data_MapBundlesView_lambda$build$0(jcontext ctx);
+
+#ifdef __cplusplus
+}
+#endif
+
+#endif

@@ -1,0 +1,116 @@
+#ifndef HEADER_arc_math_geom_Vector
+#define HEADER_arc_math_geom_Vector
+
+#include "Clearwing.h"
+#include "java/lang/Object.h"
+
+#ifdef __cplusplus
+extern "C" {
+#endif
+
+typedef struct arc_math_geom_Vector {
+	java_lang_Object parent;
+} arc_math_geom_Vector;
+
+extern Class class_arc_math_geom_Vector;
+
+
+#define INDEX_arc_math_geom_Vector_cpy_R_arc_math_geom_Vector 0
+typedef jobject (*func_arc_math_geom_Vector_cpy_R_arc_math_geom_Vector)(jcontext ctx, jobject self);
+#define INDEX_arc_math_geom_Vector_len_R_float 1
+typedef jfloat (*func_arc_math_geom_Vector_len_R_float)(jcontext ctx, jobject self);
+#define INDEX_arc_math_geom_Vector_len2_R_float 2
+typedef jfloat (*func_arc_math_geom_Vector_len2_R_float)(jcontext ctx, jobject self);
+#define INDEX_arc_math_geom_Vector_limit_float_R_arc_math_geom_Vector 3
+typedef jobject (*func_arc_math_geom_Vector_limit_float_R_arc_math_geom_Vector)(jcontext ctx, jobject self, jfloat param0);
+#define INDEX_arc_math_geom_Vector_limit2_float_R_arc_math_geom_Vector 4
+typedef jobject (*func_arc_math_geom_Vector_limit2_float_R_arc_math_geom_Vector)(jcontext ctx, jobject self, jfloat param0);
+#define INDEX_arc_math_geom_Vector_setLength_float_R_arc_math_geom_Vector 5
+typedef jobject (*func_arc_math_geom_Vector_setLength_float_R_arc_math_geom_Vector)(jcontext ctx, jobject self, jfloat param0);
+#define INDEX_arc_math_geom_Vector_setLength2_float_R_arc_math_geom_Vector 6
+typedef jobject (*func_arc_math_geom_Vector_setLength2_float_R_arc_math_geom_Vector)(jcontext ctx, jobject self, jfloat param0);
+#define INDEX_arc_math_geom_Vector_clamp_float_float_R_arc_math_geom_Vector 7
+typedef jobject (*func_arc_math_geom_Vector_clamp_float_float_R_arc_math_geom_Vector)(jcontext ctx, jobject self, jfloat param0, jfloat param1);
+#define INDEX_arc_math_geom_Vector_set_arc_math_geom_Vector_R_arc_math_geom_Vector 8
+typedef jobject (*func_arc_math_geom_Vector_set_arc_math_geom_Vector_R_arc_math_geom_Vector)(jcontext ctx, jobject self, jobject param0);
+#define INDEX_arc_math_geom_Vector_sub_arc_math_geom_Vector_R_arc_math_geom_Vector 9
+typedef jobject (*func_arc_math_geom_Vector_sub_arc_math_geom_Vector_R_arc_math_geom_Vector)(jcontext ctx, jobject self, jobject param0);
+#define INDEX_arc_math_geom_Vector_nor_R_arc_math_geom_Vector 10
+typedef jobject (*func_arc_math_geom_Vector_nor_R_arc_math_geom_Vector)(jcontext ctx, jobject self);
+#define INDEX_arc_math_geom_Vector_add_arc_math_geom_Vector_R_arc_math_geom_Vector 11
+typedef jobject (*func_arc_math_geom_Vector_add_arc_math_geom_Vector_R_arc_math_geom_Vector)(jcontext ctx, jobject self, jobject param0);
+#define INDEX_arc_math_geom_Vector_dot_arc_math_geom_Vector_R_float 12
+typedef jfloat (*func_arc_math_geom_Vector_dot_arc_math_geom_Vector_R_float)(jcontext ctx, jobject self, jobject param0);
+#define INDEX_arc_math_geom_Vector_scl_float_R_arc_math_geom_Vector 13
+typedef jobject (*func_arc_math_geom_Vector_scl_float_R_arc_math_geom_Vector)(jcontext ctx, jobject self, jfloat param0);
+#define INDEX_arc_math_geom_Vector_scl_arc_math_geom_Vector_R_arc_math_geom_Vector 14
+typedef jobject (*func_arc_math_geom_Vector_scl_arc_math_geom_Vector_R_arc_math_geom_Vector)(jcontext ctx, jobject self, jobject param0);
+#define INDEX_arc_math_geom_Vector_div_arc_math_geom_Vector_R_arc_math_geom_Vector 15
+typedef jobject (*func_arc_math_geom_Vector_div_arc_math_geom_Vector_R_arc_math_geom_Vector)(jcontext ctx, jobject self, jobject param0);
+#define INDEX_arc_math_geom_Vector_dst_arc_math_geom_Vector_R_float 16
+typedef jfloat (*func_arc_math_geom_Vector_dst_arc_math_geom_Vector_R_float)(jcontext ctx, jobject self, jobject param0);
+#define INDEX_arc_math_geom_Vector_dst2_arc_math_geom_Vector_R_float 17
+typedef jfloat (*func_arc_math_geom_Vector_dst2_arc_math_geom_Vector_R_float)(jcontext ctx, jobject self, jobject param0);
+#define INDEX_arc_math_geom_Vector_lerp_arc_math_geom_Vector_float_R_arc_math_geom_Vector 18
+typedef jobject (*func_arc_math_geom_Vector_lerp_arc_math_geom_Vector_float_R_arc_math_geom_Vector)(jcontext ctx, jobject self, jobject param0, jfloat param1);
+#define INDEX_arc_math_geom_Vector_interpolate_arc_math_geom_Vector_float_arc_math_Interp_R_arc_math_geom_Vector 19
+typedef jobject (*func_arc_math_geom_Vector_interpolate_arc_math_geom_Vector_float_arc_math_Interp_R_arc_math_geom_Vector)(jcontext ctx, jobject self, jobject param0, jfloat param1, jobject param2);
+#define INDEX_arc_math_geom_Vector_setToRandomDirection_R_arc_math_geom_Vector 20
+typedef jobject (*func_arc_math_geom_Vector_setToRandomDirection_R_arc_math_geom_Vector)(jcontext ctx, jobject self);
+#define INDEX_arc_math_geom_Vector_isUnit_R_boolean 21
+typedef jbool (*func_arc_math_geom_Vector_isUnit_R_boolean)(jcontext ctx, jobject self);
+#define INDEX_arc_math_geom_Vector_isUnit_float_R_boolean 22
+typedef jbool (*func_arc_math_geom_Vector_isUnit_float_R_boolean)(jcontext ctx, jobject self, jfloat param0);
+#define INDEX_arc_math_geom_Vector_isZero_R_boolean 23
+typedef jbool (*func_arc_math_geom_Vector_isZero_R_boolean)(jcontext ctx, jobject self);
+#define INDEX_arc_math_geom_Vector_isZero_float_R_boolean 24
+typedef jbool (*func_arc_math_geom_Vector_isZero_float_R_boolean)(jcontext ctx, jobject self, jfloat param0);
+#define INDEX_arc_math_geom_Vector_isOnLine_arc_math_geom_Vector_float_R_boolean 25
+typedef jbool (*func_arc_math_geom_Vector_isOnLine_arc_math_geom_Vector_float_R_boolean)(jcontext ctx, jobject self, jobject param0, jfloat param1);
+#define INDEX_arc_math_geom_Vector_isOnLine_arc_math_geom_Vector_R_boolean 26
+typedef jbool (*func_arc_math_geom_Vector_isOnLine_arc_math_geom_Vector_R_boolean)(jcontext ctx, jobject self, jobject param0);
+#define INDEX_arc_math_geom_Vector_isCollinear_arc_math_geom_Vector_float_R_boolean 27
+typedef jbool (*func_arc_math_geom_Vector_isCollinear_arc_math_geom_Vector_float_R_boolean)(jcontext ctx, jobject self, jobject param0, jfloat param1);
+#define INDEX_arc_math_geom_Vector_isCollinear_arc_math_geom_Vector_R_boolean 28
+typedef jbool (*func_arc_math_geom_Vector_isCollinear_arc_math_geom_Vector_R_boolean)(jcontext ctx, jobject self, jobject param0);
+#define INDEX_arc_math_geom_Vector_isCollinearOpposite_arc_math_geom_Vector_float_R_boolean 29
+typedef jbool (*func_arc_math_geom_Vector_isCollinearOpposite_arc_math_geom_Vector_float_R_boolean)(jcontext ctx, jobject self, jobject param0, jfloat param1);
+#define INDEX_arc_math_geom_Vector_isCollinearOpposite_arc_math_geom_Vector_R_boolean 30
+typedef jbool (*func_arc_math_geom_Vector_isCollinearOpposite_arc_math_geom_Vector_R_boolean)(jcontext ctx, jobject self, jobject param0);
+#define INDEX_arc_math_geom_Vector_isPerpendicular_arc_math_geom_Vector_R_boolean 31
+typedef jbool (*func_arc_math_geom_Vector_isPerpendicular_arc_math_geom_Vector_R_boolean)(jcontext ctx, jobject self, jobject param0);
+#define INDEX_arc_math_geom_Vector_isPerpendicular_arc_math_geom_Vector_float_R_boolean 32
+typedef jbool (*func_arc_math_geom_Vector_isPerpendicular_arc_math_geom_Vector_float_R_boolean)(jcontext ctx, jobject self, jobject param0, jfloat param1);
+#define INDEX_arc_math_geom_Vector_hasSameDirection_arc_math_geom_Vector_R_boolean 33
+typedef jbool (*func_arc_math_geom_Vector_hasSameDirection_arc_math_geom_Vector_R_boolean)(jcontext ctx, jobject self, jobject param0);
+#define INDEX_arc_math_geom_Vector_hasOppositeDirection_arc_math_geom_Vector_R_boolean 34
+typedef jbool (*func_arc_math_geom_Vector_hasOppositeDirection_arc_math_geom_Vector_R_boolean)(jcontext ctx, jobject self, jobject param0);
+#define INDEX_arc_math_geom_Vector_epsilonEquals_arc_math_geom_Vector_float_R_boolean 35
+typedef jbool (*func_arc_math_geom_Vector_epsilonEquals_arc_math_geom_Vector_float_R_boolean)(jcontext ctx, jobject self, jobject param0, jfloat param1);
+#define INDEX_arc_math_geom_Vector_mulAdd_arc_math_geom_Vector_float_R_arc_math_geom_Vector 36
+typedef jobject (*func_arc_math_geom_Vector_mulAdd_arc_math_geom_Vector_float_R_arc_math_geom_Vector)(jcontext ctx, jobject self, jobject param0, jfloat param1);
+#define INDEX_arc_math_geom_Vector_mulAdd_arc_math_geom_Vector_arc_math_geom_Vector_R_arc_math_geom_Vector 37
+typedef jobject (*func_arc_math_geom_Vector_mulAdd_arc_math_geom_Vector_arc_math_geom_Vector_R_arc_math_geom_Vector)(jcontext ctx, jobject self, jobject param0, jobject param1);
+#define INDEX_arc_math_geom_Vector_setZero_R_arc_math_geom_Vector 38
+typedef jobject (*func_arc_math_geom_Vector_setZero_R_arc_math_geom_Vector)(jcontext ctx, jobject self);
+#define INDEX_arc_math_geom_Vector_plus_arc_math_geom_Vector_R_arc_math_geom_Vector 39
+typedef jobject (*func_arc_math_geom_Vector_plus_arc_math_geom_Vector_R_arc_math_geom_Vector)(jcontext ctx, jobject self, jobject param0);
+#define INDEX_arc_math_geom_Vector_minus_arc_math_geom_Vector_R_arc_math_geom_Vector 40
+typedef jobject (*func_arc_math_geom_Vector_minus_arc_math_geom_Vector_R_arc_math_geom_Vector)(jcontext ctx, jobject self, jobject param0);
+#define INDEX_arc_math_geom_Vector_unaryMinus_R_arc_math_geom_Vector 41
+typedef jobject (*func_arc_math_geom_Vector_unaryMinus_R_arc_math_geom_Vector)(jcontext ctx, jobject self);
+#define INDEX_arc_math_geom_Vector_times_arc_math_geom_Vector_R_arc_math_geom_Vector 42
+typedef jobject (*func_arc_math_geom_Vector_times_arc_math_geom_Vector_R_arc_math_geom_Vector)(jcontext ctx, jobject self, jobject param0);
+
+void mark_arc_math_geom_Vector(jobject object, jint mark, jint depth);
+void clinit_arc_math_geom_Vector(jcontext ctx);
+jobject M_arc_math_geom_Vector_plus_arc_math_geom_Vector_R_arc_math_geom_Vector(jcontext ctx, jobject self, jobject param0);
+jobject M_arc_math_geom_Vector_minus_arc_math_geom_Vector_R_arc_math_geom_Vector(jcontext ctx, jobject self, jobject param0);
+jobject M_arc_math_geom_Vector_unaryMinus_R_arc_math_geom_Vector(jcontext ctx, jobject self);
+jobject M_arc_math_geom_Vector_times_arc_math_geom_Vector_R_arc_math_geom_Vector(jcontext ctx, jobject self, jobject param0);
+
+#ifdef __cplusplus
+}
+#endif
+
+#endif

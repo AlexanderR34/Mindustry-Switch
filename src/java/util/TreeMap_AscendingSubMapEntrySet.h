@@ -1,0 +1,183 @@
+#ifndef HEADER_java_util_TreeMap$AscendingSubMapEntrySet
+#define HEADER_java_util_TreeMap$AscendingSubMapEntrySet
+
+#include "Clearwing.h"
+#include "java/util/AbstractSet.h"
+#include "java/util/NavigableSet.h"
+
+#ifdef __cplusplus
+extern "C" {
+#endif
+
+typedef struct java_util_TreeMap$AscendingSubMapEntrySet {
+	java_util_AbstractSet parent;
+	jbool F_hasStart;
+	jbool F_hasEnd;
+	jbool F_startInclusive;
+	jbool F_endInclusive;
+	jref F_startEntry;
+	jref F_lastentry;
+	jref F_map;
+} java_util_TreeMap$AscendingSubMapEntrySet;
+
+extern Class class_java_util_TreeMap$AscendingSubMapEntrySet;
+
+
+#define VTABLE_java_util_TreeMap$AscendingSubMapEntrySet_hashCode_R_int 0
+typedef jint (*func_java_util_TreeMap$AscendingSubMapEntrySet_hashCode_R_int)(jcontext ctx, jobject self);
+#define VTABLE_java_util_TreeMap$AscendingSubMapEntrySet_equals_java_lang_Object_R_boolean 1
+typedef jbool (*func_java_util_TreeMap$AscendingSubMapEntrySet_equals_java_lang_Object_R_boolean)(jcontext ctx, jobject self, jobject param0);
+#define VTABLE_java_util_TreeMap$AscendingSubMapEntrySet_clone_R_java_lang_Object 2
+typedef jobject (*func_java_util_TreeMap$AscendingSubMapEntrySet_clone_R_java_lang_Object)(jcontext ctx, jobject self);
+#define VTABLE_java_util_TreeMap$AscendingSubMapEntrySet_getClass_R_java_lang_Class 3
+typedef jobject (*func_java_util_TreeMap$AscendingSubMapEntrySet_getClass_R_java_lang_Class)(jcontext ctx, jobject self);
+#define VTABLE_java_util_TreeMap$AscendingSubMapEntrySet_toString_R_java_lang_String 4
+typedef jobject (*func_java_util_TreeMap$AscendingSubMapEntrySet_toString_R_java_lang_String)(jcontext ctx, jobject self);
+#define VTABLE_java_util_TreeMap$AscendingSubMapEntrySet_finalize 5
+typedef void (*func_java_util_TreeMap$AscendingSubMapEntrySet_finalize)(jcontext ctx, jobject self);
+#define VTABLE_java_util_TreeMap$AscendingSubMapEntrySet_notify 6
+typedef void (*func_java_util_TreeMap$AscendingSubMapEntrySet_notify)(jcontext ctx, jobject self);
+#define VTABLE_java_util_TreeMap$AscendingSubMapEntrySet_notifyAll 7
+typedef void (*func_java_util_TreeMap$AscendingSubMapEntrySet_notifyAll)(jcontext ctx, jobject self);
+#define VTABLE_java_util_TreeMap$AscendingSubMapEntrySet_wait 8
+typedef void (*func_java_util_TreeMap$AscendingSubMapEntrySet_wait)(jcontext ctx, jobject self);
+#define VTABLE_java_util_TreeMap$AscendingSubMapEntrySet_wait_long 9
+typedef void (*func_java_util_TreeMap$AscendingSubMapEntrySet_wait_long)(jcontext ctx, jobject self, jlong param0);
+#define VTABLE_java_util_TreeMap$AscendingSubMapEntrySet_wait_long_int 10
+typedef void (*func_java_util_TreeMap$AscendingSubMapEntrySet_wait_long_int)(jcontext ctx, jobject self, jlong param0, jint param1);
+#define VTABLE_java_util_TreeMap$AscendingSubMapEntrySet_iterator_R_java_util_Iterator 11
+typedef jobject (*func_java_util_TreeMap$AscendingSubMapEntrySet_iterator_R_java_util_Iterator)(jcontext ctx, jobject self);
+#define VTABLE_java_util_TreeMap$AscendingSubMapEntrySet_forEach_java_util_function_Consumer 12
+typedef void (*func_java_util_TreeMap$AscendingSubMapEntrySet_forEach_java_util_function_Consumer)(jcontext ctx, jobject self, jobject param0);
+#define VTABLE_java_util_TreeMap$AscendingSubMapEntrySet_spliterator_R_java_util_Spliterator 13
+typedef jobject (*func_java_util_TreeMap$AscendingSubMapEntrySet_spliterator_R_java_util_Spliterator)(jcontext ctx, jobject self);
+#define VTABLE_java_util_TreeMap$AscendingSubMapEntrySet_add_java_lang_Object_R_boolean 14
+typedef jbool (*func_java_util_TreeMap$AscendingSubMapEntrySet_add_java_lang_Object_R_boolean)(jcontext ctx, jobject self, jobject param0);
+#define VTABLE_java_util_TreeMap$AscendingSubMapEntrySet_addAll_java_util_Collection_R_boolean 15
+typedef jbool (*func_java_util_TreeMap$AscendingSubMapEntrySet_addAll_java_util_Collection_R_boolean)(jcontext ctx, jobject self, jobject param0);
+#define VTABLE_java_util_TreeMap$AscendingSubMapEntrySet_clear 16
+typedef void (*func_java_util_TreeMap$AscendingSubMapEntrySet_clear)(jcontext ctx, jobject self);
+#define VTABLE_java_util_TreeMap$AscendingSubMapEntrySet_contains_java_lang_Object_R_boolean 17
+typedef jbool (*func_java_util_TreeMap$AscendingSubMapEntrySet_contains_java_lang_Object_R_boolean)(jcontext ctx, jobject self, jobject param0);
+#define VTABLE_java_util_TreeMap$AscendingSubMapEntrySet_containsAll_java_util_Collection_R_boolean 18
+typedef jbool (*func_java_util_TreeMap$AscendingSubMapEntrySet_containsAll_java_util_Collection_R_boolean)(jcontext ctx, jobject self, jobject param0);
+#define VTABLE_java_util_TreeMap$AscendingSubMapEntrySet_isEmpty_R_boolean 19
+typedef jbool (*func_java_util_TreeMap$AscendingSubMapEntrySet_isEmpty_R_boolean)(jcontext ctx, jobject self);
+#define VTABLE_java_util_TreeMap$AscendingSubMapEntrySet_remove_java_lang_Object_R_boolean 20
+typedef jbool (*func_java_util_TreeMap$AscendingSubMapEntrySet_remove_java_lang_Object_R_boolean)(jcontext ctx, jobject self, jobject param0);
+#define VTABLE_java_util_TreeMap$AscendingSubMapEntrySet_removeAll_java_util_Collection_R_boolean 21
+typedef jbool (*func_java_util_TreeMap$AscendingSubMapEntrySet_removeAll_java_util_Collection_R_boolean)(jcontext ctx, jobject self, jobject param0);
+#define VTABLE_java_util_TreeMap$AscendingSubMapEntrySet_retainAll_java_util_Collection_R_boolean 22
+typedef jbool (*func_java_util_TreeMap$AscendingSubMapEntrySet_retainAll_java_util_Collection_R_boolean)(jcontext ctx, jobject self, jobject param0);
+#define VTABLE_java_util_TreeMap$AscendingSubMapEntrySet_size_R_int 23
+typedef jint (*func_java_util_TreeMap$AscendingSubMapEntrySet_size_R_int)(jcontext ctx, jobject self);
+#define VTABLE_java_util_TreeMap$AscendingSubMapEntrySet_toArray_R_Array1_java_lang_Object 24
+typedef jobject (*func_java_util_TreeMap$AscendingSubMapEntrySet_toArray_R_Array1_java_lang_Object)(jcontext ctx, jobject self);
+#define VTABLE_java_util_TreeMap$AscendingSubMapEntrySet_toArray_Array1_java_lang_Object_R_Array1_java_lang_Object 25
+typedef jobject (*func_java_util_TreeMap$AscendingSubMapEntrySet_toArray_Array1_java_lang_Object_R_Array1_java_lang_Object)(jcontext ctx, jobject self, jobject param0);
+#define VTABLE_java_util_TreeMap$AscendingSubMapEntrySet_comparator_R_java_util_Comparator 26
+typedef jobject (*func_java_util_TreeMap$AscendingSubMapEntrySet_comparator_R_java_util_Comparator)(jcontext ctx, jobject self);
+#define VTABLE_java_util_TreeMap$AscendingSubMapEntrySet_first_R_java_lang_Object 27
+typedef jobject (*func_java_util_TreeMap$AscendingSubMapEntrySet_first_R_java_lang_Object)(jcontext ctx, jobject self);
+#define VTABLE_java_util_TreeMap$AscendingSubMapEntrySet_headSet_java_lang_Object_R_java_util_SortedSet 28
+typedef jobject (*func_java_util_TreeMap$AscendingSubMapEntrySet_headSet_java_lang_Object_R_java_util_SortedSet)(jcontext ctx, jobject self, jobject param0);
+#define VTABLE_java_util_TreeMap$AscendingSubMapEntrySet_last_R_java_lang_Object 29
+typedef jobject (*func_java_util_TreeMap$AscendingSubMapEntrySet_last_R_java_lang_Object)(jcontext ctx, jobject self);
+#define VTABLE_java_util_TreeMap$AscendingSubMapEntrySet_subSet_java_lang_Object_java_lang_Object_R_java_util_SortedSet 30
+typedef jobject (*func_java_util_TreeMap$AscendingSubMapEntrySet_subSet_java_lang_Object_java_lang_Object_R_java_util_SortedSet)(jcontext ctx, jobject self, jobject param0, jobject param1);
+#define VTABLE_java_util_TreeMap$AscendingSubMapEntrySet_tailSet_java_lang_Object_R_java_util_SortedSet 31
+typedef jobject (*func_java_util_TreeMap$AscendingSubMapEntrySet_tailSet_java_lang_Object_R_java_util_SortedSet)(jcontext ctx, jobject self, jobject param0);
+#define VTABLE_java_util_TreeMap$AscendingSubMapEntrySet_pollFirst_R_java_lang_Object 32
+typedef jobject (*func_java_util_TreeMap$AscendingSubMapEntrySet_pollFirst_R_java_lang_Object)(jcontext ctx, jobject self);
+#define VTABLE_java_util_TreeMap$AscendingSubMapEntrySet_pollLast_R_java_lang_Object 33
+typedef jobject (*func_java_util_TreeMap$AscendingSubMapEntrySet_pollLast_R_java_lang_Object)(jcontext ctx, jobject self);
+#define VTABLE_java_util_TreeMap$AscendingSubMapEntrySet_higher_java_lang_Object_R_java_lang_Object 34
+typedef jobject (*func_java_util_TreeMap$AscendingSubMapEntrySet_higher_java_lang_Object_R_java_lang_Object)(jcontext ctx, jobject self, jobject param0);
+#define VTABLE_java_util_TreeMap$AscendingSubMapEntrySet_ceiling_java_lang_Object_R_java_lang_Object 35
+typedef jobject (*func_java_util_TreeMap$AscendingSubMapEntrySet_ceiling_java_lang_Object_R_java_lang_Object)(jcontext ctx, jobject self, jobject param0);
+#define VTABLE_java_util_TreeMap$AscendingSubMapEntrySet_lower_java_lang_Object_R_java_lang_Object 36
+typedef jobject (*func_java_util_TreeMap$AscendingSubMapEntrySet_lower_java_lang_Object_R_java_lang_Object)(jcontext ctx, jobject self, jobject param0);
+#define VTABLE_java_util_TreeMap$AscendingSubMapEntrySet_floor_java_lang_Object_R_java_lang_Object 37
+typedef jobject (*func_java_util_TreeMap$AscendingSubMapEntrySet_floor_java_lang_Object_R_java_lang_Object)(jcontext ctx, jobject self, jobject param0);
+#define VTABLE_java_util_TreeMap$AscendingSubMapEntrySet_descendingIterator_R_java_util_Iterator 38
+typedef jobject (*func_java_util_TreeMap$AscendingSubMapEntrySet_descendingIterator_R_java_util_Iterator)(jcontext ctx, jobject self);
+#define VTABLE_java_util_TreeMap$AscendingSubMapEntrySet_descendingSet_R_java_util_NavigableSet 39
+typedef jobject (*func_java_util_TreeMap$AscendingSubMapEntrySet_descendingSet_R_java_util_NavigableSet)(jcontext ctx, jobject self);
+#define VTABLE_java_util_TreeMap$AscendingSubMapEntrySet_subSet_java_lang_Object_boolean_java_lang_Object_boolean_R_java_util_NavigableSet 40
+typedef jobject (*func_java_util_TreeMap$AscendingSubMapEntrySet_subSet_java_lang_Object_boolean_java_lang_Object_boolean_R_java_util_NavigableSet)(jcontext ctx, jobject self, jobject param0, jbool param1, jobject param2, jbool param3);
+#define VTABLE_java_util_TreeMap$AscendingSubMapEntrySet_headSet_java_lang_Object_boolean_R_java_util_NavigableSet 41
+typedef jobject (*func_java_util_TreeMap$AscendingSubMapEntrySet_headSet_java_lang_Object_boolean_R_java_util_NavigableSet)(jcontext ctx, jobject self, jobject param0, jbool param1);
+#define VTABLE_java_util_TreeMap$AscendingSubMapEntrySet_tailSet_java_lang_Object_boolean_R_java_util_NavigableSet 42
+typedef jobject (*func_java_util_TreeMap$AscendingSubMapEntrySet_tailSet_java_lang_Object_boolean_R_java_util_NavigableSet)(jcontext ctx, jobject self, jobject param0, jbool param1);
+#define VTABLE_java_util_TreeMap$AscendingSubMapEntrySet_ceiling_java_util_Map$Entry_R_java_util_Map$Entry 43
+typedef jobject (*func_java_util_TreeMap$AscendingSubMapEntrySet_ceiling_java_util_Map$Entry_R_java_util_Map$Entry)(jcontext ctx, jobject self, jobject param0);
+#define VTABLE_java_util_TreeMap$AscendingSubMapEntrySet_floor_java_util_Map$Entry_R_java_util_Map$Entry 44
+typedef jobject (*func_java_util_TreeMap$AscendingSubMapEntrySet_floor_java_util_Map$Entry_R_java_util_Map$Entry)(jcontext ctx, jobject self, jobject param0);
+#define VTABLE_java_util_TreeMap$AscendingSubMapEntrySet_headSet_java_util_Map$Entry_boolean_R_java_util_NavigableSet 45
+typedef jobject (*func_java_util_TreeMap$AscendingSubMapEntrySet_headSet_java_util_Map$Entry_boolean_R_java_util_NavigableSet)(jcontext ctx, jobject self, jobject param0, jbool param1);
+#define VTABLE_java_util_TreeMap$AscendingSubMapEntrySet_higher_java_util_Map$Entry_R_java_util_Map$Entry 46
+typedef jobject (*func_java_util_TreeMap$AscendingSubMapEntrySet_higher_java_util_Map$Entry_R_java_util_Map$Entry)(jcontext ctx, jobject self, jobject param0);
+#define VTABLE_java_util_TreeMap$AscendingSubMapEntrySet_lower_java_util_Map$Entry_R_java_util_Map$Entry 47
+typedef jobject (*func_java_util_TreeMap$AscendingSubMapEntrySet_lower_java_util_Map$Entry_R_java_util_Map$Entry)(jcontext ctx, jobject self, jobject param0);
+#define VTABLE_java_util_TreeMap$AscendingSubMapEntrySet_pollFirst_R_java_util_Map$Entry 48
+typedef jobject (*func_java_util_TreeMap$AscendingSubMapEntrySet_pollFirst_R_java_util_Map$Entry)(jcontext ctx, jobject self);
+#define VTABLE_java_util_TreeMap$AscendingSubMapEntrySet_pollLast_R_java_util_Map$Entry 49
+typedef jobject (*func_java_util_TreeMap$AscendingSubMapEntrySet_pollLast_R_java_util_Map$Entry)(jcontext ctx, jobject self);
+#define VTABLE_java_util_TreeMap$AscendingSubMapEntrySet_subSet_java_util_Map$Entry_boolean_java_util_Map$Entry_boolean_R_java_util_NavigableSet 50
+typedef jobject (*func_java_util_TreeMap$AscendingSubMapEntrySet_subSet_java_util_Map$Entry_boolean_java_util_Map$Entry_boolean_R_java_util_NavigableSet)(jcontext ctx, jobject self, jobject param0, jbool param1, jobject param2, jbool param3);
+#define VTABLE_java_util_TreeMap$AscendingSubMapEntrySet_tailSet_java_util_Map$Entry_boolean_R_java_util_NavigableSet 51
+typedef jobject (*func_java_util_TreeMap$AscendingSubMapEntrySet_tailSet_java_util_Map$Entry_boolean_R_java_util_NavigableSet)(jcontext ctx, jobject self, jobject param0, jbool param1);
+#define VTABLE_java_util_TreeMap$AscendingSubMapEntrySet_first_R_java_util_Map$Entry 52
+typedef jobject (*func_java_util_TreeMap$AscendingSubMapEntrySet_first_R_java_util_Map$Entry)(jcontext ctx, jobject self);
+#define VTABLE_java_util_TreeMap$AscendingSubMapEntrySet_headSet_java_util_Map$Entry_R_java_util_SortedSet 53
+typedef jobject (*func_java_util_TreeMap$AscendingSubMapEntrySet_headSet_java_util_Map$Entry_R_java_util_SortedSet)(jcontext ctx, jobject self, jobject param0);
+#define VTABLE_java_util_TreeMap$AscendingSubMapEntrySet_last_R_java_util_Map$Entry 54
+typedef jobject (*func_java_util_TreeMap$AscendingSubMapEntrySet_last_R_java_util_Map$Entry)(jcontext ctx, jobject self);
+#define VTABLE_java_util_TreeMap$AscendingSubMapEntrySet_subSet_java_util_Map$Entry_java_util_Map$Entry_R_java_util_SortedSet 55
+typedef jobject (*func_java_util_TreeMap$AscendingSubMapEntrySet_subSet_java_util_Map$Entry_java_util_Map$Entry_R_java_util_SortedSet)(jcontext ctx, jobject self, jobject param0, jobject param1);
+#define VTABLE_java_util_TreeMap$AscendingSubMapEntrySet_tailSet_java_util_Map$Entry_R_java_util_SortedSet 56
+typedef jobject (*func_java_util_TreeMap$AscendingSubMapEntrySet_tailSet_java_util_Map$Entry_R_java_util_SortedSet)(jcontext ctx, jobject self, jobject param0);
+
+void mark_java_util_TreeMap$AscendingSubMapEntrySet(jobject object, jint mark, jint depth);
+void clinit_java_util_TreeMap$AscendingSubMapEntrySet(jcontext ctx);
+void init_java_util_TreeMap$AscendingSubMapEntrySet_java_util_TreeMap$NavigableSubMap(jcontext ctx, jobject self, jobject param0);
+void init_java_util_TreeMap$AscendingSubMapEntrySet_java_util_TreeMap$NavigableSubMap_java_util_Map$Entry_boolean_java_util_Map$Entry_boolean(jcontext ctx, jobject self, jobject param0, jobject param1, jbool param2, jobject param3, jbool param4);
+jobject M_java_util_TreeMap$AscendingSubMapEntrySet_iterator_R_java_util_Iterator(jcontext ctx, jobject self);
+jint M_java_util_TreeMap$AscendingSubMapEntrySet_size_R_int(jcontext ctx, jobject self);
+jobject M_java_util_TreeMap$AscendingSubMapEntrySet_ceiling_java_util_Map$Entry_R_java_util_Map$Entry(jcontext ctx, jobject self, jobject param0);
+jobject M_java_util_TreeMap$AscendingSubMapEntrySet_descendingIterator_R_java_util_Iterator(jcontext ctx, jobject self);
+jobject M_java_util_TreeMap$AscendingSubMapEntrySet_descendingSet_R_java_util_NavigableSet(jcontext ctx, jobject self);
+jobject M_java_util_TreeMap$AscendingSubMapEntrySet_floor_java_util_Map$Entry_R_java_util_Map$Entry(jcontext ctx, jobject self, jobject param0);
+jobject M_java_util_TreeMap$AscendingSubMapEntrySet_headSet_java_util_Map$Entry_boolean_R_java_util_NavigableSet(jcontext ctx, jobject self, jobject param0, jbool param1);
+jobject M_java_util_TreeMap$AscendingSubMapEntrySet_higher_java_util_Map$Entry_R_java_util_Map$Entry(jcontext ctx, jobject self, jobject param0);
+jobject M_java_util_TreeMap$AscendingSubMapEntrySet_lower_java_util_Map$Entry_R_java_util_Map$Entry(jcontext ctx, jobject self, jobject param0);
+jobject M_java_util_TreeMap$AscendingSubMapEntrySet_pollFirst_R_java_util_Map$Entry(jcontext ctx, jobject self);
+jobject M_java_util_TreeMap$AscendingSubMapEntrySet_pollLast_R_java_util_Map$Entry(jcontext ctx, jobject self);
+jobject M_java_util_TreeMap$AscendingSubMapEntrySet_subSet_java_util_Map$Entry_boolean_java_util_Map$Entry_boolean_R_java_util_NavigableSet(jcontext ctx, jobject self, jobject param0, jbool param1, jobject param2, jbool param3);
+jobject M_java_util_TreeMap$AscendingSubMapEntrySet_tailSet_java_util_Map$Entry_boolean_R_java_util_NavigableSet(jcontext ctx, jobject self, jobject param0, jbool param1);
+jobject M_java_util_TreeMap$AscendingSubMapEntrySet_comparator_R_java_util_Comparator(jcontext ctx, jobject self);
+jobject M_java_util_TreeMap$AscendingSubMapEntrySet_first_R_java_util_Map$Entry(jcontext ctx, jobject self);
+jobject M_java_util_TreeMap$AscendingSubMapEntrySet_headSet_java_util_Map$Entry_R_java_util_SortedSet(jcontext ctx, jobject self, jobject param0);
+jobject M_java_util_TreeMap$AscendingSubMapEntrySet_last_R_java_util_Map$Entry(jcontext ctx, jobject self);
+jobject M_java_util_TreeMap$AscendingSubMapEntrySet_subSet_java_util_Map$Entry_java_util_Map$Entry_R_java_util_SortedSet(jcontext ctx, jobject self, jobject param0, jobject param1);
+jobject M_java_util_TreeMap$AscendingSubMapEntrySet_tailSet_java_util_Map$Entry_R_java_util_SortedSet(jcontext ctx, jobject self, jobject param0);
+jobject M_java_util_TreeMap$AscendingSubMapEntrySet_tailSet_java_lang_Object_boolean_R_java_util_NavigableSet(jcontext ctx, jobject self, jobject param0, jbool param1);
+jobject M_java_util_TreeMap$AscendingSubMapEntrySet_headSet_java_lang_Object_boolean_R_java_util_NavigableSet(jcontext ctx, jobject self, jobject param0, jbool param1);
+jobject M_java_util_TreeMap$AscendingSubMapEntrySet_subSet_java_lang_Object_boolean_java_lang_Object_boolean_R_java_util_NavigableSet(jcontext ctx, jobject self, jobject param0, jbool param1, jobject param2, jbool param3);
+jobject M_java_util_TreeMap$AscendingSubMapEntrySet_floor_java_lang_Object_R_java_lang_Object(jcontext ctx, jobject self, jobject param0);
+jobject M_java_util_TreeMap$AscendingSubMapEntrySet_lower_java_lang_Object_R_java_lang_Object(jcontext ctx, jobject self, jobject param0);
+jobject M_java_util_TreeMap$AscendingSubMapEntrySet_ceiling_java_lang_Object_R_java_lang_Object(jcontext ctx, jobject self, jobject param0);
+jobject M_java_util_TreeMap$AscendingSubMapEntrySet_higher_java_lang_Object_R_java_lang_Object(jcontext ctx, jobject self, jobject param0);
+jobject M_java_util_TreeMap$AscendingSubMapEntrySet_pollLast_R_java_lang_Object(jcontext ctx, jobject self);
+jobject M_java_util_TreeMap$AscendingSubMapEntrySet_pollFirst_R_java_lang_Object(jcontext ctx, jobject self);
+jobject M_java_util_TreeMap$AscendingSubMapEntrySet_tailSet_java_lang_Object_R_java_util_SortedSet(jcontext ctx, jobject self, jobject param0);
+jobject M_java_util_TreeMap$AscendingSubMapEntrySet_subSet_java_lang_Object_java_lang_Object_R_java_util_SortedSet(jcontext ctx, jobject self, jobject param0, jobject param1);
+jobject M_java_util_TreeMap$AscendingSubMapEntrySet_last_R_java_lang_Object(jcontext ctx, jobject self);
+jobject M_java_util_TreeMap$AscendingSubMapEntrySet_headSet_java_lang_Object_R_java_util_SortedSet(jcontext ctx, jobject self, jobject param0);
+jobject M_java_util_TreeMap$AscendingSubMapEntrySet_first_R_java_lang_Object(jcontext ctx, jobject self);
+
+#ifdef __cplusplus
+}
+#endif
+
+#endif

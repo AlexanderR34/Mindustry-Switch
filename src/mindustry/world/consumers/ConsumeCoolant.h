@@ -1,0 +1,92 @@
+#ifndef HEADER_mindustry_world_consumers_ConsumeCoolant
+#define HEADER_mindustry_world_consumers_ConsumeCoolant
+
+#include "Clearwing.h"
+#include "mindustry/world/consumers/ConsumeLiquidFilter.h"
+
+#ifdef __cplusplus
+extern "C" {
+#endif
+
+typedef struct mindustry_world_consumers_ConsumeCoolant {
+	mindustry_world_consumers_ConsumeLiquidFilter parent;
+	jfloat F_maxTemp;
+	jfloat F_maxFlammability;
+	jbool F_allowLiquid;
+	jbool F_allowGas;
+} mindustry_world_consumers_ConsumeCoolant;
+
+extern Class class_mindustry_world_consumers_ConsumeCoolant;
+
+
+#define VTABLE_mindustry_world_consumers_ConsumeCoolant_hashCode_R_int 0
+typedef jint (*func_mindustry_world_consumers_ConsumeCoolant_hashCode_R_int)(jcontext ctx, jobject self);
+#define VTABLE_mindustry_world_consumers_ConsumeCoolant_equals_java_lang_Object_R_boolean 1
+typedef jbool (*func_mindustry_world_consumers_ConsumeCoolant_equals_java_lang_Object_R_boolean)(jcontext ctx, jobject self, jobject param0);
+#define VTABLE_mindustry_world_consumers_ConsumeCoolant_clone_R_java_lang_Object 2
+typedef jobject (*func_mindustry_world_consumers_ConsumeCoolant_clone_R_java_lang_Object)(jcontext ctx, jobject self);
+#define VTABLE_mindustry_world_consumers_ConsumeCoolant_getClass_R_java_lang_Class 3
+typedef jobject (*func_mindustry_world_consumers_ConsumeCoolant_getClass_R_java_lang_Class)(jcontext ctx, jobject self);
+#define VTABLE_mindustry_world_consumers_ConsumeCoolant_toString_R_java_lang_String 4
+typedef jobject (*func_mindustry_world_consumers_ConsumeCoolant_toString_R_java_lang_String)(jcontext ctx, jobject self);
+#define VTABLE_mindustry_world_consumers_ConsumeCoolant_finalize 5
+typedef void (*func_mindustry_world_consumers_ConsumeCoolant_finalize)(jcontext ctx, jobject self);
+#define VTABLE_mindustry_world_consumers_ConsumeCoolant_notify 6
+typedef void (*func_mindustry_world_consumers_ConsumeCoolant_notify)(jcontext ctx, jobject self);
+#define VTABLE_mindustry_world_consumers_ConsumeCoolant_notifyAll 7
+typedef void (*func_mindustry_world_consumers_ConsumeCoolant_notifyAll)(jcontext ctx, jobject self);
+#define VTABLE_mindustry_world_consumers_ConsumeCoolant_wait 8
+typedef void (*func_mindustry_world_consumers_ConsumeCoolant_wait)(jcontext ctx, jobject self);
+#define VTABLE_mindustry_world_consumers_ConsumeCoolant_wait_long 9
+typedef void (*func_mindustry_world_consumers_ConsumeCoolant_wait_long)(jcontext ctx, jobject self, jlong param0);
+#define VTABLE_mindustry_world_consumers_ConsumeCoolant_wait_long_int 10
+typedef void (*func_mindustry_world_consumers_ConsumeCoolant_wait_long_int)(jcontext ctx, jobject self, jlong param0, jint param1);
+#define VTABLE_mindustry_world_consumers_ConsumeCoolant_apply_mindustry_world_Block 11
+typedef void (*func_mindustry_world_consumers_ConsumeCoolant_apply_mindustry_world_Block)(jcontext ctx, jobject self, jobject param0);
+#define VTABLE_mindustry_world_consumers_ConsumeCoolant_optional_boolean_boolean_R_mindustry_world_consumers_Consume 12
+typedef jobject (*func_mindustry_world_consumers_ConsumeCoolant_optional_boolean_boolean_R_mindustry_world_consumers_Consume)(jcontext ctx, jobject self, jbool param0, jbool param1);
+#define VTABLE_mindustry_world_consumers_ConsumeCoolant_boost_R_mindustry_world_consumers_Consume 13
+typedef jobject (*func_mindustry_world_consumers_ConsumeCoolant_boost_R_mindustry_world_consumers_Consume)(jcontext ctx, jobject self);
+#define VTABLE_mindustry_world_consumers_ConsumeCoolant_update_boolean_R_mindustry_world_consumers_Consume 14
+typedef jobject (*func_mindustry_world_consumers_ConsumeCoolant_update_boolean_R_mindustry_world_consumers_Consume)(jcontext ctx, jobject self, jbool param0);
+#define VTABLE_mindustry_world_consumers_ConsumeCoolant_ignore_R_boolean 15
+typedef jbool (*func_mindustry_world_consumers_ConsumeCoolant_ignore_R_boolean)(jcontext ctx, jobject self);
+#define VTABLE_mindustry_world_consumers_ConsumeCoolant_build_mindustry_gen_Building_arc_scene_ui_layout_Table 16
+typedef void (*func_mindustry_world_consumers_ConsumeCoolant_build_mindustry_gen_Building_arc_scene_ui_layout_Table)(jcontext ctx, jobject self, jobject param0, jobject param1);
+#define VTABLE_mindustry_world_consumers_ConsumeCoolant_trigger_mindustry_gen_Building 17
+typedef void (*func_mindustry_world_consumers_ConsumeCoolant_trigger_mindustry_gen_Building)(jcontext ctx, jobject self, jobject param0);
+#define VTABLE_mindustry_world_consumers_ConsumeCoolant_update_mindustry_gen_Building 18
+typedef void (*func_mindustry_world_consumers_ConsumeCoolant_update_mindustry_gen_Building)(jcontext ctx, jobject self, jobject param0);
+#define VTABLE_mindustry_world_consumers_ConsumeCoolant_efficiency_mindustry_gen_Building_R_float 19
+typedef jfloat (*func_mindustry_world_consumers_ConsumeCoolant_efficiency_mindustry_gen_Building_R_float)(jcontext ctx, jobject self, jobject param0);
+#define VTABLE_mindustry_world_consumers_ConsumeCoolant_efficiencyMultiplier_mindustry_gen_Building_R_float 20
+typedef jfloat (*func_mindustry_world_consumers_ConsumeCoolant_efficiencyMultiplier_mindustry_gen_Building_R_float)(jcontext ctx, jobject self, jobject param0);
+#define VTABLE_mindustry_world_consumers_ConsumeCoolant_display_mindustry_world_meta_Stats 21
+typedef void (*func_mindustry_world_consumers_ConsumeCoolant_display_mindustry_world_meta_Stats)(jcontext ctx, jobject self, jobject param0);
+#define VTABLE_mindustry_world_consumers_ConsumeCoolant_consumes_mindustry_type_Liquid_R_boolean 22
+typedef jbool (*func_mindustry_world_consumers_ConsumeCoolant_consumes_mindustry_type_Liquid_R_boolean)(jcontext ctx, jobject self, jobject param0);
+#define VTABLE_mindustry_world_consumers_ConsumeCoolant_getConsumed_mindustry_gen_Building_R_mindustry_type_Liquid 23
+typedef jobject (*func_mindustry_world_consumers_ConsumeCoolant_getConsumed_mindustry_gen_Building_R_mindustry_type_Liquid)(jcontext ctx, jobject self, jobject param0);
+#define VTABLE_mindustry_world_consumers_ConsumeCoolant_liquidEfficiencyMultiplier_mindustry_type_Liquid_R_float 24
+typedef jfloat (*func_mindustry_world_consumers_ConsumeCoolant_liquidEfficiencyMultiplier_mindustry_type_Liquid_R_float)(jcontext ctx, jobject self, jobject param0);
+#define VTABLE_mindustry_world_consumers_ConsumeCoolant_lambda$build$1_mindustry_ui_MultiReqImage_mindustry_gen_Building_mindustry_type_Liquid 25
+typedef void (*func_mindustry_world_consumers_ConsumeCoolant_lambda$build$1_mindustry_ui_MultiReqImage_mindustry_gen_Building_mindustry_type_Liquid)(jcontext ctx, jobject self, jobject param0, jobject param1, jobject param2);
+#define VTABLE_mindustry_world_consumers_ConsumeCoolant_lambda$build$2_mindustry_gen_Building_mindustry_type_Liquid_R_boolean 26
+typedef jbool (*func_mindustry_world_consumers_ConsumeCoolant_lambda$build$2_mindustry_gen_Building_mindustry_type_Liquid_R_boolean)(jcontext ctx, jobject self, jobject param0, jobject param1);
+#define VTABLE_mindustry_world_consumers_ConsumeCoolant_lambda$build$0_mindustry_type_Liquid_R_boolean 27
+typedef jbool (*func_mindustry_world_consumers_ConsumeCoolant_lambda$build$0_mindustry_type_Liquid_R_boolean)(jcontext ctx, jobject self, jobject param0);
+#define VTABLE_mindustry_world_consumers_ConsumeCoolant_lambda$new$0_mindustry_type_Liquid_R_boolean 28
+typedef jbool (*func_mindustry_world_consumers_ConsumeCoolant_lambda$new$0_mindustry_type_Liquid_R_boolean)(jcontext ctx, jobject self, jobject param0);
+
+void mark_mindustry_world_consumers_ConsumeCoolant(jobject object, jint mark, jint depth);
+void clinit_mindustry_world_consumers_ConsumeCoolant(jcontext ctx);
+void init_mindustry_world_consumers_ConsumeCoolant_float_boolean_boolean(jcontext ctx, jobject self, jfloat param0, jbool param1, jbool param2);
+void init_mindustry_world_consumers_ConsumeCoolant_float(jcontext ctx, jobject self, jfloat param0);
+void init_mindustry_world_consumers_ConsumeCoolant(jcontext ctx, jobject self);
+jbool M_mindustry_world_consumers_ConsumeCoolant_lambda$new$0_mindustry_type_Liquid_R_boolean(jcontext ctx, jobject self, jobject param0);
+
+#ifdef __cplusplus
+}
+#endif
+
+#endif

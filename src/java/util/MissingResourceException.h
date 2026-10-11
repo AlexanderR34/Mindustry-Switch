@@ -1,0 +1,87 @@
+#ifndef HEADER_java_util_MissingResourceException
+#define HEADER_java_util_MissingResourceException
+
+#include "Clearwing.h"
+#include "java/lang/RuntimeException.h"
+
+#ifdef __cplusplus
+extern "C" {
+#endif
+
+typedef struct java_util_MissingResourceException {
+	java_lang_RuntimeException parent;
+	jref F_className;
+	jref F_key;
+} java_util_MissingResourceException;
+
+extern Class class_java_util_MissingResourceException;
+
+extern jlong SF_java_util_MissingResourceException_serialVersionUID;
+
+#define VTABLE_java_util_MissingResourceException_hashCode_R_int 0
+typedef jint (*func_java_util_MissingResourceException_hashCode_R_int)(jcontext ctx, jobject self);
+#define VTABLE_java_util_MissingResourceException_equals_java_lang_Object_R_boolean 1
+typedef jbool (*func_java_util_MissingResourceException_equals_java_lang_Object_R_boolean)(jcontext ctx, jobject self, jobject param0);
+#define VTABLE_java_util_MissingResourceException_clone_R_java_lang_Object 2
+typedef jobject (*func_java_util_MissingResourceException_clone_R_java_lang_Object)(jcontext ctx, jobject self);
+#define VTABLE_java_util_MissingResourceException_getClass_R_java_lang_Class 3
+typedef jobject (*func_java_util_MissingResourceException_getClass_R_java_lang_Class)(jcontext ctx, jobject self);
+#define VTABLE_java_util_MissingResourceException_toString_R_java_lang_String 4
+typedef jobject (*func_java_util_MissingResourceException_toString_R_java_lang_String)(jcontext ctx, jobject self);
+#define VTABLE_java_util_MissingResourceException_finalize 5
+typedef void (*func_java_util_MissingResourceException_finalize)(jcontext ctx, jobject self);
+#define VTABLE_java_util_MissingResourceException_notify 6
+typedef void (*func_java_util_MissingResourceException_notify)(jcontext ctx, jobject self);
+#define VTABLE_java_util_MissingResourceException_notifyAll 7
+typedef void (*func_java_util_MissingResourceException_notifyAll)(jcontext ctx, jobject self);
+#define VTABLE_java_util_MissingResourceException_wait 8
+typedef void (*func_java_util_MissingResourceException_wait)(jcontext ctx, jobject self);
+#define VTABLE_java_util_MissingResourceException_wait_long 9
+typedef void (*func_java_util_MissingResourceException_wait_long)(jcontext ctx, jobject self, jlong param0);
+#define VTABLE_java_util_MissingResourceException_wait_long_int 10
+typedef void (*func_java_util_MissingResourceException_wait_long_int)(jcontext ctx, jobject self, jlong param0, jint param1);
+#define VTABLE_java_util_MissingResourceException_initCause_java_lang_Throwable_R_java_lang_Throwable 11
+typedef jobject (*func_java_util_MissingResourceException_initCause_java_lang_Throwable_R_java_lang_Throwable)(jcontext ctx, jobject self, jobject param0);
+#define VTABLE_java_util_MissingResourceException_getStack_R_java_lang_String 12
+typedef jobject (*func_java_util_MissingResourceException_getStack_R_java_lang_String)(jcontext ctx, jobject self);
+#define VTABLE_java_util_MissingResourceException_getCause_R_java_lang_Throwable 13
+typedef jobject (*func_java_util_MissingResourceException_getCause_R_java_lang_Throwable)(jcontext ctx, jobject self);
+#define VTABLE_java_util_MissingResourceException_getMessage_R_java_lang_String 14
+typedef jobject (*func_java_util_MissingResourceException_getMessage_R_java_lang_String)(jcontext ctx, jobject self);
+#define VTABLE_java_util_MissingResourceException_fillInStack 15
+typedef void (*func_java_util_MissingResourceException_fillInStack)(jcontext ctx, jobject self);
+#define VTABLE_java_util_MissingResourceException_fillInStackTrace_R_java_lang_Throwable 16
+typedef jobject (*func_java_util_MissingResourceException_fillInStackTrace_R_java_lang_Throwable)(jcontext ctx, jobject self);
+#define VTABLE_java_util_MissingResourceException_printStackTrace 17
+typedef void (*func_java_util_MissingResourceException_printStackTrace)(jcontext ctx, jobject self);
+#define VTABLE_java_util_MissingResourceException_printStackTrace_java_io_PrintStream 18
+typedef void (*func_java_util_MissingResourceException_printStackTrace_java_io_PrintStream)(jcontext ctx, jobject self, jobject param0);
+#define VTABLE_java_util_MissingResourceException_printStackTrace_java_io_PrintWriter 19
+typedef void (*func_java_util_MissingResourceException_printStackTrace_java_io_PrintWriter)(jcontext ctx, jobject self, jobject param0);
+#define VTABLE_java_util_MissingResourceException_getStackTrace_R_Array1_java_lang_StackTraceElement 20
+typedef jobject (*func_java_util_MissingResourceException_getStackTrace_R_Array1_java_lang_StackTraceElement)(jcontext ctx, jobject self);
+#define VTABLE_java_util_MissingResourceException_setStackTrace_Array1_java_lang_StackTraceElement 21
+typedef void (*func_java_util_MissingResourceException_setStackTrace_Array1_java_lang_StackTraceElement)(jcontext ctx, jobject self, jobject param0);
+#define VTABLE_java_util_MissingResourceException_addSuppressed_java_lang_Throwable 22
+typedef void (*func_java_util_MissingResourceException_addSuppressed_java_lang_Throwable)(jcontext ctx, jobject self, jobject param0);
+#define VTABLE_java_util_MissingResourceException_getSuppressed_R_Array1_java_lang_Throwable 23
+typedef jobject (*func_java_util_MissingResourceException_getSuppressed_R_Array1_java_lang_Throwable)(jcontext ctx, jobject self);
+#define VTABLE_java_util_MissingResourceException_getLocalizedMessage_R_java_lang_String 24
+typedef jobject (*func_java_util_MissingResourceException_getLocalizedMessage_R_java_lang_String)(jcontext ctx, jobject self);
+#define VTABLE_java_util_MissingResourceException_getClassName_R_java_lang_String 25
+typedef jobject (*func_java_util_MissingResourceException_getClassName_R_java_lang_String)(jcontext ctx, jobject self);
+#define VTABLE_java_util_MissingResourceException_getKey_R_java_lang_String 26
+typedef jobject (*func_java_util_MissingResourceException_getKey_R_java_lang_String)(jcontext ctx, jobject self);
+
+void mark_java_util_MissingResourceException(jobject object, jint mark, jint depth);
+void clinit_java_util_MissingResourceException(jcontext ctx);
+void init_java_util_MissingResourceException_java_lang_String_java_lang_String_java_lang_String(jcontext ctx, jobject self, jobject param0, jobject param1, jobject param2);
+void init_java_util_MissingResourceException_java_lang_String_java_lang_String_java_lang_String_java_lang_Throwable(jcontext ctx, jobject self, jobject param0, jobject param1, jobject param2, jobject param3);
+jobject M_java_util_MissingResourceException_getClassName_R_java_lang_String(jcontext ctx, jobject self);
+jobject M_java_util_MissingResourceException_getKey_R_java_lang_String(jcontext ctx, jobject self);
+
+#ifdef __cplusplus
+}
+#endif
+
+#endif

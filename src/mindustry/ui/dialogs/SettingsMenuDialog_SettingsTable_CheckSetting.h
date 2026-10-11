@@ -1,0 +1,62 @@
+#ifndef HEADER_mindustry_ui_dialogs_SettingsMenuDialog$SettingsTable$CheckSetting
+#define HEADER_mindustry_ui_dialogs_SettingsMenuDialog$SettingsTable$CheckSetting
+
+#include "Clearwing.h"
+#include "mindustry/ui/dialogs/SettingsMenuDialog_SettingsTable_Setting.h"
+
+#ifdef __cplusplus
+extern "C" {
+#endif
+
+typedef struct mindustry_ui_dialogs_SettingsMenuDialog$SettingsTable$CheckSetting {
+	mindustry_ui_dialogs_SettingsMenuDialog$SettingsTable$Setting parent;
+	jbool F_def;
+	jref F_changed;
+} mindustry_ui_dialogs_SettingsMenuDialog$SettingsTable$CheckSetting;
+
+extern Class class_mindustry_ui_dialogs_SettingsMenuDialog$SettingsTable$CheckSetting;
+
+
+#define VTABLE_mindustry_ui_dialogs_SettingsMenuDialog$SettingsTable$CheckSetting_hashCode_R_int 0
+typedef jint (*func_mindustry_ui_dialogs_SettingsMenuDialog$SettingsTable$CheckSetting_hashCode_R_int)(jcontext ctx, jobject self);
+#define VTABLE_mindustry_ui_dialogs_SettingsMenuDialog$SettingsTable$CheckSetting_equals_java_lang_Object_R_boolean 1
+typedef jbool (*func_mindustry_ui_dialogs_SettingsMenuDialog$SettingsTable$CheckSetting_equals_java_lang_Object_R_boolean)(jcontext ctx, jobject self, jobject param0);
+#define VTABLE_mindustry_ui_dialogs_SettingsMenuDialog$SettingsTable$CheckSetting_clone_R_java_lang_Object 2
+typedef jobject (*func_mindustry_ui_dialogs_SettingsMenuDialog$SettingsTable$CheckSetting_clone_R_java_lang_Object)(jcontext ctx, jobject self);
+#define VTABLE_mindustry_ui_dialogs_SettingsMenuDialog$SettingsTable$CheckSetting_getClass_R_java_lang_Class 3
+typedef jobject (*func_mindustry_ui_dialogs_SettingsMenuDialog$SettingsTable$CheckSetting_getClass_R_java_lang_Class)(jcontext ctx, jobject self);
+#define VTABLE_mindustry_ui_dialogs_SettingsMenuDialog$SettingsTable$CheckSetting_toString_R_java_lang_String 4
+typedef jobject (*func_mindustry_ui_dialogs_SettingsMenuDialog$SettingsTable$CheckSetting_toString_R_java_lang_String)(jcontext ctx, jobject self);
+#define VTABLE_mindustry_ui_dialogs_SettingsMenuDialog$SettingsTable$CheckSetting_finalize 5
+typedef void (*func_mindustry_ui_dialogs_SettingsMenuDialog$SettingsTable$CheckSetting_finalize)(jcontext ctx, jobject self);
+#define VTABLE_mindustry_ui_dialogs_SettingsMenuDialog$SettingsTable$CheckSetting_notify 6
+typedef void (*func_mindustry_ui_dialogs_SettingsMenuDialog$SettingsTable$CheckSetting_notify)(jcontext ctx, jobject self);
+#define VTABLE_mindustry_ui_dialogs_SettingsMenuDialog$SettingsTable$CheckSetting_notifyAll 7
+typedef void (*func_mindustry_ui_dialogs_SettingsMenuDialog$SettingsTable$CheckSetting_notifyAll)(jcontext ctx, jobject self);
+#define VTABLE_mindustry_ui_dialogs_SettingsMenuDialog$SettingsTable$CheckSetting_wait 8
+typedef void (*func_mindustry_ui_dialogs_SettingsMenuDialog$SettingsTable$CheckSetting_wait)(jcontext ctx, jobject self);
+#define VTABLE_mindustry_ui_dialogs_SettingsMenuDialog$SettingsTable$CheckSetting_wait_long 9
+typedef void (*func_mindustry_ui_dialogs_SettingsMenuDialog$SettingsTable$CheckSetting_wait_long)(jcontext ctx, jobject self, jlong param0);
+#define VTABLE_mindustry_ui_dialogs_SettingsMenuDialog$SettingsTable$CheckSetting_wait_long_int 10
+typedef void (*func_mindustry_ui_dialogs_SettingsMenuDialog$SettingsTable$CheckSetting_wait_long_int)(jcontext ctx, jobject self, jlong param0, jint param1);
+#define VTABLE_mindustry_ui_dialogs_SettingsMenuDialog$SettingsTable$CheckSetting_add_mindustry_ui_dialogs_SettingsMenuDialog$SettingsTable 11
+typedef void (*func_mindustry_ui_dialogs_SettingsMenuDialog$SettingsTable$CheckSetting_add_mindustry_ui_dialogs_SettingsMenuDialog$SettingsTable)(jcontext ctx, jobject self, jobject param0);
+#define VTABLE_mindustry_ui_dialogs_SettingsMenuDialog$SettingsTable$CheckSetting_addDesc_arc_scene_Element 12
+typedef void (*func_mindustry_ui_dialogs_SettingsMenuDialog$SettingsTable$CheckSetting_addDesc_arc_scene_Element)(jcontext ctx, jobject self, jobject param0);
+#define VTABLE_mindustry_ui_dialogs_SettingsMenuDialog$SettingsTable$CheckSetting_lambda$add$1_boolean 13
+typedef void (*func_mindustry_ui_dialogs_SettingsMenuDialog$SettingsTable$CheckSetting_lambda$add$1_boolean)(jcontext ctx, jobject self, jbool param0);
+#define VTABLE_mindustry_ui_dialogs_SettingsMenuDialog$SettingsTable$CheckSetting_lambda$add$0_R_boolean 14
+typedef jbool (*func_mindustry_ui_dialogs_SettingsMenuDialog$SettingsTable$CheckSetting_lambda$add$0_R_boolean)(jcontext ctx, jobject self);
+
+void mark_mindustry_ui_dialogs_SettingsMenuDialog$SettingsTable$CheckSetting(jobject object, jint mark, jint depth);
+void clinit_mindustry_ui_dialogs_SettingsMenuDialog$SettingsTable$CheckSetting(jcontext ctx);
+void init_mindustry_ui_dialogs_SettingsMenuDialog$SettingsTable$CheckSetting_java_lang_String_boolean_arc_func_Boolc(jcontext ctx, jobject self, jobject param0, jbool param1, jobject param2);
+void M_mindustry_ui_dialogs_SettingsMenuDialog$SettingsTable$CheckSetting_add_mindustry_ui_dialogs_SettingsMenuDialog$SettingsTable(jcontext ctx, jobject self, jobject param0);
+void M_mindustry_ui_dialogs_SettingsMenuDialog$SettingsTable$CheckSetting_lambda$add$1_boolean(jcontext ctx, jobject self, jbool param0);
+jbool M_mindustry_ui_dialogs_SettingsMenuDialog$SettingsTable$CheckSetting_lambda$add$0_R_boolean(jcontext ctx, jobject self);
+
+#ifdef __cplusplus
+}
+#endif
+
+#endif

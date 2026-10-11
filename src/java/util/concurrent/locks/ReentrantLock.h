@@ -1,0 +1,109 @@
+#ifndef HEADER_java_util_concurrent_locks_ReentrantLock
+#define HEADER_java_util_concurrent_locks_ReentrantLock
+
+#include "Clearwing.h"
+#include "java/lang/Object.h"
+#include "java/util/concurrent/locks/Lock.h"
+#include "java/io/Serializable.h"
+
+#ifdef __cplusplus
+extern "C" {
+#endif
+
+typedef struct java_util_concurrent_locks_ReentrantLock {
+	java_lang_Object parent;
+	jref F_sync;
+} java_util_concurrent_locks_ReentrantLock;
+
+extern Class class_java_util_concurrent_locks_ReentrantLock;
+
+extern jlong SF_java_util_concurrent_locks_ReentrantLock_serialVersionUID;
+
+#define VTABLE_java_util_concurrent_locks_ReentrantLock_hashCode_R_int 0
+typedef jint (*func_java_util_concurrent_locks_ReentrantLock_hashCode_R_int)(jcontext ctx, jobject self);
+#define VTABLE_java_util_concurrent_locks_ReentrantLock_equals_java_lang_Object_R_boolean 1
+typedef jbool (*func_java_util_concurrent_locks_ReentrantLock_equals_java_lang_Object_R_boolean)(jcontext ctx, jobject self, jobject param0);
+#define VTABLE_java_util_concurrent_locks_ReentrantLock_clone_R_java_lang_Object 2
+typedef jobject (*func_java_util_concurrent_locks_ReentrantLock_clone_R_java_lang_Object)(jcontext ctx, jobject self);
+#define VTABLE_java_util_concurrent_locks_ReentrantLock_getClass_R_java_lang_Class 3
+typedef jobject (*func_java_util_concurrent_locks_ReentrantLock_getClass_R_java_lang_Class)(jcontext ctx, jobject self);
+#define VTABLE_java_util_concurrent_locks_ReentrantLock_toString_R_java_lang_String 4
+typedef jobject (*func_java_util_concurrent_locks_ReentrantLock_toString_R_java_lang_String)(jcontext ctx, jobject self);
+#define VTABLE_java_util_concurrent_locks_ReentrantLock_finalize 5
+typedef void (*func_java_util_concurrent_locks_ReentrantLock_finalize)(jcontext ctx, jobject self);
+#define VTABLE_java_util_concurrent_locks_ReentrantLock_notify 6
+typedef void (*func_java_util_concurrent_locks_ReentrantLock_notify)(jcontext ctx, jobject self);
+#define VTABLE_java_util_concurrent_locks_ReentrantLock_notifyAll 7
+typedef void (*func_java_util_concurrent_locks_ReentrantLock_notifyAll)(jcontext ctx, jobject self);
+#define VTABLE_java_util_concurrent_locks_ReentrantLock_wait 8
+typedef void (*func_java_util_concurrent_locks_ReentrantLock_wait)(jcontext ctx, jobject self);
+#define VTABLE_java_util_concurrent_locks_ReentrantLock_wait_long 9
+typedef void (*func_java_util_concurrent_locks_ReentrantLock_wait_long)(jcontext ctx, jobject self, jlong param0);
+#define VTABLE_java_util_concurrent_locks_ReentrantLock_wait_long_int 10
+typedef void (*func_java_util_concurrent_locks_ReentrantLock_wait_long_int)(jcontext ctx, jobject self, jlong param0, jint param1);
+#define VTABLE_java_util_concurrent_locks_ReentrantLock_lock 11
+typedef void (*func_java_util_concurrent_locks_ReentrantLock_lock)(jcontext ctx, jobject self);
+#define VTABLE_java_util_concurrent_locks_ReentrantLock_lockInterruptibly 12
+typedef void (*func_java_util_concurrent_locks_ReentrantLock_lockInterruptibly)(jcontext ctx, jobject self);
+#define VTABLE_java_util_concurrent_locks_ReentrantLock_tryLock_R_boolean 13
+typedef jbool (*func_java_util_concurrent_locks_ReentrantLock_tryLock_R_boolean)(jcontext ctx, jobject self);
+#define VTABLE_java_util_concurrent_locks_ReentrantLock_tryLock_long_java_util_concurrent_TimeUnit_R_boolean 14
+typedef jbool (*func_java_util_concurrent_locks_ReentrantLock_tryLock_long_java_util_concurrent_TimeUnit_R_boolean)(jcontext ctx, jobject self, jlong param0, jobject param1);
+#define VTABLE_java_util_concurrent_locks_ReentrantLock_unlock 15
+typedef void (*func_java_util_concurrent_locks_ReentrantLock_unlock)(jcontext ctx, jobject self);
+#define VTABLE_java_util_concurrent_locks_ReentrantLock_newCondition_R_java_util_concurrent_locks_Condition 16
+typedef jobject (*func_java_util_concurrent_locks_ReentrantLock_newCondition_R_java_util_concurrent_locks_Condition)(jcontext ctx, jobject self);
+#define VTABLE_java_util_concurrent_locks_ReentrantLock_getHoldCount_R_int 17
+typedef jint (*func_java_util_concurrent_locks_ReentrantLock_getHoldCount_R_int)(jcontext ctx, jobject self);
+#define VTABLE_java_util_concurrent_locks_ReentrantLock_isHeldByCurrentThread_R_boolean 18
+typedef jbool (*func_java_util_concurrent_locks_ReentrantLock_isHeldByCurrentThread_R_boolean)(jcontext ctx, jobject self);
+#define VTABLE_java_util_concurrent_locks_ReentrantLock_isLocked_R_boolean 19
+typedef jbool (*func_java_util_concurrent_locks_ReentrantLock_isLocked_R_boolean)(jcontext ctx, jobject self);
+#define VTABLE_java_util_concurrent_locks_ReentrantLock_isFair_R_boolean 20
+typedef jbool (*func_java_util_concurrent_locks_ReentrantLock_isFair_R_boolean)(jcontext ctx, jobject self);
+#define VTABLE_java_util_concurrent_locks_ReentrantLock_getOwner_R_java_lang_Thread 21
+typedef jobject (*func_java_util_concurrent_locks_ReentrantLock_getOwner_R_java_lang_Thread)(jcontext ctx, jobject self);
+#define VTABLE_java_util_concurrent_locks_ReentrantLock_hasQueuedThreads_R_boolean 22
+typedef jbool (*func_java_util_concurrent_locks_ReentrantLock_hasQueuedThreads_R_boolean)(jcontext ctx, jobject self);
+#define VTABLE_java_util_concurrent_locks_ReentrantLock_hasQueuedThread_java_lang_Thread_R_boolean 23
+typedef jbool (*func_java_util_concurrent_locks_ReentrantLock_hasQueuedThread_java_lang_Thread_R_boolean)(jcontext ctx, jobject self, jobject param0);
+#define VTABLE_java_util_concurrent_locks_ReentrantLock_getQueueLength_R_int 24
+typedef jint (*func_java_util_concurrent_locks_ReentrantLock_getQueueLength_R_int)(jcontext ctx, jobject self);
+#define VTABLE_java_util_concurrent_locks_ReentrantLock_getQueuedThreads_R_java_util_Collection 25
+typedef jobject (*func_java_util_concurrent_locks_ReentrantLock_getQueuedThreads_R_java_util_Collection)(jcontext ctx, jobject self);
+#define VTABLE_java_util_concurrent_locks_ReentrantLock_hasWaiters_java_util_concurrent_locks_Condition_R_boolean 26
+typedef jbool (*func_java_util_concurrent_locks_ReentrantLock_hasWaiters_java_util_concurrent_locks_Condition_R_boolean)(jcontext ctx, jobject self, jobject param0);
+#define VTABLE_java_util_concurrent_locks_ReentrantLock_getWaitQueueLength_java_util_concurrent_locks_Condition_R_int 27
+typedef jint (*func_java_util_concurrent_locks_ReentrantLock_getWaitQueueLength_java_util_concurrent_locks_Condition_R_int)(jcontext ctx, jobject self, jobject param0);
+#define VTABLE_java_util_concurrent_locks_ReentrantLock_getWaitingThreads_java_util_concurrent_locks_Condition_R_java_util_Collection 28
+typedef jobject (*func_java_util_concurrent_locks_ReentrantLock_getWaitingThreads_java_util_concurrent_locks_Condition_R_java_util_Collection)(jcontext ctx, jobject self, jobject param0);
+
+void mark_java_util_concurrent_locks_ReentrantLock(jobject object, jint mark, jint depth);
+void clinit_java_util_concurrent_locks_ReentrantLock(jcontext ctx);
+void init_java_util_concurrent_locks_ReentrantLock(jcontext ctx, jobject self);
+void init_java_util_concurrent_locks_ReentrantLock_boolean(jcontext ctx, jobject self, jbool param0);
+void M_java_util_concurrent_locks_ReentrantLock_lock(jcontext ctx, jobject self);
+void M_java_util_concurrent_locks_ReentrantLock_lockInterruptibly(jcontext ctx, jobject self);
+jbool M_java_util_concurrent_locks_ReentrantLock_tryLock_R_boolean(jcontext ctx, jobject self);
+jbool M_java_util_concurrent_locks_ReentrantLock_tryLock_long_java_util_concurrent_TimeUnit_R_boolean(jcontext ctx, jobject self, jlong param0, jobject param1);
+void M_java_util_concurrent_locks_ReentrantLock_unlock(jcontext ctx, jobject self);
+jobject M_java_util_concurrent_locks_ReentrantLock_newCondition_R_java_util_concurrent_locks_Condition(jcontext ctx, jobject self);
+jint M_java_util_concurrent_locks_ReentrantLock_getHoldCount_R_int(jcontext ctx, jobject self);
+jbool M_java_util_concurrent_locks_ReentrantLock_isHeldByCurrentThread_R_boolean(jcontext ctx, jobject self);
+jbool M_java_util_concurrent_locks_ReentrantLock_isLocked_R_boolean(jcontext ctx, jobject self);
+jbool M_java_util_concurrent_locks_ReentrantLock_isFair_R_boolean(jcontext ctx, jobject self);
+jobject M_java_util_concurrent_locks_ReentrantLock_getOwner_R_java_lang_Thread(jcontext ctx, jobject self);
+jbool M_java_util_concurrent_locks_ReentrantLock_hasQueuedThreads_R_boolean(jcontext ctx, jobject self);
+jbool M_java_util_concurrent_locks_ReentrantLock_hasQueuedThread_java_lang_Thread_R_boolean(jcontext ctx, jobject self, jobject param0);
+jint M_java_util_concurrent_locks_ReentrantLock_getQueueLength_R_int(jcontext ctx, jobject self);
+jobject M_java_util_concurrent_locks_ReentrantLock_getQueuedThreads_R_java_util_Collection(jcontext ctx, jobject self);
+jbool M_java_util_concurrent_locks_ReentrantLock_hasWaiters_java_util_concurrent_locks_Condition_R_boolean(jcontext ctx, jobject self, jobject param0);
+jint M_java_util_concurrent_locks_ReentrantLock_getWaitQueueLength_java_util_concurrent_locks_Condition_R_int(jcontext ctx, jobject self, jobject param0);
+jobject M_java_util_concurrent_locks_ReentrantLock_getWaitingThreads_java_util_concurrent_locks_Condition_R_java_util_Collection(jcontext ctx, jobject self, jobject param0);
+jobject M_java_util_concurrent_locks_ReentrantLock_toString_R_java_lang_String(jcontext ctx, jobject self);
+
+#ifdef __cplusplus
+}
+#endif
+
+#endif

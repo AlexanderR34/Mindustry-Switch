@@ -1,0 +1,61 @@
+#ifndef HEADER_arc_assets_loaders_CustomLoader
+#define HEADER_arc_assets_loaders_CustomLoader
+
+#include "Clearwing.h"
+#include "arc/assets/loaders/AsynchronousAssetLoader.h"
+
+#ifdef __cplusplus
+extern "C" {
+#endif
+
+typedef struct arc_assets_loaders_CustomLoader {
+	arc_assets_loaders_AsynchronousAssetLoader parent;
+	jref F_loaded;
+} arc_assets_loaders_CustomLoader;
+
+extern Class class_arc_assets_loaders_CustomLoader;
+
+
+#define VTABLE_arc_assets_loaders_CustomLoader_hashCode_R_int 0
+typedef jint (*func_arc_assets_loaders_CustomLoader_hashCode_R_int)(jcontext ctx, jobject self);
+#define VTABLE_arc_assets_loaders_CustomLoader_equals_java_lang_Object_R_boolean 1
+typedef jbool (*func_arc_assets_loaders_CustomLoader_equals_java_lang_Object_R_boolean)(jcontext ctx, jobject self, jobject param0);
+#define VTABLE_arc_assets_loaders_CustomLoader_clone_R_java_lang_Object 2
+typedef jobject (*func_arc_assets_loaders_CustomLoader_clone_R_java_lang_Object)(jcontext ctx, jobject self);
+#define VTABLE_arc_assets_loaders_CustomLoader_getClass_R_java_lang_Class 3
+typedef jobject (*func_arc_assets_loaders_CustomLoader_getClass_R_java_lang_Class)(jcontext ctx, jobject self);
+#define VTABLE_arc_assets_loaders_CustomLoader_toString_R_java_lang_String 4
+typedef jobject (*func_arc_assets_loaders_CustomLoader_toString_R_java_lang_String)(jcontext ctx, jobject self);
+#define VTABLE_arc_assets_loaders_CustomLoader_finalize 5
+typedef void (*func_arc_assets_loaders_CustomLoader_finalize)(jcontext ctx, jobject self);
+#define VTABLE_arc_assets_loaders_CustomLoader_notify 6
+typedef void (*func_arc_assets_loaders_CustomLoader_notify)(jcontext ctx, jobject self);
+#define VTABLE_arc_assets_loaders_CustomLoader_notifyAll 7
+typedef void (*func_arc_assets_loaders_CustomLoader_notifyAll)(jcontext ctx, jobject self);
+#define VTABLE_arc_assets_loaders_CustomLoader_wait 8
+typedef void (*func_arc_assets_loaders_CustomLoader_wait)(jcontext ctx, jobject self);
+#define VTABLE_arc_assets_loaders_CustomLoader_wait_long 9
+typedef void (*func_arc_assets_loaders_CustomLoader_wait_long)(jcontext ctx, jobject self, jlong param0);
+#define VTABLE_arc_assets_loaders_CustomLoader_wait_long_int 10
+typedef void (*func_arc_assets_loaders_CustomLoader_wait_long_int)(jcontext ctx, jobject self, jlong param0, jint param1);
+#define VTABLE_arc_assets_loaders_CustomLoader_resolve_java_lang_String_R_arc_files_Fi 11
+typedef jobject (*func_arc_assets_loaders_CustomLoader_resolve_java_lang_String_R_arc_files_Fi)(jcontext ctx, jobject self, jobject param0);
+#define VTABLE_arc_assets_loaders_CustomLoader_getDependencies_java_lang_String_arc_files_Fi_arc_assets_AssetLoaderParameters_R_arc_struct_Seq 12
+typedef jobject (*func_arc_assets_loaders_CustomLoader_getDependencies_java_lang_String_arc_files_Fi_arc_assets_AssetLoaderParameters_R_arc_struct_Seq)(jcontext ctx, jobject self, jobject param0, jobject param1, jobject param2);
+#define VTABLE_arc_assets_loaders_CustomLoader_loadAsync_arc_assets_AssetManager_java_lang_String_arc_files_Fi_arc_assets_AssetLoaderParameters 13
+typedef void (*func_arc_assets_loaders_CustomLoader_loadAsync_arc_assets_AssetManager_java_lang_String_arc_files_Fi_arc_assets_AssetLoaderParameters)(jcontext ctx, jobject self, jobject param0, jobject param1, jobject param2, jobject param3);
+#define VTABLE_arc_assets_loaders_CustomLoader_loadSync_arc_assets_AssetManager_java_lang_String_arc_files_Fi_arc_assets_AssetLoaderParameters_R_java_lang_Object 14
+typedef jobject (*func_arc_assets_loaders_CustomLoader_loadSync_arc_assets_AssetManager_java_lang_String_arc_files_Fi_arc_assets_AssetLoaderParameters_R_java_lang_Object)(jcontext ctx, jobject self, jobject param0, jobject param1, jobject param2, jobject param3);
+
+void mark_arc_assets_loaders_CustomLoader(jobject object, jint mark, jint depth);
+void clinit_arc_assets_loaders_CustomLoader(jcontext ctx);
+void init_arc_assets_loaders_CustomLoader(jcontext ctx, jobject self);
+jobject M_arc_assets_loaders_CustomLoader_loadSync_arc_assets_AssetManager_java_lang_String_arc_files_Fi_arc_assets_AssetLoaderParameters_R_java_lang_Object(jcontext ctx, jobject self, jobject param0, jobject param1, jobject param2, jobject param3);
+jobject M_arc_assets_loaders_CustomLoader_getDependencies_java_lang_String_arc_files_Fi_arc_assets_AssetLoaderParameters_R_arc_struct_Seq(jcontext ctx, jobject self, jobject param0, jobject param1, jobject param2);
+void SM_arc_assets_loaders_CustomLoader_lambda$new$0(jcontext ctx);
+
+#ifdef __cplusplus
+}
+#endif
+
+#endif

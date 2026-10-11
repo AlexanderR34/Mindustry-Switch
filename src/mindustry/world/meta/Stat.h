@@ -1,0 +1,153 @@
+#ifndef HEADER_mindustry_world_meta_Stat
+#define HEADER_mindustry_world_meta_Stat
+
+#include "Clearwing.h"
+#include "java/lang/Object.h"
+#include "java/lang/Comparable.h"
+
+#ifdef __cplusplus
+extern "C" {
+#endif
+
+typedef struct mindustry_world_meta_Stat {
+	java_lang_Object parent;
+	jref F_category;
+	jref F_name;
+	jint F_id;
+} mindustry_world_meta_Stat;
+
+extern Class class_mindustry_world_meta_Stat;
+
+extern jobject SF_mindustry_world_meta_Stat_all;
+extern jobject SF_mindustry_world_meta_Stat_health;
+extern jobject SF_mindustry_world_meta_Stat_armor;
+extern jobject SF_mindustry_world_meta_Stat_size;
+extern jobject SF_mindustry_world_meta_Stat_displaySize;
+extern jobject SF_mindustry_world_meta_Stat_buildTime;
+extern jobject SF_mindustry_world_meta_Stat_buildCost;
+extern jobject SF_mindustry_world_meta_Stat_memoryCapacity;
+extern jobject SF_mindustry_world_meta_Stat_explosiveness;
+extern jobject SF_mindustry_world_meta_Stat_flammability;
+extern jobject SF_mindustry_world_meta_Stat_radioactivity;
+extern jobject SF_mindustry_world_meta_Stat_charge;
+extern jobject SF_mindustry_world_meta_Stat_heatCapacity;
+extern jobject SF_mindustry_world_meta_Stat_viscosity;
+extern jobject SF_mindustry_world_meta_Stat_temperature;
+extern jobject SF_mindustry_world_meta_Stat_flying;
+extern jobject SF_mindustry_world_meta_Stat_speed;
+extern jobject SF_mindustry_world_meta_Stat_buildSpeed;
+extern jobject SF_mindustry_world_meta_Stat_mineSpeed;
+extern jobject SF_mindustry_world_meta_Stat_mineTier;
+extern jobject SF_mindustry_world_meta_Stat_payloadCapacity;
+extern jobject SF_mindustry_world_meta_Stat_baseDeflectChance;
+extern jobject SF_mindustry_world_meta_Stat_lightningChance;
+extern jobject SF_mindustry_world_meta_Stat_lightningDamage;
+extern jobject SF_mindustry_world_meta_Stat_abilities;
+extern jobject SF_mindustry_world_meta_Stat_canBoost;
+extern jobject SF_mindustry_world_meta_Stat_boostingSpeed;
+extern jobject SF_mindustry_world_meta_Stat_maxUnits;
+extern jobject SF_mindustry_world_meta_Stat_damageMultiplier;
+extern jobject SF_mindustry_world_meta_Stat_healthMultiplier;
+extern jobject SF_mindustry_world_meta_Stat_speedMultiplier;
+extern jobject SF_mindustry_world_meta_Stat_reloadMultiplier;
+extern jobject SF_mindustry_world_meta_Stat_buildSpeedMultiplier;
+extern jobject SF_mindustry_world_meta_Stat_reactive;
+extern jobject SF_mindustry_world_meta_Stat_healing;
+extern jobject SF_mindustry_world_meta_Stat_immunities;
+extern jobject SF_mindustry_world_meta_Stat_itemCapacity;
+extern jobject SF_mindustry_world_meta_Stat_itemsMoved;
+extern jobject SF_mindustry_world_meta_Stat_launchTime;
+extern jobject SF_mindustry_world_meta_Stat_maxConsecutive;
+extern jobject SF_mindustry_world_meta_Stat_liquidCapacity;
+extern jobject SF_mindustry_world_meta_Stat_powerCapacity;
+extern jobject SF_mindustry_world_meta_Stat_powerUse;
+extern jobject SF_mindustry_world_meta_Stat_powerDamage;
+extern jobject SF_mindustry_world_meta_Stat_powerRange;
+extern jobject SF_mindustry_world_meta_Stat_powerConnections;
+extern jobject SF_mindustry_world_meta_Stat_basePowerGeneration;
+extern jobject SF_mindustry_world_meta_Stat_meltdownTime;
+extern jobject SF_mindustry_world_meta_Stat_warmupTime;
+extern jobject SF_mindustry_world_meta_Stat_tiles;
+extern jobject SF_mindustry_world_meta_Stat_input;
+extern jobject SF_mindustry_world_meta_Stat_output;
+extern jobject SF_mindustry_world_meta_Stat_productionTime;
+extern jobject SF_mindustry_world_meta_Stat_maxEfficiency;
+extern jobject SF_mindustry_world_meta_Stat_drillTier;
+extern jobject SF_mindustry_world_meta_Stat_drillSpeed;
+extern jobject SF_mindustry_world_meta_Stat_linkRange;
+extern jobject SF_mindustry_world_meta_Stat_instructions;
+extern jobject SF_mindustry_world_meta_Stat_weapons;
+extern jobject SF_mindustry_world_meta_Stat_bullet;
+extern jobject SF_mindustry_world_meta_Stat_speedIncrease;
+extern jobject SF_mindustry_world_meta_Stat_repairTime;
+extern jobject SF_mindustry_world_meta_Stat_repairSpeed;
+extern jobject SF_mindustry_world_meta_Stat_range;
+extern jobject SF_mindustry_world_meta_Stat_shootRange;
+extern jobject SF_mindustry_world_meta_Stat_inaccuracy;
+extern jobject SF_mindustry_world_meta_Stat_shots;
+extern jobject SF_mindustry_world_meta_Stat_reload;
+extern jobject SF_mindustry_world_meta_Stat_crushDamage;
+extern jobject SF_mindustry_world_meta_Stat_legSplashDamage;
+extern jobject SF_mindustry_world_meta_Stat_targetsAir;
+extern jobject SF_mindustry_world_meta_Stat_targetsGround;
+extern jobject SF_mindustry_world_meta_Stat_damage;
+extern jobject SF_mindustry_world_meta_Stat_status;
+extern jobject SF_mindustry_world_meta_Stat_frequency;
+extern jobject SF_mindustry_world_meta_Stat_ammo;
+extern jobject SF_mindustry_world_meta_Stat_ammoCapacity;
+extern jobject SF_mindustry_world_meta_Stat_ammoUse;
+extern jobject SF_mindustry_world_meta_Stat_shieldHealth;
+extern jobject SF_mindustry_world_meta_Stat_cooldownTime;
+extern jobject SF_mindustry_world_meta_Stat_regenerationRate;
+extern jobject SF_mindustry_world_meta_Stat_activationTime;
+extern jobject SF_mindustry_world_meta_Stat_moduleTier;
+extern jobject SF_mindustry_world_meta_Stat_unitType;
+extern jobject SF_mindustry_world_meta_Stat_receiveRate;
+extern jobject SF_mindustry_world_meta_Stat_booster;
+extern jobject SF_mindustry_world_meta_Stat_boostEffect;
+extern jobject SF_mindustry_world_meta_Stat_affinities;
+extern jobject SF_mindustry_world_meta_Stat_opposites;
+
+#define VTABLE_mindustry_world_meta_Stat_hashCode_R_int 0
+typedef jint (*func_mindustry_world_meta_Stat_hashCode_R_int)(jcontext ctx, jobject self);
+#define VTABLE_mindustry_world_meta_Stat_equals_java_lang_Object_R_boolean 1
+typedef jbool (*func_mindustry_world_meta_Stat_equals_java_lang_Object_R_boolean)(jcontext ctx, jobject self, jobject param0);
+#define VTABLE_mindustry_world_meta_Stat_clone_R_java_lang_Object 2
+typedef jobject (*func_mindustry_world_meta_Stat_clone_R_java_lang_Object)(jcontext ctx, jobject self);
+#define VTABLE_mindustry_world_meta_Stat_getClass_R_java_lang_Class 3
+typedef jobject (*func_mindustry_world_meta_Stat_getClass_R_java_lang_Class)(jcontext ctx, jobject self);
+#define VTABLE_mindustry_world_meta_Stat_toString_R_java_lang_String 4
+typedef jobject (*func_mindustry_world_meta_Stat_toString_R_java_lang_String)(jcontext ctx, jobject self);
+#define VTABLE_mindustry_world_meta_Stat_finalize 5
+typedef void (*func_mindustry_world_meta_Stat_finalize)(jcontext ctx, jobject self);
+#define VTABLE_mindustry_world_meta_Stat_notify 6
+typedef void (*func_mindustry_world_meta_Stat_notify)(jcontext ctx, jobject self);
+#define VTABLE_mindustry_world_meta_Stat_notifyAll 7
+typedef void (*func_mindustry_world_meta_Stat_notifyAll)(jcontext ctx, jobject self);
+#define VTABLE_mindustry_world_meta_Stat_wait 8
+typedef void (*func_mindustry_world_meta_Stat_wait)(jcontext ctx, jobject self);
+#define VTABLE_mindustry_world_meta_Stat_wait_long 9
+typedef void (*func_mindustry_world_meta_Stat_wait_long)(jcontext ctx, jobject self, jlong param0);
+#define VTABLE_mindustry_world_meta_Stat_wait_long_int 10
+typedef void (*func_mindustry_world_meta_Stat_wait_long_int)(jcontext ctx, jobject self, jlong param0, jint param1);
+#define VTABLE_mindustry_world_meta_Stat_compareTo_java_lang_Object_R_int 11
+typedef jint (*func_mindustry_world_meta_Stat_compareTo_java_lang_Object_R_int)(jcontext ctx, jobject self, jobject param0);
+#define VTABLE_mindustry_world_meta_Stat_localized_R_java_lang_String 12
+typedef jobject (*func_mindustry_world_meta_Stat_localized_R_java_lang_String)(jcontext ctx, jobject self);
+#define VTABLE_mindustry_world_meta_Stat_compareTo_mindustry_world_meta_Stat_R_int 13
+typedef jint (*func_mindustry_world_meta_Stat_compareTo_mindustry_world_meta_Stat_R_int)(jcontext ctx, jobject self, jobject param0);
+
+void mark_mindustry_world_meta_Stat(jobject object, jint mark, jint depth);
+void clinit_mindustry_world_meta_Stat(jcontext ctx);
+void init_mindustry_world_meta_Stat_java_lang_String_mindustry_world_meta_StatCat(jcontext ctx, jobject self, jobject param0, jobject param1);
+void init_mindustry_world_meta_Stat_java_lang_String(jcontext ctx, jobject self, jobject param0);
+jobject M_mindustry_world_meta_Stat_localized_R_java_lang_String(jcontext ctx, jobject self);
+jobject M_mindustry_world_meta_Stat_toString_R_java_lang_String(jcontext ctx, jobject self);
+jint M_mindustry_world_meta_Stat_compareTo_mindustry_world_meta_Stat_R_int(jcontext ctx, jobject self, jobject param0);
+jint M_mindustry_world_meta_Stat_compareTo_java_lang_Object_R_int(jcontext ctx, jobject self, jobject param0);
+
+#ifdef __cplusplus
+}
+#endif
+
+#endif

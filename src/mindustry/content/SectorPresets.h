@@ -1,0 +1,96 @@
+#ifndef HEADER_mindustry_content_SectorPresets
+#define HEADER_mindustry_content_SectorPresets
+
+#include "Clearwing.h"
+#include "java/lang/Object.h"
+
+#ifdef __cplusplus
+extern "C" {
+#endif
+
+typedef struct mindustry_content_SectorPresets {
+	java_lang_Object parent;
+} mindustry_content_SectorPresets;
+
+extern Class class_mindustry_content_SectorPresets;
+
+extern jobject SF_mindustry_content_SectorPresets_groundZero;
+extern jobject SF_mindustry_content_SectorPresets_crateredBattleground;
+extern jobject SF_mindustry_content_SectorPresets_biomassFacility;
+extern jobject SF_mindustry_content_SectorPresets_taintedWoods;
+extern jobject SF_mindustry_content_SectorPresets_frozenForest;
+extern jobject SF_mindustry_content_SectorPresets_ruinousShores;
+extern jobject SF_mindustry_content_SectorPresets_facility32m;
+extern jobject SF_mindustry_content_SectorPresets_windsweptIslands;
+extern jobject SF_mindustry_content_SectorPresets_stainedMountains;
+extern jobject SF_mindustry_content_SectorPresets_tarFields;
+extern jobject SF_mindustry_content_SectorPresets_frontier;
+extern jobject SF_mindustry_content_SectorPresets_fungalPass;
+extern jobject SF_mindustry_content_SectorPresets_infestedCanyons;
+extern jobject SF_mindustry_content_SectorPresets_atolls;
+extern jobject SF_mindustry_content_SectorPresets_sunkenPier;
+extern jobject SF_mindustry_content_SectorPresets_mycelialBastion;
+extern jobject SF_mindustry_content_SectorPresets_extractionOutpost;
+extern jobject SF_mindustry_content_SectorPresets_saltFlats;
+extern jobject SF_mindustry_content_SectorPresets_testingGrounds;
+extern jobject SF_mindustry_content_SectorPresets_overgrowth;
+extern jobject SF_mindustry_content_SectorPresets_impact0078;
+extern jobject SF_mindustry_content_SectorPresets_desolateRift;
+extern jobject SF_mindustry_content_SectorPresets_nuclearComplex;
+extern jobject SF_mindustry_content_SectorPresets_planetaryTerminal;
+extern jobject SF_mindustry_content_SectorPresets_coastline;
+extern jobject SF_mindustry_content_SectorPresets_navalFortress;
+extern jobject SF_mindustry_content_SectorPresets_weatheredChannels;
+extern jobject SF_mindustry_content_SectorPresets_perilousHarbor;
+extern jobject SF_mindustry_content_SectorPresets_littoralShipyard;
+extern jobject SF_mindustry_content_SectorPresets_onset;
+extern jobject SF_mindustry_content_SectorPresets_aegis;
+extern jobject SF_mindustry_content_SectorPresets_lake;
+extern jobject SF_mindustry_content_SectorPresets_intersect;
+extern jobject SF_mindustry_content_SectorPresets_basin;
+extern jobject SF_mindustry_content_SectorPresets_atlas;
+extern jobject SF_mindustry_content_SectorPresets_split;
+extern jobject SF_mindustry_content_SectorPresets_marsh;
+extern jobject SF_mindustry_content_SectorPresets_peaks;
+extern jobject SF_mindustry_content_SectorPresets_ravine;
+extern jobject SF_mindustry_content_SectorPresets_caldera;
+extern jobject SF_mindustry_content_SectorPresets_stronghold;
+extern jobject SF_mindustry_content_SectorPresets_crevice;
+extern jobject SF_mindustry_content_SectorPresets_siege;
+extern jobject SF_mindustry_content_SectorPresets_crossroads;
+extern jobject SF_mindustry_content_SectorPresets_karst;
+extern jobject SF_mindustry_content_SectorPresets_origin;
+
+#define VTABLE_mindustry_content_SectorPresets_hashCode_R_int 0
+typedef jint (*func_mindustry_content_SectorPresets_hashCode_R_int)(jcontext ctx, jobject self);
+#define VTABLE_mindustry_content_SectorPresets_equals_java_lang_Object_R_boolean 1
+typedef jbool (*func_mindustry_content_SectorPresets_equals_java_lang_Object_R_boolean)(jcontext ctx, jobject self, jobject param0);
+#define VTABLE_mindustry_content_SectorPresets_clone_R_java_lang_Object 2
+typedef jobject (*func_mindustry_content_SectorPresets_clone_R_java_lang_Object)(jcontext ctx, jobject self);
+#define VTABLE_mindustry_content_SectorPresets_getClass_R_java_lang_Class 3
+typedef jobject (*func_mindustry_content_SectorPresets_getClass_R_java_lang_Class)(jcontext ctx, jobject self);
+#define VTABLE_mindustry_content_SectorPresets_toString_R_java_lang_String 4
+typedef jobject (*func_mindustry_content_SectorPresets_toString_R_java_lang_String)(jcontext ctx, jobject self);
+#define VTABLE_mindustry_content_SectorPresets_finalize 5
+typedef void (*func_mindustry_content_SectorPresets_finalize)(jcontext ctx, jobject self);
+#define VTABLE_mindustry_content_SectorPresets_notify 6
+typedef void (*func_mindustry_content_SectorPresets_notify)(jcontext ctx, jobject self);
+#define VTABLE_mindustry_content_SectorPresets_notifyAll 7
+typedef void (*func_mindustry_content_SectorPresets_notifyAll)(jcontext ctx, jobject self);
+#define VTABLE_mindustry_content_SectorPresets_wait 8
+typedef void (*func_mindustry_content_SectorPresets_wait)(jcontext ctx, jobject self);
+#define VTABLE_mindustry_content_SectorPresets_wait_long 9
+typedef void (*func_mindustry_content_SectorPresets_wait_long)(jcontext ctx, jobject self, jlong param0);
+#define VTABLE_mindustry_content_SectorPresets_wait_long_int 10
+typedef void (*func_mindustry_content_SectorPresets_wait_long_int)(jcontext ctx, jobject self, jlong param0, jint param1);
+
+void mark_mindustry_content_SectorPresets(jobject object, jint mark, jint depth);
+void clinit_mindustry_content_SectorPresets(jcontext ctx);
+void init_mindustry_content_SectorPresets(jcontext ctx, jobject self);
+void SM_mindustry_content_SectorPresets_load(jcontext ctx);
+
+#ifdef __cplusplus
+}
+#endif
+
+#endif

@@ -1,0 +1,66 @@
+#ifndef HEADER_java_lang_annotation_RetentionPolicy
+#define HEADER_java_lang_annotation_RetentionPolicy
+
+#include "Clearwing.h"
+#include "java/lang/Enum.h"
+
+#ifdef __cplusplus
+extern "C" {
+#endif
+
+typedef struct java_lang_annotation_RetentionPolicy {
+	java_lang_Enum parent;
+} java_lang_annotation_RetentionPolicy;
+
+extern Class class_java_lang_annotation_RetentionPolicy;
+
+extern jobject SF_java_lang_annotation_RetentionPolicy_CLASS;
+extern jobject SF_java_lang_annotation_RetentionPolicy_RUNTIME;
+extern jobject SF_java_lang_annotation_RetentionPolicy_SOURCE;
+extern jobject SF_java_lang_annotation_RetentionPolicy_$VALUES;
+
+#define VTABLE_java_lang_annotation_RetentionPolicy_hashCode_R_int 0
+typedef jint (*func_java_lang_annotation_RetentionPolicy_hashCode_R_int)(jcontext ctx, jobject self);
+#define VTABLE_java_lang_annotation_RetentionPolicy_equals_java_lang_Object_R_boolean 1
+typedef jbool (*func_java_lang_annotation_RetentionPolicy_equals_java_lang_Object_R_boolean)(jcontext ctx, jobject self, jobject param0);
+#define VTABLE_java_lang_annotation_RetentionPolicy_clone_R_java_lang_Object 2
+typedef jobject (*func_java_lang_annotation_RetentionPolicy_clone_R_java_lang_Object)(jcontext ctx, jobject self);
+#define VTABLE_java_lang_annotation_RetentionPolicy_getClass_R_java_lang_Class 3
+typedef jobject (*func_java_lang_annotation_RetentionPolicy_getClass_R_java_lang_Class)(jcontext ctx, jobject self);
+#define VTABLE_java_lang_annotation_RetentionPolicy_toString_R_java_lang_String 4
+typedef jobject (*func_java_lang_annotation_RetentionPolicy_toString_R_java_lang_String)(jcontext ctx, jobject self);
+#define VTABLE_java_lang_annotation_RetentionPolicy_finalize 5
+typedef void (*func_java_lang_annotation_RetentionPolicy_finalize)(jcontext ctx, jobject self);
+#define VTABLE_java_lang_annotation_RetentionPolicy_notify 6
+typedef void (*func_java_lang_annotation_RetentionPolicy_notify)(jcontext ctx, jobject self);
+#define VTABLE_java_lang_annotation_RetentionPolicy_notifyAll 7
+typedef void (*func_java_lang_annotation_RetentionPolicy_notifyAll)(jcontext ctx, jobject self);
+#define VTABLE_java_lang_annotation_RetentionPolicy_wait 8
+typedef void (*func_java_lang_annotation_RetentionPolicy_wait)(jcontext ctx, jobject self);
+#define VTABLE_java_lang_annotation_RetentionPolicy_wait_long 9
+typedef void (*func_java_lang_annotation_RetentionPolicy_wait_long)(jcontext ctx, jobject self, jlong param0);
+#define VTABLE_java_lang_annotation_RetentionPolicy_wait_long_int 10
+typedef void (*func_java_lang_annotation_RetentionPolicy_wait_long_int)(jcontext ctx, jobject self, jlong param0, jint param1);
+#define VTABLE_java_lang_annotation_RetentionPolicy_compareTo_java_lang_Object_R_int 11
+typedef jint (*func_java_lang_annotation_RetentionPolicy_compareTo_java_lang_Object_R_int)(jcontext ctx, jobject self, jobject param0);
+#define VTABLE_java_lang_annotation_RetentionPolicy_compareTo_java_lang_Enum_R_int 12
+typedef jint (*func_java_lang_annotation_RetentionPolicy_compareTo_java_lang_Enum_R_int)(jcontext ctx, jobject self, jobject param0);
+#define VTABLE_java_lang_annotation_RetentionPolicy_name_R_java_lang_String 13
+typedef jobject (*func_java_lang_annotation_RetentionPolicy_name_R_java_lang_String)(jcontext ctx, jobject self);
+#define VTABLE_java_lang_annotation_RetentionPolicy_ordinal_R_int 14
+typedef jint (*func_java_lang_annotation_RetentionPolicy_ordinal_R_int)(jcontext ctx, jobject self);
+#define VTABLE_java_lang_annotation_RetentionPolicy_getDeclaringClass_R_java_lang_Class 15
+typedef jobject (*func_java_lang_annotation_RetentionPolicy_getDeclaringClass_R_java_lang_Class)(jcontext ctx, jobject self);
+
+void mark_java_lang_annotation_RetentionPolicy(jobject object, jint mark, jint depth);
+void clinit_java_lang_annotation_RetentionPolicy(jcontext ctx);
+jobject SM_java_lang_annotation_RetentionPolicy_values_R_Array1_java_lang_annotation_RetentionPolicy(jcontext ctx);
+jobject SM_java_lang_annotation_RetentionPolicy_valueOf_java_lang_String_R_java_lang_annotation_RetentionPolicy(jcontext ctx, jobject param0);
+void init_java_lang_annotation_RetentionPolicy_java_lang_String_int(jcontext ctx, jobject self, jobject param0, jint param1);
+jobject SM_java_lang_annotation_RetentionPolicy_$values_R_Array1_java_lang_annotation_RetentionPolicy(jcontext ctx);
+
+#ifdef __cplusplus
+}
+#endif
+
+#endif

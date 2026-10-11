@@ -1,0 +1,91 @@
+#ifndef HEADER_mindustry_world_consumers_ConsumeItemExplode
+#define HEADER_mindustry_world_consumers_ConsumeItemExplode
+
+#include "Clearwing.h"
+#include "mindustry/world/consumers/ConsumeItemFilter.h"
+
+#ifdef __cplusplus
+extern "C" {
+#endif
+
+typedef struct mindustry_world_consumers_ConsumeItemExplode {
+	mindustry_world_consumers_ConsumeItemFilter parent;
+	jfloat F_damage;
+	jfloat F_threshold;
+	jfloat F_baseChance;
+	jref F_explodeEffect;
+} mindustry_world_consumers_ConsumeItemExplode;
+
+extern Class class_mindustry_world_consumers_ConsumeItemExplode;
+
+
+#define VTABLE_mindustry_world_consumers_ConsumeItemExplode_hashCode_R_int 0
+typedef jint (*func_mindustry_world_consumers_ConsumeItemExplode_hashCode_R_int)(jcontext ctx, jobject self);
+#define VTABLE_mindustry_world_consumers_ConsumeItemExplode_equals_java_lang_Object_R_boolean 1
+typedef jbool (*func_mindustry_world_consumers_ConsumeItemExplode_equals_java_lang_Object_R_boolean)(jcontext ctx, jobject self, jobject param0);
+#define VTABLE_mindustry_world_consumers_ConsumeItemExplode_clone_R_java_lang_Object 2
+typedef jobject (*func_mindustry_world_consumers_ConsumeItemExplode_clone_R_java_lang_Object)(jcontext ctx, jobject self);
+#define VTABLE_mindustry_world_consumers_ConsumeItemExplode_getClass_R_java_lang_Class 3
+typedef jobject (*func_mindustry_world_consumers_ConsumeItemExplode_getClass_R_java_lang_Class)(jcontext ctx, jobject self);
+#define VTABLE_mindustry_world_consumers_ConsumeItemExplode_toString_R_java_lang_String 4
+typedef jobject (*func_mindustry_world_consumers_ConsumeItemExplode_toString_R_java_lang_String)(jcontext ctx, jobject self);
+#define VTABLE_mindustry_world_consumers_ConsumeItemExplode_finalize 5
+typedef void (*func_mindustry_world_consumers_ConsumeItemExplode_finalize)(jcontext ctx, jobject self);
+#define VTABLE_mindustry_world_consumers_ConsumeItemExplode_notify 6
+typedef void (*func_mindustry_world_consumers_ConsumeItemExplode_notify)(jcontext ctx, jobject self);
+#define VTABLE_mindustry_world_consumers_ConsumeItemExplode_notifyAll 7
+typedef void (*func_mindustry_world_consumers_ConsumeItemExplode_notifyAll)(jcontext ctx, jobject self);
+#define VTABLE_mindustry_world_consumers_ConsumeItemExplode_wait 8
+typedef void (*func_mindustry_world_consumers_ConsumeItemExplode_wait)(jcontext ctx, jobject self);
+#define VTABLE_mindustry_world_consumers_ConsumeItemExplode_wait_long 9
+typedef void (*func_mindustry_world_consumers_ConsumeItemExplode_wait_long)(jcontext ctx, jobject self, jlong param0);
+#define VTABLE_mindustry_world_consumers_ConsumeItemExplode_wait_long_int 10
+typedef void (*func_mindustry_world_consumers_ConsumeItemExplode_wait_long_int)(jcontext ctx, jobject self, jlong param0, jint param1);
+#define VTABLE_mindustry_world_consumers_ConsumeItemExplode_apply_mindustry_world_Block 11
+typedef void (*func_mindustry_world_consumers_ConsumeItemExplode_apply_mindustry_world_Block)(jcontext ctx, jobject self, jobject param0);
+#define VTABLE_mindustry_world_consumers_ConsumeItemExplode_optional_boolean_boolean_R_mindustry_world_consumers_Consume 12
+typedef jobject (*func_mindustry_world_consumers_ConsumeItemExplode_optional_boolean_boolean_R_mindustry_world_consumers_Consume)(jcontext ctx, jobject self, jbool param0, jbool param1);
+#define VTABLE_mindustry_world_consumers_ConsumeItemExplode_boost_R_mindustry_world_consumers_Consume 13
+typedef jobject (*func_mindustry_world_consumers_ConsumeItemExplode_boost_R_mindustry_world_consumers_Consume)(jcontext ctx, jobject self);
+#define VTABLE_mindustry_world_consumers_ConsumeItemExplode_update_boolean_R_mindustry_world_consumers_Consume 14
+typedef jobject (*func_mindustry_world_consumers_ConsumeItemExplode_update_boolean_R_mindustry_world_consumers_Consume)(jcontext ctx, jobject self, jbool param0);
+#define VTABLE_mindustry_world_consumers_ConsumeItemExplode_ignore_R_boolean 15
+typedef jbool (*func_mindustry_world_consumers_ConsumeItemExplode_ignore_R_boolean)(jcontext ctx, jobject self);
+#define VTABLE_mindustry_world_consumers_ConsumeItemExplode_build_mindustry_gen_Building_arc_scene_ui_layout_Table 16
+typedef void (*func_mindustry_world_consumers_ConsumeItemExplode_build_mindustry_gen_Building_arc_scene_ui_layout_Table)(jcontext ctx, jobject self, jobject param0, jobject param1);
+#define VTABLE_mindustry_world_consumers_ConsumeItemExplode_trigger_mindustry_gen_Building 17
+typedef void (*func_mindustry_world_consumers_ConsumeItemExplode_trigger_mindustry_gen_Building)(jcontext ctx, jobject self, jobject param0);
+#define VTABLE_mindustry_world_consumers_ConsumeItemExplode_update_mindustry_gen_Building 18
+typedef void (*func_mindustry_world_consumers_ConsumeItemExplode_update_mindustry_gen_Building)(jcontext ctx, jobject self, jobject param0);
+#define VTABLE_mindustry_world_consumers_ConsumeItemExplode_efficiency_mindustry_gen_Building_R_float 19
+typedef jfloat (*func_mindustry_world_consumers_ConsumeItemExplode_efficiency_mindustry_gen_Building_R_float)(jcontext ctx, jobject self, jobject param0);
+#define VTABLE_mindustry_world_consumers_ConsumeItemExplode_efficiencyMultiplier_mindustry_gen_Building_R_float 20
+typedef jfloat (*func_mindustry_world_consumers_ConsumeItemExplode_efficiencyMultiplier_mindustry_gen_Building_R_float)(jcontext ctx, jobject self, jobject param0);
+#define VTABLE_mindustry_world_consumers_ConsumeItemExplode_display_mindustry_world_meta_Stats 21
+typedef void (*func_mindustry_world_consumers_ConsumeItemExplode_display_mindustry_world_meta_Stats)(jcontext ctx, jobject self, jobject param0);
+#define VTABLE_mindustry_world_consumers_ConsumeItemExplode_getConsumed_mindustry_gen_Building_R_mindustry_type_Item 22
+typedef jobject (*func_mindustry_world_consumers_ConsumeItemExplode_getConsumed_mindustry_gen_Building_R_mindustry_type_Item)(jcontext ctx, jobject self, jobject param0);
+#define VTABLE_mindustry_world_consumers_ConsumeItemExplode_itemEfficiencyMultiplier_mindustry_type_Item_R_float 23
+typedef jfloat (*func_mindustry_world_consumers_ConsumeItemExplode_itemEfficiencyMultiplier_mindustry_type_Item_R_float)(jcontext ctx, jobject self, jobject param0);
+#define VTABLE_mindustry_world_consumers_ConsumeItemExplode_lambda$build$0_mindustry_type_Item_R_boolean 24
+typedef jbool (*func_mindustry_world_consumers_ConsumeItemExplode_lambda$build$0_mindustry_type_Item_R_boolean)(jcontext ctx, jobject self, jobject param0);
+#define VTABLE_mindustry_world_consumers_ConsumeItemExplode_lambda$new$0_mindustry_type_Item_R_boolean 25
+typedef jbool (*func_mindustry_world_consumers_ConsumeItemExplode_lambda$new$0_mindustry_type_Item_R_boolean)(jcontext ctx, jobject self, jobject param0);
+
+void mark_mindustry_world_consumers_ConsumeItemExplode(jobject object, jint mark, jint depth);
+void clinit_mindustry_world_consumers_ConsumeItemExplode(jcontext ctx);
+void init_mindustry_world_consumers_ConsumeItemExplode_float(jcontext ctx, jobject self, jfloat param0);
+void init_mindustry_world_consumers_ConsumeItemExplode(jcontext ctx, jobject self);
+void M_mindustry_world_consumers_ConsumeItemExplode_update_mindustry_gen_Building(jcontext ctx, jobject self, jobject param0);
+void M_mindustry_world_consumers_ConsumeItemExplode_build_mindustry_gen_Building_arc_scene_ui_layout_Table(jcontext ctx, jobject self, jobject param0, jobject param1);
+void M_mindustry_world_consumers_ConsumeItemExplode_trigger_mindustry_gen_Building(jcontext ctx, jobject self, jobject param0);
+void M_mindustry_world_consumers_ConsumeItemExplode_display_mindustry_world_meta_Stats(jcontext ctx, jobject self, jobject param0);
+void M_mindustry_world_consumers_ConsumeItemExplode_apply_mindustry_world_Block(jcontext ctx, jobject self, jobject param0);
+jfloat M_mindustry_world_consumers_ConsumeItemExplode_efficiency_mindustry_gen_Building_R_float(jcontext ctx, jobject self, jobject param0);
+jbool M_mindustry_world_consumers_ConsumeItemExplode_lambda$new$0_mindustry_type_Item_R_boolean(jcontext ctx, jobject self, jobject param0);
+
+#ifdef __cplusplus
+}
+#endif
+
+#endif

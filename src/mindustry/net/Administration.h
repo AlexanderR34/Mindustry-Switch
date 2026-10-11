@@ -1,0 +1,221 @@
+#ifndef HEADER_mindustry_net_Administration
+#define HEADER_mindustry_net_Administration
+
+#include "Clearwing.h"
+#include "java/lang/Object.h"
+
+#ifdef __cplusplus
+extern "C" {
+#endif
+
+typedef struct mindustry_net_Administration {
+	java_lang_Object parent;
+	jref F_playerInfo;
+	jref F_bannedIPs;
+	jref F_whitelist;
+	jref F_chatFilters;
+	jref F_actionFilters;
+	jref F_subnetBans;
+	jref F_dosBlacklist;
+	jref F_kickedIPs;
+	jref F_bannedNames;
+	jbool F_modified;
+	jbool F_loaded;
+	jref F_encounteredIDsForIp;
+} mindustry_net_Administration;
+
+extern Class class_mindustry_net_Administration;
+
+
+#define VTABLE_mindustry_net_Administration_hashCode_R_int 0
+typedef jint (*func_mindustry_net_Administration_hashCode_R_int)(jcontext ctx, jobject self);
+#define VTABLE_mindustry_net_Administration_equals_java_lang_Object_R_boolean 1
+typedef jbool (*func_mindustry_net_Administration_equals_java_lang_Object_R_boolean)(jcontext ctx, jobject self, jobject param0);
+#define VTABLE_mindustry_net_Administration_clone_R_java_lang_Object 2
+typedef jobject (*func_mindustry_net_Administration_clone_R_java_lang_Object)(jcontext ctx, jobject self);
+#define VTABLE_mindustry_net_Administration_getClass_R_java_lang_Class 3
+typedef jobject (*func_mindustry_net_Administration_getClass_R_java_lang_Class)(jcontext ctx, jobject self);
+#define VTABLE_mindustry_net_Administration_toString_R_java_lang_String 4
+typedef jobject (*func_mindustry_net_Administration_toString_R_java_lang_String)(jcontext ctx, jobject self);
+#define VTABLE_mindustry_net_Administration_finalize 5
+typedef void (*func_mindustry_net_Administration_finalize)(jcontext ctx, jobject self);
+#define VTABLE_mindustry_net_Administration_notify 6
+typedef void (*func_mindustry_net_Administration_notify)(jcontext ctx, jobject self);
+#define VTABLE_mindustry_net_Administration_notifyAll 7
+typedef void (*func_mindustry_net_Administration_notifyAll)(jcontext ctx, jobject self);
+#define VTABLE_mindustry_net_Administration_wait 8
+typedef void (*func_mindustry_net_Administration_wait)(jcontext ctx, jobject self);
+#define VTABLE_mindustry_net_Administration_wait_long 9
+typedef void (*func_mindustry_net_Administration_wait_long)(jcontext ctx, jobject self, jlong param0);
+#define VTABLE_mindustry_net_Administration_wait_long_int 10
+typedef void (*func_mindustry_net_Administration_wait_long_int)(jcontext ctx, jobject self, jlong param0, jint param1);
+#define VTABLE_mindustry_net_Administration_blacklistDos_java_lang_String 11
+typedef void (*func_mindustry_net_Administration_blacklistDos_java_lang_String)(jcontext ctx, jobject self, jobject param0);
+#define VTABLE_mindustry_net_Administration_unBlacklistDos_java_lang_String 12
+typedef void (*func_mindustry_net_Administration_unBlacklistDos_java_lang_String)(jcontext ctx, jobject self, jobject param0);
+#define VTABLE_mindustry_net_Administration_isDosBlacklisted_java_lang_String_R_boolean 13
+typedef jbool (*func_mindustry_net_Administration_isDosBlacklisted_java_lang_String_R_boolean)(jcontext ctx, jobject self, jobject param0);
+#define VTABLE_mindustry_net_Administration_getKickTime_java_lang_String_java_lang_String_R_long 14
+typedef jlong (*func_mindustry_net_Administration_getKickTime_java_lang_String_java_lang_String_R_long)(jcontext ctx, jobject self, jobject param0, jobject param1);
+#define VTABLE_mindustry_net_Administration_handleKicked_java_lang_String_java_lang_String_long 15
+typedef void (*func_mindustry_net_Administration_handleKicked_java_lang_String_java_lang_String_long)(jcontext ctx, jobject self, jobject param0, jobject param1, jlong param2);
+#define VTABLE_mindustry_net_Administration_getSubnetBans_R_arc_struct_Seq 16
+typedef jobject (*func_mindustry_net_Administration_getSubnetBans_R_arc_struct_Seq)(jcontext ctx, jobject self);
+#define VTABLE_mindustry_net_Administration_removeSubnetBan_java_lang_String 17
+typedef void (*func_mindustry_net_Administration_removeSubnetBan_java_lang_String)(jcontext ctx, jobject self, jobject param0);
+#define VTABLE_mindustry_net_Administration_addSubnetBan_java_lang_String 18
+typedef void (*func_mindustry_net_Administration_addSubnetBan_java_lang_String)(jcontext ctx, jobject self, jobject param0);
+#define VTABLE_mindustry_net_Administration_isSubnetBanned_java_lang_String_R_boolean 19
+typedef jbool (*func_mindustry_net_Administration_isSubnetBanned_java_lang_String_R_boolean)(jcontext ctx, jobject self, jobject param0);
+#define VTABLE_mindustry_net_Administration_addNameBan_java_lang_String 20
+typedef void (*func_mindustry_net_Administration_addNameBan_java_lang_String)(jcontext ctx, jobject self, jobject param0);
+#define VTABLE_mindustry_net_Administration_addChatFilter_mindustry_net_Administration$ChatFilter 21
+typedef void (*func_mindustry_net_Administration_addChatFilter_mindustry_net_Administration$ChatFilter)(jcontext ctx, jobject self, jobject param0);
+#define VTABLE_mindustry_net_Administration_filterMessage_mindustry_gen_Player_java_lang_String_R_java_lang_String 22
+typedef jobject (*func_mindustry_net_Administration_filterMessage_mindustry_gen_Player_java_lang_String_R_java_lang_String)(jcontext ctx, jobject self, jobject param0, jobject param1);
+#define VTABLE_mindustry_net_Administration_addActionFilter_mindustry_net_Administration$ActionFilter 23
+typedef void (*func_mindustry_net_Administration_addActionFilter_mindustry_net_Administration$ActionFilter)(jcontext ctx, jobject self, jobject param0);
+#define VTABLE_mindustry_net_Administration_allowAction_mindustry_gen_Player_mindustry_net_Administration$ActionType_mindustry_world_Tile_arc_func_Cons_R_boolean 24
+typedef jbool (*func_mindustry_net_Administration_allowAction_mindustry_gen_Player_mindustry_net_Administration$ActionType_mindustry_world_Tile_arc_func_Cons_R_boolean)(jcontext ctx, jobject self, jobject param0, jobject param1, jobject param2, jobject param3);
+#define VTABLE_mindustry_net_Administration_allowAction_mindustry_gen_Player_mindustry_net_Administration$ActionType_arc_func_Cons_R_boolean 25
+typedef jbool (*func_mindustry_net_Administration_allowAction_mindustry_gen_Player_mindustry_net_Administration$ActionType_arc_func_Cons_R_boolean)(jcontext ctx, jobject self, jobject param0, jobject param1, jobject param2);
+#define VTABLE_mindustry_net_Administration_getPlayerLimit_R_int 26
+typedef jint (*func_mindustry_net_Administration_getPlayerLimit_R_int)(jcontext ctx, jobject self);
+#define VTABLE_mindustry_net_Administration_setPlayerLimit_int 27
+typedef void (*func_mindustry_net_Administration_setPlayerLimit_int)(jcontext ctx, jobject self, jint param0);
+#define VTABLE_mindustry_net_Administration_isStrict_R_boolean 28
+typedef jbool (*func_mindustry_net_Administration_isStrict_R_boolean)(jcontext ctx, jobject self);
+#define VTABLE_mindustry_net_Administration_allowsCustomClients_R_boolean 29
+typedef jbool (*func_mindustry_net_Administration_allowsCustomClients_R_boolean)(jcontext ctx, jobject self);
+#define VTABLE_mindustry_net_Administration_updatePlayerJoined_java_lang_String_java_lang_String_java_lang_String 30
+typedef void (*func_mindustry_net_Administration_updatePlayerJoined_java_lang_String_java_lang_String_java_lang_String)(jcontext ctx, jobject self, jobject param0, jobject param1, jobject param2);
+#define VTABLE_mindustry_net_Administration_banPlayer_java_lang_String_R_boolean 31
+typedef jbool (*func_mindustry_net_Administration_banPlayer_java_lang_String_R_boolean)(jcontext ctx, jobject self, jobject param0);
+#define VTABLE_mindustry_net_Administration_banPlayerIP_java_lang_String_R_boolean 32
+typedef jbool (*func_mindustry_net_Administration_banPlayerIP_java_lang_String_R_boolean)(jcontext ctx, jobject self, jobject param0);
+#define VTABLE_mindustry_net_Administration_banPlayerID_java_lang_String_R_boolean 33
+typedef jbool (*func_mindustry_net_Administration_banPlayerID_java_lang_String_R_boolean)(jcontext ctx, jobject self, jobject param0);
+#define VTABLE_mindustry_net_Administration_unbanPlayerIP_java_lang_String_R_boolean 34
+typedef jbool (*func_mindustry_net_Administration_unbanPlayerIP_java_lang_String_R_boolean)(jcontext ctx, jobject self, jobject param0);
+#define VTABLE_mindustry_net_Administration_unbanPlayerID_java_lang_String_R_boolean 35
+typedef jbool (*func_mindustry_net_Administration_unbanPlayerID_java_lang_String_R_boolean)(jcontext ctx, jobject self, jobject param0);
+#define VTABLE_mindustry_net_Administration_checkUuidChanges_java_lang_String_java_lang_String_R_boolean 36
+typedef jbool (*func_mindustry_net_Administration_checkUuidChanges_java_lang_String_java_lang_String_R_boolean)(jcontext ctx, jobject self, jobject param0, jobject param1);
+#define VTABLE_mindustry_net_Administration_getAdmins_R_arc_struct_Seq 37
+typedef jobject (*func_mindustry_net_Administration_getAdmins_R_arc_struct_Seq)(jcontext ctx, jobject self);
+#define VTABLE_mindustry_net_Administration_getBanned_R_arc_struct_Seq 38
+typedef jobject (*func_mindustry_net_Administration_getBanned_R_arc_struct_Seq)(jcontext ctx, jobject self);
+#define VTABLE_mindustry_net_Administration_getBannedIPs_R_arc_struct_Seq 39
+typedef jobject (*func_mindustry_net_Administration_getBannedIPs_R_arc_struct_Seq)(jcontext ctx, jobject self);
+#define VTABLE_mindustry_net_Administration_adminPlayer_java_lang_String_java_lang_String_R_boolean 40
+typedef jbool (*func_mindustry_net_Administration_adminPlayer_java_lang_String_java_lang_String_R_boolean)(jcontext ctx, jobject self, jobject param0, jobject param1);
+#define VTABLE_mindustry_net_Administration_unAdminPlayer_java_lang_String_R_boolean 41
+typedef jbool (*func_mindustry_net_Administration_unAdminPlayer_java_lang_String_R_boolean)(jcontext ctx, jobject self, jobject param0);
+#define VTABLE_mindustry_net_Administration_isWhitelistEnabled_R_boolean 42
+typedef jbool (*func_mindustry_net_Administration_isWhitelistEnabled_R_boolean)(jcontext ctx, jobject self);
+#define VTABLE_mindustry_net_Administration_isWhitelisted_java_lang_String_java_lang_String_R_boolean 43
+typedef jbool (*func_mindustry_net_Administration_isWhitelisted_java_lang_String_java_lang_String_R_boolean)(jcontext ctx, jobject self, jobject param0, jobject param1);
+#define VTABLE_mindustry_net_Administration_whitelist_java_lang_String_R_boolean 44
+typedef jbool (*func_mindustry_net_Administration_whitelist_java_lang_String_R_boolean)(jcontext ctx, jobject self, jobject param0);
+#define VTABLE_mindustry_net_Administration_unwhitelist_java_lang_String_R_boolean 45
+typedef jbool (*func_mindustry_net_Administration_unwhitelist_java_lang_String_R_boolean)(jcontext ctx, jobject self, jobject param0);
+#define VTABLE_mindustry_net_Administration_isIPBanned_java_lang_String_R_boolean 46
+typedef jbool (*func_mindustry_net_Administration_isIPBanned_java_lang_String_R_boolean)(jcontext ctx, jobject self, jobject param0);
+#define VTABLE_mindustry_net_Administration_isIDBanned_java_lang_String_R_boolean 47
+typedef jbool (*func_mindustry_net_Administration_isIDBanned_java_lang_String_R_boolean)(jcontext ctx, jobject self, jobject param0);
+#define VTABLE_mindustry_net_Administration_isNameBanned_java_lang_String_R_boolean 48
+typedef jbool (*func_mindustry_net_Administration_isNameBanned_java_lang_String_R_boolean)(jcontext ctx, jobject self, jobject param0);
+#define VTABLE_mindustry_net_Administration_isAdmin_java_lang_String_java_lang_String_R_boolean 49
+typedef jbool (*func_mindustry_net_Administration_isAdmin_java_lang_String_java_lang_String_R_boolean)(jcontext ctx, jobject self, jobject param0, jobject param1);
+#define VTABLE_mindustry_net_Administration_findByName_java_lang_String_R_arc_struct_ObjectSet 50
+typedef jobject (*func_mindustry_net_Administration_findByName_java_lang_String_R_arc_struct_ObjectSet)(jcontext ctx, jobject self, jobject param0);
+#define VTABLE_mindustry_net_Administration_searchNames_java_lang_String_R_arc_struct_ObjectSet 51
+typedef jobject (*func_mindustry_net_Administration_searchNames_java_lang_String_R_arc_struct_ObjectSet)(jcontext ctx, jobject self, jobject param0);
+#define VTABLE_mindustry_net_Administration_findByIPs_java_lang_String_R_arc_struct_Seq 52
+typedef jobject (*func_mindustry_net_Administration_findByIPs_java_lang_String_R_arc_struct_Seq)(jcontext ctx, jobject self, jobject param0);
+#define VTABLE_mindustry_net_Administration_getInfo_java_lang_String_R_mindustry_net_Administration$PlayerInfo 53
+typedef jobject (*func_mindustry_net_Administration_getInfo_java_lang_String_R_mindustry_net_Administration$PlayerInfo)(jcontext ctx, jobject self, jobject param0);
+#define VTABLE_mindustry_net_Administration_getInfoOptional_java_lang_String_R_mindustry_net_Administration$PlayerInfo 54
+typedef jobject (*func_mindustry_net_Administration_getInfoOptional_java_lang_String_R_mindustry_net_Administration$PlayerInfo)(jcontext ctx, jobject self, jobject param0);
+#define VTABLE_mindustry_net_Administration_findByIP_java_lang_String_R_mindustry_net_Administration$PlayerInfo 55
+typedef jobject (*func_mindustry_net_Administration_findByIP_java_lang_String_R_mindustry_net_Administration$PlayerInfo)(jcontext ctx, jobject self, jobject param0);
+#define VTABLE_mindustry_net_Administration_getWhitelisted_R_arc_struct_Seq 56
+typedef jobject (*func_mindustry_net_Administration_getWhitelisted_R_arc_struct_Seq)(jcontext ctx, jobject self);
+#define VTABLE_mindustry_net_Administration_getCreateInfo_java_lang_String_R_mindustry_net_Administration$PlayerInfo 57
+typedef jobject (*func_mindustry_net_Administration_getCreateInfo_java_lang_String_R_mindustry_net_Administration$PlayerInfo)(jcontext ctx, jobject self, jobject param0);
+#define VTABLE_mindustry_net_Administration_save 58
+typedef void (*func_mindustry_net_Administration_save)(jcontext ctx, jobject self);
+#define VTABLE_mindustry_net_Administration_forceSave 59
+typedef void (*func_mindustry_net_Administration_forceSave)(jcontext ctx, jobject self);
+#define VTABLE_mindustry_net_Administration_load 60
+typedef void (*func_mindustry_net_Administration_load)(jcontext ctx, jobject self);
+#define VTABLE_mindustry_net_Administration_lambda$getWhitelisted$0_mindustry_net_Administration$PlayerInfo_R_boolean 61
+typedef jbool (*func_mindustry_net_Administration_lambda$getWhitelisted$0_mindustry_net_Administration$PlayerInfo_R_boolean)(jcontext ctx, jobject self, jobject param0);
+
+void mark_mindustry_net_Administration(jobject object, jint mark, jint depth);
+void clinit_mindustry_net_Administration(jcontext ctx);
+void init_mindustry_net_Administration(jcontext ctx, jobject self);
+void M_mindustry_net_Administration_blacklistDos_java_lang_String(jcontext ctx, jobject self, jobject param0);
+void M_mindustry_net_Administration_unBlacklistDos_java_lang_String(jcontext ctx, jobject self, jobject param0);
+jbool M_mindustry_net_Administration_isDosBlacklisted_java_lang_String_R_boolean(jcontext ctx, jobject self, jobject param0);
+jlong M_mindustry_net_Administration_getKickTime_java_lang_String_java_lang_String_R_long(jcontext ctx, jobject self, jobject param0, jobject param1);
+void M_mindustry_net_Administration_handleKicked_java_lang_String_java_lang_String_long(jcontext ctx, jobject self, jobject param0, jobject param1, jlong param2);
+jobject M_mindustry_net_Administration_getSubnetBans_R_arc_struct_Seq(jcontext ctx, jobject self);
+void M_mindustry_net_Administration_removeSubnetBan_java_lang_String(jcontext ctx, jobject self, jobject param0);
+void M_mindustry_net_Administration_addSubnetBan_java_lang_String(jcontext ctx, jobject self, jobject param0);
+jbool M_mindustry_net_Administration_isSubnetBanned_java_lang_String_R_boolean(jcontext ctx, jobject self, jobject param0);
+void M_mindustry_net_Administration_addNameBan_java_lang_String(jcontext ctx, jobject self, jobject param0);
+void M_mindustry_net_Administration_addChatFilter_mindustry_net_Administration$ChatFilter(jcontext ctx, jobject self, jobject param0);
+jobject M_mindustry_net_Administration_filterMessage_mindustry_gen_Player_java_lang_String_R_java_lang_String(jcontext ctx, jobject self, jobject param0, jobject param1);
+void M_mindustry_net_Administration_addActionFilter_mindustry_net_Administration$ActionFilter(jcontext ctx, jobject self, jobject param0);
+jbool M_mindustry_net_Administration_allowAction_mindustry_gen_Player_mindustry_net_Administration$ActionType_mindustry_world_Tile_arc_func_Cons_R_boolean(jcontext ctx, jobject self, jobject param0, jobject param1, jobject param2, jobject param3);
+jbool M_mindustry_net_Administration_allowAction_mindustry_gen_Player_mindustry_net_Administration$ActionType_arc_func_Cons_R_boolean(jcontext ctx, jobject self, jobject param0, jobject param1, jobject param2);
+jint M_mindustry_net_Administration_getPlayerLimit_R_int(jcontext ctx, jobject self);
+void M_mindustry_net_Administration_setPlayerLimit_int(jcontext ctx, jobject self, jint param0);
+jbool M_mindustry_net_Administration_isStrict_R_boolean(jcontext ctx, jobject self);
+jbool M_mindustry_net_Administration_allowsCustomClients_R_boolean(jcontext ctx, jobject self);
+void M_mindustry_net_Administration_updatePlayerJoined_java_lang_String_java_lang_String_java_lang_String(jcontext ctx, jobject self, jobject param0, jobject param1, jobject param2);
+jbool M_mindustry_net_Administration_banPlayer_java_lang_String_R_boolean(jcontext ctx, jobject self, jobject param0);
+jbool M_mindustry_net_Administration_banPlayerIP_java_lang_String_R_boolean(jcontext ctx, jobject self, jobject param0);
+jbool M_mindustry_net_Administration_banPlayerID_java_lang_String_R_boolean(jcontext ctx, jobject self, jobject param0);
+jbool M_mindustry_net_Administration_unbanPlayerIP_java_lang_String_R_boolean(jcontext ctx, jobject self, jobject param0);
+jbool M_mindustry_net_Administration_unbanPlayerID_java_lang_String_R_boolean(jcontext ctx, jobject self, jobject param0);
+jbool M_mindustry_net_Administration_checkUuidChanges_java_lang_String_java_lang_String_R_boolean(jcontext ctx, jobject self, jobject param0, jobject param1);
+jobject M_mindustry_net_Administration_getAdmins_R_arc_struct_Seq(jcontext ctx, jobject self);
+jobject M_mindustry_net_Administration_getBanned_R_arc_struct_Seq(jcontext ctx, jobject self);
+jobject M_mindustry_net_Administration_getBannedIPs_R_arc_struct_Seq(jcontext ctx, jobject self);
+jbool M_mindustry_net_Administration_adminPlayer_java_lang_String_java_lang_String_R_boolean(jcontext ctx, jobject self, jobject param0, jobject param1);
+jbool M_mindustry_net_Administration_unAdminPlayer_java_lang_String_R_boolean(jcontext ctx, jobject self, jobject param0);
+jbool M_mindustry_net_Administration_isWhitelistEnabled_R_boolean(jcontext ctx, jobject self);
+jbool M_mindustry_net_Administration_isWhitelisted_java_lang_String_java_lang_String_R_boolean(jcontext ctx, jobject self, jobject param0, jobject param1);
+jbool M_mindustry_net_Administration_whitelist_java_lang_String_R_boolean(jcontext ctx, jobject self, jobject param0);
+jbool M_mindustry_net_Administration_unwhitelist_java_lang_String_R_boolean(jcontext ctx, jobject self, jobject param0);
+jbool M_mindustry_net_Administration_isIPBanned_java_lang_String_R_boolean(jcontext ctx, jobject self, jobject param0);
+jbool M_mindustry_net_Administration_isIDBanned_java_lang_String_R_boolean(jcontext ctx, jobject self, jobject param0);
+jbool M_mindustry_net_Administration_isNameBanned_java_lang_String_R_boolean(jcontext ctx, jobject self, jobject param0);
+jbool M_mindustry_net_Administration_isAdmin_java_lang_String_java_lang_String_R_boolean(jcontext ctx, jobject self, jobject param0, jobject param1);
+jobject M_mindustry_net_Administration_findByName_java_lang_String_R_arc_struct_ObjectSet(jcontext ctx, jobject self, jobject param0);
+jobject M_mindustry_net_Administration_searchNames_java_lang_String_R_arc_struct_ObjectSet(jcontext ctx, jobject self, jobject param0);
+jobject M_mindustry_net_Administration_findByIPs_java_lang_String_R_arc_struct_Seq(jcontext ctx, jobject self, jobject param0);
+jobject M_mindustry_net_Administration_getInfo_java_lang_String_R_mindustry_net_Administration$PlayerInfo(jcontext ctx, jobject self, jobject param0);
+jobject M_mindustry_net_Administration_getInfoOptional_java_lang_String_R_mindustry_net_Administration$PlayerInfo(jcontext ctx, jobject self, jobject param0);
+jobject M_mindustry_net_Administration_findByIP_java_lang_String_R_mindustry_net_Administration$PlayerInfo(jcontext ctx, jobject self, jobject param0);
+jobject M_mindustry_net_Administration_getWhitelisted_R_arc_struct_Seq(jcontext ctx, jobject self);
+jobject M_mindustry_net_Administration_getCreateInfo_java_lang_String_R_mindustry_net_Administration$PlayerInfo(jcontext ctx, jobject self, jobject param0);
+void M_mindustry_net_Administration_save(jcontext ctx, jobject self);
+void M_mindustry_net_Administration_forceSave(jcontext ctx, jobject self);
+void M_mindustry_net_Administration_load(jcontext ctx, jobject self);
+jbool M_mindustry_net_Administration_lambda$getWhitelisted$0_mindustry_net_Administration$PlayerInfo_R_boolean(jcontext ctx, jobject self, jobject param0);
+jbool SM_mindustry_net_Administration_lambda$searchNames$0_java_lang_String_java_lang_String_R_boolean(jcontext ctx, jobject param0, jobject param1);
+jbool SM_mindustry_net_Administration_lambda$isNameBanned$0_java_lang_String_java_util_regex_Pattern_R_boolean(jcontext ctx, jobject param0, jobject param1);
+jbool SM_mindustry_net_Administration_lambda$unbanPlayerID$0_java_lang_String_mindustry_gen_Player_R_boolean(jcontext ctx, jobject param0, jobject param1);
+jbool SM_mindustry_net_Administration_lambda$banPlayerID$0_java_lang_String_mindustry_gen_Player_R_boolean(jcontext ctx, jobject param0, jobject param1);
+void SM_mindustry_net_Administration_lambda$allowAction$0_arc_func_Cons_mindustry_gen_Player_mindustry_net_Administration$ActionType_mindustry_world_Tile_mindustry_net_Administration$PlayerAction(jcontext ctx, jobject param0, jobject param1, jobject param2, jobject param3, jobject param4);
+jbool SM_mindustry_net_Administration_lambda$new$1_mindustry_net_Administration$PlayerAction_R_boolean(jcontext ctx, jobject param0);
+jobject SM_mindustry_net_Administration_lambda$new$0_mindustry_gen_Player_java_lang_String_R_java_lang_String(jcontext ctx, jobject param0, jobject param1);
+
+#ifdef __cplusplus
+}
+#endif
+
+#endif

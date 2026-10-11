@@ -1,0 +1,36 @@
+#ifndef HEADER_java_util_concurrent_CompletionService
+#define HEADER_java_util_concurrent_CompletionService
+
+#include "Clearwing.h"
+#include "java/lang/Object.h"
+
+#ifdef __cplusplus
+extern "C" {
+#endif
+
+typedef struct java_util_concurrent_CompletionService {
+	java_lang_Object parent;
+} java_util_concurrent_CompletionService;
+
+extern Class class_java_util_concurrent_CompletionService;
+
+
+#define INDEX_java_util_concurrent_CompletionService_submit_java_util_concurrent_Callable_R_java_util_concurrent_Future 0
+typedef jobject (*func_java_util_concurrent_CompletionService_submit_java_util_concurrent_Callable_R_java_util_concurrent_Future)(jcontext ctx, jobject self, jobject param0);
+#define INDEX_java_util_concurrent_CompletionService_submit_java_lang_Runnable_java_lang_Object_R_java_util_concurrent_Future 1
+typedef jobject (*func_java_util_concurrent_CompletionService_submit_java_lang_Runnable_java_lang_Object_R_java_util_concurrent_Future)(jcontext ctx, jobject self, jobject param0, jobject param1);
+#define INDEX_java_util_concurrent_CompletionService_take_R_java_util_concurrent_Future 2
+typedef jobject (*func_java_util_concurrent_CompletionService_take_R_java_util_concurrent_Future)(jcontext ctx, jobject self);
+#define INDEX_java_util_concurrent_CompletionService_poll_R_java_util_concurrent_Future 3
+typedef jobject (*func_java_util_concurrent_CompletionService_poll_R_java_util_concurrent_Future)(jcontext ctx, jobject self);
+#define INDEX_java_util_concurrent_CompletionService_poll_long_java_util_concurrent_TimeUnit_R_java_util_concurrent_Future 4
+typedef jobject (*func_java_util_concurrent_CompletionService_poll_long_java_util_concurrent_TimeUnit_R_java_util_concurrent_Future)(jcontext ctx, jobject self, jlong param0, jobject param1);
+
+void mark_java_util_concurrent_CompletionService(jobject object, jint mark, jint depth);
+void clinit_java_util_concurrent_CompletionService(jcontext ctx);
+
+#ifdef __cplusplus
+}
+#endif
+
+#endif

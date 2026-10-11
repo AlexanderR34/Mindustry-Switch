@@ -1,0 +1,73 @@
+#ifndef HEADER_arc_assets_loaders_SoundLoader
+#define HEADER_arc_assets_loaders_SoundLoader
+
+#include "Clearwing.h"
+#include "arc/assets/loaders/AsynchronousAssetLoader.h"
+
+#ifdef __cplusplus
+extern "C" {
+#endif
+
+typedef struct arc_assets_loaders_SoundLoader {
+	arc_assets_loaders_AsynchronousAssetLoader parent;
+	jref F_sound;
+} arc_assets_loaders_SoundLoader;
+
+extern Class class_arc_assets_loaders_SoundLoader;
+
+
+#define VTABLE_arc_assets_loaders_SoundLoader_hashCode_R_int 0
+typedef jint (*func_arc_assets_loaders_SoundLoader_hashCode_R_int)(jcontext ctx, jobject self);
+#define VTABLE_arc_assets_loaders_SoundLoader_equals_java_lang_Object_R_boolean 1
+typedef jbool (*func_arc_assets_loaders_SoundLoader_equals_java_lang_Object_R_boolean)(jcontext ctx, jobject self, jobject param0);
+#define VTABLE_arc_assets_loaders_SoundLoader_clone_R_java_lang_Object 2
+typedef jobject (*func_arc_assets_loaders_SoundLoader_clone_R_java_lang_Object)(jcontext ctx, jobject self);
+#define VTABLE_arc_assets_loaders_SoundLoader_getClass_R_java_lang_Class 3
+typedef jobject (*func_arc_assets_loaders_SoundLoader_getClass_R_java_lang_Class)(jcontext ctx, jobject self);
+#define VTABLE_arc_assets_loaders_SoundLoader_toString_R_java_lang_String 4
+typedef jobject (*func_arc_assets_loaders_SoundLoader_toString_R_java_lang_String)(jcontext ctx, jobject self);
+#define VTABLE_arc_assets_loaders_SoundLoader_finalize 5
+typedef void (*func_arc_assets_loaders_SoundLoader_finalize)(jcontext ctx, jobject self);
+#define VTABLE_arc_assets_loaders_SoundLoader_notify 6
+typedef void (*func_arc_assets_loaders_SoundLoader_notify)(jcontext ctx, jobject self);
+#define VTABLE_arc_assets_loaders_SoundLoader_notifyAll 7
+typedef void (*func_arc_assets_loaders_SoundLoader_notifyAll)(jcontext ctx, jobject self);
+#define VTABLE_arc_assets_loaders_SoundLoader_wait 8
+typedef void (*func_arc_assets_loaders_SoundLoader_wait)(jcontext ctx, jobject self);
+#define VTABLE_arc_assets_loaders_SoundLoader_wait_long 9
+typedef void (*func_arc_assets_loaders_SoundLoader_wait_long)(jcontext ctx, jobject self, jlong param0);
+#define VTABLE_arc_assets_loaders_SoundLoader_wait_long_int 10
+typedef void (*func_arc_assets_loaders_SoundLoader_wait_long_int)(jcontext ctx, jobject self, jlong param0, jint param1);
+#define VTABLE_arc_assets_loaders_SoundLoader_resolve_java_lang_String_R_arc_files_Fi 11
+typedef jobject (*func_arc_assets_loaders_SoundLoader_resolve_java_lang_String_R_arc_files_Fi)(jcontext ctx, jobject self, jobject param0);
+#define VTABLE_arc_assets_loaders_SoundLoader_getDependencies_java_lang_String_arc_files_Fi_arc_assets_AssetLoaderParameters_R_arc_struct_Seq 12
+typedef jobject (*func_arc_assets_loaders_SoundLoader_getDependencies_java_lang_String_arc_files_Fi_arc_assets_AssetLoaderParameters_R_arc_struct_Seq)(jcontext ctx, jobject self, jobject param0, jobject param1, jobject param2);
+#define VTABLE_arc_assets_loaders_SoundLoader_loadAsync_arc_assets_AssetManager_java_lang_String_arc_files_Fi_arc_assets_AssetLoaderParameters 13
+typedef void (*func_arc_assets_loaders_SoundLoader_loadAsync_arc_assets_AssetManager_java_lang_String_arc_files_Fi_arc_assets_AssetLoaderParameters)(jcontext ctx, jobject self, jobject param0, jobject param1, jobject param2, jobject param3);
+#define VTABLE_arc_assets_loaders_SoundLoader_loadSync_arc_assets_AssetManager_java_lang_String_arc_files_Fi_arc_assets_AssetLoaderParameters_R_java_lang_Object 14
+typedef jobject (*func_arc_assets_loaders_SoundLoader_loadSync_arc_assets_AssetManager_java_lang_String_arc_files_Fi_arc_assets_AssetLoaderParameters_R_java_lang_Object)(jcontext ctx, jobject self, jobject param0, jobject param1, jobject param2, jobject param3);
+#define VTABLE_arc_assets_loaders_SoundLoader_getLoadedSound_R_arc_audio_Sound 15
+typedef jobject (*func_arc_assets_loaders_SoundLoader_getLoadedSound_R_arc_audio_Sound)(jcontext ctx, jobject self);
+#define VTABLE_arc_assets_loaders_SoundLoader_loadAsync_arc_assets_AssetManager_java_lang_String_arc_files_Fi_arc_assets_loaders_SoundLoader$SoundParameter 16
+typedef void (*func_arc_assets_loaders_SoundLoader_loadAsync_arc_assets_AssetManager_java_lang_String_arc_files_Fi_arc_assets_loaders_SoundLoader$SoundParameter)(jcontext ctx, jobject self, jobject param0, jobject param1, jobject param2, jobject param3);
+#define VTABLE_arc_assets_loaders_SoundLoader_loadSync_arc_assets_AssetManager_java_lang_String_arc_files_Fi_arc_assets_loaders_SoundLoader$SoundParameter_R_arc_audio_Sound 17
+typedef jobject (*func_arc_assets_loaders_SoundLoader_loadSync_arc_assets_AssetManager_java_lang_String_arc_files_Fi_arc_assets_loaders_SoundLoader$SoundParameter_R_arc_audio_Sound)(jcontext ctx, jobject self, jobject param0, jobject param1, jobject param2, jobject param3);
+#define VTABLE_arc_assets_loaders_SoundLoader_getDependencies_java_lang_String_arc_files_Fi_arc_assets_loaders_SoundLoader$SoundParameter_R_arc_struct_Seq 18
+typedef jobject (*func_arc_assets_loaders_SoundLoader_getDependencies_java_lang_String_arc_files_Fi_arc_assets_loaders_SoundLoader$SoundParameter_R_arc_struct_Seq)(jcontext ctx, jobject self, jobject param0, jobject param1, jobject param2);
+
+void mark_arc_assets_loaders_SoundLoader(jobject object, jint mark, jint depth);
+void clinit_arc_assets_loaders_SoundLoader(jcontext ctx);
+void init_arc_assets_loaders_SoundLoader_arc_assets_loaders_FileHandleResolver(jcontext ctx, jobject self, jobject param0);
+jobject M_arc_assets_loaders_SoundLoader_getLoadedSound_R_arc_audio_Sound(jcontext ctx, jobject self);
+void M_arc_assets_loaders_SoundLoader_loadAsync_arc_assets_AssetManager_java_lang_String_arc_files_Fi_arc_assets_loaders_SoundLoader$SoundParameter(jcontext ctx, jobject self, jobject param0, jobject param1, jobject param2, jobject param3);
+jobject M_arc_assets_loaders_SoundLoader_loadSync_arc_assets_AssetManager_java_lang_String_arc_files_Fi_arc_assets_loaders_SoundLoader$SoundParameter_R_arc_audio_Sound(jcontext ctx, jobject self, jobject param0, jobject param1, jobject param2, jobject param3);
+jobject M_arc_assets_loaders_SoundLoader_getDependencies_java_lang_String_arc_files_Fi_arc_assets_loaders_SoundLoader$SoundParameter_R_arc_struct_Seq(jcontext ctx, jobject self, jobject param0, jobject param1, jobject param2);
+jobject M_arc_assets_loaders_SoundLoader_loadSync_arc_assets_AssetManager_java_lang_String_arc_files_Fi_arc_assets_AssetLoaderParameters_R_java_lang_Object(jcontext ctx, jobject self, jobject param0, jobject param1, jobject param2, jobject param3);
+void M_arc_assets_loaders_SoundLoader_loadAsync_arc_assets_AssetManager_java_lang_String_arc_files_Fi_arc_assets_AssetLoaderParameters(jcontext ctx, jobject self, jobject param0, jobject param1, jobject param2, jobject param3);
+jobject M_arc_assets_loaders_SoundLoader_getDependencies_java_lang_String_arc_files_Fi_arc_assets_AssetLoaderParameters_R_arc_struct_Seq(jcontext ctx, jobject self, jobject param0, jobject param1, jobject param2);
+
+#ifdef __cplusplus
+}
+#endif
+
+#endif

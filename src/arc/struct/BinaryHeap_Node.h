@@ -1,0 +1,55 @@
+#ifndef HEADER_arc_struct_BinaryHeap$Node
+#define HEADER_arc_struct_BinaryHeap$Node
+
+#include "Clearwing.h"
+#include "java/lang/Object.h"
+
+#ifdef __cplusplus
+extern "C" {
+#endif
+
+typedef struct arc_struct_BinaryHeap$Node {
+	java_lang_Object parent;
+	jfloat F_value;
+	jint F_index;
+} arc_struct_BinaryHeap$Node;
+
+extern Class class_arc_struct_BinaryHeap$Node;
+
+
+#define VTABLE_arc_struct_BinaryHeap$Node_hashCode_R_int 0
+typedef jint (*func_arc_struct_BinaryHeap$Node_hashCode_R_int)(jcontext ctx, jobject self);
+#define VTABLE_arc_struct_BinaryHeap$Node_equals_java_lang_Object_R_boolean 1
+typedef jbool (*func_arc_struct_BinaryHeap$Node_equals_java_lang_Object_R_boolean)(jcontext ctx, jobject self, jobject param0);
+#define VTABLE_arc_struct_BinaryHeap$Node_clone_R_java_lang_Object 2
+typedef jobject (*func_arc_struct_BinaryHeap$Node_clone_R_java_lang_Object)(jcontext ctx, jobject self);
+#define VTABLE_arc_struct_BinaryHeap$Node_getClass_R_java_lang_Class 3
+typedef jobject (*func_arc_struct_BinaryHeap$Node_getClass_R_java_lang_Class)(jcontext ctx, jobject self);
+#define VTABLE_arc_struct_BinaryHeap$Node_toString_R_java_lang_String 4
+typedef jobject (*func_arc_struct_BinaryHeap$Node_toString_R_java_lang_String)(jcontext ctx, jobject self);
+#define VTABLE_arc_struct_BinaryHeap$Node_finalize 5
+typedef void (*func_arc_struct_BinaryHeap$Node_finalize)(jcontext ctx, jobject self);
+#define VTABLE_arc_struct_BinaryHeap$Node_notify 6
+typedef void (*func_arc_struct_BinaryHeap$Node_notify)(jcontext ctx, jobject self);
+#define VTABLE_arc_struct_BinaryHeap$Node_notifyAll 7
+typedef void (*func_arc_struct_BinaryHeap$Node_notifyAll)(jcontext ctx, jobject self);
+#define VTABLE_arc_struct_BinaryHeap$Node_wait 8
+typedef void (*func_arc_struct_BinaryHeap$Node_wait)(jcontext ctx, jobject self);
+#define VTABLE_arc_struct_BinaryHeap$Node_wait_long 9
+typedef void (*func_arc_struct_BinaryHeap$Node_wait_long)(jcontext ctx, jobject self, jlong param0);
+#define VTABLE_arc_struct_BinaryHeap$Node_wait_long_int 10
+typedef void (*func_arc_struct_BinaryHeap$Node_wait_long_int)(jcontext ctx, jobject self, jlong param0, jint param1);
+#define VTABLE_arc_struct_BinaryHeap$Node_getValue_R_float 11
+typedef jfloat (*func_arc_struct_BinaryHeap$Node_getValue_R_float)(jcontext ctx, jobject self);
+
+void mark_arc_struct_BinaryHeap$Node(jobject object, jint mark, jint depth);
+void clinit_arc_struct_BinaryHeap$Node(jcontext ctx);
+void init_arc_struct_BinaryHeap$Node_float(jcontext ctx, jobject self, jfloat param0);
+jfloat M_arc_struct_BinaryHeap$Node_getValue_R_float(jcontext ctx, jobject self);
+jobject M_arc_struct_BinaryHeap$Node_toString_R_java_lang_String(jcontext ctx, jobject self);
+
+#ifdef __cplusplus
+}
+#endif
+
+#endif

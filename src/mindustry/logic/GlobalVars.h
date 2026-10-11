@@ -1,0 +1,132 @@
+#ifndef HEADER_mindustry_logic_GlobalVars
+#define HEADER_mindustry_logic_GlobalVars
+
+#include "Clearwing.h"
+#include "java/lang/Object.h"
+
+#ifdef __cplusplus
+extern "C" {
+#endif
+
+typedef struct mindustry_logic_GlobalVars {
+	java_lang_Object parent;
+	jref F_vars;
+	jref F_varEntries;
+	jref F_privilegedNames;
+	jref F_logicIdToContent;
+	jref F_contentIdToLogicId;
+} mindustry_logic_GlobalVars;
+
+extern Class class_mindustry_logic_GlobalVars;
+
+extern jint SF_mindustry_logic_GlobalVars_ctrlProcessor;
+extern jint SF_mindustry_logic_GlobalVars_ctrlPlayer;
+extern jint SF_mindustry_logic_GlobalVars_ctrlCommand;
+extern jobject SF_mindustry_logic_GlobalVars_lookableContent;
+extern jobject SF_mindustry_logic_GlobalVars_writableLookableContent;
+extern jobject SF_mindustry_logic_GlobalVars_rand;
+extern jobject SF_mindustry_logic_GlobalVars_varTime;
+extern jobject SF_mindustry_logic_GlobalVars_varTick;
+extern jobject SF_mindustry_logic_GlobalVars_varSecond;
+extern jobject SF_mindustry_logic_GlobalVars_varMinute;
+extern jobject SF_mindustry_logic_GlobalVars_varWave;
+extern jobject SF_mindustry_logic_GlobalVars_varWaveTime;
+extern jobject SF_mindustry_logic_GlobalVars_varMapW;
+extern jobject SF_mindustry_logic_GlobalVars_varMapH;
+extern jobject SF_mindustry_logic_GlobalVars_varWait;
+extern jobject SF_mindustry_logic_GlobalVars_varServer;
+extern jobject SF_mindustry_logic_GlobalVars_varClient;
+extern jobject SF_mindustry_logic_GlobalVars_varClientLocale;
+extern jobject SF_mindustry_logic_GlobalVars_varClientUnit;
+extern jobject SF_mindustry_logic_GlobalVars_varClientName;
+extern jobject SF_mindustry_logic_GlobalVars_varClientTeam;
+extern jobject SF_mindustry_logic_GlobalVars_varClientMobile;
+extern jobject SF_mindustry_logic_GlobalVars_varClientMusicPlaying;
+extern jobject SF_mindustry_logic_GlobalVars_varClientCurrentMusic;
+
+#define VTABLE_mindustry_logic_GlobalVars_hashCode_R_int 0
+typedef jint (*func_mindustry_logic_GlobalVars_hashCode_R_int)(jcontext ctx, jobject self);
+#define VTABLE_mindustry_logic_GlobalVars_equals_java_lang_Object_R_boolean 1
+typedef jbool (*func_mindustry_logic_GlobalVars_equals_java_lang_Object_R_boolean)(jcontext ctx, jobject self, jobject param0);
+#define VTABLE_mindustry_logic_GlobalVars_clone_R_java_lang_Object 2
+typedef jobject (*func_mindustry_logic_GlobalVars_clone_R_java_lang_Object)(jcontext ctx, jobject self);
+#define VTABLE_mindustry_logic_GlobalVars_getClass_R_java_lang_Class 3
+typedef jobject (*func_mindustry_logic_GlobalVars_getClass_R_java_lang_Class)(jcontext ctx, jobject self);
+#define VTABLE_mindustry_logic_GlobalVars_toString_R_java_lang_String 4
+typedef jobject (*func_mindustry_logic_GlobalVars_toString_R_java_lang_String)(jcontext ctx, jobject self);
+#define VTABLE_mindustry_logic_GlobalVars_finalize 5
+typedef void (*func_mindustry_logic_GlobalVars_finalize)(jcontext ctx, jobject self);
+#define VTABLE_mindustry_logic_GlobalVars_notify 6
+typedef void (*func_mindustry_logic_GlobalVars_notify)(jcontext ctx, jobject self);
+#define VTABLE_mindustry_logic_GlobalVars_notifyAll 7
+typedef void (*func_mindustry_logic_GlobalVars_notifyAll)(jcontext ctx, jobject self);
+#define VTABLE_mindustry_logic_GlobalVars_wait 8
+typedef void (*func_mindustry_logic_GlobalVars_wait)(jcontext ctx, jobject self);
+#define VTABLE_mindustry_logic_GlobalVars_wait_long 9
+typedef void (*func_mindustry_logic_GlobalVars_wait_long)(jcontext ctx, jobject self, jlong param0);
+#define VTABLE_mindustry_logic_GlobalVars_wait_long_int 10
+typedef void (*func_mindustry_logic_GlobalVars_wait_long_int)(jcontext ctx, jobject self, jlong param0, jint param1);
+#define VTABLE_mindustry_logic_GlobalVars_init 11
+typedef void (*func_mindustry_logic_GlobalVars_init)(jcontext ctx, jobject self);
+#define VTABLE_mindustry_logic_GlobalVars_update 12
+typedef void (*func_mindustry_logic_GlobalVars_update)(jcontext ctx, jobject self);
+#define VTABLE_mindustry_logic_GlobalVars_waitVar_R_mindustry_logic_LVar 13
+typedef jobject (*func_mindustry_logic_GlobalVars_waitVar_R_mindustry_logic_LVar)(jcontext ctx, jobject self);
+#define VTABLE_mindustry_logic_GlobalVars_getEntries_R_arc_struct_Seq 14
+typedef jobject (*func_mindustry_logic_GlobalVars_getEntries_R_arc_struct_Seq)(jcontext ctx, jobject self);
+#define VTABLE_mindustry_logic_GlobalVars_lookupContent_mindustry_ctype_ContentType_int_R_java_lang_Object 15
+typedef jobject (*func_mindustry_logic_GlobalVars_lookupContent_mindustry_ctype_ContentType_int_R_java_lang_Object)(jcontext ctx, jobject self, jobject param0, jint param1);
+#define VTABLE_mindustry_logic_GlobalVars_lookupLogicId_mindustry_ctype_UnlockableContent_R_int 16
+typedef jint (*func_mindustry_logic_GlobalVars_lookupLogicId_mindustry_ctype_UnlockableContent_R_int)(jcontext ctx, jobject self, jobject param0);
+#define VTABLE_mindustry_logic_GlobalVars_get_java_lang_String_R_mindustry_logic_LVar 17
+typedef jobject (*func_mindustry_logic_GlobalVars_get_java_lang_String_R_mindustry_logic_LVar)(jcontext ctx, jobject self, jobject param0);
+#define VTABLE_mindustry_logic_GlobalVars_get_java_lang_String_boolean_R_mindustry_logic_LVar 18
+typedef jobject (*func_mindustry_logic_GlobalVars_get_java_lang_String_boolean_R_mindustry_logic_LVar)(jcontext ctx, jobject self, jobject param0, jbool param1);
+#define VTABLE_mindustry_logic_GlobalVars_set_java_lang_String_double 19
+typedef void (*func_mindustry_logic_GlobalVars_set_java_lang_String_double)(jcontext ctx, jobject self, jobject param0, jdouble param1);
+#define VTABLE_mindustry_logic_GlobalVars_put_java_lang_String_java_lang_Object_boolean_R_mindustry_logic_LVar 20
+typedef jobject (*func_mindustry_logic_GlobalVars_put_java_lang_String_java_lang_Object_boolean_R_mindustry_logic_LVar)(jcontext ctx, jobject self, jobject param0, jobject param1, jbool param2);
+#define VTABLE_mindustry_logic_GlobalVars_put_java_lang_String_java_lang_Object_boolean_boolean_R_mindustry_logic_LVar 21
+typedef jobject (*func_mindustry_logic_GlobalVars_put_java_lang_String_java_lang_Object_boolean_boolean_R_mindustry_logic_LVar)(jcontext ctx, jobject self, jobject param0, jobject param1, jbool param2, jbool param3);
+#define VTABLE_mindustry_logic_GlobalVars_remove_mindustry_logic_LVar 22
+typedef void (*func_mindustry_logic_GlobalVars_remove_mindustry_logic_LVar)(jcontext ctx, jobject self, jobject param0);
+#define VTABLE_mindustry_logic_GlobalVars_remove_java_lang_String 23
+typedef void (*func_mindustry_logic_GlobalVars_remove_java_lang_String)(jcontext ctx, jobject self, jobject param0);
+#define VTABLE_mindustry_logic_GlobalVars_put_java_lang_String_java_lang_Object_R_mindustry_logic_LVar 24
+typedef jobject (*func_mindustry_logic_GlobalVars_put_java_lang_String_java_lang_Object_R_mindustry_logic_LVar)(jcontext ctx, jobject self, jobject param0, jobject param1);
+#define VTABLE_mindustry_logic_GlobalVars_putEntry_java_lang_String_java_lang_Object_R_mindustry_logic_LVar 25
+typedef jobject (*func_mindustry_logic_GlobalVars_putEntry_java_lang_String_java_lang_Object_R_mindustry_logic_LVar)(jcontext ctx, jobject self, jobject param0, jobject param1);
+#define VTABLE_mindustry_logic_GlobalVars_putEntry_java_lang_String_java_lang_Object_boolean_R_mindustry_logic_LVar 26
+typedef jobject (*func_mindustry_logic_GlobalVars_putEntry_java_lang_String_java_lang_Object_boolean_R_mindustry_logic_LVar)(jcontext ctx, jobject self, jobject param0, jobject param1, jbool param2);
+#define VTABLE_mindustry_logic_GlobalVars_putEntryOnly_java_lang_String 27
+typedef void (*func_mindustry_logic_GlobalVars_putEntryOnly_java_lang_String)(jcontext ctx, jobject self, jobject param0);
+#define VTABLE_mindustry_logic_GlobalVars_lambda$init$0_java_lang_String_java_lang_Integer 28
+typedef void (*func_mindustry_logic_GlobalVars_lambda$init$0_java_lang_String_java_lang_Integer)(jcontext ctx, jobject self, jobject param0, jobject param1);
+
+void mark_mindustry_logic_GlobalVars(jobject object, jint mark, jint depth);
+void clinit_mindustry_logic_GlobalVars(jcontext ctx);
+void init_mindustry_logic_GlobalVars(jcontext ctx, jobject self);
+void M_mindustry_logic_GlobalVars_init(jcontext ctx, jobject self);
+void M_mindustry_logic_GlobalVars_update(jcontext ctx, jobject self);
+jobject M_mindustry_logic_GlobalVars_waitVar_R_mindustry_logic_LVar(jcontext ctx, jobject self);
+jobject M_mindustry_logic_GlobalVars_getEntries_R_arc_struct_Seq(jcontext ctx, jobject self);
+jobject M_mindustry_logic_GlobalVars_lookupContent_mindustry_ctype_ContentType_int_R_java_lang_Object(jcontext ctx, jobject self, jobject param0, jint param1);
+jint M_mindustry_logic_GlobalVars_lookupLogicId_mindustry_ctype_UnlockableContent_R_int(jcontext ctx, jobject self, jobject param0);
+jobject M_mindustry_logic_GlobalVars_get_java_lang_String_R_mindustry_logic_LVar(jcontext ctx, jobject self, jobject param0);
+jobject M_mindustry_logic_GlobalVars_get_java_lang_String_boolean_R_mindustry_logic_LVar(jcontext ctx, jobject self, jobject param0, jbool param1);
+void M_mindustry_logic_GlobalVars_set_java_lang_String_double(jcontext ctx, jobject self, jobject param0, jdouble param1);
+jobject M_mindustry_logic_GlobalVars_put_java_lang_String_java_lang_Object_boolean_R_mindustry_logic_LVar(jcontext ctx, jobject self, jobject param0, jobject param1, jbool param2);
+jobject M_mindustry_logic_GlobalVars_put_java_lang_String_java_lang_Object_boolean_boolean_R_mindustry_logic_LVar(jcontext ctx, jobject self, jobject param0, jobject param1, jbool param2, jbool param3);
+void M_mindustry_logic_GlobalVars_remove_mindustry_logic_LVar(jcontext ctx, jobject self, jobject param0);
+void M_mindustry_logic_GlobalVars_remove_java_lang_String(jcontext ctx, jobject self, jobject param0);
+jobject M_mindustry_logic_GlobalVars_put_java_lang_String_java_lang_Object_R_mindustry_logic_LVar(jcontext ctx, jobject self, jobject param0, jobject param1);
+jobject M_mindustry_logic_GlobalVars_putEntry_java_lang_String_java_lang_Object_R_mindustry_logic_LVar(jcontext ctx, jobject self, jobject param0, jobject param1);
+jobject M_mindustry_logic_GlobalVars_putEntry_java_lang_String_java_lang_Object_boolean_R_mindustry_logic_LVar(jcontext ctx, jobject self, jobject param0, jobject param1, jbool param2);
+void M_mindustry_logic_GlobalVars_putEntryOnly_java_lang_String(jcontext ctx, jobject self, jobject param0);
+void M_mindustry_logic_GlobalVars_lambda$init$0_java_lang_String_java_lang_Integer(jcontext ctx, jobject self, jobject param0, jobject param1);
+
+#ifdef __cplusplus
+}
+#endif
+
+#endif

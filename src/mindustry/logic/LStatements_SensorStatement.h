@@ -1,0 +1,160 @@
+#ifndef HEADER_mindustry_logic_LStatements$SensorStatement
+#define HEADER_mindustry_logic_LStatements$SensorStatement
+
+#include "Clearwing.h"
+#include "mindustry/logic/LStatement.h"
+
+#ifdef __cplusplus
+extern "C" {
+#endif
+
+typedef struct mindustry_logic_LStatements$SensorStatement {
+	mindustry_logic_LStatement parent;
+	jref F_to;
+	jref F_from;
+	jref F_type;
+	jint F_selected;
+	jref F_tfield;
+} mindustry_logic_LStatements$SensorStatement;
+
+extern Class class_mindustry_logic_LStatements$SensorStatement;
+
+
+#define VTABLE_mindustry_logic_LStatements$SensorStatement_hashCode_R_int 0
+typedef jint (*func_mindustry_logic_LStatements$SensorStatement_hashCode_R_int)(jcontext ctx, jobject self);
+#define VTABLE_mindustry_logic_LStatements$SensorStatement_equals_java_lang_Object_R_boolean 1
+typedef jbool (*func_mindustry_logic_LStatements$SensorStatement_equals_java_lang_Object_R_boolean)(jcontext ctx, jobject self, jobject param0);
+#define VTABLE_mindustry_logic_LStatements$SensorStatement_clone_R_java_lang_Object 2
+typedef jobject (*func_mindustry_logic_LStatements$SensorStatement_clone_R_java_lang_Object)(jcontext ctx, jobject self);
+#define VTABLE_mindustry_logic_LStatements$SensorStatement_getClass_R_java_lang_Class 3
+typedef jobject (*func_mindustry_logic_LStatements$SensorStatement_getClass_R_java_lang_Class)(jcontext ctx, jobject self);
+#define VTABLE_mindustry_logic_LStatements$SensorStatement_toString_R_java_lang_String 4
+typedef jobject (*func_mindustry_logic_LStatements$SensorStatement_toString_R_java_lang_String)(jcontext ctx, jobject self);
+#define VTABLE_mindustry_logic_LStatements$SensorStatement_finalize 5
+typedef void (*func_mindustry_logic_LStatements$SensorStatement_finalize)(jcontext ctx, jobject self);
+#define VTABLE_mindustry_logic_LStatements$SensorStatement_notify 6
+typedef void (*func_mindustry_logic_LStatements$SensorStatement_notify)(jcontext ctx, jobject self);
+#define VTABLE_mindustry_logic_LStatements$SensorStatement_notifyAll 7
+typedef void (*func_mindustry_logic_LStatements$SensorStatement_notifyAll)(jcontext ctx, jobject self);
+#define VTABLE_mindustry_logic_LStatements$SensorStatement_wait 8
+typedef void (*func_mindustry_logic_LStatements$SensorStatement_wait)(jcontext ctx, jobject self);
+#define VTABLE_mindustry_logic_LStatements$SensorStatement_wait_long 9
+typedef void (*func_mindustry_logic_LStatements$SensorStatement_wait_long)(jcontext ctx, jobject self, jlong param0);
+#define VTABLE_mindustry_logic_LStatements$SensorStatement_wait_long_int 10
+typedef void (*func_mindustry_logic_LStatements$SensorStatement_wait_long_int)(jcontext ctx, jobject self, jlong param0, jint param1);
+#define VTABLE_mindustry_logic_LStatements$SensorStatement_build_arc_scene_ui_layout_Table 11
+typedef void (*func_mindustry_logic_LStatements$SensorStatement_build_arc_scene_ui_layout_Table)(jcontext ctx, jobject self, jobject param0);
+#define VTABLE_mindustry_logic_LStatements$SensorStatement_build_mindustry_logic_LAssembler_R_mindustry_logic_LExecutor$LInstruction 12
+typedef jobject (*func_mindustry_logic_LStatements$SensorStatement_build_mindustry_logic_LAssembler_R_mindustry_logic_LExecutor$LInstruction)(jcontext ctx, jobject self, jobject param0);
+#define VTABLE_mindustry_logic_LStatements$SensorStatement_category_R_mindustry_logic_LCategory 13
+typedef jobject (*func_mindustry_logic_LStatements$SensorStatement_category_R_mindustry_logic_LCategory)(jcontext ctx, jobject self);
+#define VTABLE_mindustry_logic_LStatements$SensorStatement_copy_R_mindustry_logic_LStatement 14
+typedef jobject (*func_mindustry_logic_LStatements$SensorStatement_copy_R_mindustry_logic_LStatement)(jcontext ctx, jobject self);
+#define VTABLE_mindustry_logic_LStatements$SensorStatement_useWrapping_R_boolean 15
+typedef jbool (*func_mindustry_logic_LStatements$SensorStatement_useWrapping_R_boolean)(jcontext ctx, jobject self);
+#define VTABLE_mindustry_logic_LStatements$SensorStatement_hidden_R_boolean 16
+typedef jbool (*func_mindustry_logic_LStatements$SensorStatement_hidden_R_boolean)(jcontext ctx, jobject self);
+#define VTABLE_mindustry_logic_LStatements$SensorStatement_privileged_R_boolean 17
+typedef jbool (*func_mindustry_logic_LStatements$SensorStatement_privileged_R_boolean)(jcontext ctx, jobject self);
+#define VTABLE_mindustry_logic_LStatements$SensorStatement_nonPrivileged_R_boolean 18
+typedef jbool (*func_mindustry_logic_LStatements$SensorStatement_nonPrivileged_R_boolean)(jcontext ctx, jobject self);
+#define VTABLE_mindustry_logic_LStatements$SensorStatement_param_arc_scene_ui_layout_Cell 19
+typedef void (*func_mindustry_logic_LStatements$SensorStatement_param_arc_scene_ui_layout_Cell)(jcontext ctx, jobject self, jobject param0);
+#define VTABLE_mindustry_logic_LStatements$SensorStatement_field_arc_scene_ui_layout_Table_java_lang_String_arc_func_Cons_R_arc_scene_ui_layout_Cell 20
+typedef jobject (*func_mindustry_logic_LStatements$SensorStatement_field_arc_scene_ui_layout_Table_java_lang_String_arc_func_Cons_R_arc_scene_ui_layout_Cell)(jcontext ctx, jobject self, jobject param0, jobject param1, jobject param2);
+#define VTABLE_mindustry_logic_LStatements$SensorStatement_fields_arc_scene_ui_layout_Table_java_lang_String_java_lang_String_arc_func_Cons_R_arc_scene_ui_layout_Cell 21
+typedef jobject (*func_mindustry_logic_LStatements$SensorStatement_fields_arc_scene_ui_layout_Table_java_lang_String_java_lang_String_arc_func_Cons_R_arc_scene_ui_layout_Cell)(jcontext ctx, jobject self, jobject param0, jobject param1, jobject param2, jobject param3);
+#define VTABLE_mindustry_logic_LStatements$SensorStatement_fields_arc_scene_ui_layout_Table_java_lang_String_arc_func_Cons_R_arc_scene_ui_layout_Cell 22
+typedef jobject (*func_mindustry_logic_LStatements$SensorStatement_fields_arc_scene_ui_layout_Table_java_lang_String_arc_func_Cons_R_arc_scene_ui_layout_Cell)(jcontext ctx, jobject self, jobject param0, jobject param1, jobject param2);
+#define VTABLE_mindustry_logic_LStatements$SensorStatement_fields_arc_scene_ui_layout_Table_java_lang_String_boolean_java_lang_String_arc_func_Cons_R_arc_scene_ui_layout_Cell 23
+typedef jobject (*func_mindustry_logic_LStatements$SensorStatement_fields_arc_scene_ui_layout_Table_java_lang_String_boolean_java_lang_String_arc_func_Cons_R_arc_scene_ui_layout_Cell)(jcontext ctx, jobject self, jobject param0, jobject param1, jbool param2, jobject param3, jobject param4);
+#define VTABLE_mindustry_logic_LStatements$SensorStatement_col_arc_scene_ui_layout_Table_java_lang_String_arc_func_Cons_R_arc_scene_ui_layout_Cell 24
+typedef jobject (*func_mindustry_logic_LStatements$SensorStatement_col_arc_scene_ui_layout_Table_java_lang_String_arc_func_Cons_R_arc_scene_ui_layout_Cell)(jcontext ctx, jobject self, jobject param0, jobject param1, jobject param2);
+#define VTABLE_mindustry_logic_LStatements$SensorStatement_showSelect_arc_scene_ui_Button_Array1_java_lang_Object_java_lang_Object_arc_func_Cons_int_arc_func_Cons 25
+typedef void (*func_mindustry_logic_LStatements$SensorStatement_showSelect_arc_scene_ui_Button_Array1_java_lang_Object_java_lang_Object_arc_func_Cons_int_arc_func_Cons)(jcontext ctx, jobject self, jobject param0, jobject param1, jobject param2, jobject param3, jint param4, jobject param5);
+#define VTABLE_mindustry_logic_LStatements$SensorStatement_showSelect_arc_scene_ui_Button_Array1_java_lang_Object_java_lang_Object_arc_func_Cons 26
+typedef void (*func_mindustry_logic_LStatements$SensorStatement_showSelect_arc_scene_ui_Button_Array1_java_lang_Object_java_lang_Object_arc_func_Cons)(jcontext ctx, jobject self, jobject param0, jobject param1, jobject param2, jobject param3);
+#define VTABLE_mindustry_logic_LStatements$SensorStatement_fieldAlignSelect_arc_scene_ui_layout_Table_arc_func_Prov_arc_func_Cons_boolean_boolean 27
+typedef void (*func_mindustry_logic_LStatements$SensorStatement_fieldAlignSelect_arc_scene_ui_layout_Table_arc_func_Prov_arc_func_Cons_boolean_boolean)(jcontext ctx, jobject self, jobject param0, jobject param1, jobject param2, jbool param3, jbool param4);
+#define VTABLE_mindustry_logic_LStatements$SensorStatement_afterRead 28
+typedef void (*func_mindustry_logic_LStatements$SensorStatement_afterRead)(jcontext ctx, jobject self);
+#define VTABLE_mindustry_logic_LStatements$SensorStatement_write_java_lang_StringBuilder 29
+typedef void (*func_mindustry_logic_LStatements$SensorStatement_write_java_lang_StringBuilder)(jcontext ctx, jobject self, jobject param0);
+#define VTABLE_mindustry_logic_LStatements$SensorStatement_setupUI 30
+typedef void (*func_mindustry_logic_LStatements$SensorStatement_setupUI)(jcontext ctx, jobject self);
+#define VTABLE_mindustry_logic_LStatements$SensorStatement_saveUI 31
+typedef void (*func_mindustry_logic_LStatements$SensorStatement_saveUI)(jcontext ctx, jobject self);
+#define VTABLE_mindustry_logic_LStatements$SensorStatement_typeName_R_java_lang_String 32
+typedef jobject (*func_mindustry_logic_LStatements$SensorStatement_typeName_R_java_lang_String)(jcontext ctx, jobject self);
+#define VTABLE_mindustry_logic_LStatements$SensorStatement_statementKey_R_java_lang_String 33
+typedef jobject (*func_mindustry_logic_LStatements$SensorStatement_statementKey_R_java_lang_String)(jcontext ctx, jobject self);
+#define VTABLE_mindustry_logic_LStatements$SensorStatement_localizedName_R_java_lang_String 34
+typedef jobject (*func_mindustry_logic_LStatements$SensorStatement_localizedName_R_java_lang_String)(jcontext ctx, jobject self);
+#define VTABLE_mindustry_logic_LStatements$SensorStatement_name_R_java_lang_String 35
+typedef jobject (*func_mindustry_logic_LStatements$SensorStatement_name_R_java_lang_String)(jcontext ctx, jobject self);
+#define VTABLE_mindustry_logic_LStatements$SensorStatement_stype_java_lang_String 36
+typedef void (*func_mindustry_logic_LStatements$SensorStatement_stype_java_lang_String)(jcontext ctx, jobject self, jobject param0);
+#define VTABLE_mindustry_logic_LStatements$SensorStatement_lambda$build$17_java_lang_String 37
+typedef void (*func_mindustry_logic_LStatements$SensorStatement_lambda$build$17_java_lang_String)(jcontext ctx, jobject self, jobject param0);
+#define VTABLE_mindustry_logic_LStatements$SensorStatement_lambda$build$2_arc_scene_ui_Button 38
+typedef void (*func_mindustry_logic_LStatements$SensorStatement_lambda$build$2_arc_scene_ui_Button)(jcontext ctx, jobject self, jobject param0);
+#define VTABLE_mindustry_logic_LStatements$SensorStatement_lambda$build$3_arc_scene_ui_Button 39
+typedef void (*func_mindustry_logic_LStatements$SensorStatement_lambda$build$3_arc_scene_ui_Button)(jcontext ctx, jobject self, jobject param0);
+#define VTABLE_mindustry_logic_LStatements$SensorStatement_lambda$build$4_arc_scene_ui_layout_Table_java_lang_Runnable 40
+typedef void (*func_mindustry_logic_LStatements$SensorStatement_lambda$build$4_arc_scene_ui_layout_Table_java_lang_Runnable)(jcontext ctx, jobject self, jobject param0, jobject param1);
+#define VTABLE_mindustry_logic_LStatements$SensorStatement_lambda$build$15_int_arc_scene_ui_layout_Stack_Array1_arc_scene_ui_layout_Table_arc_scene_ui_layout_Table 41
+typedef void (*func_mindustry_logic_LStatements$SensorStatement_lambda$build$15_int_arc_scene_ui_layout_Stack_Array1_arc_scene_ui_layout_Table_arc_scene_ui_layout_Table)(jcontext ctx, jobject self, jint param0, jobject param1, jobject param2, jobject param3);
+#define VTABLE_mindustry_logic_LStatements$SensorStatement_lambda$build$12_java_lang_Runnable_arc_scene_ui_layout_Table 42
+typedef void (*func_mindustry_logic_LStatements$SensorStatement_lambda$build$12_java_lang_Runnable_arc_scene_ui_layout_Table)(jcontext ctx, jobject self, jobject param0, jobject param1);
+#define VTABLE_mindustry_logic_LStatements$SensorStatement_lambda$build$13_mindustry_logic_LAccess_java_lang_Runnable 43
+typedef void (*func_mindustry_logic_LStatements$SensorStatement_lambda$build$13_mindustry_logic_LAccess_java_lang_Runnable)(jcontext ctx, jobject self, jobject param0, jobject param1);
+#define VTABLE_mindustry_logic_LStatements$SensorStatement_lambda$build$9_java_lang_Runnable_arc_scene_ui_layout_Table 44
+typedef void (*func_mindustry_logic_LStatements$SensorStatement_lambda$build$9_java_lang_Runnable_arc_scene_ui_layout_Table)(jcontext ctx, jobject self, jobject param0, jobject param1);
+#define VTABLE_mindustry_logic_LStatements$SensorStatement_lambda$build$11_mindustry_world_Block_java_lang_Runnable 45
+typedef void (*func_mindustry_logic_LStatements$SensorStatement_lambda$build$11_mindustry_world_Block_java_lang_Runnable)(jcontext ctx, jobject self, jobject param0, jobject param1);
+#define VTABLE_mindustry_logic_LStatements$SensorStatement_lambda$build$10_mindustry_type_UnitType_java_lang_Runnable 46
+typedef void (*func_mindustry_logic_LStatements$SensorStatement_lambda$build$10_mindustry_type_UnitType_java_lang_Runnable)(jcontext ctx, jobject self, jobject param0, jobject param1);
+#define VTABLE_mindustry_logic_LStatements$SensorStatement_lambda$build$7_java_lang_Runnable_arc_scene_ui_layout_Table 47
+typedef void (*func_mindustry_logic_LStatements$SensorStatement_lambda$build$7_java_lang_Runnable_arc_scene_ui_layout_Table)(jcontext ctx, jobject self, jobject param0, jobject param1);
+#define VTABLE_mindustry_logic_LStatements$SensorStatement_lambda$build$8_mindustry_type_Liquid_java_lang_Runnable 48
+typedef void (*func_mindustry_logic_LStatements$SensorStatement_lambda$build$8_mindustry_type_Liquid_java_lang_Runnable)(jcontext ctx, jobject self, jobject param0, jobject param1);
+#define VTABLE_mindustry_logic_LStatements$SensorStatement_lambda$build$5_java_lang_Runnable_arc_scene_ui_layout_Table 49
+typedef void (*func_mindustry_logic_LStatements$SensorStatement_lambda$build$5_java_lang_Runnable_arc_scene_ui_layout_Table)(jcontext ctx, jobject self, jobject param0, jobject param1);
+#define VTABLE_mindustry_logic_LStatements$SensorStatement_lambda$build$6_mindustry_type_Item_java_lang_Runnable 50
+typedef void (*func_mindustry_logic_LStatements$SensorStatement_lambda$build$6_mindustry_type_Item_java_lang_Runnable)(jcontext ctx, jobject self, jobject param0, jobject param1);
+#define VTABLE_mindustry_logic_LStatements$SensorStatement_lambda$build$1_java_lang_String 51
+typedef void (*func_mindustry_logic_LStatements$SensorStatement_lambda$build$1_java_lang_String)(jcontext ctx, jobject self, jobject param0);
+#define VTABLE_mindustry_logic_LStatements$SensorStatement_lambda$build$0_java_lang_String 52
+typedef void (*func_mindustry_logic_LStatements$SensorStatement_lambda$build$0_java_lang_String)(jcontext ctx, jobject self, jobject param0);
+
+void mark_mindustry_logic_LStatements$SensorStatement(jobject object, jint mark, jint depth);
+void clinit_mindustry_logic_LStatements$SensorStatement(jcontext ctx);
+void init_mindustry_logic_LStatements$SensorStatement(jcontext ctx, jobject self);
+void M_mindustry_logic_LStatements$SensorStatement_build_arc_scene_ui_layout_Table(jcontext ctx, jobject self, jobject param0);
+void M_mindustry_logic_LStatements$SensorStatement_stype_java_lang_String(jcontext ctx, jobject self, jobject param0);
+jobject M_mindustry_logic_LStatements$SensorStatement_build_mindustry_logic_LAssembler_R_mindustry_logic_LExecutor$LInstruction(jcontext ctx, jobject self, jobject param0);
+jobject M_mindustry_logic_LStatements$SensorStatement_category_R_mindustry_logic_LCategory(jcontext ctx, jobject self);
+void M_mindustry_logic_LStatements$SensorStatement_lambda$build$17_java_lang_String(jcontext ctx, jobject self, jobject param0);
+void SM_mindustry_logic_LStatements$SensorStatement_lambda$build$16(jcontext ctx);
+void M_mindustry_logic_LStatements$SensorStatement_lambda$build$2_arc_scene_ui_Button(jcontext ctx, jobject self, jobject param0);
+void M_mindustry_logic_LStatements$SensorStatement_lambda$build$3_arc_scene_ui_Button(jcontext ctx, jobject self, jobject param0);
+void M_mindustry_logic_LStatements$SensorStatement_lambda$build$4_arc_scene_ui_layout_Table_java_lang_Runnable(jcontext ctx, jobject self, jobject param0, jobject param1);
+void M_mindustry_logic_LStatements$SensorStatement_lambda$build$15_int_arc_scene_ui_layout_Stack_Array1_arc_scene_ui_layout_Table_arc_scene_ui_layout_Table(jcontext ctx, jobject self, jint param0, jobject param1, jobject param2, jobject param3);
+void M_mindustry_logic_LStatements$SensorStatement_lambda$build$12_java_lang_Runnable_arc_scene_ui_layout_Table(jcontext ctx, jobject self, jobject param0, jobject param1);
+void SM_mindustry_logic_LStatements$SensorStatement_lambda$build$14_mindustry_logic_LAccess_arc_scene_ui_layout_Cell(jcontext ctx, jobject param0, jobject param1);
+void M_mindustry_logic_LStatements$SensorStatement_lambda$build$13_mindustry_logic_LAccess_java_lang_Runnable(jcontext ctx, jobject self, jobject param0, jobject param1);
+void M_mindustry_logic_LStatements$SensorStatement_lambda$build$9_java_lang_Runnable_arc_scene_ui_layout_Table(jcontext ctx, jobject self, jobject param0, jobject param1);
+void M_mindustry_logic_LStatements$SensorStatement_lambda$build$11_mindustry_world_Block_java_lang_Runnable(jcontext ctx, jobject self, jobject param0, jobject param1);
+void M_mindustry_logic_LStatements$SensorStatement_lambda$build$10_mindustry_type_UnitType_java_lang_Runnable(jcontext ctx, jobject self, jobject param0, jobject param1);
+void M_mindustry_logic_LStatements$SensorStatement_lambda$build$7_java_lang_Runnable_arc_scene_ui_layout_Table(jcontext ctx, jobject self, jobject param0, jobject param1);
+void M_mindustry_logic_LStatements$SensorStatement_lambda$build$8_mindustry_type_Liquid_java_lang_Runnable(jcontext ctx, jobject self, jobject param0, jobject param1);
+void M_mindustry_logic_LStatements$SensorStatement_lambda$build$5_java_lang_Runnable_arc_scene_ui_layout_Table(jcontext ctx, jobject self, jobject param0, jobject param1);
+void M_mindustry_logic_LStatements$SensorStatement_lambda$build$6_mindustry_type_Item_java_lang_Runnable(jcontext ctx, jobject self, jobject param0, jobject param1);
+void M_mindustry_logic_LStatements$SensorStatement_lambda$build$1_java_lang_String(jcontext ctx, jobject self, jobject param0);
+void M_mindustry_logic_LStatements$SensorStatement_lambda$build$0_java_lang_String(jcontext ctx, jobject self, jobject param0);
+
+#ifdef __cplusplus
+}
+#endif
+
+#endif

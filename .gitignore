@@ -1,0 +1,18 @@
+# Build & Output
+build/
+out/
+*.o
+*.elf
+*.nacp
+*.nro
+*.nsp
+
+# IDE
+.vscode/
+.idea/
+*.swp
+*.bak
+
+send_switch.bat
+*.bat.user
+

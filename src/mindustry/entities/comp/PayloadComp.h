@@ -1,0 +1,767 @@
+#ifndef HEADER_mindustry_entities_comp_PayloadComp
+#define HEADER_mindustry_entities_comp_PayloadComp
+
+#include "Clearwing.h"
+#include "java/lang/Object.h"
+#include "mindustry/gen/Posc.h"
+#include "mindustry/gen/Rotc.h"
+#include "mindustry/gen/Hitboxc.h"
+#include "mindustry/gen/Unitc.h"
+
+#ifdef __cplusplus
+extern "C" {
+#endif
+
+typedef struct mindustry_entities_comp_PayloadComp {
+	java_lang_Object parent;
+	jfloat F_x;
+	jfloat F_y;
+	jfloat F_rotation;
+	jref F_team;
+	jref F_type;
+	jref F_payloads;
+	jref F_payloadPower;
+} mindustry_entities_comp_PayloadComp;
+
+extern Class class_mindustry_entities_comp_PayloadComp;
+
+
+#define VTABLE_mindustry_entities_comp_PayloadComp_hashCode_R_int 0
+typedef jint (*func_mindustry_entities_comp_PayloadComp_hashCode_R_int)(jcontext ctx, jobject self);
+#define VTABLE_mindustry_entities_comp_PayloadComp_equals_java_lang_Object_R_boolean 1
+typedef jbool (*func_mindustry_entities_comp_PayloadComp_equals_java_lang_Object_R_boolean)(jcontext ctx, jobject self, jobject param0);
+#define VTABLE_mindustry_entities_comp_PayloadComp_clone_R_java_lang_Object 2
+typedef jobject (*func_mindustry_entities_comp_PayloadComp_clone_R_java_lang_Object)(jcontext ctx, jobject self);
+#define VTABLE_mindustry_entities_comp_PayloadComp_getClass_R_java_lang_Class 3
+typedef jobject (*func_mindustry_entities_comp_PayloadComp_getClass_R_java_lang_Class)(jcontext ctx, jobject self);
+#define VTABLE_mindustry_entities_comp_PayloadComp_toString_R_java_lang_String 4
+typedef jobject (*func_mindustry_entities_comp_PayloadComp_toString_R_java_lang_String)(jcontext ctx, jobject self);
+#define VTABLE_mindustry_entities_comp_PayloadComp_finalize 5
+typedef void (*func_mindustry_entities_comp_PayloadComp_finalize)(jcontext ctx, jobject self);
+#define VTABLE_mindustry_entities_comp_PayloadComp_notify 6
+typedef void (*func_mindustry_entities_comp_PayloadComp_notify)(jcontext ctx, jobject self);
+#define VTABLE_mindustry_entities_comp_PayloadComp_notifyAll 7
+typedef void (*func_mindustry_entities_comp_PayloadComp_notifyAll)(jcontext ctx, jobject self);
+#define VTABLE_mindustry_entities_comp_PayloadComp_wait 8
+typedef void (*func_mindustry_entities_comp_PayloadComp_wait)(jcontext ctx, jobject self);
+#define VTABLE_mindustry_entities_comp_PayloadComp_wait_long 9
+typedef void (*func_mindustry_entities_comp_PayloadComp_wait_long)(jcontext ctx, jobject self, jlong param0);
+#define VTABLE_mindustry_entities_comp_PayloadComp_wait_long_int 10
+typedef void (*func_mindustry_entities_comp_PayloadComp_wait_long_int)(jcontext ctx, jobject self, jlong param0, jint param1);
+#define VTABLE_mindustry_entities_comp_PayloadComp_getX_R_float 11
+typedef jfloat (*func_mindustry_entities_comp_PayloadComp_getX_R_float)(jcontext ctx, jobject self);
+#define VTABLE_mindustry_entities_comp_PayloadComp_getY_R_float 12
+typedef jfloat (*func_mindustry_entities_comp_PayloadComp_getY_R_float)(jcontext ctx, jobject self);
+#define VTABLE_mindustry_entities_comp_PayloadComp_angleTo_arc_math_geom_Position_R_float 13
+typedef jfloat (*func_mindustry_entities_comp_PayloadComp_angleTo_arc_math_geom_Position_R_float)(jcontext ctx, jobject self, jobject param0);
+#define VTABLE_mindustry_entities_comp_PayloadComp_angleTo_float_float_R_float 14
+typedef jfloat (*func_mindustry_entities_comp_PayloadComp_angleTo_float_float_R_float)(jcontext ctx, jobject self, jfloat param0, jfloat param1);
+#define VTABLE_mindustry_entities_comp_PayloadComp_dst2_arc_math_geom_Position_R_float 15
+typedef jfloat (*func_mindustry_entities_comp_PayloadComp_dst2_arc_math_geom_Position_R_float)(jcontext ctx, jobject self, jobject param0);
+#define VTABLE_mindustry_entities_comp_PayloadComp_dst_arc_math_geom_Position_R_float 16
+typedef jfloat (*func_mindustry_entities_comp_PayloadComp_dst_arc_math_geom_Position_R_float)(jcontext ctx, jobject self, jobject param0);
+#define VTABLE_mindustry_entities_comp_PayloadComp_dst_float_float_R_float 17
+typedef jfloat (*func_mindustry_entities_comp_PayloadComp_dst_float_float_R_float)(jcontext ctx, jobject self, jfloat param0, jfloat param1);
+#define VTABLE_mindustry_entities_comp_PayloadComp_dst2_float_float_R_float 18
+typedef jfloat (*func_mindustry_entities_comp_PayloadComp_dst2_float_float_R_float)(jcontext ctx, jobject self, jfloat param0, jfloat param1);
+#define VTABLE_mindustry_entities_comp_PayloadComp_within_arc_math_geom_Position_float_R_boolean 19
+typedef jbool (*func_mindustry_entities_comp_PayloadComp_within_arc_math_geom_Position_float_R_boolean)(jcontext ctx, jobject self, jobject param0, jfloat param1);
+#define VTABLE_mindustry_entities_comp_PayloadComp_within_float_float_float_R_boolean 20
+typedef jbool (*func_mindustry_entities_comp_PayloadComp_within_float_float_float_R_boolean)(jcontext ctx, jobject self, jfloat param0, jfloat param1, jfloat param2);
+#define VTABLE_mindustry_entities_comp_PayloadComp_self_R_mindustry_gen_Entityc 21
+typedef jobject (*func_mindustry_entities_comp_PayloadComp_self_R_mindustry_gen_Entityc)(jcontext ctx, jobject self);
+#define VTABLE_mindustry_entities_comp_PayloadComp_as_R_java_lang_Object 22
+typedef jobject (*func_mindustry_entities_comp_PayloadComp_as_R_java_lang_Object)(jcontext ctx, jobject self);
+#define VTABLE_mindustry_entities_comp_PayloadComp_isAdded_R_boolean 23
+typedef jbool (*func_mindustry_entities_comp_PayloadComp_isAdded_R_boolean)(jcontext ctx, jobject self);
+#define VTABLE_mindustry_entities_comp_PayloadComp_isLocal_R_boolean 24
+typedef jbool (*func_mindustry_entities_comp_PayloadComp_isLocal_R_boolean)(jcontext ctx, jobject self);
+#define VTABLE_mindustry_entities_comp_PayloadComp_isRemote_R_boolean 25
+typedef jbool (*func_mindustry_entities_comp_PayloadComp_isRemote_R_boolean)(jcontext ctx, jobject self);
+#define VTABLE_mindustry_entities_comp_PayloadComp_serialize_R_boolean 26
+typedef jbool (*func_mindustry_entities_comp_PayloadComp_serialize_R_boolean)(jcontext ctx, jobject self);
+#define VTABLE_mindustry_entities_comp_PayloadComp_classId_R_int 27
+typedef jint (*func_mindustry_entities_comp_PayloadComp_classId_R_int)(jcontext ctx, jobject self);
+#define VTABLE_mindustry_entities_comp_PayloadComp_id_R_int 28
+typedef jint (*func_mindustry_entities_comp_PayloadComp_id_R_int)(jcontext ctx, jobject self);
+#define VTABLE_mindustry_entities_comp_PayloadComp_add 29
+typedef void (*func_mindustry_entities_comp_PayloadComp_add)(jcontext ctx, jobject self);
+#define VTABLE_mindustry_entities_comp_PayloadComp_afterRead 30
+typedef void (*func_mindustry_entities_comp_PayloadComp_afterRead)(jcontext ctx, jobject self);
+#define VTABLE_mindustry_entities_comp_PayloadComp_afterReadAll 31
+typedef void (*func_mindustry_entities_comp_PayloadComp_afterReadAll)(jcontext ctx, jobject self);
+#define VTABLE_mindustry_entities_comp_PayloadComp_beforeWrite 32
+typedef void (*func_mindustry_entities_comp_PayloadComp_beforeWrite)(jcontext ctx, jobject self);
+#define VTABLE_mindustry_entities_comp_PayloadComp_id_int 33
+typedef void (*func_mindustry_entities_comp_PayloadComp_id_int)(jcontext ctx, jobject self, jint param0);
+#define VTABLE_mindustry_entities_comp_PayloadComp_read_arc_util_io_Reads 34
+typedef void (*func_mindustry_entities_comp_PayloadComp_read_arc_util_io_Reads)(jcontext ctx, jobject self, jobject param0);
+#define VTABLE_mindustry_entities_comp_PayloadComp_remove 35
+typedef void (*func_mindustry_entities_comp_PayloadComp_remove)(jcontext ctx, jobject self);
+#define VTABLE_mindustry_entities_comp_PayloadComp_update 36
+typedef void (*func_mindustry_entities_comp_PayloadComp_update)(jcontext ctx, jobject self);
+#define VTABLE_mindustry_entities_comp_PayloadComp_write_arc_util_io_Writes 37
+typedef void (*func_mindustry_entities_comp_PayloadComp_write_arc_util_io_Writes)(jcontext ctx, jobject self, jobject param0);
+#define VTABLE_mindustry_entities_comp_PayloadComp_floorOn_R_mindustry_world_blocks_environment_Floor 38
+typedef jobject (*func_mindustry_entities_comp_PayloadComp_floorOn_R_mindustry_world_blocks_environment_Floor)(jcontext ctx, jobject self);
+#define VTABLE_mindustry_entities_comp_PayloadComp_buildOn_R_mindustry_gen_Building 39
+typedef jobject (*func_mindustry_entities_comp_PayloadComp_buildOn_R_mindustry_gen_Building)(jcontext ctx, jobject self);
+#define VTABLE_mindustry_entities_comp_PayloadComp_onSolid_R_boolean 40
+typedef jbool (*func_mindustry_entities_comp_PayloadComp_onSolid_R_boolean)(jcontext ctx, jobject self);
+#define VTABLE_mindustry_entities_comp_PayloadComp_x_R_float 41
+typedef jfloat (*func_mindustry_entities_comp_PayloadComp_x_R_float)(jcontext ctx, jobject self);
+#define VTABLE_mindustry_entities_comp_PayloadComp_y_R_float 42
+typedef jfloat (*func_mindustry_entities_comp_PayloadComp_y_R_float)(jcontext ctx, jobject self);
+#define VTABLE_mindustry_entities_comp_PayloadComp_tileX_R_int 43
+typedef jint (*func_mindustry_entities_comp_PayloadComp_tileX_R_int)(jcontext ctx, jobject self);
+#define VTABLE_mindustry_entities_comp_PayloadComp_tileY_R_int 44
+typedef jint (*func_mindustry_entities_comp_PayloadComp_tileY_R_int)(jcontext ctx, jobject self);
+#define VTABLE_mindustry_entities_comp_PayloadComp_blockOn_R_mindustry_world_Block 45
+typedef jobject (*func_mindustry_entities_comp_PayloadComp_blockOn_R_mindustry_world_Block)(jcontext ctx, jobject self);
+#define VTABLE_mindustry_entities_comp_PayloadComp_tileOn_R_mindustry_world_Tile 46
+typedef jobject (*func_mindustry_entities_comp_PayloadComp_tileOn_R_mindustry_world_Tile)(jcontext ctx, jobject self);
+#define VTABLE_mindustry_entities_comp_PayloadComp_set_arc_math_geom_Position 47
+typedef void (*func_mindustry_entities_comp_PayloadComp_set_arc_math_geom_Position)(jcontext ctx, jobject self, jobject param0);
+#define VTABLE_mindustry_entities_comp_PayloadComp_set_float_float 48
+typedef void (*func_mindustry_entities_comp_PayloadComp_set_float_float)(jcontext ctx, jobject self, jfloat param0, jfloat param1);
+#define VTABLE_mindustry_entities_comp_PayloadComp_trns_arc_math_geom_Position 49
+typedef void (*func_mindustry_entities_comp_PayloadComp_trns_arc_math_geom_Position)(jcontext ctx, jobject self, jobject param0);
+#define VTABLE_mindustry_entities_comp_PayloadComp_trns_float_float 50
+typedef void (*func_mindustry_entities_comp_PayloadComp_trns_float_float)(jcontext ctx, jobject self, jfloat param0, jfloat param1);
+#define VTABLE_mindustry_entities_comp_PayloadComp_x_float 51
+typedef void (*func_mindustry_entities_comp_PayloadComp_x_float)(jcontext ctx, jobject self, jfloat param0);
+#define VTABLE_mindustry_entities_comp_PayloadComp_y_float 52
+typedef void (*func_mindustry_entities_comp_PayloadComp_y_float)(jcontext ctx, jobject self, jfloat param0);
+#define VTABLE_mindustry_entities_comp_PayloadComp_rotation_R_float 53
+typedef jfloat (*func_mindustry_entities_comp_PayloadComp_rotation_R_float)(jcontext ctx, jobject self);
+#define VTABLE_mindustry_entities_comp_PayloadComp_rotation_float 54
+typedef void (*func_mindustry_entities_comp_PayloadComp_rotation_float)(jcontext ctx, jobject self, jfloat param0);
+#define VTABLE_mindustry_entities_comp_PayloadComp_hitbox_arc_math_geom_Rect 55
+typedef void (*func_mindustry_entities_comp_PayloadComp_hitbox_arc_math_geom_Rect)(jcontext ctx, jobject self, jobject param0);
+#define VTABLE_mindustry_entities_comp_PayloadComp_hitSize_R_float 56
+typedef jfloat (*func_mindustry_entities_comp_PayloadComp_hitSize_R_float)(jcontext ctx, jobject self);
+#define VTABLE_mindustry_entities_comp_PayloadComp_collides_mindustry_gen_Hitboxc_R_boolean 57
+typedef jbool (*func_mindustry_entities_comp_PayloadComp_collides_mindustry_gen_Hitboxc_R_boolean)(jcontext ctx, jobject self, jobject param0);
+#define VTABLE_mindustry_entities_comp_PayloadComp_deltaAngle_R_float 58
+typedef jfloat (*func_mindustry_entities_comp_PayloadComp_deltaAngle_R_float)(jcontext ctx, jobject self);
+#define VTABLE_mindustry_entities_comp_PayloadComp_deltaLen_R_float 59
+typedef jfloat (*func_mindustry_entities_comp_PayloadComp_deltaLen_R_float)(jcontext ctx, jobject self);
+#define VTABLE_mindustry_entities_comp_PayloadComp_deltaX_R_float 60
+typedef jfloat (*func_mindustry_entities_comp_PayloadComp_deltaX_R_float)(jcontext ctx, jobject self);
+#define VTABLE_mindustry_entities_comp_PayloadComp_deltaY_R_float 61
+typedef jfloat (*func_mindustry_entities_comp_PayloadComp_deltaY_R_float)(jcontext ctx, jobject self);
+#define VTABLE_mindustry_entities_comp_PayloadComp_lastX_R_float 62
+typedef jfloat (*func_mindustry_entities_comp_PayloadComp_lastX_R_float)(jcontext ctx, jobject self);
+#define VTABLE_mindustry_entities_comp_PayloadComp_lastY_R_float 63
+typedef jfloat (*func_mindustry_entities_comp_PayloadComp_lastY_R_float)(jcontext ctx, jobject self);
+#define VTABLE_mindustry_entities_comp_PayloadComp_collision_mindustry_gen_Hitboxc_float_float 64
+typedef void (*func_mindustry_entities_comp_PayloadComp_collision_mindustry_gen_Hitboxc_float_float)(jcontext ctx, jobject self, jobject param0, jfloat param1, jfloat param2);
+#define VTABLE_mindustry_entities_comp_PayloadComp_deltaX_float 65
+typedef void (*func_mindustry_entities_comp_PayloadComp_deltaX_float)(jcontext ctx, jobject self, jfloat param0);
+#define VTABLE_mindustry_entities_comp_PayloadComp_deltaY_float 66
+typedef void (*func_mindustry_entities_comp_PayloadComp_deltaY_float)(jcontext ctx, jobject self, jfloat param0);
+#define VTABLE_mindustry_entities_comp_PayloadComp_getCollisions_arc_func_Cons 67
+typedef void (*func_mindustry_entities_comp_PayloadComp_getCollisions_arc_func_Cons)(jcontext ctx, jobject self, jobject param0);
+#define VTABLE_mindustry_entities_comp_PayloadComp_hitSize_float 68
+typedef void (*func_mindustry_entities_comp_PayloadComp_hitSize_float)(jcontext ctx, jobject self, jfloat param0);
+#define VTABLE_mindustry_entities_comp_PayloadComp_hitboxTile_arc_math_geom_Rect 69
+typedef void (*func_mindustry_entities_comp_PayloadComp_hitboxTile_arc_math_geom_Rect)(jcontext ctx, jobject self, jobject param0);
+#define VTABLE_mindustry_entities_comp_PayloadComp_lastX_float 70
+typedef void (*func_mindustry_entities_comp_PayloadComp_lastX_float)(jcontext ctx, jobject self, jfloat param0);
+#define VTABLE_mindustry_entities_comp_PayloadComp_lastY_float 71
+typedef void (*func_mindustry_entities_comp_PayloadComp_lastY_float)(jcontext ctx, jobject self, jfloat param0);
+#define VTABLE_mindustry_entities_comp_PayloadComp_updateLastPosition 72
+typedef void (*func_mindustry_entities_comp_PayloadComp_updateLastPosition)(jcontext ctx, jobject self);
+#define VTABLE_mindustry_entities_comp_PayloadComp_applyDynamicStatus_R_mindustry_entities_units_StatusEntry 73
+typedef jobject (*func_mindustry_entities_comp_PayloadComp_applyDynamicStatus_R_mindustry_entities_units_StatusEntry)(jcontext ctx, jobject self);
+#define VTABLE_mindustry_entities_comp_PayloadComp_apply_mindustry_type_StatusEffect_float 74
+typedef void (*func_mindustry_entities_comp_PayloadComp_apply_mindustry_type_StatusEffect_float)(jcontext ctx, jobject self, jobject param0, jfloat param1);
+#define VTABLE_mindustry_entities_comp_PayloadComp_apply_mindustry_type_StatusEffect 75
+typedef void (*func_mindustry_entities_comp_PayloadComp_apply_mindustry_type_StatusEffect)(jcontext ctx, jobject self, jobject param0);
+#define VTABLE_mindustry_entities_comp_PayloadComp_unapply_mindustry_type_StatusEffect 76
+typedef void (*func_mindustry_entities_comp_PayloadComp_unapply_mindustry_type_StatusEffect)(jcontext ctx, jobject self, jobject param0);
+#define VTABLE_mindustry_entities_comp_PayloadComp_statusDamageMultiplier_float 77
+typedef void (*func_mindustry_entities_comp_PayloadComp_statusDamageMultiplier_float)(jcontext ctx, jobject self, jfloat param0);
+#define VTABLE_mindustry_entities_comp_PayloadComp_statusReloadMultiplier_float 78
+typedef void (*func_mindustry_entities_comp_PayloadComp_statusReloadMultiplier_float)(jcontext ctx, jobject self, jfloat param0);
+#define VTABLE_mindustry_entities_comp_PayloadComp_statusArmor_float 79
+typedef void (*func_mindustry_entities_comp_PayloadComp_statusArmor_float)(jcontext ctx, jobject self, jfloat param0);
+#define VTABLE_mindustry_entities_comp_PayloadComp_statusBuildSpeed_float 80
+typedef void (*func_mindustry_entities_comp_PayloadComp_statusBuildSpeed_float)(jcontext ctx, jobject self, jfloat param0);
+#define VTABLE_mindustry_entities_comp_PayloadComp_statusDrag_float 81
+typedef void (*func_mindustry_entities_comp_PayloadComp_statusDrag_float)(jcontext ctx, jobject self, jfloat param0);
+#define VTABLE_mindustry_entities_comp_PayloadComp_statusMaxHealth_float 82
+typedef void (*func_mindustry_entities_comp_PayloadComp_statusMaxHealth_float)(jcontext ctx, jobject self, jfloat param0);
+#define VTABLE_mindustry_entities_comp_PayloadComp_statusSpeed_float 83
+typedef void (*func_mindustry_entities_comp_PayloadComp_statusSpeed_float)(jcontext ctx, jobject self, jfloat param0);
+#define VTABLE_mindustry_entities_comp_PayloadComp_statusColor_R_arc_graphics_Color 84
+typedef jobject (*func_mindustry_entities_comp_PayloadComp_statusColor_R_arc_graphics_Color)(jcontext ctx, jobject self);
+#define VTABLE_mindustry_entities_comp_PayloadComp_statusBits_R_arc_struct_Bits 85
+typedef jobject (*func_mindustry_entities_comp_PayloadComp_statusBits_R_arc_struct_Bits)(jcontext ctx, jobject self);
+#define VTABLE_mindustry_entities_comp_PayloadComp_disarmed_R_boolean 86
+typedef jbool (*func_mindustry_entities_comp_PayloadComp_disarmed_R_boolean)(jcontext ctx, jobject self);
+#define VTABLE_mindustry_entities_comp_PayloadComp_hasEffect_mindustry_type_StatusEffect_R_boolean 87
+typedef jbool (*func_mindustry_entities_comp_PayloadComp_hasEffect_mindustry_type_StatusEffect_R_boolean)(jcontext ctx, jobject self, jobject param0);
+#define VTABLE_mindustry_entities_comp_PayloadComp_isBoss_R_boolean 88
+typedef jbool (*func_mindustry_entities_comp_PayloadComp_isBoss_R_boolean)(jcontext ctx, jobject self);
+#define VTABLE_mindustry_entities_comp_PayloadComp_isGrounded_R_boolean 89
+typedef jbool (*func_mindustry_entities_comp_PayloadComp_isGrounded_R_boolean)(jcontext ctx, jobject self);
+#define VTABLE_mindustry_entities_comp_PayloadComp_isImmune_mindustry_type_StatusEffect_R_boolean 90
+typedef jbool (*func_mindustry_entities_comp_PayloadComp_isImmune_mindustry_type_StatusEffect_R_boolean)(jcontext ctx, jobject self, jobject param0);
+#define VTABLE_mindustry_entities_comp_PayloadComp_armorOverride_R_float 91
+typedef jfloat (*func_mindustry_entities_comp_PayloadComp_armorOverride_R_float)(jcontext ctx, jobject self);
+#define VTABLE_mindustry_entities_comp_PayloadComp_buildSpeedMultiplier_R_float 92
+typedef jfloat (*func_mindustry_entities_comp_PayloadComp_buildSpeedMultiplier_R_float)(jcontext ctx, jobject self);
+#define VTABLE_mindustry_entities_comp_PayloadComp_damageMultiplier_R_float 93
+typedef jfloat (*func_mindustry_entities_comp_PayloadComp_damageMultiplier_R_float)(jcontext ctx, jobject self);
+#define VTABLE_mindustry_entities_comp_PayloadComp_dragMultiplier_R_float 94
+typedef jfloat (*func_mindustry_entities_comp_PayloadComp_dragMultiplier_R_float)(jcontext ctx, jobject self);
+#define VTABLE_mindustry_entities_comp_PayloadComp_getDuration_mindustry_type_StatusEffect_R_float 95
+typedef jfloat (*func_mindustry_entities_comp_PayloadComp_getDuration_mindustry_type_StatusEffect_R_float)(jcontext ctx, jobject self, jobject param0);
+#define VTABLE_mindustry_entities_comp_PayloadComp_healthMultiplier_R_float 96
+typedef jfloat (*func_mindustry_entities_comp_PayloadComp_healthMultiplier_R_float)(jcontext ctx, jobject self);
+#define VTABLE_mindustry_entities_comp_PayloadComp_reloadMultiplier_R_float 97
+typedef jfloat (*func_mindustry_entities_comp_PayloadComp_reloadMultiplier_R_float)(jcontext ctx, jobject self);
+#define VTABLE_mindustry_entities_comp_PayloadComp_speedMultiplier_R_float 98
+typedef jfloat (*func_mindustry_entities_comp_PayloadComp_speedMultiplier_R_float)(jcontext ctx, jobject self);
+#define VTABLE_mindustry_entities_comp_PayloadComp_armorOverride_float 99
+typedef void (*func_mindustry_entities_comp_PayloadComp_armorOverride_float)(jcontext ctx, jobject self, jfloat param0);
+#define VTABLE_mindustry_entities_comp_PayloadComp_buildSpeedMultiplier_float 100
+typedef void (*func_mindustry_entities_comp_PayloadComp_buildSpeedMultiplier_float)(jcontext ctx, jobject self, jfloat param0);
+#define VTABLE_mindustry_entities_comp_PayloadComp_clearStatuses 101
+typedef void (*func_mindustry_entities_comp_PayloadComp_clearStatuses)(jcontext ctx, jobject self);
+#define VTABLE_mindustry_entities_comp_PayloadComp_damageMultiplier_float 102
+typedef void (*func_mindustry_entities_comp_PayloadComp_damageMultiplier_float)(jcontext ctx, jobject self, jfloat param0);
+#define VTABLE_mindustry_entities_comp_PayloadComp_disarmed_boolean 103
+typedef void (*func_mindustry_entities_comp_PayloadComp_disarmed_boolean)(jcontext ctx, jobject self, jbool param0);
+#define VTABLE_mindustry_entities_comp_PayloadComp_dragMultiplier_float 104
+typedef void (*func_mindustry_entities_comp_PayloadComp_dragMultiplier_float)(jcontext ctx, jobject self, jfloat param0);
+#define VTABLE_mindustry_entities_comp_PayloadComp_draw 105
+typedef void (*func_mindustry_entities_comp_PayloadComp_draw)(jcontext ctx, jobject self);
+#define VTABLE_mindustry_entities_comp_PayloadComp_healthMultiplier_float 106
+typedef void (*func_mindustry_entities_comp_PayloadComp_healthMultiplier_float)(jcontext ctx, jobject self, jfloat param0);
+#define VTABLE_mindustry_entities_comp_PayloadComp_reloadMultiplier_float 107
+typedef void (*func_mindustry_entities_comp_PayloadComp_reloadMultiplier_float)(jcontext ctx, jobject self, jfloat param0);
+#define VTABLE_mindustry_entities_comp_PayloadComp_setDuration_mindustry_type_StatusEffect_float 108
+typedef void (*func_mindustry_entities_comp_PayloadComp_setDuration_mindustry_type_StatusEffect_float)(jcontext ctx, jobject self, jobject param0, jfloat param1);
+#define VTABLE_mindustry_entities_comp_PayloadComp_speedMultiplier_float 109
+typedef void (*func_mindustry_entities_comp_PayloadComp_speedMultiplier_float)(jcontext ctx, jobject self, jfloat param0);
+#define VTABLE_mindustry_entities_comp_PayloadComp_inFogTo_mindustry_game_Team_R_boolean 110
+typedef jbool (*func_mindustry_entities_comp_PayloadComp_inFogTo_mindustry_game_Team_R_boolean)(jcontext ctx, jobject self, jobject param0);
+#define VTABLE_mindustry_entities_comp_PayloadComp_cheating_R_boolean 111
+typedef jbool (*func_mindustry_entities_comp_PayloadComp_cheating_R_boolean)(jcontext ctx, jobject self);
+#define VTABLE_mindustry_entities_comp_PayloadComp_team_R_mindustry_game_Team 112
+typedef jobject (*func_mindustry_entities_comp_PayloadComp_team_R_mindustry_game_Team)(jcontext ctx, jobject self);
+#define VTABLE_mindustry_entities_comp_PayloadComp_closestCore_R_mindustry_world_blocks_storage_CoreBlock$CoreBuild 113
+typedef jobject (*func_mindustry_entities_comp_PayloadComp_closestCore_R_mindustry_world_blocks_storage_CoreBlock$CoreBuild)(jcontext ctx, jobject self);
+#define VTABLE_mindustry_entities_comp_PayloadComp_closestEnemyCore_R_mindustry_world_blocks_storage_CoreBlock$CoreBuild 114
+typedef jobject (*func_mindustry_entities_comp_PayloadComp_closestEnemyCore_R_mindustry_world_blocks_storage_CoreBlock$CoreBuild)(jcontext ctx, jobject self);
+#define VTABLE_mindustry_entities_comp_PayloadComp_core_R_mindustry_world_blocks_storage_CoreBlock$CoreBuild 115
+typedef jobject (*func_mindustry_entities_comp_PayloadComp_core_R_mindustry_world_blocks_storage_CoreBlock$CoreBuild)(jcontext ctx, jobject self);
+#define VTABLE_mindustry_entities_comp_PayloadComp_team_mindustry_game_Team 116
+typedef void (*func_mindustry_entities_comp_PayloadComp_team_mindustry_game_Team)(jcontext ctx, jobject self, jobject param0);
+#define VTABLE_mindustry_entities_comp_PayloadComp_buildPlan_R_mindustry_entities_units_BuildPlan 117
+typedef jobject (*func_mindustry_entities_comp_PayloadComp_buildPlan_R_mindustry_entities_units_BuildPlan)(jcontext ctx, jobject self);
+#define VTABLE_mindustry_entities_comp_PayloadComp_shouldSkip_mindustry_entities_units_BuildPlan_mindustry_gen_Building_R_boolean 118
+typedef jbool (*func_mindustry_entities_comp_PayloadComp_shouldSkip_mindustry_entities_units_BuildPlan_mindustry_gen_Building_R_boolean)(jcontext ctx, jobject self, jobject param0, jobject param1);
+#define VTABLE_mindustry_entities_comp_PayloadComp_addBuild_mindustry_entities_units_BuildPlan_boolean 119
+typedef void (*func_mindustry_entities_comp_PayloadComp_addBuild_mindustry_entities_units_BuildPlan_boolean)(jcontext ctx, jobject self, jobject param0, jbool param1);
+#define VTABLE_mindustry_entities_comp_PayloadComp_addBuild_mindustry_entities_units_BuildPlan 120
+typedef void (*func_mindustry_entities_comp_PayloadComp_addBuild_mindustry_entities_units_BuildPlan)(jcontext ctx, jobject self, jobject param0);
+#define VTABLE_mindustry_entities_comp_PayloadComp_clearBuilding 121
+typedef void (*func_mindustry_entities_comp_PayloadComp_clearBuilding)(jcontext ctx, jobject self);
+#define VTABLE_mindustry_entities_comp_PayloadComp_isBuilding_R_boolean 122
+typedef jbool (*func_mindustry_entities_comp_PayloadComp_isBuilding_R_boolean)(jcontext ctx, jobject self);
+#define VTABLE_mindustry_entities_comp_PayloadComp_plans_R_arc_struct_Queue 123
+typedef jobject (*func_mindustry_entities_comp_PayloadComp_plans_R_arc_struct_Queue)(jcontext ctx, jobject self);
+#define VTABLE_mindustry_entities_comp_PayloadComp_activelyBuilding_R_boolean 124
+typedef jbool (*func_mindustry_entities_comp_PayloadComp_activelyBuilding_R_boolean)(jcontext ctx, jobject self);
+#define VTABLE_mindustry_entities_comp_PayloadComp_canBuild_R_boolean 125
+typedef jbool (*func_mindustry_entities_comp_PayloadComp_canBuild_R_boolean)(jcontext ctx, jobject self);
+#define VTABLE_mindustry_entities_comp_PayloadComp_updateBuilding_R_boolean 126
+typedef jbool (*func_mindustry_entities_comp_PayloadComp_updateBuilding_R_boolean)(jcontext ctx, jobject self);
+#define VTABLE_mindustry_entities_comp_PayloadComp_buildAlpha_R_float 127
+typedef jfloat (*func_mindustry_entities_comp_PayloadComp_buildAlpha_R_float)(jcontext ctx, jobject self);
+#define VTABLE_mindustry_entities_comp_PayloadComp_buildAlpha_float 128
+typedef void (*func_mindustry_entities_comp_PayloadComp_buildAlpha_float)(jcontext ctx, jobject self, jfloat param0);
+#define VTABLE_mindustry_entities_comp_PayloadComp_drawBuilding 129
+typedef void (*func_mindustry_entities_comp_PayloadComp_drawBuilding)(jcontext ctx, jobject self);
+#define VTABLE_mindustry_entities_comp_PayloadComp_drawBuildingBeam_float_float 130
+typedef void (*func_mindustry_entities_comp_PayloadComp_drawBuildingBeam_float_float)(jcontext ctx, jobject self, jfloat param0, jfloat param1);
+#define VTABLE_mindustry_entities_comp_PayloadComp_drawPlan_mindustry_entities_units_BuildPlan_float 131
+typedef void (*func_mindustry_entities_comp_PayloadComp_drawPlan_mindustry_entities_units_BuildPlan_float)(jcontext ctx, jobject self, jobject param0, jfloat param1);
+#define VTABLE_mindustry_entities_comp_PayloadComp_drawPlanTop_mindustry_entities_units_BuildPlan_float 132
+typedef void (*func_mindustry_entities_comp_PayloadComp_drawPlanTop_mindustry_entities_units_BuildPlan_float)(jcontext ctx, jobject self, jobject param0, jfloat param1);
+#define VTABLE_mindustry_entities_comp_PayloadComp_plans_arc_struct_Queue 133
+typedef void (*func_mindustry_entities_comp_PayloadComp_plans_arc_struct_Queue)(jcontext ctx, jobject self, jobject param0);
+#define VTABLE_mindustry_entities_comp_PayloadComp_removeBuild_int_int_boolean 134
+typedef void (*func_mindustry_entities_comp_PayloadComp_removeBuild_int_int_boolean)(jcontext ctx, jobject self, jint param0, jint param1, jbool param2);
+#define VTABLE_mindustry_entities_comp_PayloadComp_updateBuildLogic 135
+typedef void (*func_mindustry_entities_comp_PayloadComp_updateBuildLogic)(jcontext ctx, jobject self);
+#define VTABLE_mindustry_entities_comp_PayloadComp_updateBuilding_boolean 136
+typedef void (*func_mindustry_entities_comp_PayloadComp_updateBuilding_boolean)(jcontext ctx, jobject self, jbool param0);
+#define VTABLE_mindustry_entities_comp_PayloadComp_validatePlans 137
+typedef void (*func_mindustry_entities_comp_PayloadComp_validatePlans)(jcontext ctx, jobject self);
+#define VTABLE_mindustry_entities_comp_PayloadComp_clipSize_R_float 138
+typedef jfloat (*func_mindustry_entities_comp_PayloadComp_clipSize_R_float)(jcontext ctx, jobject self);
+#define VTABLE_mindustry_entities_comp_PayloadComp_damageArmorMult_float_float 139
+typedef void (*func_mindustry_entities_comp_PayloadComp_damageArmorMult_float_float)(jcontext ctx, jobject self, jfloat param0, jfloat param1);
+#define VTABLE_mindustry_entities_comp_PayloadComp_damageArmorMult_float_float_boolean 140
+typedef void (*func_mindustry_entities_comp_PayloadComp_damageArmorMult_float_float_boolean)(jcontext ctx, jobject self, jfloat param0, jfloat param1, jbool param2);
+#define VTABLE_mindustry_entities_comp_PayloadComp_damagePierce_float 141
+typedef void (*func_mindustry_entities_comp_PayloadComp_damagePierce_float)(jcontext ctx, jobject self, jfloat param0);
+#define VTABLE_mindustry_entities_comp_PayloadComp_damagePierce_float_boolean 142
+typedef void (*func_mindustry_entities_comp_PayloadComp_damagePierce_float_boolean)(jcontext ctx, jobject self, jfloat param0, jbool param1);
+#define VTABLE_mindustry_entities_comp_PayloadComp_healFract_float 143
+typedef void (*func_mindustry_entities_comp_PayloadComp_healFract_float)(jcontext ctx, jobject self, jfloat param0);
+#define VTABLE_mindustry_entities_comp_PayloadComp_heal_float 144
+typedef void (*func_mindustry_entities_comp_PayloadComp_heal_float)(jcontext ctx, jobject self, jfloat param0);
+#define VTABLE_mindustry_entities_comp_PayloadComp_damaged_R_boolean 145
+typedef jbool (*func_mindustry_entities_comp_PayloadComp_damaged_R_boolean)(jcontext ctx, jobject self);
+#define VTABLE_mindustry_entities_comp_PayloadComp_dead_R_boolean 146
+typedef jbool (*func_mindustry_entities_comp_PayloadComp_dead_R_boolean)(jcontext ctx, jobject self);
+#define VTABLE_mindustry_entities_comp_PayloadComp_isValid_R_boolean 147
+typedef jbool (*func_mindustry_entities_comp_PayloadComp_isValid_R_boolean)(jcontext ctx, jobject self);
+#define VTABLE_mindustry_entities_comp_PayloadComp_health_R_float 148
+typedef jfloat (*func_mindustry_entities_comp_PayloadComp_health_R_float)(jcontext ctx, jobject self);
+#define VTABLE_mindustry_entities_comp_PayloadComp_healthf_R_float 149
+typedef jfloat (*func_mindustry_entities_comp_PayloadComp_healthf_R_float)(jcontext ctx, jobject self);
+#define VTABLE_mindustry_entities_comp_PayloadComp_hitTime_R_float 150
+typedef jfloat (*func_mindustry_entities_comp_PayloadComp_hitTime_R_float)(jcontext ctx, jobject self);
+#define VTABLE_mindustry_entities_comp_PayloadComp_maxHealth_R_float 151
+typedef jfloat (*func_mindustry_entities_comp_PayloadComp_maxHealth_R_float)(jcontext ctx, jobject self);
+#define VTABLE_mindustry_entities_comp_PayloadComp_clampHealth 152
+typedef void (*func_mindustry_entities_comp_PayloadComp_clampHealth)(jcontext ctx, jobject self);
+#define VTABLE_mindustry_entities_comp_PayloadComp_damage_float 153
+typedef void (*func_mindustry_entities_comp_PayloadComp_damage_float)(jcontext ctx, jobject self, jfloat param0);
+#define VTABLE_mindustry_entities_comp_PayloadComp_damage_float_boolean 154
+typedef void (*func_mindustry_entities_comp_PayloadComp_damage_float_boolean)(jcontext ctx, jobject self, jfloat param0, jbool param1);
+#define VTABLE_mindustry_entities_comp_PayloadComp_damageContinuous_float 155
+typedef void (*func_mindustry_entities_comp_PayloadComp_damageContinuous_float)(jcontext ctx, jobject self, jfloat param0);
+#define VTABLE_mindustry_entities_comp_PayloadComp_damageContinuousArmorMult_float_float 156
+typedef void (*func_mindustry_entities_comp_PayloadComp_damageContinuousArmorMult_float_float)(jcontext ctx, jobject self, jfloat param0, jfloat param1);
+#define VTABLE_mindustry_entities_comp_PayloadComp_damageContinuousPierce_float 157
+typedef void (*func_mindustry_entities_comp_PayloadComp_damageContinuousPierce_float)(jcontext ctx, jobject self, jfloat param0);
+#define VTABLE_mindustry_entities_comp_PayloadComp_dead_boolean 158
+typedef void (*func_mindustry_entities_comp_PayloadComp_dead_boolean)(jcontext ctx, jobject self, jbool param0);
+#define VTABLE_mindustry_entities_comp_PayloadComp_heal 159
+typedef void (*func_mindustry_entities_comp_PayloadComp_heal)(jcontext ctx, jobject self);
+#define VTABLE_mindustry_entities_comp_PayloadComp_health_float 160
+typedef void (*func_mindustry_entities_comp_PayloadComp_health_float)(jcontext ctx, jobject self, jfloat param0);
+#define VTABLE_mindustry_entities_comp_PayloadComp_hitTime_float 161
+typedef void (*func_mindustry_entities_comp_PayloadComp_hitTime_float)(jcontext ctx, jobject self, jfloat param0);
+#define VTABLE_mindustry_entities_comp_PayloadComp_kill 162
+typedef void (*func_mindustry_entities_comp_PayloadComp_kill)(jcontext ctx, jobject self);
+#define VTABLE_mindustry_entities_comp_PayloadComp_killed 163
+typedef void (*func_mindustry_entities_comp_PayloadComp_killed)(jcontext ctx, jobject self);
+#define VTABLE_mindustry_entities_comp_PayloadComp_maxHealth_float 164
+typedef void (*func_mindustry_entities_comp_PayloadComp_maxHealth_float)(jcontext ctx, jobject self, jfloat param0);
+#define VTABLE_mindustry_entities_comp_PayloadComp_acceptsItem_mindustry_type_Item_R_boolean 165
+typedef jbool (*func_mindustry_entities_comp_PayloadComp_acceptsItem_mindustry_type_Item_R_boolean)(jcontext ctx, jobject self, jobject param0);
+#define VTABLE_mindustry_entities_comp_PayloadComp_hasItem_R_boolean 166
+typedef jbool (*func_mindustry_entities_comp_PayloadComp_hasItem_R_boolean)(jcontext ctx, jobject self);
+#define VTABLE_mindustry_entities_comp_PayloadComp_itemTime_R_float 167
+typedef jfloat (*func_mindustry_entities_comp_PayloadComp_itemTime_R_float)(jcontext ctx, jobject self);
+#define VTABLE_mindustry_entities_comp_PayloadComp_itemCapacity_R_int 168
+typedef jint (*func_mindustry_entities_comp_PayloadComp_itemCapacity_R_int)(jcontext ctx, jobject self);
+#define VTABLE_mindustry_entities_comp_PayloadComp_maxAccepted_mindustry_type_Item_R_int 169
+typedef jint (*func_mindustry_entities_comp_PayloadComp_maxAccepted_mindustry_type_Item_R_int)(jcontext ctx, jobject self, jobject param0);
+#define VTABLE_mindustry_entities_comp_PayloadComp_item_R_mindustry_type_Item 170
+typedef jobject (*func_mindustry_entities_comp_PayloadComp_item_R_mindustry_type_Item)(jcontext ctx, jobject self);
+#define VTABLE_mindustry_entities_comp_PayloadComp_stack_R_mindustry_type_ItemStack 171
+typedef jobject (*func_mindustry_entities_comp_PayloadComp_stack_R_mindustry_type_ItemStack)(jcontext ctx, jobject self);
+#define VTABLE_mindustry_entities_comp_PayloadComp_addItem_mindustry_type_Item 172
+typedef void (*func_mindustry_entities_comp_PayloadComp_addItem_mindustry_type_Item)(jcontext ctx, jobject self, jobject param0);
+#define VTABLE_mindustry_entities_comp_PayloadComp_addItem_mindustry_type_Item_int 173
+typedef void (*func_mindustry_entities_comp_PayloadComp_addItem_mindustry_type_Item_int)(jcontext ctx, jobject self, jobject param0, jint param1);
+#define VTABLE_mindustry_entities_comp_PayloadComp_clearItem 174
+typedef void (*func_mindustry_entities_comp_PayloadComp_clearItem)(jcontext ctx, jobject self);
+#define VTABLE_mindustry_entities_comp_PayloadComp_itemTime_float 175
+typedef void (*func_mindustry_entities_comp_PayloadComp_itemTime_float)(jcontext ctx, jobject self, jfloat param0);
+#define VTABLE_mindustry_entities_comp_PayloadComp_stack_mindustry_type_ItemStack 176
+typedef void (*func_mindustry_entities_comp_PayloadComp_stack_mindustry_type_ItemStack)(jcontext ctx, jobject self, jobject param0);
+#define VTABLE_mindustry_entities_comp_PayloadComp_mineTile_R_mindustry_world_Tile 177
+typedef jobject (*func_mindustry_entities_comp_PayloadComp_mineTile_R_mindustry_world_Tile)(jcontext ctx, jobject self);
+#define VTABLE_mindustry_entities_comp_PayloadComp_canMine_R_boolean 178
+typedef jbool (*func_mindustry_entities_comp_PayloadComp_canMine_R_boolean)(jcontext ctx, jobject self);
+#define VTABLE_mindustry_entities_comp_PayloadComp_canMine_mindustry_type_Item_R_boolean 179
+typedef jbool (*func_mindustry_entities_comp_PayloadComp_canMine_mindustry_type_Item_R_boolean)(jcontext ctx, jobject self, jobject param0);
+#define VTABLE_mindustry_entities_comp_PayloadComp_mining_R_boolean 180
+typedef jbool (*func_mindustry_entities_comp_PayloadComp_mining_R_boolean)(jcontext ctx, jobject self);
+#define VTABLE_mindustry_entities_comp_PayloadComp_offloadImmediately_R_boolean 181
+typedef jbool (*func_mindustry_entities_comp_PayloadComp_offloadImmediately_R_boolean)(jcontext ctx, jobject self);
+#define VTABLE_mindustry_entities_comp_PayloadComp_validMine_mindustry_world_Tile_R_boolean 182
+typedef jbool (*func_mindustry_entities_comp_PayloadComp_validMine_mindustry_world_Tile_R_boolean)(jcontext ctx, jobject self, jobject param0);
+#define VTABLE_mindustry_entities_comp_PayloadComp_validMine_mindustry_world_Tile_boolean_R_boolean 183
+typedef jbool (*func_mindustry_entities_comp_PayloadComp_validMine_mindustry_world_Tile_boolean_R_boolean)(jcontext ctx, jobject self, jobject param0, jbool param1);
+#define VTABLE_mindustry_entities_comp_PayloadComp_mineTimer_R_float 184
+typedef jfloat (*func_mindustry_entities_comp_PayloadComp_mineTimer_R_float)(jcontext ctx, jobject self);
+#define VTABLE_mindustry_entities_comp_PayloadComp_getMineResult_mindustry_world_Tile_R_mindustry_type_Item 185
+typedef jobject (*func_mindustry_entities_comp_PayloadComp_getMineResult_mindustry_world_Tile_R_mindustry_type_Item)(jcontext ctx, jobject self, jobject param0);
+#define VTABLE_mindustry_entities_comp_PayloadComp_mineTile_mindustry_world_Tile 186
+typedef void (*func_mindustry_entities_comp_PayloadComp_mineTile_mindustry_world_Tile)(jcontext ctx, jobject self, jobject param0);
+#define VTABLE_mindustry_entities_comp_PayloadComp_mineTimer_float 187
+typedef void (*func_mindustry_entities_comp_PayloadComp_mineTimer_float)(jcontext ctx, jobject self, jfloat param0);
+#define VTABLE_mindustry_entities_comp_PayloadComp_solidity_R_mindustry_entities_EntityCollisions$SolidPred 188
+typedef jobject (*func_mindustry_entities_comp_PayloadComp_solidity_R_mindustry_entities_EntityCollisions$SolidPred)(jcontext ctx, jobject self);
+#define VTABLE_mindustry_entities_comp_PayloadComp_canPassOn_R_boolean 189
+typedef jbool (*func_mindustry_entities_comp_PayloadComp_canPassOn_R_boolean)(jcontext ctx, jobject self);
+#define VTABLE_mindustry_entities_comp_PayloadComp_canPass_int_int_R_boolean 190
+typedef jbool (*func_mindustry_entities_comp_PayloadComp_canPass_int_int_R_boolean)(jcontext ctx, jobject self, jint param0, jint param1);
+#define VTABLE_mindustry_entities_comp_PayloadComp_vel_R_arc_math_geom_Vec2 191
+typedef jobject (*func_mindustry_entities_comp_PayloadComp_vel_R_arc_math_geom_Vec2)(jcontext ctx, jobject self);
+#define VTABLE_mindustry_entities_comp_PayloadComp_ignoreSolids_R_boolean 192
+typedef jbool (*func_mindustry_entities_comp_PayloadComp_ignoreSolids_R_boolean)(jcontext ctx, jobject self);
+#define VTABLE_mindustry_entities_comp_PayloadComp_moving_R_boolean 193
+typedef jbool (*func_mindustry_entities_comp_PayloadComp_moving_R_boolean)(jcontext ctx, jobject self);
+#define VTABLE_mindustry_entities_comp_PayloadComp_drag_R_float 194
+typedef jfloat (*func_mindustry_entities_comp_PayloadComp_drag_R_float)(jcontext ctx, jobject self);
+#define VTABLE_mindustry_entities_comp_PayloadComp_drag_float 195
+typedef void (*func_mindustry_entities_comp_PayloadComp_drag_float)(jcontext ctx, jobject self, jfloat param0);
+#define VTABLE_mindustry_entities_comp_PayloadComp_move_arc_math_geom_Vec2 196
+typedef void (*func_mindustry_entities_comp_PayloadComp_move_arc_math_geom_Vec2)(jcontext ctx, jobject self, jobject param0);
+#define VTABLE_mindustry_entities_comp_PayloadComp_move_float_float 197
+typedef void (*func_mindustry_entities_comp_PayloadComp_move_float_float)(jcontext ctx, jobject self, jfloat param0, jfloat param1);
+#define VTABLE_mindustry_entities_comp_PayloadComp_vel_arc_math_geom_Vec2 198
+typedef void (*func_mindustry_entities_comp_PayloadComp_vel_arc_math_geom_Vec2)(jcontext ctx, jobject self, jobject param0);
+#define VTABLE_mindustry_entities_comp_PayloadComp_velAddNet_arc_math_geom_Vec2 199
+typedef void (*func_mindustry_entities_comp_PayloadComp_velAddNet_arc_math_geom_Vec2)(jcontext ctx, jobject self, jobject param0);
+#define VTABLE_mindustry_entities_comp_PayloadComp_velAddNet_float_float 200
+typedef void (*func_mindustry_entities_comp_PayloadComp_velAddNet_float_float)(jcontext ctx, jobject self, jfloat param0, jfloat param1);
+#define VTABLE_mindustry_entities_comp_PayloadComp_hasPhysicsRef_R_boolean 201
+typedef jbool (*func_mindustry_entities_comp_PayloadComp_hasPhysicsRef_R_boolean)(jcontext ctx, jobject self);
+#define VTABLE_mindustry_entities_comp_PayloadComp_mass_R_float 202
+typedef jfloat (*func_mindustry_entities_comp_PayloadComp_mass_R_float)(jcontext ctx, jobject self);
+#define VTABLE_mindustry_entities_comp_PayloadComp_hasPhysicsRef_boolean 203
+typedef void (*func_mindustry_entities_comp_PayloadComp_hasPhysicsRef_boolean)(jcontext ctx, jobject self, jbool param0);
+#define VTABLE_mindustry_entities_comp_PayloadComp_impulse_arc_math_geom_Vec2 204
+typedef void (*func_mindustry_entities_comp_PayloadComp_impulse_arc_math_geom_Vec2)(jcontext ctx, jobject self, jobject param0);
+#define VTABLE_mindustry_entities_comp_PayloadComp_impulse_float_float 205
+typedef void (*func_mindustry_entities_comp_PayloadComp_impulse_float_float)(jcontext ctx, jobject self, jfloat param0, jfloat param1);
+#define VTABLE_mindustry_entities_comp_PayloadComp_impulseNet_arc_math_geom_Vec2 206
+typedef void (*func_mindustry_entities_comp_PayloadComp_impulseNet_arc_math_geom_Vec2)(jcontext ctx, jobject self, jobject param0);
+#define VTABLE_mindustry_entities_comp_PayloadComp_shield_R_float 207
+typedef jfloat (*func_mindustry_entities_comp_PayloadComp_shield_R_float)(jcontext ctx, jobject self);
+#define VTABLE_mindustry_entities_comp_PayloadComp_shield_float 208
+typedef void (*func_mindustry_entities_comp_PayloadComp_shield_float)(jcontext ctx, jobject self, jfloat param0);
+#define VTABLE_mindustry_entities_comp_PayloadComp_shieldAlpha_R_float 209
+typedef jfloat (*func_mindustry_entities_comp_PayloadComp_shieldAlpha_R_float)(jcontext ctx, jobject self);
+#define VTABLE_mindustry_entities_comp_PayloadComp_shieldAlpha_float 210
+typedef void (*func_mindustry_entities_comp_PayloadComp_shieldAlpha_float)(jcontext ctx, jobject self, jfloat param0);
+#define VTABLE_mindustry_entities_comp_PayloadComp_armor_R_float 211
+typedef jfloat (*func_mindustry_entities_comp_PayloadComp_armor_R_float)(jcontext ctx, jobject self);
+#define VTABLE_mindustry_entities_comp_PayloadComp_armor_float 212
+typedef void (*func_mindustry_entities_comp_PayloadComp_armor_float)(jcontext ctx, jobject self, jfloat param0);
+#define VTABLE_mindustry_entities_comp_PayloadComp_rawDamage_float 213
+typedef void (*func_mindustry_entities_comp_PayloadComp_rawDamage_float)(jcontext ctx, jobject self, jfloat param0);
+#define VTABLE_mindustry_entities_comp_PayloadComp_isSyncHidden_mindustry_game_Team_R_boolean 214
+typedef jbool (*func_mindustry_entities_comp_PayloadComp_isSyncHidden_mindustry_game_Team_R_boolean)(jcontext ctx, jobject self, jobject param0);
+#define VTABLE_mindustry_entities_comp_PayloadComp_lastUpdated_R_long 215
+typedef jlong (*func_mindustry_entities_comp_PayloadComp_lastUpdated_R_long)(jcontext ctx, jobject self);
+#define VTABLE_mindustry_entities_comp_PayloadComp_updateSpacing_R_long 216
+typedef jlong (*func_mindustry_entities_comp_PayloadComp_updateSpacing_R_long)(jcontext ctx, jobject self);
+#define VTABLE_mindustry_entities_comp_PayloadComp_afterSync 217
+typedef void (*func_mindustry_entities_comp_PayloadComp_afterSync)(jcontext ctx, jobject self);
+#define VTABLE_mindustry_entities_comp_PayloadComp_handleSyncHidden 218
+typedef void (*func_mindustry_entities_comp_PayloadComp_handleSyncHidden)(jcontext ctx, jobject self);
+#define VTABLE_mindustry_entities_comp_PayloadComp_interpolate 219
+typedef void (*func_mindustry_entities_comp_PayloadComp_interpolate)(jcontext ctx, jobject self);
+#define VTABLE_mindustry_entities_comp_PayloadComp_lastUpdated_long 220
+typedef void (*func_mindustry_entities_comp_PayloadComp_lastUpdated_long)(jcontext ctx, jobject self, jlong param0);
+#define VTABLE_mindustry_entities_comp_PayloadComp_readSync_arc_util_io_Reads 221
+typedef void (*func_mindustry_entities_comp_PayloadComp_readSync_arc_util_io_Reads)(jcontext ctx, jobject self, jobject param0);
+#define VTABLE_mindustry_entities_comp_PayloadComp_readSyncManual_java_nio_FloatBuffer 222
+typedef void (*func_mindustry_entities_comp_PayloadComp_readSyncManual_java_nio_FloatBuffer)(jcontext ctx, jobject self, jobject param0);
+#define VTABLE_mindustry_entities_comp_PayloadComp_snapInterpolation 223
+typedef void (*func_mindustry_entities_comp_PayloadComp_snapInterpolation)(jcontext ctx, jobject self);
+#define VTABLE_mindustry_entities_comp_PayloadComp_snapSync 224
+typedef void (*func_mindustry_entities_comp_PayloadComp_snapSync)(jcontext ctx, jobject self);
+#define VTABLE_mindustry_entities_comp_PayloadComp_updateSpacing_long 225
+typedef void (*func_mindustry_entities_comp_PayloadComp_updateSpacing_long)(jcontext ctx, jobject self, jlong param0);
+#define VTABLE_mindustry_entities_comp_PayloadComp_writeSync_arc_util_io_Writes 226
+typedef void (*func_mindustry_entities_comp_PayloadComp_writeSync_arc_util_io_Writes)(jcontext ctx, jobject self, jobject param0);
+#define VTABLE_mindustry_entities_comp_PayloadComp_writeSyncManual_java_nio_FloatBuffer 227
+typedef void (*func_mindustry_entities_comp_PayloadComp_writeSyncManual_java_nio_FloatBuffer)(jcontext ctx, jobject self, jobject param0);
+#define VTABLE_mindustry_entities_comp_PayloadComp_aim_float_float 228
+typedef void (*func_mindustry_entities_comp_PayloadComp_aim_float_float)(jcontext ctx, jobject self, jfloat param0, jfloat param1);
+#define VTABLE_mindustry_entities_comp_PayloadComp_aim_float_float_boolean 229
+typedef void (*func_mindustry_entities_comp_PayloadComp_aim_float_float_boolean)(jcontext ctx, jobject self, jfloat param0, jfloat param1, jbool param2);
+#define VTABLE_mindustry_entities_comp_PayloadComp_mounts_R_Array1_mindustry_entities_units_WeaponMount 230
+typedef jobject (*func_mindustry_entities_comp_PayloadComp_mounts_R_Array1_mindustry_entities_units_WeaponMount)(jcontext ctx, jobject self);
+#define VTABLE_mindustry_entities_comp_PayloadComp_mounts_Array1_mindustry_entities_units_WeaponMount 231
+typedef void (*func_mindustry_entities_comp_PayloadComp_mounts_Array1_mindustry_entities_units_WeaponMount)(jcontext ctx, jobject self, jobject param0);
+#define VTABLE_mindustry_entities_comp_PayloadComp_canShoot_R_boolean 232
+typedef jbool (*func_mindustry_entities_comp_PayloadComp_canShoot_R_boolean)(jcontext ctx, jobject self);
+#define VTABLE_mindustry_entities_comp_PayloadComp_isRotate_R_boolean 233
+typedef jbool (*func_mindustry_entities_comp_PayloadComp_isRotate_R_boolean)(jcontext ctx, jobject self);
+#define VTABLE_mindustry_entities_comp_PayloadComp_isShooting_R_boolean 234
+typedef jbool (*func_mindustry_entities_comp_PayloadComp_isShooting_R_boolean)(jcontext ctx, jobject self);
+#define VTABLE_mindustry_entities_comp_PayloadComp_aimX_R_float 235
+typedef jfloat (*func_mindustry_entities_comp_PayloadComp_aimX_R_float)(jcontext ctx, jobject self);
+#define VTABLE_mindustry_entities_comp_PayloadComp_aimY_R_float 236
+typedef jfloat (*func_mindustry_entities_comp_PayloadComp_aimY_R_float)(jcontext ctx, jobject self);
+#define VTABLE_mindustry_entities_comp_PayloadComp_aim_arc_math_geom_Position 237
+typedef void (*func_mindustry_entities_comp_PayloadComp_aim_arc_math_geom_Position)(jcontext ctx, jobject self, jobject param0);
+#define VTABLE_mindustry_entities_comp_PayloadComp_aimX_float 238
+typedef void (*func_mindustry_entities_comp_PayloadComp_aimX_float)(jcontext ctx, jobject self, jfloat param0);
+#define VTABLE_mindustry_entities_comp_PayloadComp_aimY_float 239
+typedef void (*func_mindustry_entities_comp_PayloadComp_aimY_float)(jcontext ctx, jobject self, jfloat param0);
+#define VTABLE_mindustry_entities_comp_PayloadComp_controlWeapons_boolean_boolean 240
+typedef void (*func_mindustry_entities_comp_PayloadComp_controlWeapons_boolean_boolean)(jcontext ctx, jobject self, jbool param0, jbool param1);
+#define VTABLE_mindustry_entities_comp_PayloadComp_controlWeapons_boolean 241
+typedef void (*func_mindustry_entities_comp_PayloadComp_controlWeapons_boolean)(jcontext ctx, jobject self, jbool param0);
+#define VTABLE_mindustry_entities_comp_PayloadComp_isShooting_boolean 242
+typedef void (*func_mindustry_entities_comp_PayloadComp_isShooting_boolean)(jcontext ctx, jobject self, jbool param0);
+#define VTABLE_mindustry_entities_comp_PayloadComp_setWeaponRotation_float 243
+typedef void (*func_mindustry_entities_comp_PayloadComp_setWeaponRotation_float)(jcontext ctx, jobject self, jfloat param0);
+#define VTABLE_mindustry_entities_comp_PayloadComp_setupWeapons_mindustry_type_UnitType 244
+typedef void (*func_mindustry_entities_comp_PayloadComp_setupWeapons_mindustry_type_UnitType)(jcontext ctx, jobject self, jobject param0);
+#define VTABLE_mindustry_entities_comp_PayloadComp_range_R_float 245
+typedef jfloat (*func_mindustry_entities_comp_PayloadComp_range_R_float)(jcontext ctx, jobject self);
+#define VTABLE_mindustry_entities_comp_PayloadComp_sense_mindustry_logic_LAccess_R_double 246
+typedef jdouble (*func_mindustry_entities_comp_PayloadComp_sense_mindustry_logic_LAccess_R_double)(jcontext ctx, jobject self, jobject param0);
+#define VTABLE_mindustry_entities_comp_PayloadComp_sense_mindustry_ctype_Content_R_double 247
+typedef jdouble (*func_mindustry_entities_comp_PayloadComp_sense_mindustry_ctype_Content_R_double)(jcontext ctx, jobject self, jobject param0);
+#define VTABLE_mindustry_entities_comp_PayloadComp_senseObject_mindustry_logic_LAccess_R_java_lang_Object 248
+typedef jobject (*func_mindustry_entities_comp_PayloadComp_senseObject_mindustry_logic_LAccess_R_java_lang_Object)(jcontext ctx, jobject self, jobject param0);
+#define VTABLE_mindustry_entities_comp_PayloadComp_setProp_mindustry_logic_LAccess_double 249
+typedef void (*func_mindustry_entities_comp_PayloadComp_setProp_mindustry_logic_LAccess_double)(jcontext ctx, jobject self, jobject param0, jdouble param1);
+#define VTABLE_mindustry_entities_comp_PayloadComp_setProp_mindustry_logic_LAccess_java_lang_Object 250
+typedef void (*func_mindustry_entities_comp_PayloadComp_setProp_mindustry_logic_LAccess_java_lang_Object)(jcontext ctx, jobject self, jobject param0, jobject param1);
+#define VTABLE_mindustry_entities_comp_PayloadComp_setProp_mindustry_ctype_UnlockableContent_double 251
+typedef void (*func_mindustry_entities_comp_PayloadComp_setProp_mindustry_ctype_UnlockableContent_double)(jcontext ctx, jobject self, jobject param0, jdouble param1);
+#define VTABLE_mindustry_entities_comp_PayloadComp_displayable_R_boolean 252
+typedef jbool (*func_mindustry_entities_comp_PayloadComp_displayable_R_boolean)(jcontext ctx, jobject self);
+#define VTABLE_mindustry_entities_comp_PayloadComp_display_arc_scene_ui_layout_Table 253
+typedef void (*func_mindustry_entities_comp_PayloadComp_display_arc_scene_ui_layout_Table)(jcontext ctx, jobject self, jobject param0);
+#define VTABLE_mindustry_entities_comp_PayloadComp_icon_R_arc_graphics_g2d_TextureRegion 254
+typedef jobject (*func_mindustry_entities_comp_PayloadComp_icon_R_arc_graphics_g2d_TextureRegion)(jcontext ctx, jobject self);
+#define VTABLE_mindustry_entities_comp_PayloadComp_physicSize_R_float 255
+typedef jfloat (*func_mindustry_entities_comp_PayloadComp_physicSize_R_float)(jcontext ctx, jobject self);
+#define VTABLE_mindustry_entities_comp_PayloadComp_getControllerName_R_java_lang_String 256
+typedef jobject (*func_mindustry_entities_comp_PayloadComp_getControllerName_R_java_lang_String)(jcontext ctx, jobject self);
+#define VTABLE_mindustry_entities_comp_PayloadComp_speed_R_float 257
+typedef jfloat (*func_mindustry_entities_comp_PayloadComp_speed_R_float)(jcontext ctx, jobject self);
+#define VTABLE_mindustry_entities_comp_PayloadComp_collisionLayer_R_int 258
+typedef jint (*func_mindustry_entities_comp_PayloadComp_collisionLayer_R_int)(jcontext ctx, jobject self);
+#define VTABLE_mindustry_entities_comp_PayloadComp_prefRotation_R_float 259
+typedef jfloat (*func_mindustry_entities_comp_PayloadComp_prefRotation_R_float)(jcontext ctx, jobject self);
+#define VTABLE_mindustry_entities_comp_PayloadComp_allowCommand_R_boolean 260
+typedef jbool (*func_mindustry_entities_comp_PayloadComp_allowCommand_R_boolean)(jcontext ctx, jobject self);
+#define VTABLE_mindustry_entities_comp_PayloadComp_isCommandable_R_boolean 261
+typedef jbool (*func_mindustry_entities_comp_PayloadComp_isCommandable_R_boolean)(jcontext ctx, jobject self);
+#define VTABLE_mindustry_entities_comp_PayloadComp_canLand_R_boolean 262
+typedef jbool (*func_mindustry_entities_comp_PayloadComp_canLand_R_boolean)(jcontext ctx, jobject self);
+#define VTABLE_mindustry_entities_comp_PayloadComp_destroy 263
+typedef void (*func_mindustry_entities_comp_PayloadComp_destroy)(jcontext ctx, jobject self);
+#define VTABLE_mindustry_entities_comp_PayloadComp_unloaded 264
+typedef void (*func_mindustry_entities_comp_PayloadComp_unloaded)(jcontext ctx, jobject self);
+#define VTABLE_mindustry_entities_comp_PayloadComp_movePref_arc_math_geom_Vec2 265
+typedef void (*func_mindustry_entities_comp_PayloadComp_movePref_arc_math_geom_Vec2)(jcontext ctx, jobject self, jobject param0);
+#define VTABLE_mindustry_entities_comp_PayloadComp_hasTarget_R_boolean 266
+typedef jbool (*func_mindustry_entities_comp_PayloadComp_hasTarget_R_boolean)(jcontext ctx, jobject self);
+#define VTABLE_mindustry_entities_comp_PayloadComp_hasTarget_boolean 267
+typedef void (*func_mindustry_entities_comp_PayloadComp_hasTarget_boolean)(jcontext ctx, jobject self, jbool param0);
+#define VTABLE_mindustry_entities_comp_PayloadComp_trail_R_mindustry_graphics_Trail 268
+typedef jobject (*func_mindustry_entities_comp_PayloadComp_trail_R_mindustry_graphics_Trail)(jcontext ctx, jobject self);
+#define VTABLE_mindustry_entities_comp_PayloadComp_dockedType_R_mindustry_type_UnitType 269
+typedef jobject (*func_mindustry_entities_comp_PayloadComp_dockedType_R_mindustry_type_UnitType)(jcontext ctx, jobject self);
+#define VTABLE_mindustry_entities_comp_PayloadComp_lastDrownFloor_R_mindustry_world_blocks_environment_Floor 270
+typedef jobject (*func_mindustry_entities_comp_PayloadComp_lastDrownFloor_R_mindustry_world_blocks_environment_Floor)(jcontext ctx, jobject self);
+#define VTABLE_mindustry_entities_comp_PayloadComp_getPlayer_R_mindustry_gen_Player 271
+typedef jobject (*func_mindustry_entities_comp_PayloadComp_getPlayer_R_mindustry_gen_Player)(jcontext ctx, jobject self);
+#define VTABLE_mindustry_entities_comp_PayloadComp_canDrown_R_boolean 272
+typedef jbool (*func_mindustry_entities_comp_PayloadComp_canDrown_R_boolean)(jcontext ctx, jobject self);
+#define VTABLE_mindustry_entities_comp_PayloadComp_canTarget_mindustry_gen_Teamc_R_boolean 273
+typedef jbool (*func_mindustry_entities_comp_PayloadComp_canTarget_mindustry_gen_Teamc_R_boolean)(jcontext ctx, jobject self, jobject param0);
+#define VTABLE_mindustry_entities_comp_PayloadComp_checkTarget_boolean_boolean_R_boolean 274
+typedef jbool (*func_mindustry_entities_comp_PayloadComp_checkTarget_boolean_boolean_R_boolean)(jcontext ctx, jobject self, jbool param0, jbool param1);
+#define VTABLE_mindustry_entities_comp_PayloadComp_hasWeapons_R_boolean 275
+typedef jbool (*func_mindustry_entities_comp_PayloadComp_hasWeapons_R_boolean)(jcontext ctx, jobject self);
+#define VTABLE_mindustry_entities_comp_PayloadComp_hittable_R_boolean 276
+typedef jbool (*func_mindustry_entities_comp_PayloadComp_hittable_R_boolean)(jcontext ctx, jobject self);
+#define VTABLE_mindustry_entities_comp_PayloadComp_inRange_arc_math_geom_Position_R_boolean 277
+typedef jbool (*func_mindustry_entities_comp_PayloadComp_inRange_arc_math_geom_Position_R_boolean)(jcontext ctx, jobject self, jobject param0);
+#define VTABLE_mindustry_entities_comp_PayloadComp_isAI_R_boolean 278
+typedef jbool (*func_mindustry_entities_comp_PayloadComp_isAI_R_boolean)(jcontext ctx, jobject self);
+#define VTABLE_mindustry_entities_comp_PayloadComp_isEnemy_R_boolean 279
+typedef jbool (*func_mindustry_entities_comp_PayloadComp_isEnemy_R_boolean)(jcontext ctx, jobject self);
+#define VTABLE_mindustry_entities_comp_PayloadComp_isFlying_R_boolean 280
+typedef jbool (*func_mindustry_entities_comp_PayloadComp_isFlying_R_boolean)(jcontext ctx, jobject self);
+#define VTABLE_mindustry_entities_comp_PayloadComp_isMissile_R_boolean 281
+typedef jbool (*func_mindustry_entities_comp_PayloadComp_isMissile_R_boolean)(jcontext ctx, jobject self);
+#define VTABLE_mindustry_entities_comp_PayloadComp_isPathImpassable_int_int_R_boolean 282
+typedef jbool (*func_mindustry_entities_comp_PayloadComp_isPathImpassable_int_int_R_boolean)(jcontext ctx, jobject self, jint param0, jint param1);
+#define VTABLE_mindustry_entities_comp_PayloadComp_isPlayer_R_boolean 283
+typedef jbool (*func_mindustry_entities_comp_PayloadComp_isPlayer_R_boolean)(jcontext ctx, jobject self);
+#define VTABLE_mindustry_entities_comp_PayloadComp_killable_R_boolean 284
+typedef jbool (*func_mindustry_entities_comp_PayloadComp_killable_R_boolean)(jcontext ctx, jobject self);
+#define VTABLE_mindustry_entities_comp_PayloadComp_playerControllable_R_boolean 285
+typedef jbool (*func_mindustry_entities_comp_PayloadComp_playerControllable_R_boolean)(jcontext ctx, jobject self);
+#define VTABLE_mindustry_entities_comp_PayloadComp_shouldUpdateController_R_boolean 286
+typedef jbool (*func_mindustry_entities_comp_PayloadComp_shouldUpdateController_R_boolean)(jcontext ctx, jobject self);
+#define VTABLE_mindustry_entities_comp_PayloadComp_spawnedByCore_R_boolean 287
+typedef jbool (*func_mindustry_entities_comp_PayloadComp_spawnedByCore_R_boolean)(jcontext ctx, jobject self);
+#define VTABLE_mindustry_entities_comp_PayloadComp_targetable_mindustry_game_Team_R_boolean 288
+typedef jbool (*func_mindustry_entities_comp_PayloadComp_targetable_mindustry_game_Team_R_boolean)(jcontext ctx, jobject self, jobject param0);
+#define VTABLE_mindustry_entities_comp_PayloadComp_flag_R_double 289
+typedef jdouble (*func_mindustry_entities_comp_PayloadComp_flag_R_double)(jcontext ctx, jobject self);
+#define VTABLE_mindustry_entities_comp_PayloadComp_ammof_R_float 290
+typedef jfloat (*func_mindustry_entities_comp_PayloadComp_ammof_R_float)(jcontext ctx, jobject self);
+#define VTABLE_mindustry_entities_comp_PayloadComp_bounds_R_float 291
+typedef jfloat (*func_mindustry_entities_comp_PayloadComp_bounds_R_float)(jcontext ctx, jobject self);
+#define VTABLE_mindustry_entities_comp_PayloadComp_drownTime_R_float 292
+typedef jfloat (*func_mindustry_entities_comp_PayloadComp_drownTime_R_float)(jcontext ctx, jobject self);
+#define VTABLE_mindustry_entities_comp_PayloadComp_elevation_R_float 293
+typedef jfloat (*func_mindustry_entities_comp_PayloadComp_elevation_R_float)(jcontext ctx, jobject self);
+#define VTABLE_mindustry_entities_comp_PayloadComp_floorSpeedMultiplier_R_float 294
+typedef jfloat (*func_mindustry_entities_comp_PayloadComp_floorSpeedMultiplier_R_float)(jcontext ctx, jobject self);
+#define VTABLE_mindustry_entities_comp_PayloadComp_healTime_R_float 295
+typedef jfloat (*func_mindustry_entities_comp_PayloadComp_healTime_R_float)(jcontext ctx, jobject self);
+#define VTABLE_mindustry_entities_comp_PayloadComp_shadowAlpha_R_float 296
+typedef jfloat (*func_mindustry_entities_comp_PayloadComp_shadowAlpha_R_float)(jcontext ctx, jobject self);
+#define VTABLE_mindustry_entities_comp_PayloadComp_splashTimer_R_float 297
+typedef jfloat (*func_mindustry_entities_comp_PayloadComp_splashTimer_R_float)(jcontext ctx, jobject self);
+#define VTABLE_mindustry_entities_comp_PayloadComp_cap_R_int 298
+typedef jint (*func_mindustry_entities_comp_PayloadComp_cap_R_int)(jcontext ctx, jobject self);
+#define VTABLE_mindustry_entities_comp_PayloadComp_count_R_int 299
+typedef jint (*func_mindustry_entities_comp_PayloadComp_count_R_int)(jcontext ctx, jobject self);
+#define VTABLE_mindustry_entities_comp_PayloadComp_lastFogPos_R_int 300
+typedef jint (*func_mindustry_entities_comp_PayloadComp_lastFogPos_R_int)(jcontext ctx, jobject self);
+#define VTABLE_mindustry_entities_comp_PayloadComp_lastCommanded_R_java_lang_String 301
+typedef jobject (*func_mindustry_entities_comp_PayloadComp_lastCommanded_R_java_lang_String)(jcontext ctx, jobject self);
+#define VTABLE_mindustry_entities_comp_PayloadComp_command_R_mindustry_ai_types_CommandAI 302
+typedef jobject (*func_mindustry_entities_comp_PayloadComp_command_R_mindustry_ai_types_CommandAI)(jcontext ctx, jobject self);
+#define VTABLE_mindustry_entities_comp_PayloadComp_abilities_R_Array1_mindustry_entities_abilities_Ability 303
+typedef jobject (*func_mindustry_entities_comp_PayloadComp_abilities_R_Array1_mindustry_entities_abilities_Ability)(jcontext ctx, jobject self);
+#define VTABLE_mindustry_entities_comp_PayloadComp_controller_R_mindustry_entities_units_UnitController 304
+typedef jobject (*func_mindustry_entities_comp_PayloadComp_controller_R_mindustry_entities_units_UnitController)(jcontext ctx, jobject self);
+#define VTABLE_mindustry_entities_comp_PayloadComp_type_R_mindustry_type_UnitType 305
+typedef jobject (*func_mindustry_entities_comp_PayloadComp_type_R_mindustry_type_UnitType)(jcontext ctx, jobject self);
+#define VTABLE_mindustry_entities_comp_PayloadComp_drownFloor_R_mindustry_world_blocks_environment_Floor 306
+typedef jobject (*func_mindustry_entities_comp_PayloadComp_drownFloor_R_mindustry_world_blocks_environment_Floor)(jcontext ctx, jobject self);
+#define VTABLE_mindustry_entities_comp_PayloadComp_abilities_Array1_mindustry_entities_abilities_Ability 307
+typedef void (*func_mindustry_entities_comp_PayloadComp_abilities_Array1_mindustry_entities_abilities_Ability)(jcontext ctx, jobject self, jobject param0);
+#define VTABLE_mindustry_entities_comp_PayloadComp_aimLook_arc_math_geom_Position 308
+typedef void (*func_mindustry_entities_comp_PayloadComp_aimLook_arc_math_geom_Position)(jcontext ctx, jobject self, jobject param0);
+#define VTABLE_mindustry_entities_comp_PayloadComp_aimLook_float_float 309
+typedef void (*func_mindustry_entities_comp_PayloadComp_aimLook_float_float)(jcontext ctx, jobject self, jfloat param0, jfloat param1);
+#define VTABLE_mindustry_entities_comp_PayloadComp_approach_arc_math_geom_Vec2 310
+typedef void (*func_mindustry_entities_comp_PayloadComp_approach_arc_math_geom_Vec2)(jcontext ctx, jobject self, jobject param0);
+#define VTABLE_mindustry_entities_comp_PayloadComp_controller_mindustry_entities_units_UnitController 311
+typedef void (*func_mindustry_entities_comp_PayloadComp_controller_mindustry_entities_units_UnitController)(jcontext ctx, jobject self, jobject param0);
+#define VTABLE_mindustry_entities_comp_PayloadComp_dockedType_mindustry_type_UnitType 312
+typedef void (*func_mindustry_entities_comp_PayloadComp_dockedType_mindustry_type_UnitType)(jcontext ctx, jobject self, jobject param0);
+#define VTABLE_mindustry_entities_comp_PayloadComp_drownTime_float 313
+typedef void (*func_mindustry_entities_comp_PayloadComp_drownTime_float)(jcontext ctx, jobject self, jfloat param0);
+#define VTABLE_mindustry_entities_comp_PayloadComp_elevation_float 314
+typedef void (*func_mindustry_entities_comp_PayloadComp_elevation_float)(jcontext ctx, jobject self, jfloat param0);
+#define VTABLE_mindustry_entities_comp_PayloadComp_flag_double 315
+typedef void (*func_mindustry_entities_comp_PayloadComp_flag_double)(jcontext ctx, jobject self, jdouble param0);
+#define VTABLE_mindustry_entities_comp_PayloadComp_healTime_float 316
+typedef void (*func_mindustry_entities_comp_PayloadComp_healTime_float)(jcontext ctx, jobject self, jfloat param0);
+#define VTABLE_mindustry_entities_comp_PayloadComp_landed 317
+typedef void (*func_mindustry_entities_comp_PayloadComp_landed)(jcontext ctx, jobject self);
+#define VTABLE_mindustry_entities_comp_PayloadComp_lastCommanded_java_lang_String 318
+typedef void (*func_mindustry_entities_comp_PayloadComp_lastCommanded_java_lang_String)(jcontext ctx, jobject self, jobject param0);
+#define VTABLE_mindustry_entities_comp_PayloadComp_lastDrownFloor_mindustry_world_blocks_environment_Floor 319
+typedef void (*func_mindustry_entities_comp_PayloadComp_lastDrownFloor_mindustry_world_blocks_environment_Floor)(jcontext ctx, jobject self, jobject param0);
+#define VTABLE_mindustry_entities_comp_PayloadComp_lastFogPos_int 320
+typedef void (*func_mindustry_entities_comp_PayloadComp_lastFogPos_int)(jcontext ctx, jobject self, jint param0);
+#define VTABLE_mindustry_entities_comp_PayloadComp_lookAt_arc_math_geom_Position 321
+typedef void (*func_mindustry_entities_comp_PayloadComp_lookAt_arc_math_geom_Position)(jcontext ctx, jobject self, jobject param0);
+#define VTABLE_mindustry_entities_comp_PayloadComp_lookAt_float 322
+typedef void (*func_mindustry_entities_comp_PayloadComp_lookAt_float)(jcontext ctx, jobject self, jfloat param0);
+#define VTABLE_mindustry_entities_comp_PayloadComp_lookAt_float_float 323
+typedef void (*func_mindustry_entities_comp_PayloadComp_lookAt_float_float)(jcontext ctx, jobject self, jfloat param0, jfloat param1);
+#define VTABLE_mindustry_entities_comp_PayloadComp_moveAt_arc_math_geom_Vec2 324
+typedef void (*func_mindustry_entities_comp_PayloadComp_moveAt_arc_math_geom_Vec2)(jcontext ctx, jobject self, jobject param0);
+#define VTABLE_mindustry_entities_comp_PayloadComp_moveAt_arc_math_geom_Vec2_float 325
+typedef void (*func_mindustry_entities_comp_PayloadComp_moveAt_arc_math_geom_Vec2_float)(jcontext ctx, jobject self, jobject param0, jfloat param1);
+#define VTABLE_mindustry_entities_comp_PayloadComp_resetController 326
+typedef void (*func_mindustry_entities_comp_PayloadComp_resetController)(jcontext ctx, jobject self);
+#define VTABLE_mindustry_entities_comp_PayloadComp_rotateMove_arc_math_geom_Vec2 327
+typedef void (*func_mindustry_entities_comp_PayloadComp_rotateMove_arc_math_geom_Vec2)(jcontext ctx, jobject self, jobject param0);
+#define VTABLE_mindustry_entities_comp_PayloadComp_set_mindustry_type_UnitType_mindustry_entities_units_UnitController 328
+typedef void (*func_mindustry_entities_comp_PayloadComp_set_mindustry_type_UnitType_mindustry_entities_units_UnitController)(jcontext ctx, jobject self, jobject param0, jobject param1);
+#define VTABLE_mindustry_entities_comp_PayloadComp_setType_mindustry_type_UnitType 329
+typedef void (*func_mindustry_entities_comp_PayloadComp_setType_mindustry_type_UnitType)(jcontext ctx, jobject self, jobject param0);
+#define VTABLE_mindustry_entities_comp_PayloadComp_shadowAlpha_float 330
+typedef void (*func_mindustry_entities_comp_PayloadComp_shadowAlpha_float)(jcontext ctx, jobject self, jfloat param0);
+#define VTABLE_mindustry_entities_comp_PayloadComp_spawnedByCore_boolean 331
+typedef void (*func_mindustry_entities_comp_PayloadComp_spawnedByCore_boolean)(jcontext ctx, jobject self, jbool param0);
+#define VTABLE_mindustry_entities_comp_PayloadComp_splashTimer_float 332
+typedef void (*func_mindustry_entities_comp_PayloadComp_splashTimer_float)(jcontext ctx, jobject self, jfloat param0);
+#define VTABLE_mindustry_entities_comp_PayloadComp_trail_mindustry_graphics_Trail 333
+typedef void (*func_mindustry_entities_comp_PayloadComp_trail_mindustry_graphics_Trail)(jcontext ctx, jobject self, jobject param0);
+#define VTABLE_mindustry_entities_comp_PayloadComp_type_mindustry_type_UnitType 334
+typedef void (*func_mindustry_entities_comp_PayloadComp_type_mindustry_type_UnitType)(jcontext ctx, jobject self, jobject param0);
+#define VTABLE_mindustry_entities_comp_PayloadComp_updateBoosting_boolean 335
+typedef void (*func_mindustry_entities_comp_PayloadComp_updateBoosting_boolean)(jcontext ctx, jobject self, jbool param0);
+#define VTABLE_mindustry_entities_comp_PayloadComp_updateBoosting_boolean_boolean 336
+typedef void (*func_mindustry_entities_comp_PayloadComp_updateBoosting_boolean_boolean)(jcontext ctx, jobject self, jbool param0, jbool param1);
+#define VTABLE_mindustry_entities_comp_PayloadComp_updateDrowning 337
+typedef void (*func_mindustry_entities_comp_PayloadComp_updateDrowning)(jcontext ctx, jobject self);
+#define VTABLE_mindustry_entities_comp_PayloadComp_wobble 338
+typedef void (*func_mindustry_entities_comp_PayloadComp_wobble)(jcontext ctx, jobject self);
+#define VTABLE_mindustry_entities_comp_PayloadComp_payloadUsed_R_float 339
+typedef jfloat (*func_mindustry_entities_comp_PayloadComp_payloadUsed_R_float)(jcontext ctx, jobject self);
+#define VTABLE_mindustry_entities_comp_PayloadComp_canPickup_mindustry_gen_Unit_R_boolean 340
+typedef jbool (*func_mindustry_entities_comp_PayloadComp_canPickup_mindustry_gen_Unit_R_boolean)(jcontext ctx, jobject self, jobject param0);
+#define VTABLE_mindustry_entities_comp_PayloadComp_canPickup_mindustry_gen_Building_R_boolean 341
+typedef jbool (*func_mindustry_entities_comp_PayloadComp_canPickup_mindustry_gen_Building_R_boolean)(jcontext ctx, jobject self, jobject param0);
+#define VTABLE_mindustry_entities_comp_PayloadComp_canPickupPayload_mindustry_world_blocks_payloads_Payload_R_boolean 342
+typedef jbool (*func_mindustry_entities_comp_PayloadComp_canPickupPayload_mindustry_world_blocks_payloads_Payload_R_boolean)(jcontext ctx, jobject self, jobject param0);
+#define VTABLE_mindustry_entities_comp_PayloadComp_hasPayload_R_boolean 343
+typedef jbool (*func_mindustry_entities_comp_PayloadComp_hasPayload_R_boolean)(jcontext ctx, jobject self);
+#define VTABLE_mindustry_entities_comp_PayloadComp_addPayload_mindustry_world_blocks_payloads_Payload 344
+typedef void (*func_mindustry_entities_comp_PayloadComp_addPayload_mindustry_world_blocks_payloads_Payload)(jcontext ctx, jobject self, jobject param0);
+#define VTABLE_mindustry_entities_comp_PayloadComp_pickup_mindustry_gen_Unit 345
+typedef void (*func_mindustry_entities_comp_PayloadComp_pickup_mindustry_gen_Unit)(jcontext ctx, jobject self, jobject param0);
+#define VTABLE_mindustry_entities_comp_PayloadComp_pickup_mindustry_gen_Building 346
+typedef void (*func_mindustry_entities_comp_PayloadComp_pickup_mindustry_gen_Building)(jcontext ctx, jobject self, jobject param0);
+#define VTABLE_mindustry_entities_comp_PayloadComp_dropLastPayload_R_boolean 347
+typedef jbool (*func_mindustry_entities_comp_PayloadComp_dropLastPayload_R_boolean)(jcontext ctx, jobject self);
+#define VTABLE_mindustry_entities_comp_PayloadComp_tryDropPayload_mindustry_world_blocks_payloads_Payload_R_boolean 348
+typedef jbool (*func_mindustry_entities_comp_PayloadComp_tryDropPayload_mindustry_world_blocks_payloads_Payload_R_boolean)(jcontext ctx, jobject self, jobject param0);
+#define VTABLE_mindustry_entities_comp_PayloadComp_canDropPayload_R_boolean 349
+typedef jbool (*func_mindustry_entities_comp_PayloadComp_canDropPayload_R_boolean)(jcontext ctx, jobject self);
+#define VTABLE_mindustry_entities_comp_PayloadComp_dropUnit_mindustry_world_blocks_payloads_UnitPayload_R_boolean 350
+typedef jbool (*func_mindustry_entities_comp_PayloadComp_dropUnit_mindustry_world_blocks_payloads_UnitPayload_R_boolean)(jcontext ctx, jobject self, jobject param0);
+#define VTABLE_mindustry_entities_comp_PayloadComp_dropBlock_mindustry_world_blocks_payloads_BuildPayload_R_boolean 351
+typedef jbool (*func_mindustry_entities_comp_PayloadComp_dropBlock_mindustry_world_blocks_payloads_BuildPayload_R_boolean)(jcontext ctx, jobject self, jobject param0);
+#define VTABLE_mindustry_entities_comp_PayloadComp_playPayloadDropSound_mindustry_world_blocks_payloads_Payload 352
+typedef void (*func_mindustry_entities_comp_PayloadComp_playPayloadDropSound_mindustry_world_blocks_payloads_Payload)(jcontext ctx, jobject self, jobject param0);
+#define VTABLE_mindustry_entities_comp_PayloadComp_contentInfo_arc_scene_ui_layout_Table_float_float 353
+typedef void (*func_mindustry_entities_comp_PayloadComp_contentInfo_arc_scene_ui_layout_Table_float_float)(jcontext ctx, jobject self, jobject param0, jfloat param1, jfloat param2);
+
+void mark_mindustry_entities_comp_PayloadComp(jobject object, jint mark, jint depth);
+void clinit_mindustry_entities_comp_PayloadComp(jcontext ctx);
+void init_mindustry_entities_comp_PayloadComp(jcontext ctx, jobject self);
+void M_mindustry_entities_comp_PayloadComp_update(jcontext ctx, jobject self);
+void M_mindustry_entities_comp_PayloadComp_remove(jcontext ctx, jobject self);
+void M_mindustry_entities_comp_PayloadComp_destroy(jcontext ctx, jobject self);
+jfloat M_mindustry_entities_comp_PayloadComp_payloadUsed_R_float(jcontext ctx, jobject self);
+jbool M_mindustry_entities_comp_PayloadComp_canPickup_mindustry_gen_Unit_R_boolean(jcontext ctx, jobject self, jobject param0);
+jbool M_mindustry_entities_comp_PayloadComp_canPickup_mindustry_gen_Building_R_boolean(jcontext ctx, jobject self, jobject param0);
+jbool M_mindustry_entities_comp_PayloadComp_canPickupPayload_mindustry_world_blocks_payloads_Payload_R_boolean(jcontext ctx, jobject self, jobject param0);
+jbool M_mindustry_entities_comp_PayloadComp_hasPayload_R_boolean(jcontext ctx, jobject self);
+void M_mindustry_entities_comp_PayloadComp_addPayload_mindustry_world_blocks_payloads_Payload(jcontext ctx, jobject self, jobject param0);
+void M_mindustry_entities_comp_PayloadComp_pickup_mindustry_gen_Unit(jcontext ctx, jobject self, jobject param0);
+void M_mindustry_entities_comp_PayloadComp_pickup_mindustry_gen_Building(jcontext ctx, jobject self, jobject param0);
+jbool M_mindustry_entities_comp_PayloadComp_dropLastPayload_R_boolean(jcontext ctx, jobject self);
+jbool M_mindustry_entities_comp_PayloadComp_tryDropPayload_mindustry_world_blocks_payloads_Payload_R_boolean(jcontext ctx, jobject self, jobject param0);
+jbool M_mindustry_entities_comp_PayloadComp_canDropPayload_R_boolean(jcontext ctx, jobject self);
+jbool M_mindustry_entities_comp_PayloadComp_dropUnit_mindustry_world_blocks_payloads_UnitPayload_R_boolean(jcontext ctx, jobject self, jobject param0);
+jbool M_mindustry_entities_comp_PayloadComp_dropBlock_mindustry_world_blocks_payloads_BuildPayload_R_boolean(jcontext ctx, jobject self, jobject param0);
+void M_mindustry_entities_comp_PayloadComp_playPayloadDropSound_mindustry_world_blocks_payloads_Payload(jcontext ctx, jobject self, jobject param0);
+void M_mindustry_entities_comp_PayloadComp_contentInfo_arc_scene_ui_layout_Table_float_float(jcontext ctx, jobject self, jobject param0, jfloat param1, jfloat param2);
+jbool SM_mindustry_entities_comp_PayloadComp_lambda$dropUnit$0_mindustry_gen_Unit_R_boolean(jcontext ctx, jobject param0);
+jbool SM_mindustry_entities_comp_PayloadComp_lambda$canDropPayload$0_mindustry_gen_Unit_R_boolean(jcontext ctx, jobject param0);
+jfloat SM_mindustry_entities_comp_PayloadComp_lambda$payloadUsed$0_mindustry_world_blocks_payloads_Payload_R_float(jcontext ctx, jobject param0);
+
+#ifdef __cplusplus
+}
+#endif
+
+#endif

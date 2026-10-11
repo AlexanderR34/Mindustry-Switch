@@ -1,0 +1,49 @@
+#ifndef HEADER_java_util_function_Predicate
+#define HEADER_java_util_function_Predicate
+
+#include "Clearwing.h"
+#include "java/lang/Object.h"
+
+#ifdef __cplusplus
+extern "C" {
+#endif
+
+typedef struct java_util_function_Predicate {
+	java_lang_Object parent;
+} java_util_function_Predicate;
+
+extern Class class_java_util_function_Predicate;
+
+
+#define INDEX_java_util_function_Predicate_test_java_lang_Object_R_boolean 0
+typedef jbool (*func_java_util_function_Predicate_test_java_lang_Object_R_boolean)(jcontext ctx, jobject self, jobject param0);
+#define INDEX_java_util_function_Predicate_and_java_util_function_Predicate_R_java_util_function_Predicate 1
+typedef jobject (*func_java_util_function_Predicate_and_java_util_function_Predicate_R_java_util_function_Predicate)(jcontext ctx, jobject self, jobject param0);
+#define INDEX_java_util_function_Predicate_negate_R_java_util_function_Predicate 2
+typedef jobject (*func_java_util_function_Predicate_negate_R_java_util_function_Predicate)(jcontext ctx, jobject self);
+#define INDEX_java_util_function_Predicate_or_java_util_function_Predicate_R_java_util_function_Predicate 3
+typedef jobject (*func_java_util_function_Predicate_or_java_util_function_Predicate_R_java_util_function_Predicate)(jcontext ctx, jobject self, jobject param0);
+#define INDEX_java_util_function_Predicate_lambda$or$2_java_util_function_Predicate_java_lang_Object_R_boolean 7
+typedef jbool (*func_java_util_function_Predicate_lambda$or$2_java_util_function_Predicate_java_lang_Object_R_boolean)(jcontext ctx, jobject self, jobject param0, jobject param1);
+#define INDEX_java_util_function_Predicate_lambda$negate$1_java_lang_Object_R_boolean 8
+typedef jbool (*func_java_util_function_Predicate_lambda$negate$1_java_lang_Object_R_boolean)(jcontext ctx, jobject self, jobject param0);
+#define INDEX_java_util_function_Predicate_lambda$and$0_java_util_function_Predicate_java_lang_Object_R_boolean 9
+typedef jbool (*func_java_util_function_Predicate_lambda$and$0_java_util_function_Predicate_java_lang_Object_R_boolean)(jcontext ctx, jobject self, jobject param0, jobject param1);
+
+void mark_java_util_function_Predicate(jobject object, jint mark, jint depth);
+void clinit_java_util_function_Predicate(jcontext ctx);
+jobject M_java_util_function_Predicate_and_java_util_function_Predicate_R_java_util_function_Predicate(jcontext ctx, jobject self, jobject param0);
+jobject M_java_util_function_Predicate_negate_R_java_util_function_Predicate(jcontext ctx, jobject self);
+jobject M_java_util_function_Predicate_or_java_util_function_Predicate_R_java_util_function_Predicate(jcontext ctx, jobject self, jobject param0);
+jobject SM_java_util_function_Predicate_isEqual_java_lang_Object_R_java_util_function_Predicate(jcontext ctx, jobject param0);
+jobject SM_java_util_function_Predicate_not_java_util_function_Predicate_R_java_util_function_Predicate(jcontext ctx, jobject param0);
+jbool SM_java_util_function_Predicate_lambda$isEqual$3_java_lang_Object_java_lang_Object_R_boolean(jcontext ctx, jobject param0, jobject param1);
+jbool M_java_util_function_Predicate_lambda$or$2_java_util_function_Predicate_java_lang_Object_R_boolean(jcontext ctx, jobject self, jobject param0, jobject param1);
+jbool M_java_util_function_Predicate_lambda$negate$1_java_lang_Object_R_boolean(jcontext ctx, jobject self, jobject param0);
+jbool M_java_util_function_Predicate_lambda$and$0_java_util_function_Predicate_java_lang_Object_R_boolean(jcontext ctx, jobject self, jobject param0, jobject param1);
+
+#ifdef __cplusplus
+}
+#endif
+
+#endif

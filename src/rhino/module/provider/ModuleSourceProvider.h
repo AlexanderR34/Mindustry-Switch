@@ -1,0 +1,31 @@
+#ifndef HEADER_rhino_module_provider_ModuleSourceProvider
+#define HEADER_rhino_module_provider_ModuleSourceProvider
+
+#include "Clearwing.h"
+#include "java/lang/Object.h"
+
+#ifdef __cplusplus
+extern "C" {
+#endif
+
+typedef struct rhino_module_provider_ModuleSourceProvider {
+	java_lang_Object parent;
+} rhino_module_provider_ModuleSourceProvider;
+
+extern Class class_rhino_module_provider_ModuleSourceProvider;
+
+extern jobject SF_rhino_module_provider_ModuleSourceProvider_NOT_MODIFIED;
+
+#define INDEX_rhino_module_provider_ModuleSourceProvider_loadSource_java_lang_String_rhino_Scriptable_java_lang_Object_R_rhino_module_provider_ModuleSource 0
+typedef jobject (*func_rhino_module_provider_ModuleSourceProvider_loadSource_java_lang_String_rhino_Scriptable_java_lang_Object_R_rhino_module_provider_ModuleSource)(jcontext ctx, jobject self, jobject param0, jobject param1, jobject param2);
+#define INDEX_rhino_module_provider_ModuleSourceProvider_loadSource_java_net_URI_java_net_URI_java_lang_Object_R_rhino_module_provider_ModuleSource 1
+typedef jobject (*func_rhino_module_provider_ModuleSourceProvider_loadSource_java_net_URI_java_net_URI_java_lang_Object_R_rhino_module_provider_ModuleSource)(jcontext ctx, jobject self, jobject param0, jobject param1, jobject param2);
+
+void mark_rhino_module_provider_ModuleSourceProvider(jobject object, jint mark, jint depth);
+void clinit_rhino_module_provider_ModuleSourceProvider(jcontext ctx);
+
+#ifdef __cplusplus
+}
+#endif
+
+#endif

@@ -1,0 +1,123 @@
+#ifndef HEADER_mindustry_switchplatform_SwitchLauncher
+#define HEADER_mindustry_switchplatform_SwitchLauncher
+
+#include "Clearwing.h"
+#include "mindustry/ClientLauncher.h"
+
+#ifdef __cplusplus
+extern "C" {
+#endif
+
+typedef struct mindustry_switchplatform_SwitchLauncher {
+	mindustry_ClientLauncher parent;
+	jref F_args;
+} mindustry_switchplatform_SwitchLauncher;
+
+extern Class class_mindustry_switchplatform_SwitchLauncher;
+
+extern jint SF_mindustry_switchplatform_SwitchLauncher_SWITCH_HANDHELD_WIDTH;
+extern jint SF_mindustry_switchplatform_SwitchLauncher_SWITCH_HANDHELD_HEIGHT;
+extern jint SF_mindustry_switchplatform_SwitchLauncher_SWITCH_DOCKED_WIDTH;
+extern jint SF_mindustry_switchplatform_SwitchLauncher_SWITCH_DOCKED_HEIGHT;
+
+#define VTABLE_mindustry_switchplatform_SwitchLauncher_hashCode_R_int 0
+typedef jint (*func_mindustry_switchplatform_SwitchLauncher_hashCode_R_int)(jcontext ctx, jobject self);
+#define VTABLE_mindustry_switchplatform_SwitchLauncher_equals_java_lang_Object_R_boolean 1
+typedef jbool (*func_mindustry_switchplatform_SwitchLauncher_equals_java_lang_Object_R_boolean)(jcontext ctx, jobject self, jobject param0);
+#define VTABLE_mindustry_switchplatform_SwitchLauncher_clone_R_java_lang_Object 2
+typedef jobject (*func_mindustry_switchplatform_SwitchLauncher_clone_R_java_lang_Object)(jcontext ctx, jobject self);
+#define VTABLE_mindustry_switchplatform_SwitchLauncher_getClass_R_java_lang_Class 3
+typedef jobject (*func_mindustry_switchplatform_SwitchLauncher_getClass_R_java_lang_Class)(jcontext ctx, jobject self);
+#define VTABLE_mindustry_switchplatform_SwitchLauncher_toString_R_java_lang_String 4
+typedef jobject (*func_mindustry_switchplatform_SwitchLauncher_toString_R_java_lang_String)(jcontext ctx, jobject self);
+#define VTABLE_mindustry_switchplatform_SwitchLauncher_finalize 5
+typedef void (*func_mindustry_switchplatform_SwitchLauncher_finalize)(jcontext ctx, jobject self);
+#define VTABLE_mindustry_switchplatform_SwitchLauncher_notify 6
+typedef void (*func_mindustry_switchplatform_SwitchLauncher_notify)(jcontext ctx, jobject self);
+#define VTABLE_mindustry_switchplatform_SwitchLauncher_notifyAll 7
+typedef void (*func_mindustry_switchplatform_SwitchLauncher_notifyAll)(jcontext ctx, jobject self);
+#define VTABLE_mindustry_switchplatform_SwitchLauncher_wait 8
+typedef void (*func_mindustry_switchplatform_SwitchLauncher_wait)(jcontext ctx, jobject self);
+#define VTABLE_mindustry_switchplatform_SwitchLauncher_wait_long 9
+typedef void (*func_mindustry_switchplatform_SwitchLauncher_wait_long)(jcontext ctx, jobject self, jlong param0);
+#define VTABLE_mindustry_switchplatform_SwitchLauncher_wait_long_int 10
+typedef void (*func_mindustry_switchplatform_SwitchLauncher_wait_long_int)(jcontext ctx, jobject self, jlong param0, jint param1);
+#define VTABLE_mindustry_switchplatform_SwitchLauncher_init 11
+typedef void (*func_mindustry_switchplatform_SwitchLauncher_init)(jcontext ctx, jobject self);
+#define VTABLE_mindustry_switchplatform_SwitchLauncher_resize_int_int 12
+typedef void (*func_mindustry_switchplatform_SwitchLauncher_resize_int_int)(jcontext ctx, jobject self, jint param0, jint param1);
+#define VTABLE_mindustry_switchplatform_SwitchLauncher_update 13
+typedef void (*func_mindustry_switchplatform_SwitchLauncher_update)(jcontext ctx, jobject self);
+#define VTABLE_mindustry_switchplatform_SwitchLauncher_pause 14
+typedef void (*func_mindustry_switchplatform_SwitchLauncher_pause)(jcontext ctx, jobject self);
+#define VTABLE_mindustry_switchplatform_SwitchLauncher_resume 15
+typedef void (*func_mindustry_switchplatform_SwitchLauncher_resume)(jcontext ctx, jobject self);
+#define VTABLE_mindustry_switchplatform_SwitchLauncher_dispose 16
+typedef void (*func_mindustry_switchplatform_SwitchLauncher_dispose)(jcontext ctx, jobject self);
+#define VTABLE_mindustry_switchplatform_SwitchLauncher_exit 17
+typedef void (*func_mindustry_switchplatform_SwitchLauncher_exit)(jcontext ctx, jobject self);
+#define VTABLE_mindustry_switchplatform_SwitchLauncher_fileDropped_arc_files_Fi 18
+typedef void (*func_mindustry_switchplatform_SwitchLauncher_fileDropped_arc_files_Fi)(jcontext ctx, jobject self, jobject param0);
+#define VTABLE_mindustry_switchplatform_SwitchLauncher_add_arc_ApplicationListener 19
+typedef void (*func_mindustry_switchplatform_SwitchLauncher_add_arc_ApplicationListener)(jcontext ctx, jobject self, jobject param0);
+#define VTABLE_mindustry_switchplatform_SwitchLauncher_setup 20
+typedef void (*func_mindustry_switchplatform_SwitchLauncher_setup)(jcontext ctx, jobject self);
+#define VTABLE_mindustry_switchplatform_SwitchLauncher_loadJar_arc_files_Fi_java_lang_ClassLoader_R_java_lang_ClassLoader 21
+typedef jobject (*func_mindustry_switchplatform_SwitchLauncher_loadJar_arc_files_Fi_java_lang_ClassLoader_R_java_lang_ClassLoader)(jcontext ctx, jobject self, jobject param0, jobject param1);
+#define VTABLE_mindustry_switchplatform_SwitchLauncher_updateLobby 22
+typedef void (*func_mindustry_switchplatform_SwitchLauncher_updateLobby)(jcontext ctx, jobject self);
+#define VTABLE_mindustry_switchplatform_SwitchLauncher_inviteFriends 23
+typedef void (*func_mindustry_switchplatform_SwitchLauncher_inviteFriends)(jcontext ctx, jobject self);
+#define VTABLE_mindustry_switchplatform_SwitchLauncher_publish_mindustry_type_Publishable 24
+typedef void (*func_mindustry_switchplatform_SwitchLauncher_publish_mindustry_type_Publishable)(jcontext ctx, jobject self, jobject param0);
+#define VTABLE_mindustry_switchplatform_SwitchLauncher_viewListing_mindustry_type_Publishable 25
+typedef void (*func_mindustry_switchplatform_SwitchLauncher_viewListing_mindustry_type_Publishable)(jcontext ctx, jobject self, jobject param0);
+#define VTABLE_mindustry_switchplatform_SwitchLauncher_viewListingID_java_lang_String 26
+typedef void (*func_mindustry_switchplatform_SwitchLauncher_viewListingID_java_lang_String)(jcontext ctx, jobject self, jobject param0);
+#define VTABLE_mindustry_switchplatform_SwitchLauncher_getWorkshopContent_java_lang_Class_R_arc_struct_Seq 27
+typedef jobject (*func_mindustry_switchplatform_SwitchLauncher_getWorkshopContent_java_lang_Class_R_arc_struct_Seq)(jcontext ctx, jobject self, jobject param0);
+#define VTABLE_mindustry_switchplatform_SwitchLauncher_openWorkshop 28
+typedef void (*func_mindustry_switchplatform_SwitchLauncher_openWorkshop)(jcontext ctx, jobject self);
+#define VTABLE_mindustry_switchplatform_SwitchLauncher_getNet_R_mindustry_net_Net$NetProvider 29
+typedef jobject (*func_mindustry_switchplatform_SwitchLauncher_getNet_R_mindustry_net_Net$NetProvider)(jcontext ctx, jobject self);
+#define VTABLE_mindustry_switchplatform_SwitchLauncher_createScripts_R_mindustry_mod_Scripts 30
+typedef jobject (*func_mindustry_switchplatform_SwitchLauncher_createScripts_R_mindustry_mod_Scripts)(jcontext ctx, jobject self);
+#define VTABLE_mindustry_switchplatform_SwitchLauncher_getScriptContext_R_rhino_Context 31
+typedef jobject (*func_mindustry_switchplatform_SwitchLauncher_getScriptContext_R_rhino_Context)(jcontext ctx, jobject self);
+#define VTABLE_mindustry_switchplatform_SwitchLauncher_updateRPC 32
+typedef void (*func_mindustry_switchplatform_SwitchLauncher_updateRPC)(jcontext ctx, jobject self);
+#define VTABLE_mindustry_switchplatform_SwitchLauncher_getUUID_R_java_lang_String 33
+typedef jobject (*func_mindustry_switchplatform_SwitchLauncher_getUUID_R_java_lang_String)(jcontext ctx, jobject self);
+#define VTABLE_mindustry_switchplatform_SwitchLauncher_shareFile_arc_files_Fi 34
+typedef void (*func_mindustry_switchplatform_SwitchLauncher_shareFile_arc_files_Fi)(jcontext ctx, jobject self, jobject param0);
+#define VTABLE_mindustry_switchplatform_SwitchLauncher_showFileChooser_mindustry_ui_FileChooser$FileChooserParams 35
+typedef void (*func_mindustry_switchplatform_SwitchLauncher_showFileChooser_mindustry_ui_FileChooser$FileChooserParams)(jcontext ctx, jobject self, jobject param0);
+#define VTABLE_mindustry_switchplatform_SwitchLauncher_hide 36
+typedef void (*func_mindustry_switchplatform_SwitchLauncher_hide)(jcontext ctx, jobject self);
+#define VTABLE_mindustry_switchplatform_SwitchLauncher_beginForceLandscape 37
+typedef void (*func_mindustry_switchplatform_SwitchLauncher_beginForceLandscape)(jcontext ctx, jobject self);
+#define VTABLE_mindustry_switchplatform_SwitchLauncher_endForceLandscape 38
+typedef void (*func_mindustry_switchplatform_SwitchLauncher_endForceLandscape)(jcontext ctx, jobject self);
+#define VTABLE_mindustry_switchplatform_SwitchLauncher_lambda$update$0 39
+typedef void (*func_mindustry_switchplatform_SwitchLauncher_lambda$update$0)(jcontext ctx, jobject self);
+#define VTABLE_mindustry_switchplatform_SwitchLauncher_lambda$update$1 40
+typedef void (*func_mindustry_switchplatform_SwitchLauncher_lambda$update$1)(jcontext ctx, jobject self);
+#define VTABLE_mindustry_switchplatform_SwitchLauncher_lambda$update$2 41
+typedef void (*func_mindustry_switchplatform_SwitchLauncher_lambda$update$2)(jcontext ctx, jobject self);
+#define VTABLE_mindustry_switchplatform_SwitchLauncher_lambda$update$3 42
+typedef void (*func_mindustry_switchplatform_SwitchLauncher_lambda$update$3)(jcontext ctx, jobject self);
+
+void mark_mindustry_switchplatform_SwitchLauncher(jobject object, jint mark, jint depth);
+void clinit_mindustry_switchplatform_SwitchLauncher(jcontext ctx);
+void init_mindustry_switchplatform_SwitchLauncher_Array1_java_lang_String(jcontext ctx, jobject self, jobject param0);
+void SM_mindustry_switchplatform_SwitchLauncher_main_Array1_java_lang_String(jcontext ctx, jobject param0);
+void M_mindustry_switchplatform_SwitchLauncher_setup(jcontext ctx, jobject self);
+void M_mindustry_switchplatform_SwitchLauncher_update(jcontext ctx, jobject self);
+void SM_mindustry_switchplatform_SwitchLauncher_handleCrash_java_lang_Throwable(jcontext ctx, jobject param0);
+void SM_mindustry_switchplatform_SwitchLauncher_lambda$setup$0_mindustry_game_EventType$ClientCreateEvent(jcontext ctx, jobject param0);
+
+#ifdef __cplusplus
+}
+#endif
+
+#endif

@@ -1,0 +1,615 @@
+#ifndef HEADER_mindustry_editor_WaveGraph
+#define HEADER_mindustry_editor_WaveGraph
+
+#include "Clearwing.h"
+#include "arc/scene/ui/layout/Table.h"
+
+#ifdef __cplusplus
+extern "C" {
+#endif
+
+typedef struct mindustry_editor_WaveGraph {
+	arc_scene_ui_layout_Table parent;
+	jref F_groups;
+	jref F_mode;
+	jref F_values;
+	jref F_used;
+	jint F_max;
+	jint F_maxTotal;
+	jfloat F_maxHealth;
+	jref F_colors;
+	jref F_hidden;
+	jref F_countStr;
+	jfloat F_pan;
+	jfloat F_zoom;
+	jint F_from;
+	jint F_to;
+	jint F_lastFrom;
+	jint F_lastTo;
+	jfloat F_lastZoom;
+	jfloat F_defaultSpace;
+	jref F_points;
+} mindustry_editor_WaveGraph;
+
+extern Class class_mindustry_editor_WaveGraph;
+
+
+#define VTABLE_mindustry_editor_WaveGraph_hashCode_R_int 0
+typedef jint (*func_mindustry_editor_WaveGraph_hashCode_R_int)(jcontext ctx, jobject self);
+#define VTABLE_mindustry_editor_WaveGraph_equals_java_lang_Object_R_boolean 1
+typedef jbool (*func_mindustry_editor_WaveGraph_equals_java_lang_Object_R_boolean)(jcontext ctx, jobject self, jobject param0);
+#define VTABLE_mindustry_editor_WaveGraph_clone_R_java_lang_Object 2
+typedef jobject (*func_mindustry_editor_WaveGraph_clone_R_java_lang_Object)(jcontext ctx, jobject self);
+#define VTABLE_mindustry_editor_WaveGraph_getClass_R_java_lang_Class 3
+typedef jobject (*func_mindustry_editor_WaveGraph_getClass_R_java_lang_Class)(jcontext ctx, jobject self);
+#define VTABLE_mindustry_editor_WaveGraph_toString_R_java_lang_String 4
+typedef jobject (*func_mindustry_editor_WaveGraph_toString_R_java_lang_String)(jcontext ctx, jobject self);
+#define VTABLE_mindustry_editor_WaveGraph_finalize 5
+typedef void (*func_mindustry_editor_WaveGraph_finalize)(jcontext ctx, jobject self);
+#define VTABLE_mindustry_editor_WaveGraph_notify 6
+typedef void (*func_mindustry_editor_WaveGraph_notify)(jcontext ctx, jobject self);
+#define VTABLE_mindustry_editor_WaveGraph_notifyAll 7
+typedef void (*func_mindustry_editor_WaveGraph_notifyAll)(jcontext ctx, jobject self);
+#define VTABLE_mindustry_editor_WaveGraph_wait 8
+typedef void (*func_mindustry_editor_WaveGraph_wait)(jcontext ctx, jobject self);
+#define VTABLE_mindustry_editor_WaveGraph_wait_long 9
+typedef void (*func_mindustry_editor_WaveGraph_wait_long)(jcontext ctx, jobject self, jlong param0);
+#define VTABLE_mindustry_editor_WaveGraph_wait_long_int 10
+typedef void (*func_mindustry_editor_WaveGraph_wait_long_int)(jcontext ctx, jobject self, jlong param0, jint param1);
+#define VTABLE_mindustry_editor_WaveGraph_draw 11
+typedef void (*func_mindustry_editor_WaveGraph_draw)(jcontext ctx, jobject self);
+#define VTABLE_mindustry_editor_WaveGraph_act_float 12
+typedef void (*func_mindustry_editor_WaveGraph_act_float)(jcontext ctx, jobject self, jfloat param0);
+#define VTABLE_mindustry_editor_WaveGraph_updateVisibility 13
+typedef void (*func_mindustry_editor_WaveGraph_updateVisibility)(jcontext ctx, jobject self);
+#define VTABLE_mindustry_editor_WaveGraph_hasMouse_R_boolean 14
+typedef jbool (*func_mindustry_editor_WaveGraph_hasMouse_R_boolean)(jcontext ctx, jobject self);
+#define VTABLE_mindustry_editor_WaveGraph_hasKeyboard_R_boolean 15
+typedef jbool (*func_mindustry_editor_WaveGraph_hasKeyboard_R_boolean)(jcontext ctx, jobject self);
+#define VTABLE_mindustry_editor_WaveGraph_hasScroll_R_boolean 16
+typedef jbool (*func_mindustry_editor_WaveGraph_hasScroll_R_boolean)(jcontext ctx, jobject self);
+#define VTABLE_mindustry_editor_WaveGraph_requestKeyboard 17
+typedef void (*func_mindustry_editor_WaveGraph_requestKeyboard)(jcontext ctx, jobject self);
+#define VTABLE_mindustry_editor_WaveGraph_requestScroll 18
+typedef void (*func_mindustry_editor_WaveGraph_requestScroll)(jcontext ctx, jobject self);
+#define VTABLE_mindustry_editor_WaveGraph_fire_arc_scene_event_SceneEvent_R_boolean 19
+typedef jbool (*func_mindustry_editor_WaveGraph_fire_arc_scene_event_SceneEvent_R_boolean)(jcontext ctx, jobject self, jobject param0);
+#define VTABLE_mindustry_editor_WaveGraph_notify_arc_scene_event_SceneEvent_boolean_R_boolean 20
+typedef jbool (*func_mindustry_editor_WaveGraph_notify_arc_scene_event_SceneEvent_boolean_R_boolean)(jcontext ctx, jobject self, jobject param0, jbool param1);
+#define VTABLE_mindustry_editor_WaveGraph_hit_float_float_boolean_R_arc_scene_Element 21
+typedef jobject (*func_mindustry_editor_WaveGraph_hit_float_float_boolean_R_arc_scene_Element)(jcontext ctx, jobject self, jfloat param0, jfloat param1, jbool param2);
+#define VTABLE_mindustry_editor_WaveGraph_remove_R_boolean 22
+typedef jbool (*func_mindustry_editor_WaveGraph_remove_R_boolean)(jcontext ctx, jobject self);
+#define VTABLE_mindustry_editor_WaveGraph_dragged_arc_func_Floatc2 23
+typedef void (*func_mindustry_editor_WaveGraph_dragged_arc_func_Floatc2)(jcontext ctx, jobject self, jobject param0);
+#define VTABLE_mindustry_editor_WaveGraph_scrolled_arc_func_Floatc 24
+typedef void (*func_mindustry_editor_WaveGraph_scrolled_arc_func_Floatc)(jcontext ctx, jobject self, jobject param0);
+#define VTABLE_mindustry_editor_WaveGraph_addListener_arc_scene_event_EventListener_R_boolean 25
+typedef jbool (*func_mindustry_editor_WaveGraph_addListener_arc_scene_event_EventListener_R_boolean)(jcontext ctx, jobject self, jobject param0);
+#define VTABLE_mindustry_editor_WaveGraph_removeListener_arc_scene_event_EventListener_R_boolean 26
+typedef jbool (*func_mindustry_editor_WaveGraph_removeListener_arc_scene_event_EventListener_R_boolean)(jcontext ctx, jobject self, jobject param0);
+#define VTABLE_mindustry_editor_WaveGraph_getListeners_R_arc_struct_Seq 27
+typedef jobject (*func_mindustry_editor_WaveGraph_getListeners_R_arc_struct_Seq)(jcontext ctx, jobject self);
+#define VTABLE_mindustry_editor_WaveGraph_addCaptureListener_arc_scene_event_EventListener_R_boolean 28
+typedef jbool (*func_mindustry_editor_WaveGraph_addCaptureListener_arc_scene_event_EventListener_R_boolean)(jcontext ctx, jobject self, jobject param0);
+#define VTABLE_mindustry_editor_WaveGraph_removeCaptureListener_arc_scene_event_EventListener_R_boolean 29
+typedef jbool (*func_mindustry_editor_WaveGraph_removeCaptureListener_arc_scene_event_EventListener_R_boolean)(jcontext ctx, jobject self, jobject param0);
+#define VTABLE_mindustry_editor_WaveGraph_getCaptureListeners_R_arc_struct_Seq 30
+typedef jobject (*func_mindustry_editor_WaveGraph_getCaptureListeners_R_arc_struct_Seq)(jcontext ctx, jobject self);
+#define VTABLE_mindustry_editor_WaveGraph_addAction_arc_scene_Action 31
+typedef void (*func_mindustry_editor_WaveGraph_addAction_arc_scene_Action)(jcontext ctx, jobject self, jobject param0);
+#define VTABLE_mindustry_editor_WaveGraph_actions_Array1_arc_scene_Action 32
+typedef void (*func_mindustry_editor_WaveGraph_actions_Array1_arc_scene_Action)(jcontext ctx, jobject self, jobject param0);
+#define VTABLE_mindustry_editor_WaveGraph_removeAction_arc_scene_Action 33
+typedef void (*func_mindustry_editor_WaveGraph_removeAction_arc_scene_Action)(jcontext ctx, jobject self, jobject param0);
+#define VTABLE_mindustry_editor_WaveGraph_getActions_R_arc_struct_Seq 34
+typedef jobject (*func_mindustry_editor_WaveGraph_getActions_R_arc_struct_Seq)(jcontext ctx, jobject self);
+#define VTABLE_mindustry_editor_WaveGraph_hasActions_R_boolean 35
+typedef jbool (*func_mindustry_editor_WaveGraph_hasActions_R_boolean)(jcontext ctx, jobject self);
+#define VTABLE_mindustry_editor_WaveGraph_clearActions 36
+typedef void (*func_mindustry_editor_WaveGraph_clearActions)(jcontext ctx, jobject self);
+#define VTABLE_mindustry_editor_WaveGraph_clearListeners 37
+typedef void (*func_mindustry_editor_WaveGraph_clearListeners)(jcontext ctx, jobject self);
+#define VTABLE_mindustry_editor_WaveGraph_clear 38
+typedef void (*func_mindustry_editor_WaveGraph_clear)(jcontext ctx, jobject self);
+#define VTABLE_mindustry_editor_WaveGraph_getScene_R_arc_scene_Scene 39
+typedef jobject (*func_mindustry_editor_WaveGraph_getScene_R_arc_scene_Scene)(jcontext ctx, jobject self);
+#define VTABLE_mindustry_editor_WaveGraph_setScene_arc_scene_Scene 40
+typedef void (*func_mindustry_editor_WaveGraph_setScene_arc_scene_Scene)(jcontext ctx, jobject self, jobject param0);
+#define VTABLE_mindustry_editor_WaveGraph_isDescendantOf_arc_func_Boolf_R_boolean 41
+typedef jbool (*func_mindustry_editor_WaveGraph_isDescendantOf_arc_func_Boolf_R_boolean)(jcontext ctx, jobject self, jobject param0);
+#define VTABLE_mindustry_editor_WaveGraph_isDescendantOf_arc_scene_Element_R_boolean 42
+typedef jbool (*func_mindustry_editor_WaveGraph_isDescendantOf_arc_scene_Element_R_boolean)(jcontext ctx, jobject self, jobject param0);
+#define VTABLE_mindustry_editor_WaveGraph_isAscendantOf_arc_scene_Element_R_boolean 43
+typedef jbool (*func_mindustry_editor_WaveGraph_isAscendantOf_arc_scene_Element_R_boolean)(jcontext ctx, jobject self, jobject param0);
+#define VTABLE_mindustry_editor_WaveGraph_hasParent_R_boolean 44
+typedef jbool (*func_mindustry_editor_WaveGraph_hasParent_R_boolean)(jcontext ctx, jobject self);
+#define VTABLE_mindustry_editor_WaveGraph_isTouchable_R_boolean 45
+typedef jbool (*func_mindustry_editor_WaveGraph_isTouchable_R_boolean)(jcontext ctx, jobject self);
+#define VTABLE_mindustry_editor_WaveGraph_getX_int_R_float 46
+typedef jfloat (*func_mindustry_editor_WaveGraph_getX_int_R_float)(jcontext ctx, jobject self, jint param0);
+#define VTABLE_mindustry_editor_WaveGraph_getY_int_R_float 47
+typedef jfloat (*func_mindustry_editor_WaveGraph_getY_int_R_float)(jcontext ctx, jobject self, jint param0);
+#define VTABLE_mindustry_editor_WaveGraph_setPosition_float_float 48
+typedef void (*func_mindustry_editor_WaveGraph_setPosition_float_float)(jcontext ctx, jobject self, jfloat param0, jfloat param1);
+#define VTABLE_mindustry_editor_WaveGraph_setPosition_float_float_int 49
+typedef void (*func_mindustry_editor_WaveGraph_setPosition_float_float_int)(jcontext ctx, jobject self, jfloat param0, jfloat param1, jint param2);
+#define VTABLE_mindustry_editor_WaveGraph_moveBy_float_float 50
+typedef void (*func_mindustry_editor_WaveGraph_moveBy_float_float)(jcontext ctx, jobject self, jfloat param0, jfloat param1);
+#define VTABLE_mindustry_editor_WaveGraph_getWidth_R_float 51
+typedef jfloat (*func_mindustry_editor_WaveGraph_getWidth_R_float)(jcontext ctx, jobject self);
+#define VTABLE_mindustry_editor_WaveGraph_setWidth_float 52
+typedef void (*func_mindustry_editor_WaveGraph_setWidth_float)(jcontext ctx, jobject self, jfloat param0);
+#define VTABLE_mindustry_editor_WaveGraph_getHeight_R_float 53
+typedef jfloat (*func_mindustry_editor_WaveGraph_getHeight_R_float)(jcontext ctx, jobject self);
+#define VTABLE_mindustry_editor_WaveGraph_setHeight_float 54
+typedef void (*func_mindustry_editor_WaveGraph_setHeight_float)(jcontext ctx, jobject self, jfloat param0);
+#define VTABLE_mindustry_editor_WaveGraph_getTop_R_float 55
+typedef jfloat (*func_mindustry_editor_WaveGraph_getTop_R_float)(jcontext ctx, jobject self);
+#define VTABLE_mindustry_editor_WaveGraph_getRight_R_float 56
+typedef jfloat (*func_mindustry_editor_WaveGraph_getRight_R_float)(jcontext ctx, jobject self);
+#define VTABLE_mindustry_editor_WaveGraph_sizeChanged 57
+typedef void (*func_mindustry_editor_WaveGraph_sizeChanged)(jcontext ctx, jobject self);
+#define VTABLE_mindustry_editor_WaveGraph_rotationChanged 58
+typedef void (*func_mindustry_editor_WaveGraph_rotationChanged)(jcontext ctx, jobject self);
+#define VTABLE_mindustry_editor_WaveGraph_setSize_float 59
+typedef void (*func_mindustry_editor_WaveGraph_setSize_float)(jcontext ctx, jobject self, jfloat param0);
+#define VTABLE_mindustry_editor_WaveGraph_setSize_float_float 60
+typedef void (*func_mindustry_editor_WaveGraph_setSize_float_float)(jcontext ctx, jobject self, jfloat param0, jfloat param1);
+#define VTABLE_mindustry_editor_WaveGraph_sizeBy_float 61
+typedef void (*func_mindustry_editor_WaveGraph_sizeBy_float)(jcontext ctx, jobject self, jfloat param0);
+#define VTABLE_mindustry_editor_WaveGraph_sizeBy_float_float 62
+typedef void (*func_mindustry_editor_WaveGraph_sizeBy_float_float)(jcontext ctx, jobject self, jfloat param0, jfloat param1);
+#define VTABLE_mindustry_editor_WaveGraph_setBounds_float_float_float_float 63
+typedef void (*func_mindustry_editor_WaveGraph_setBounds_float_float_float_float)(jcontext ctx, jobject self, jfloat param0, jfloat param1, jfloat param2, jfloat param3);
+#define VTABLE_mindustry_editor_WaveGraph_setOrigin_float_float 64
+typedef void (*func_mindustry_editor_WaveGraph_setOrigin_float_float)(jcontext ctx, jobject self, jfloat param0, jfloat param1);
+#define VTABLE_mindustry_editor_WaveGraph_setOrigin_int 65
+typedef void (*func_mindustry_editor_WaveGraph_setOrigin_int)(jcontext ctx, jobject self, jint param0);
+#define VTABLE_mindustry_editor_WaveGraph_setScale_float 66
+typedef void (*func_mindustry_editor_WaveGraph_setScale_float)(jcontext ctx, jobject self, jfloat param0);
+#define VTABLE_mindustry_editor_WaveGraph_setScale_float_float 67
+typedef void (*func_mindustry_editor_WaveGraph_setScale_float_float)(jcontext ctx, jobject self, jfloat param0, jfloat param1);
+#define VTABLE_mindustry_editor_WaveGraph_scaleBy_float 68
+typedef void (*func_mindustry_editor_WaveGraph_scaleBy_float)(jcontext ctx, jobject self, jfloat param0);
+#define VTABLE_mindustry_editor_WaveGraph_scaleBy_float_float 69
+typedef void (*func_mindustry_editor_WaveGraph_scaleBy_float_float)(jcontext ctx, jobject self, jfloat param0, jfloat param1);
+#define VTABLE_mindustry_editor_WaveGraph_getRotation_R_float 70
+typedef jfloat (*func_mindustry_editor_WaveGraph_getRotation_R_float)(jcontext ctx, jobject self);
+#define VTABLE_mindustry_editor_WaveGraph_setRotation_float 71
+typedef void (*func_mindustry_editor_WaveGraph_setRotation_float)(jcontext ctx, jobject self, jfloat param0);
+#define VTABLE_mindustry_editor_WaveGraph_setRotationOrigin_float_int 72
+typedef void (*func_mindustry_editor_WaveGraph_setRotationOrigin_float_int)(jcontext ctx, jobject self, jfloat param0, jint param1);
+#define VTABLE_mindustry_editor_WaveGraph_rotateBy_float 73
+typedef void (*func_mindustry_editor_WaveGraph_rotateBy_float)(jcontext ctx, jobject self, jfloat param0);
+#define VTABLE_mindustry_editor_WaveGraph_setColor_float_float_float_float 74
+typedef void (*func_mindustry_editor_WaveGraph_setColor_float_float_float_float)(jcontext ctx, jobject self, jfloat param0, jfloat param1, jfloat param2, jfloat param3);
+#define VTABLE_mindustry_editor_WaveGraph_setColor_arc_graphics_Color 75
+typedef void (*func_mindustry_editor_WaveGraph_setColor_arc_graphics_Color)(jcontext ctx, jobject self, jobject param0);
+#define VTABLE_mindustry_editor_WaveGraph_toFront 76
+typedef void (*func_mindustry_editor_WaveGraph_toFront)(jcontext ctx, jobject self);
+#define VTABLE_mindustry_editor_WaveGraph_toBack 77
+typedef void (*func_mindustry_editor_WaveGraph_toBack)(jcontext ctx, jobject self);
+#define VTABLE_mindustry_editor_WaveGraph_getZIndex_R_int 78
+typedef jint (*func_mindustry_editor_WaveGraph_getZIndex_R_int)(jcontext ctx, jobject self);
+#define VTABLE_mindustry_editor_WaveGraph_setZIndex_int 79
+typedef void (*func_mindustry_editor_WaveGraph_setZIndex_int)(jcontext ctx, jobject self, jint param0);
+#define VTABLE_mindustry_editor_WaveGraph_clipBegin_R_boolean 80
+typedef jbool (*func_mindustry_editor_WaveGraph_clipBegin_R_boolean)(jcontext ctx, jobject self);
+#define VTABLE_mindustry_editor_WaveGraph_clipBegin_float_float_float_float_R_boolean 81
+typedef jbool (*func_mindustry_editor_WaveGraph_clipBegin_float_float_float_float_R_boolean)(jcontext ctx, jobject self, jfloat param0, jfloat param1, jfloat param2, jfloat param3);
+#define VTABLE_mindustry_editor_WaveGraph_clipEnd 82
+typedef void (*func_mindustry_editor_WaveGraph_clipEnd)(jcontext ctx, jobject self);
+#define VTABLE_mindustry_editor_WaveGraph_screenToLocalCoordinates_arc_math_geom_Vec2_R_arc_math_geom_Vec2 83
+typedef jobject (*func_mindustry_editor_WaveGraph_screenToLocalCoordinates_arc_math_geom_Vec2_R_arc_math_geom_Vec2)(jcontext ctx, jobject self, jobject param0);
+#define VTABLE_mindustry_editor_WaveGraph_stageToLocalCoordinates_arc_math_geom_Vec2_R_arc_math_geom_Vec2 84
+typedef jobject (*func_mindustry_editor_WaveGraph_stageToLocalCoordinates_arc_math_geom_Vec2_R_arc_math_geom_Vec2)(jcontext ctx, jobject self, jobject param0);
+#define VTABLE_mindustry_editor_WaveGraph_localToStageCoordinates_arc_math_geom_Vec2_R_arc_math_geom_Vec2 85
+typedef jobject (*func_mindustry_editor_WaveGraph_localToStageCoordinates_arc_math_geom_Vec2_R_arc_math_geom_Vec2)(jcontext ctx, jobject self, jobject param0);
+#define VTABLE_mindustry_editor_WaveGraph_localToParentCoordinates_arc_math_geom_Vec2_R_arc_math_geom_Vec2 86
+typedef jobject (*func_mindustry_editor_WaveGraph_localToParentCoordinates_arc_math_geom_Vec2_R_arc_math_geom_Vec2)(jcontext ctx, jobject self, jobject param0);
+#define VTABLE_mindustry_editor_WaveGraph_localToAscendantCoordinates_arc_scene_Element_arc_math_geom_Vec2_R_arc_math_geom_Vec2 87
+typedef jobject (*func_mindustry_editor_WaveGraph_localToAscendantCoordinates_arc_scene_Element_arc_math_geom_Vec2_R_arc_math_geom_Vec2)(jcontext ctx, jobject self, jobject param0, jobject param1);
+#define VTABLE_mindustry_editor_WaveGraph_parentToLocalCoordinates_arc_math_geom_Vec2_R_arc_math_geom_Vec2 88
+typedef jobject (*func_mindustry_editor_WaveGraph_parentToLocalCoordinates_arc_math_geom_Vec2_R_arc_math_geom_Vec2)(jcontext ctx, jobject self, jobject param0);
+#define VTABLE_mindustry_editor_WaveGraph_getMinWidth_R_float 89
+typedef jfloat (*func_mindustry_editor_WaveGraph_getMinWidth_R_float)(jcontext ctx, jobject self);
+#define VTABLE_mindustry_editor_WaveGraph_getMinHeight_R_float 90
+typedef jfloat (*func_mindustry_editor_WaveGraph_getMinHeight_R_float)(jcontext ctx, jobject self);
+#define VTABLE_mindustry_editor_WaveGraph_getPrefWidth_R_float 91
+typedef jfloat (*func_mindustry_editor_WaveGraph_getPrefWidth_R_float)(jcontext ctx, jobject self);
+#define VTABLE_mindustry_editor_WaveGraph_getPrefHeight_R_float 92
+typedef jfloat (*func_mindustry_editor_WaveGraph_getPrefHeight_R_float)(jcontext ctx, jobject self);
+#define VTABLE_mindustry_editor_WaveGraph_getMaxWidth_R_float 93
+typedef jfloat (*func_mindustry_editor_WaveGraph_getMaxWidth_R_float)(jcontext ctx, jobject self);
+#define VTABLE_mindustry_editor_WaveGraph_getMaxHeight_R_float 94
+typedef jfloat (*func_mindustry_editor_WaveGraph_getMaxHeight_R_float)(jcontext ctx, jobject self);
+#define VTABLE_mindustry_editor_WaveGraph_setLayoutEnabled_boolean 95
+typedef void (*func_mindustry_editor_WaveGraph_setLayoutEnabled_boolean)(jcontext ctx, jobject self, jbool param0);
+#define VTABLE_mindustry_editor_WaveGraph_validate 96
+typedef void (*func_mindustry_editor_WaveGraph_validate)(jcontext ctx, jobject self);
+#define VTABLE_mindustry_editor_WaveGraph_needsLayout_R_boolean 97
+typedef jbool (*func_mindustry_editor_WaveGraph_needsLayout_R_boolean)(jcontext ctx, jobject self);
+#define VTABLE_mindustry_editor_WaveGraph_invalidate 98
+typedef void (*func_mindustry_editor_WaveGraph_invalidate)(jcontext ctx, jobject self);
+#define VTABLE_mindustry_editor_WaveGraph_invalidateHierarchy 99
+typedef void (*func_mindustry_editor_WaveGraph_invalidateHierarchy)(jcontext ctx, jobject self);
+#define VTABLE_mindustry_editor_WaveGraph_pack 100
+typedef void (*func_mindustry_editor_WaveGraph_pack)(jcontext ctx, jobject self);
+#define VTABLE_mindustry_editor_WaveGraph_setFillParent_boolean 101
+typedef void (*func_mindustry_editor_WaveGraph_setFillParent_boolean)(jcontext ctx, jobject self, jbool param0);
+#define VTABLE_mindustry_editor_WaveGraph_layout 102
+typedef void (*func_mindustry_editor_WaveGraph_layout)(jcontext ctx, jobject self);
+#define VTABLE_mindustry_editor_WaveGraph_keepInStage 103
+typedef void (*func_mindustry_editor_WaveGraph_keepInStage)(jcontext ctx, jobject self);
+#define VTABLE_mindustry_editor_WaveGraph_setTranslation_float_float 104
+typedef void (*func_mindustry_editor_WaveGraph_setTranslation_float_float)(jcontext ctx, jobject self, jfloat param0, jfloat param1);
+#define VTABLE_mindustry_editor_WaveGraph_keyDown_arc_input_KeyCode_java_lang_Runnable 105
+typedef void (*func_mindustry_editor_WaveGraph_keyDown_arc_input_KeyCode_java_lang_Runnable)(jcontext ctx, jobject self, jobject param0, jobject param1);
+#define VTABLE_mindustry_editor_WaveGraph_keyDown_arc_func_Cons 106
+typedef void (*func_mindustry_editor_WaveGraph_keyDown_arc_func_Cons)(jcontext ctx, jobject self, jobject param0);
+#define VTABLE_mindustry_editor_WaveGraph_fireClick 107
+typedef void (*func_mindustry_editor_WaveGraph_fireClick)(jcontext ctx, jobject self);
+#define VTABLE_mindustry_editor_WaveGraph_clicked_java_lang_Runnable_R_arc_scene_event_ClickListener 108
+typedef jobject (*func_mindustry_editor_WaveGraph_clicked_java_lang_Runnable_R_arc_scene_event_ClickListener)(jcontext ctx, jobject self, jobject param0);
+#define VTABLE_mindustry_editor_WaveGraph_clicked_arc_input_KeyCode_java_lang_Runnable_R_arc_scene_event_ClickListener 109
+typedef jobject (*func_mindustry_editor_WaveGraph_clicked_arc_input_KeyCode_java_lang_Runnable_R_arc_scene_event_ClickListener)(jcontext ctx, jobject self, jobject param0, jobject param1);
+#define VTABLE_mindustry_editor_WaveGraph_clicked_arc_func_Cons_java_lang_Runnable_R_arc_scene_event_ClickListener 110
+typedef jobject (*func_mindustry_editor_WaveGraph_clicked_arc_func_Cons_java_lang_Runnable_R_arc_scene_event_ClickListener)(jcontext ctx, jobject self, jobject param0, jobject param1);
+#define VTABLE_mindustry_editor_WaveGraph_clicked_arc_func_Cons_arc_func_Cons_R_arc_scene_event_ClickListener 111
+typedef jobject (*func_mindustry_editor_WaveGraph_clicked_arc_func_Cons_arc_func_Cons_R_arc_scene_event_ClickListener)(jcontext ctx, jobject self, jobject param0, jobject param1);
+#define VTABLE_mindustry_editor_WaveGraph_tapped_java_lang_Runnable_R_arc_scene_event_InputListener 112
+typedef jobject (*func_mindustry_editor_WaveGraph_tapped_java_lang_Runnable_R_arc_scene_event_InputListener)(jcontext ctx, jobject self, jobject param0);
+#define VTABLE_mindustry_editor_WaveGraph_hovered_java_lang_Runnable 113
+typedef void (*func_mindustry_editor_WaveGraph_hovered_java_lang_Runnable)(jcontext ctx, jobject self, jobject param0);
+#define VTABLE_mindustry_editor_WaveGraph_exited_java_lang_Runnable 114
+typedef void (*func_mindustry_editor_WaveGraph_exited_java_lang_Runnable)(jcontext ctx, jobject self, jobject param0);
+#define VTABLE_mindustry_editor_WaveGraph_released_java_lang_Runnable 115
+typedef void (*func_mindustry_editor_WaveGraph_released_java_lang_Runnable)(jcontext ctx, jobject self, jobject param0);
+#define VTABLE_mindustry_editor_WaveGraph_change 116
+typedef void (*func_mindustry_editor_WaveGraph_change)(jcontext ctx, jobject self);
+#define VTABLE_mindustry_editor_WaveGraph_changed_java_lang_Runnable 117
+typedef void (*func_mindustry_editor_WaveGraph_changed_java_lang_Runnable)(jcontext ctx, jobject self, jobject param0);
+#define VTABLE_mindustry_editor_WaveGraph_update_java_lang_Runnable_R_arc_scene_Element 118
+typedef jobject (*func_mindustry_editor_WaveGraph_update_java_lang_Runnable_R_arc_scene_Element)(jcontext ctx, jobject self, jobject param0);
+#define VTABLE_mindustry_editor_WaveGraph_visible_arc_func_Boolp_R_arc_scene_Element 119
+typedef jobject (*func_mindustry_editor_WaveGraph_visible_arc_func_Boolp_R_arc_scene_Element)(jcontext ctx, jobject self, jobject param0);
+#define VTABLE_mindustry_editor_WaveGraph_touchable_arc_func_Prov 120
+typedef void (*func_mindustry_editor_WaveGraph_touchable_arc_func_Prov)(jcontext ctx, jobject self, jobject param0);
+#define VTABLE_mindustry_editor_WaveGraph_setCullingArea_arc_math_geom_Rect 121
+typedef void (*func_mindustry_editor_WaveGraph_setCullingArea_arc_math_geom_Rect)(jcontext ctx, jobject self, jobject param0);
+#define VTABLE_mindustry_editor_WaveGraph_drawChildren 122
+typedef void (*func_mindustry_editor_WaveGraph_drawChildren)(jcontext ctx, jobject self);
+#define VTABLE_mindustry_editor_WaveGraph_computeTransform_R_arc_math_Mat 123
+typedef jobject (*func_mindustry_editor_WaveGraph_computeTransform_R_arc_math_Mat)(jcontext ctx, jobject self);
+#define VTABLE_mindustry_editor_WaveGraph_applyTransform_arc_math_Mat 124
+typedef void (*func_mindustry_editor_WaveGraph_applyTransform_arc_math_Mat)(jcontext ctx, jobject self, jobject param0);
+#define VTABLE_mindustry_editor_WaveGraph_resetTransform 125
+typedef void (*func_mindustry_editor_WaveGraph_resetTransform)(jcontext ctx, jobject self);
+#define VTABLE_mindustry_editor_WaveGraph_getCullingArea_R_arc_math_geom_Rect 126
+typedef jobject (*func_mindustry_editor_WaveGraph_getCullingArea_R_arc_math_geom_Rect)(jcontext ctx, jobject self);
+#define VTABLE_mindustry_editor_WaveGraph_childrenChanged 127
+typedef void (*func_mindustry_editor_WaveGraph_childrenChanged)(jcontext ctx, jobject self);
+#define VTABLE_mindustry_editor_WaveGraph_forEach_arc_func_Cons 128
+typedef void (*func_mindustry_editor_WaveGraph_forEach_arc_func_Cons)(jcontext ctx, jobject self, jobject param0);
+#define VTABLE_mindustry_editor_WaveGraph_fill_arc_scene_ui_layout_Table$DrawRect_R_arc_scene_Element 129
+typedef jobject (*func_mindustry_editor_WaveGraph_fill_arc_scene_ui_layout_Table$DrawRect_R_arc_scene_Element)(jcontext ctx, jobject self, jobject param0);
+#define VTABLE_mindustry_editor_WaveGraph_fill_arc_func_Cons 130
+typedef void (*func_mindustry_editor_WaveGraph_fill_arc_func_Cons)(jcontext ctx, jobject self, jobject param0);
+#define VTABLE_mindustry_editor_WaveGraph_fill_arc_scene_style_Drawable_arc_func_Cons 131
+typedef void (*func_mindustry_editor_WaveGraph_fill_arc_scene_style_Drawable_arc_func_Cons)(jcontext ctx, jobject self, jobject param0, jobject param1);
+#define VTABLE_mindustry_editor_WaveGraph_addChild_arc_scene_Element 132
+typedef void (*func_mindustry_editor_WaveGraph_addChild_arc_scene_Element)(jcontext ctx, jobject self, jobject param0);
+#define VTABLE_mindustry_editor_WaveGraph_addChildAt_int_arc_scene_Element 133
+typedef void (*func_mindustry_editor_WaveGraph_addChildAt_int_arc_scene_Element)(jcontext ctx, jobject self, jint param0, jobject param1);
+#define VTABLE_mindustry_editor_WaveGraph_addChildBefore_arc_scene_Element_arc_scene_Element 134
+typedef void (*func_mindustry_editor_WaveGraph_addChildBefore_arc_scene_Element_arc_scene_Element)(jcontext ctx, jobject self, jobject param0, jobject param1);
+#define VTABLE_mindustry_editor_WaveGraph_addChildAfter_arc_scene_Element_arc_scene_Element 135
+typedef void (*func_mindustry_editor_WaveGraph_addChildAfter_arc_scene_Element_arc_scene_Element)(jcontext ctx, jobject self, jobject param0, jobject param1);
+#define VTABLE_mindustry_editor_WaveGraph_removeChild_arc_scene_Element_R_boolean 136
+typedef jbool (*func_mindustry_editor_WaveGraph_removeChild_arc_scene_Element_R_boolean)(jcontext ctx, jobject self, jobject param0);
+#define VTABLE_mindustry_editor_WaveGraph_removeChild_arc_scene_Element_boolean_R_boolean 137
+typedef jbool (*func_mindustry_editor_WaveGraph_removeChild_arc_scene_Element_boolean_R_boolean)(jcontext ctx, jobject self, jobject param0, jbool param1);
+#define VTABLE_mindustry_editor_WaveGraph_clearChildren 138
+typedef void (*func_mindustry_editor_WaveGraph_clearChildren)(jcontext ctx, jobject self);
+#define VTABLE_mindustry_editor_WaveGraph_find_java_lang_String_R_arc_scene_Element 139
+typedef jobject (*func_mindustry_editor_WaveGraph_find_java_lang_String_R_arc_scene_Element)(jcontext ctx, jobject self, jobject param0);
+#define VTABLE_mindustry_editor_WaveGraph_findVisible_java_lang_String_R_arc_scene_Element 140
+typedef jobject (*func_mindustry_editor_WaveGraph_findVisible_java_lang_String_R_arc_scene_Element)(jcontext ctx, jobject self, jobject param0);
+#define VTABLE_mindustry_editor_WaveGraph_find_arc_func_Boolf_R_arc_scene_Element 141
+typedef jobject (*func_mindustry_editor_WaveGraph_find_arc_func_Boolf_R_arc_scene_Element)(jcontext ctx, jobject self, jobject param0);
+#define VTABLE_mindustry_editor_WaveGraph_swapActor_int_int_R_boolean 142
+typedef jbool (*func_mindustry_editor_WaveGraph_swapActor_int_int_R_boolean)(jcontext ctx, jobject self, jint param0, jint param1);
+#define VTABLE_mindustry_editor_WaveGraph_swapActor_arc_scene_Element_arc_scene_Element_R_boolean 143
+typedef jbool (*func_mindustry_editor_WaveGraph_swapActor_arc_scene_Element_arc_scene_Element_R_boolean)(jcontext ctx, jobject self, jobject param0, jobject param1);
+#define VTABLE_mindustry_editor_WaveGraph_getChildren_R_arc_struct_SnapshotSeq 144
+typedef jobject (*func_mindustry_editor_WaveGraph_getChildren_R_arc_struct_SnapshotSeq)(jcontext ctx, jobject self);
+#define VTABLE_mindustry_editor_WaveGraph_hasChildren_R_boolean 145
+typedef jbool (*func_mindustry_editor_WaveGraph_hasChildren_R_boolean)(jcontext ctx, jobject self);
+#define VTABLE_mindustry_editor_WaveGraph_isTransform_R_boolean 146
+typedef jbool (*func_mindustry_editor_WaveGraph_isTransform_R_boolean)(jcontext ctx, jobject self);
+#define VTABLE_mindustry_editor_WaveGraph_setTransform_boolean 147
+typedef void (*func_mindustry_editor_WaveGraph_setTransform_boolean)(jcontext ctx, jobject self, jbool param0);
+#define VTABLE_mindustry_editor_WaveGraph_localToDescendantCoordinates_arc_scene_Element_arc_math_geom_Vec2_R_arc_math_geom_Vec2 148
+typedef jobject (*func_mindustry_editor_WaveGraph_localToDescendantCoordinates_arc_scene_Element_arc_math_geom_Vec2_R_arc_math_geom_Vec2)(jcontext ctx, jobject self, jobject param0, jobject param1);
+#define VTABLE_mindustry_editor_WaveGraph_toString_java_lang_StringBuilder_int 149
+typedef void (*func_mindustry_editor_WaveGraph_toString_java_lang_StringBuilder_int)(jcontext ctx, jobject self, jobject param0, jint param1);
+#define VTABLE_mindustry_editor_WaveGraph_setLayoutEnabled_arc_scene_Group_boolean 150
+typedef void (*func_mindustry_editor_WaveGraph_setLayoutEnabled_arc_scene_Group_boolean)(jcontext ctx, jobject self, jobject param0, jbool param1);
+#define VTABLE_mindustry_editor_WaveGraph_obtainCell_R_arc_scene_ui_layout_Cell 151
+typedef jobject (*func_mindustry_editor_WaveGraph_obtainCell_R_arc_scene_ui_layout_Cell)(jcontext ctx, jobject self);
+#define VTABLE_mindustry_editor_WaveGraph_fill_R_arc_scene_ui_layout_Table 152
+typedef jobject (*func_mindustry_editor_WaveGraph_fill_R_arc_scene_ui_layout_Table)(jcontext ctx, jobject self);
+#define VTABLE_mindustry_editor_WaveGraph_drawBackground_float_float 153
+typedef void (*func_mindustry_editor_WaveGraph_drawBackground_float_float)(jcontext ctx, jobject self, jfloat param0, jfloat param1);
+#define VTABLE_mindustry_editor_WaveGraph_background_arc_scene_style_Drawable_R_arc_scene_ui_layout_Table 154
+typedef jobject (*func_mindustry_editor_WaveGraph_background_arc_scene_style_Drawable_R_arc_scene_ui_layout_Table)(jcontext ctx, jobject self, jobject param0);
+#define VTABLE_mindustry_editor_WaveGraph_getBackground_R_arc_scene_style_Drawable 155
+typedef jobject (*func_mindustry_editor_WaveGraph_getBackground_R_arc_scene_style_Drawable)(jcontext ctx, jobject self);
+#define VTABLE_mindustry_editor_WaveGraph_setBackground_arc_scene_style_Drawable 156
+typedef void (*func_mindustry_editor_WaveGraph_setBackground_arc_scene_style_Drawable)(jcontext ctx, jobject self, jobject param0);
+#define VTABLE_mindustry_editor_WaveGraph_getClip_R_boolean 157
+typedef jbool (*func_mindustry_editor_WaveGraph_getClip_R_boolean)(jcontext ctx, jobject self);
+#define VTABLE_mindustry_editor_WaveGraph_setClip_boolean 158
+typedef void (*func_mindustry_editor_WaveGraph_setClip_boolean)(jcontext ctx, jobject self, jbool param0);
+#define VTABLE_mindustry_editor_WaveGraph_add_arc_scene_Element_R_arc_scene_ui_layout_Cell 159
+typedef jobject (*func_mindustry_editor_WaveGraph_add_arc_scene_Element_R_arc_scene_ui_layout_Cell)(jcontext ctx, jobject self, jobject param0);
+#define VTABLE_mindustry_editor_WaveGraph_add_Array1_arc_scene_Element 160
+typedef void (*func_mindustry_editor_WaveGraph_add_Array1_arc_scene_Element)(jcontext ctx, jobject self, jobject param0);
+#define VTABLE_mindustry_editor_WaveGraph_collapser_arc_func_Cons_arc_func_Boolp_R_arc_scene_ui_layout_Cell 161
+typedef jobject (*func_mindustry_editor_WaveGraph_collapser_arc_func_Cons_arc_func_Boolp_R_arc_scene_ui_layout_Cell)(jcontext ctx, jobject self, jobject param0, jobject param1);
+#define VTABLE_mindustry_editor_WaveGraph_collapser_arc_scene_ui_layout_Table_arc_func_Boolp_R_arc_scene_ui_layout_Cell 162
+typedef jobject (*func_mindustry_editor_WaveGraph_collapser_arc_scene_ui_layout_Table_arc_func_Boolp_R_arc_scene_ui_layout_Cell)(jcontext ctx, jobject self, jobject param0, jobject param1);
+#define VTABLE_mindustry_editor_WaveGraph_collapser_arc_func_Cons_boolean_arc_func_Boolp_R_arc_scene_ui_layout_Cell 163
+typedef jobject (*func_mindustry_editor_WaveGraph_collapser_arc_func_Cons_boolean_arc_func_Boolp_R_arc_scene_ui_layout_Cell)(jcontext ctx, jobject self, jobject param0, jbool param1, jobject param2);
+#define VTABLE_mindustry_editor_WaveGraph_collapser_arc_scene_ui_layout_Table_boolean_arc_func_Boolp_R_arc_scene_ui_layout_Cell 164
+typedef jobject (*func_mindustry_editor_WaveGraph_collapser_arc_scene_ui_layout_Table_boolean_arc_func_Boolp_R_arc_scene_ui_layout_Cell)(jcontext ctx, jobject self, jobject param0, jbool param1, jobject param2);
+#define VTABLE_mindustry_editor_WaveGraph_table_R_arc_scene_ui_layout_Cell 165
+typedef jobject (*func_mindustry_editor_WaveGraph_table_R_arc_scene_ui_layout_Cell)(jcontext ctx, jobject self);
+#define VTABLE_mindustry_editor_WaveGraph_table_arc_scene_style_Drawable_R_arc_scene_ui_layout_Cell 166
+typedef jobject (*func_mindustry_editor_WaveGraph_table_arc_scene_style_Drawable_R_arc_scene_ui_layout_Cell)(jcontext ctx, jobject self, jobject param0);
+#define VTABLE_mindustry_editor_WaveGraph_table_arc_func_Cons_R_arc_scene_ui_layout_Cell 167
+typedef jobject (*func_mindustry_editor_WaveGraph_table_arc_func_Cons_R_arc_scene_ui_layout_Cell)(jcontext ctx, jobject self, jobject param0);
+#define VTABLE_mindustry_editor_WaveGraph_wrapTable_arc_func_Cons_R_arc_scene_ui_layout_Cell 168
+typedef jobject (*func_mindustry_editor_WaveGraph_wrapTable_arc_func_Cons_R_arc_scene_ui_layout_Cell)(jcontext ctx, jobject self, jobject param0);
+#define VTABLE_mindustry_editor_WaveGraph_table_arc_scene_style_Drawable_arc_func_Cons_R_arc_scene_ui_layout_Cell 169
+typedef jobject (*func_mindustry_editor_WaveGraph_table_arc_scene_style_Drawable_arc_func_Cons_R_arc_scene_ui_layout_Cell)(jcontext ctx, jobject self, jobject param0, jobject param1);
+#define VTABLE_mindustry_editor_WaveGraph_table_arc_scene_style_Drawable_int_arc_func_Cons_R_arc_scene_ui_layout_Cell 170
+typedef jobject (*func_mindustry_editor_WaveGraph_table_arc_scene_style_Drawable_int_arc_func_Cons_R_arc_scene_ui_layout_Cell)(jcontext ctx, jobject self, jobject param0, jint param1, jobject param2);
+#define VTABLE_mindustry_editor_WaveGraph_label_arc_func_Prov_R_arc_scene_ui_layout_Cell 171
+typedef jobject (*func_mindustry_editor_WaveGraph_label_arc_func_Prov_R_arc_scene_ui_layout_Cell)(jcontext ctx, jobject self, jobject param0);
+#define VTABLE_mindustry_editor_WaveGraph_labelWrap_arc_func_Prov_R_arc_scene_ui_layout_Cell 172
+typedef jobject (*func_mindustry_editor_WaveGraph_labelWrap_arc_func_Prov_R_arc_scene_ui_layout_Cell)(jcontext ctx, jobject self, jobject param0);
+#define VTABLE_mindustry_editor_WaveGraph_labelWrap_java_lang_String_R_arc_scene_ui_layout_Cell 173
+typedef jobject (*func_mindustry_editor_WaveGraph_labelWrap_java_lang_String_R_arc_scene_ui_layout_Cell)(jcontext ctx, jobject self, jobject param0);
+#define VTABLE_mindustry_editor_WaveGraph_pane_arc_func_Cons_R_arc_scene_ui_layout_Cell 174
+typedef jobject (*func_mindustry_editor_WaveGraph_pane_arc_func_Cons_R_arc_scene_ui_layout_Cell)(jcontext ctx, jobject self, jobject param0);
+#define VTABLE_mindustry_editor_WaveGraph_pane_arc_scene_ui_ScrollPane$ScrollPaneStyle_arc_func_Cons_R_arc_scene_ui_layout_Cell 175
+typedef jobject (*func_mindustry_editor_WaveGraph_pane_arc_scene_ui_ScrollPane$ScrollPaneStyle_arc_func_Cons_R_arc_scene_ui_layout_Cell)(jcontext ctx, jobject self, jobject param0, jobject param1);
+#define VTABLE_mindustry_editor_WaveGraph_pane_arc_scene_ui_ScrollPane$ScrollPaneStyle_arc_scene_Element_R_arc_scene_ui_layout_Cell 176
+typedef jobject (*func_mindustry_editor_WaveGraph_pane_arc_scene_ui_ScrollPane$ScrollPaneStyle_arc_scene_Element_R_arc_scene_ui_layout_Cell)(jcontext ctx, jobject self, jobject param0, jobject param1);
+#define VTABLE_mindustry_editor_WaveGraph_pane_arc_scene_Element_R_arc_scene_ui_layout_Cell 177
+typedef jobject (*func_mindustry_editor_WaveGraph_pane_arc_scene_Element_R_arc_scene_ui_layout_Cell)(jcontext ctx, jobject self, jobject param0);
+#define VTABLE_mindustry_editor_WaveGraph_add_java_lang_CharSequence_R_arc_scene_ui_layout_Cell 178
+typedef jobject (*func_mindustry_editor_WaveGraph_add_java_lang_CharSequence_R_arc_scene_ui_layout_Cell)(jcontext ctx, jobject self, jobject param0);
+#define VTABLE_mindustry_editor_WaveGraph_add_java_lang_CharSequence_float_R_arc_scene_ui_layout_Cell 179
+typedef jobject (*func_mindustry_editor_WaveGraph_add_java_lang_CharSequence_float_R_arc_scene_ui_layout_Cell)(jcontext ctx, jobject self, jobject param0, jfloat param1);
+#define VTABLE_mindustry_editor_WaveGraph_add_java_lang_CharSequence_arc_scene_ui_Label$LabelStyle_float_R_arc_scene_ui_layout_Cell 180
+typedef jobject (*func_mindustry_editor_WaveGraph_add_java_lang_CharSequence_arc_scene_ui_Label$LabelStyle_float_R_arc_scene_ui_layout_Cell)(jcontext ctx, jobject self, jobject param0, jobject param1, jfloat param2);
+#define VTABLE_mindustry_editor_WaveGraph_add_java_lang_CharSequence_arc_graphics_Color_float_R_arc_scene_ui_layout_Cell 181
+typedef jobject (*func_mindustry_editor_WaveGraph_add_java_lang_CharSequence_arc_graphics_Color_float_R_arc_scene_ui_layout_Cell)(jcontext ctx, jobject self, jobject param0, jobject param1, jfloat param2);
+#define VTABLE_mindustry_editor_WaveGraph_add_java_lang_CharSequence_arc_scene_ui_Label$LabelStyle_R_arc_scene_ui_layout_Cell 182
+typedef jobject (*func_mindustry_editor_WaveGraph_add_java_lang_CharSequence_arc_scene_ui_Label$LabelStyle_R_arc_scene_ui_layout_Cell)(jcontext ctx, jobject self, jobject param0, jobject param1);
+#define VTABLE_mindustry_editor_WaveGraph_add_java_lang_CharSequence_arc_graphics_Color_R_arc_scene_ui_layout_Cell 183
+typedef jobject (*func_mindustry_editor_WaveGraph_add_java_lang_CharSequence_arc_graphics_Color_R_arc_scene_ui_layout_Cell)(jcontext ctx, jobject self, jobject param0, jobject param1);
+#define VTABLE_mindustry_editor_WaveGraph_add_R_arc_scene_ui_layout_Cell 184
+typedef jobject (*func_mindustry_editor_WaveGraph_add_R_arc_scene_ui_layout_Cell)(jcontext ctx, jobject self);
+#define VTABLE_mindustry_editor_WaveGraph_stack_Array1_arc_scene_Element_R_arc_scene_ui_layout_Cell 185
+typedef jobject (*func_mindustry_editor_WaveGraph_stack_Array1_arc_scene_Element_R_arc_scene_ui_layout_Cell)(jcontext ctx, jobject self, jobject param0);
+#define VTABLE_mindustry_editor_WaveGraph_spacer_arc_func_Floatp_arc_func_Floatp_R_arc_scene_ui_layout_Cell 186
+typedef jobject (*func_mindustry_editor_WaveGraph_spacer_arc_func_Floatp_arc_func_Floatp_R_arc_scene_ui_layout_Cell)(jcontext ctx, jobject self, jobject param0, jobject param1);
+#define VTABLE_mindustry_editor_WaveGraph_spacerX_arc_func_Floatp_R_arc_scene_ui_layout_Cell 187
+typedef jobject (*func_mindustry_editor_WaveGraph_spacerX_arc_func_Floatp_R_arc_scene_ui_layout_Cell)(jcontext ctx, jobject self, jobject param0);
+#define VTABLE_mindustry_editor_WaveGraph_spacerY_arc_func_Floatp_R_arc_scene_ui_layout_Cell 188
+typedef jobject (*func_mindustry_editor_WaveGraph_spacerY_arc_func_Floatp_R_arc_scene_ui_layout_Cell)(jcontext ctx, jobject self, jobject param0);
+#define VTABLE_mindustry_editor_WaveGraph_image_arc_func_Prov_R_arc_scene_ui_layout_Cell 189
+typedef jobject (*func_mindustry_editor_WaveGraph_image_arc_func_Prov_R_arc_scene_ui_layout_Cell)(jcontext ctx, jobject self, jobject param0);
+#define VTABLE_mindustry_editor_WaveGraph_imageDraw_arc_func_Prov_R_arc_scene_ui_layout_Cell 190
+typedef jobject (*func_mindustry_editor_WaveGraph_imageDraw_arc_func_Prov_R_arc_scene_ui_layout_Cell)(jcontext ctx, jobject self, jobject param0);
+#define VTABLE_mindustry_editor_WaveGraph_image_R_arc_scene_ui_layout_Cell 191
+typedef jobject (*func_mindustry_editor_WaveGraph_image_R_arc_scene_ui_layout_Cell)(jcontext ctx, jobject self);
+#define VTABLE_mindustry_editor_WaveGraph_image_arc_scene_style_Drawable_R_arc_scene_ui_layout_Cell 192
+typedef jobject (*func_mindustry_editor_WaveGraph_image_arc_scene_style_Drawable_R_arc_scene_ui_layout_Cell)(jcontext ctx, jobject self, jobject param0);
+#define VTABLE_mindustry_editor_WaveGraph_image_arc_scene_style_Drawable_arc_graphics_Color_R_arc_scene_ui_layout_Cell 193
+typedef jobject (*func_mindustry_editor_WaveGraph_image_arc_scene_style_Drawable_arc_graphics_Color_R_arc_scene_ui_layout_Cell)(jcontext ctx, jobject self, jobject param0, jobject param1);
+#define VTABLE_mindustry_editor_WaveGraph_image_arc_graphics_g2d_TextureRegion_R_arc_scene_ui_layout_Cell 194
+typedef jobject (*func_mindustry_editor_WaveGraph_image_arc_graphics_g2d_TextureRegion_R_arc_scene_ui_layout_Cell)(jcontext ctx, jobject self, jobject param0);
+#define VTABLE_mindustry_editor_WaveGraph_check_java_lang_String_arc_func_Boolc_R_arc_scene_ui_layout_Cell 195
+typedef jobject (*func_mindustry_editor_WaveGraph_check_java_lang_String_arc_func_Boolc_R_arc_scene_ui_layout_Cell)(jcontext ctx, jobject self, jobject param0, jobject param1);
+#define VTABLE_mindustry_editor_WaveGraph_check_java_lang_String_boolean_arc_func_Boolc_R_arc_scene_ui_layout_Cell 196
+typedef jobject (*func_mindustry_editor_WaveGraph_check_java_lang_String_boolean_arc_func_Boolc_R_arc_scene_ui_layout_Cell)(jcontext ctx, jobject self, jobject param0, jbool param1, jobject param2);
+#define VTABLE_mindustry_editor_WaveGraph_check_java_lang_String_float_boolean_arc_func_Boolc_R_arc_scene_ui_layout_Cell 197
+typedef jobject (*func_mindustry_editor_WaveGraph_check_java_lang_String_float_boolean_arc_func_Boolc_R_arc_scene_ui_layout_Cell)(jcontext ctx, jobject self, jobject param0, jfloat param1, jbool param2, jobject param3);
+#define VTABLE_mindustry_editor_WaveGraph_button_arc_func_Cons_java_lang_Runnable_R_arc_scene_ui_layout_Cell 198
+typedef jobject (*func_mindustry_editor_WaveGraph_button_arc_func_Cons_java_lang_Runnable_R_arc_scene_ui_layout_Cell)(jcontext ctx, jobject self, jobject param0, jobject param1);
+#define VTABLE_mindustry_editor_WaveGraph_button_arc_func_Cons_arc_scene_ui_Button$ButtonStyle_java_lang_Runnable_R_arc_scene_ui_layout_Cell 199
+typedef jobject (*func_mindustry_editor_WaveGraph_button_arc_func_Cons_arc_scene_ui_Button$ButtonStyle_java_lang_Runnable_R_arc_scene_ui_layout_Cell)(jcontext ctx, jobject self, jobject param0, jobject param1, jobject param2);
+#define VTABLE_mindustry_editor_WaveGraph_button_java_lang_String_java_lang_Runnable_R_arc_scene_ui_layout_Cell 200
+typedef jobject (*func_mindustry_editor_WaveGraph_button_java_lang_String_java_lang_Runnable_R_arc_scene_ui_layout_Cell)(jcontext ctx, jobject self, jobject param0, jobject param1);
+#define VTABLE_mindustry_editor_WaveGraph_button_java_lang_String_arc_scene_ui_TextButton$TextButtonStyle_java_lang_Runnable_R_arc_scene_ui_layout_Cell 201
+typedef jobject (*func_mindustry_editor_WaveGraph_button_java_lang_String_arc_scene_ui_TextButton$TextButtonStyle_java_lang_Runnable_R_arc_scene_ui_layout_Cell)(jcontext ctx, jobject self, jobject param0, jobject param1, jobject param2);
+#define VTABLE_mindustry_editor_WaveGraph_button_arc_scene_style_Drawable_java_lang_Runnable_R_arc_scene_ui_layout_Cell 202
+typedef jobject (*func_mindustry_editor_WaveGraph_button_arc_scene_style_Drawable_java_lang_Runnable_R_arc_scene_ui_layout_Cell)(jcontext ctx, jobject self, jobject param0, jobject param1);
+#define VTABLE_mindustry_editor_WaveGraph_button_arc_scene_style_Drawable_float_java_lang_Runnable_R_arc_scene_ui_layout_Cell 203
+typedef jobject (*func_mindustry_editor_WaveGraph_button_arc_scene_style_Drawable_float_java_lang_Runnable_R_arc_scene_ui_layout_Cell)(jcontext ctx, jobject self, jobject param0, jfloat param1, jobject param2);
+#define VTABLE_mindustry_editor_WaveGraph_button_arc_scene_style_Drawable_arc_scene_ui_ImageButton$ImageButtonStyle_float_java_lang_Runnable_R_arc_scene_ui_layout_Cell 204
+typedef jobject (*func_mindustry_editor_WaveGraph_button_arc_scene_style_Drawable_arc_scene_ui_ImageButton$ImageButtonStyle_float_java_lang_Runnable_R_arc_scene_ui_layout_Cell)(jcontext ctx, jobject self, jobject param0, jobject param1, jfloat param2, jobject param3);
+#define VTABLE_mindustry_editor_WaveGraph_button_arc_scene_style_Drawable_arc_scene_ui_ImageButton$ImageButtonStyle_java_lang_Runnable_R_arc_scene_ui_layout_Cell 205
+typedef jobject (*func_mindustry_editor_WaveGraph_button_arc_scene_style_Drawable_arc_scene_ui_ImageButton$ImageButtonStyle_java_lang_Runnable_R_arc_scene_ui_layout_Cell)(jcontext ctx, jobject self, jobject param0, jobject param1, jobject param2);
+#define VTABLE_mindustry_editor_WaveGraph_field_java_lang_String_arc_func_Cons_R_arc_scene_ui_layout_Cell 206
+typedef jobject (*func_mindustry_editor_WaveGraph_field_java_lang_String_arc_func_Cons_R_arc_scene_ui_layout_Cell)(jcontext ctx, jobject self, jobject param0, jobject param1);
+#define VTABLE_mindustry_editor_WaveGraph_area_java_lang_String_arc_func_Cons_R_arc_scene_ui_layout_Cell 207
+typedef jobject (*func_mindustry_editor_WaveGraph_area_java_lang_String_arc_func_Cons_R_arc_scene_ui_layout_Cell)(jcontext ctx, jobject self, jobject param0, jobject param1);
+#define VTABLE_mindustry_editor_WaveGraph_area_java_lang_String_arc_scene_ui_TextField$TextFieldStyle_arc_func_Cons_R_arc_scene_ui_layout_Cell 208
+typedef jobject (*func_mindustry_editor_WaveGraph_area_java_lang_String_arc_scene_ui_TextField$TextFieldStyle_arc_func_Cons_R_arc_scene_ui_layout_Cell)(jcontext ctx, jobject self, jobject param0, jobject param1, jobject param2);
+#define VTABLE_mindustry_editor_WaveGraph_field_java_lang_String_arc_scene_ui_TextField$TextFieldFilter_arc_func_Cons_R_arc_scene_ui_layout_Cell 209
+typedef jobject (*func_mindustry_editor_WaveGraph_field_java_lang_String_arc_scene_ui_TextField$TextFieldFilter_arc_func_Cons_R_arc_scene_ui_layout_Cell)(jcontext ctx, jobject self, jobject param0, jobject param1, jobject param2);
+#define VTABLE_mindustry_editor_WaveGraph_field_java_lang_String_arc_scene_ui_TextField$TextFieldStyle_arc_func_Cons_R_arc_scene_ui_layout_Cell 210
+typedef jobject (*func_mindustry_editor_WaveGraph_field_java_lang_String_arc_scene_ui_TextField$TextFieldStyle_arc_func_Cons_R_arc_scene_ui_layout_Cell)(jcontext ctx, jobject self, jobject param0, jobject param1, jobject param2);
+#define VTABLE_mindustry_editor_WaveGraph_rect_arc_scene_ui_layout_Table$DrawRect_R_arc_scene_ui_layout_Cell 211
+typedef jobject (*func_mindustry_editor_WaveGraph_rect_arc_scene_ui_layout_Table$DrawRect_R_arc_scene_ui_layout_Cell)(jcontext ctx, jobject self, jobject param0);
+#define VTABLE_mindustry_editor_WaveGraph_buttonRow_java_lang_String_arc_scene_style_Drawable_java_lang_Runnable_R_arc_scene_ui_layout_Cell 212
+typedef jobject (*func_mindustry_editor_WaveGraph_buttonRow_java_lang_String_arc_scene_style_Drawable_java_lang_Runnable_R_arc_scene_ui_layout_Cell)(jcontext ctx, jobject self, jobject param0, jobject param1, jobject param2);
+#define VTABLE_mindustry_editor_WaveGraph_button_java_lang_String_arc_scene_style_Drawable_java_lang_Runnable_R_arc_scene_ui_layout_Cell 213
+typedef jobject (*func_mindustry_editor_WaveGraph_button_java_lang_String_arc_scene_style_Drawable_java_lang_Runnable_R_arc_scene_ui_layout_Cell)(jcontext ctx, jobject self, jobject param0, jobject param1, jobject param2);
+#define VTABLE_mindustry_editor_WaveGraph_button_java_lang_String_arc_scene_style_Drawable_float_java_lang_Runnable_R_arc_scene_ui_layout_Cell 214
+typedef jobject (*func_mindustry_editor_WaveGraph_button_java_lang_String_arc_scene_style_Drawable_float_java_lang_Runnable_R_arc_scene_ui_layout_Cell)(jcontext ctx, jobject self, jobject param0, jobject param1, jfloat param2, jobject param3);
+#define VTABLE_mindustry_editor_WaveGraph_button_java_lang_String_arc_scene_style_Drawable_arc_scene_ui_TextButton$TextButtonStyle_float_java_lang_Runnable_R_arc_scene_ui_layout_Cell 215
+typedef jobject (*func_mindustry_editor_WaveGraph_button_java_lang_String_arc_scene_style_Drawable_arc_scene_ui_TextButton$TextButtonStyle_float_java_lang_Runnable_R_arc_scene_ui_layout_Cell)(jcontext ctx, jobject self, jobject param0, jobject param1, jobject param2, jfloat param3, jobject param4);
+#define VTABLE_mindustry_editor_WaveGraph_button_java_lang_String_arc_scene_style_Drawable_arc_scene_ui_TextButton$TextButtonStyle_java_lang_Runnable_R_arc_scene_ui_layout_Cell 216
+typedef jobject (*func_mindustry_editor_WaveGraph_button_java_lang_String_arc_scene_style_Drawable_arc_scene_ui_TextButton$TextButtonStyle_java_lang_Runnable_R_arc_scene_ui_layout_Cell)(jcontext ctx, jobject self, jobject param0, jobject param1, jobject param2, jobject param3);
+#define VTABLE_mindustry_editor_WaveGraph_buttonCenter_java_lang_String_arc_scene_style_Drawable_float_java_lang_Runnable_R_arc_scene_ui_layout_Cell 217
+typedef jobject (*func_mindustry_editor_WaveGraph_buttonCenter_java_lang_String_arc_scene_style_Drawable_float_java_lang_Runnable_R_arc_scene_ui_layout_Cell)(jcontext ctx, jobject self, jobject param0, jobject param1, jfloat param2, jobject param3);
+#define VTABLE_mindustry_editor_WaveGraph_buttonCenter_java_lang_String_arc_scene_style_Drawable_java_lang_Runnable_R_arc_scene_ui_layout_Cell 218
+typedef jobject (*func_mindustry_editor_WaveGraph_buttonCenter_java_lang_String_arc_scene_style_Drawable_java_lang_Runnable_R_arc_scene_ui_layout_Cell)(jcontext ctx, jobject self, jobject param0, jobject param1, jobject param2);
+#define VTABLE_mindustry_editor_WaveGraph_buttonCenter_java_lang_String_arc_scene_style_Drawable_arc_scene_ui_TextButton$TextButtonStyle_float_java_lang_Runnable_R_arc_scene_ui_layout_Cell 219
+typedef jobject (*func_mindustry_editor_WaveGraph_buttonCenter_java_lang_String_arc_scene_style_Drawable_arc_scene_ui_TextButton$TextButtonStyle_float_java_lang_Runnable_R_arc_scene_ui_layout_Cell)(jcontext ctx, jobject self, jobject param0, jobject param1, jobject param2, jfloat param3, jobject param4);
+#define VTABLE_mindustry_editor_WaveGraph_slider_float_float_float_arc_func_Floatc_R_arc_scene_ui_layout_Cell 220
+typedef jobject (*func_mindustry_editor_WaveGraph_slider_float_float_float_arc_func_Floatc_R_arc_scene_ui_layout_Cell)(jcontext ctx, jobject self, jfloat param0, jfloat param1, jfloat param2, jobject param3);
+#define VTABLE_mindustry_editor_WaveGraph_slider_float_float_float_float_arc_func_Floatc_R_arc_scene_ui_layout_Cell 221
+typedef jobject (*func_mindustry_editor_WaveGraph_slider_float_float_float_float_arc_func_Floatc_R_arc_scene_ui_layout_Cell)(jcontext ctx, jobject self, jfloat param0, jfloat param1, jfloat param2, jfloat param3, jobject param4);
+#define VTABLE_mindustry_editor_WaveGraph_slider_float_float_float_float_boolean_arc_func_Floatc_R_arc_scene_ui_layout_Cell 222
+typedef jobject (*func_mindustry_editor_WaveGraph_slider_float_float_float_float_boolean_arc_func_Floatc_R_arc_scene_ui_layout_Cell)(jcontext ctx, jobject self, jfloat param0, jfloat param1, jfloat param2, jfloat param3, jbool param4, jobject param5);
+#define VTABLE_mindustry_editor_WaveGraph_reset 223
+typedef void (*func_mindustry_editor_WaveGraph_reset)(jcontext ctx, jobject self);
+#define VTABLE_mindustry_editor_WaveGraph_row_R_arc_scene_ui_layout_Table 224
+typedef jobject (*func_mindustry_editor_WaveGraph_row_R_arc_scene_ui_layout_Table)(jcontext ctx, jobject self);
+#define VTABLE_mindustry_editor_WaveGraph_endRow 225
+typedef void (*func_mindustry_editor_WaveGraph_endRow)(jcontext ctx, jobject self);
+#define VTABLE_mindustry_editor_WaveGraph_getCell_arc_scene_Element_R_arc_scene_ui_layout_Cell 226
+typedef jobject (*func_mindustry_editor_WaveGraph_getCell_arc_scene_Element_R_arc_scene_ui_layout_Cell)(jcontext ctx, jobject self, jobject param0);
+#define VTABLE_mindustry_editor_WaveGraph_getCells_R_arc_struct_Seq 227
+typedef jobject (*func_mindustry_editor_WaveGraph_getCells_R_arc_struct_Seq)(jcontext ctx, jobject self);
+#define VTABLE_mindustry_editor_WaveGraph_defaults_R_arc_scene_ui_layout_Cell 228
+typedef jobject (*func_mindustry_editor_WaveGraph_defaults_R_arc_scene_ui_layout_Cell)(jcontext ctx, jobject self);
+#define VTABLE_mindustry_editor_WaveGraph_margin_float_R_arc_scene_ui_layout_Table 229
+typedef jobject (*func_mindustry_editor_WaveGraph_margin_float_R_arc_scene_ui_layout_Table)(jcontext ctx, jobject self, jfloat param0);
+#define VTABLE_mindustry_editor_WaveGraph_margin_float_float_float_float_R_arc_scene_ui_layout_Table 230
+typedef jobject (*func_mindustry_editor_WaveGraph_margin_float_float_float_float_R_arc_scene_ui_layout_Table)(jcontext ctx, jobject self, jfloat param0, jfloat param1, jfloat param2, jfloat param3);
+#define VTABLE_mindustry_editor_WaveGraph_marginTop_float_R_arc_scene_ui_layout_Table 231
+typedef jobject (*func_mindustry_editor_WaveGraph_marginTop_float_R_arc_scene_ui_layout_Table)(jcontext ctx, jobject self, jfloat param0);
+#define VTABLE_mindustry_editor_WaveGraph_marginLeft_float_R_arc_scene_ui_layout_Table 232
+typedef jobject (*func_mindustry_editor_WaveGraph_marginLeft_float_R_arc_scene_ui_layout_Table)(jcontext ctx, jobject self, jfloat param0);
+#define VTABLE_mindustry_editor_WaveGraph_marginBottom_float_R_arc_scene_ui_layout_Table 233
+typedef jobject (*func_mindustry_editor_WaveGraph_marginBottom_float_R_arc_scene_ui_layout_Table)(jcontext ctx, jobject self, jfloat param0);
+#define VTABLE_mindustry_editor_WaveGraph_marginRight_float_R_arc_scene_ui_layout_Table 234
+typedef jobject (*func_mindustry_editor_WaveGraph_marginRight_float_R_arc_scene_ui_layout_Table)(jcontext ctx, jobject self, jfloat param0);
+#define VTABLE_mindustry_editor_WaveGraph_align_int_R_arc_scene_ui_layout_Table 235
+typedef jobject (*func_mindustry_editor_WaveGraph_align_int_R_arc_scene_ui_layout_Table)(jcontext ctx, jobject self, jint param0);
+#define VTABLE_mindustry_editor_WaveGraph_center_R_arc_scene_ui_layout_Table 236
+typedef jobject (*func_mindustry_editor_WaveGraph_center_R_arc_scene_ui_layout_Table)(jcontext ctx, jobject self);
+#define VTABLE_mindustry_editor_WaveGraph_top_R_arc_scene_ui_layout_Table 237
+typedef jobject (*func_mindustry_editor_WaveGraph_top_R_arc_scene_ui_layout_Table)(jcontext ctx, jobject self);
+#define VTABLE_mindustry_editor_WaveGraph_left_R_arc_scene_ui_layout_Table 238
+typedef jobject (*func_mindustry_editor_WaveGraph_left_R_arc_scene_ui_layout_Table)(jcontext ctx, jobject self);
+#define VTABLE_mindustry_editor_WaveGraph_bottom_R_arc_scene_ui_layout_Table 239
+typedef jobject (*func_mindustry_editor_WaveGraph_bottom_R_arc_scene_ui_layout_Table)(jcontext ctx, jobject self);
+#define VTABLE_mindustry_editor_WaveGraph_right_R_arc_scene_ui_layout_Table 240
+typedef jobject (*func_mindustry_editor_WaveGraph_right_R_arc_scene_ui_layout_Table)(jcontext ctx, jobject self);
+#define VTABLE_mindustry_editor_WaveGraph_getMarginTop_R_float 241
+typedef jfloat (*func_mindustry_editor_WaveGraph_getMarginTop_R_float)(jcontext ctx, jobject self);
+#define VTABLE_mindustry_editor_WaveGraph_getMarginLeft_R_float 242
+typedef jfloat (*func_mindustry_editor_WaveGraph_getMarginLeft_R_float)(jcontext ctx, jobject self);
+#define VTABLE_mindustry_editor_WaveGraph_getMarginBottom_R_float 243
+typedef jfloat (*func_mindustry_editor_WaveGraph_getMarginBottom_R_float)(jcontext ctx, jobject self);
+#define VTABLE_mindustry_editor_WaveGraph_getMarginRight_R_float 244
+typedef jfloat (*func_mindustry_editor_WaveGraph_getMarginRight_R_float)(jcontext ctx, jobject self);
+#define VTABLE_mindustry_editor_WaveGraph_getAlign_R_int 245
+typedef jint (*func_mindustry_editor_WaveGraph_getAlign_R_int)(jcontext ctx, jobject self);
+#define VTABLE_mindustry_editor_WaveGraph_getRow_float_R_int 246
+typedef jint (*func_mindustry_editor_WaveGraph_getRow_float_R_int)(jcontext ctx, jobject self, jfloat param0);
+#define VTABLE_mindustry_editor_WaveGraph_setRound_boolean 247
+typedef void (*func_mindustry_editor_WaveGraph_setRound_boolean)(jcontext ctx, jobject self, jbool param0);
+#define VTABLE_mindustry_editor_WaveGraph_getRows_R_int 248
+typedef jint (*func_mindustry_editor_WaveGraph_getRows_R_int)(jcontext ctx, jobject self);
+#define VTABLE_mindustry_editor_WaveGraph_getColumns_R_int 249
+typedef jint (*func_mindustry_editor_WaveGraph_getColumns_R_int)(jcontext ctx, jobject self);
+#define VTABLE_mindustry_editor_WaveGraph_getRowHeight_int_R_float 250
+typedef jfloat (*func_mindustry_editor_WaveGraph_getRowHeight_int_R_float)(jcontext ctx, jobject self, jint param0);
+#define VTABLE_mindustry_editor_WaveGraph_getColumnWidth_int_R_float 251
+typedef jfloat (*func_mindustry_editor_WaveGraph_getColumnWidth_int_R_float)(jcontext ctx, jobject self, jint param0);
+#define VTABLE_mindustry_editor_WaveGraph_ensureSize_Array1_float_int_R_Array1_float 252
+typedef jobject (*func_mindustry_editor_WaveGraph_ensureSize_Array1_float_int_R_Array1_float)(jcontext ctx, jobject self, jobject param0, jint param1);
+#define VTABLE_mindustry_editor_WaveGraph_computeSize 253
+typedef void (*func_mindustry_editor_WaveGraph_computeSize)(jcontext ctx, jobject self);
+#define VTABLE_mindustry_editor_WaveGraph_layout_float_float_float_float 254
+typedef void (*func_mindustry_editor_WaveGraph_layout_float_float_float_float)(jcontext ctx, jobject self, jfloat param0, jfloat param1, jfloat param2, jfloat param3);
+#define VTABLE_mindustry_editor_WaveGraph_clampZoom 255
+typedef void (*func_mindustry_editor_WaveGraph_clampZoom)(jcontext ctx, jobject self);
+#define VTABLE_mindustry_editor_WaveGraph_linePoint_float_float 256
+typedef void (*func_mindustry_editor_WaveGraph_linePoint_float_float)(jcontext ctx, jobject self, jfloat param0, jfloat param1);
+#define VTABLE_mindustry_editor_WaveGraph_beginLine 257
+typedef void (*func_mindustry_editor_WaveGraph_beginLine)(jcontext ctx, jobject self);
+#define VTABLE_mindustry_editor_WaveGraph_endLine 258
+typedef void (*func_mindustry_editor_WaveGraph_endLine)(jcontext ctx, jobject self);
+#define VTABLE_mindustry_editor_WaveGraph_rebuild 259
+typedef void (*func_mindustry_editor_WaveGraph_rebuild)(jcontext ctx, jobject self);
+#define VTABLE_mindustry_editor_WaveGraph_color_mindustry_type_UnitType_R_arc_graphics_Color 260
+typedef jobject (*func_mindustry_editor_WaveGraph_color_mindustry_type_UnitType_R_arc_graphics_Color)(jcontext ctx, jobject self, jobject param0);
+#define VTABLE_mindustry_editor_WaveGraph_nextStep_float_R_int 261
+typedef jint (*func_mindustry_editor_WaveGraph_nextStep_float_R_int)(jcontext ctx, jobject self, jfloat param0);
+#define VTABLE_mindustry_editor_WaveGraph_lambda$rebuild$2_arc_struct_ObjectSet_arc_scene_ui_layout_Table 262
+typedef void (*func_mindustry_editor_WaveGraph_lambda$rebuild$2_arc_struct_ObjectSet_arc_scene_ui_layout_Table)(jcontext ctx, jobject self, jobject param0, jobject param1);
+#define VTABLE_mindustry_editor_WaveGraph_lambda$rebuild$7_mindustry_type_UnitType_arc_scene_ui_Button 263
+typedef void (*func_mindustry_editor_WaveGraph_lambda$rebuild$7_mindustry_type_UnitType_arc_scene_ui_Button)(jcontext ctx, jobject self, jobject param0, jobject param1);
+#define VTABLE_mindustry_editor_WaveGraph_lambda$rebuild$6_mindustry_type_UnitType_arc_struct_ObjectSet 264
+typedef void (*func_mindustry_editor_WaveGraph_lambda$rebuild$6_mindustry_type_UnitType_arc_struct_ObjectSet)(jcontext ctx, jobject self, jobject param0, jobject param1);
+#define VTABLE_mindustry_editor_WaveGraph_lambda$rebuild$3_mindustry_type_UnitType_arc_scene_ui_Button 265
+typedef void (*func_mindustry_editor_WaveGraph_lambda$rebuild$3_mindustry_type_UnitType_arc_scene_ui_Button)(jcontext ctx, jobject self, jobject param0, jobject param1);
+#define VTABLE_mindustry_editor_WaveGraph_lambda$rebuild$1_arc_struct_ObjectSet_arc_scene_ui_TextButton 266
+typedef void (*func_mindustry_editor_WaveGraph_lambda$rebuild$1_arc_struct_ObjectSet_arc_scene_ui_TextButton)(jcontext ctx, jobject self, jobject param0, jobject param1);
+#define VTABLE_mindustry_editor_WaveGraph_lambda$rebuild$0_arc_struct_ObjectSet 267
+typedef void (*func_mindustry_editor_WaveGraph_lambda$rebuild$0_arc_struct_ObjectSet)(jcontext ctx, jobject self, jobject param0);
+#define VTABLE_mindustry_editor_WaveGraph_lambda$new$3_arc_scene_ui_layout_Table 268
+typedef void (*func_mindustry_editor_WaveGraph_lambda$new$3_arc_scene_ui_layout_Table)(jcontext ctx, jobject self, jobject param0);
+#define VTABLE_mindustry_editor_WaveGraph_lambda$new$5_mindustry_editor_WaveGraph$Mode_arc_scene_ui_TextButton 269
+typedef void (*func_mindustry_editor_WaveGraph_lambda$new$5_mindustry_editor_WaveGraph$Mode_arc_scene_ui_TextButton)(jcontext ctx, jobject self, jobject param0, jobject param1);
+#define VTABLE_mindustry_editor_WaveGraph_lambda$new$4_mindustry_editor_WaveGraph$Mode 270
+typedef void (*func_mindustry_editor_WaveGraph_lambda$new$4_mindustry_editor_WaveGraph$Mode)(jcontext ctx, jobject self, jobject param0);
+#define VTABLE_mindustry_editor_WaveGraph_lambda$new$2_arc_scene_ui_layout_Table 271
+typedef void (*func_mindustry_editor_WaveGraph_lambda$new$2_arc_scene_ui_layout_Table)(jcontext ctx, jobject self, jobject param0);
+#define VTABLE_mindustry_editor_WaveGraph_lambda$new$1_float_float_float_float 272
+typedef void (*func_mindustry_editor_WaveGraph_lambda$new$1_float_float_float_float)(jcontext ctx, jobject self, jfloat param0, jfloat param1, jfloat param2, jfloat param3);
+#define VTABLE_mindustry_editor_WaveGraph_lambda$new$0_float 273
+typedef void (*func_mindustry_editor_WaveGraph_lambda$new$0_float)(jcontext ctx, jobject self, jfloat param0);
+
+void mark_mindustry_editor_WaveGraph(jobject object, jint mark, jint depth);
+void clinit_mindustry_editor_WaveGraph(jcontext ctx);
+void init_mindustry_editor_WaveGraph(jcontext ctx, jobject self);
+void M_mindustry_editor_WaveGraph_clampZoom(jcontext ctx, jobject self);
+void M_mindustry_editor_WaveGraph_linePoint_float_float(jcontext ctx, jobject self, jfloat param0, jfloat param1);
+void M_mindustry_editor_WaveGraph_beginLine(jcontext ctx, jobject self);
+void M_mindustry_editor_WaveGraph_endLine(jcontext ctx, jobject self);
+void M_mindustry_editor_WaveGraph_rebuild(jcontext ctx, jobject self);
+jobject M_mindustry_editor_WaveGraph_color_mindustry_type_UnitType_R_arc_graphics_Color(jcontext ctx, jobject self, jobject param0);
+jint M_mindustry_editor_WaveGraph_nextStep_float_R_int(jcontext ctx, jobject self, jfloat param0);
+void M_mindustry_editor_WaveGraph_lambda$rebuild$2_arc_struct_ObjectSet_arc_scene_ui_layout_Table(jcontext ctx, jobject self, jobject param0, jobject param1);
+void M_mindustry_editor_WaveGraph_lambda$rebuild$7_mindustry_type_UnitType_arc_scene_ui_Button(jcontext ctx, jobject self, jobject param0, jobject param1);
+void M_mindustry_editor_WaveGraph_lambda$rebuild$6_mindustry_type_UnitType_arc_struct_ObjectSet(jcontext ctx, jobject self, jobject param0, jobject param1);
+void M_mindustry_editor_WaveGraph_lambda$rebuild$3_mindustry_type_UnitType_arc_scene_ui_Button(jcontext ctx, jobject self, jobject param0, jobject param1);
+void SM_mindustry_editor_WaveGraph_lambda$rebuild$5_arc_scene_ui_Button_arc_scene_ui_Image(jcontext ctx, jobject param0, jobject param1);
+void SM_mindustry_editor_WaveGraph_lambda$rebuild$4_arc_scene_ui_Button_arc_graphics_Color_arc_scene_ui_Image(jcontext ctx, jobject param0, jobject param1, jobject param2);
+void M_mindustry_editor_WaveGraph_lambda$rebuild$1_arc_struct_ObjectSet_arc_scene_ui_TextButton(jcontext ctx, jobject self, jobject param0, jobject param1);
+void M_mindustry_editor_WaveGraph_lambda$rebuild$0_arc_struct_ObjectSet(jcontext ctx, jobject self, jobject param0);
+void M_mindustry_editor_WaveGraph_lambda$new$3_arc_scene_ui_layout_Table(jcontext ctx, jobject self, jobject param0);
+void M_mindustry_editor_WaveGraph_lambda$new$5_mindustry_editor_WaveGraph$Mode_arc_scene_ui_TextButton(jcontext ctx, jobject self, jobject param0, jobject param1);
+void M_mindustry_editor_WaveGraph_lambda$new$4_mindustry_editor_WaveGraph$Mode(jcontext ctx, jobject self, jobject param0);
+void M_mindustry_editor_WaveGraph_lambda$new$2_arc_scene_ui_layout_Table(jcontext ctx, jobject self, jobject param0);
+void M_mindustry_editor_WaveGraph_lambda$new$1_float_float_float_float(jcontext ctx, jobject self, jfloat param0, jfloat param1, jfloat param2, jfloat param3);
+void M_mindustry_editor_WaveGraph_lambda$new$0_float(jcontext ctx, jobject self, jfloat param0);
+
+#ifdef __cplusplus
+}
+#endif
+
+#endif

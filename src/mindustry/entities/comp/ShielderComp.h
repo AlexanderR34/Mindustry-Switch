@@ -1,0 +1,157 @@
+#ifndef HEADER_mindustry_entities_comp_ShielderComp
+#define HEADER_mindustry_entities_comp_ShielderComp
+
+#include "Clearwing.h"
+#include "java/lang/Object.h"
+#include "mindustry/gen/Damagec.h"
+#include "mindustry/gen/Teamc.h"
+#include "mindustry/gen/Posc.h"
+
+#ifdef __cplusplus
+extern "C" {
+#endif
+
+typedef struct mindustry_entities_comp_ShielderComp {
+	java_lang_Object parent;
+} mindustry_entities_comp_ShielderComp;
+
+extern Class class_mindustry_entities_comp_ShielderComp;
+
+
+#define VTABLE_mindustry_entities_comp_ShielderComp_hashCode_R_int 0
+typedef jint (*func_mindustry_entities_comp_ShielderComp_hashCode_R_int)(jcontext ctx, jobject self);
+#define VTABLE_mindustry_entities_comp_ShielderComp_equals_java_lang_Object_R_boolean 1
+typedef jbool (*func_mindustry_entities_comp_ShielderComp_equals_java_lang_Object_R_boolean)(jcontext ctx, jobject self, jobject param0);
+#define VTABLE_mindustry_entities_comp_ShielderComp_clone_R_java_lang_Object 2
+typedef jobject (*func_mindustry_entities_comp_ShielderComp_clone_R_java_lang_Object)(jcontext ctx, jobject self);
+#define VTABLE_mindustry_entities_comp_ShielderComp_getClass_R_java_lang_Class 3
+typedef jobject (*func_mindustry_entities_comp_ShielderComp_getClass_R_java_lang_Class)(jcontext ctx, jobject self);
+#define VTABLE_mindustry_entities_comp_ShielderComp_toString_R_java_lang_String 4
+typedef jobject (*func_mindustry_entities_comp_ShielderComp_toString_R_java_lang_String)(jcontext ctx, jobject self);
+#define VTABLE_mindustry_entities_comp_ShielderComp_finalize 5
+typedef void (*func_mindustry_entities_comp_ShielderComp_finalize)(jcontext ctx, jobject self);
+#define VTABLE_mindustry_entities_comp_ShielderComp_notify 6
+typedef void (*func_mindustry_entities_comp_ShielderComp_notify)(jcontext ctx, jobject self);
+#define VTABLE_mindustry_entities_comp_ShielderComp_notifyAll 7
+typedef void (*func_mindustry_entities_comp_ShielderComp_notifyAll)(jcontext ctx, jobject self);
+#define VTABLE_mindustry_entities_comp_ShielderComp_wait 8
+typedef void (*func_mindustry_entities_comp_ShielderComp_wait)(jcontext ctx, jobject self);
+#define VTABLE_mindustry_entities_comp_ShielderComp_wait_long 9
+typedef void (*func_mindustry_entities_comp_ShielderComp_wait_long)(jcontext ctx, jobject self, jlong param0);
+#define VTABLE_mindustry_entities_comp_ShielderComp_wait_long_int 10
+typedef void (*func_mindustry_entities_comp_ShielderComp_wait_long_int)(jcontext ctx, jobject self, jlong param0, jint param1);
+#define VTABLE_mindustry_entities_comp_ShielderComp_self_R_mindustry_gen_Entityc 11
+typedef jobject (*func_mindustry_entities_comp_ShielderComp_self_R_mindustry_gen_Entityc)(jcontext ctx, jobject self);
+#define VTABLE_mindustry_entities_comp_ShielderComp_as_R_java_lang_Object 12
+typedef jobject (*func_mindustry_entities_comp_ShielderComp_as_R_java_lang_Object)(jcontext ctx, jobject self);
+#define VTABLE_mindustry_entities_comp_ShielderComp_isAdded_R_boolean 13
+typedef jbool (*func_mindustry_entities_comp_ShielderComp_isAdded_R_boolean)(jcontext ctx, jobject self);
+#define VTABLE_mindustry_entities_comp_ShielderComp_isLocal_R_boolean 14
+typedef jbool (*func_mindustry_entities_comp_ShielderComp_isLocal_R_boolean)(jcontext ctx, jobject self);
+#define VTABLE_mindustry_entities_comp_ShielderComp_isRemote_R_boolean 15
+typedef jbool (*func_mindustry_entities_comp_ShielderComp_isRemote_R_boolean)(jcontext ctx, jobject self);
+#define VTABLE_mindustry_entities_comp_ShielderComp_serialize_R_boolean 16
+typedef jbool (*func_mindustry_entities_comp_ShielderComp_serialize_R_boolean)(jcontext ctx, jobject self);
+#define VTABLE_mindustry_entities_comp_ShielderComp_classId_R_int 17
+typedef jint (*func_mindustry_entities_comp_ShielderComp_classId_R_int)(jcontext ctx, jobject self);
+#define VTABLE_mindustry_entities_comp_ShielderComp_id_R_int 18
+typedef jint (*func_mindustry_entities_comp_ShielderComp_id_R_int)(jcontext ctx, jobject self);
+#define VTABLE_mindustry_entities_comp_ShielderComp_add 19
+typedef void (*func_mindustry_entities_comp_ShielderComp_add)(jcontext ctx, jobject self);
+#define VTABLE_mindustry_entities_comp_ShielderComp_afterRead 20
+typedef void (*func_mindustry_entities_comp_ShielderComp_afterRead)(jcontext ctx, jobject self);
+#define VTABLE_mindustry_entities_comp_ShielderComp_afterReadAll 21
+typedef void (*func_mindustry_entities_comp_ShielderComp_afterReadAll)(jcontext ctx, jobject self);
+#define VTABLE_mindustry_entities_comp_ShielderComp_beforeWrite 22
+typedef void (*func_mindustry_entities_comp_ShielderComp_beforeWrite)(jcontext ctx, jobject self);
+#define VTABLE_mindustry_entities_comp_ShielderComp_id_int 23
+typedef void (*func_mindustry_entities_comp_ShielderComp_id_int)(jcontext ctx, jobject self, jint param0);
+#define VTABLE_mindustry_entities_comp_ShielderComp_read_arc_util_io_Reads 24
+typedef void (*func_mindustry_entities_comp_ShielderComp_read_arc_util_io_Reads)(jcontext ctx, jobject self, jobject param0);
+#define VTABLE_mindustry_entities_comp_ShielderComp_remove 25
+typedef void (*func_mindustry_entities_comp_ShielderComp_remove)(jcontext ctx, jobject self);
+#define VTABLE_mindustry_entities_comp_ShielderComp_update 26
+typedef void (*func_mindustry_entities_comp_ShielderComp_update)(jcontext ctx, jobject self);
+#define VTABLE_mindustry_entities_comp_ShielderComp_write_arc_util_io_Writes 27
+typedef void (*func_mindustry_entities_comp_ShielderComp_write_arc_util_io_Writes)(jcontext ctx, jobject self, jobject param0);
+#define VTABLE_mindustry_entities_comp_ShielderComp_damage_R_float 28
+typedef jfloat (*func_mindustry_entities_comp_ShielderComp_damage_R_float)(jcontext ctx, jobject self);
+#define VTABLE_mindustry_entities_comp_ShielderComp_damage_float 29
+typedef void (*func_mindustry_entities_comp_ShielderComp_damage_float)(jcontext ctx, jobject self, jfloat param0);
+#define VTABLE_mindustry_entities_comp_ShielderComp_getX_R_float 30
+typedef jfloat (*func_mindustry_entities_comp_ShielderComp_getX_R_float)(jcontext ctx, jobject self);
+#define VTABLE_mindustry_entities_comp_ShielderComp_getY_R_float 31
+typedef jfloat (*func_mindustry_entities_comp_ShielderComp_getY_R_float)(jcontext ctx, jobject self);
+#define VTABLE_mindustry_entities_comp_ShielderComp_angleTo_arc_math_geom_Position_R_float 32
+typedef jfloat (*func_mindustry_entities_comp_ShielderComp_angleTo_arc_math_geom_Position_R_float)(jcontext ctx, jobject self, jobject param0);
+#define VTABLE_mindustry_entities_comp_ShielderComp_angleTo_float_float_R_float 33
+typedef jfloat (*func_mindustry_entities_comp_ShielderComp_angleTo_float_float_R_float)(jcontext ctx, jobject self, jfloat param0, jfloat param1);
+#define VTABLE_mindustry_entities_comp_ShielderComp_dst2_arc_math_geom_Position_R_float 34
+typedef jfloat (*func_mindustry_entities_comp_ShielderComp_dst2_arc_math_geom_Position_R_float)(jcontext ctx, jobject self, jobject param0);
+#define VTABLE_mindustry_entities_comp_ShielderComp_dst_arc_math_geom_Position_R_float 35
+typedef jfloat (*func_mindustry_entities_comp_ShielderComp_dst_arc_math_geom_Position_R_float)(jcontext ctx, jobject self, jobject param0);
+#define VTABLE_mindustry_entities_comp_ShielderComp_dst_float_float_R_float 36
+typedef jfloat (*func_mindustry_entities_comp_ShielderComp_dst_float_float_R_float)(jcontext ctx, jobject self, jfloat param0, jfloat param1);
+#define VTABLE_mindustry_entities_comp_ShielderComp_dst2_float_float_R_float 37
+typedef jfloat (*func_mindustry_entities_comp_ShielderComp_dst2_float_float_R_float)(jcontext ctx, jobject self, jfloat param0, jfloat param1);
+#define VTABLE_mindustry_entities_comp_ShielderComp_within_arc_math_geom_Position_float_R_boolean 38
+typedef jbool (*func_mindustry_entities_comp_ShielderComp_within_arc_math_geom_Position_float_R_boolean)(jcontext ctx, jobject self, jobject param0, jfloat param1);
+#define VTABLE_mindustry_entities_comp_ShielderComp_within_float_float_float_R_boolean 39
+typedef jbool (*func_mindustry_entities_comp_ShielderComp_within_float_float_float_R_boolean)(jcontext ctx, jobject self, jfloat param0, jfloat param1, jfloat param2);
+#define VTABLE_mindustry_entities_comp_ShielderComp_floorOn_R_mindustry_world_blocks_environment_Floor 40
+typedef jobject (*func_mindustry_entities_comp_ShielderComp_floorOn_R_mindustry_world_blocks_environment_Floor)(jcontext ctx, jobject self);
+#define VTABLE_mindustry_entities_comp_ShielderComp_buildOn_R_mindustry_gen_Building 41
+typedef jobject (*func_mindustry_entities_comp_ShielderComp_buildOn_R_mindustry_gen_Building)(jcontext ctx, jobject self);
+#define VTABLE_mindustry_entities_comp_ShielderComp_onSolid_R_boolean 42
+typedef jbool (*func_mindustry_entities_comp_ShielderComp_onSolid_R_boolean)(jcontext ctx, jobject self);
+#define VTABLE_mindustry_entities_comp_ShielderComp_x_R_float 43
+typedef jfloat (*func_mindustry_entities_comp_ShielderComp_x_R_float)(jcontext ctx, jobject self);
+#define VTABLE_mindustry_entities_comp_ShielderComp_y_R_float 44
+typedef jfloat (*func_mindustry_entities_comp_ShielderComp_y_R_float)(jcontext ctx, jobject self);
+#define VTABLE_mindustry_entities_comp_ShielderComp_tileX_R_int 45
+typedef jint (*func_mindustry_entities_comp_ShielderComp_tileX_R_int)(jcontext ctx, jobject self);
+#define VTABLE_mindustry_entities_comp_ShielderComp_tileY_R_int 46
+typedef jint (*func_mindustry_entities_comp_ShielderComp_tileY_R_int)(jcontext ctx, jobject self);
+#define VTABLE_mindustry_entities_comp_ShielderComp_blockOn_R_mindustry_world_Block 47
+typedef jobject (*func_mindustry_entities_comp_ShielderComp_blockOn_R_mindustry_world_Block)(jcontext ctx, jobject self);
+#define VTABLE_mindustry_entities_comp_ShielderComp_tileOn_R_mindustry_world_Tile 48
+typedef jobject (*func_mindustry_entities_comp_ShielderComp_tileOn_R_mindustry_world_Tile)(jcontext ctx, jobject self);
+#define VTABLE_mindustry_entities_comp_ShielderComp_set_arc_math_geom_Position 49
+typedef void (*func_mindustry_entities_comp_ShielderComp_set_arc_math_geom_Position)(jcontext ctx, jobject self, jobject param0);
+#define VTABLE_mindustry_entities_comp_ShielderComp_set_float_float 50
+typedef void (*func_mindustry_entities_comp_ShielderComp_set_float_float)(jcontext ctx, jobject self, jfloat param0, jfloat param1);
+#define VTABLE_mindustry_entities_comp_ShielderComp_trns_arc_math_geom_Position 51
+typedef void (*func_mindustry_entities_comp_ShielderComp_trns_arc_math_geom_Position)(jcontext ctx, jobject self, jobject param0);
+#define VTABLE_mindustry_entities_comp_ShielderComp_trns_float_float 52
+typedef void (*func_mindustry_entities_comp_ShielderComp_trns_float_float)(jcontext ctx, jobject self, jfloat param0, jfloat param1);
+#define VTABLE_mindustry_entities_comp_ShielderComp_x_float 53
+typedef void (*func_mindustry_entities_comp_ShielderComp_x_float)(jcontext ctx, jobject self, jfloat param0);
+#define VTABLE_mindustry_entities_comp_ShielderComp_y_float 54
+typedef void (*func_mindustry_entities_comp_ShielderComp_y_float)(jcontext ctx, jobject self, jfloat param0);
+#define VTABLE_mindustry_entities_comp_ShielderComp_inFogTo_mindustry_game_Team_R_boolean 55
+typedef jbool (*func_mindustry_entities_comp_ShielderComp_inFogTo_mindustry_game_Team_R_boolean)(jcontext ctx, jobject self, jobject param0);
+#define VTABLE_mindustry_entities_comp_ShielderComp_cheating_R_boolean 56
+typedef jbool (*func_mindustry_entities_comp_ShielderComp_cheating_R_boolean)(jcontext ctx, jobject self);
+#define VTABLE_mindustry_entities_comp_ShielderComp_team_R_mindustry_game_Team 57
+typedef jobject (*func_mindustry_entities_comp_ShielderComp_team_R_mindustry_game_Team)(jcontext ctx, jobject self);
+#define VTABLE_mindustry_entities_comp_ShielderComp_closestCore_R_mindustry_world_blocks_storage_CoreBlock$CoreBuild 58
+typedef jobject (*func_mindustry_entities_comp_ShielderComp_closestCore_R_mindustry_world_blocks_storage_CoreBlock$CoreBuild)(jcontext ctx, jobject self);
+#define VTABLE_mindustry_entities_comp_ShielderComp_closestEnemyCore_R_mindustry_world_blocks_storage_CoreBlock$CoreBuild 59
+typedef jobject (*func_mindustry_entities_comp_ShielderComp_closestEnemyCore_R_mindustry_world_blocks_storage_CoreBlock$CoreBuild)(jcontext ctx, jobject self);
+#define VTABLE_mindustry_entities_comp_ShielderComp_core_R_mindustry_world_blocks_storage_CoreBlock$CoreBuild 60
+typedef jobject (*func_mindustry_entities_comp_ShielderComp_core_R_mindustry_world_blocks_storage_CoreBlock$CoreBuild)(jcontext ctx, jobject self);
+#define VTABLE_mindustry_entities_comp_ShielderComp_team_mindustry_game_Team 61
+typedef void (*func_mindustry_entities_comp_ShielderComp_team_mindustry_game_Team)(jcontext ctx, jobject self, jobject param0);
+#define VTABLE_mindustry_entities_comp_ShielderComp_absorb 62
+typedef void (*func_mindustry_entities_comp_ShielderComp_absorb)(jcontext ctx, jobject self);
+
+void mark_mindustry_entities_comp_ShielderComp(jobject object, jint mark, jint depth);
+void clinit_mindustry_entities_comp_ShielderComp(jcontext ctx);
+void init_mindustry_entities_comp_ShielderComp(jcontext ctx, jobject self);
+void M_mindustry_entities_comp_ShielderComp_absorb(jcontext ctx, jobject self);
+
+#ifdef __cplusplus
+}
+#endif
+
+#endif

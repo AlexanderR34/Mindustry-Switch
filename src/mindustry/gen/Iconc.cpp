@@ -1,0 +1,3557 @@
+#include "mindustry/gen/Iconc.h"
+#include "java/lang/Object.h"
+#include "mindustry/gen/Iconc.h"
+#include "java/lang/String.h"
+#include "arc/struct/IntMap.h"
+#include "arc/struct/ObjectIntMap.h"
+
+extern "C" {
+
+jchar SF_mindustry_gen_Iconc_blockSpawn;
+jchar SF_mindustry_gen_Iconc_blockDeepwater;
+jchar SF_mindustry_gen_Iconc_blockShallowWater;
+jchar SF_mindustry_gen_Iconc_blockTaintedWater;
+jchar SF_mindustry_gen_Iconc_blockDarksandTaintedWater;
+jchar SF_mindustry_gen_Iconc_blockSandWater;
+jchar SF_mindustry_gen_Iconc_blockDarksandWater;
+jchar SF_mindustry_gen_Iconc_blockTar;
+jchar SF_mindustry_gen_Iconc_blockStone;
+jchar SF_mindustry_gen_Iconc_blockCraters;
+jchar SF_mindustry_gen_Iconc_blockChar;
+jchar SF_mindustry_gen_Iconc_blockIgnarock;
+jchar SF_mindustry_gen_Iconc_blockHotrock;
+jchar SF_mindustry_gen_Iconc_blockMagmarock;
+jchar SF_mindustry_gen_Iconc_blockSand;
+jchar SF_mindustry_gen_Iconc_blockDarksand;
+jchar SF_mindustry_gen_Iconc_blockGrass;
+jchar SF_mindustry_gen_Iconc_blockSalt;
+jchar SF_mindustry_gen_Iconc_blockSnow;
+jchar SF_mindustry_gen_Iconc_blockIce;
+jchar SF_mindustry_gen_Iconc_blockIceSnow;
+jchar SF_mindustry_gen_Iconc_blockCliffs;
+jchar SF_mindustry_gen_Iconc_blockRock;
+jchar SF_mindustry_gen_Iconc_blockSnowrock;
+jchar SF_mindustry_gen_Iconc_blockSporePine;
+jchar SF_mindustry_gen_Iconc_blockSnowPine;
+jchar SF_mindustry_gen_Iconc_blockPine;
+jchar SF_mindustry_gen_Iconc_blockShrubs;
+jchar SF_mindustry_gen_Iconc_blockWhiteTreeDead;
+jchar SF_mindustry_gen_Iconc_blockWhiteTree;
+jchar SF_mindustry_gen_Iconc_blockSporeCluster;
+jchar SF_mindustry_gen_Iconc_blockShale;
+jchar SF_mindustry_gen_Iconc_blockShaleBoulder;
+jchar SF_mindustry_gen_Iconc_blockSandBoulder;
+jchar SF_mindustry_gen_Iconc_blockMoss;
+jchar SF_mindustry_gen_Iconc_blockSporeMoss;
+jchar SF_mindustry_gen_Iconc_blockMetalFloor;
+jchar SF_mindustry_gen_Iconc_blockMetalFloorDamaged;
+jchar SF_mindustry_gen_Iconc_blockMetalFloor2;
+jchar SF_mindustry_gen_Iconc_blockMetalFloor3;
+jchar SF_mindustry_gen_Iconc_blockMetalFloor5;
+jchar SF_mindustry_gen_Iconc_blockDarkPanel1;
+jchar SF_mindustry_gen_Iconc_blockDarkPanel2;
+jchar SF_mindustry_gen_Iconc_blockDarkPanel3;
+jchar SF_mindustry_gen_Iconc_blockDarkPanel4;
+jchar SF_mindustry_gen_Iconc_blockDarkPanel5;
+jchar SF_mindustry_gen_Iconc_blockDarkPanel6;
+jchar SF_mindustry_gen_Iconc_blockDarkMetal;
+jchar SF_mindustry_gen_Iconc_blockPebbles;
+jchar SF_mindustry_gen_Iconc_blockTendrils;
+jchar SF_mindustry_gen_Iconc_blockOreCopper;
+jchar SF_mindustry_gen_Iconc_blockOreLead;
+jchar SF_mindustry_gen_Iconc_blockOreScrap;
+jchar SF_mindustry_gen_Iconc_blockOreCoal;
+jchar SF_mindustry_gen_Iconc_blockOreTitanium;
+jchar SF_mindustry_gen_Iconc_blockOreThorium;
+jchar SF_mindustry_gen_Iconc_blockGraphitePress;
+jchar SF_mindustry_gen_Iconc_blockMultiPress;
+jchar SF_mindustry_gen_Iconc_blockSiliconSmelter;
+jchar SF_mindustry_gen_Iconc_blockKiln;
+jchar SF_mindustry_gen_Iconc_blockPlastaniumCompressor;
+jchar SF_mindustry_gen_Iconc_blockPhaseWeaver;
+jchar SF_mindustry_gen_Iconc_blockSurgeSmelter;
+jchar SF_mindustry_gen_Iconc_blockCryofluidMixer;
+jchar SF_mindustry_gen_Iconc_blockBlastMixer;
+jchar SF_mindustry_gen_Iconc_blockPyratiteMixer;
+jchar SF_mindustry_gen_Iconc_blockMelter;
+jchar SF_mindustry_gen_Iconc_blockSeparator;
+jchar SF_mindustry_gen_Iconc_blockSporePress;
+jchar SF_mindustry_gen_Iconc_blockPulverizer;
+jchar SF_mindustry_gen_Iconc_blockCoalCentrifuge;
+jchar SF_mindustry_gen_Iconc_blockIncinerator;
+jchar SF_mindustry_gen_Iconc_blockCopperWall;
+jchar SF_mindustry_gen_Iconc_blockCopperWallLarge;
+jchar SF_mindustry_gen_Iconc_blockTitaniumWall;
+jchar SF_mindustry_gen_Iconc_blockTitaniumWallLarge;
+jchar SF_mindustry_gen_Iconc_blockPlastaniumWall;
+jchar SF_mindustry_gen_Iconc_blockPlastaniumWallLarge;
+jchar SF_mindustry_gen_Iconc_blockThoriumWall;
+jchar SF_mindustry_gen_Iconc_blockThoriumWallLarge;
+jchar SF_mindustry_gen_Iconc_blockPhaseWall;
+jchar SF_mindustry_gen_Iconc_blockPhaseWallLarge;
+jchar SF_mindustry_gen_Iconc_blockSurgeWall;
+jchar SF_mindustry_gen_Iconc_blockSurgeWallLarge;
+jchar SF_mindustry_gen_Iconc_blockDoor;
+jchar SF_mindustry_gen_Iconc_blockDoorLarge;
+jchar SF_mindustry_gen_Iconc_blockScrapWall;
+jchar SF_mindustry_gen_Iconc_blockScrapWallLarge;
+jchar SF_mindustry_gen_Iconc_blockScrapWallHuge;
+jchar SF_mindustry_gen_Iconc_blockScrapWallGigantic;
+jchar SF_mindustry_gen_Iconc_blockThruster;
+jchar SF_mindustry_gen_Iconc_blockMender;
+jchar SF_mindustry_gen_Iconc_blockMendProjector;
+jchar SF_mindustry_gen_Iconc_blockOverdriveProjector;
+jchar SF_mindustry_gen_Iconc_blockForceProjector;
+jchar SF_mindustry_gen_Iconc_blockShockMine;
+jchar SF_mindustry_gen_Iconc_blockConveyor;
+jchar SF_mindustry_gen_Iconc_blockTitaniumConveyor;
+jchar SF_mindustry_gen_Iconc_blockArmoredConveyor;
+jchar SF_mindustry_gen_Iconc_blockJunction;
+jchar SF_mindustry_gen_Iconc_blockBridgeConveyor;
+jchar SF_mindustry_gen_Iconc_blockPhaseConveyor;
+jchar SF_mindustry_gen_Iconc_blockSorter;
+jchar SF_mindustry_gen_Iconc_blockInvertedSorter;
+jchar SF_mindustry_gen_Iconc_blockRouter;
+jchar SF_mindustry_gen_Iconc_blockDistributor;
+jchar SF_mindustry_gen_Iconc_blockOverflowGate;
+jchar SF_mindustry_gen_Iconc_blockMassDriver;
+jchar SF_mindustry_gen_Iconc_blockMechanicalPump;
+jchar SF_mindustry_gen_Iconc_blockRotaryPump;
+jchar SF_mindustry_gen_Iconc_blockImpulsePump;
+jchar SF_mindustry_gen_Iconc_blockConduit;
+jchar SF_mindustry_gen_Iconc_blockPulseConduit;
+jchar SF_mindustry_gen_Iconc_blockPlatedConduit;
+jchar SF_mindustry_gen_Iconc_blockLiquidRouter;
+jchar SF_mindustry_gen_Iconc_blockLiquidTank;
+jchar SF_mindustry_gen_Iconc_blockLiquidJunction;
+jchar SF_mindustry_gen_Iconc_blockBridgeConduit;
+jchar SF_mindustry_gen_Iconc_blockPhaseConduit;
+jchar SF_mindustry_gen_Iconc_blockPowerNode;
+jchar SF_mindustry_gen_Iconc_blockPowerNodeLarge;
+jchar SF_mindustry_gen_Iconc_blockSurgeTower;
+jchar SF_mindustry_gen_Iconc_blockDiode;
+jchar SF_mindustry_gen_Iconc_blockBattery;
+jchar SF_mindustry_gen_Iconc_blockBatteryLarge;
+jchar SF_mindustry_gen_Iconc_blockCombustionGenerator;
+jchar SF_mindustry_gen_Iconc_blockThermalGenerator;
+jchar SF_mindustry_gen_Iconc_blockSteamGenerator;
+jchar SF_mindustry_gen_Iconc_blockDifferentialGenerator;
+jchar SF_mindustry_gen_Iconc_blockRtgGenerator;
+jchar SF_mindustry_gen_Iconc_blockSolarPanel;
+jchar SF_mindustry_gen_Iconc_blockSolarPanelLarge;
+jchar SF_mindustry_gen_Iconc_blockThoriumReactor;
+jchar SF_mindustry_gen_Iconc_blockImpactReactor;
+jchar SF_mindustry_gen_Iconc_blockMechanicalDrill;
+jchar SF_mindustry_gen_Iconc_blockPneumaticDrill;
+jchar SF_mindustry_gen_Iconc_blockLaserDrill;
+jchar SF_mindustry_gen_Iconc_blockBlastDrill;
+jchar SF_mindustry_gen_Iconc_blockWaterExtractor;
+jchar SF_mindustry_gen_Iconc_blockCultivator;
+jchar SF_mindustry_gen_Iconc_blockOilExtractor;
+jchar SF_mindustry_gen_Iconc_blockCoreShard;
+jchar SF_mindustry_gen_Iconc_blockCoreFoundation;
+jchar SF_mindustry_gen_Iconc_blockCoreNucleus;
+jchar SF_mindustry_gen_Iconc_blockVault;
+jchar SF_mindustry_gen_Iconc_blockContainer;
+jchar SF_mindustry_gen_Iconc_blockUnloader;
+jchar SF_mindustry_gen_Iconc_blockLaunchPad;
+jchar SF_mindustry_gen_Iconc_blockLaunchPadLarge;
+jchar SF_mindustry_gen_Iconc_blockDuo;
+jchar SF_mindustry_gen_Iconc_blockScatter;
+jchar SF_mindustry_gen_Iconc_blockScorch;
+jchar SF_mindustry_gen_Iconc_blockHail;
+jchar SF_mindustry_gen_Iconc_blockWave;
+jchar SF_mindustry_gen_Iconc_blockLancer;
+jchar SF_mindustry_gen_Iconc_blockArc;
+jchar SF_mindustry_gen_Iconc_blockSwarmer;
+jchar SF_mindustry_gen_Iconc_blockSalvo;
+jchar SF_mindustry_gen_Iconc_blockFuse;
+jchar SF_mindustry_gen_Iconc_blockRipple;
+jchar SF_mindustry_gen_Iconc_blockCyclone;
+jchar SF_mindustry_gen_Iconc_blockSpectre;
+jchar SF_mindustry_gen_Iconc_blockMeltdown;
+jchar SF_mindustry_gen_Iconc_blockDraugFactory;
+jchar SF_mindustry_gen_Iconc_blockSpiritFactory;
+jchar SF_mindustry_gen_Iconc_blockPhantomFactory;
+jchar SF_mindustry_gen_Iconc_blockCommandCenter;
+jchar SF_mindustry_gen_Iconc_blockWraithFactory;
+jchar SF_mindustry_gen_Iconc_blockGhoulFactory;
+jchar SF_mindustry_gen_Iconc_blockRevenantFactory;
+jchar SF_mindustry_gen_Iconc_blockDaggerFactory;
+jchar SF_mindustry_gen_Iconc_blockCrawlerFactory;
+jchar SF_mindustry_gen_Iconc_blockTitanFactory;
+jchar SF_mindustry_gen_Iconc_blockFortressFactory;
+jchar SF_mindustry_gen_Iconc_blockRepairPoint;
+jchar SF_mindustry_gen_Iconc_blockDartMechPad;
+jchar SF_mindustry_gen_Iconc_blockDeltaMechPad;
+jchar SF_mindustry_gen_Iconc_blockTauMechPad;
+jchar SF_mindustry_gen_Iconc_blockOmegaMechPad;
+jchar SF_mindustry_gen_Iconc_blockJavelinShipPad;
+jchar SF_mindustry_gen_Iconc_blockTridentShipPad;
+jchar SF_mindustry_gen_Iconc_blockGlaiveShipPad;
+jchar SF_mindustry_gen_Iconc_blockPowerSource;
+jchar SF_mindustry_gen_Iconc_blockPowerVoid;
+jchar SF_mindustry_gen_Iconc_blockItemSource;
+jchar SF_mindustry_gen_Iconc_blockItemVoid;
+jchar SF_mindustry_gen_Iconc_blockLiquidSource;
+jchar SF_mindustry_gen_Iconc_blockLiquidVoid;
+jchar SF_mindustry_gen_Iconc_blockMessage;
+jchar SF_mindustry_gen_Iconc_blockIlluminator;
+jchar SF_mindustry_gen_Iconc_itemCopper;
+jchar SF_mindustry_gen_Iconc_itemLead;
+jchar SF_mindustry_gen_Iconc_itemMetaglass;
+jchar SF_mindustry_gen_Iconc_itemGraphite;
+jchar SF_mindustry_gen_Iconc_itemSand;
+jchar SF_mindustry_gen_Iconc_itemCoal;
+jchar SF_mindustry_gen_Iconc_itemTitanium;
+jchar SF_mindustry_gen_Iconc_itemThorium;
+jchar SF_mindustry_gen_Iconc_itemScrap;
+jchar SF_mindustry_gen_Iconc_itemSilicon;
+jchar SF_mindustry_gen_Iconc_itemPlastanium;
+jchar SF_mindustry_gen_Iconc_itemPhaseFabric;
+jchar SF_mindustry_gen_Iconc_itemSurgeAlloy;
+jchar SF_mindustry_gen_Iconc_itemSporePod;
+jchar SF_mindustry_gen_Iconc_itemBlastCompound;
+jchar SF_mindustry_gen_Iconc_itemPyratite;
+jchar SF_mindustry_gen_Iconc_liquidWater;
+jchar SF_mindustry_gen_Iconc_liquidSlag;
+jchar SF_mindustry_gen_Iconc_liquidOil;
+jchar SF_mindustry_gen_Iconc_liquidCryofluid;
+jchar SF_mindustry_gen_Iconc_blockUnderflowGate;
+jchar SF_mindustry_gen_Iconc_blockDartShipPad;
+jchar SF_mindustry_gen_Iconc_blockAlphaMechPad;
+jchar SF_mindustry_gen_Iconc_blockCliff;
+jchar SF_mindustry_gen_Iconc_blockLegacyMechPad;
+jchar SF_mindustry_gen_Iconc_blockGroundFactory;
+jchar SF_mindustry_gen_Iconc_blockLegacyUnitFactory;
+jchar SF_mindustry_gen_Iconc_blockMassConveyor;
+jchar SF_mindustry_gen_Iconc_blockLegacyCommandCenter;
+jchar SF_mindustry_gen_Iconc_blockBlockForge;
+jchar SF_mindustry_gen_Iconc_blockBlockLauncher;
+jchar SF_mindustry_gen_Iconc_blockPlastaniumConveyor;
+jchar SF_mindustry_gen_Iconc_crater;
+jchar SF_mindustry_gen_Iconc_blockNavalFactory;
+jchar SF_mindustry_gen_Iconc_blockAirFactory;
+jchar SF_mindustry_gen_Iconc_blockBasicReconstructor;
+jchar SF_mindustry_gen_Iconc_blockBlockLoader;
+jchar SF_mindustry_gen_Iconc_blockBlockUnloader;
+jchar SF_mindustry_gen_Iconc_blockCoreSilo;
+jchar SF_mindustry_gen_Iconc_blockDataProcessor;
+jchar SF_mindustry_gen_Iconc_blockPayloadRouter;
+jchar SF_mindustry_gen_Iconc_blockSiliconCrucible;
+jchar SF_mindustry_gen_Iconc_blockSegment;
+jchar SF_mindustry_gen_Iconc_blockLargeOverdriveProjector;
+jchar SF_mindustry_gen_Iconc_blockDisassembler;
+jchar SF_mindustry_gen_Iconc_blockAdditiveReconstructor;
+jchar SF_mindustry_gen_Iconc_blockMultiplicativeReconstructor;
+jchar SF_mindustry_gen_Iconc_blockExponentialReconstructor;
+jchar SF_mindustry_gen_Iconc_blockTetrativeReconstructor;
+jchar SF_mindustry_gen_Iconc_blockResupplyPoint;
+jchar SF_mindustry_gen_Iconc_blockParallax;
+jchar SF_mindustry_gen_Iconc_unitDagger;
+jchar SF_mindustry_gen_Iconc_unitMace;
+jchar SF_mindustry_gen_Iconc_unitFortress;
+jchar SF_mindustry_gen_Iconc_unitNova;
+jchar SF_mindustry_gen_Iconc_unitPulsar;
+jchar SF_mindustry_gen_Iconc_unitQuasar;
+jchar SF_mindustry_gen_Iconc_unitCrawler;
+jchar SF_mindustry_gen_Iconc_unitAtrax;
+jchar SF_mindustry_gen_Iconc_unitSpiroct;
+jchar SF_mindustry_gen_Iconc_unitArkyid;
+jchar SF_mindustry_gen_Iconc_unitFlare;
+jchar SF_mindustry_gen_Iconc_unitHorizon;
+jchar SF_mindustry_gen_Iconc_unitZenith;
+jchar SF_mindustry_gen_Iconc_unitAntumbra;
+jchar SF_mindustry_gen_Iconc_unitEclipse;
+jchar SF_mindustry_gen_Iconc_unitMono;
+jchar SF_mindustry_gen_Iconc_unitPoly;
+jchar SF_mindustry_gen_Iconc_unitMega;
+jchar SF_mindustry_gen_Iconc_unitRisse;
+jchar SF_mindustry_gen_Iconc_unitMinke;
+jchar SF_mindustry_gen_Iconc_unitBryde;
+jchar SF_mindustry_gen_Iconc_unitAlpha;
+jchar SF_mindustry_gen_Iconc_unitBeta;
+jchar SF_mindustry_gen_Iconc_unitGamma;
+jchar SF_mindustry_gen_Iconc_unitBlock;
+jchar SF_mindustry_gen_Iconc_unitRisso;
+jchar SF_mindustry_gen_Iconc_blockOverdriveDome;
+jchar SF_mindustry_gen_Iconc_blockLogicProcessor;
+jchar SF_mindustry_gen_Iconc_blockMicroProcessor;
+jchar SF_mindustry_gen_Iconc_blockLogicDisplay;
+jchar SF_mindustry_gen_Iconc_blockSwitch;
+jchar SF_mindustry_gen_Iconc_blockMemoryCell;
+jchar SF_mindustry_gen_Iconc_blockPayloadConveyor;
+jchar SF_mindustry_gen_Iconc_blockHyperProcessor;
+jchar SF_mindustry_gen_Iconc_unitToxopid;
+jchar SF_mindustry_gen_Iconc_unitVestige;
+jchar SF_mindustry_gen_Iconc_unitCataclyst;
+jchar SF_mindustry_gen_Iconc_unitScepter;
+jchar SF_mindustry_gen_Iconc_unitReign;
+jchar SF_mindustry_gen_Iconc_blockDirt;
+jchar SF_mindustry_gen_Iconc_blockStoneWall;
+jchar SF_mindustry_gen_Iconc_blockSporeWall;
+jchar SF_mindustry_gen_Iconc_blockIceWall;
+jchar SF_mindustry_gen_Iconc_blockSnowWall;
+jchar SF_mindustry_gen_Iconc_blockDuneWall;
+jchar SF_mindustry_gen_Iconc_blockSandWall;
+jchar SF_mindustry_gen_Iconc_blockSaltWall;
+jchar SF_mindustry_gen_Iconc_blockShaleWall;
+jchar SF_mindustry_gen_Iconc_blockDirtWall;
+jchar SF_mindustry_gen_Iconc_blockBasalt;
+jchar SF_mindustry_gen_Iconc_blockDacite;
+jchar SF_mindustry_gen_Iconc_blockBoulder;
+jchar SF_mindustry_gen_Iconc_blockSnowBoulder;
+jchar SF_mindustry_gen_Iconc_blockDaciteWall;
+jchar SF_mindustry_gen_Iconc_blockDaciteBoulder;
+jchar SF_mindustry_gen_Iconc_blockLargeLogicDisplay;
+jchar SF_mindustry_gen_Iconc_unitOmura;
+jchar SF_mindustry_gen_Iconc_blockMud;
+jchar SF_mindustry_gen_Iconc_unitSei;
+jchar SF_mindustry_gen_Iconc_unitQuad;
+jchar SF_mindustry_gen_Iconc_unitOct;
+jchar SF_mindustry_gen_Iconc_unitVela;
+jchar SF_mindustry_gen_Iconc_unitCorvus;
+jchar SF_mindustry_gen_Iconc_blockMemoryBank;
+jchar SF_mindustry_gen_Iconc_blockForeshadow;
+jchar SF_mindustry_gen_Iconc_blockTsunami;
+jchar SF_mindustry_gen_Iconc_blockSpace;
+jchar SF_mindustry_gen_Iconc_blockLegacyUnitFactoryAir;
+jchar SF_mindustry_gen_Iconc_blockLegacyUnitFactoryGround;
+jchar SF_mindustry_gen_Iconc_blockInterplanetaryAccelerator;
+jchar SF_mindustry_gen_Iconc_blockBasaltBoulder;
+jchar SF_mindustry_gen_Iconc_statusNone;
+jchar SF_mindustry_gen_Iconc_statusBurning;
+jchar SF_mindustry_gen_Iconc_statusFreezing;
+jchar SF_mindustry_gen_Iconc_statusUnmoving;
+jchar SF_mindustry_gen_Iconc_statusSlow;
+jchar SF_mindustry_gen_Iconc_statusWet;
+jchar SF_mindustry_gen_Iconc_statusMuddy;
+jchar SF_mindustry_gen_Iconc_statusMelting;
+jchar SF_mindustry_gen_Iconc_statusSapped;
+jchar SF_mindustry_gen_Iconc_statusSporeSlowed;
+jchar SF_mindustry_gen_Iconc_statusTarred;
+jchar SF_mindustry_gen_Iconc_statusOverdrive;
+jchar SF_mindustry_gen_Iconc_statusOverclock;
+jchar SF_mindustry_gen_Iconc_statusShielded;
+jchar SF_mindustry_gen_Iconc_statusBoss;
+jchar SF_mindustry_gen_Iconc_statusShocked;
+jchar SF_mindustry_gen_Iconc_statusBlasted;
+jchar SF_mindustry_gen_Iconc_statusCorroded;
+jchar SF_mindustry_gen_Iconc_statusDisarmed;
+jchar SF_mindustry_gen_Iconc_blockDuct;
+jchar SF_mindustry_gen_Iconc_blockRepairTurret;
+jchar SF_mindustry_gen_Iconc_blockPayloadIncinerator;
+jchar SF_mindustry_gen_Iconc_blockPayloadVoid;
+jchar SF_mindustry_gen_Iconc_blockPayloadSource;
+jchar SF_mindustry_gen_Iconc_unitRetusa;
+jchar SF_mindustry_gen_Iconc_blockDuctRouter;
+jchar SF_mindustry_gen_Iconc_blockDuctBridge;
+jchar SF_mindustry_gen_Iconc_unitOxynoe;
+jchar SF_mindustry_gen_Iconc_unitCyerce;
+jchar SF_mindustry_gen_Iconc_unitAegires;
+jchar SF_mindustry_gen_Iconc_statusElectrified;
+jchar SF_mindustry_gen_Iconc_unitNavanax;
+jchar SF_mindustry_gen_Iconc_blockSiliconArcFurnace;
+jchar SF_mindustry_gen_Iconc_blockMetalFloor4;
+jchar SF_mindustry_gen_Iconc_statusInvincible;
+jchar SF_mindustry_gen_Iconc_teamSharded;
+jchar SF_mindustry_gen_Iconc_teamCrux;
+jchar SF_mindustry_gen_Iconc_teamDerelict;
+jchar SF_mindustry_gen_Iconc_blockDeepWater;
+jchar SF_mindustry_gen_Iconc_blockMoltenSlag;
+jchar SF_mindustry_gen_Iconc_blockCraterStone;
+jchar SF_mindustry_gen_Iconc_blockDeepTaintedWater;
+jchar SF_mindustry_gen_Iconc_blockPooledCryofluid;
+jchar SF_mindustry_gen_Iconc_blockEmpty;
+jchar SF_mindustry_gen_Iconc_blockLiquidContainer;
+jchar SF_mindustry_gen_Iconc_blockDeconstructor;
+jchar SF_mindustry_gen_Iconc_blockConstructor;
+jchar SF_mindustry_gen_Iconc_blockLargeConstructor;
+jchar SF_mindustry_gen_Iconc_blockPayloadLoader;
+jchar SF_mindustry_gen_Iconc_blockPayloadUnloader;
+jchar SF_mindustry_gen_Iconc_blockRhyolite;
+jchar SF_mindustry_gen_Iconc_blockRhyoliteCrater;
+jchar SF_mindustry_gen_Iconc_blockRegolith;
+jchar SF_mindustry_gen_Iconc_blockYellowStone;
+jchar SF_mindustry_gen_Iconc_blockCarbonStone;
+jchar SF_mindustry_gen_Iconc_blockFerricStone;
+jchar SF_mindustry_gen_Iconc_blockFerricCraters;
+jchar SF_mindustry_gen_Iconc_blockBeryllicStone;
+jchar SF_mindustry_gen_Iconc_blockRedIce;
+jchar SF_mindustry_gen_Iconc_blockRedmat;
+jchar SF_mindustry_gen_Iconc_blockBluemat;
+jchar SF_mindustry_gen_Iconc_blockRegolithWall;
+jchar SF_mindustry_gen_Iconc_blockYellowStoneWall;
+jchar SF_mindustry_gen_Iconc_blockRhyoliteWall;
+jchar SF_mindustry_gen_Iconc_blockCarbonWall;
+jchar SF_mindustry_gen_Iconc_blockFerricStoneWall;
+jchar SF_mindustry_gen_Iconc_blockBeryllicStoneWall;
+jchar SF_mindustry_gen_Iconc_blockRedIceWall;
+jchar SF_mindustry_gen_Iconc_blockRedweed;
+jchar SF_mindustry_gen_Iconc_blockPurBush;
+jchar SF_mindustry_gen_Iconc_blockYellowcoral;
+jchar SF_mindustry_gen_Iconc_blockCarbonBoulder;
+jchar SF_mindustry_gen_Iconc_blockFerricBoulder;
+jchar SF_mindustry_gen_Iconc_blockBeryllicBoulder;
+jchar SF_mindustry_gen_Iconc_blockWallOreBeryllium;
+jchar SF_mindustry_gen_Iconc_blockGraphiticWall;
+jchar SF_mindustry_gen_Iconc_blockCellSynthesisChamber;
+jchar SF_mindustry_gen_Iconc_blockCliffCrusher;
+jchar SF_mindustry_gen_Iconc_blockBeamDrill;
+jchar SF_mindustry_gen_Iconc_blockNuclearWarhead;
+jchar SF_mindustry_gen_Iconc_blockWarheadAssembler;
+jchar SF_mindustry_gen_Iconc_blockBallisticSilo;
+jchar SF_mindustry_gen_Iconc_itemBeryllium;
+jchar SF_mindustry_gen_Iconc_itemFissileMatter;
+jchar SF_mindustry_gen_Iconc_itemDormantCyst;
+jchar SF_mindustry_gen_Iconc_liquidNeoplasm;
+jchar SF_mindustry_gen_Iconc_blockPlasmaBore;
+jchar SF_mindustry_gen_Iconc_blockSteamVent;
+jchar SF_mindustry_gen_Iconc_blockPressureTurbine;
+jchar SF_mindustry_gen_Iconc_blockTurbineCondenser;
+jchar SF_mindustry_gen_Iconc_blockBeamNode;
+jchar SF_mindustry_gen_Iconc_blockBeamTower;
+jchar SF_mindustry_gen_Iconc_blockBuildTower;
+jchar SF_mindustry_gen_Iconc_itemTungsten;
+jchar SF_mindustry_gen_Iconc_blockOreTungsten;
+jchar SF_mindustry_gen_Iconc_blockImpactDrill;
+jchar SF_mindustry_gen_Iconc_itemCarbide;
+jchar SF_mindustry_gen_Iconc_unitEvoke;
+jchar SF_mindustry_gen_Iconc_blockCarbideCrucible;
+jchar SF_mindustry_gen_Iconc_blockSurgeDuct;
+jchar SF_mindustry_gen_Iconc_blockSurgeConveyor;
+jchar SF_mindustry_gen_Iconc_blockDuctUnloader;
+jchar SF_mindustry_gen_Iconc_blockSurgeRouter;
+jchar SF_mindustry_gen_Iconc_blockReinforcedConduit;
+jchar SF_mindustry_gen_Iconc_blockReinforcedLiquidRouter;
+jchar SF_mindustry_gen_Iconc_blockReinforcedLiquidContainer;
+jchar SF_mindustry_gen_Iconc_blockReinforcedLiquidTank;
+jchar SF_mindustry_gen_Iconc_blockReinforcedBridgeConduit;
+jchar SF_mindustry_gen_Iconc_blockCoreCitadel;
+jchar SF_mindustry_gen_Iconc_blockCoreAcropolis;
+jchar SF_mindustry_gen_Iconc_blockHeatReactor;
+jchar SF_mindustry_gen_Iconc_blockCoreBastion;
+jchar SF_mindustry_gen_Iconc_unitIncite;
+jchar SF_mindustry_gen_Iconc_blockOxidizer;
+jchar SF_mindustry_gen_Iconc_blockReinforcedPump;
+jchar SF_mindustry_gen_Iconc_itemOxide;
+jchar SF_mindustry_gen_Iconc_liquidOxygen;
+jchar SF_mindustry_gen_Iconc_liquidHydrogen;
+jchar SF_mindustry_gen_Iconc_blockElectrolyzer;
+jchar SF_mindustry_gen_Iconc_liquidOzone;
+jchar SF_mindustry_gen_Iconc_blockReinforcedLiquidJunction;
+jchar SF_mindustry_gen_Iconc_blockOxidationChamber;
+jchar SF_mindustry_gen_Iconc_blockSurgeCrucible;
+jchar SF_mindustry_gen_Iconc_unitEmanate;
+jchar SF_mindustry_gen_Iconc_blockOverflowDuct;
+jchar SF_mindustry_gen_Iconc_blockLargePlasmaBore;
+jchar SF_mindustry_gen_Iconc_blockCyanogenSynthesizer;
+jchar SF_mindustry_gen_Iconc_liquidCyanogen;
+jchar SF_mindustry_gen_Iconc_liquidGallium;
+jchar SF_mindustry_gen_Iconc_blockSlagCentrifuge;
+jchar SF_mindustry_gen_Iconc_blockSlagIncinerator;
+jchar SF_mindustry_gen_Iconc_blockPhaseSynthesizer;
+jchar SF_mindustry_gen_Iconc_blockSublimate;
+jchar SF_mindustry_gen_Iconc_blockReinforcedContainer;
+jchar SF_mindustry_gen_Iconc_blockReinforcedVault;
+jchar SF_mindustry_gen_Iconc_liquidNitrogen;
+jchar SF_mindustry_gen_Iconc_blockAtmosphericConcentrator;
+jchar SF_mindustry_gen_Iconc_blockUnitCargoLoader;
+jchar SF_mindustry_gen_Iconc_blockUnitCargoUnloadPoint;
+jchar SF_mindustry_gen_Iconc_unitManifold;
+jchar SF_mindustry_gen_Iconc_blockArkyciteFloor;
+jchar SF_mindustry_gen_Iconc_liquidArkycite;
+jchar SF_mindustry_gen_Iconc_blockChemicalCombustionChamber;
+jchar SF_mindustry_gen_Iconc_blockArkyicStone;
+jchar SF_mindustry_gen_Iconc_blockYellowStoneBoulder;
+jchar SF_mindustry_gen_Iconc_blockPyrolysisGenerator;
+jchar SF_mindustry_gen_Iconc_blockWallOreTungsten;
+jchar SF_mindustry_gen_Iconc_blockRegenProjector;
+jchar SF_mindustry_gen_Iconc_blockTitan;
+jchar SF_mindustry_gen_Iconc_blockSmallDeconstructor;
+jchar SF_mindustry_gen_Iconc_blockBarrierProjector;
+jchar SF_mindustry_gen_Iconc_blockVentCondenser;
+jchar SF_mindustry_gen_Iconc_blockElectricHeater;
+jchar SF_mindustry_gen_Iconc_blockPhaseHeater;
+jchar SF_mindustry_gen_Iconc_blockArkyicWall;
+jchar SF_mindustry_gen_Iconc_blockHeatRedirector;
+jchar SF_mindustry_gen_Iconc_unitVanquish;
+jchar SF_mindustry_gen_Iconc_blockTungstenWall;
+jchar SF_mindustry_gen_Iconc_blockTungstenWallLarge;
+jchar SF_mindustry_gen_Iconc_blockTankAssembler;
+jchar SF_mindustry_gen_Iconc_unitAssemblyDrone;
+jchar SF_mindustry_gen_Iconc_blockBerylliumWall;
+jchar SF_mindustry_gen_Iconc_blockBerylliumWallLarge;
+jchar SF_mindustry_gen_Iconc_unitQuell;
+jchar SF_mindustry_gen_Iconc_blockBreach;
+jchar SF_mindustry_gen_Iconc_blockEruptionDrill;
+jchar SF_mindustry_gen_Iconc_blockShipAssembler;
+jchar SF_mindustry_gen_Iconc_unitQuellMissile;
+jchar SF_mindustry_gen_Iconc_blockMechAssembler;
+jchar SF_mindustry_gen_Iconc_blockOreCrystalThorium;
+jchar SF_mindustry_gen_Iconc_blockOreWallBeryllium;
+jchar SF_mindustry_gen_Iconc_blockOreWallTungsten;
+jchar SF_mindustry_gen_Iconc_blockArkyicBoulder;
+jchar SF_mindustry_gen_Iconc_blockCrystallineStone;
+jchar SF_mindustry_gen_Iconc_blockCrystallineStoneWall;
+jchar SF_mindustry_gen_Iconc_blockCrystalCluster;
+jchar SF_mindustry_gen_Iconc_blockCrystallineBoulder;
+jchar SF_mindustry_gen_Iconc_blockCrystalFloor;
+jchar SF_mindustry_gen_Iconc_blockVibrantCrystalCluster;
+jchar SF_mindustry_gen_Iconc_blockRedIceBoulder;
+jchar SF_mindustry_gen_Iconc_blockCrystalBlocks;
+jchar SF_mindustry_gen_Iconc_blockYellowStonePlates;
+jchar SF_mindustry_gen_Iconc_blockRoughRhyolite;
+jchar SF_mindustry_gen_Iconc_blockRhyoliteBoulder;
+jchar SF_mindustry_gen_Iconc_blockRedStone;
+jchar SF_mindustry_gen_Iconc_blockDenseRedStone;
+jchar SF_mindustry_gen_Iconc_blockRedStoneWall;
+jchar SF_mindustry_gen_Iconc_blockRedStoneBoulder;
+jchar SF_mindustry_gen_Iconc_blockRedDiamondWall;
+jchar SF_mindustry_gen_Iconc_blockCrystalOrbs;
+jchar SF_mindustry_gen_Iconc_unitConquer;
+jchar SF_mindustry_gen_Iconc_unitDisrupt;
+jchar SF_mindustry_gen_Iconc_unitDisruptMissile;
+jchar SF_mindustry_gen_Iconc_blockRhyoliteVent;
+jchar SF_mindustry_gen_Iconc_blockArkyicVent;
+jchar SF_mindustry_gen_Iconc_blockYellowStoneVent;
+jchar SF_mindustry_gen_Iconc_blockRedStoneVent;
+jchar SF_mindustry_gen_Iconc_blockCarbonVent;
+jchar SF_mindustry_gen_Iconc_blockShieldProjector;
+jchar SF_mindustry_gen_Iconc_blockBeamLink;
+jchar SF_mindustry_gen_Iconc_unitEffectDrone;
+jchar SF_mindustry_gen_Iconc_blockWorldProcessor;
+jchar SF_mindustry_gen_Iconc_blockReinforcedPayloadConveyor;
+jchar SF_mindustry_gen_Iconc_blockReinforcedPayloadRouter;
+jchar SF_mindustry_gen_Iconc_blockDisperse;
+jchar SF_mindustry_gen_Iconc_blockLargeShieldProjector;
+jchar SF_mindustry_gen_Iconc_blockPayloadMassDriver;
+jchar SF_mindustry_gen_Iconc_blockWorldCell;
+jchar SF_mindustry_gen_Iconc_blockCarbideWall;
+jchar SF_mindustry_gen_Iconc_blockCarbideWallLarge;
+jchar SF_mindustry_gen_Iconc_blockOreWallThorium;
+jchar SF_mindustry_gen_Iconc_blockCoreZone;
+jchar SF_mindustry_gen_Iconc_blockFabricator;
+jchar SF_mindustry_gen_Iconc_unitStell;
+jchar SF_mindustry_gen_Iconc_blockOreBeryllium;
+jchar SF_mindustry_gen_Iconc_unitLocus;
+jchar SF_mindustry_gen_Iconc_unitAvert;
+jchar SF_mindustry_gen_Iconc_unitCleroi;
+jchar SF_mindustry_gen_Iconc_blockTankReconstructor;
+jchar SF_mindustry_gen_Iconc_blockMechReconstructor;
+jchar SF_mindustry_gen_Iconc_blockShipReconstructor;
+jchar SF_mindustry_gen_Iconc_blockRadar;
+jchar SF_mindustry_gen_Iconc_unitTurretUnitBuildTower;
+jchar SF_mindustry_gen_Iconc_blockBlastDoor;
+jchar SF_mindustry_gen_Iconc_alphaaaa;
+jchar SF_mindustry_gen_Iconc_teamMalis;
+jchar SF_mindustry_gen_Iconc_blockCanvas;
+jchar SF_mindustry_gen_Iconc_blockArmoredDuct;
+jchar SF_mindustry_gen_Iconc_unitAnthicus;
+jchar SF_mindustry_gen_Iconc_unitAnthicusMissile;
+jchar SF_mindustry_gen_Iconc_unitObviate;
+jchar SF_mindustry_gen_Iconc_blockTankFabricator;
+jchar SF_mindustry_gen_Iconc_blockMechFabricator;
+jchar SF_mindustry_gen_Iconc_blockShipFabricator;
+jchar SF_mindustry_gen_Iconc_blockUnitRepairTower;
+jchar SF_mindustry_gen_Iconc_unitMerui;
+jchar SF_mindustry_gen_Iconc_unitOsc;
+jchar SF_mindustry_gen_Iconc_unitPrecept;
+jchar SF_mindustry_gen_Iconc_blockDiffuse;
+jchar SF_mindustry_gen_Iconc_blockBasicAssemblerModule;
+jchar SF_mindustry_gen_Iconc_unitTecta;
+jchar SF_mindustry_gen_Iconc_unitCollaris;
+jchar SF_mindustry_gen_Iconc_unitElude;
+jchar SF_mindustry_gen_Iconc_blockRefabricator;
+jchar SF_mindustry_gen_Iconc_blockPrimeRefabricator;
+jchar SF_mindustry_gen_Iconc_unitLatum;
+jchar SF_mindustry_gen_Iconc_blockReinforcedSurgeWall;
+jchar SF_mindustry_gen_Iconc_blockReinforcedSurgeWallLarge;
+jchar SF_mindustry_gen_Iconc_blockTankRefabricator;
+jchar SF_mindustry_gen_Iconc_blockMechRefabricator;
+jchar SF_mindustry_gen_Iconc_blockShipRefabricator;
+jchar SF_mindustry_gen_Iconc_blockSlagHeater;
+jchar SF_mindustry_gen_Iconc_blockAfflict;
+jchar SF_mindustry_gen_Iconc_blockShieldedWall;
+jchar SF_mindustry_gen_Iconc_blockFracture;
+jchar SF_mindustry_gen_Iconc_unitRenale;
+jchar SF_mindustry_gen_Iconc_blockLustre;
+jchar SF_mindustry_gen_Iconc_blockScathe;
+jchar SF_mindustry_gen_Iconc_unitScatheMissile;
+jchar SF_mindustry_gen_Iconc_blockRavage;
+jchar SF_mindustry_gen_Iconc_blockUnderflowDuct;
+jchar SF_mindustry_gen_Iconc_blockMalign;
+jchar SF_mindustry_gen_Iconc_blockSmite;
+jchar SF_mindustry_gen_Iconc_blockShockwaveTower;
+jchar SF_mindustry_gen_Iconc_blockHeatSource;
+jchar SF_mindustry_gen_Iconc_blockFluxReactor;
+jchar SF_mindustry_gen_Iconc_blockNeoplasiaReactor;
+jchar SF_mindustry_gen_Iconc_blockSandFloor;
+jchar SF_mindustry_gen_Iconc_blockCrystallineVent;
+jchar SF_mindustry_gen_Iconc_blockHeatRouter;
+jchar SF_mindustry_gen_Iconc_blockLargePayloadMassDriver;
+jchar SF_mindustry_gen_Iconc_blockReinforcedMessage;
+jchar SF_mindustry_gen_Iconc_blockWorldMessage;
+jchar SF_mindustry_gen_Iconc_statusFast;
+jchar SF_mindustry_gen_Iconc_ranai;
+jchar SF_mindustry_gen_Iconc_cat;
+jchar SF_mindustry_gen_Iconc_blockWorldSwitch;
+jchar SF_mindustry_gen_Iconc_statusDynamic;
+jchar SF_mindustry_gen_Iconc_blockRemoveWall;
+jchar SF_mindustry_gen_Iconc_blockRemoveOre;
+jchar SF_mindustry_gen_Iconc_blockSmallHeatRedirector;
+jchar SF_mindustry_gen_Iconc_blockLargeCliffCrusher;
+jchar SF_mindustry_gen_Iconc_unitScatheMissilePhase;
+jchar SF_mindustry_gen_Iconc_unitScatheMissileSurge;
+jchar SF_mindustry_gen_Iconc_unitScatheMissileSurgeSplit;
+jchar SF_mindustry_gen_Iconc_blockAdvancedLaunchPad;
+jchar SF_mindustry_gen_Iconc_blockLandingPad;
+jchar SF_mindustry_gen_Iconc_blockStoneVent;
+jchar SF_mindustry_gen_Iconc_blockBasaltVent;
+jchar SF_mindustry_gen_Iconc_blockTileLogicDisplay;
+jchar SF_mindustry_gen_Iconc_blockMetalTiles1;
+jchar SF_mindustry_gen_Iconc_blockMetalTiles2;
+jchar SF_mindustry_gen_Iconc_blockMetalTiles3;
+jchar SF_mindustry_gen_Iconc_blockMetalTiles4;
+jchar SF_mindustry_gen_Iconc_blockColoredFloor;
+jchar SF_mindustry_gen_Iconc_blockMetalTiles5;
+jchar SF_mindustry_gen_Iconc_blockMetalTiles6;
+jchar SF_mindustry_gen_Iconc_blockMetalTiles7;
+jchar SF_mindustry_gen_Iconc_blockMetalTiles8;
+jchar SF_mindustry_gen_Iconc_blockMetalTiles9;
+jchar SF_mindustry_gen_Iconc_blockMetalTiles10;
+jchar SF_mindustry_gen_Iconc_blockColoredWall;
+jchar SF_mindustry_gen_Iconc_blockMetalTiles11;
+jchar SF_mindustry_gen_Iconc_blockMetalTiles12;
+jchar SF_mindustry_gen_Iconc_blockCharacterOverlay;
+jchar SF_mindustry_gen_Iconc_blockCharacterOverlayWhite;
+jchar SF_mindustry_gen_Iconc_blockRuneOverlayCrux;
+jchar SF_mindustry_gen_Iconc_blockRuneOverlay;
+jchar SF_mindustry_gen_Iconc_blockMetalWall1;
+jchar SF_mindustry_gen_Iconc_blockMetalWall2;
+jchar SF_mindustry_gen_Iconc_blockMetalTiles13;
+jchar SF_mindustry_gen_Iconc_blockMetalWall3;
+jchar SF_mindustry_gen_Iconc_blockOreWallGraphite;
+jchar SF_mindustry_gen_Iconc_blockLargeCanvas;
+jchar SF_mindustry_gen_Iconc_blockTargetDummy;
+jchar SF_mindustry_gen_Iconc_unitDummy;
+jobject SF_mindustry_gen_Iconc_codes;
+jobject SF_mindustry_gen_Iconc_codeToName;
+jchar SF_mindustry_gen_Iconc_fileTextFill;
+jchar SF_mindustry_gen_Iconc_file;
+jchar SF_mindustry_gen_Iconc_fileText;
+jchar SF_mindustry_gen_Iconc_left;
+jchar SF_mindustry_gen_Iconc_right;
+jchar SF_mindustry_gen_Iconc_up;
+jchar SF_mindustry_gen_Iconc_down;
+jchar SF_mindustry_gen_Iconc_home;
+jchar SF_mindustry_gen_Iconc_ok;
+jchar SF_mindustry_gen_Iconc_image;
+jchar SF_mindustry_gen_Iconc_star;
+jchar SF_mindustry_gen_Iconc_resize;
+jchar SF_mindustry_gen_Iconc_wrench;
+jchar SF_mindustry_gen_Iconc_githubSquare;
+jchar SF_mindustry_gen_Iconc_fileImage;
+jchar SF_mindustry_gen_Iconc_add;
+jchar SF_mindustry_gen_Iconc_edit;
+jchar SF_mindustry_gen_Iconc_chartBar;
+jchar SF_mindustry_gen_Iconc_planeOutline;
+jchar SF_mindustry_gen_Iconc_filter;
+jchar SF_mindustry_gen_Iconc_folder;
+jchar SF_mindustry_gen_Iconc_steam;
+jchar SF_mindustry_gen_Iconc_downOpen;
+jchar SF_mindustry_gen_Iconc_leftOpen;
+jchar SF_mindustry_gen_Iconc_upOpen;
+jchar SF_mindustry_gen_Iconc_map;
+jchar SF_mindustry_gen_Iconc_rotate;
+jchar SF_mindustry_gen_Iconc_play;
+jchar SF_mindustry_gen_Iconc_pause;
+jchar SF_mindustry_gen_Iconc_list;
+jchar SF_mindustry_gen_Iconc_cancel;
+jchar SF_mindustry_gen_Iconc_move;
+jchar SF_mindustry_gen_Iconc_terminal;
+jchar SF_mindustry_gen_Iconc_undo;
+jchar SF_mindustry_gen_Iconc_redo;
+jchar SF_mindustry_gen_Iconc_info;
+jchar SF_mindustry_gen_Iconc_infoCircle;
+jchar SF_mindustry_gen_Iconc_rightOpenOut;
+jchar SF_mindustry_gen_Iconc_rightOpen;
+jchar SF_mindustry_gen_Iconc_waves;
+jchar SF_mindustry_gen_Iconc_filters;
+jchar SF_mindustry_gen_Iconc_layers;
+jchar SF_mindustry_gen_Iconc_eraser;
+jchar SF_mindustry_gen_Iconc_bookOpen;
+jchar SF_mindustry_gen_Iconc_grid;
+jchar SF_mindustry_gen_Iconc_flipX;
+jchar SF_mindustry_gen_Iconc_flipY;
+jchar SF_mindustry_gen_Iconc_diagonal;
+jchar SF_mindustry_gen_Iconc_discord;
+jchar SF_mindustry_gen_Iconc_redditAlien;
+jchar SF_mindustry_gen_Iconc_github;
+jchar SF_mindustry_gen_Iconc_googleplay;
+jchar SF_mindustry_gen_Iconc_android;
+jchar SF_mindustry_gen_Iconc_trello;
+jchar SF_mindustry_gen_Iconc_logic;
+jchar SF_mindustry_gen_Iconc_distribution;
+jchar SF_mindustry_gen_Iconc_hammer;
+jchar SF_mindustry_gen_Iconc_save;
+jchar SF_mindustry_gen_Iconc_link;
+jchar SF_mindustry_gen_Iconc_itchio;
+jchar SF_mindustry_gen_Iconc_line;
+jchar SF_mindustry_gen_Iconc_admin;
+jchar SF_mindustry_gen_Iconc_spray1;
+jchar SF_mindustry_gen_Iconc_crafting;
+jchar SF_mindustry_gen_Iconc_fill;
+jchar SF_mindustry_gen_Iconc_paste;
+jchar SF_mindustry_gen_Iconc_effect;
+jchar SF_mindustry_gen_Iconc_book;
+jchar SF_mindustry_gen_Iconc_liquid;
+jchar SF_mindustry_gen_Iconc_host;
+jchar SF_mindustry_gen_Iconc_production;
+jchar SF_mindustry_gen_Iconc_exit;
+jchar SF_mindustry_gen_Iconc_modePvp;
+jchar SF_mindustry_gen_Iconc_modeAttack;
+jchar SF_mindustry_gen_Iconc_refresh1;
+jchar SF_mindustry_gen_Iconc_none;
+jchar SF_mindustry_gen_Iconc_pencil;
+jchar SF_mindustry_gen_Iconc_refresh;
+jchar SF_mindustry_gen_Iconc_modeSurvival;
+jchar SF_mindustry_gen_Iconc_commandRally;
+jchar SF_mindustry_gen_Iconc_units;
+jchar SF_mindustry_gen_Iconc_commandAttack;
+jchar SF_mindustry_gen_Iconc_trash;
+jchar SF_mindustry_gen_Iconc_chat;
+jchar SF_mindustry_gen_Iconc_turret;
+jchar SF_mindustry_gen_Iconc_players;
+jchar SF_mindustry_gen_Iconc_editor;
+jchar SF_mindustry_gen_Iconc_copy;
+jchar SF_mindustry_gen_Iconc_tree;
+jchar SF_mindustry_gen_Iconc_lockOpen;
+jchar SF_mindustry_gen_Iconc_pick;
+jchar SF_mindustry_gen_Iconc_export;
+jchar SF_mindustry_gen_Iconc_download;
+jchar SF_mindustry_gen_Iconc_upload;
+jchar SF_mindustry_gen_Iconc_settings;
+jchar SF_mindustry_gen_Iconc_spray;
+jchar SF_mindustry_gen_Iconc_zoom;
+jchar SF_mindustry_gen_Iconc_powerOld;
+jchar SF_mindustry_gen_Iconc_power;
+jchar SF_mindustry_gen_Iconc_menu;
+jchar SF_mindustry_gen_Iconc_lock;
+jchar SF_mindustry_gen_Iconc_eye;
+jchar SF_mindustry_gen_Iconc_eyeOff;
+jchar SF_mindustry_gen_Iconc_warning;
+jchar SF_mindustry_gen_Iconc_terrain;
+jchar SF_mindustry_gen_Iconc_defense;
+jchar SF_mindustry_gen_Iconc_planet;
+jchar SF_mindustry_gen_Iconc_arrowNote;
+jchar SF_mindustry_gen_Iconc_music;
+jchar SF_mindustry_gen_Iconc_fileAudio;
+jchar SF_mindustry_gen_Iconc_volumeOff;
+jchar SF_mindustry_gen_Iconc_volumeDown;
+jchar SF_mindustry_gen_Iconc_volumeUp;
+jchar SF_mindustry_gen_Iconc_tag;
+jchar SF_mindustry_gen_Iconc_tags;
+jchar SF_mindustry_gen_Iconc_battery4;
+jchar SF_mindustry_gen_Iconc_battery3;
+jchar SF_mindustry_gen_Iconc_battery2;
+jchar SF_mindustry_gen_Iconc_battery1;
+jchar SF_mindustry_gen_Iconc_battery0;
+jchar SF_mindustry_gen_Iconc_fileCode;
+jchar SF_mindustry_gen_Iconc_fileVideo;
+jchar SF_mindustry_gen_Iconc_fileArchive;
+jchar SF_mindustry_gen_Iconc_folderOpen;
+jchar SF_mindustry_gen_Iconc_folderEmpty;
+jchar SF_mindustry_gen_Iconc_folderOpenEmpty;
+jchar SF_mindustry_gen_Iconc_inbox;
+jchar SF_mindustry_gen_Iconc_sitemap;
+jchar SF_mindustry_gen_Iconc_cloud;
+jchar SF_mindustry_gen_Iconc_uploadCloud;
+jchar SF_mindustry_gen_Iconc_downloadCloud;
+jchar SF_mindustry_gen_Iconc_rain;
+jchar SF_mindustry_gen_Iconc_cloudSun;
+jchar SF_mindustry_gen_Iconc_drizzle;
+jchar SF_mindustry_gen_Iconc_cloudFlash;
+jchar SF_mindustry_gen_Iconc_cloudWind;
+jchar SF_mindustry_gen_Iconc_box;
+jchar SF_mindustry_gen_Iconc_chartAlt;
+jobject SF_mindustry_gen_Iconc_all;
+
+void mark_mindustry_gen_Iconc(jobject object, jint mark, jint depth) {
+	if (!object) {
+		if (SF_mindustry_gen_Iconc_codes)
+			((gc_mark_ptr) ((jclass) ((jobject) SF_mindustry_gen_Iconc_codes)->clazz)->markFunction)((jobject) SF_mindustry_gen_Iconc_codes, mark, depth + 1);
+		if (SF_mindustry_gen_Iconc_codeToName)
+			((gc_mark_ptr) ((jclass) ((jobject) SF_mindustry_gen_Iconc_codeToName)->clazz)->markFunction)((jobject) SF_mindustry_gen_Iconc_codeToName, mark, depth + 1);
+		if (SF_mindustry_gen_Iconc_all)
+			((gc_mark_ptr) ((jclass) ((jobject) SF_mindustry_gen_Iconc_all)->clazz)->markFunction)((jobject) SF_mindustry_gen_Iconc_all, mark, depth + 1);
+		return;
+	}
+	if (depth > GC_DEPTH_ALWAYS && (object->gcMark < GC_MARK_START || object->gcMark == mark))
+		return;
+	if (depth > MAX_GC_MARK_DEPTH) {
+		markDeepObject(object);
+		return;
+	}
+	if (object->gcMark >= GC_MARK_START)
+		object->gcMark = mark;
+	auto self = (mindustry_gen_Iconc *) object;
+}
+
+void init_mindustry_gen_Iconc(jcontext ctx, jobject self) {
+	NULL_CHECK(self);
+	jtype frame[2];
+	auto stack = &frame[1];
+	jtype *sp = stack;
+	FrameInfo frameInfo { "mindustry/gen/Iconc:<init>", 2 };
+	auto frameRef = pushStackFrame(ctx, &frameInfo, frame, nullptr);
+
+	clinit_mindustry_gen_Iconc(ctx);
+	frame[0].o = self;
+	{
+	LINE_NUMBER(7);
+	init_java_lang_Object(ctx, (frame[0].o));
+	popStackFrame(ctx);
+	return;
+	}
+
+	popStackFrame(ctx);
+}
+
+void clinit_mindustry_gen_Iconc(jcontext ctx) {
+	static bool initialized;
+	if (initialized) return;
+	initialized = true;
+	SF_mindustry_gen_Iconc_blockSpawn = jint(63743);
+	SF_mindustry_gen_Iconc_blockDeepwater = jint(63742);
+	SF_mindustry_gen_Iconc_blockShallowWater = jint(63741);
+	SF_mindustry_gen_Iconc_blockTaintedWater = jint(63740);
+	SF_mindustry_gen_Iconc_blockDarksandTaintedWater = jint(63739);
+	SF_mindustry_gen_Iconc_blockSandWater = jint(63738);
+	SF_mindustry_gen_Iconc_blockDarksandWater = jint(63737);
+	SF_mindustry_gen_Iconc_blockTar = jint(63736);
+	SF_mindustry_gen_Iconc_blockStone = jint(63735);
+	SF_mindustry_gen_Iconc_blockCraters = jint(63734);
+	SF_mindustry_gen_Iconc_blockChar = jint(63733);
+	SF_mindustry_gen_Iconc_blockIgnarock = jint(63732);
+	SF_mindustry_gen_Iconc_blockHotrock = jint(63731);
+	SF_mindustry_gen_Iconc_blockMagmarock = jint(63730);
+	SF_mindustry_gen_Iconc_blockSand = jint(63729);
+	SF_mindustry_gen_Iconc_blockDarksand = jint(63728);
+	SF_mindustry_gen_Iconc_blockGrass = jint(63726);
+	SF_mindustry_gen_Iconc_blockSalt = jint(63725);
+	SF_mindustry_gen_Iconc_blockSnow = jint(63724);
+	SF_mindustry_gen_Iconc_blockIce = jint(63723);
+	SF_mindustry_gen_Iconc_blockIceSnow = jint(63722);
+	SF_mindustry_gen_Iconc_blockCliffs = jint(63721);
+	SF_mindustry_gen_Iconc_blockRock = jint(63718);
+	SF_mindustry_gen_Iconc_blockSnowrock = jint(63717);
+	SF_mindustry_gen_Iconc_blockSporePine = jint(63711);
+	SF_mindustry_gen_Iconc_blockSnowPine = jint(63710);
+	SF_mindustry_gen_Iconc_blockPine = jint(63709);
+	SF_mindustry_gen_Iconc_blockShrubs = jint(63708);
+	SF_mindustry_gen_Iconc_blockWhiteTreeDead = jint(63707);
+	SF_mindustry_gen_Iconc_blockWhiteTree = jint(63706);
+	SF_mindustry_gen_Iconc_blockSporeCluster = jint(63705);
+	SF_mindustry_gen_Iconc_blockShale = jint(63704);
+	SF_mindustry_gen_Iconc_blockShaleBoulder = jint(63702);
+	SF_mindustry_gen_Iconc_blockSandBoulder = jint(63701);
+	SF_mindustry_gen_Iconc_blockMoss = jint(63700);
+	SF_mindustry_gen_Iconc_blockSporeMoss = jint(63699);
+	SF_mindustry_gen_Iconc_blockMetalFloor = jint(63698);
+	SF_mindustry_gen_Iconc_blockMetalFloorDamaged = jint(63697);
+	SF_mindustry_gen_Iconc_blockMetalFloor2 = jint(63696);
+	SF_mindustry_gen_Iconc_blockMetalFloor3 = jint(63695);
+	SF_mindustry_gen_Iconc_blockMetalFloor5 = jint(63694);
+	SF_mindustry_gen_Iconc_blockDarkPanel1 = jint(63693);
+	SF_mindustry_gen_Iconc_blockDarkPanel2 = jint(63692);
+	SF_mindustry_gen_Iconc_blockDarkPanel3 = jint(63691);
+	SF_mindustry_gen_Iconc_blockDarkPanel4 = jint(63690);
+	SF_mindustry_gen_Iconc_blockDarkPanel5 = jint(63689);
+	SF_mindustry_gen_Iconc_blockDarkPanel6 = jint(63688);
+	SF_mindustry_gen_Iconc_blockDarkMetal = jint(63687);
+	SF_mindustry_gen_Iconc_blockPebbles = jint(63686);
+	SF_mindustry_gen_Iconc_blockTendrils = jint(63685);
+	SF_mindustry_gen_Iconc_blockOreCopper = jint(63684);
+	SF_mindustry_gen_Iconc_blockOreLead = jint(63683);
+	SF_mindustry_gen_Iconc_blockOreScrap = jint(63682);
+	SF_mindustry_gen_Iconc_blockOreCoal = jint(63681);
+	SF_mindustry_gen_Iconc_blockOreTitanium = jint(63680);
+	SF_mindustry_gen_Iconc_blockOreThorium = jint(63679);
+	SF_mindustry_gen_Iconc_blockGraphitePress = jint(63678);
+	SF_mindustry_gen_Iconc_blockMultiPress = jint(63677);
+	SF_mindustry_gen_Iconc_blockSiliconSmelter = jint(63676);
+	SF_mindustry_gen_Iconc_blockKiln = jint(63675);
+	SF_mindustry_gen_Iconc_blockPlastaniumCompressor = jint(63674);
+	SF_mindustry_gen_Iconc_blockPhaseWeaver = jint(63673);
+	SF_mindustry_gen_Iconc_blockSurgeSmelter = jint(63672);
+	SF_mindustry_gen_Iconc_blockCryofluidMixer = jint(63671);
+	SF_mindustry_gen_Iconc_blockBlastMixer = jint(63670);
+	SF_mindustry_gen_Iconc_blockPyratiteMixer = jint(63669);
+	SF_mindustry_gen_Iconc_blockMelter = jint(63668);
+	SF_mindustry_gen_Iconc_blockSeparator = jint(63667);
+	SF_mindustry_gen_Iconc_blockSporePress = jint(63666);
+	SF_mindustry_gen_Iconc_blockPulverizer = jint(63665);
+	SF_mindustry_gen_Iconc_blockCoalCentrifuge = jint(63664);
+	SF_mindustry_gen_Iconc_blockIncinerator = jint(63663);
+	SF_mindustry_gen_Iconc_blockCopperWall = jint(63662);
+	SF_mindustry_gen_Iconc_blockCopperWallLarge = jint(63661);
+	SF_mindustry_gen_Iconc_blockTitaniumWall = jint(63660);
+	SF_mindustry_gen_Iconc_blockTitaniumWallLarge = jint(63659);
+	SF_mindustry_gen_Iconc_blockPlastaniumWall = jint(63658);
+	SF_mindustry_gen_Iconc_blockPlastaniumWallLarge = jint(63657);
+	SF_mindustry_gen_Iconc_blockThoriumWall = jint(63656);
+	SF_mindustry_gen_Iconc_blockThoriumWallLarge = jint(63655);
+	SF_mindustry_gen_Iconc_blockPhaseWall = jint(63654);
+	SF_mindustry_gen_Iconc_blockPhaseWallLarge = jint(63653);
+	SF_mindustry_gen_Iconc_blockSurgeWall = jint(63652);
+	SF_mindustry_gen_Iconc_blockSurgeWallLarge = jint(63651);
+	SF_mindustry_gen_Iconc_blockDoor = jint(63650);
+	SF_mindustry_gen_Iconc_blockDoorLarge = jint(63649);
+	SF_mindustry_gen_Iconc_blockScrapWall = jint(63648);
+	SF_mindustry_gen_Iconc_blockScrapWallLarge = jint(63647);
+	SF_mindustry_gen_Iconc_blockScrapWallHuge = jint(63646);
+	SF_mindustry_gen_Iconc_blockScrapWallGigantic = jint(63645);
+	SF_mindustry_gen_Iconc_blockThruster = jint(63644);
+	SF_mindustry_gen_Iconc_blockMender = jint(63643);
+	SF_mindustry_gen_Iconc_blockMendProjector = jint(63642);
+	SF_mindustry_gen_Iconc_blockOverdriveProjector = jint(63641);
+	SF_mindustry_gen_Iconc_blockForceProjector = jint(63640);
+	SF_mindustry_gen_Iconc_blockShockMine = jint(63639);
+	SF_mindustry_gen_Iconc_blockConveyor = jint(63638);
+	SF_mindustry_gen_Iconc_blockTitaniumConveyor = jint(63637);
+	SF_mindustry_gen_Iconc_blockArmoredConveyor = jint(63636);
+	SF_mindustry_gen_Iconc_blockJunction = jint(63635);
+	SF_mindustry_gen_Iconc_blockBridgeConveyor = jint(63634);
+	SF_mindustry_gen_Iconc_blockPhaseConveyor = jint(63633);
+	SF_mindustry_gen_Iconc_blockSorter = jint(63632);
+	SF_mindustry_gen_Iconc_blockInvertedSorter = jint(63631);
+	SF_mindustry_gen_Iconc_blockRouter = jint(63630);
+	SF_mindustry_gen_Iconc_blockDistributor = jint(63629);
+	SF_mindustry_gen_Iconc_blockOverflowGate = jint(63628);
+	SF_mindustry_gen_Iconc_blockMassDriver = jint(63627);
+	SF_mindustry_gen_Iconc_blockMechanicalPump = jint(63626);
+	SF_mindustry_gen_Iconc_blockRotaryPump = jint(63625);
+	SF_mindustry_gen_Iconc_blockImpulsePump = jint(63624);
+	SF_mindustry_gen_Iconc_blockConduit = jint(63623);
+	SF_mindustry_gen_Iconc_blockPulseConduit = jint(63622);
+	SF_mindustry_gen_Iconc_blockPlatedConduit = jint(63621);
+	SF_mindustry_gen_Iconc_blockLiquidRouter = jint(63620);
+	SF_mindustry_gen_Iconc_blockLiquidTank = jint(63619);
+	SF_mindustry_gen_Iconc_blockLiquidJunction = jint(63618);
+	SF_mindustry_gen_Iconc_blockBridgeConduit = jint(63617);
+	SF_mindustry_gen_Iconc_blockPhaseConduit = jint(63616);
+	SF_mindustry_gen_Iconc_blockPowerNode = jint(63615);
+	SF_mindustry_gen_Iconc_blockPowerNodeLarge = jint(63614);
+	SF_mindustry_gen_Iconc_blockSurgeTower = jint(63613);
+	SF_mindustry_gen_Iconc_blockDiode = jint(63612);
+	SF_mindustry_gen_Iconc_blockBattery = jint(63611);
+	SF_mindustry_gen_Iconc_blockBatteryLarge = jint(63610);
+	SF_mindustry_gen_Iconc_blockCombustionGenerator = jint(63609);
+	SF_mindustry_gen_Iconc_blockThermalGenerator = jint(63608);
+	SF_mindustry_gen_Iconc_blockSteamGenerator = jint(63607);
+	SF_mindustry_gen_Iconc_blockDifferentialGenerator = jint(63606);
+	SF_mindustry_gen_Iconc_blockRtgGenerator = jint(63605);
+	SF_mindustry_gen_Iconc_blockSolarPanel = jint(63604);
+	SF_mindustry_gen_Iconc_blockSolarPanelLarge = jint(63603);
+	SF_mindustry_gen_Iconc_blockThoriumReactor = jint(63602);
+	SF_mindustry_gen_Iconc_blockImpactReactor = jint(63601);
+	SF_mindustry_gen_Iconc_blockMechanicalDrill = jint(63600);
+	SF_mindustry_gen_Iconc_blockPneumaticDrill = jint(63599);
+	SF_mindustry_gen_Iconc_blockLaserDrill = jint(63598);
+	SF_mindustry_gen_Iconc_blockBlastDrill = jint(63597);
+	SF_mindustry_gen_Iconc_blockWaterExtractor = jint(63596);
+	SF_mindustry_gen_Iconc_blockCultivator = jint(63595);
+	SF_mindustry_gen_Iconc_blockOilExtractor = jint(63594);
+	SF_mindustry_gen_Iconc_blockCoreShard = jint(63593);
+	SF_mindustry_gen_Iconc_blockCoreFoundation = jint(63592);
+	SF_mindustry_gen_Iconc_blockCoreNucleus = jint(63591);
+	SF_mindustry_gen_Iconc_blockVault = jint(63590);
+	SF_mindustry_gen_Iconc_blockContainer = jint(63589);
+	SF_mindustry_gen_Iconc_blockUnloader = jint(63588);
+	SF_mindustry_gen_Iconc_blockLaunchPad = jint(63587);
+	SF_mindustry_gen_Iconc_blockLaunchPadLarge = jint(63586);
+	SF_mindustry_gen_Iconc_blockDuo = jint(63585);
+	SF_mindustry_gen_Iconc_blockScatter = jint(63584);
+	SF_mindustry_gen_Iconc_blockScorch = jint(63583);
+	SF_mindustry_gen_Iconc_blockHail = jint(63582);
+	SF_mindustry_gen_Iconc_blockWave = jint(63581);
+	SF_mindustry_gen_Iconc_blockLancer = jint(63580);
+	SF_mindustry_gen_Iconc_blockArc = jint(63579);
+	SF_mindustry_gen_Iconc_blockSwarmer = jint(63578);
+	SF_mindustry_gen_Iconc_blockSalvo = jint(63577);
+	SF_mindustry_gen_Iconc_blockFuse = jint(63576);
+	SF_mindustry_gen_Iconc_blockRipple = jint(63575);
+	SF_mindustry_gen_Iconc_blockCyclone = jint(63574);
+	SF_mindustry_gen_Iconc_blockSpectre = jint(63573);
+	SF_mindustry_gen_Iconc_blockMeltdown = jint(63572);
+	SF_mindustry_gen_Iconc_blockDraugFactory = jint(63571);
+	SF_mindustry_gen_Iconc_blockSpiritFactory = jint(63570);
+	SF_mindustry_gen_Iconc_blockPhantomFactory = jint(63569);
+	SF_mindustry_gen_Iconc_blockCommandCenter = jint(63568);
+	SF_mindustry_gen_Iconc_blockWraithFactory = jint(63567);
+	SF_mindustry_gen_Iconc_blockGhoulFactory = jint(63566);
+	SF_mindustry_gen_Iconc_blockRevenantFactory = jint(63565);
+	SF_mindustry_gen_Iconc_blockDaggerFactory = jint(63564);
+	SF_mindustry_gen_Iconc_blockCrawlerFactory = jint(63563);
+	SF_mindustry_gen_Iconc_blockTitanFactory = jint(63562);
+	SF_mindustry_gen_Iconc_blockFortressFactory = jint(63561);
+	SF_mindustry_gen_Iconc_blockRepairPoint = jint(63560);
+	SF_mindustry_gen_Iconc_blockDartMechPad = jint(63559);
+	SF_mindustry_gen_Iconc_blockDeltaMechPad = jint(63558);
+	SF_mindustry_gen_Iconc_blockTauMechPad = jint(63557);
+	SF_mindustry_gen_Iconc_blockOmegaMechPad = jint(63556);
+	SF_mindustry_gen_Iconc_blockJavelinShipPad = jint(63555);
+	SF_mindustry_gen_Iconc_blockTridentShipPad = jint(63554);
+	SF_mindustry_gen_Iconc_blockGlaiveShipPad = jint(63553);
+	SF_mindustry_gen_Iconc_blockPowerSource = jint(63552);
+	SF_mindustry_gen_Iconc_blockPowerVoid = jint(63551);
+	SF_mindustry_gen_Iconc_blockItemSource = jint(63550);
+	SF_mindustry_gen_Iconc_blockItemVoid = jint(63549);
+	SF_mindustry_gen_Iconc_blockLiquidSource = jint(63548);
+	SF_mindustry_gen_Iconc_blockLiquidVoid = jint(63547);
+	SF_mindustry_gen_Iconc_blockMessage = jint(63546);
+	SF_mindustry_gen_Iconc_blockIlluminator = jint(63545);
+	SF_mindustry_gen_Iconc_itemCopper = jint(63544);
+	SF_mindustry_gen_Iconc_itemLead = jint(63543);
+	SF_mindustry_gen_Iconc_itemMetaglass = jint(63542);
+	SF_mindustry_gen_Iconc_itemGraphite = jint(63541);
+	SF_mindustry_gen_Iconc_itemSand = jint(63540);
+	SF_mindustry_gen_Iconc_itemCoal = jint(63539);
+	SF_mindustry_gen_Iconc_itemTitanium = jint(63538);
+	SF_mindustry_gen_Iconc_itemThorium = jint(63537);
+	SF_mindustry_gen_Iconc_itemScrap = jint(63536);
+	SF_mindustry_gen_Iconc_itemSilicon = jint(63535);
+	SF_mindustry_gen_Iconc_itemPlastanium = jint(63534);
+	SF_mindustry_gen_Iconc_itemPhaseFabric = jint(63533);
+	SF_mindustry_gen_Iconc_itemSurgeAlloy = jint(63532);
+	SF_mindustry_gen_Iconc_itemSporePod = jint(63531);
+	SF_mindustry_gen_Iconc_itemBlastCompound = jint(63530);
+	SF_mindustry_gen_Iconc_itemPyratite = jint(63529);
+	SF_mindustry_gen_Iconc_liquidWater = jint(63528);
+	SF_mindustry_gen_Iconc_liquidSlag = jint(63527);
+	SF_mindustry_gen_Iconc_liquidOil = jint(63526);
+	SF_mindustry_gen_Iconc_liquidCryofluid = jint(63525);
+	SF_mindustry_gen_Iconc_blockUnderflowGate = jint(63524);
+	SF_mindustry_gen_Iconc_blockDartShipPad = jint(63523);
+	SF_mindustry_gen_Iconc_blockAlphaMechPad = jint(63522);
+	SF_mindustry_gen_Iconc_blockCliff = jint(63521);
+	SF_mindustry_gen_Iconc_blockLegacyMechPad = jint(63520);
+	SF_mindustry_gen_Iconc_blockGroundFactory = jint(63519);
+	SF_mindustry_gen_Iconc_blockLegacyUnitFactory = jint(63518);
+	SF_mindustry_gen_Iconc_blockMassConveyor = jint(63517);
+	SF_mindustry_gen_Iconc_blockLegacyCommandCenter = jint(63516);
+	SF_mindustry_gen_Iconc_blockBlockForge = jint(63515);
+	SF_mindustry_gen_Iconc_blockBlockLauncher = jint(63514);
+	SF_mindustry_gen_Iconc_blockPlastaniumConveyor = jint(63513);
+	SF_mindustry_gen_Iconc_crater = jint(63512);
+	SF_mindustry_gen_Iconc_blockNavalFactory = jint(63511);
+	SF_mindustry_gen_Iconc_blockAirFactory = jint(63510);
+	SF_mindustry_gen_Iconc_blockBasicReconstructor = jint(63509);
+	SF_mindustry_gen_Iconc_blockBlockLoader = jint(63508);
+	SF_mindustry_gen_Iconc_blockBlockUnloader = jint(63507);
+	SF_mindustry_gen_Iconc_blockCoreSilo = jint(63506);
+	SF_mindustry_gen_Iconc_blockDataProcessor = jint(63505);
+	SF_mindustry_gen_Iconc_blockPayloadRouter = jint(63504);
+	SF_mindustry_gen_Iconc_blockSiliconCrucible = jint(63503);
+	SF_mindustry_gen_Iconc_blockSegment = jint(63502);
+	SF_mindustry_gen_Iconc_blockLargeOverdriveProjector = jint(63501);
+	SF_mindustry_gen_Iconc_blockDisassembler = jint(63500);
+	SF_mindustry_gen_Iconc_blockAdditiveReconstructor = jint(63494);
+	SF_mindustry_gen_Iconc_blockMultiplicativeReconstructor = jint(63493);
+	SF_mindustry_gen_Iconc_blockExponentialReconstructor = jint(63492);
+	SF_mindustry_gen_Iconc_blockTetrativeReconstructor = jint(63491);
+	SF_mindustry_gen_Iconc_blockResupplyPoint = jint(63490);
+	SF_mindustry_gen_Iconc_blockParallax = jint(63489);
+	SF_mindustry_gen_Iconc_unitDagger = jint(63488);
+	SF_mindustry_gen_Iconc_unitMace = jint(63487);
+	SF_mindustry_gen_Iconc_unitFortress = jint(63486);
+	SF_mindustry_gen_Iconc_unitNova = jint(63485);
+	SF_mindustry_gen_Iconc_unitPulsar = jint(63484);
+	SF_mindustry_gen_Iconc_unitQuasar = jint(63483);
+	SF_mindustry_gen_Iconc_unitCrawler = jint(63482);
+	SF_mindustry_gen_Iconc_unitAtrax = jint(63481);
+	SF_mindustry_gen_Iconc_unitSpiroct = jint(63480);
+	SF_mindustry_gen_Iconc_unitArkyid = jint(63479);
+	SF_mindustry_gen_Iconc_unitFlare = jint(63478);
+	SF_mindustry_gen_Iconc_unitHorizon = jint(63477);
+	SF_mindustry_gen_Iconc_unitZenith = jint(63476);
+	SF_mindustry_gen_Iconc_unitAntumbra = jint(63475);
+	SF_mindustry_gen_Iconc_unitEclipse = jint(63474);
+	SF_mindustry_gen_Iconc_unitMono = jint(63473);
+	SF_mindustry_gen_Iconc_unitPoly = jint(63472);
+	SF_mindustry_gen_Iconc_unitMega = jint(63471);
+	SF_mindustry_gen_Iconc_unitRisse = jint(63470);
+	SF_mindustry_gen_Iconc_unitMinke = jint(63469);
+	SF_mindustry_gen_Iconc_unitBryde = jint(63468);
+	SF_mindustry_gen_Iconc_unitAlpha = jint(63467);
+	SF_mindustry_gen_Iconc_unitBeta = jint(63466);
+	SF_mindustry_gen_Iconc_unitGamma = jint(63465);
+	SF_mindustry_gen_Iconc_unitBlock = jint(63464);
+	SF_mindustry_gen_Iconc_unitRisso = jint(63463);
+	SF_mindustry_gen_Iconc_blockOverdriveDome = jint(63462);
+	SF_mindustry_gen_Iconc_blockLogicProcessor = jint(63461);
+	SF_mindustry_gen_Iconc_blockMicroProcessor = jint(63460);
+	SF_mindustry_gen_Iconc_blockLogicDisplay = jint(63459);
+	SF_mindustry_gen_Iconc_blockSwitch = jint(63458);
+	SF_mindustry_gen_Iconc_blockMemoryCell = jint(63457);
+	SF_mindustry_gen_Iconc_blockPayloadConveyor = jint(63456);
+	SF_mindustry_gen_Iconc_blockHyperProcessor = jint(63455);
+	SF_mindustry_gen_Iconc_unitToxopid = jint(63454);
+	SF_mindustry_gen_Iconc_unitVestige = jint(63453);
+	SF_mindustry_gen_Iconc_unitCataclyst = jint(63452);
+	SF_mindustry_gen_Iconc_unitScepter = jint(63451);
+	SF_mindustry_gen_Iconc_unitReign = jint(63450);
+	SF_mindustry_gen_Iconc_blockDirt = jint(63449);
+	SF_mindustry_gen_Iconc_blockStoneWall = jint(63447);
+	SF_mindustry_gen_Iconc_blockSporeWall = jint(63446);
+	SF_mindustry_gen_Iconc_blockIceWall = jint(63445);
+	SF_mindustry_gen_Iconc_blockSnowWall = jint(63444);
+	SF_mindustry_gen_Iconc_blockDuneWall = jint(63443);
+	SF_mindustry_gen_Iconc_blockSandWall = jint(63442);
+	SF_mindustry_gen_Iconc_blockSaltWall = jint(63441);
+	SF_mindustry_gen_Iconc_blockShaleWall = jint(63440);
+	SF_mindustry_gen_Iconc_blockDirtWall = jint(63439);
+	SF_mindustry_gen_Iconc_blockBasalt = jint(63437);
+	SF_mindustry_gen_Iconc_blockDacite = jint(63436);
+	SF_mindustry_gen_Iconc_blockBoulder = jint(63435);
+	SF_mindustry_gen_Iconc_blockSnowBoulder = jint(63434);
+	SF_mindustry_gen_Iconc_blockDaciteWall = jint(63433);
+	SF_mindustry_gen_Iconc_blockDaciteBoulder = jint(63432);
+	SF_mindustry_gen_Iconc_blockLargeLogicDisplay = jint(63431);
+	SF_mindustry_gen_Iconc_unitOmura = jint(63430);
+	SF_mindustry_gen_Iconc_blockMud = jint(63429);
+	SF_mindustry_gen_Iconc_unitSei = jint(63428);
+	SF_mindustry_gen_Iconc_unitQuad = jint(63427);
+	SF_mindustry_gen_Iconc_unitOct = jint(63426);
+	SF_mindustry_gen_Iconc_unitVela = jint(63425);
+	SF_mindustry_gen_Iconc_unitCorvus = jint(63424);
+	SF_mindustry_gen_Iconc_blockMemoryBank = jint(63423);
+	SF_mindustry_gen_Iconc_blockForeshadow = jint(63422);
+	SF_mindustry_gen_Iconc_blockTsunami = jint(63421);
+	SF_mindustry_gen_Iconc_blockSpace = jint(63420);
+	SF_mindustry_gen_Iconc_blockLegacyUnitFactoryAir = jint(63419);
+	SF_mindustry_gen_Iconc_blockLegacyUnitFactoryGround = jint(63418);
+	SF_mindustry_gen_Iconc_blockInterplanetaryAccelerator = jint(63417);
+	SF_mindustry_gen_Iconc_blockBasaltBoulder = jint(63416);
+	SF_mindustry_gen_Iconc_statusNone = jint(63415);
+	SF_mindustry_gen_Iconc_statusBurning = jint(63414);
+	SF_mindustry_gen_Iconc_statusFreezing = jint(63413);
+	SF_mindustry_gen_Iconc_statusUnmoving = jint(63412);
+	SF_mindustry_gen_Iconc_statusSlow = jint(63411);
+	SF_mindustry_gen_Iconc_statusWet = jint(63410);
+	SF_mindustry_gen_Iconc_statusMuddy = jint(63409);
+	SF_mindustry_gen_Iconc_statusMelting = jint(63408);
+	SF_mindustry_gen_Iconc_statusSapped = jint(63407);
+	SF_mindustry_gen_Iconc_statusSporeSlowed = jint(63406);
+	SF_mindustry_gen_Iconc_statusTarred = jint(63405);
+	SF_mindustry_gen_Iconc_statusOverdrive = jint(63404);
+	SF_mindustry_gen_Iconc_statusOverclock = jint(63403);
+	SF_mindustry_gen_Iconc_statusShielded = jint(63402);
+	SF_mindustry_gen_Iconc_statusBoss = jint(63401);
+	SF_mindustry_gen_Iconc_statusShocked = jint(63400);
+	SF_mindustry_gen_Iconc_statusBlasted = jint(63399);
+	SF_mindustry_gen_Iconc_statusCorroded = jint(63398);
+	SF_mindustry_gen_Iconc_statusDisarmed = jint(63397);
+	SF_mindustry_gen_Iconc_blockDuct = jint(63385);
+	SF_mindustry_gen_Iconc_blockRepairTurret = jint(63376);
+	SF_mindustry_gen_Iconc_blockPayloadIncinerator = jint(63374);
+	SF_mindustry_gen_Iconc_blockPayloadVoid = jint(63373);
+	SF_mindustry_gen_Iconc_blockPayloadSource = jint(63372);
+	SF_mindustry_gen_Iconc_unitRetusa = jint(63368);
+	SF_mindustry_gen_Iconc_blockDuctRouter = jint(63366);
+	SF_mindustry_gen_Iconc_blockDuctBridge = jint(63365);
+	SF_mindustry_gen_Iconc_unitOxynoe = jint(63364);
+	SF_mindustry_gen_Iconc_unitCyerce = jint(63363);
+	SF_mindustry_gen_Iconc_unitAegires = jint(63362);
+	SF_mindustry_gen_Iconc_statusElectrified = jint(63361);
+	SF_mindustry_gen_Iconc_unitNavanax = jint(63360);
+	SF_mindustry_gen_Iconc_blockSiliconArcFurnace = jint(63353);
+	SF_mindustry_gen_Iconc_blockMetalFloor4 = jint(63352);
+	SF_mindustry_gen_Iconc_statusInvincible = jint(63351);
+	SF_mindustry_gen_Iconc_teamSharded = jint(63356);
+	SF_mindustry_gen_Iconc_teamCrux = jint(63357);
+	SF_mindustry_gen_Iconc_teamDerelict = jint(63358);
+	SF_mindustry_gen_Iconc_blockDeepWater = jint(63350);
+	SF_mindustry_gen_Iconc_blockMoltenSlag = jint(63348);
+	SF_mindustry_gen_Iconc_blockCraterStone = jint(63347);
+	SF_mindustry_gen_Iconc_blockDeepTaintedWater = jint(63346);
+	SF_mindustry_gen_Iconc_blockPooledCryofluid = jint(63345);
+	SF_mindustry_gen_Iconc_blockEmpty = jint(63344);
+	SF_mindustry_gen_Iconc_blockLiquidContainer = jint(63343);
+	SF_mindustry_gen_Iconc_blockDeconstructor = jint(63342);
+	SF_mindustry_gen_Iconc_blockConstructor = jint(63341);
+	SF_mindustry_gen_Iconc_blockLargeConstructor = jint(63340);
+	SF_mindustry_gen_Iconc_blockPayloadLoader = jint(63339);
+	SF_mindustry_gen_Iconc_blockPayloadUnloader = jint(63338);
+	SF_mindustry_gen_Iconc_blockRhyolite = jint(63337);
+	SF_mindustry_gen_Iconc_blockRhyoliteCrater = jint(63336);
+	SF_mindustry_gen_Iconc_blockRegolith = jint(63335);
+	SF_mindustry_gen_Iconc_blockYellowStone = jint(63334);
+	SF_mindustry_gen_Iconc_blockCarbonStone = jint(63333);
+	SF_mindustry_gen_Iconc_blockFerricStone = jint(63332);
+	SF_mindustry_gen_Iconc_blockFerricCraters = jint(63331);
+	SF_mindustry_gen_Iconc_blockBeryllicStone = jint(63330);
+	SF_mindustry_gen_Iconc_blockRedIce = jint(63329);
+	SF_mindustry_gen_Iconc_blockRedmat = jint(63328);
+	SF_mindustry_gen_Iconc_blockBluemat = jint(63327);
+	SF_mindustry_gen_Iconc_blockRegolithWall = jint(63326);
+	SF_mindustry_gen_Iconc_blockYellowStoneWall = jint(63325);
+	SF_mindustry_gen_Iconc_blockRhyoliteWall = jint(63324);
+	SF_mindustry_gen_Iconc_blockCarbonWall = jint(63323);
+	SF_mindustry_gen_Iconc_blockFerricStoneWall = jint(63322);
+	SF_mindustry_gen_Iconc_blockBeryllicStoneWall = jint(63321);
+	SF_mindustry_gen_Iconc_blockRedIceWall = jint(63320);
+	SF_mindustry_gen_Iconc_blockRedweed = jint(63319);
+	SF_mindustry_gen_Iconc_blockPurBush = jint(63318);
+	SF_mindustry_gen_Iconc_blockYellowcoral = jint(63317);
+	SF_mindustry_gen_Iconc_blockCarbonBoulder = jint(63315);
+	SF_mindustry_gen_Iconc_blockFerricBoulder = jint(63314);
+	SF_mindustry_gen_Iconc_blockBeryllicBoulder = jint(63313);
+	SF_mindustry_gen_Iconc_blockWallOreBeryllium = jint(63312);
+	SF_mindustry_gen_Iconc_blockGraphiticWall = jint(63311);
+	SF_mindustry_gen_Iconc_blockCellSynthesisChamber = jint(63310);
+	SF_mindustry_gen_Iconc_blockCliffCrusher = jint(63309);
+	SF_mindustry_gen_Iconc_blockBeamDrill = jint(63308);
+	SF_mindustry_gen_Iconc_blockNuclearWarhead = jint(63307);
+	SF_mindustry_gen_Iconc_blockWarheadAssembler = jint(63306);
+	SF_mindustry_gen_Iconc_blockBallisticSilo = jint(63305);
+	SF_mindustry_gen_Iconc_itemBeryllium = jint(63304);
+	SF_mindustry_gen_Iconc_itemFissileMatter = jint(63303);
+	SF_mindustry_gen_Iconc_itemDormantCyst = jint(63302);
+	SF_mindustry_gen_Iconc_liquidNeoplasm = jint(63301);
+	SF_mindustry_gen_Iconc_blockPlasmaBore = jint(63297);
+	SF_mindustry_gen_Iconc_blockSteamVent = jint(63296);
+	SF_mindustry_gen_Iconc_blockPressureTurbine = jint(63295);
+	SF_mindustry_gen_Iconc_blockTurbineCondenser = jint(63294);
+	SF_mindustry_gen_Iconc_blockBeamNode = jint(63293);
+	SF_mindustry_gen_Iconc_blockBeamTower = jint(63291);
+	SF_mindustry_gen_Iconc_blockBuildTower = jint(63290);
+	SF_mindustry_gen_Iconc_itemTungsten = jint(63289);
+	SF_mindustry_gen_Iconc_blockOreTungsten = jint(63288);
+	SF_mindustry_gen_Iconc_blockImpactDrill = jint(63287);
+	SF_mindustry_gen_Iconc_itemCarbide = jint(63286);
+	SF_mindustry_gen_Iconc_unitEvoke = jint(63285);
+	SF_mindustry_gen_Iconc_blockCarbideCrucible = jint(63284);
+	SF_mindustry_gen_Iconc_blockSurgeDuct = jint(63283);
+	SF_mindustry_gen_Iconc_blockSurgeConveyor = jint(63282);
+	SF_mindustry_gen_Iconc_blockDuctUnloader = jint(63281);
+	SF_mindustry_gen_Iconc_blockSurgeRouter = jint(63280);
+	SF_mindustry_gen_Iconc_blockReinforcedConduit = jint(63279);
+	SF_mindustry_gen_Iconc_blockReinforcedLiquidRouter = jint(63278);
+	SF_mindustry_gen_Iconc_blockReinforcedLiquidContainer = jint(63277);
+	SF_mindustry_gen_Iconc_blockReinforcedLiquidTank = jint(63275);
+	SF_mindustry_gen_Iconc_blockReinforcedBridgeConduit = jint(63274);
+	SF_mindustry_gen_Iconc_blockCoreCitadel = jint(63272);
+	SF_mindustry_gen_Iconc_blockCoreAcropolis = jint(63271);
+	SF_mindustry_gen_Iconc_blockHeatReactor = jint(63270);
+	SF_mindustry_gen_Iconc_blockCoreBastion = jint(63269);
+	SF_mindustry_gen_Iconc_unitIncite = jint(63268);
+	SF_mindustry_gen_Iconc_blockOxidizer = jint(63267);
+	SF_mindustry_gen_Iconc_blockReinforcedPump = jint(63266);
+	SF_mindustry_gen_Iconc_itemOxide = jint(63265);
+	SF_mindustry_gen_Iconc_liquidOxygen = jint(63264);
+	SF_mindustry_gen_Iconc_liquidHydrogen = jint(63263);
+	SF_mindustry_gen_Iconc_blockElectrolyzer = jint(63262);
+	SF_mindustry_gen_Iconc_liquidOzone = jint(63261);
+	SF_mindustry_gen_Iconc_blockReinforcedLiquidJunction = jint(63260);
+	SF_mindustry_gen_Iconc_blockOxidationChamber = jint(63259);
+	SF_mindustry_gen_Iconc_blockSurgeCrucible = jint(63258);
+	SF_mindustry_gen_Iconc_unitEmanate = jint(63257);
+	SF_mindustry_gen_Iconc_blockOverflowDuct = jint(63256);
+	SF_mindustry_gen_Iconc_blockLargePlasmaBore = jint(63255);
+	SF_mindustry_gen_Iconc_blockCyanogenSynthesizer = jint(63253);
+	SF_mindustry_gen_Iconc_liquidCyanogen = jint(63252);
+	SF_mindustry_gen_Iconc_liquidGallium = jint(63251);
+	SF_mindustry_gen_Iconc_blockSlagCentrifuge = jint(63250);
+	SF_mindustry_gen_Iconc_blockSlagIncinerator = jint(63248);
+	SF_mindustry_gen_Iconc_blockPhaseSynthesizer = jint(63247);
+	SF_mindustry_gen_Iconc_blockSublimate = jint(63246);
+	SF_mindustry_gen_Iconc_blockReinforcedContainer = jint(63245);
+	SF_mindustry_gen_Iconc_blockReinforcedVault = jint(63244);
+	SF_mindustry_gen_Iconc_liquidNitrogen = jint(63243);
+	SF_mindustry_gen_Iconc_blockAtmosphericConcentrator = jint(63242);
+	SF_mindustry_gen_Iconc_blockUnitCargoLoader = jint(63241);
+	SF_mindustry_gen_Iconc_blockUnitCargoUnloadPoint = jint(63240);
+	SF_mindustry_gen_Iconc_unitManifold = jint(63239);
+	SF_mindustry_gen_Iconc_blockArkyciteFloor = jint(63238);
+	SF_mindustry_gen_Iconc_liquidArkycite = jint(63237);
+	SF_mindustry_gen_Iconc_blockChemicalCombustionChamber = jint(63236);
+	SF_mindustry_gen_Iconc_blockArkyicStone = jint(63235);
+	SF_mindustry_gen_Iconc_blockYellowStoneBoulder = jint(63234);
+	SF_mindustry_gen_Iconc_blockPyrolysisGenerator = jint(63233);
+	SF_mindustry_gen_Iconc_blockWallOreTungsten = jint(63232);
+	SF_mindustry_gen_Iconc_blockRegenProjector = jint(63231);
+	SF_mindustry_gen_Iconc_blockTitan = jint(63230);
+	SF_mindustry_gen_Iconc_blockSmallDeconstructor = jint(63228);
+	SF_mindustry_gen_Iconc_blockBarrierProjector = jint(63227);
+	SF_mindustry_gen_Iconc_blockVentCondenser = jint(63225);
+	SF_mindustry_gen_Iconc_blockElectricHeater = jint(63224);
+	SF_mindustry_gen_Iconc_blockPhaseHeater = jint(63223);
+	SF_mindustry_gen_Iconc_blockArkyicWall = jint(63222);
+	SF_mindustry_gen_Iconc_blockHeatRedirector = jint(63221);
+	SF_mindustry_gen_Iconc_unitVanquish = jint(63220);
+	SF_mindustry_gen_Iconc_blockTungstenWall = jint(63219);
+	SF_mindustry_gen_Iconc_blockTungstenWallLarge = jint(63218);
+	SF_mindustry_gen_Iconc_blockTankAssembler = jint(63217);
+	SF_mindustry_gen_Iconc_unitAssemblyDrone = jint(63216);
+	SF_mindustry_gen_Iconc_blockBerylliumWall = jint(63214);
+	SF_mindustry_gen_Iconc_blockBerylliumWallLarge = jint(63213);
+	SF_mindustry_gen_Iconc_unitQuell = jint(63212);
+	SF_mindustry_gen_Iconc_blockBreach = jint(63211);
+	SF_mindustry_gen_Iconc_blockEruptionDrill = jint(63210);
+	SF_mindustry_gen_Iconc_blockShipAssembler = jint(63209);
+	SF_mindustry_gen_Iconc_unitQuellMissile = jint(63208);
+	SF_mindustry_gen_Iconc_blockMechAssembler = jint(63206);
+	SF_mindustry_gen_Iconc_blockOreCrystalThorium = jint(63205);
+	SF_mindustry_gen_Iconc_blockOreWallBeryllium = jint(63204);
+	SF_mindustry_gen_Iconc_blockOreWallTungsten = jint(63203);
+	SF_mindustry_gen_Iconc_blockArkyicBoulder = jint(63202);
+	SF_mindustry_gen_Iconc_blockCrystallineStone = jint(63201);
+	SF_mindustry_gen_Iconc_blockCrystallineStoneWall = jint(63200);
+	SF_mindustry_gen_Iconc_blockCrystalCluster = jint(63199);
+	SF_mindustry_gen_Iconc_blockCrystallineBoulder = jint(63198);
+	SF_mindustry_gen_Iconc_blockCrystalFloor = jint(63197);
+	SF_mindustry_gen_Iconc_blockVibrantCrystalCluster = jint(63196);
+	SF_mindustry_gen_Iconc_blockRedIceBoulder = jint(63195);
+	SF_mindustry_gen_Iconc_blockCrystalBlocks = jint(63194);
+	SF_mindustry_gen_Iconc_blockYellowStonePlates = jint(63193);
+	SF_mindustry_gen_Iconc_blockRoughRhyolite = jint(63192);
+	SF_mindustry_gen_Iconc_blockRhyoliteBoulder = jint(63191);
+	SF_mindustry_gen_Iconc_blockRedStone = jint(63190);
+	SF_mindustry_gen_Iconc_blockDenseRedStone = jint(63189);
+	SF_mindustry_gen_Iconc_blockRedStoneWall = jint(63188);
+	SF_mindustry_gen_Iconc_blockRedStoneBoulder = jint(63186);
+	SF_mindustry_gen_Iconc_blockRedDiamondWall = jint(63185);
+	SF_mindustry_gen_Iconc_blockCrystalOrbs = jint(63184);
+	SF_mindustry_gen_Iconc_unitConquer = jint(63183);
+	SF_mindustry_gen_Iconc_unitDisrupt = jint(63182);
+	SF_mindustry_gen_Iconc_unitDisruptMissile = jint(63180);
+	SF_mindustry_gen_Iconc_blockRhyoliteVent = jint(63179);
+	SF_mindustry_gen_Iconc_blockArkyicVent = jint(63178);
+	SF_mindustry_gen_Iconc_blockYellowStoneVent = jint(63177);
+	SF_mindustry_gen_Iconc_blockRedStoneVent = jint(63176);
+	SF_mindustry_gen_Iconc_blockCarbonVent = jint(63175);
+	SF_mindustry_gen_Iconc_blockShieldProjector = jint(63174);
+	SF_mindustry_gen_Iconc_blockBeamLink = jint(63173);
+	SF_mindustry_gen_Iconc_unitEffectDrone = jint(63171);
+	SF_mindustry_gen_Iconc_blockWorldProcessor = jint(63170);
+	SF_mindustry_gen_Iconc_blockReinforcedPayloadConveyor = jint(63169);
+	SF_mindustry_gen_Iconc_blockReinforcedPayloadRouter = jint(63168);
+	SF_mindustry_gen_Iconc_blockDisperse = jint(63167);
+	SF_mindustry_gen_Iconc_blockLargeShieldProjector = jint(63166);
+	SF_mindustry_gen_Iconc_blockPayloadMassDriver = jint(63165);
+	SF_mindustry_gen_Iconc_blockWorldCell = jint(63164);
+	SF_mindustry_gen_Iconc_blockCarbideWall = jint(63163);
+	SF_mindustry_gen_Iconc_blockCarbideWallLarge = jint(63162);
+	SF_mindustry_gen_Iconc_blockOreWallThorium = jint(63160);
+	SF_mindustry_gen_Iconc_blockCoreZone = jint(63159);
+	SF_mindustry_gen_Iconc_blockFabricator = jint(63158);
+	SF_mindustry_gen_Iconc_unitStell = jint(63157);
+	SF_mindustry_gen_Iconc_blockOreBeryllium = jint(63156);
+	SF_mindustry_gen_Iconc_unitLocus = jint(63155);
+	SF_mindustry_gen_Iconc_unitAvert = jint(63154);
+	SF_mindustry_gen_Iconc_unitCleroi = jint(63153);
+	SF_mindustry_gen_Iconc_blockTankReconstructor = jint(63152);
+	SF_mindustry_gen_Iconc_blockMechReconstructor = jint(63151);
+	SF_mindustry_gen_Iconc_blockShipReconstructor = jint(63150);
+	SF_mindustry_gen_Iconc_blockRadar = jint(63149);
+	SF_mindustry_gen_Iconc_unitTurretUnitBuildTower = jint(63148);
+	SF_mindustry_gen_Iconc_blockBlastDoor = jint(63147);
+	SF_mindustry_gen_Iconc_alphaaaa = jint(63146);
+	SF_mindustry_gen_Iconc_teamMalis = jint(63145);
+	SF_mindustry_gen_Iconc_blockCanvas = jint(63144);
+	SF_mindustry_gen_Iconc_blockArmoredDuct = jint(63143);
+	SF_mindustry_gen_Iconc_unitAnthicus = jint(63142);
+	SF_mindustry_gen_Iconc_unitAnthicusMissile = jint(63141);
+	SF_mindustry_gen_Iconc_unitObviate = jint(63139);
+	SF_mindustry_gen_Iconc_blockTankFabricator = jint(63138);
+	SF_mindustry_gen_Iconc_blockMechFabricator = jint(63137);
+	SF_mindustry_gen_Iconc_blockShipFabricator = jint(63136);
+	SF_mindustry_gen_Iconc_blockUnitRepairTower = jint(63135);
+	SF_mindustry_gen_Iconc_unitMerui = jint(63134);
+	SF_mindustry_gen_Iconc_unitOsc = jint(63133);
+	SF_mindustry_gen_Iconc_unitPrecept = jint(63132);
+	SF_mindustry_gen_Iconc_blockDiffuse = jint(63131);
+	SF_mindustry_gen_Iconc_blockBasicAssemblerModule = jint(63130);
+	SF_mindustry_gen_Iconc_unitTecta = jint(63129);
+	SF_mindustry_gen_Iconc_unitCollaris = jint(63128);
+	SF_mindustry_gen_Iconc_unitElude = jint(63127);
+	SF_mindustry_gen_Iconc_blockRefabricator = jint(63126);
+	SF_mindustry_gen_Iconc_blockPrimeRefabricator = jint(63125);
+	SF_mindustry_gen_Iconc_unitLatum = jint(63124);
+	SF_mindustry_gen_Iconc_blockReinforcedSurgeWall = jint(63123);
+	SF_mindustry_gen_Iconc_blockReinforcedSurgeWallLarge = jint(63122);
+	SF_mindustry_gen_Iconc_blockTankRefabricator = jint(63121);
+	SF_mindustry_gen_Iconc_blockMechRefabricator = jint(63120);
+	SF_mindustry_gen_Iconc_blockShipRefabricator = jint(63119);
+	SF_mindustry_gen_Iconc_blockSlagHeater = jint(63118);
+	SF_mindustry_gen_Iconc_blockAfflict = jint(63117);
+	SF_mindustry_gen_Iconc_blockShieldedWall = jint(63116);
+	SF_mindustry_gen_Iconc_blockFracture = jint(63115);
+	SF_mindustry_gen_Iconc_unitRenale = jint(63114);
+	SF_mindustry_gen_Iconc_blockLustre = jint(63113);
+	SF_mindustry_gen_Iconc_blockScathe = jint(63112);
+	SF_mindustry_gen_Iconc_unitScatheMissile = jint(63111);
+	SF_mindustry_gen_Iconc_blockRavage = jint(63110);
+	SF_mindustry_gen_Iconc_blockUnderflowDuct = jint(63109);
+	SF_mindustry_gen_Iconc_blockMalign = jint(63108);
+	SF_mindustry_gen_Iconc_blockSmite = jint(63107);
+	SF_mindustry_gen_Iconc_blockShockwaveTower = jint(63106);
+	SF_mindustry_gen_Iconc_blockHeatSource = jint(63105);
+	SF_mindustry_gen_Iconc_blockFluxReactor = jint(63104);
+	SF_mindustry_gen_Iconc_blockNeoplasiaReactor = jint(63103);
+	SF_mindustry_gen_Iconc_blockSandFloor = jint(63102);
+	SF_mindustry_gen_Iconc_blockCrystallineVent = jint(63101);
+	SF_mindustry_gen_Iconc_blockHeatRouter = jint(63100);
+	SF_mindustry_gen_Iconc_blockLargePayloadMassDriver = jint(63099);
+	SF_mindustry_gen_Iconc_blockReinforcedMessage = jint(63098);
+	SF_mindustry_gen_Iconc_blockWorldMessage = jint(63097);
+	SF_mindustry_gen_Iconc_statusFast = jint(63096);
+	SF_mindustry_gen_Iconc_ranai = jint(63095);
+	SF_mindustry_gen_Iconc_cat = jint(63094);
+	SF_mindustry_gen_Iconc_blockWorldSwitch = jint(63093);
+	SF_mindustry_gen_Iconc_statusDynamic = jint(63092);
+	SF_mindustry_gen_Iconc_blockRemoveWall = jint(63091);
+	SF_mindustry_gen_Iconc_blockRemoveOre = jint(63090);
+	SF_mindustry_gen_Iconc_blockSmallHeatRedirector = jint(63089);
+	SF_mindustry_gen_Iconc_blockLargeCliffCrusher = jint(63088);
+	SF_mindustry_gen_Iconc_unitScatheMissilePhase = jint(63087);
+	SF_mindustry_gen_Iconc_unitScatheMissileSurge = jint(63086);
+	SF_mindustry_gen_Iconc_unitScatheMissileSurgeSplit = jint(63085);
+	SF_mindustry_gen_Iconc_blockAdvancedLaunchPad = jint(63084);
+	SF_mindustry_gen_Iconc_blockLandingPad = jint(63083);
+	SF_mindustry_gen_Iconc_blockStoneVent = jint(63082);
+	SF_mindustry_gen_Iconc_blockBasaltVent = jint(63081);
+	SF_mindustry_gen_Iconc_blockTileLogicDisplay = jint(63080);
+	SF_mindustry_gen_Iconc_blockMetalTiles1 = jint(63079);
+	SF_mindustry_gen_Iconc_blockMetalTiles2 = jint(63078);
+	SF_mindustry_gen_Iconc_blockMetalTiles3 = jint(63077);
+	SF_mindustry_gen_Iconc_blockMetalTiles4 = jint(63076);
+	SF_mindustry_gen_Iconc_blockColoredFloor = jint(63075);
+	SF_mindustry_gen_Iconc_blockMetalTiles5 = jint(63074);
+	SF_mindustry_gen_Iconc_blockMetalTiles6 = jint(63073);
+	SF_mindustry_gen_Iconc_blockMetalTiles7 = jint(63072);
+	SF_mindustry_gen_Iconc_blockMetalTiles8 = jint(63071);
+	SF_mindustry_gen_Iconc_blockMetalTiles9 = jint(63070);
+	SF_mindustry_gen_Iconc_blockMetalTiles10 = jint(63069);
+	SF_mindustry_gen_Iconc_blockColoredWall = jint(63068);
+	SF_mindustry_gen_Iconc_blockMetalTiles11 = jint(63067);
+	SF_mindustry_gen_Iconc_blockMetalTiles12 = jint(63066);
+	SF_mindustry_gen_Iconc_blockCharacterOverlay = jint(63065);
+	SF_mindustry_gen_Iconc_blockCharacterOverlayWhite = jint(63064);
+	SF_mindustry_gen_Iconc_blockRuneOverlayCrux = jint(63063);
+	SF_mindustry_gen_Iconc_blockRuneOverlay = jint(63062);
+	SF_mindustry_gen_Iconc_blockMetalWall1 = jint(63061);
+	SF_mindustry_gen_Iconc_blockMetalWall2 = jint(63060);
+	SF_mindustry_gen_Iconc_blockMetalTiles13 = jint(63059);
+	SF_mindustry_gen_Iconc_blockMetalWall3 = jint(63058);
+	SF_mindustry_gen_Iconc_blockOreWallGraphite = jint(63057);
+	SF_mindustry_gen_Iconc_blockLargeCanvas = jint(63056);
+	SF_mindustry_gen_Iconc_blockTargetDummy = jint(63055);
+	SF_mindustry_gen_Iconc_unitDummy = jint(63054);
+	SF_mindustry_gen_Iconc_fileTextFill = jint(61788);
+	SF_mindustry_gen_Iconc_file = jint(61787);
+	SF_mindustry_gen_Iconc_fileText = jint(61686);
+	SF_mindustry_gen_Iconc_left = jint(59394);
+	SF_mindustry_gen_Iconc_right = jint(59395);
+	SF_mindustry_gen_Iconc_up = jint(59396);
+	SF_mindustry_gen_Iconc_down = jint(59397);
+	SF_mindustry_gen_Iconc_home = jint(59399);
+	SF_mindustry_gen_Iconc_ok = jint(59392);
+	SF_mindustry_gen_Iconc_image = jint(59400);
+	SF_mindustry_gen_Iconc_star = jint(59401);
+	SF_mindustry_gen_Iconc_resize = jint(59403);
+	SF_mindustry_gen_Iconc_wrench = jint(59407);
+	SF_mindustry_gen_Iconc_githubSquare = jint(62208);
+	SF_mindustry_gen_Iconc_fileImage = jint(61893);
+	SF_mindustry_gen_Iconc_add = jint(59411);
+	SF_mindustry_gen_Iconc_edit = jint(59414);
+	SF_mindustry_gen_Iconc_chartBar = jint(59417);
+	SF_mindustry_gen_Iconc_planeOutline = jint(59418);
+	SF_mindustry_gen_Iconc_filter = jint(61616);
+	SF_mindustry_gen_Iconc_folder = jint(59421);
+	SF_mindustry_gen_Iconc_steam = jint(59426);
+	SF_mindustry_gen_Iconc_downOpen = jint(59428);
+	SF_mindustry_gen_Iconc_leftOpen = jint(59429);
+	SF_mindustry_gen_Iconc_upOpen = jint(59430);
+	SF_mindustry_gen_Iconc_map = jint(59431);
+	SF_mindustry_gen_Iconc_rotate = jint(59427);
+	SF_mindustry_gen_Iconc_play = jint(59433);
+	SF_mindustry_gen_Iconc_pause = jint(59398);
+	SF_mindustry_gen_Iconc_list = jint(59409);
+	SF_mindustry_gen_Iconc_cancel = jint(59413);
+	SF_mindustry_gen_Iconc_move = jint(59416);
+	SF_mindustry_gen_Iconc_terminal = jint(61728);
+	SF_mindustry_gen_Iconc_undo = jint(59445);
+	SF_mindustry_gen_Iconc_redo = jint(59446);
+	SF_mindustry_gen_Iconc_info = jint(61737);
+	SF_mindustry_gen_Iconc_infoCircle = jint(59447);
+	SF_mindustry_gen_Iconc_rightOpenOut = jint(59449);
+	SF_mindustry_gen_Iconc_rightOpen = jint(59450);
+	SF_mindustry_gen_Iconc_waves = jint(59451);
+	SF_mindustry_gen_Iconc_filters = jint(59454);
+	SF_mindustry_gen_Iconc_layers = jint(59455);
+	SF_mindustry_gen_Iconc_eraser = jint(61741);
+	SF_mindustry_gen_Iconc_bookOpen = jint(59393);
+	SF_mindustry_gen_Iconc_grid = jint(61481);
+	SF_mindustry_gen_Iconc_flipX = jint(59410);
+	SF_mindustry_gen_Iconc_flipY = jint(59458);
+	SF_mindustry_gen_Iconc_diagonal = jint(59460);
+	SF_mindustry_gen_Iconc_discord = jint(59405);
+	SF_mindustry_gen_Iconc_redditAlien = jint(62081);
+	SF_mindustry_gen_Iconc_github = jint(62216);
+	SF_mindustry_gen_Iconc_googleplay = jint(59453);
+	SF_mindustry_gen_Iconc_android = jint(59461);
+	SF_mindustry_gen_Iconc_trello = jint(61825);
+	SF_mindustry_gen_Iconc_logic = jint(59406);
+	SF_mindustry_gen_Iconc_distribution = jint(59412);
+	SF_mindustry_gen_Iconc_hammer = jint(59415);
+	SF_mindustry_gen_Iconc_save = jint(59419);
+	SF_mindustry_gen_Iconc_link = jint(59420);
+	SF_mindustry_gen_Iconc_itchio = jint(59434);
+	SF_mindustry_gen_Iconc_line = jint(59435);
+	SF_mindustry_gen_Iconc_admin = jint(59436);
+	SF_mindustry_gen_Iconc_spray1 = jint(59437);
+	SF_mindustry_gen_Iconc_crafting = jint(59440);
+	SF_mindustry_gen_Iconc_fill = jint(59468);
+	SF_mindustry_gen_Iconc_paste = jint(59474);
+	SF_mindustry_gen_Iconc_effect = jint(59475);
+	SF_mindustry_gen_Iconc_book = jint(59483);
+	SF_mindustry_gen_Iconc_liquid = jint(59484);
+	SF_mindustry_gen_Iconc_host = jint(59485);
+	SF_mindustry_gen_Iconc_production = jint(59486);
+	SF_mindustry_gen_Iconc_exit = jint(59487);
+	SF_mindustry_gen_Iconc_modePvp = jint(59489);
+	SF_mindustry_gen_Iconc_modeAttack = jint(59493);
+	SF_mindustry_gen_Iconc_refresh1 = jint(59495);
+	SF_mindustry_gen_Iconc_none = jint(59496);
+	SF_mindustry_gen_Iconc_pencil = jint(59497);
+	SF_mindustry_gen_Iconc_refresh = jint(59498);
+	SF_mindustry_gen_Iconc_modeSurvival = jint(59499);
+	SF_mindustry_gen_Iconc_commandRally = jint(59500);
+	SF_mindustry_gen_Iconc_units = jint(59501);
+	SF_mindustry_gen_Iconc_commandAttack = jint(59502);
+	SF_mindustry_gen_Iconc_trash = jint(59503);
+	SF_mindustry_gen_Iconc_chat = jint(59504);
+	SF_mindustry_gen_Iconc_turret = jint(59505);
+	SF_mindustry_gen_Iconc_players = jint(59506);
+	SF_mindustry_gen_Iconc_editor = jint(59507);
+	SF_mindustry_gen_Iconc_copy = jint(59508);
+	SF_mindustry_gen_Iconc_tree = jint(59509);
+	SF_mindustry_gen_Iconc_lockOpen = jint(59510);
+	SF_mindustry_gen_Iconc_pick = jint(59511);
+	SF_mindustry_gen_Iconc_export = jint(59512);
+	SF_mindustry_gen_Iconc_download = jint(59513);
+	SF_mindustry_gen_Iconc_upload = jint(59515);
+	SF_mindustry_gen_Iconc_settings = jint(59516);
+	SF_mindustry_gen_Iconc_spray = jint(59517);
+	SF_mindustry_gen_Iconc_zoom = jint(59530);
+	SF_mindustry_gen_Iconc_powerOld = jint(59531);
+	SF_mindustry_gen_Iconc_power = jint(59408);
+	SF_mindustry_gen_Iconc_menu = jint(59532);
+	SF_mindustry_gen_Iconc_lock = jint(59533);
+	SF_mindustry_gen_Iconc_eye = jint(59534);
+	SF_mindustry_gen_Iconc_eyeOff = jint(59535);
+	SF_mindustry_gen_Iconc_warning = jint(9888);
+	SF_mindustry_gen_Iconc_terrain = jint(59492);
+	SF_mindustry_gen_Iconc_defense = jint(59469);
+	SF_mindustry_gen_Iconc_planet = jint(59443);
+	SF_mindustry_gen_Iconc_arrowNote = jint(59444);
+	SF_mindustry_gen_Iconc_music = jint(59402);
+	SF_mindustry_gen_Iconc_fileAudio = jint(61895);
+	SF_mindustry_gen_Iconc_volumeOff = jint(59404);
+	SF_mindustry_gen_Iconc_volumeDown = jint(59423);
+	SF_mindustry_gen_Iconc_volumeUp = jint(59424);
+	SF_mindustry_gen_Iconc_tag = jint(59425);
+	SF_mindustry_gen_Iconc_tags = jint(59432);
+	SF_mindustry_gen_Iconc_battery4 = jint(62016);
+	SF_mindustry_gen_Iconc_battery3 = jint(62017);
+	SF_mindustry_gen_Iconc_battery2 = jint(62018);
+	SF_mindustry_gen_Iconc_battery1 = jint(62019);
+	SF_mindustry_gen_Iconc_battery0 = jint(62020);
+	SF_mindustry_gen_Iconc_fileCode = jint(61897);
+	SF_mindustry_gen_Iconc_fileVideo = jint(61896);
+	SF_mindustry_gen_Iconc_fileArchive = jint(61894);
+	SF_mindustry_gen_Iconc_folderOpen = jint(59438);
+	SF_mindustry_gen_Iconc_folderEmpty = jint(61716);
+	SF_mindustry_gen_Iconc_folderOpenEmpty = jint(61717);
+	SF_mindustry_gen_Iconc_inbox = jint(59439);
+	SF_mindustry_gen_Iconc_sitemap = jint(61672);
+	SF_mindustry_gen_Iconc_cloud = jint(59441);
+	SF_mindustry_gen_Iconc_uploadCloud = jint(61678);
+	SF_mindustry_gen_Iconc_downloadCloud = jint(61677);
+	SF_mindustry_gen_Iconc_rain = jint(59442);
+	SF_mindustry_gen_Iconc_cloudSun = jint(59448);
+	SF_mindustry_gen_Iconc_drizzle = jint(59452);
+	SF_mindustry_gen_Iconc_cloudFlash = jint(59456);
+	SF_mindustry_gen_Iconc_cloudWind = jint(59457);
+	SF_mindustry_gen_Iconc_box = jint(59422);
+	SF_mindustry_gen_Iconc_chartAlt = jint(59459);
+	SF_mindustry_gen_Iconc_all = ((jobject) createStringLiteral(ctx, u8"\uf15c\uf15b\uf0f6\ue802\ue803\ue804\ue805\ue807\ue800\ue808\ue809\ue80b\ue80f\uf300\uf1c5\ue813\ue816\ue819\ue81a\uf0b0\ue81d\ue822\ue824\ue825\ue826\ue827\ue823\ue829\ue806\ue811\ue815\ue818\uf120\ue835\ue836\uf129\ue837\ue839\ue83a\ue83b\ue83e\ue83f\uf12d\ue801\uf029\ue812\ue842\ue844\ue80d\uf281\uf308\ue83d\ue845\uf181\ue80e\ue814\ue817\ue81b\ue81c\ue82a\ue82b\ue82c\ue82d\ue830\ue84c\ue852\ue853\ue85b\ue85c\ue85d\ue85e\ue85f\ue861\ue865\ue867\ue868\ue869\ue86a\ue86b\ue86c\ue86d\ue86e\ue86f\ue870\ue871\ue872\ue873\ue874\ue875\ue876\ue877\ue878\ue879\ue87b\ue87c\ue87d\ue88a\ue88b\ue810\ue88c\ue88d\ue88e\ue88f\u26a0\ue864\ue84d\ue833\ue834\ue80a\uf1c7\ue80c\ue81f\ue820\ue821\ue828\uf240\uf241\uf242\uf243\uf244\uf1c9\uf1c8\uf1c6\ue82e\uf114\uf115\ue82f\uf0e8\ue831\uf0ee\uf0ed\ue832\ue838\ue83c\ue840\ue841\ue81e\ue843"_j));
+	jtype frame[3];
+	auto stack = &frame[0];
+	jtype *sp = stack;
+	FrameInfo frameInfo { "mindustry/gen/Iconc:<clinit>", 3 };
+	auto frameRef = pushStackFrame(ctx, &frameInfo, frame, nullptr);
+
+	clinit_mindustry_gen_Iconc(ctx);
+	{
+	LINE_NUMBER(3148);
+	clinit_arc_struct_ObjectIntMap(ctx);
+	sp[0].o = gcAlloc(ctx, &class_arc_struct_ObjectIntMap);
+	init_arc_struct_ObjectIntMap(ctx, sp[0].o);
+	clinit_mindustry_gen_Iconc(ctx);
+	SF_mindustry_gen_Iconc_codes = sp[0].o;
+	LINE_NUMBER(3150);
+	clinit_arc_struct_IntMap(ctx);
+	sp[0].o = gcAlloc(ctx, &class_arc_struct_IntMap);
+	init_arc_struct_IntMap(ctx, sp[0].o);
+	clinit_mindustry_gen_Iconc(ctx);
+	SF_mindustry_gen_Iconc_codeToName = sp[0].o;
+	LINE_NUMBER(3845);
+	clinit_mindustry_gen_Iconc(ctx);
+	sp[0].o = (jobject)SF_mindustry_gen_Iconc_codes;
+	((func_arc_struct_ObjectIntMap_put_java_lang_Object_int) ((void **) nullCheck(ctx, sp[0].o)->vtable)[VTABLE_arc_struct_ObjectIntMap_put_java_lang_Object_int])(ctx, sp[0].o, (((jobject) createStringLiteral(ctx, u8"fileTextFill"_j))), (jint(61788)));
+	LINE_NUMBER(3846);
+	clinit_mindustry_gen_Iconc(ctx);
+	sp[0].o = (jobject)SF_mindustry_gen_Iconc_codeToName;
+	sp[0].o = (jobject)((func_arc_struct_IntMap_put_int_java_lang_Object_R_java_lang_Object) ((void **) nullCheck(ctx, sp[0].o)->vtable)[VTABLE_arc_struct_IntMap_put_int_java_lang_Object_R_java_lang_Object])(ctx, sp[0].o, (jint(61788)), (((jobject) createStringLiteral(ctx, u8"fileTextFill"_j))));
+	LINE_NUMBER(3847);
+	clinit_mindustry_gen_Iconc(ctx);
+	sp[0].o = (jobject)SF_mindustry_gen_Iconc_codes;
+	((func_arc_struct_ObjectIntMap_put_java_lang_Object_int) ((void **) nullCheck(ctx, sp[0].o)->vtable)[VTABLE_arc_struct_ObjectIntMap_put_java_lang_Object_int])(ctx, sp[0].o, (((jobject) createStringLiteral(ctx, u8"file"_j))), (jint(61787)));
+	LINE_NUMBER(3848);
+	clinit_mindustry_gen_Iconc(ctx);
+	sp[0].o = (jobject)SF_mindustry_gen_Iconc_codeToName;
+	sp[0].o = (jobject)((func_arc_struct_IntMap_put_int_java_lang_Object_R_java_lang_Object) ((void **) nullCheck(ctx, sp[0].o)->vtable)[VTABLE_arc_struct_IntMap_put_int_java_lang_Object_R_java_lang_Object])(ctx, sp[0].o, (jint(61787)), (((jobject) createStringLiteral(ctx, u8"file"_j))));
+	LINE_NUMBER(3849);
+	clinit_mindustry_gen_Iconc(ctx);
+	sp[0].o = (jobject)SF_mindustry_gen_Iconc_codes;
+	((func_arc_struct_ObjectIntMap_put_java_lang_Object_int) ((void **) nullCheck(ctx, sp[0].o)->vtable)[VTABLE_arc_struct_ObjectIntMap_put_java_lang_Object_int])(ctx, sp[0].o, (((jobject) createStringLiteral(ctx, u8"fileText"_j))), (jint(61686)));
+	LINE_NUMBER(3850);
+	clinit_mindustry_gen_Iconc(ctx);
+	sp[0].o = (jobject)SF_mindustry_gen_Iconc_codeToName;
+	sp[0].o = (jobject)((func_arc_struct_IntMap_put_int_java_lang_Object_R_java_lang_Object) ((void **) nullCheck(ctx, sp[0].o)->vtable)[VTABLE_arc_struct_IntMap_put_int_java_lang_Object_R_java_lang_Object])(ctx, sp[0].o, (jint(61686)), (((jobject) createStringLiteral(ctx, u8"fileText"_j))));
+	LINE_NUMBER(3851);
+	clinit_mindustry_gen_Iconc(ctx);
+	sp[0].o = (jobject)SF_mindustry_gen_Iconc_codes;
+	((func_arc_struct_ObjectIntMap_put_java_lang_Object_int) ((void **) nullCheck(ctx, sp[0].o)->vtable)[VTABLE_arc_struct_ObjectIntMap_put_java_lang_Object_int])(ctx, sp[0].o, (((jobject) createStringLiteral(ctx, u8"left"_j))), (jint(59394)));
+	LINE_NUMBER(3852);
+	clinit_mindustry_gen_Iconc(ctx);
+	sp[0].o = (jobject)SF_mindustry_gen_Iconc_codeToName;
+	sp[0].o = (jobject)((func_arc_struct_IntMap_put_int_java_lang_Object_R_java_lang_Object) ((void **) nullCheck(ctx, sp[0].o)->vtable)[VTABLE_arc_struct_IntMap_put_int_java_lang_Object_R_java_lang_Object])(ctx, sp[0].o, (jint(59394)), (((jobject) createStringLiteral(ctx, u8"left"_j))));
+	LINE_NUMBER(3853);
+	clinit_mindustry_gen_Iconc(ctx);
+	sp[0].o = (jobject)SF_mindustry_gen_Iconc_codes;
+	((func_arc_struct_ObjectIntMap_put_java_lang_Object_int) ((void **) nullCheck(ctx, sp[0].o)->vtable)[VTABLE_arc_struct_ObjectIntMap_put_java_lang_Object_int])(ctx, sp[0].o, (((jobject) createStringLiteral(ctx, u8"right"_j))), (jint(59395)));
+	LINE_NUMBER(3854);
+	clinit_mindustry_gen_Iconc(ctx);
+	sp[0].o = (jobject)SF_mindustry_gen_Iconc_codeToName;
+	sp[0].o = (jobject)((func_arc_struct_IntMap_put_int_java_lang_Object_R_java_lang_Object) ((void **) nullCheck(ctx, sp[0].o)->vtable)[VTABLE_arc_struct_IntMap_put_int_java_lang_Object_R_java_lang_Object])(ctx, sp[0].o, (jint(59395)), (((jobject) createStringLiteral(ctx, u8"right"_j))));
+	LINE_NUMBER(3855);
+	clinit_mindustry_gen_Iconc(ctx);
+	sp[0].o = (jobject)SF_mindustry_gen_Iconc_codes;
+	((func_arc_struct_ObjectIntMap_put_java_lang_Object_int) ((void **) nullCheck(ctx, sp[0].o)->vtable)[VTABLE_arc_struct_ObjectIntMap_put_java_lang_Object_int])(ctx, sp[0].o, (((jobject) createStringLiteral(ctx, u8"up"_j))), (jint(59396)));
+	LINE_NUMBER(3856);
+	clinit_mindustry_gen_Iconc(ctx);
+	sp[0].o = (jobject)SF_mindustry_gen_Iconc_codeToName;
+	sp[0].o = (jobject)((func_arc_struct_IntMap_put_int_java_lang_Object_R_java_lang_Object) ((void **) nullCheck(ctx, sp[0].o)->vtable)[VTABLE_arc_struct_IntMap_put_int_java_lang_Object_R_java_lang_Object])(ctx, sp[0].o, (jint(59396)), (((jobject) createStringLiteral(ctx, u8"up"_j))));
+	LINE_NUMBER(3857);
+	clinit_mindustry_gen_Iconc(ctx);
+	sp[0].o = (jobject)SF_mindustry_gen_Iconc_codes;
+	((func_arc_struct_ObjectIntMap_put_java_lang_Object_int) ((void **) nullCheck(ctx, sp[0].o)->vtable)[VTABLE_arc_struct_ObjectIntMap_put_java_lang_Object_int])(ctx, sp[0].o, (((jobject) createStringLiteral(ctx, u8"down"_j))), (jint(59397)));
+	LINE_NUMBER(3858);
+	clinit_mindustry_gen_Iconc(ctx);
+	sp[0].o = (jobject)SF_mindustry_gen_Iconc_codeToName;
+	sp[0].o = (jobject)((func_arc_struct_IntMap_put_int_java_lang_Object_R_java_lang_Object) ((void **) nullCheck(ctx, sp[0].o)->vtable)[VTABLE_arc_struct_IntMap_put_int_java_lang_Object_R_java_lang_Object])(ctx, sp[0].o, (jint(59397)), (((jobject) createStringLiteral(ctx, u8"down"_j))));
+	LINE_NUMBER(3859);
+	clinit_mindustry_gen_Iconc(ctx);
+	sp[0].o = (jobject)SF_mindustry_gen_Iconc_codes;
+	((func_arc_struct_ObjectIntMap_put_java_lang_Object_int) ((void **) nullCheck(ctx, sp[0].o)->vtable)[VTABLE_arc_struct_ObjectIntMap_put_java_lang_Object_int])(ctx, sp[0].o, (((jobject) createStringLiteral(ctx, u8"home"_j))), (jint(59399)));
+	LINE_NUMBER(3860);
+	clinit_mindustry_gen_Iconc(ctx);
+	sp[0].o = (jobject)SF_mindustry_gen_Iconc_codeToName;
+	sp[0].o = (jobject)((func_arc_struct_IntMap_put_int_java_lang_Object_R_java_lang_Object) ((void **) nullCheck(ctx, sp[0].o)->vtable)[VTABLE_arc_struct_IntMap_put_int_java_lang_Object_R_java_lang_Object])(ctx, sp[0].o, (jint(59399)), (((jobject) createStringLiteral(ctx, u8"home"_j))));
+	LINE_NUMBER(3861);
+	clinit_mindustry_gen_Iconc(ctx);
+	sp[0].o = (jobject)SF_mindustry_gen_Iconc_codes;
+	((func_arc_struct_ObjectIntMap_put_java_lang_Object_int) ((void **) nullCheck(ctx, sp[0].o)->vtable)[VTABLE_arc_struct_ObjectIntMap_put_java_lang_Object_int])(ctx, sp[0].o, (((jobject) createStringLiteral(ctx, u8"ok"_j))), (jint(59392)));
+	LINE_NUMBER(3862);
+	clinit_mindustry_gen_Iconc(ctx);
+	sp[0].o = (jobject)SF_mindustry_gen_Iconc_codeToName;
+	sp[0].o = (jobject)((func_arc_struct_IntMap_put_int_java_lang_Object_R_java_lang_Object) ((void **) nullCheck(ctx, sp[0].o)->vtable)[VTABLE_arc_struct_IntMap_put_int_java_lang_Object_R_java_lang_Object])(ctx, sp[0].o, (jint(59392)), (((jobject) createStringLiteral(ctx, u8"ok"_j))));
+	LINE_NUMBER(3863);
+	clinit_mindustry_gen_Iconc(ctx);
+	sp[0].o = (jobject)SF_mindustry_gen_Iconc_codes;
+	((func_arc_struct_ObjectIntMap_put_java_lang_Object_int) ((void **) nullCheck(ctx, sp[0].o)->vtable)[VTABLE_arc_struct_ObjectIntMap_put_java_lang_Object_int])(ctx, sp[0].o, (((jobject) createStringLiteral(ctx, u8"image"_j))), (jint(59400)));
+	LINE_NUMBER(3864);
+	clinit_mindustry_gen_Iconc(ctx);
+	sp[0].o = (jobject)SF_mindustry_gen_Iconc_codeToName;
+	sp[0].o = (jobject)((func_arc_struct_IntMap_put_int_java_lang_Object_R_java_lang_Object) ((void **) nullCheck(ctx, sp[0].o)->vtable)[VTABLE_arc_struct_IntMap_put_int_java_lang_Object_R_java_lang_Object])(ctx, sp[0].o, (jint(59400)), (((jobject) createStringLiteral(ctx, u8"image"_j))));
+	LINE_NUMBER(3865);
+	clinit_mindustry_gen_Iconc(ctx);
+	sp[0].o = (jobject)SF_mindustry_gen_Iconc_codes;
+	((func_arc_struct_ObjectIntMap_put_java_lang_Object_int) ((void **) nullCheck(ctx, sp[0].o)->vtable)[VTABLE_arc_struct_ObjectIntMap_put_java_lang_Object_int])(ctx, sp[0].o, (((jobject) createStringLiteral(ctx, u8"star"_j))), (jint(59401)));
+	LINE_NUMBER(3866);
+	clinit_mindustry_gen_Iconc(ctx);
+	sp[0].o = (jobject)SF_mindustry_gen_Iconc_codeToName;
+	sp[0].o = (jobject)((func_arc_struct_IntMap_put_int_java_lang_Object_R_java_lang_Object) ((void **) nullCheck(ctx, sp[0].o)->vtable)[VTABLE_arc_struct_IntMap_put_int_java_lang_Object_R_java_lang_Object])(ctx, sp[0].o, (jint(59401)), (((jobject) createStringLiteral(ctx, u8"star"_j))));
+	LINE_NUMBER(3867);
+	clinit_mindustry_gen_Iconc(ctx);
+	sp[0].o = (jobject)SF_mindustry_gen_Iconc_codes;
+	((func_arc_struct_ObjectIntMap_put_java_lang_Object_int) ((void **) nullCheck(ctx, sp[0].o)->vtable)[VTABLE_arc_struct_ObjectIntMap_put_java_lang_Object_int])(ctx, sp[0].o, (((jobject) createStringLiteral(ctx, u8"resize"_j))), (jint(59403)));
+	LINE_NUMBER(3868);
+	clinit_mindustry_gen_Iconc(ctx);
+	sp[0].o = (jobject)SF_mindustry_gen_Iconc_codeToName;
+	sp[0].o = (jobject)((func_arc_struct_IntMap_put_int_java_lang_Object_R_java_lang_Object) ((void **) nullCheck(ctx, sp[0].o)->vtable)[VTABLE_arc_struct_IntMap_put_int_java_lang_Object_R_java_lang_Object])(ctx, sp[0].o, (jint(59403)), (((jobject) createStringLiteral(ctx, u8"resize"_j))));
+	LINE_NUMBER(3869);
+	clinit_mindustry_gen_Iconc(ctx);
+	sp[0].o = (jobject)SF_mindustry_gen_Iconc_codes;
+	((func_arc_struct_ObjectIntMap_put_java_lang_Object_int) ((void **) nullCheck(ctx, sp[0].o)->vtable)[VTABLE_arc_struct_ObjectIntMap_put_java_lang_Object_int])(ctx, sp[0].o, (((jobject) createStringLiteral(ctx, u8"wrench"_j))), (jint(59407)));
+	LINE_NUMBER(3870);
+	clinit_mindustry_gen_Iconc(ctx);
+	sp[0].o = (jobject)SF_mindustry_gen_Iconc_codeToName;
+	sp[0].o = (jobject)((func_arc_struct_IntMap_put_int_java_lang_Object_R_java_lang_Object) ((void **) nullCheck(ctx, sp[0].o)->vtable)[VTABLE_arc_struct_IntMap_put_int_java_lang_Object_R_java_lang_Object])(ctx, sp[0].o, (jint(59407)), (((jobject) createStringLiteral(ctx, u8"wrench"_j))));
+	LINE_NUMBER(3871);
+	clinit_mindustry_gen_Iconc(ctx);
+	sp[0].o = (jobject)SF_mindustry_gen_Iconc_codes;
+	((func_arc_struct_ObjectIntMap_put_java_lang_Object_int) ((void **) nullCheck(ctx, sp[0].o)->vtable)[VTABLE_arc_struct_ObjectIntMap_put_java_lang_Object_int])(ctx, sp[0].o, (((jobject) createStringLiteral(ctx, u8"githubSquare"_j))), (jint(62208)));
+	LINE_NUMBER(3872);
+	clinit_mindustry_gen_Iconc(ctx);
+	sp[0].o = (jobject)SF_mindustry_gen_Iconc_codeToName;
+	sp[0].o = (jobject)((func_arc_struct_IntMap_put_int_java_lang_Object_R_java_lang_Object) ((void **) nullCheck(ctx, sp[0].o)->vtable)[VTABLE_arc_struct_IntMap_put_int_java_lang_Object_R_java_lang_Object])(ctx, sp[0].o, (jint(62208)), (((jobject) createStringLiteral(ctx, u8"githubSquare"_j))));
+	LINE_NUMBER(3873);
+	clinit_mindustry_gen_Iconc(ctx);
+	sp[0].o = (jobject)SF_mindustry_gen_Iconc_codes;
+	((func_arc_struct_ObjectIntMap_put_java_lang_Object_int) ((void **) nullCheck(ctx, sp[0].o)->vtable)[VTABLE_arc_struct_ObjectIntMap_put_java_lang_Object_int])(ctx, sp[0].o, (((jobject) createStringLiteral(ctx, u8"fileImage"_j))), (jint(61893)));
+	LINE_NUMBER(3874);
+	clinit_mindustry_gen_Iconc(ctx);
+	sp[0].o = (jobject)SF_mindustry_gen_Iconc_codeToName;
+	sp[0].o = (jobject)((func_arc_struct_IntMap_put_int_java_lang_Object_R_java_lang_Object) ((void **) nullCheck(ctx, sp[0].o)->vtable)[VTABLE_arc_struct_IntMap_put_int_java_lang_Object_R_java_lang_Object])(ctx, sp[0].o, (jint(61893)), (((jobject) createStringLiteral(ctx, u8"fileImage"_j))));
+	LINE_NUMBER(3875);
+	clinit_mindustry_gen_Iconc(ctx);
+	sp[0].o = (jobject)SF_mindustry_gen_Iconc_codes;
+	((func_arc_struct_ObjectIntMap_put_java_lang_Object_int) ((void **) nullCheck(ctx, sp[0].o)->vtable)[VTABLE_arc_struct_ObjectIntMap_put_java_lang_Object_int])(ctx, sp[0].o, (((jobject) createStringLiteral(ctx, u8"add"_j))), (jint(59411)));
+	LINE_NUMBER(3876);
+	clinit_mindustry_gen_Iconc(ctx);
+	sp[0].o = (jobject)SF_mindustry_gen_Iconc_codeToName;
+	sp[0].o = (jobject)((func_arc_struct_IntMap_put_int_java_lang_Object_R_java_lang_Object) ((void **) nullCheck(ctx, sp[0].o)->vtable)[VTABLE_arc_struct_IntMap_put_int_java_lang_Object_R_java_lang_Object])(ctx, sp[0].o, (jint(59411)), (((jobject) createStringLiteral(ctx, u8"add"_j))));
+	LINE_NUMBER(3877);
+	clinit_mindustry_gen_Iconc(ctx);
+	sp[0].o = (jobject)SF_mindustry_gen_Iconc_codes;
+	((func_arc_struct_ObjectIntMap_put_java_lang_Object_int) ((void **) nullCheck(ctx, sp[0].o)->vtable)[VTABLE_arc_struct_ObjectIntMap_put_java_lang_Object_int])(ctx, sp[0].o, (((jobject) createStringLiteral(ctx, u8"edit"_j))), (jint(59414)));
+	LINE_NUMBER(3878);
+	clinit_mindustry_gen_Iconc(ctx);
+	sp[0].o = (jobject)SF_mindustry_gen_Iconc_codeToName;
+	sp[0].o = (jobject)((func_arc_struct_IntMap_put_int_java_lang_Object_R_java_lang_Object) ((void **) nullCheck(ctx, sp[0].o)->vtable)[VTABLE_arc_struct_IntMap_put_int_java_lang_Object_R_java_lang_Object])(ctx, sp[0].o, (jint(59414)), (((jobject) createStringLiteral(ctx, u8"edit"_j))));
+	LINE_NUMBER(3879);
+	clinit_mindustry_gen_Iconc(ctx);
+	sp[0].o = (jobject)SF_mindustry_gen_Iconc_codes;
+	((func_arc_struct_ObjectIntMap_put_java_lang_Object_int) ((void **) nullCheck(ctx, sp[0].o)->vtable)[VTABLE_arc_struct_ObjectIntMap_put_java_lang_Object_int])(ctx, sp[0].o, (((jobject) createStringLiteral(ctx, u8"chartBar"_j))), (jint(59417)));
+	LINE_NUMBER(3880);
+	clinit_mindustry_gen_Iconc(ctx);
+	sp[0].o = (jobject)SF_mindustry_gen_Iconc_codeToName;
+	sp[0].o = (jobject)((func_arc_struct_IntMap_put_int_java_lang_Object_R_java_lang_Object) ((void **) nullCheck(ctx, sp[0].o)->vtable)[VTABLE_arc_struct_IntMap_put_int_java_lang_Object_R_java_lang_Object])(ctx, sp[0].o, (jint(59417)), (((jobject) createStringLiteral(ctx, u8"chartBar"_j))));
+	LINE_NUMBER(3881);
+	clinit_mindustry_gen_Iconc(ctx);
+	sp[0].o = (jobject)SF_mindustry_gen_Iconc_codes;
+	((func_arc_struct_ObjectIntMap_put_java_lang_Object_int) ((void **) nullCheck(ctx, sp[0].o)->vtable)[VTABLE_arc_struct_ObjectIntMap_put_java_lang_Object_int])(ctx, sp[0].o, (((jobject) createStringLiteral(ctx, u8"planeOutline"_j))), (jint(59418)));
+	LINE_NUMBER(3882);
+	clinit_mindustry_gen_Iconc(ctx);
+	sp[0].o = (jobject)SF_mindustry_gen_Iconc_codeToName;
+	sp[0].o = (jobject)((func_arc_struct_IntMap_put_int_java_lang_Object_R_java_lang_Object) ((void **) nullCheck(ctx, sp[0].o)->vtable)[VTABLE_arc_struct_IntMap_put_int_java_lang_Object_R_java_lang_Object])(ctx, sp[0].o, (jint(59418)), (((jobject) createStringLiteral(ctx, u8"planeOutline"_j))));
+	LINE_NUMBER(3883);
+	clinit_mindustry_gen_Iconc(ctx);
+	sp[0].o = (jobject)SF_mindustry_gen_Iconc_codes;
+	((func_arc_struct_ObjectIntMap_put_java_lang_Object_int) ((void **) nullCheck(ctx, sp[0].o)->vtable)[VTABLE_arc_struct_ObjectIntMap_put_java_lang_Object_int])(ctx, sp[0].o, (((jobject) createStringLiteral(ctx, u8"filter"_j))), (jint(61616)));
+	LINE_NUMBER(3884);
+	clinit_mindustry_gen_Iconc(ctx);
+	sp[0].o = (jobject)SF_mindustry_gen_Iconc_codeToName;
+	sp[0].o = (jobject)((func_arc_struct_IntMap_put_int_java_lang_Object_R_java_lang_Object) ((void **) nullCheck(ctx, sp[0].o)->vtable)[VTABLE_arc_struct_IntMap_put_int_java_lang_Object_R_java_lang_Object])(ctx, sp[0].o, (jint(61616)), (((jobject) createStringLiteral(ctx, u8"filter"_j))));
+	LINE_NUMBER(3885);
+	clinit_mindustry_gen_Iconc(ctx);
+	sp[0].o = (jobject)SF_mindustry_gen_Iconc_codes;
+	((func_arc_struct_ObjectIntMap_put_java_lang_Object_int) ((void **) nullCheck(ctx, sp[0].o)->vtable)[VTABLE_arc_struct_ObjectIntMap_put_java_lang_Object_int])(ctx, sp[0].o, (((jobject) createStringLiteral(ctx, u8"folder"_j))), (jint(59421)));
+	LINE_NUMBER(3886);
+	clinit_mindustry_gen_Iconc(ctx);
+	sp[0].o = (jobject)SF_mindustry_gen_Iconc_codeToName;
+	sp[0].o = (jobject)((func_arc_struct_IntMap_put_int_java_lang_Object_R_java_lang_Object) ((void **) nullCheck(ctx, sp[0].o)->vtable)[VTABLE_arc_struct_IntMap_put_int_java_lang_Object_R_java_lang_Object])(ctx, sp[0].o, (jint(59421)), (((jobject) createStringLiteral(ctx, u8"folder"_j))));
+	LINE_NUMBER(3887);
+	clinit_mindustry_gen_Iconc(ctx);
+	sp[0].o = (jobject)SF_mindustry_gen_Iconc_codes;
+	((func_arc_struct_ObjectIntMap_put_java_lang_Object_int) ((void **) nullCheck(ctx, sp[0].o)->vtable)[VTABLE_arc_struct_ObjectIntMap_put_java_lang_Object_int])(ctx, sp[0].o, (((jobject) createStringLiteral(ctx, u8"steam"_j))), (jint(59426)));
+	LINE_NUMBER(3888);
+	clinit_mindustry_gen_Iconc(ctx);
+	sp[0].o = (jobject)SF_mindustry_gen_Iconc_codeToName;
+	sp[0].o = (jobject)((func_arc_struct_IntMap_put_int_java_lang_Object_R_java_lang_Object) ((void **) nullCheck(ctx, sp[0].o)->vtable)[VTABLE_arc_struct_IntMap_put_int_java_lang_Object_R_java_lang_Object])(ctx, sp[0].o, (jint(59426)), (((jobject) createStringLiteral(ctx, u8"steam"_j))));
+	LINE_NUMBER(3889);
+	clinit_mindustry_gen_Iconc(ctx);
+	sp[0].o = (jobject)SF_mindustry_gen_Iconc_codes;
+	((func_arc_struct_ObjectIntMap_put_java_lang_Object_int) ((void **) nullCheck(ctx, sp[0].o)->vtable)[VTABLE_arc_struct_ObjectIntMap_put_java_lang_Object_int])(ctx, sp[0].o, (((jobject) createStringLiteral(ctx, u8"downOpen"_j))), (jint(59428)));
+	LINE_NUMBER(3890);
+	clinit_mindustry_gen_Iconc(ctx);
+	sp[0].o = (jobject)SF_mindustry_gen_Iconc_codeToName;
+	sp[0].o = (jobject)((func_arc_struct_IntMap_put_int_java_lang_Object_R_java_lang_Object) ((void **) nullCheck(ctx, sp[0].o)->vtable)[VTABLE_arc_struct_IntMap_put_int_java_lang_Object_R_java_lang_Object])(ctx, sp[0].o, (jint(59428)), (((jobject) createStringLiteral(ctx, u8"downOpen"_j))));
+	LINE_NUMBER(3891);
+	clinit_mindustry_gen_Iconc(ctx);
+	sp[0].o = (jobject)SF_mindustry_gen_Iconc_codes;
+	((func_arc_struct_ObjectIntMap_put_java_lang_Object_int) ((void **) nullCheck(ctx, sp[0].o)->vtable)[VTABLE_arc_struct_ObjectIntMap_put_java_lang_Object_int])(ctx, sp[0].o, (((jobject) createStringLiteral(ctx, u8"leftOpen"_j))), (jint(59429)));
+	LINE_NUMBER(3892);
+	clinit_mindustry_gen_Iconc(ctx);
+	sp[0].o = (jobject)SF_mindustry_gen_Iconc_codeToName;
+	sp[0].o = (jobject)((func_arc_struct_IntMap_put_int_java_lang_Object_R_java_lang_Object) ((void **) nullCheck(ctx, sp[0].o)->vtable)[VTABLE_arc_struct_IntMap_put_int_java_lang_Object_R_java_lang_Object])(ctx, sp[0].o, (jint(59429)), (((jobject) createStringLiteral(ctx, u8"leftOpen"_j))));
+	LINE_NUMBER(3893);
+	clinit_mindustry_gen_Iconc(ctx);
+	sp[0].o = (jobject)SF_mindustry_gen_Iconc_codes;
+	((func_arc_struct_ObjectIntMap_put_java_lang_Object_int) ((void **) nullCheck(ctx, sp[0].o)->vtable)[VTABLE_arc_struct_ObjectIntMap_put_java_lang_Object_int])(ctx, sp[0].o, (((jobject) createStringLiteral(ctx, u8"upOpen"_j))), (jint(59430)));
+	LINE_NUMBER(3894);
+	clinit_mindustry_gen_Iconc(ctx);
+	sp[0].o = (jobject)SF_mindustry_gen_Iconc_codeToName;
+	sp[0].o = (jobject)((func_arc_struct_IntMap_put_int_java_lang_Object_R_java_lang_Object) ((void **) nullCheck(ctx, sp[0].o)->vtable)[VTABLE_arc_struct_IntMap_put_int_java_lang_Object_R_java_lang_Object])(ctx, sp[0].o, (jint(59430)), (((jobject) createStringLiteral(ctx, u8"upOpen"_j))));
+	LINE_NUMBER(3895);
+	clinit_mindustry_gen_Iconc(ctx);
+	sp[0].o = (jobject)SF_mindustry_gen_Iconc_codes;
+	((func_arc_struct_ObjectIntMap_put_java_lang_Object_int) ((void **) nullCheck(ctx, sp[0].o)->vtable)[VTABLE_arc_struct_ObjectIntMap_put_java_lang_Object_int])(ctx, sp[0].o, (((jobject) createStringLiteral(ctx, u8"map"_j))), (jint(59431)));
+	LINE_NUMBER(3896);
+	clinit_mindustry_gen_Iconc(ctx);
+	sp[0].o = (jobject)SF_mindustry_gen_Iconc_codeToName;
+	sp[0].o = (jobject)((func_arc_struct_IntMap_put_int_java_lang_Object_R_java_lang_Object) ((void **) nullCheck(ctx, sp[0].o)->vtable)[VTABLE_arc_struct_IntMap_put_int_java_lang_Object_R_java_lang_Object])(ctx, sp[0].o, (jint(59431)), (((jobject) createStringLiteral(ctx, u8"map"_j))));
+	LINE_NUMBER(3897);
+	clinit_mindustry_gen_Iconc(ctx);
+	sp[0].o = (jobject)SF_mindustry_gen_Iconc_codes;
+	((func_arc_struct_ObjectIntMap_put_java_lang_Object_int) ((void **) nullCheck(ctx, sp[0].o)->vtable)[VTABLE_arc_struct_ObjectIntMap_put_java_lang_Object_int])(ctx, sp[0].o, (((jobject) createStringLiteral(ctx, u8"rotate"_j))), (jint(59427)));
+	LINE_NUMBER(3898);
+	clinit_mindustry_gen_Iconc(ctx);
+	sp[0].o = (jobject)SF_mindustry_gen_Iconc_codeToName;
+	sp[0].o = (jobject)((func_arc_struct_IntMap_put_int_java_lang_Object_R_java_lang_Object) ((void **) nullCheck(ctx, sp[0].o)->vtable)[VTABLE_arc_struct_IntMap_put_int_java_lang_Object_R_java_lang_Object])(ctx, sp[0].o, (jint(59427)), (((jobject) createStringLiteral(ctx, u8"rotate"_j))));
+	LINE_NUMBER(3899);
+	clinit_mindustry_gen_Iconc(ctx);
+	sp[0].o = (jobject)SF_mindustry_gen_Iconc_codes;
+	((func_arc_struct_ObjectIntMap_put_java_lang_Object_int) ((void **) nullCheck(ctx, sp[0].o)->vtable)[VTABLE_arc_struct_ObjectIntMap_put_java_lang_Object_int])(ctx, sp[0].o, (((jobject) createStringLiteral(ctx, u8"play"_j))), (jint(59433)));
+	LINE_NUMBER(3900);
+	clinit_mindustry_gen_Iconc(ctx);
+	sp[0].o = (jobject)SF_mindustry_gen_Iconc_codeToName;
+	sp[0].o = (jobject)((func_arc_struct_IntMap_put_int_java_lang_Object_R_java_lang_Object) ((void **) nullCheck(ctx, sp[0].o)->vtable)[VTABLE_arc_struct_IntMap_put_int_java_lang_Object_R_java_lang_Object])(ctx, sp[0].o, (jint(59433)), (((jobject) createStringLiteral(ctx, u8"play"_j))));
+	LINE_NUMBER(3901);
+	clinit_mindustry_gen_Iconc(ctx);
+	sp[0].o = (jobject)SF_mindustry_gen_Iconc_codes;
+	((func_arc_struct_ObjectIntMap_put_java_lang_Object_int) ((void **) nullCheck(ctx, sp[0].o)->vtable)[VTABLE_arc_struct_ObjectIntMap_put_java_lang_Object_int])(ctx, sp[0].o, (((jobject) createStringLiteral(ctx, u8"pause"_j))), (jint(59398)));
+	LINE_NUMBER(3902);
+	clinit_mindustry_gen_Iconc(ctx);
+	sp[0].o = (jobject)SF_mindustry_gen_Iconc_codeToName;
+	sp[0].o = (jobject)((func_arc_struct_IntMap_put_int_java_lang_Object_R_java_lang_Object) ((void **) nullCheck(ctx, sp[0].o)->vtable)[VTABLE_arc_struct_IntMap_put_int_java_lang_Object_R_java_lang_Object])(ctx, sp[0].o, (jint(59398)), (((jobject) createStringLiteral(ctx, u8"pause"_j))));
+	LINE_NUMBER(3903);
+	clinit_mindustry_gen_Iconc(ctx);
+	sp[0].o = (jobject)SF_mindustry_gen_Iconc_codes;
+	((func_arc_struct_ObjectIntMap_put_java_lang_Object_int) ((void **) nullCheck(ctx, sp[0].o)->vtable)[VTABLE_arc_struct_ObjectIntMap_put_java_lang_Object_int])(ctx, sp[0].o, (((jobject) createStringLiteral(ctx, u8"list"_j))), (jint(59409)));
+	LINE_NUMBER(3904);
+	clinit_mindustry_gen_Iconc(ctx);
+	sp[0].o = (jobject)SF_mindustry_gen_Iconc_codeToName;
+	sp[0].o = (jobject)((func_arc_struct_IntMap_put_int_java_lang_Object_R_java_lang_Object) ((void **) nullCheck(ctx, sp[0].o)->vtable)[VTABLE_arc_struct_IntMap_put_int_java_lang_Object_R_java_lang_Object])(ctx, sp[0].o, (jint(59409)), (((jobject) createStringLiteral(ctx, u8"list"_j))));
+	LINE_NUMBER(3905);
+	clinit_mindustry_gen_Iconc(ctx);
+	sp[0].o = (jobject)SF_mindustry_gen_Iconc_codes;
+	((func_arc_struct_ObjectIntMap_put_java_lang_Object_int) ((void **) nullCheck(ctx, sp[0].o)->vtable)[VTABLE_arc_struct_ObjectIntMap_put_java_lang_Object_int])(ctx, sp[0].o, (((jobject) createStringLiteral(ctx, u8"cancel"_j))), (jint(59413)));
+	LINE_NUMBER(3906);
+	clinit_mindustry_gen_Iconc(ctx);
+	sp[0].o = (jobject)SF_mindustry_gen_Iconc_codeToName;
+	sp[0].o = (jobject)((func_arc_struct_IntMap_put_int_java_lang_Object_R_java_lang_Object) ((void **) nullCheck(ctx, sp[0].o)->vtable)[VTABLE_arc_struct_IntMap_put_int_java_lang_Object_R_java_lang_Object])(ctx, sp[0].o, (jint(59413)), (((jobject) createStringLiteral(ctx, u8"cancel"_j))));
+	LINE_NUMBER(3907);
+	clinit_mindustry_gen_Iconc(ctx);
+	sp[0].o = (jobject)SF_mindustry_gen_Iconc_codes;
+	((func_arc_struct_ObjectIntMap_put_java_lang_Object_int) ((void **) nullCheck(ctx, sp[0].o)->vtable)[VTABLE_arc_struct_ObjectIntMap_put_java_lang_Object_int])(ctx, sp[0].o, (((jobject) createStringLiteral(ctx, u8"move"_j))), (jint(59416)));
+	LINE_NUMBER(3908);
+	clinit_mindustry_gen_Iconc(ctx);
+	sp[0].o = (jobject)SF_mindustry_gen_Iconc_codeToName;
+	sp[0].o = (jobject)((func_arc_struct_IntMap_put_int_java_lang_Object_R_java_lang_Object) ((void **) nullCheck(ctx, sp[0].o)->vtable)[VTABLE_arc_struct_IntMap_put_int_java_lang_Object_R_java_lang_Object])(ctx, sp[0].o, (jint(59416)), (((jobject) createStringLiteral(ctx, u8"move"_j))));
+	LINE_NUMBER(3909);
+	clinit_mindustry_gen_Iconc(ctx);
+	sp[0].o = (jobject)SF_mindustry_gen_Iconc_codes;
+	((func_arc_struct_ObjectIntMap_put_java_lang_Object_int) ((void **) nullCheck(ctx, sp[0].o)->vtable)[VTABLE_arc_struct_ObjectIntMap_put_java_lang_Object_int])(ctx, sp[0].o, (((jobject) createStringLiteral(ctx, u8"terminal"_j))), (jint(61728)));
+	LINE_NUMBER(3910);
+	clinit_mindustry_gen_Iconc(ctx);
+	sp[0].o = (jobject)SF_mindustry_gen_Iconc_codeToName;
+	sp[0].o = (jobject)((func_arc_struct_IntMap_put_int_java_lang_Object_R_java_lang_Object) ((void **) nullCheck(ctx, sp[0].o)->vtable)[VTABLE_arc_struct_IntMap_put_int_java_lang_Object_R_java_lang_Object])(ctx, sp[0].o, (jint(61728)), (((jobject) createStringLiteral(ctx, u8"terminal"_j))));
+	LINE_NUMBER(3911);
+	clinit_mindustry_gen_Iconc(ctx);
+	sp[0].o = (jobject)SF_mindustry_gen_Iconc_codes;
+	((func_arc_struct_ObjectIntMap_put_java_lang_Object_int) ((void **) nullCheck(ctx, sp[0].o)->vtable)[VTABLE_arc_struct_ObjectIntMap_put_java_lang_Object_int])(ctx, sp[0].o, (((jobject) createStringLiteral(ctx, u8"undo"_j))), (jint(59445)));
+	LINE_NUMBER(3912);
+	clinit_mindustry_gen_Iconc(ctx);
+	sp[0].o = (jobject)SF_mindustry_gen_Iconc_codeToName;
+	sp[0].o = (jobject)((func_arc_struct_IntMap_put_int_java_lang_Object_R_java_lang_Object) ((void **) nullCheck(ctx, sp[0].o)->vtable)[VTABLE_arc_struct_IntMap_put_int_java_lang_Object_R_java_lang_Object])(ctx, sp[0].o, (jint(59445)), (((jobject) createStringLiteral(ctx, u8"undo"_j))));
+	LINE_NUMBER(3913);
+	clinit_mindustry_gen_Iconc(ctx);
+	sp[0].o = (jobject)SF_mindustry_gen_Iconc_codes;
+	((func_arc_struct_ObjectIntMap_put_java_lang_Object_int) ((void **) nullCheck(ctx, sp[0].o)->vtable)[VTABLE_arc_struct_ObjectIntMap_put_java_lang_Object_int])(ctx, sp[0].o, (((jobject) createStringLiteral(ctx, u8"redo"_j))), (jint(59446)));
+	LINE_NUMBER(3914);
+	clinit_mindustry_gen_Iconc(ctx);
+	sp[0].o = (jobject)SF_mindustry_gen_Iconc_codeToName;
+	sp[0].o = (jobject)((func_arc_struct_IntMap_put_int_java_lang_Object_R_java_lang_Object) ((void **) nullCheck(ctx, sp[0].o)->vtable)[VTABLE_arc_struct_IntMap_put_int_java_lang_Object_R_java_lang_Object])(ctx, sp[0].o, (jint(59446)), (((jobject) createStringLiteral(ctx, u8"redo"_j))));
+	LINE_NUMBER(3915);
+	clinit_mindustry_gen_Iconc(ctx);
+	sp[0].o = (jobject)SF_mindustry_gen_Iconc_codes;
+	((func_arc_struct_ObjectIntMap_put_java_lang_Object_int) ((void **) nullCheck(ctx, sp[0].o)->vtable)[VTABLE_arc_struct_ObjectIntMap_put_java_lang_Object_int])(ctx, sp[0].o, (((jobject) createStringLiteral(ctx, u8"info"_j))), (jint(61737)));
+	LINE_NUMBER(3916);
+	clinit_mindustry_gen_Iconc(ctx);
+	sp[0].o = (jobject)SF_mindustry_gen_Iconc_codeToName;
+	sp[0].o = (jobject)((func_arc_struct_IntMap_put_int_java_lang_Object_R_java_lang_Object) ((void **) nullCheck(ctx, sp[0].o)->vtable)[VTABLE_arc_struct_IntMap_put_int_java_lang_Object_R_java_lang_Object])(ctx, sp[0].o, (jint(61737)), (((jobject) createStringLiteral(ctx, u8"info"_j))));
+	LINE_NUMBER(3917);
+	clinit_mindustry_gen_Iconc(ctx);
+	sp[0].o = (jobject)SF_mindustry_gen_Iconc_codes;
+	((func_arc_struct_ObjectIntMap_put_java_lang_Object_int) ((void **) nullCheck(ctx, sp[0].o)->vtable)[VTABLE_arc_struct_ObjectIntMap_put_java_lang_Object_int])(ctx, sp[0].o, (((jobject) createStringLiteral(ctx, u8"infoCircle"_j))), (jint(59447)));
+	LINE_NUMBER(3918);
+	clinit_mindustry_gen_Iconc(ctx);
+	sp[0].o = (jobject)SF_mindustry_gen_Iconc_codeToName;
+	sp[0].o = (jobject)((func_arc_struct_IntMap_put_int_java_lang_Object_R_java_lang_Object) ((void **) nullCheck(ctx, sp[0].o)->vtable)[VTABLE_arc_struct_IntMap_put_int_java_lang_Object_R_java_lang_Object])(ctx, sp[0].o, (jint(59447)), (((jobject) createStringLiteral(ctx, u8"infoCircle"_j))));
+	LINE_NUMBER(3919);
+	clinit_mindustry_gen_Iconc(ctx);
+	sp[0].o = (jobject)SF_mindustry_gen_Iconc_codes;
+	((func_arc_struct_ObjectIntMap_put_java_lang_Object_int) ((void **) nullCheck(ctx, sp[0].o)->vtable)[VTABLE_arc_struct_ObjectIntMap_put_java_lang_Object_int])(ctx, sp[0].o, (((jobject) createStringLiteral(ctx, u8"rightOpenOut"_j))), (jint(59449)));
+	LINE_NUMBER(3920);
+	clinit_mindustry_gen_Iconc(ctx);
+	sp[0].o = (jobject)SF_mindustry_gen_Iconc_codeToName;
+	sp[0].o = (jobject)((func_arc_struct_IntMap_put_int_java_lang_Object_R_java_lang_Object) ((void **) nullCheck(ctx, sp[0].o)->vtable)[VTABLE_arc_struct_IntMap_put_int_java_lang_Object_R_java_lang_Object])(ctx, sp[0].o, (jint(59449)), (((jobject) createStringLiteral(ctx, u8"rightOpenOut"_j))));
+	LINE_NUMBER(3921);
+	clinit_mindustry_gen_Iconc(ctx);
+	sp[0].o = (jobject)SF_mindustry_gen_Iconc_codes;
+	((func_arc_struct_ObjectIntMap_put_java_lang_Object_int) ((void **) nullCheck(ctx, sp[0].o)->vtable)[VTABLE_arc_struct_ObjectIntMap_put_java_lang_Object_int])(ctx, sp[0].o, (((jobject) createStringLiteral(ctx, u8"rightOpen"_j))), (jint(59450)));
+	LINE_NUMBER(3922);
+	clinit_mindustry_gen_Iconc(ctx);
+	sp[0].o = (jobject)SF_mindustry_gen_Iconc_codeToName;
+	sp[0].o = (jobject)((func_arc_struct_IntMap_put_int_java_lang_Object_R_java_lang_Object) ((void **) nullCheck(ctx, sp[0].o)->vtable)[VTABLE_arc_struct_IntMap_put_int_java_lang_Object_R_java_lang_Object])(ctx, sp[0].o, (jint(59450)), (((jobject) createStringLiteral(ctx, u8"rightOpen"_j))));
+	LINE_NUMBER(3923);
+	clinit_mindustry_gen_Iconc(ctx);
+	sp[0].o = (jobject)SF_mindustry_gen_Iconc_codes;
+	((func_arc_struct_ObjectIntMap_put_java_lang_Object_int) ((void **) nullCheck(ctx, sp[0].o)->vtable)[VTABLE_arc_struct_ObjectIntMap_put_java_lang_Object_int])(ctx, sp[0].o, (((jobject) createStringLiteral(ctx, u8"waves"_j))), (jint(59451)));
+	LINE_NUMBER(3924);
+	clinit_mindustry_gen_Iconc(ctx);
+	sp[0].o = (jobject)SF_mindustry_gen_Iconc_codeToName;
+	sp[0].o = (jobject)((func_arc_struct_IntMap_put_int_java_lang_Object_R_java_lang_Object) ((void **) nullCheck(ctx, sp[0].o)->vtable)[VTABLE_arc_struct_IntMap_put_int_java_lang_Object_R_java_lang_Object])(ctx, sp[0].o, (jint(59451)), (((jobject) createStringLiteral(ctx, u8"waves"_j))));
+	LINE_NUMBER(3925);
+	clinit_mindustry_gen_Iconc(ctx);
+	sp[0].o = (jobject)SF_mindustry_gen_Iconc_codes;
+	((func_arc_struct_ObjectIntMap_put_java_lang_Object_int) ((void **) nullCheck(ctx, sp[0].o)->vtable)[VTABLE_arc_struct_ObjectIntMap_put_java_lang_Object_int])(ctx, sp[0].o, (((jobject) createStringLiteral(ctx, u8"filters"_j))), (jint(59454)));
+	LINE_NUMBER(3926);
+	clinit_mindustry_gen_Iconc(ctx);
+	sp[0].o = (jobject)SF_mindustry_gen_Iconc_codeToName;
+	sp[0].o = (jobject)((func_arc_struct_IntMap_put_int_java_lang_Object_R_java_lang_Object) ((void **) nullCheck(ctx, sp[0].o)->vtable)[VTABLE_arc_struct_IntMap_put_int_java_lang_Object_R_java_lang_Object])(ctx, sp[0].o, (jint(59454)), (((jobject) createStringLiteral(ctx, u8"filters"_j))));
+	LINE_NUMBER(3927);
+	clinit_mindustry_gen_Iconc(ctx);
+	sp[0].o = (jobject)SF_mindustry_gen_Iconc_codes;
+	((func_arc_struct_ObjectIntMap_put_java_lang_Object_int) ((void **) nullCheck(ctx, sp[0].o)->vtable)[VTABLE_arc_struct_ObjectIntMap_put_java_lang_Object_int])(ctx, sp[0].o, (((jobject) createStringLiteral(ctx, u8"layers"_j))), (jint(59455)));
+	LINE_NUMBER(3928);
+	clinit_mindustry_gen_Iconc(ctx);
+	sp[0].o = (jobject)SF_mindustry_gen_Iconc_codeToName;
+	sp[0].o = (jobject)((func_arc_struct_IntMap_put_int_java_lang_Object_R_java_lang_Object) ((void **) nullCheck(ctx, sp[0].o)->vtable)[VTABLE_arc_struct_IntMap_put_int_java_lang_Object_R_java_lang_Object])(ctx, sp[0].o, (jint(59455)), (((jobject) createStringLiteral(ctx, u8"layers"_j))));
+	LINE_NUMBER(3929);
+	clinit_mindustry_gen_Iconc(ctx);
+	sp[0].o = (jobject)SF_mindustry_gen_Iconc_codes;
+	((func_arc_struct_ObjectIntMap_put_java_lang_Object_int) ((void **) nullCheck(ctx, sp[0].o)->vtable)[VTABLE_arc_struct_ObjectIntMap_put_java_lang_Object_int])(ctx, sp[0].o, (((jobject) createStringLiteral(ctx, u8"eraser"_j))), (jint(61741)));
+	LINE_NUMBER(3930);
+	clinit_mindustry_gen_Iconc(ctx);
+	sp[0].o = (jobject)SF_mindustry_gen_Iconc_codeToName;
+	sp[0].o = (jobject)((func_arc_struct_IntMap_put_int_java_lang_Object_R_java_lang_Object) ((void **) nullCheck(ctx, sp[0].o)->vtable)[VTABLE_arc_struct_IntMap_put_int_java_lang_Object_R_java_lang_Object])(ctx, sp[0].o, (jint(61741)), (((jobject) createStringLiteral(ctx, u8"eraser"_j))));
+	LINE_NUMBER(3931);
+	clinit_mindustry_gen_Iconc(ctx);
+	sp[0].o = (jobject)SF_mindustry_gen_Iconc_codes;
+	((func_arc_struct_ObjectIntMap_put_java_lang_Object_int) ((void **) nullCheck(ctx, sp[0].o)->vtable)[VTABLE_arc_struct_ObjectIntMap_put_java_lang_Object_int])(ctx, sp[0].o, (((jobject) createStringLiteral(ctx, u8"bookOpen"_j))), (jint(59393)));
+	LINE_NUMBER(3932);
+	clinit_mindustry_gen_Iconc(ctx);
+	sp[0].o = (jobject)SF_mindustry_gen_Iconc_codeToName;
+	sp[0].o = (jobject)((func_arc_struct_IntMap_put_int_java_lang_Object_R_java_lang_Object) ((void **) nullCheck(ctx, sp[0].o)->vtable)[VTABLE_arc_struct_IntMap_put_int_java_lang_Object_R_java_lang_Object])(ctx, sp[0].o, (jint(59393)), (((jobject) createStringLiteral(ctx, u8"bookOpen"_j))));
+	LINE_NUMBER(3933);
+	clinit_mindustry_gen_Iconc(ctx);
+	sp[0].o = (jobject)SF_mindustry_gen_Iconc_codes;
+	((func_arc_struct_ObjectIntMap_put_java_lang_Object_int) ((void **) nullCheck(ctx, sp[0].o)->vtable)[VTABLE_arc_struct_ObjectIntMap_put_java_lang_Object_int])(ctx, sp[0].o, (((jobject) createStringLiteral(ctx, u8"grid"_j))), (jint(61481)));
+	LINE_NUMBER(3934);
+	clinit_mindustry_gen_Iconc(ctx);
+	sp[0].o = (jobject)SF_mindustry_gen_Iconc_codeToName;
+	sp[0].o = (jobject)((func_arc_struct_IntMap_put_int_java_lang_Object_R_java_lang_Object) ((void **) nullCheck(ctx, sp[0].o)->vtable)[VTABLE_arc_struct_IntMap_put_int_java_lang_Object_R_java_lang_Object])(ctx, sp[0].o, (jint(61481)), (((jobject) createStringLiteral(ctx, u8"grid"_j))));
+	LINE_NUMBER(3935);
+	clinit_mindustry_gen_Iconc(ctx);
+	sp[0].o = (jobject)SF_mindustry_gen_Iconc_codes;
+	((func_arc_struct_ObjectIntMap_put_java_lang_Object_int) ((void **) nullCheck(ctx, sp[0].o)->vtable)[VTABLE_arc_struct_ObjectIntMap_put_java_lang_Object_int])(ctx, sp[0].o, (((jobject) createStringLiteral(ctx, u8"flipX"_j))), (jint(59410)));
+	LINE_NUMBER(3936);
+	clinit_mindustry_gen_Iconc(ctx);
+	sp[0].o = (jobject)SF_mindustry_gen_Iconc_codeToName;
+	sp[0].o = (jobject)((func_arc_struct_IntMap_put_int_java_lang_Object_R_java_lang_Object) ((void **) nullCheck(ctx, sp[0].o)->vtable)[VTABLE_arc_struct_IntMap_put_int_java_lang_Object_R_java_lang_Object])(ctx, sp[0].o, (jint(59410)), (((jobject) createStringLiteral(ctx, u8"flipX"_j))));
+	LINE_NUMBER(3937);
+	clinit_mindustry_gen_Iconc(ctx);
+	sp[0].o = (jobject)SF_mindustry_gen_Iconc_codes;
+	((func_arc_struct_ObjectIntMap_put_java_lang_Object_int) ((void **) nullCheck(ctx, sp[0].o)->vtable)[VTABLE_arc_struct_ObjectIntMap_put_java_lang_Object_int])(ctx, sp[0].o, (((jobject) createStringLiteral(ctx, u8"flipY"_j))), (jint(59458)));
+	LINE_NUMBER(3938);
+	clinit_mindustry_gen_Iconc(ctx);
+	sp[0].o = (jobject)SF_mindustry_gen_Iconc_codeToName;
+	sp[0].o = (jobject)((func_arc_struct_IntMap_put_int_java_lang_Object_R_java_lang_Object) ((void **) nullCheck(ctx, sp[0].o)->vtable)[VTABLE_arc_struct_IntMap_put_int_java_lang_Object_R_java_lang_Object])(ctx, sp[0].o, (jint(59458)), (((jobject) createStringLiteral(ctx, u8"flipY"_j))));
+	LINE_NUMBER(3939);
+	clinit_mindustry_gen_Iconc(ctx);
+	sp[0].o = (jobject)SF_mindustry_gen_Iconc_codes;
+	((func_arc_struct_ObjectIntMap_put_java_lang_Object_int) ((void **) nullCheck(ctx, sp[0].o)->vtable)[VTABLE_arc_struct_ObjectIntMap_put_java_lang_Object_int])(ctx, sp[0].o, (((jobject) createStringLiteral(ctx, u8"diagonal"_j))), (jint(59460)));
+	LINE_NUMBER(3940);
+	clinit_mindustry_gen_Iconc(ctx);
+	sp[0].o = (jobject)SF_mindustry_gen_Iconc_codeToName;
+	sp[0].o = (jobject)((func_arc_struct_IntMap_put_int_java_lang_Object_R_java_lang_Object) ((void **) nullCheck(ctx, sp[0].o)->vtable)[VTABLE_arc_struct_IntMap_put_int_java_lang_Object_R_java_lang_Object])(ctx, sp[0].o, (jint(59460)), (((jobject) createStringLiteral(ctx, u8"diagonal"_j))));
+	LINE_NUMBER(3941);
+	clinit_mindustry_gen_Iconc(ctx);
+	sp[0].o = (jobject)SF_mindustry_gen_Iconc_codes;
+	((func_arc_struct_ObjectIntMap_put_java_lang_Object_int) ((void **) nullCheck(ctx, sp[0].o)->vtable)[VTABLE_arc_struct_ObjectIntMap_put_java_lang_Object_int])(ctx, sp[0].o, (((jobject) createStringLiteral(ctx, u8"discord"_j))), (jint(59405)));
+	LINE_NUMBER(3942);
+	clinit_mindustry_gen_Iconc(ctx);
+	sp[0].o = (jobject)SF_mindustry_gen_Iconc_codeToName;
+	sp[0].o = (jobject)((func_arc_struct_IntMap_put_int_java_lang_Object_R_java_lang_Object) ((void **) nullCheck(ctx, sp[0].o)->vtable)[VTABLE_arc_struct_IntMap_put_int_java_lang_Object_R_java_lang_Object])(ctx, sp[0].o, (jint(59405)), (((jobject) createStringLiteral(ctx, u8"discord"_j))));
+	LINE_NUMBER(3943);
+	clinit_mindustry_gen_Iconc(ctx);
+	sp[0].o = (jobject)SF_mindustry_gen_Iconc_codes;
+	((func_arc_struct_ObjectIntMap_put_java_lang_Object_int) ((void **) nullCheck(ctx, sp[0].o)->vtable)[VTABLE_arc_struct_ObjectIntMap_put_java_lang_Object_int])(ctx, sp[0].o, (((jobject) createStringLiteral(ctx, u8"redditAlien"_j))), (jint(62081)));
+	LINE_NUMBER(3944);
+	clinit_mindustry_gen_Iconc(ctx);
+	sp[0].o = (jobject)SF_mindustry_gen_Iconc_codeToName;
+	sp[0].o = (jobject)((func_arc_struct_IntMap_put_int_java_lang_Object_R_java_lang_Object) ((void **) nullCheck(ctx, sp[0].o)->vtable)[VTABLE_arc_struct_IntMap_put_int_java_lang_Object_R_java_lang_Object])(ctx, sp[0].o, (jint(62081)), (((jobject) createStringLiteral(ctx, u8"redditAlien"_j))));
+	LINE_NUMBER(3945);
+	clinit_mindustry_gen_Iconc(ctx);
+	sp[0].o = (jobject)SF_mindustry_gen_Iconc_codes;
+	((func_arc_struct_ObjectIntMap_put_java_lang_Object_int) ((void **) nullCheck(ctx, sp[0].o)->vtable)[VTABLE_arc_struct_ObjectIntMap_put_java_lang_Object_int])(ctx, sp[0].o, (((jobject) createStringLiteral(ctx, u8"github"_j))), (jint(62216)));
+	LINE_NUMBER(3946);
+	clinit_mindustry_gen_Iconc(ctx);
+	sp[0].o = (jobject)SF_mindustry_gen_Iconc_codeToName;
+	sp[0].o = (jobject)((func_arc_struct_IntMap_put_int_java_lang_Object_R_java_lang_Object) ((void **) nullCheck(ctx, sp[0].o)->vtable)[VTABLE_arc_struct_IntMap_put_int_java_lang_Object_R_java_lang_Object])(ctx, sp[0].o, (jint(62216)), (((jobject) createStringLiteral(ctx, u8"github"_j))));
+	LINE_NUMBER(3947);
+	clinit_mindustry_gen_Iconc(ctx);
+	sp[0].o = (jobject)SF_mindustry_gen_Iconc_codes;
+	((func_arc_struct_ObjectIntMap_put_java_lang_Object_int) ((void **) nullCheck(ctx, sp[0].o)->vtable)[VTABLE_arc_struct_ObjectIntMap_put_java_lang_Object_int])(ctx, sp[0].o, (((jobject) createStringLiteral(ctx, u8"googleplay"_j))), (jint(59453)));
+	LINE_NUMBER(3948);
+	clinit_mindustry_gen_Iconc(ctx);
+	sp[0].o = (jobject)SF_mindustry_gen_Iconc_codeToName;
+	sp[0].o = (jobject)((func_arc_struct_IntMap_put_int_java_lang_Object_R_java_lang_Object) ((void **) nullCheck(ctx, sp[0].o)->vtable)[VTABLE_arc_struct_IntMap_put_int_java_lang_Object_R_java_lang_Object])(ctx, sp[0].o, (jint(59453)), (((jobject) createStringLiteral(ctx, u8"googleplay"_j))));
+	LINE_NUMBER(3949);
+	clinit_mindustry_gen_Iconc(ctx);
+	sp[0].o = (jobject)SF_mindustry_gen_Iconc_codes;
+	((func_arc_struct_ObjectIntMap_put_java_lang_Object_int) ((void **) nullCheck(ctx, sp[0].o)->vtable)[VTABLE_arc_struct_ObjectIntMap_put_java_lang_Object_int])(ctx, sp[0].o, (((jobject) createStringLiteral(ctx, u8"android"_j))), (jint(59461)));
+	LINE_NUMBER(3950);
+	clinit_mindustry_gen_Iconc(ctx);
+	sp[0].o = (jobject)SF_mindustry_gen_Iconc_codeToName;
+	sp[0].o = (jobject)((func_arc_struct_IntMap_put_int_java_lang_Object_R_java_lang_Object) ((void **) nullCheck(ctx, sp[0].o)->vtable)[VTABLE_arc_struct_IntMap_put_int_java_lang_Object_R_java_lang_Object])(ctx, sp[0].o, (jint(59461)), (((jobject) createStringLiteral(ctx, u8"android"_j))));
+	LINE_NUMBER(3951);
+	clinit_mindustry_gen_Iconc(ctx);
+	sp[0].o = (jobject)SF_mindustry_gen_Iconc_codes;
+	((func_arc_struct_ObjectIntMap_put_java_lang_Object_int) ((void **) nullCheck(ctx, sp[0].o)->vtable)[VTABLE_arc_struct_ObjectIntMap_put_java_lang_Object_int])(ctx, sp[0].o, (((jobject) createStringLiteral(ctx, u8"trello"_j))), (jint(61825)));
+	LINE_NUMBER(3952);
+	clinit_mindustry_gen_Iconc(ctx);
+	sp[0].o = (jobject)SF_mindustry_gen_Iconc_codeToName;
+	sp[0].o = (jobject)((func_arc_struct_IntMap_put_int_java_lang_Object_R_java_lang_Object) ((void **) nullCheck(ctx, sp[0].o)->vtable)[VTABLE_arc_struct_IntMap_put_int_java_lang_Object_R_java_lang_Object])(ctx, sp[0].o, (jint(61825)), (((jobject) createStringLiteral(ctx, u8"trello"_j))));
+	LINE_NUMBER(3953);
+	clinit_mindustry_gen_Iconc(ctx);
+	sp[0].o = (jobject)SF_mindustry_gen_Iconc_codes;
+	((func_arc_struct_ObjectIntMap_put_java_lang_Object_int) ((void **) nullCheck(ctx, sp[0].o)->vtable)[VTABLE_arc_struct_ObjectIntMap_put_java_lang_Object_int])(ctx, sp[0].o, (((jobject) createStringLiteral(ctx, u8"logic"_j))), (jint(59406)));
+	LINE_NUMBER(3954);
+	clinit_mindustry_gen_Iconc(ctx);
+	sp[0].o = (jobject)SF_mindustry_gen_Iconc_codeToName;
+	sp[0].o = (jobject)((func_arc_struct_IntMap_put_int_java_lang_Object_R_java_lang_Object) ((void **) nullCheck(ctx, sp[0].o)->vtable)[VTABLE_arc_struct_IntMap_put_int_java_lang_Object_R_java_lang_Object])(ctx, sp[0].o, (jint(59406)), (((jobject) createStringLiteral(ctx, u8"logic"_j))));
+	LINE_NUMBER(3955);
+	clinit_mindustry_gen_Iconc(ctx);
+	sp[0].o = (jobject)SF_mindustry_gen_Iconc_codes;
+	((func_arc_struct_ObjectIntMap_put_java_lang_Object_int) ((void **) nullCheck(ctx, sp[0].o)->vtable)[VTABLE_arc_struct_ObjectIntMap_put_java_lang_Object_int])(ctx, sp[0].o, (((jobject) createStringLiteral(ctx, u8"distribution"_j))), (jint(59412)));
+	LINE_NUMBER(3956);
+	clinit_mindustry_gen_Iconc(ctx);
+	sp[0].o = (jobject)SF_mindustry_gen_Iconc_codeToName;
+	sp[0].o = (jobject)((func_arc_struct_IntMap_put_int_java_lang_Object_R_java_lang_Object) ((void **) nullCheck(ctx, sp[0].o)->vtable)[VTABLE_arc_struct_IntMap_put_int_java_lang_Object_R_java_lang_Object])(ctx, sp[0].o, (jint(59412)), (((jobject) createStringLiteral(ctx, u8"distribution"_j))));
+	LINE_NUMBER(3957);
+	clinit_mindustry_gen_Iconc(ctx);
+	sp[0].o = (jobject)SF_mindustry_gen_Iconc_codes;
+	((func_arc_struct_ObjectIntMap_put_java_lang_Object_int) ((void **) nullCheck(ctx, sp[0].o)->vtable)[VTABLE_arc_struct_ObjectIntMap_put_java_lang_Object_int])(ctx, sp[0].o, (((jobject) createStringLiteral(ctx, u8"hammer"_j))), (jint(59415)));
+	LINE_NUMBER(3958);
+	clinit_mindustry_gen_Iconc(ctx);
+	sp[0].o = (jobject)SF_mindustry_gen_Iconc_codeToName;
+	sp[0].o = (jobject)((func_arc_struct_IntMap_put_int_java_lang_Object_R_java_lang_Object) ((void **) nullCheck(ctx, sp[0].o)->vtable)[VTABLE_arc_struct_IntMap_put_int_java_lang_Object_R_java_lang_Object])(ctx, sp[0].o, (jint(59415)), (((jobject) createStringLiteral(ctx, u8"hammer"_j))));
+	LINE_NUMBER(3959);
+	clinit_mindustry_gen_Iconc(ctx);
+	sp[0].o = (jobject)SF_mindustry_gen_Iconc_codes;
+	((func_arc_struct_ObjectIntMap_put_java_lang_Object_int) ((void **) nullCheck(ctx, sp[0].o)->vtable)[VTABLE_arc_struct_ObjectIntMap_put_java_lang_Object_int])(ctx, sp[0].o, (((jobject) createStringLiteral(ctx, u8"save"_j))), (jint(59419)));
+	LINE_NUMBER(3960);
+	clinit_mindustry_gen_Iconc(ctx);
+	sp[0].o = (jobject)SF_mindustry_gen_Iconc_codeToName;
+	sp[0].o = (jobject)((func_arc_struct_IntMap_put_int_java_lang_Object_R_java_lang_Object) ((void **) nullCheck(ctx, sp[0].o)->vtable)[VTABLE_arc_struct_IntMap_put_int_java_lang_Object_R_java_lang_Object])(ctx, sp[0].o, (jint(59419)), (((jobject) createStringLiteral(ctx, u8"save"_j))));
+	LINE_NUMBER(3961);
+	clinit_mindustry_gen_Iconc(ctx);
+	sp[0].o = (jobject)SF_mindustry_gen_Iconc_codes;
+	((func_arc_struct_ObjectIntMap_put_java_lang_Object_int) ((void **) nullCheck(ctx, sp[0].o)->vtable)[VTABLE_arc_struct_ObjectIntMap_put_java_lang_Object_int])(ctx, sp[0].o, (((jobject) createStringLiteral(ctx, u8"link"_j))), (jint(59420)));
+	LINE_NUMBER(3962);
+	clinit_mindustry_gen_Iconc(ctx);
+	sp[0].o = (jobject)SF_mindustry_gen_Iconc_codeToName;
+	sp[0].o = (jobject)((func_arc_struct_IntMap_put_int_java_lang_Object_R_java_lang_Object) ((void **) nullCheck(ctx, sp[0].o)->vtable)[VTABLE_arc_struct_IntMap_put_int_java_lang_Object_R_java_lang_Object])(ctx, sp[0].o, (jint(59420)), (((jobject) createStringLiteral(ctx, u8"link"_j))));
+	LINE_NUMBER(3963);
+	clinit_mindustry_gen_Iconc(ctx);
+	sp[0].o = (jobject)SF_mindustry_gen_Iconc_codes;
+	((func_arc_struct_ObjectIntMap_put_java_lang_Object_int) ((void **) nullCheck(ctx, sp[0].o)->vtable)[VTABLE_arc_struct_ObjectIntMap_put_java_lang_Object_int])(ctx, sp[0].o, (((jobject) createStringLiteral(ctx, u8"itchio"_j))), (jint(59434)));
+	LINE_NUMBER(3964);
+	clinit_mindustry_gen_Iconc(ctx);
+	sp[0].o = (jobject)SF_mindustry_gen_Iconc_codeToName;
+	sp[0].o = (jobject)((func_arc_struct_IntMap_put_int_java_lang_Object_R_java_lang_Object) ((void **) nullCheck(ctx, sp[0].o)->vtable)[VTABLE_arc_struct_IntMap_put_int_java_lang_Object_R_java_lang_Object])(ctx, sp[0].o, (jint(59434)), (((jobject) createStringLiteral(ctx, u8"itchio"_j))));
+	LINE_NUMBER(3965);
+	clinit_mindustry_gen_Iconc(ctx);
+	sp[0].o = (jobject)SF_mindustry_gen_Iconc_codes;
+	((func_arc_struct_ObjectIntMap_put_java_lang_Object_int) ((void **) nullCheck(ctx, sp[0].o)->vtable)[VTABLE_arc_struct_ObjectIntMap_put_java_lang_Object_int])(ctx, sp[0].o, (((jobject) createStringLiteral(ctx, u8"line"_j))), (jint(59435)));
+	LINE_NUMBER(3966);
+	clinit_mindustry_gen_Iconc(ctx);
+	sp[0].o = (jobject)SF_mindustry_gen_Iconc_codeToName;
+	sp[0].o = (jobject)((func_arc_struct_IntMap_put_int_java_lang_Object_R_java_lang_Object) ((void **) nullCheck(ctx, sp[0].o)->vtable)[VTABLE_arc_struct_IntMap_put_int_java_lang_Object_R_java_lang_Object])(ctx, sp[0].o, (jint(59435)), (((jobject) createStringLiteral(ctx, u8"line"_j))));
+	LINE_NUMBER(3967);
+	clinit_mindustry_gen_Iconc(ctx);
+	sp[0].o = (jobject)SF_mindustry_gen_Iconc_codes;
+	((func_arc_struct_ObjectIntMap_put_java_lang_Object_int) ((void **) nullCheck(ctx, sp[0].o)->vtable)[VTABLE_arc_struct_ObjectIntMap_put_java_lang_Object_int])(ctx, sp[0].o, (((jobject) createStringLiteral(ctx, u8"admin"_j))), (jint(59436)));
+	LINE_NUMBER(3968);
+	clinit_mindustry_gen_Iconc(ctx);
+	sp[0].o = (jobject)SF_mindustry_gen_Iconc_codeToName;
+	sp[0].o = (jobject)((func_arc_struct_IntMap_put_int_java_lang_Object_R_java_lang_Object) ((void **) nullCheck(ctx, sp[0].o)->vtable)[VTABLE_arc_struct_IntMap_put_int_java_lang_Object_R_java_lang_Object])(ctx, sp[0].o, (jint(59436)), (((jobject) createStringLiteral(ctx, u8"admin"_j))));
+	LINE_NUMBER(3969);
+	clinit_mindustry_gen_Iconc(ctx);
+	sp[0].o = (jobject)SF_mindustry_gen_Iconc_codes;
+	((func_arc_struct_ObjectIntMap_put_java_lang_Object_int) ((void **) nullCheck(ctx, sp[0].o)->vtable)[VTABLE_arc_struct_ObjectIntMap_put_java_lang_Object_int])(ctx, sp[0].o, (((jobject) createStringLiteral(ctx, u8"spray1"_j))), (jint(59437)));
+	LINE_NUMBER(3970);
+	clinit_mindustry_gen_Iconc(ctx);
+	sp[0].o = (jobject)SF_mindustry_gen_Iconc_codeToName;
+	sp[0].o = (jobject)((func_arc_struct_IntMap_put_int_java_lang_Object_R_java_lang_Object) ((void **) nullCheck(ctx, sp[0].o)->vtable)[VTABLE_arc_struct_IntMap_put_int_java_lang_Object_R_java_lang_Object])(ctx, sp[0].o, (jint(59437)), (((jobject) createStringLiteral(ctx, u8"spray1"_j))));
+	LINE_NUMBER(3971);
+	clinit_mindustry_gen_Iconc(ctx);
+	sp[0].o = (jobject)SF_mindustry_gen_Iconc_codes;
+	((func_arc_struct_ObjectIntMap_put_java_lang_Object_int) ((void **) nullCheck(ctx, sp[0].o)->vtable)[VTABLE_arc_struct_ObjectIntMap_put_java_lang_Object_int])(ctx, sp[0].o, (((jobject) createStringLiteral(ctx, u8"crafting"_j))), (jint(59440)));
+	LINE_NUMBER(3972);
+	clinit_mindustry_gen_Iconc(ctx);
+	sp[0].o = (jobject)SF_mindustry_gen_Iconc_codeToName;
+	sp[0].o = (jobject)((func_arc_struct_IntMap_put_int_java_lang_Object_R_java_lang_Object) ((void **) nullCheck(ctx, sp[0].o)->vtable)[VTABLE_arc_struct_IntMap_put_int_java_lang_Object_R_java_lang_Object])(ctx, sp[0].o, (jint(59440)), (((jobject) createStringLiteral(ctx, u8"crafting"_j))));
+	LINE_NUMBER(3973);
+	clinit_mindustry_gen_Iconc(ctx);
+	sp[0].o = (jobject)SF_mindustry_gen_Iconc_codes;
+	((func_arc_struct_ObjectIntMap_put_java_lang_Object_int) ((void **) nullCheck(ctx, sp[0].o)->vtable)[VTABLE_arc_struct_ObjectIntMap_put_java_lang_Object_int])(ctx, sp[0].o, (((jobject) createStringLiteral(ctx, u8"fill"_j))), (jint(59468)));
+	LINE_NUMBER(3974);
+	clinit_mindustry_gen_Iconc(ctx);
+	sp[0].o = (jobject)SF_mindustry_gen_Iconc_codeToName;
+	sp[0].o = (jobject)((func_arc_struct_IntMap_put_int_java_lang_Object_R_java_lang_Object) ((void **) nullCheck(ctx, sp[0].o)->vtable)[VTABLE_arc_struct_IntMap_put_int_java_lang_Object_R_java_lang_Object])(ctx, sp[0].o, (jint(59468)), (((jobject) createStringLiteral(ctx, u8"fill"_j))));
+	LINE_NUMBER(3975);
+	clinit_mindustry_gen_Iconc(ctx);
+	sp[0].o = (jobject)SF_mindustry_gen_Iconc_codes;
+	((func_arc_struct_ObjectIntMap_put_java_lang_Object_int) ((void **) nullCheck(ctx, sp[0].o)->vtable)[VTABLE_arc_struct_ObjectIntMap_put_java_lang_Object_int])(ctx, sp[0].o, (((jobject) createStringLiteral(ctx, u8"paste"_j))), (jint(59474)));
+	LINE_NUMBER(3976);
+	clinit_mindustry_gen_Iconc(ctx);
+	sp[0].o = (jobject)SF_mindustry_gen_Iconc_codeToName;
+	sp[0].o = (jobject)((func_arc_struct_IntMap_put_int_java_lang_Object_R_java_lang_Object) ((void **) nullCheck(ctx, sp[0].o)->vtable)[VTABLE_arc_struct_IntMap_put_int_java_lang_Object_R_java_lang_Object])(ctx, sp[0].o, (jint(59474)), (((jobject) createStringLiteral(ctx, u8"paste"_j))));
+	LINE_NUMBER(3977);
+	clinit_mindustry_gen_Iconc(ctx);
+	sp[0].o = (jobject)SF_mindustry_gen_Iconc_codes;
+	((func_arc_struct_ObjectIntMap_put_java_lang_Object_int) ((void **) nullCheck(ctx, sp[0].o)->vtable)[VTABLE_arc_struct_ObjectIntMap_put_java_lang_Object_int])(ctx, sp[0].o, (((jobject) createStringLiteral(ctx, u8"effect"_j))), (jint(59475)));
+	LINE_NUMBER(3978);
+	clinit_mindustry_gen_Iconc(ctx);
+	sp[0].o = (jobject)SF_mindustry_gen_Iconc_codeToName;
+	sp[0].o = (jobject)((func_arc_struct_IntMap_put_int_java_lang_Object_R_java_lang_Object) ((void **) nullCheck(ctx, sp[0].o)->vtable)[VTABLE_arc_struct_IntMap_put_int_java_lang_Object_R_java_lang_Object])(ctx, sp[0].o, (jint(59475)), (((jobject) createStringLiteral(ctx, u8"effect"_j))));
+	LINE_NUMBER(3979);
+	clinit_mindustry_gen_Iconc(ctx);
+	sp[0].o = (jobject)SF_mindustry_gen_Iconc_codes;
+	((func_arc_struct_ObjectIntMap_put_java_lang_Object_int) ((void **) nullCheck(ctx, sp[0].o)->vtable)[VTABLE_arc_struct_ObjectIntMap_put_java_lang_Object_int])(ctx, sp[0].o, (((jobject) createStringLiteral(ctx, u8"book"_j))), (jint(59483)));
+	LINE_NUMBER(3980);
+	clinit_mindustry_gen_Iconc(ctx);
+	sp[0].o = (jobject)SF_mindustry_gen_Iconc_codeToName;
+	sp[0].o = (jobject)((func_arc_struct_IntMap_put_int_java_lang_Object_R_java_lang_Object) ((void **) nullCheck(ctx, sp[0].o)->vtable)[VTABLE_arc_struct_IntMap_put_int_java_lang_Object_R_java_lang_Object])(ctx, sp[0].o, (jint(59483)), (((jobject) createStringLiteral(ctx, u8"book"_j))));
+	LINE_NUMBER(3981);
+	clinit_mindustry_gen_Iconc(ctx);
+	sp[0].o = (jobject)SF_mindustry_gen_Iconc_codes;
+	((func_arc_struct_ObjectIntMap_put_java_lang_Object_int) ((void **) nullCheck(ctx, sp[0].o)->vtable)[VTABLE_arc_struct_ObjectIntMap_put_java_lang_Object_int])(ctx, sp[0].o, (((jobject) createStringLiteral(ctx, u8"liquid"_j))), (jint(59484)));
+	LINE_NUMBER(3982);
+	clinit_mindustry_gen_Iconc(ctx);
+	sp[0].o = (jobject)SF_mindustry_gen_Iconc_codeToName;
+	sp[0].o = (jobject)((func_arc_struct_IntMap_put_int_java_lang_Object_R_java_lang_Object) ((void **) nullCheck(ctx, sp[0].o)->vtable)[VTABLE_arc_struct_IntMap_put_int_java_lang_Object_R_java_lang_Object])(ctx, sp[0].o, (jint(59484)), (((jobject) createStringLiteral(ctx, u8"liquid"_j))));
+	LINE_NUMBER(3983);
+	clinit_mindustry_gen_Iconc(ctx);
+	sp[0].o = (jobject)SF_mindustry_gen_Iconc_codes;
+	((func_arc_struct_ObjectIntMap_put_java_lang_Object_int) ((void **) nullCheck(ctx, sp[0].o)->vtable)[VTABLE_arc_struct_ObjectIntMap_put_java_lang_Object_int])(ctx, sp[0].o, (((jobject) createStringLiteral(ctx, u8"host"_j))), (jint(59485)));
+	LINE_NUMBER(3984);
+	clinit_mindustry_gen_Iconc(ctx);
+	sp[0].o = (jobject)SF_mindustry_gen_Iconc_codeToName;
+	sp[0].o = (jobject)((func_arc_struct_IntMap_put_int_java_lang_Object_R_java_lang_Object) ((void **) nullCheck(ctx, sp[0].o)->vtable)[VTABLE_arc_struct_IntMap_put_int_java_lang_Object_R_java_lang_Object])(ctx, sp[0].o, (jint(59485)), (((jobject) createStringLiteral(ctx, u8"host"_j))));
+	LINE_NUMBER(3985);
+	clinit_mindustry_gen_Iconc(ctx);
+	sp[0].o = (jobject)SF_mindustry_gen_Iconc_codes;
+	((func_arc_struct_ObjectIntMap_put_java_lang_Object_int) ((void **) nullCheck(ctx, sp[0].o)->vtable)[VTABLE_arc_struct_ObjectIntMap_put_java_lang_Object_int])(ctx, sp[0].o, (((jobject) createStringLiteral(ctx, u8"production"_j))), (jint(59486)));
+	LINE_NUMBER(3986);
+	clinit_mindustry_gen_Iconc(ctx);
+	sp[0].o = (jobject)SF_mindustry_gen_Iconc_codeToName;
+	sp[0].o = (jobject)((func_arc_struct_IntMap_put_int_java_lang_Object_R_java_lang_Object) ((void **) nullCheck(ctx, sp[0].o)->vtable)[VTABLE_arc_struct_IntMap_put_int_java_lang_Object_R_java_lang_Object])(ctx, sp[0].o, (jint(59486)), (((jobject) createStringLiteral(ctx, u8"production"_j))));
+	LINE_NUMBER(3987);
+	clinit_mindustry_gen_Iconc(ctx);
+	sp[0].o = (jobject)SF_mindustry_gen_Iconc_codes;
+	((func_arc_struct_ObjectIntMap_put_java_lang_Object_int) ((void **) nullCheck(ctx, sp[0].o)->vtable)[VTABLE_arc_struct_ObjectIntMap_put_java_lang_Object_int])(ctx, sp[0].o, (((jobject) createStringLiteral(ctx, u8"exit"_j))), (jint(59487)));
+	LINE_NUMBER(3988);
+	clinit_mindustry_gen_Iconc(ctx);
+	sp[0].o = (jobject)SF_mindustry_gen_Iconc_codeToName;
+	sp[0].o = (jobject)((func_arc_struct_IntMap_put_int_java_lang_Object_R_java_lang_Object) ((void **) nullCheck(ctx, sp[0].o)->vtable)[VTABLE_arc_struct_IntMap_put_int_java_lang_Object_R_java_lang_Object])(ctx, sp[0].o, (jint(59487)), (((jobject) createStringLiteral(ctx, u8"exit"_j))));
+	LINE_NUMBER(3989);
+	clinit_mindustry_gen_Iconc(ctx);
+	sp[0].o = (jobject)SF_mindustry_gen_Iconc_codes;
+	((func_arc_struct_ObjectIntMap_put_java_lang_Object_int) ((void **) nullCheck(ctx, sp[0].o)->vtable)[VTABLE_arc_struct_ObjectIntMap_put_java_lang_Object_int])(ctx, sp[0].o, (((jobject) createStringLiteral(ctx, u8"modePvp"_j))), (jint(59489)));
+	LINE_NUMBER(3990);
+	clinit_mindustry_gen_Iconc(ctx);
+	sp[0].o = (jobject)SF_mindustry_gen_Iconc_codeToName;
+	sp[0].o = (jobject)((func_arc_struct_IntMap_put_int_java_lang_Object_R_java_lang_Object) ((void **) nullCheck(ctx, sp[0].o)->vtable)[VTABLE_arc_struct_IntMap_put_int_java_lang_Object_R_java_lang_Object])(ctx, sp[0].o, (jint(59489)), (((jobject) createStringLiteral(ctx, u8"modePvp"_j))));
+	LINE_NUMBER(3991);
+	clinit_mindustry_gen_Iconc(ctx);
+	sp[0].o = (jobject)SF_mindustry_gen_Iconc_codes;
+	((func_arc_struct_ObjectIntMap_put_java_lang_Object_int) ((void **) nullCheck(ctx, sp[0].o)->vtable)[VTABLE_arc_struct_ObjectIntMap_put_java_lang_Object_int])(ctx, sp[0].o, (((jobject) createStringLiteral(ctx, u8"modeAttack"_j))), (jint(59493)));
+	LINE_NUMBER(3992);
+	clinit_mindustry_gen_Iconc(ctx);
+	sp[0].o = (jobject)SF_mindustry_gen_Iconc_codeToName;
+	sp[0].o = (jobject)((func_arc_struct_IntMap_put_int_java_lang_Object_R_java_lang_Object) ((void **) nullCheck(ctx, sp[0].o)->vtable)[VTABLE_arc_struct_IntMap_put_int_java_lang_Object_R_java_lang_Object])(ctx, sp[0].o, (jint(59493)), (((jobject) createStringLiteral(ctx, u8"modeAttack"_j))));
+	LINE_NUMBER(3993);
+	clinit_mindustry_gen_Iconc(ctx);
+	sp[0].o = (jobject)SF_mindustry_gen_Iconc_codes;
+	((func_arc_struct_ObjectIntMap_put_java_lang_Object_int) ((void **) nullCheck(ctx, sp[0].o)->vtable)[VTABLE_arc_struct_ObjectIntMap_put_java_lang_Object_int])(ctx, sp[0].o, (((jobject) createStringLiteral(ctx, u8"refresh1"_j))), (jint(59495)));
+	LINE_NUMBER(3994);
+	clinit_mindustry_gen_Iconc(ctx);
+	sp[0].o = (jobject)SF_mindustry_gen_Iconc_codeToName;
+	sp[0].o = (jobject)((func_arc_struct_IntMap_put_int_java_lang_Object_R_java_lang_Object) ((void **) nullCheck(ctx, sp[0].o)->vtable)[VTABLE_arc_struct_IntMap_put_int_java_lang_Object_R_java_lang_Object])(ctx, sp[0].o, (jint(59495)), (((jobject) createStringLiteral(ctx, u8"refresh1"_j))));
+	LINE_NUMBER(3995);
+	clinit_mindustry_gen_Iconc(ctx);
+	sp[0].o = (jobject)SF_mindustry_gen_Iconc_codes;
+	((func_arc_struct_ObjectIntMap_put_java_lang_Object_int) ((void **) nullCheck(ctx, sp[0].o)->vtable)[VTABLE_arc_struct_ObjectIntMap_put_java_lang_Object_int])(ctx, sp[0].o, (((jobject) createStringLiteral(ctx, u8"none"_j))), (jint(59496)));
+	LINE_NUMBER(3996);
+	clinit_mindustry_gen_Iconc(ctx);
+	sp[0].o = (jobject)SF_mindustry_gen_Iconc_codeToName;
+	sp[0].o = (jobject)((func_arc_struct_IntMap_put_int_java_lang_Object_R_java_lang_Object) ((void **) nullCheck(ctx, sp[0].o)->vtable)[VTABLE_arc_struct_IntMap_put_int_java_lang_Object_R_java_lang_Object])(ctx, sp[0].o, (jint(59496)), (((jobject) createStringLiteral(ctx, u8"none"_j))));
+	LINE_NUMBER(3997);
+	clinit_mindustry_gen_Iconc(ctx);
+	sp[0].o = (jobject)SF_mindustry_gen_Iconc_codes;
+	((func_arc_struct_ObjectIntMap_put_java_lang_Object_int) ((void **) nullCheck(ctx, sp[0].o)->vtable)[VTABLE_arc_struct_ObjectIntMap_put_java_lang_Object_int])(ctx, sp[0].o, (((jobject) createStringLiteral(ctx, u8"pencil"_j))), (jint(59497)));
+	LINE_NUMBER(3998);
+	clinit_mindustry_gen_Iconc(ctx);
+	sp[0].o = (jobject)SF_mindustry_gen_Iconc_codeToName;
+	sp[0].o = (jobject)((func_arc_struct_IntMap_put_int_java_lang_Object_R_java_lang_Object) ((void **) nullCheck(ctx, sp[0].o)->vtable)[VTABLE_arc_struct_IntMap_put_int_java_lang_Object_R_java_lang_Object])(ctx, sp[0].o, (jint(59497)), (((jobject) createStringLiteral(ctx, u8"pencil"_j))));
+	LINE_NUMBER(3999);
+	clinit_mindustry_gen_Iconc(ctx);
+	sp[0].o = (jobject)SF_mindustry_gen_Iconc_codes;
+	((func_arc_struct_ObjectIntMap_put_java_lang_Object_int) ((void **) nullCheck(ctx, sp[0].o)->vtable)[VTABLE_arc_struct_ObjectIntMap_put_java_lang_Object_int])(ctx, sp[0].o, (((jobject) createStringLiteral(ctx, u8"refresh"_j))), (jint(59498)));
+	LINE_NUMBER(4000);
+	clinit_mindustry_gen_Iconc(ctx);
+	sp[0].o = (jobject)SF_mindustry_gen_Iconc_codeToName;
+	sp[0].o = (jobject)((func_arc_struct_IntMap_put_int_java_lang_Object_R_java_lang_Object) ((void **) nullCheck(ctx, sp[0].o)->vtable)[VTABLE_arc_struct_IntMap_put_int_java_lang_Object_R_java_lang_Object])(ctx, sp[0].o, (jint(59498)), (((jobject) createStringLiteral(ctx, u8"refresh"_j))));
+	LINE_NUMBER(4001);
+	clinit_mindustry_gen_Iconc(ctx);
+	sp[0].o = (jobject)SF_mindustry_gen_Iconc_codes;
+	((func_arc_struct_ObjectIntMap_put_java_lang_Object_int) ((void **) nullCheck(ctx, sp[0].o)->vtable)[VTABLE_arc_struct_ObjectIntMap_put_java_lang_Object_int])(ctx, sp[0].o, (((jobject) createStringLiteral(ctx, u8"modeSurvival"_j))), (jint(59499)));
+	LINE_NUMBER(4002);
+	clinit_mindustry_gen_Iconc(ctx);
+	sp[0].o = (jobject)SF_mindustry_gen_Iconc_codeToName;
+	sp[0].o = (jobject)((func_arc_struct_IntMap_put_int_java_lang_Object_R_java_lang_Object) ((void **) nullCheck(ctx, sp[0].o)->vtable)[VTABLE_arc_struct_IntMap_put_int_java_lang_Object_R_java_lang_Object])(ctx, sp[0].o, (jint(59499)), (((jobject) createStringLiteral(ctx, u8"modeSurvival"_j))));
+	LINE_NUMBER(4003);
+	clinit_mindustry_gen_Iconc(ctx);
+	sp[0].o = (jobject)SF_mindustry_gen_Iconc_codes;
+	((func_arc_struct_ObjectIntMap_put_java_lang_Object_int) ((void **) nullCheck(ctx, sp[0].o)->vtable)[VTABLE_arc_struct_ObjectIntMap_put_java_lang_Object_int])(ctx, sp[0].o, (((jobject) createStringLiteral(ctx, u8"commandRally"_j))), (jint(59500)));
+	LINE_NUMBER(4004);
+	clinit_mindustry_gen_Iconc(ctx);
+	sp[0].o = (jobject)SF_mindustry_gen_Iconc_codeToName;
+	sp[0].o = (jobject)((func_arc_struct_IntMap_put_int_java_lang_Object_R_java_lang_Object) ((void **) nullCheck(ctx, sp[0].o)->vtable)[VTABLE_arc_struct_IntMap_put_int_java_lang_Object_R_java_lang_Object])(ctx, sp[0].o, (jint(59500)), (((jobject) createStringLiteral(ctx, u8"commandRally"_j))));
+	LINE_NUMBER(4005);
+	clinit_mindustry_gen_Iconc(ctx);
+	sp[0].o = (jobject)SF_mindustry_gen_Iconc_codes;
+	((func_arc_struct_ObjectIntMap_put_java_lang_Object_int) ((void **) nullCheck(ctx, sp[0].o)->vtable)[VTABLE_arc_struct_ObjectIntMap_put_java_lang_Object_int])(ctx, sp[0].o, (((jobject) createStringLiteral(ctx, u8"units"_j))), (jint(59501)));
+	LINE_NUMBER(4006);
+	clinit_mindustry_gen_Iconc(ctx);
+	sp[0].o = (jobject)SF_mindustry_gen_Iconc_codeToName;
+	sp[0].o = (jobject)((func_arc_struct_IntMap_put_int_java_lang_Object_R_java_lang_Object) ((void **) nullCheck(ctx, sp[0].o)->vtable)[VTABLE_arc_struct_IntMap_put_int_java_lang_Object_R_java_lang_Object])(ctx, sp[0].o, (jint(59501)), (((jobject) createStringLiteral(ctx, u8"units"_j))));
+	LINE_NUMBER(4007);
+	clinit_mindustry_gen_Iconc(ctx);
+	sp[0].o = (jobject)SF_mindustry_gen_Iconc_codes;
+	((func_arc_struct_ObjectIntMap_put_java_lang_Object_int) ((void **) nullCheck(ctx, sp[0].o)->vtable)[VTABLE_arc_struct_ObjectIntMap_put_java_lang_Object_int])(ctx, sp[0].o, (((jobject) createStringLiteral(ctx, u8"commandAttack"_j))), (jint(59502)));
+	LINE_NUMBER(4008);
+	clinit_mindustry_gen_Iconc(ctx);
+	sp[0].o = (jobject)SF_mindustry_gen_Iconc_codeToName;
+	sp[0].o = (jobject)((func_arc_struct_IntMap_put_int_java_lang_Object_R_java_lang_Object) ((void **) nullCheck(ctx, sp[0].o)->vtable)[VTABLE_arc_struct_IntMap_put_int_java_lang_Object_R_java_lang_Object])(ctx, sp[0].o, (jint(59502)), (((jobject) createStringLiteral(ctx, u8"commandAttack"_j))));
+	LINE_NUMBER(4009);
+	clinit_mindustry_gen_Iconc(ctx);
+	sp[0].o = (jobject)SF_mindustry_gen_Iconc_codes;
+	((func_arc_struct_ObjectIntMap_put_java_lang_Object_int) ((void **) nullCheck(ctx, sp[0].o)->vtable)[VTABLE_arc_struct_ObjectIntMap_put_java_lang_Object_int])(ctx, sp[0].o, (((jobject) createStringLiteral(ctx, u8"trash"_j))), (jint(59503)));
+	LINE_NUMBER(4010);
+	clinit_mindustry_gen_Iconc(ctx);
+	sp[0].o = (jobject)SF_mindustry_gen_Iconc_codeToName;
+	sp[0].o = (jobject)((func_arc_struct_IntMap_put_int_java_lang_Object_R_java_lang_Object) ((void **) nullCheck(ctx, sp[0].o)->vtable)[VTABLE_arc_struct_IntMap_put_int_java_lang_Object_R_java_lang_Object])(ctx, sp[0].o, (jint(59503)), (((jobject) createStringLiteral(ctx, u8"trash"_j))));
+	LINE_NUMBER(4011);
+	clinit_mindustry_gen_Iconc(ctx);
+	sp[0].o = (jobject)SF_mindustry_gen_Iconc_codes;
+	((func_arc_struct_ObjectIntMap_put_java_lang_Object_int) ((void **) nullCheck(ctx, sp[0].o)->vtable)[VTABLE_arc_struct_ObjectIntMap_put_java_lang_Object_int])(ctx, sp[0].o, (((jobject) createStringLiteral(ctx, u8"chat"_j))), (jint(59504)));
+	LINE_NUMBER(4012);
+	clinit_mindustry_gen_Iconc(ctx);
+	sp[0].o = (jobject)SF_mindustry_gen_Iconc_codeToName;
+	sp[0].o = (jobject)((func_arc_struct_IntMap_put_int_java_lang_Object_R_java_lang_Object) ((void **) nullCheck(ctx, sp[0].o)->vtable)[VTABLE_arc_struct_IntMap_put_int_java_lang_Object_R_java_lang_Object])(ctx, sp[0].o, (jint(59504)), (((jobject) createStringLiteral(ctx, u8"chat"_j))));
+	LINE_NUMBER(4013);
+	clinit_mindustry_gen_Iconc(ctx);
+	sp[0].o = (jobject)SF_mindustry_gen_Iconc_codes;
+	((func_arc_struct_ObjectIntMap_put_java_lang_Object_int) ((void **) nullCheck(ctx, sp[0].o)->vtable)[VTABLE_arc_struct_ObjectIntMap_put_java_lang_Object_int])(ctx, sp[0].o, (((jobject) createStringLiteral(ctx, u8"turret"_j))), (jint(59505)));
+	LINE_NUMBER(4014);
+	clinit_mindustry_gen_Iconc(ctx);
+	sp[0].o = (jobject)SF_mindustry_gen_Iconc_codeToName;
+	sp[0].o = (jobject)((func_arc_struct_IntMap_put_int_java_lang_Object_R_java_lang_Object) ((void **) nullCheck(ctx, sp[0].o)->vtable)[VTABLE_arc_struct_IntMap_put_int_java_lang_Object_R_java_lang_Object])(ctx, sp[0].o, (jint(59505)), (((jobject) createStringLiteral(ctx, u8"turret"_j))));
+	LINE_NUMBER(4015);
+	clinit_mindustry_gen_Iconc(ctx);
+	sp[0].o = (jobject)SF_mindustry_gen_Iconc_codes;
+	((func_arc_struct_ObjectIntMap_put_java_lang_Object_int) ((void **) nullCheck(ctx, sp[0].o)->vtable)[VTABLE_arc_struct_ObjectIntMap_put_java_lang_Object_int])(ctx, sp[0].o, (((jobject) createStringLiteral(ctx, u8"players"_j))), (jint(59506)));
+	LINE_NUMBER(4016);
+	clinit_mindustry_gen_Iconc(ctx);
+	sp[0].o = (jobject)SF_mindustry_gen_Iconc_codeToName;
+	sp[0].o = (jobject)((func_arc_struct_IntMap_put_int_java_lang_Object_R_java_lang_Object) ((void **) nullCheck(ctx, sp[0].o)->vtable)[VTABLE_arc_struct_IntMap_put_int_java_lang_Object_R_java_lang_Object])(ctx, sp[0].o, (jint(59506)), (((jobject) createStringLiteral(ctx, u8"players"_j))));
+	LINE_NUMBER(4017);
+	clinit_mindustry_gen_Iconc(ctx);
+	sp[0].o = (jobject)SF_mindustry_gen_Iconc_codes;
+	((func_arc_struct_ObjectIntMap_put_java_lang_Object_int) ((void **) nullCheck(ctx, sp[0].o)->vtable)[VTABLE_arc_struct_ObjectIntMap_put_java_lang_Object_int])(ctx, sp[0].o, (((jobject) createStringLiteral(ctx, u8"editor"_j))), (jint(59507)));
+	LINE_NUMBER(4018);
+	clinit_mindustry_gen_Iconc(ctx);
+	sp[0].o = (jobject)SF_mindustry_gen_Iconc_codeToName;
+	sp[0].o = (jobject)((func_arc_struct_IntMap_put_int_java_lang_Object_R_java_lang_Object) ((void **) nullCheck(ctx, sp[0].o)->vtable)[VTABLE_arc_struct_IntMap_put_int_java_lang_Object_R_java_lang_Object])(ctx, sp[0].o, (jint(59507)), (((jobject) createStringLiteral(ctx, u8"editor"_j))));
+	LINE_NUMBER(4019);
+	clinit_mindustry_gen_Iconc(ctx);
+	sp[0].o = (jobject)SF_mindustry_gen_Iconc_codes;
+	((func_arc_struct_ObjectIntMap_put_java_lang_Object_int) ((void **) nullCheck(ctx, sp[0].o)->vtable)[VTABLE_arc_struct_ObjectIntMap_put_java_lang_Object_int])(ctx, sp[0].o, (((jobject) createStringLiteral(ctx, u8"copy"_j))), (jint(59508)));
+	LINE_NUMBER(4020);
+	clinit_mindustry_gen_Iconc(ctx);
+	sp[0].o = (jobject)SF_mindustry_gen_Iconc_codeToName;
+	sp[0].o = (jobject)((func_arc_struct_IntMap_put_int_java_lang_Object_R_java_lang_Object) ((void **) nullCheck(ctx, sp[0].o)->vtable)[VTABLE_arc_struct_IntMap_put_int_java_lang_Object_R_java_lang_Object])(ctx, sp[0].o, (jint(59508)), (((jobject) createStringLiteral(ctx, u8"copy"_j))));
+	LINE_NUMBER(4021);
+	clinit_mindustry_gen_Iconc(ctx);
+	sp[0].o = (jobject)SF_mindustry_gen_Iconc_codes;
+	((func_arc_struct_ObjectIntMap_put_java_lang_Object_int) ((void **) nullCheck(ctx, sp[0].o)->vtable)[VTABLE_arc_struct_ObjectIntMap_put_java_lang_Object_int])(ctx, sp[0].o, (((jobject) createStringLiteral(ctx, u8"tree"_j))), (jint(59509)));
+	LINE_NUMBER(4022);
+	clinit_mindustry_gen_Iconc(ctx);
+	sp[0].o = (jobject)SF_mindustry_gen_Iconc_codeToName;
+	sp[0].o = (jobject)((func_arc_struct_IntMap_put_int_java_lang_Object_R_java_lang_Object) ((void **) nullCheck(ctx, sp[0].o)->vtable)[VTABLE_arc_struct_IntMap_put_int_java_lang_Object_R_java_lang_Object])(ctx, sp[0].o, (jint(59509)), (((jobject) createStringLiteral(ctx, u8"tree"_j))));
+	LINE_NUMBER(4023);
+	clinit_mindustry_gen_Iconc(ctx);
+	sp[0].o = (jobject)SF_mindustry_gen_Iconc_codes;
+	((func_arc_struct_ObjectIntMap_put_java_lang_Object_int) ((void **) nullCheck(ctx, sp[0].o)->vtable)[VTABLE_arc_struct_ObjectIntMap_put_java_lang_Object_int])(ctx, sp[0].o, (((jobject) createStringLiteral(ctx, u8"lockOpen"_j))), (jint(59510)));
+	LINE_NUMBER(4024);
+	clinit_mindustry_gen_Iconc(ctx);
+	sp[0].o = (jobject)SF_mindustry_gen_Iconc_codeToName;
+	sp[0].o = (jobject)((func_arc_struct_IntMap_put_int_java_lang_Object_R_java_lang_Object) ((void **) nullCheck(ctx, sp[0].o)->vtable)[VTABLE_arc_struct_IntMap_put_int_java_lang_Object_R_java_lang_Object])(ctx, sp[0].o, (jint(59510)), (((jobject) createStringLiteral(ctx, u8"lockOpen"_j))));
+	LINE_NUMBER(4025);
+	clinit_mindustry_gen_Iconc(ctx);
+	sp[0].o = (jobject)SF_mindustry_gen_Iconc_codes;
+	((func_arc_struct_ObjectIntMap_put_java_lang_Object_int) ((void **) nullCheck(ctx, sp[0].o)->vtable)[VTABLE_arc_struct_ObjectIntMap_put_java_lang_Object_int])(ctx, sp[0].o, (((jobject) createStringLiteral(ctx, u8"pick"_j))), (jint(59511)));
+	LINE_NUMBER(4026);
+	clinit_mindustry_gen_Iconc(ctx);
+	sp[0].o = (jobject)SF_mindustry_gen_Iconc_codeToName;
+	sp[0].o = (jobject)((func_arc_struct_IntMap_put_int_java_lang_Object_R_java_lang_Object) ((void **) nullCheck(ctx, sp[0].o)->vtable)[VTABLE_arc_struct_IntMap_put_int_java_lang_Object_R_java_lang_Object])(ctx, sp[0].o, (jint(59511)), (((jobject) createStringLiteral(ctx, u8"pick"_j))));
+	LINE_NUMBER(4027);
+	clinit_mindustry_gen_Iconc(ctx);
+	sp[0].o = (jobject)SF_mindustry_gen_Iconc_codes;
+	((func_arc_struct_ObjectIntMap_put_java_lang_Object_int) ((void **) nullCheck(ctx, sp[0].o)->vtable)[VTABLE_arc_struct_ObjectIntMap_put_java_lang_Object_int])(ctx, sp[0].o, (((jobject) createStringLiteral(ctx, u8"export"_j))), (jint(59512)));
+	LINE_NUMBER(4028);
+	clinit_mindustry_gen_Iconc(ctx);
+	sp[0].o = (jobject)SF_mindustry_gen_Iconc_codeToName;
+	sp[0].o = (jobject)((func_arc_struct_IntMap_put_int_java_lang_Object_R_java_lang_Object) ((void **) nullCheck(ctx, sp[0].o)->vtable)[VTABLE_arc_struct_IntMap_put_int_java_lang_Object_R_java_lang_Object])(ctx, sp[0].o, (jint(59512)), (((jobject) createStringLiteral(ctx, u8"export"_j))));
+	LINE_NUMBER(4029);
+	clinit_mindustry_gen_Iconc(ctx);
+	sp[0].o = (jobject)SF_mindustry_gen_Iconc_codes;
+	((func_arc_struct_ObjectIntMap_put_java_lang_Object_int) ((void **) nullCheck(ctx, sp[0].o)->vtable)[VTABLE_arc_struct_ObjectIntMap_put_java_lang_Object_int])(ctx, sp[0].o, (((jobject) createStringLiteral(ctx, u8"download"_j))), (jint(59513)));
+	LINE_NUMBER(4030);
+	clinit_mindustry_gen_Iconc(ctx);
+	sp[0].o = (jobject)SF_mindustry_gen_Iconc_codeToName;
+	sp[0].o = (jobject)((func_arc_struct_IntMap_put_int_java_lang_Object_R_java_lang_Object) ((void **) nullCheck(ctx, sp[0].o)->vtable)[VTABLE_arc_struct_IntMap_put_int_java_lang_Object_R_java_lang_Object])(ctx, sp[0].o, (jint(59513)), (((jobject) createStringLiteral(ctx, u8"download"_j))));
+	LINE_NUMBER(4031);
+	clinit_mindustry_gen_Iconc(ctx);
+	sp[0].o = (jobject)SF_mindustry_gen_Iconc_codes;
+	((func_arc_struct_ObjectIntMap_put_java_lang_Object_int) ((void **) nullCheck(ctx, sp[0].o)->vtable)[VTABLE_arc_struct_ObjectIntMap_put_java_lang_Object_int])(ctx, sp[0].o, (((jobject) createStringLiteral(ctx, u8"upload"_j))), (jint(59515)));
+	LINE_NUMBER(4032);
+	clinit_mindustry_gen_Iconc(ctx);
+	sp[0].o = (jobject)SF_mindustry_gen_Iconc_codeToName;
+	sp[0].o = (jobject)((func_arc_struct_IntMap_put_int_java_lang_Object_R_java_lang_Object) ((void **) nullCheck(ctx, sp[0].o)->vtable)[VTABLE_arc_struct_IntMap_put_int_java_lang_Object_R_java_lang_Object])(ctx, sp[0].o, (jint(59515)), (((jobject) createStringLiteral(ctx, u8"upload"_j))));
+	LINE_NUMBER(4033);
+	clinit_mindustry_gen_Iconc(ctx);
+	sp[0].o = (jobject)SF_mindustry_gen_Iconc_codes;
+	((func_arc_struct_ObjectIntMap_put_java_lang_Object_int) ((void **) nullCheck(ctx, sp[0].o)->vtable)[VTABLE_arc_struct_ObjectIntMap_put_java_lang_Object_int])(ctx, sp[0].o, (((jobject) createStringLiteral(ctx, u8"settings"_j))), (jint(59516)));
+	LINE_NUMBER(4034);
+	clinit_mindustry_gen_Iconc(ctx);
+	sp[0].o = (jobject)SF_mindustry_gen_Iconc_codeToName;
+	sp[0].o = (jobject)((func_arc_struct_IntMap_put_int_java_lang_Object_R_java_lang_Object) ((void **) nullCheck(ctx, sp[0].o)->vtable)[VTABLE_arc_struct_IntMap_put_int_java_lang_Object_R_java_lang_Object])(ctx, sp[0].o, (jint(59516)), (((jobject) createStringLiteral(ctx, u8"settings"_j))));
+	LINE_NUMBER(4035);
+	clinit_mindustry_gen_Iconc(ctx);
+	sp[0].o = (jobject)SF_mindustry_gen_Iconc_codes;
+	((func_arc_struct_ObjectIntMap_put_java_lang_Object_int) ((void **) nullCheck(ctx, sp[0].o)->vtable)[VTABLE_arc_struct_ObjectIntMap_put_java_lang_Object_int])(ctx, sp[0].o, (((jobject) createStringLiteral(ctx, u8"spray"_j))), (jint(59517)));
+	LINE_NUMBER(4036);
+	clinit_mindustry_gen_Iconc(ctx);
+	sp[0].o = (jobject)SF_mindustry_gen_Iconc_codeToName;
+	sp[0].o = (jobject)((func_arc_struct_IntMap_put_int_java_lang_Object_R_java_lang_Object) ((void **) nullCheck(ctx, sp[0].o)->vtable)[VTABLE_arc_struct_IntMap_put_int_java_lang_Object_R_java_lang_Object])(ctx, sp[0].o, (jint(59517)), (((jobject) createStringLiteral(ctx, u8"spray"_j))));
+	LINE_NUMBER(4037);
+	clinit_mindustry_gen_Iconc(ctx);
+	sp[0].o = (jobject)SF_mindustry_gen_Iconc_codes;
+	((func_arc_struct_ObjectIntMap_put_java_lang_Object_int) ((void **) nullCheck(ctx, sp[0].o)->vtable)[VTABLE_arc_struct_ObjectIntMap_put_java_lang_Object_int])(ctx, sp[0].o, (((jobject) createStringLiteral(ctx, u8"zoom"_j))), (jint(59530)));
+	LINE_NUMBER(4038);
+	clinit_mindustry_gen_Iconc(ctx);
+	sp[0].o = (jobject)SF_mindustry_gen_Iconc_codeToName;
+	sp[0].o = (jobject)((func_arc_struct_IntMap_put_int_java_lang_Object_R_java_lang_Object) ((void **) nullCheck(ctx, sp[0].o)->vtable)[VTABLE_arc_struct_IntMap_put_int_java_lang_Object_R_java_lang_Object])(ctx, sp[0].o, (jint(59530)), (((jobject) createStringLiteral(ctx, u8"zoom"_j))));
+	LINE_NUMBER(4039);
+	clinit_mindustry_gen_Iconc(ctx);
+	sp[0].o = (jobject)SF_mindustry_gen_Iconc_codes;
+	((func_arc_struct_ObjectIntMap_put_java_lang_Object_int) ((void **) nullCheck(ctx, sp[0].o)->vtable)[VTABLE_arc_struct_ObjectIntMap_put_java_lang_Object_int])(ctx, sp[0].o, (((jobject) createStringLiteral(ctx, u8"powerOld"_j))), (jint(59531)));
+	LINE_NUMBER(4040);
+	clinit_mindustry_gen_Iconc(ctx);
+	sp[0].o = (jobject)SF_mindustry_gen_Iconc_codeToName;
+	sp[0].o = (jobject)((func_arc_struct_IntMap_put_int_java_lang_Object_R_java_lang_Object) ((void **) nullCheck(ctx, sp[0].o)->vtable)[VTABLE_arc_struct_IntMap_put_int_java_lang_Object_R_java_lang_Object])(ctx, sp[0].o, (jint(59531)), (((jobject) createStringLiteral(ctx, u8"powerOld"_j))));
+	LINE_NUMBER(4041);
+	clinit_mindustry_gen_Iconc(ctx);
+	sp[0].o = (jobject)SF_mindustry_gen_Iconc_codes;
+	((func_arc_struct_ObjectIntMap_put_java_lang_Object_int) ((void **) nullCheck(ctx, sp[0].o)->vtable)[VTABLE_arc_struct_ObjectIntMap_put_java_lang_Object_int])(ctx, sp[0].o, (((jobject) createStringLiteral(ctx, u8"power"_j))), (jint(59408)));
+	LINE_NUMBER(4042);
+	clinit_mindustry_gen_Iconc(ctx);
+	sp[0].o = (jobject)SF_mindustry_gen_Iconc_codeToName;
+	sp[0].o = (jobject)((func_arc_struct_IntMap_put_int_java_lang_Object_R_java_lang_Object) ((void **) nullCheck(ctx, sp[0].o)->vtable)[VTABLE_arc_struct_IntMap_put_int_java_lang_Object_R_java_lang_Object])(ctx, sp[0].o, (jint(59408)), (((jobject) createStringLiteral(ctx, u8"power"_j))));
+	LINE_NUMBER(4043);
+	clinit_mindustry_gen_Iconc(ctx);
+	sp[0].o = (jobject)SF_mindustry_gen_Iconc_codes;
+	((func_arc_struct_ObjectIntMap_put_java_lang_Object_int) ((void **) nullCheck(ctx, sp[0].o)->vtable)[VTABLE_arc_struct_ObjectIntMap_put_java_lang_Object_int])(ctx, sp[0].o, (((jobject) createStringLiteral(ctx, u8"menu"_j))), (jint(59532)));
+	LINE_NUMBER(4044);
+	clinit_mindustry_gen_Iconc(ctx);
+	sp[0].o = (jobject)SF_mindustry_gen_Iconc_codeToName;
+	sp[0].o = (jobject)((func_arc_struct_IntMap_put_int_java_lang_Object_R_java_lang_Object) ((void **) nullCheck(ctx, sp[0].o)->vtable)[VTABLE_arc_struct_IntMap_put_int_java_lang_Object_R_java_lang_Object])(ctx, sp[0].o, (jint(59532)), (((jobject) createStringLiteral(ctx, u8"menu"_j))));
+	LINE_NUMBER(4045);
+	clinit_mindustry_gen_Iconc(ctx);
+	sp[0].o = (jobject)SF_mindustry_gen_Iconc_codes;
+	((func_arc_struct_ObjectIntMap_put_java_lang_Object_int) ((void **) nullCheck(ctx, sp[0].o)->vtable)[VTABLE_arc_struct_ObjectIntMap_put_java_lang_Object_int])(ctx, sp[0].o, (((jobject) createStringLiteral(ctx, u8"lock"_j))), (jint(59533)));
+	LINE_NUMBER(4046);
+	clinit_mindustry_gen_Iconc(ctx);
+	sp[0].o = (jobject)SF_mindustry_gen_Iconc_codeToName;
+	sp[0].o = (jobject)((func_arc_struct_IntMap_put_int_java_lang_Object_R_java_lang_Object) ((void **) nullCheck(ctx, sp[0].o)->vtable)[VTABLE_arc_struct_IntMap_put_int_java_lang_Object_R_java_lang_Object])(ctx, sp[0].o, (jint(59533)), (((jobject) createStringLiteral(ctx, u8"lock"_j))));
+	LINE_NUMBER(4047);
+	clinit_mindustry_gen_Iconc(ctx);
+	sp[0].o = (jobject)SF_mindustry_gen_Iconc_codes;
+	((func_arc_struct_ObjectIntMap_put_java_lang_Object_int) ((void **) nullCheck(ctx, sp[0].o)->vtable)[VTABLE_arc_struct_ObjectIntMap_put_java_lang_Object_int])(ctx, sp[0].o, (((jobject) createStringLiteral(ctx, u8"eye"_j))), (jint(59534)));
+	LINE_NUMBER(4048);
+	clinit_mindustry_gen_Iconc(ctx);
+	sp[0].o = (jobject)SF_mindustry_gen_Iconc_codeToName;
+	sp[0].o = (jobject)((func_arc_struct_IntMap_put_int_java_lang_Object_R_java_lang_Object) ((void **) nullCheck(ctx, sp[0].o)->vtable)[VTABLE_arc_struct_IntMap_put_int_java_lang_Object_R_java_lang_Object])(ctx, sp[0].o, (jint(59534)), (((jobject) createStringLiteral(ctx, u8"eye"_j))));
+	LINE_NUMBER(4049);
+	clinit_mindustry_gen_Iconc(ctx);
+	sp[0].o = (jobject)SF_mindustry_gen_Iconc_codes;
+	((func_arc_struct_ObjectIntMap_put_java_lang_Object_int) ((void **) nullCheck(ctx, sp[0].o)->vtable)[VTABLE_arc_struct_ObjectIntMap_put_java_lang_Object_int])(ctx, sp[0].o, (((jobject) createStringLiteral(ctx, u8"eyeOff"_j))), (jint(59535)));
+	LINE_NUMBER(4050);
+	clinit_mindustry_gen_Iconc(ctx);
+	sp[0].o = (jobject)SF_mindustry_gen_Iconc_codeToName;
+	sp[0].o = (jobject)((func_arc_struct_IntMap_put_int_java_lang_Object_R_java_lang_Object) ((void **) nullCheck(ctx, sp[0].o)->vtable)[VTABLE_arc_struct_IntMap_put_int_java_lang_Object_R_java_lang_Object])(ctx, sp[0].o, (jint(59535)), (((jobject) createStringLiteral(ctx, u8"eyeOff"_j))));
+	LINE_NUMBER(4051);
+	clinit_mindustry_gen_Iconc(ctx);
+	sp[0].o = (jobject)SF_mindustry_gen_Iconc_codes;
+	((func_arc_struct_ObjectIntMap_put_java_lang_Object_int) ((void **) nullCheck(ctx, sp[0].o)->vtable)[VTABLE_arc_struct_ObjectIntMap_put_java_lang_Object_int])(ctx, sp[0].o, (((jobject) createStringLiteral(ctx, u8"warning"_j))), (9888));
+	LINE_NUMBER(4052);
+	clinit_mindustry_gen_Iconc(ctx);
+	sp[0].o = (jobject)SF_mindustry_gen_Iconc_codeToName;
+	sp[0].o = (jobject)((func_arc_struct_IntMap_put_int_java_lang_Object_R_java_lang_Object) ((void **) nullCheck(ctx, sp[0].o)->vtable)[VTABLE_arc_struct_IntMap_put_int_java_lang_Object_R_java_lang_Object])(ctx, sp[0].o, (9888), (((jobject) createStringLiteral(ctx, u8"warning"_j))));
+	LINE_NUMBER(4053);
+	clinit_mindustry_gen_Iconc(ctx);
+	sp[0].o = (jobject)SF_mindustry_gen_Iconc_codes;
+	((func_arc_struct_ObjectIntMap_put_java_lang_Object_int) ((void **) nullCheck(ctx, sp[0].o)->vtable)[VTABLE_arc_struct_ObjectIntMap_put_java_lang_Object_int])(ctx, sp[0].o, (((jobject) createStringLiteral(ctx, u8"terrain"_j))), (jint(59492)));
+	LINE_NUMBER(4054);
+	clinit_mindustry_gen_Iconc(ctx);
+	sp[0].o = (jobject)SF_mindustry_gen_Iconc_codeToName;
+	sp[0].o = (jobject)((func_arc_struct_IntMap_put_int_java_lang_Object_R_java_lang_Object) ((void **) nullCheck(ctx, sp[0].o)->vtable)[VTABLE_arc_struct_IntMap_put_int_java_lang_Object_R_java_lang_Object])(ctx, sp[0].o, (jint(59492)), (((jobject) createStringLiteral(ctx, u8"terrain"_j))));
+	LINE_NUMBER(4055);
+	clinit_mindustry_gen_Iconc(ctx);
+	sp[0].o = (jobject)SF_mindustry_gen_Iconc_codes;
+	((func_arc_struct_ObjectIntMap_put_java_lang_Object_int) ((void **) nullCheck(ctx, sp[0].o)->vtable)[VTABLE_arc_struct_ObjectIntMap_put_java_lang_Object_int])(ctx, sp[0].o, (((jobject) createStringLiteral(ctx, u8"defense"_j))), (jint(59469)));
+	LINE_NUMBER(4056);
+	clinit_mindustry_gen_Iconc(ctx);
+	sp[0].o = (jobject)SF_mindustry_gen_Iconc_codeToName;
+	sp[0].o = (jobject)((func_arc_struct_IntMap_put_int_java_lang_Object_R_java_lang_Object) ((void **) nullCheck(ctx, sp[0].o)->vtable)[VTABLE_arc_struct_IntMap_put_int_java_lang_Object_R_java_lang_Object])(ctx, sp[0].o, (jint(59469)), (((jobject) createStringLiteral(ctx, u8"defense"_j))));
+	LINE_NUMBER(4057);
+	clinit_mindustry_gen_Iconc(ctx);
+	sp[0].o = (jobject)SF_mindustry_gen_Iconc_codes;
+	((func_arc_struct_ObjectIntMap_put_java_lang_Object_int) ((void **) nullCheck(ctx, sp[0].o)->vtable)[VTABLE_arc_struct_ObjectIntMap_put_java_lang_Object_int])(ctx, sp[0].o, (((jobject) createStringLiteral(ctx, u8"planet"_j))), (jint(59443)));
+	LINE_NUMBER(4058);
+	clinit_mindustry_gen_Iconc(ctx);
+	sp[0].o = (jobject)SF_mindustry_gen_Iconc_codeToName;
+	sp[0].o = (jobject)((func_arc_struct_IntMap_put_int_java_lang_Object_R_java_lang_Object) ((void **) nullCheck(ctx, sp[0].o)->vtable)[VTABLE_arc_struct_IntMap_put_int_java_lang_Object_R_java_lang_Object])(ctx, sp[0].o, (jint(59443)), (((jobject) createStringLiteral(ctx, u8"planet"_j))));
+	LINE_NUMBER(4059);
+	clinit_mindustry_gen_Iconc(ctx);
+	sp[0].o = (jobject)SF_mindustry_gen_Iconc_codes;
+	((func_arc_struct_ObjectIntMap_put_java_lang_Object_int) ((void **) nullCheck(ctx, sp[0].o)->vtable)[VTABLE_arc_struct_ObjectIntMap_put_java_lang_Object_int])(ctx, sp[0].o, (((jobject) createStringLiteral(ctx, u8"arrowNote"_j))), (jint(59444)));
+	LINE_NUMBER(4060);
+	clinit_mindustry_gen_Iconc(ctx);
+	sp[0].o = (jobject)SF_mindustry_gen_Iconc_codeToName;
+	sp[0].o = (jobject)((func_arc_struct_IntMap_put_int_java_lang_Object_R_java_lang_Object) ((void **) nullCheck(ctx, sp[0].o)->vtable)[VTABLE_arc_struct_IntMap_put_int_java_lang_Object_R_java_lang_Object])(ctx, sp[0].o, (jint(59444)), (((jobject) createStringLiteral(ctx, u8"arrowNote"_j))));
+	LINE_NUMBER(4061);
+	clinit_mindustry_gen_Iconc(ctx);
+	sp[0].o = (jobject)SF_mindustry_gen_Iconc_codes;
+	((func_arc_struct_ObjectIntMap_put_java_lang_Object_int) ((void **) nullCheck(ctx, sp[0].o)->vtable)[VTABLE_arc_struct_ObjectIntMap_put_java_lang_Object_int])(ctx, sp[0].o, (((jobject) createStringLiteral(ctx, u8"music"_j))), (jint(59402)));
+	LINE_NUMBER(4062);
+	clinit_mindustry_gen_Iconc(ctx);
+	sp[0].o = (jobject)SF_mindustry_gen_Iconc_codeToName;
+	sp[0].o = (jobject)((func_arc_struct_IntMap_put_int_java_lang_Object_R_java_lang_Object) ((void **) nullCheck(ctx, sp[0].o)->vtable)[VTABLE_arc_struct_IntMap_put_int_java_lang_Object_R_java_lang_Object])(ctx, sp[0].o, (jint(59402)), (((jobject) createStringLiteral(ctx, u8"music"_j))));
+	LINE_NUMBER(4063);
+	clinit_mindustry_gen_Iconc(ctx);
+	sp[0].o = (jobject)SF_mindustry_gen_Iconc_codes;
+	((func_arc_struct_ObjectIntMap_put_java_lang_Object_int) ((void **) nullCheck(ctx, sp[0].o)->vtable)[VTABLE_arc_struct_ObjectIntMap_put_java_lang_Object_int])(ctx, sp[0].o, (((jobject) createStringLiteral(ctx, u8"fileAudio"_j))), (jint(61895)));
+	LINE_NUMBER(4064);
+	clinit_mindustry_gen_Iconc(ctx);
+	sp[0].o = (jobject)SF_mindustry_gen_Iconc_codeToName;
+	sp[0].o = (jobject)((func_arc_struct_IntMap_put_int_java_lang_Object_R_java_lang_Object) ((void **) nullCheck(ctx, sp[0].o)->vtable)[VTABLE_arc_struct_IntMap_put_int_java_lang_Object_R_java_lang_Object])(ctx, sp[0].o, (jint(61895)), (((jobject) createStringLiteral(ctx, u8"fileAudio"_j))));
+	LINE_NUMBER(4065);
+	clinit_mindustry_gen_Iconc(ctx);
+	sp[0].o = (jobject)SF_mindustry_gen_Iconc_codes;
+	((func_arc_struct_ObjectIntMap_put_java_lang_Object_int) ((void **) nullCheck(ctx, sp[0].o)->vtable)[VTABLE_arc_struct_ObjectIntMap_put_java_lang_Object_int])(ctx, sp[0].o, (((jobject) createStringLiteral(ctx, u8"volumeOff"_j))), (jint(59404)));
+	LINE_NUMBER(4066);
+	clinit_mindustry_gen_Iconc(ctx);
+	sp[0].o = (jobject)SF_mindustry_gen_Iconc_codeToName;
+	sp[0].o = (jobject)((func_arc_struct_IntMap_put_int_java_lang_Object_R_java_lang_Object) ((void **) nullCheck(ctx, sp[0].o)->vtable)[VTABLE_arc_struct_IntMap_put_int_java_lang_Object_R_java_lang_Object])(ctx, sp[0].o, (jint(59404)), (((jobject) createStringLiteral(ctx, u8"volumeOff"_j))));
+	LINE_NUMBER(4067);
+	clinit_mindustry_gen_Iconc(ctx);
+	sp[0].o = (jobject)SF_mindustry_gen_Iconc_codes;
+	((func_arc_struct_ObjectIntMap_put_java_lang_Object_int) ((void **) nullCheck(ctx, sp[0].o)->vtable)[VTABLE_arc_struct_ObjectIntMap_put_java_lang_Object_int])(ctx, sp[0].o, (((jobject) createStringLiteral(ctx, u8"volumeDown"_j))), (jint(59423)));
+	LINE_NUMBER(4068);
+	clinit_mindustry_gen_Iconc(ctx);
+	sp[0].o = (jobject)SF_mindustry_gen_Iconc_codeToName;
+	sp[0].o = (jobject)((func_arc_struct_IntMap_put_int_java_lang_Object_R_java_lang_Object) ((void **) nullCheck(ctx, sp[0].o)->vtable)[VTABLE_arc_struct_IntMap_put_int_java_lang_Object_R_java_lang_Object])(ctx, sp[0].o, (jint(59423)), (((jobject) createStringLiteral(ctx, u8"volumeDown"_j))));
+	LINE_NUMBER(4069);
+	clinit_mindustry_gen_Iconc(ctx);
+	sp[0].o = (jobject)SF_mindustry_gen_Iconc_codes;
+	((func_arc_struct_ObjectIntMap_put_java_lang_Object_int) ((void **) nullCheck(ctx, sp[0].o)->vtable)[VTABLE_arc_struct_ObjectIntMap_put_java_lang_Object_int])(ctx, sp[0].o, (((jobject) createStringLiteral(ctx, u8"volumeUp"_j))), (jint(59424)));
+	LINE_NUMBER(4070);
+	clinit_mindustry_gen_Iconc(ctx);
+	sp[0].o = (jobject)SF_mindustry_gen_Iconc_codeToName;
+	sp[0].o = (jobject)((func_arc_struct_IntMap_put_int_java_lang_Object_R_java_lang_Object) ((void **) nullCheck(ctx, sp[0].o)->vtable)[VTABLE_arc_struct_IntMap_put_int_java_lang_Object_R_java_lang_Object])(ctx, sp[0].o, (jint(59424)), (((jobject) createStringLiteral(ctx, u8"volumeUp"_j))));
+	LINE_NUMBER(4071);
+	clinit_mindustry_gen_Iconc(ctx);
+	sp[0].o = (jobject)SF_mindustry_gen_Iconc_codes;
+	((func_arc_struct_ObjectIntMap_put_java_lang_Object_int) ((void **) nullCheck(ctx, sp[0].o)->vtable)[VTABLE_arc_struct_ObjectIntMap_put_java_lang_Object_int])(ctx, sp[0].o, (((jobject) createStringLiteral(ctx, u8"tag"_j))), (jint(59425)));
+	LINE_NUMBER(4072);
+	clinit_mindustry_gen_Iconc(ctx);
+	sp[0].o = (jobject)SF_mindustry_gen_Iconc_codeToName;
+	sp[0].o = (jobject)((func_arc_struct_IntMap_put_int_java_lang_Object_R_java_lang_Object) ((void **) nullCheck(ctx, sp[0].o)->vtable)[VTABLE_arc_struct_IntMap_put_int_java_lang_Object_R_java_lang_Object])(ctx, sp[0].o, (jint(59425)), (((jobject) createStringLiteral(ctx, u8"tag"_j))));
+	LINE_NUMBER(4073);
+	clinit_mindustry_gen_Iconc(ctx);
+	sp[0].o = (jobject)SF_mindustry_gen_Iconc_codes;
+	((func_arc_struct_ObjectIntMap_put_java_lang_Object_int) ((void **) nullCheck(ctx, sp[0].o)->vtable)[VTABLE_arc_struct_ObjectIntMap_put_java_lang_Object_int])(ctx, sp[0].o, (((jobject) createStringLiteral(ctx, u8"tags"_j))), (jint(59432)));
+	LINE_NUMBER(4074);
+	clinit_mindustry_gen_Iconc(ctx);
+	sp[0].o = (jobject)SF_mindustry_gen_Iconc_codeToName;
+	sp[0].o = (jobject)((func_arc_struct_IntMap_put_int_java_lang_Object_R_java_lang_Object) ((void **) nullCheck(ctx, sp[0].o)->vtable)[VTABLE_arc_struct_IntMap_put_int_java_lang_Object_R_java_lang_Object])(ctx, sp[0].o, (jint(59432)), (((jobject) createStringLiteral(ctx, u8"tags"_j))));
+	LINE_NUMBER(4075);
+	clinit_mindustry_gen_Iconc(ctx);
+	sp[0].o = (jobject)SF_mindustry_gen_Iconc_codes;
+	((func_arc_struct_ObjectIntMap_put_java_lang_Object_int) ((void **) nullCheck(ctx, sp[0].o)->vtable)[VTABLE_arc_struct_ObjectIntMap_put_java_lang_Object_int])(ctx, sp[0].o, (((jobject) createStringLiteral(ctx, u8"battery4"_j))), (jint(62016)));
+	LINE_NUMBER(4076);
+	clinit_mindustry_gen_Iconc(ctx);
+	sp[0].o = (jobject)SF_mindustry_gen_Iconc_codeToName;
+	sp[0].o = (jobject)((func_arc_struct_IntMap_put_int_java_lang_Object_R_java_lang_Object) ((void **) nullCheck(ctx, sp[0].o)->vtable)[VTABLE_arc_struct_IntMap_put_int_java_lang_Object_R_java_lang_Object])(ctx, sp[0].o, (jint(62016)), (((jobject) createStringLiteral(ctx, u8"battery4"_j))));
+	LINE_NUMBER(4077);
+	clinit_mindustry_gen_Iconc(ctx);
+	sp[0].o = (jobject)SF_mindustry_gen_Iconc_codes;
+	((func_arc_struct_ObjectIntMap_put_java_lang_Object_int) ((void **) nullCheck(ctx, sp[0].o)->vtable)[VTABLE_arc_struct_ObjectIntMap_put_java_lang_Object_int])(ctx, sp[0].o, (((jobject) createStringLiteral(ctx, u8"battery3"_j))), (jint(62017)));
+	LINE_NUMBER(4078);
+	clinit_mindustry_gen_Iconc(ctx);
+	sp[0].o = (jobject)SF_mindustry_gen_Iconc_codeToName;
+	sp[0].o = (jobject)((func_arc_struct_IntMap_put_int_java_lang_Object_R_java_lang_Object) ((void **) nullCheck(ctx, sp[0].o)->vtable)[VTABLE_arc_struct_IntMap_put_int_java_lang_Object_R_java_lang_Object])(ctx, sp[0].o, (jint(62017)), (((jobject) createStringLiteral(ctx, u8"battery3"_j))));
+	LINE_NUMBER(4079);
+	clinit_mindustry_gen_Iconc(ctx);
+	sp[0].o = (jobject)SF_mindustry_gen_Iconc_codes;
+	((func_arc_struct_ObjectIntMap_put_java_lang_Object_int) ((void **) nullCheck(ctx, sp[0].o)->vtable)[VTABLE_arc_struct_ObjectIntMap_put_java_lang_Object_int])(ctx, sp[0].o, (((jobject) createStringLiteral(ctx, u8"battery2"_j))), (jint(62018)));
+	LINE_NUMBER(4080);
+	clinit_mindustry_gen_Iconc(ctx);
+	sp[0].o = (jobject)SF_mindustry_gen_Iconc_codeToName;
+	sp[0].o = (jobject)((func_arc_struct_IntMap_put_int_java_lang_Object_R_java_lang_Object) ((void **) nullCheck(ctx, sp[0].o)->vtable)[VTABLE_arc_struct_IntMap_put_int_java_lang_Object_R_java_lang_Object])(ctx, sp[0].o, (jint(62018)), (((jobject) createStringLiteral(ctx, u8"battery2"_j))));
+	LINE_NUMBER(4081);
+	clinit_mindustry_gen_Iconc(ctx);
+	sp[0].o = (jobject)SF_mindustry_gen_Iconc_codes;
+	((func_arc_struct_ObjectIntMap_put_java_lang_Object_int) ((void **) nullCheck(ctx, sp[0].o)->vtable)[VTABLE_arc_struct_ObjectIntMap_put_java_lang_Object_int])(ctx, sp[0].o, (((jobject) createStringLiteral(ctx, u8"battery1"_j))), (jint(62019)));
+	LINE_NUMBER(4082);
+	clinit_mindustry_gen_Iconc(ctx);
+	sp[0].o = (jobject)SF_mindustry_gen_Iconc_codeToName;
+	sp[0].o = (jobject)((func_arc_struct_IntMap_put_int_java_lang_Object_R_java_lang_Object) ((void **) nullCheck(ctx, sp[0].o)->vtable)[VTABLE_arc_struct_IntMap_put_int_java_lang_Object_R_java_lang_Object])(ctx, sp[0].o, (jint(62019)), (((jobject) createStringLiteral(ctx, u8"battery1"_j))));
+	LINE_NUMBER(4083);
+	clinit_mindustry_gen_Iconc(ctx);
+	sp[0].o = (jobject)SF_mindustry_gen_Iconc_codes;
+	((func_arc_struct_ObjectIntMap_put_java_lang_Object_int) ((void **) nullCheck(ctx, sp[0].o)->vtable)[VTABLE_arc_struct_ObjectIntMap_put_java_lang_Object_int])(ctx, sp[0].o, (((jobject) createStringLiteral(ctx, u8"battery0"_j))), (jint(62020)));
+	LINE_NUMBER(4084);
+	clinit_mindustry_gen_Iconc(ctx);
+	sp[0].o = (jobject)SF_mindustry_gen_Iconc_codeToName;
+	sp[0].o = (jobject)((func_arc_struct_IntMap_put_int_java_lang_Object_R_java_lang_Object) ((void **) nullCheck(ctx, sp[0].o)->vtable)[VTABLE_arc_struct_IntMap_put_int_java_lang_Object_R_java_lang_Object])(ctx, sp[0].o, (jint(62020)), (((jobject) createStringLiteral(ctx, u8"battery0"_j))));
+	LINE_NUMBER(4085);
+	clinit_mindustry_gen_Iconc(ctx);
+	sp[0].o = (jobject)SF_mindustry_gen_Iconc_codes;
+	((func_arc_struct_ObjectIntMap_put_java_lang_Object_int) ((void **) nullCheck(ctx, sp[0].o)->vtable)[VTABLE_arc_struct_ObjectIntMap_put_java_lang_Object_int])(ctx, sp[0].o, (((jobject) createStringLiteral(ctx, u8"fileCode"_j))), (jint(61897)));
+	LINE_NUMBER(4086);
+	clinit_mindustry_gen_Iconc(ctx);
+	sp[0].o = (jobject)SF_mindustry_gen_Iconc_codeToName;
+	sp[0].o = (jobject)((func_arc_struct_IntMap_put_int_java_lang_Object_R_java_lang_Object) ((void **) nullCheck(ctx, sp[0].o)->vtable)[VTABLE_arc_struct_IntMap_put_int_java_lang_Object_R_java_lang_Object])(ctx, sp[0].o, (jint(61897)), (((jobject) createStringLiteral(ctx, u8"fileCode"_j))));
+	LINE_NUMBER(4087);
+	clinit_mindustry_gen_Iconc(ctx);
+	sp[0].o = (jobject)SF_mindustry_gen_Iconc_codes;
+	((func_arc_struct_ObjectIntMap_put_java_lang_Object_int) ((void **) nullCheck(ctx, sp[0].o)->vtable)[VTABLE_arc_struct_ObjectIntMap_put_java_lang_Object_int])(ctx, sp[0].o, (((jobject) createStringLiteral(ctx, u8"fileVideo"_j))), (jint(61896)));
+	LINE_NUMBER(4088);
+	clinit_mindustry_gen_Iconc(ctx);
+	sp[0].o = (jobject)SF_mindustry_gen_Iconc_codeToName;
+	sp[0].o = (jobject)((func_arc_struct_IntMap_put_int_java_lang_Object_R_java_lang_Object) ((void **) nullCheck(ctx, sp[0].o)->vtable)[VTABLE_arc_struct_IntMap_put_int_java_lang_Object_R_java_lang_Object])(ctx, sp[0].o, (jint(61896)), (((jobject) createStringLiteral(ctx, u8"fileVideo"_j))));
+	LINE_NUMBER(4089);
+	clinit_mindustry_gen_Iconc(ctx);
+	sp[0].o = (jobject)SF_mindustry_gen_Iconc_codes;
+	((func_arc_struct_ObjectIntMap_put_java_lang_Object_int) ((void **) nullCheck(ctx, sp[0].o)->vtable)[VTABLE_arc_struct_ObjectIntMap_put_java_lang_Object_int])(ctx, sp[0].o, (((jobject) createStringLiteral(ctx, u8"fileArchive"_j))), (jint(61894)));
+	LINE_NUMBER(4090);
+	clinit_mindustry_gen_Iconc(ctx);
+	sp[0].o = (jobject)SF_mindustry_gen_Iconc_codeToName;
+	sp[0].o = (jobject)((func_arc_struct_IntMap_put_int_java_lang_Object_R_java_lang_Object) ((void **) nullCheck(ctx, sp[0].o)->vtable)[VTABLE_arc_struct_IntMap_put_int_java_lang_Object_R_java_lang_Object])(ctx, sp[0].o, (jint(61894)), (((jobject) createStringLiteral(ctx, u8"fileArchive"_j))));
+	LINE_NUMBER(4091);
+	clinit_mindustry_gen_Iconc(ctx);
+	sp[0].o = (jobject)SF_mindustry_gen_Iconc_codes;
+	((func_arc_struct_ObjectIntMap_put_java_lang_Object_int) ((void **) nullCheck(ctx, sp[0].o)->vtable)[VTABLE_arc_struct_ObjectIntMap_put_java_lang_Object_int])(ctx, sp[0].o, (((jobject) createStringLiteral(ctx, u8"folderOpen"_j))), (jint(59438)));
+	LINE_NUMBER(4092);
+	clinit_mindustry_gen_Iconc(ctx);
+	sp[0].o = (jobject)SF_mindustry_gen_Iconc_codeToName;
+	sp[0].o = (jobject)((func_arc_struct_IntMap_put_int_java_lang_Object_R_java_lang_Object) ((void **) nullCheck(ctx, sp[0].o)->vtable)[VTABLE_arc_struct_IntMap_put_int_java_lang_Object_R_java_lang_Object])(ctx, sp[0].o, (jint(59438)), (((jobject) createStringLiteral(ctx, u8"folderOpen"_j))));
+	LINE_NUMBER(4093);
+	clinit_mindustry_gen_Iconc(ctx);
+	sp[0].o = (jobject)SF_mindustry_gen_Iconc_codes;
+	((func_arc_struct_ObjectIntMap_put_java_lang_Object_int) ((void **) nullCheck(ctx, sp[0].o)->vtable)[VTABLE_arc_struct_ObjectIntMap_put_java_lang_Object_int])(ctx, sp[0].o, (((jobject) createStringLiteral(ctx, u8"folderEmpty"_j))), (jint(61716)));
+	LINE_NUMBER(4094);
+	clinit_mindustry_gen_Iconc(ctx);
+	sp[0].o = (jobject)SF_mindustry_gen_Iconc_codeToName;
+	sp[0].o = (jobject)((func_arc_struct_IntMap_put_int_java_lang_Object_R_java_lang_Object) ((void **) nullCheck(ctx, sp[0].o)->vtable)[VTABLE_arc_struct_IntMap_put_int_java_lang_Object_R_java_lang_Object])(ctx, sp[0].o, (jint(61716)), (((jobject) createStringLiteral(ctx, u8"folderEmpty"_j))));
+	LINE_NUMBER(4095);
+	clinit_mindustry_gen_Iconc(ctx);
+	sp[0].o = (jobject)SF_mindustry_gen_Iconc_codes;
+	((func_arc_struct_ObjectIntMap_put_java_lang_Object_int) ((void **) nullCheck(ctx, sp[0].o)->vtable)[VTABLE_arc_struct_ObjectIntMap_put_java_lang_Object_int])(ctx, sp[0].o, (((jobject) createStringLiteral(ctx, u8"folderOpenEmpty"_j))), (jint(61717)));
+	LINE_NUMBER(4096);
+	clinit_mindustry_gen_Iconc(ctx);
+	sp[0].o = (jobject)SF_mindustry_gen_Iconc_codeToName;
+	sp[0].o = (jobject)((func_arc_struct_IntMap_put_int_java_lang_Object_R_java_lang_Object) ((void **) nullCheck(ctx, sp[0].o)->vtable)[VTABLE_arc_struct_IntMap_put_int_java_lang_Object_R_java_lang_Object])(ctx, sp[0].o, (jint(61717)), (((jobject) createStringLiteral(ctx, u8"folderOpenEmpty"_j))));
+	LINE_NUMBER(4097);
+	clinit_mindustry_gen_Iconc(ctx);
+	sp[0].o = (jobject)SF_mindustry_gen_Iconc_codes;
+	((func_arc_struct_ObjectIntMap_put_java_lang_Object_int) ((void **) nullCheck(ctx, sp[0].o)->vtable)[VTABLE_arc_struct_ObjectIntMap_put_java_lang_Object_int])(ctx, sp[0].o, (((jobject) createStringLiteral(ctx, u8"inbox"_j))), (jint(59439)));
+	LINE_NUMBER(4098);
+	clinit_mindustry_gen_Iconc(ctx);
+	sp[0].o = (jobject)SF_mindustry_gen_Iconc_codeToName;
+	sp[0].o = (jobject)((func_arc_struct_IntMap_put_int_java_lang_Object_R_java_lang_Object) ((void **) nullCheck(ctx, sp[0].o)->vtable)[VTABLE_arc_struct_IntMap_put_int_java_lang_Object_R_java_lang_Object])(ctx, sp[0].o, (jint(59439)), (((jobject) createStringLiteral(ctx, u8"inbox"_j))));
+	LINE_NUMBER(4099);
+	clinit_mindustry_gen_Iconc(ctx);
+	sp[0].o = (jobject)SF_mindustry_gen_Iconc_codes;
+	((func_arc_struct_ObjectIntMap_put_java_lang_Object_int) ((void **) nullCheck(ctx, sp[0].o)->vtable)[VTABLE_arc_struct_ObjectIntMap_put_java_lang_Object_int])(ctx, sp[0].o, (((jobject) createStringLiteral(ctx, u8"sitemap"_j))), (jint(61672)));
+	LINE_NUMBER(4100);
+	clinit_mindustry_gen_Iconc(ctx);
+	sp[0].o = (jobject)SF_mindustry_gen_Iconc_codeToName;
+	sp[0].o = (jobject)((func_arc_struct_IntMap_put_int_java_lang_Object_R_java_lang_Object) ((void **) nullCheck(ctx, sp[0].o)->vtable)[VTABLE_arc_struct_IntMap_put_int_java_lang_Object_R_java_lang_Object])(ctx, sp[0].o, (jint(61672)), (((jobject) createStringLiteral(ctx, u8"sitemap"_j))));
+	LINE_NUMBER(4101);
+	clinit_mindustry_gen_Iconc(ctx);
+	sp[0].o = (jobject)SF_mindustry_gen_Iconc_codes;
+	((func_arc_struct_ObjectIntMap_put_java_lang_Object_int) ((void **) nullCheck(ctx, sp[0].o)->vtable)[VTABLE_arc_struct_ObjectIntMap_put_java_lang_Object_int])(ctx, sp[0].o, (((jobject) createStringLiteral(ctx, u8"cloud"_j))), (jint(59441)));
+	LINE_NUMBER(4102);
+	clinit_mindustry_gen_Iconc(ctx);
+	sp[0].o = (jobject)SF_mindustry_gen_Iconc_codeToName;
+	sp[0].o = (jobject)((func_arc_struct_IntMap_put_int_java_lang_Object_R_java_lang_Object) ((void **) nullCheck(ctx, sp[0].o)->vtable)[VTABLE_arc_struct_IntMap_put_int_java_lang_Object_R_java_lang_Object])(ctx, sp[0].o, (jint(59441)), (((jobject) createStringLiteral(ctx, u8"cloud"_j))));
+	LINE_NUMBER(4103);
+	clinit_mindustry_gen_Iconc(ctx);
+	sp[0].o = (jobject)SF_mindustry_gen_Iconc_codes;
+	((func_arc_struct_ObjectIntMap_put_java_lang_Object_int) ((void **) nullCheck(ctx, sp[0].o)->vtable)[VTABLE_arc_struct_ObjectIntMap_put_java_lang_Object_int])(ctx, sp[0].o, (((jobject) createStringLiteral(ctx, u8"uploadCloud"_j))), (jint(61678)));
+	LINE_NUMBER(4104);
+	clinit_mindustry_gen_Iconc(ctx);
+	sp[0].o = (jobject)SF_mindustry_gen_Iconc_codeToName;
+	sp[0].o = (jobject)((func_arc_struct_IntMap_put_int_java_lang_Object_R_java_lang_Object) ((void **) nullCheck(ctx, sp[0].o)->vtable)[VTABLE_arc_struct_IntMap_put_int_java_lang_Object_R_java_lang_Object])(ctx, sp[0].o, (jint(61678)), (((jobject) createStringLiteral(ctx, u8"uploadCloud"_j))));
+	LINE_NUMBER(4105);
+	clinit_mindustry_gen_Iconc(ctx);
+	sp[0].o = (jobject)SF_mindustry_gen_Iconc_codes;
+	((func_arc_struct_ObjectIntMap_put_java_lang_Object_int) ((void **) nullCheck(ctx, sp[0].o)->vtable)[VTABLE_arc_struct_ObjectIntMap_put_java_lang_Object_int])(ctx, sp[0].o, (((jobject) createStringLiteral(ctx, u8"downloadCloud"_j))), (jint(61677)));
+	LINE_NUMBER(4106);
+	clinit_mindustry_gen_Iconc(ctx);
+	sp[0].o = (jobject)SF_mindustry_gen_Iconc_codeToName;
+	sp[0].o = (jobject)((func_arc_struct_IntMap_put_int_java_lang_Object_R_java_lang_Object) ((void **) nullCheck(ctx, sp[0].o)->vtable)[VTABLE_arc_struct_IntMap_put_int_java_lang_Object_R_java_lang_Object])(ctx, sp[0].o, (jint(61677)), (((jobject) createStringLiteral(ctx, u8"downloadCloud"_j))));
+	LINE_NUMBER(4107);
+	clinit_mindustry_gen_Iconc(ctx);
+	sp[0].o = (jobject)SF_mindustry_gen_Iconc_codes;
+	((func_arc_struct_ObjectIntMap_put_java_lang_Object_int) ((void **) nullCheck(ctx, sp[0].o)->vtable)[VTABLE_arc_struct_ObjectIntMap_put_java_lang_Object_int])(ctx, sp[0].o, (((jobject) createStringLiteral(ctx, u8"rain"_j))), (jint(59442)));
+	LINE_NUMBER(4108);
+	clinit_mindustry_gen_Iconc(ctx);
+	sp[0].o = (jobject)SF_mindustry_gen_Iconc_codeToName;
+	sp[0].o = (jobject)((func_arc_struct_IntMap_put_int_java_lang_Object_R_java_lang_Object) ((void **) nullCheck(ctx, sp[0].o)->vtable)[VTABLE_arc_struct_IntMap_put_int_java_lang_Object_R_java_lang_Object])(ctx, sp[0].o, (jint(59442)), (((jobject) createStringLiteral(ctx, u8"rain"_j))));
+	LINE_NUMBER(4109);
+	clinit_mindustry_gen_Iconc(ctx);
+	sp[0].o = (jobject)SF_mindustry_gen_Iconc_codes;
+	((func_arc_struct_ObjectIntMap_put_java_lang_Object_int) ((void **) nullCheck(ctx, sp[0].o)->vtable)[VTABLE_arc_struct_ObjectIntMap_put_java_lang_Object_int])(ctx, sp[0].o, (((jobject) createStringLiteral(ctx, u8"cloudSun"_j))), (jint(59448)));
+	LINE_NUMBER(4110);
+	clinit_mindustry_gen_Iconc(ctx);
+	sp[0].o = (jobject)SF_mindustry_gen_Iconc_codeToName;
+	sp[0].o = (jobject)((func_arc_struct_IntMap_put_int_java_lang_Object_R_java_lang_Object) ((void **) nullCheck(ctx, sp[0].o)->vtable)[VTABLE_arc_struct_IntMap_put_int_java_lang_Object_R_java_lang_Object])(ctx, sp[0].o, (jint(59448)), (((jobject) createStringLiteral(ctx, u8"cloudSun"_j))));
+	LINE_NUMBER(4111);
+	clinit_mindustry_gen_Iconc(ctx);
+	sp[0].o = (jobject)SF_mindustry_gen_Iconc_codes;
+	((func_arc_struct_ObjectIntMap_put_java_lang_Object_int) ((void **) nullCheck(ctx, sp[0].o)->vtable)[VTABLE_arc_struct_ObjectIntMap_put_java_lang_Object_int])(ctx, sp[0].o, (((jobject) createStringLiteral(ctx, u8"drizzle"_j))), (jint(59452)));
+	LINE_NUMBER(4112);
+	clinit_mindustry_gen_Iconc(ctx);
+	sp[0].o = (jobject)SF_mindustry_gen_Iconc_codeToName;
+	sp[0].o = (jobject)((func_arc_struct_IntMap_put_int_java_lang_Object_R_java_lang_Object) ((void **) nullCheck(ctx, sp[0].o)->vtable)[VTABLE_arc_struct_IntMap_put_int_java_lang_Object_R_java_lang_Object])(ctx, sp[0].o, (jint(59452)), (((jobject) createStringLiteral(ctx, u8"drizzle"_j))));
+	LINE_NUMBER(4113);
+	clinit_mindustry_gen_Iconc(ctx);
+	sp[0].o = (jobject)SF_mindustry_gen_Iconc_codes;
+	((func_arc_struct_ObjectIntMap_put_java_lang_Object_int) ((void **) nullCheck(ctx, sp[0].o)->vtable)[VTABLE_arc_struct_ObjectIntMap_put_java_lang_Object_int])(ctx, sp[0].o, (((jobject) createStringLiteral(ctx, u8"cloudFlash"_j))), (jint(59456)));
+	LINE_NUMBER(4114);
+	clinit_mindustry_gen_Iconc(ctx);
+	sp[0].o = (jobject)SF_mindustry_gen_Iconc_codeToName;
+	sp[0].o = (jobject)((func_arc_struct_IntMap_put_int_java_lang_Object_R_java_lang_Object) ((void **) nullCheck(ctx, sp[0].o)->vtable)[VTABLE_arc_struct_IntMap_put_int_java_lang_Object_R_java_lang_Object])(ctx, sp[0].o, (jint(59456)), (((jobject) createStringLiteral(ctx, u8"cloudFlash"_j))));
+	LINE_NUMBER(4115);
+	clinit_mindustry_gen_Iconc(ctx);
+	sp[0].o = (jobject)SF_mindustry_gen_Iconc_codes;
+	((func_arc_struct_ObjectIntMap_put_java_lang_Object_int) ((void **) nullCheck(ctx, sp[0].o)->vtable)[VTABLE_arc_struct_ObjectIntMap_put_java_lang_Object_int])(ctx, sp[0].o, (((jobject) createStringLiteral(ctx, u8"cloudWind"_j))), (jint(59457)));
+	LINE_NUMBER(4116);
+	clinit_mindustry_gen_Iconc(ctx);
+	sp[0].o = (jobject)SF_mindustry_gen_Iconc_codeToName;
+	sp[0].o = (jobject)((func_arc_struct_IntMap_put_int_java_lang_Object_R_java_lang_Object) ((void **) nullCheck(ctx, sp[0].o)->vtable)[VTABLE_arc_struct_IntMap_put_int_java_lang_Object_R_java_lang_Object])(ctx, sp[0].o, (jint(59457)), (((jobject) createStringLiteral(ctx, u8"cloudWind"_j))));
+	LINE_NUMBER(4117);
+	clinit_mindustry_gen_Iconc(ctx);
+	sp[0].o = (jobject)SF_mindustry_gen_Iconc_codes;
+	((func_arc_struct_ObjectIntMap_put_java_lang_Object_int) ((void **) nullCheck(ctx, sp[0].o)->vtable)[VTABLE_arc_struct_ObjectIntMap_put_java_lang_Object_int])(ctx, sp[0].o, (((jobject) createStringLiteral(ctx, u8"box"_j))), (jint(59422)));
+	LINE_NUMBER(4118);
+	clinit_mindustry_gen_Iconc(ctx);
+	sp[0].o = (jobject)SF_mindustry_gen_Iconc_codeToName;
+	sp[0].o = (jobject)((func_arc_struct_IntMap_put_int_java_lang_Object_R_java_lang_Object) ((void **) nullCheck(ctx, sp[0].o)->vtable)[VTABLE_arc_struct_IntMap_put_int_java_lang_Object_R_java_lang_Object])(ctx, sp[0].o, (jint(59422)), (((jobject) createStringLiteral(ctx, u8"box"_j))));
+	LINE_NUMBER(4119);
+	clinit_mindustry_gen_Iconc(ctx);
+	sp[0].o = (jobject)SF_mindustry_gen_Iconc_codes;
+	((func_arc_struct_ObjectIntMap_put_java_lang_Object_int) ((void **) nullCheck(ctx, sp[0].o)->vtable)[VTABLE_arc_struct_ObjectIntMap_put_java_lang_Object_int])(ctx, sp[0].o, (((jobject) createStringLiteral(ctx, u8"chartAlt"_j))), (jint(59459)));
+	LINE_NUMBER(4120);
+	clinit_mindustry_gen_Iconc(ctx);
+	sp[0].o = (jobject)SF_mindustry_gen_Iconc_codeToName;
+	sp[0].o = (jobject)((func_arc_struct_IntMap_put_int_java_lang_Object_R_java_lang_Object) ((void **) nullCheck(ctx, sp[0].o)->vtable)[VTABLE_arc_struct_IntMap_put_int_java_lang_Object_R_java_lang_Object])(ctx, sp[0].o, (jint(59459)), (((jobject) createStringLiteral(ctx, u8"chartAlt"_j))));
+	LINE_NUMBER(4121);
+	popStackFrame(ctx);
+	return;
+	}
+
+	popStackFrame(ctx);
+}
+
+void *vtable_mindustry_gen_Iconc[] {
+	(void *) M_java_lang_Object_hashCode_R_int,
+	(void *) M_java_lang_Object_equals_java_lang_Object_R_boolean,
+	(void *) M_java_lang_Object_clone_R_java_lang_Object,
+	(void *) M_java_lang_Object_getClass_R_java_lang_Class,
+	(void *) M_java_lang_Object_toString_R_java_lang_String,
+	(void *) M_java_lang_Object_finalize,
+	(void *) M_java_lang_Object_notify,
+	(void *) M_java_lang_Object_notifyAll,
+	(void *) M_java_lang_Object_wait,
+	(void *) M_java_lang_Object_wait_long,
+	(void *) M_java_lang_Object_wait_long_int,
+};
+
+static VtableEntry vtableEntries[] {
+	{ "hashCode", "()I" },
+	{ "equals", "(Ljava/lang/Object;)Z" },
+	{ "clone", "()Ljava/lang/Object;" },
+	{ "getClass", "()Ljava/lang/Class;" },
+	{ "toString", "()Ljava/lang/String;" },
+	{ "finalize", "()V" },
+	{ "notify", "()V" },
+	{ "notifyAll", "()V" },
+	{ "wait", "()V" },
+	{ "wait", "(J)V" },
+	{ "wait", "(JI)V" },
+};
+
+static FieldMetadata fields[] {
+	{ "blockSpawn", &class_char, (intptr_t) &SF_mindustry_gen_Iconc_blockSpawn, "C", 25 },
+	{ "blockDeepwater", &class_char, (intptr_t) &SF_mindustry_gen_Iconc_blockDeepwater, "C", 25 },
+	{ "blockShallowWater", &class_char, (intptr_t) &SF_mindustry_gen_Iconc_blockShallowWater, "C", 25 },
+	{ "blockTaintedWater", &class_char, (intptr_t) &SF_mindustry_gen_Iconc_blockTaintedWater, "C", 25 },
+	{ "blockDarksandTaintedWater", &class_char, (intptr_t) &SF_mindustry_gen_Iconc_blockDarksandTaintedWater, "C", 25 },
+	{ "blockSandWater", &class_char, (intptr_t) &SF_mindustry_gen_Iconc_blockSandWater, "C", 25 },
+	{ "blockDarksandWater", &class_char, (intptr_t) &SF_mindustry_gen_Iconc_blockDarksandWater, "C", 25 },
+	{ "blockTar", &class_char, (intptr_t) &SF_mindustry_gen_Iconc_blockTar, "C", 25 },
+	{ "blockStone", &class_char, (intptr_t) &SF_mindustry_gen_Iconc_blockStone, "C", 25 },
+	{ "blockCraters", &class_char, (intptr_t) &SF_mindustry_gen_Iconc_blockCraters, "C", 25 },
+	{ "blockChar", &class_char, (intptr_t) &SF_mindustry_gen_Iconc_blockChar, "C", 25 },
+	{ "blockIgnarock", &class_char, (intptr_t) &SF_mindustry_gen_Iconc_blockIgnarock, "C", 25 },
+	{ "blockHotrock", &class_char, (intptr_t) &SF_mindustry_gen_Iconc_blockHotrock, "C", 25 },
+	{ "blockMagmarock", &class_char, (intptr_t) &SF_mindustry_gen_Iconc_blockMagmarock, "C", 25 },
+	{ "blockSand", &class_char, (intptr_t) &SF_mindustry_gen_Iconc_blockSand, "C", 25 },
+	{ "blockDarksand", &class_char, (intptr_t) &SF_mindustry_gen_Iconc_blockDarksand, "C", 25 },
+	{ "blockGrass", &class_char, (intptr_t) &SF_mindustry_gen_Iconc_blockGrass, "C", 25 },
+	{ "blockSalt", &class_char, (intptr_t) &SF_mindustry_gen_Iconc_blockSalt, "C", 25 },
+	{ "blockSnow", &class_char, (intptr_t) &SF_mindustry_gen_Iconc_blockSnow, "C", 25 },
+	{ "blockIce", &class_char, (intptr_t) &SF_mindustry_gen_Iconc_blockIce, "C", 25 },
+	{ "blockIceSnow", &class_char, (intptr_t) &SF_mindustry_gen_Iconc_blockIceSnow, "C", 25 },
+	{ "blockCliffs", &class_char, (intptr_t) &SF_mindustry_gen_Iconc_blockCliffs, "C", 25 },
+	{ "blockRock", &class_char, (intptr_t) &SF_mindustry_gen_Iconc_blockRock, "C", 25 },
+	{ "blockSnowrock", &class_char, (intptr_t) &SF_mindustry_gen_Iconc_blockSnowrock, "C", 25 },
+	{ "blockSporePine", &class_char, (intptr_t) &SF_mindustry_gen_Iconc_blockSporePine, "C", 25 },
+	{ "blockSnowPine", &class_char, (intptr_t) &SF_mindustry_gen_Iconc_blockSnowPine, "C", 25 },
+	{ "blockPine", &class_char, (intptr_t) &SF_mindustry_gen_Iconc_blockPine, "C", 25 },
+	{ "blockShrubs", &class_char, (intptr_t) &SF_mindustry_gen_Iconc_blockShrubs, "C", 25 },
+	{ "blockWhiteTreeDead", &class_char, (intptr_t) &SF_mindustry_gen_Iconc_blockWhiteTreeDead, "C", 25 },
+	{ "blockWhiteTree", &class_char, (intptr_t) &SF_mindustry_gen_Iconc_blockWhiteTree, "C", 25 },
+	{ "blockSporeCluster", &class_char, (intptr_t) &SF_mindustry_gen_Iconc_blockSporeCluster, "C", 25 },
+	{ "blockShale", &class_char, (intptr_t) &SF_mindustry_gen_Iconc_blockShale, "C", 25 },
+	{ "blockShaleBoulder", &class_char, (intptr_t) &SF_mindustry_gen_Iconc_blockShaleBoulder, "C", 25 },
+	{ "blockSandBoulder", &class_char, (intptr_t) &SF_mindustry_gen_Iconc_blockSandBoulder, "C", 25 },
+	{ "blockMoss", &class_char, (intptr_t) &SF_mindustry_gen_Iconc_blockMoss, "C", 25 },
+	{ "blockSporeMoss", &class_char, (intptr_t) &SF_mindustry_gen_Iconc_blockSporeMoss, "C", 25 },
+	{ "blockMetalFloor", &class_char, (intptr_t) &SF_mindustry_gen_Iconc_blockMetalFloor, "C", 25 },
+	{ "blockMetalFloorDamaged", &class_char, (intptr_t) &SF_mindustry_gen_Iconc_blockMetalFloorDamaged, "C", 25 },
+	{ "blockMetalFloor2", &class_char, (intptr_t) &SF_mindustry_gen_Iconc_blockMetalFloor2, "C", 25 },
+	{ "blockMetalFloor3", &class_char, (intptr_t) &SF_mindustry_gen_Iconc_blockMetalFloor3, "C", 25 },
+	{ "blockMetalFloor5", &class_char, (intptr_t) &SF_mindustry_gen_Iconc_blockMetalFloor5, "C", 25 },
+	{ "blockDarkPanel1", &class_char, (intptr_t) &SF_mindustry_gen_Iconc_blockDarkPanel1, "C", 25 },
+	{ "blockDarkPanel2", &class_char, (intptr_t) &SF_mindustry_gen_Iconc_blockDarkPanel2, "C", 25 },
+	{ "blockDarkPanel3", &class_char, (intptr_t) &SF_mindustry_gen_Iconc_blockDarkPanel3, "C", 25 },
+	{ "blockDarkPanel4", &class_char, (intptr_t) &SF_mindustry_gen_Iconc_blockDarkPanel4, "C", 25 },
+	{ "blockDarkPanel5", &class_char, (intptr_t) &SF_mindustry_gen_Iconc_blockDarkPanel5, "C", 25 },
+	{ "blockDarkPanel6", &class_char, (intptr_t) &SF_mindustry_gen_Iconc_blockDarkPanel6, "C", 25 },
+	{ "blockDarkMetal", &class_char, (intptr_t) &SF_mindustry_gen_Iconc_blockDarkMetal, "C", 25 },
+	{ "blockPebbles", &class_char, (intptr_t) &SF_mindustry_gen_Iconc_blockPebbles, "C", 25 },
+	{ "blockTendrils", &class_char, (intptr_t) &SF_mindustry_gen_Iconc_blockTendrils, "C", 25 },
+	{ "blockOreCopper", &class_char, (intptr_t) &SF_mindustry_gen_Iconc_blockOreCopper, "C", 25 },
+	{ "blockOreLead", &class_char, (intptr_t) &SF_mindustry_gen_Iconc_blockOreLead, "C", 25 },
+	{ "blockOreScrap", &class_char, (intptr_t) &SF_mindustry_gen_Iconc_blockOreScrap, "C", 25 },
+	{ "blockOreCoal", &class_char, (intptr_t) &SF_mindustry_gen_Iconc_blockOreCoal, "C", 25 },
+	{ "blockOreTitanium", &class_char, (intptr_t) &SF_mindustry_gen_Iconc_blockOreTitanium, "C", 25 },
+	{ "blockOreThorium", &class_char, (intptr_t) &SF_mindustry_gen_Iconc_blockOreThorium, "C", 25 },
+	{ "blockGraphitePress", &class_char, (intptr_t) &SF_mindustry_gen_Iconc_blockGraphitePress, "C", 25 },
+	{ "blockMultiPress", &class_char, (intptr_t) &SF_mindustry_gen_Iconc_blockMultiPress, "C", 25 },
+	{ "blockSiliconSmelter", &class_char, (intptr_t) &SF_mindustry_gen_Iconc_blockSiliconSmelter, "C", 25 },
+	{ "blockKiln", &class_char, (intptr_t) &SF_mindustry_gen_Iconc_blockKiln, "C", 25 },
+	{ "blockPlastaniumCompressor", &class_char, (intptr_t) &SF_mindustry_gen_Iconc_blockPlastaniumCompressor, "C", 25 },
+	{ "blockPhaseWeaver", &class_char, (intptr_t) &SF_mindustry_gen_Iconc_blockPhaseWeaver, "C", 25 },
+	{ "blockSurgeSmelter", &class_char, (intptr_t) &SF_mindustry_gen_Iconc_blockSurgeSmelter, "C", 25 },
+	{ "blockCryofluidMixer", &class_char, (intptr_t) &SF_mindustry_gen_Iconc_blockCryofluidMixer, "C", 25 },
+	{ "blockBlastMixer", &class_char, (intptr_t) &SF_mindustry_gen_Iconc_blockBlastMixer, "C", 25 },
+	{ "blockPyratiteMixer", &class_char, (intptr_t) &SF_mindustry_gen_Iconc_blockPyratiteMixer, "C", 25 },
+	{ "blockMelter", &class_char, (intptr_t) &SF_mindustry_gen_Iconc_blockMelter, "C", 25 },
+	{ "blockSeparator", &class_char, (intptr_t) &SF_mindustry_gen_Iconc_blockSeparator, "C", 25 },
+	{ "blockSporePress", &class_char, (intptr_t) &SF_mindustry_gen_Iconc_blockSporePress, "C", 25 },
+	{ "blockPulverizer", &class_char, (intptr_t) &SF_mindustry_gen_Iconc_blockPulverizer, "C", 25 },
+	{ "blockCoalCentrifuge", &class_char, (intptr_t) &SF_mindustry_gen_Iconc_blockCoalCentrifuge, "C", 25 },
+	{ "blockIncinerator", &class_char, (intptr_t) &SF_mindustry_gen_Iconc_blockIncinerator, "C", 25 },
+	{ "blockCopperWall", &class_char, (intptr_t) &SF_mindustry_gen_Iconc_blockCopperWall, "C", 25 },
+	{ "blockCopperWallLarge", &class_char, (intptr_t) &SF_mindustry_gen_Iconc_blockCopperWallLarge, "C", 25 },
+	{ "blockTitaniumWall", &class_char, (intptr_t) &SF_mindustry_gen_Iconc_blockTitaniumWall, "C", 25 },
+	{ "blockTitaniumWallLarge", &class_char, (intptr_t) &SF_mindustry_gen_Iconc_blockTitaniumWallLarge, "C", 25 },
+	{ "blockPlastaniumWall", &class_char, (intptr_t) &SF_mindustry_gen_Iconc_blockPlastaniumWall, "C", 25 },
+	{ "blockPlastaniumWallLarge", &class_char, (intptr_t) &SF_mindustry_gen_Iconc_blockPlastaniumWallLarge, "C", 25 },
+	{ "blockThoriumWall", &class_char, (intptr_t) &SF_mindustry_gen_Iconc_blockThoriumWall, "C", 25 },
+	{ "blockThoriumWallLarge", &class_char, (intptr_t) &SF_mindustry_gen_Iconc_blockThoriumWallLarge, "C", 25 },
+	{ "blockPhaseWall", &class_char, (intptr_t) &SF_mindustry_gen_Iconc_blockPhaseWall, "C", 25 },
+	{ "blockPhaseWallLarge", &class_char, (intptr_t) &SF_mindustry_gen_Iconc_blockPhaseWallLarge, "C", 25 },
+	{ "blockSurgeWall", &class_char, (intptr_t) &SF_mindustry_gen_Iconc_blockSurgeWall, "C", 25 },
+	{ "blockSurgeWallLarge", &class_char, (intptr_t) &SF_mindustry_gen_Iconc_blockSurgeWallLarge, "C", 25 },
+	{ "blockDoor", &class_char, (intptr_t) &SF_mindustry_gen_Iconc_blockDoor, "C", 25 },
+	{ "blockDoorLarge", &class_char, (intptr_t) &SF_mindustry_gen_Iconc_blockDoorLarge, "C", 25 },
+	{ "blockScrapWall", &class_char, (intptr_t) &SF_mindustry_gen_Iconc_blockScrapWall, "C", 25 },
+	{ "blockScrapWallLarge", &class_char, (intptr_t) &SF_mindustry_gen_Iconc_blockScrapWallLarge, "C", 25 },
+	{ "blockScrapWallHuge", &class_char, (intptr_t) &SF_mindustry_gen_Iconc_blockScrapWallHuge, "C", 25 },
+	{ "blockScrapWallGigantic", &class_char, (intptr_t) &SF_mindustry_gen_Iconc_blockScrapWallGigantic, "C", 25 },
+	{ "blockThruster", &class_char, (intptr_t) &SF_mindustry_gen_Iconc_blockThruster, "C", 25 },
+	{ "blockMender", &class_char, (intptr_t) &SF_mindustry_gen_Iconc_blockMender, "C", 25 },
+	{ "blockMendProjector", &class_char, (intptr_t) &SF_mindustry_gen_Iconc_blockMendProjector, "C", 25 },
+	{ "blockOverdriveProjector", &class_char, (intptr_t) &SF_mindustry_gen_Iconc_blockOverdriveProjector, "C", 25 },
+	{ "blockForceProjector", &class_char, (intptr_t) &SF_mindustry_gen_Iconc_blockForceProjector, "C", 25 },
+	{ "blockShockMine", &class_char, (intptr_t) &SF_mindustry_gen_Iconc_blockShockMine, "C", 25 },
+	{ "blockConveyor", &class_char, (intptr_t) &SF_mindustry_gen_Iconc_blockConveyor, "C", 25 },
+	{ "blockTitaniumConveyor", &class_char, (intptr_t) &SF_mindustry_gen_Iconc_blockTitaniumConveyor, "C", 25 },
+	{ "blockArmoredConveyor", &class_char, (intptr_t) &SF_mindustry_gen_Iconc_blockArmoredConveyor, "C", 25 },
+	{ "blockJunction", &class_char, (intptr_t) &SF_mindustry_gen_Iconc_blockJunction, "C", 25 },
+	{ "blockBridgeConveyor", &class_char, (intptr_t) &SF_mindustry_gen_Iconc_blockBridgeConveyor, "C", 25 },
+	{ "blockPhaseConveyor", &class_char, (intptr_t) &SF_mindustry_gen_Iconc_blockPhaseConveyor, "C", 25 },
+	{ "blockSorter", &class_char, (intptr_t) &SF_mindustry_gen_Iconc_blockSorter, "C", 25 },
+	{ "blockInvertedSorter", &class_char, (intptr_t) &SF_mindustry_gen_Iconc_blockInvertedSorter, "C", 25 },
+	{ "blockRouter", &class_char, (intptr_t) &SF_mindustry_gen_Iconc_blockRouter, "C", 25 },
+	{ "blockDistributor", &class_char, (intptr_t) &SF_mindustry_gen_Iconc_blockDistributor, "C", 25 },
+	{ "blockOverflowGate", &class_char, (intptr_t) &SF_mindustry_gen_Iconc_blockOverflowGate, "C", 25 },
+	{ "blockMassDriver", &class_char, (intptr_t) &SF_mindustry_gen_Iconc_blockMassDriver, "C", 25 },
+	{ "blockMechanicalPump", &class_char, (intptr_t) &SF_mindustry_gen_Iconc_blockMechanicalPump, "C", 25 },
+	{ "blockRotaryPump", &class_char, (intptr_t) &SF_mindustry_gen_Iconc_blockRotaryPump, "C", 25 },
+	{ "blockImpulsePump", &class_char, (intptr_t) &SF_mindustry_gen_Iconc_blockImpulsePump, "C", 25 },
+	{ "blockConduit", &class_char, (intptr_t) &SF_mindustry_gen_Iconc_blockConduit, "C", 25 },
+	{ "blockPulseConduit", &class_char, (intptr_t) &SF_mindustry_gen_Iconc_blockPulseConduit, "C", 25 },
+	{ "blockPlatedConduit", &class_char, (intptr_t) &SF_mindustry_gen_Iconc_blockPlatedConduit, "C", 25 },
+	{ "blockLiquidRouter", &class_char, (intptr_t) &SF_mindustry_gen_Iconc_blockLiquidRouter, "C", 25 },
+	{ "blockLiquidTank", &class_char, (intptr_t) &SF_mindustry_gen_Iconc_blockLiquidTank, "C", 25 },
+	{ "blockLiquidJunction", &class_char, (intptr_t) &SF_mindustry_gen_Iconc_blockLiquidJunction, "C", 25 },
+	{ "blockBridgeConduit", &class_char, (intptr_t) &SF_mindustry_gen_Iconc_blockBridgeConduit, "C", 25 },
+	{ "blockPhaseConduit", &class_char, (intptr_t) &SF_mindustry_gen_Iconc_blockPhaseConduit, "C", 25 },
+	{ "blockPowerNode", &class_char, (intptr_t) &SF_mindustry_gen_Iconc_blockPowerNode, "C", 25 },
+	{ "blockPowerNodeLarge", &class_char, (intptr_t) &SF_mindustry_gen_Iconc_blockPowerNodeLarge, "C", 25 },
+	{ "blockSurgeTower", &class_char, (intptr_t) &SF_mindustry_gen_Iconc_blockSurgeTower, "C", 25 },
+	{ "blockDiode", &class_char, (intptr_t) &SF_mindustry_gen_Iconc_blockDiode, "C", 25 },
+	{ "blockBattery", &class_char, (intptr_t) &SF_mindustry_gen_Iconc_blockBattery, "C", 25 },
+	{ "blockBatteryLarge", &class_char, (intptr_t) &SF_mindustry_gen_Iconc_blockBatteryLarge, "C", 25 },
+	{ "blockCombustionGenerator", &class_char, (intptr_t) &SF_mindustry_gen_Iconc_blockCombustionGenerator, "C", 25 },
+	{ "blockThermalGenerator", &class_char, (intptr_t) &SF_mindustry_gen_Iconc_blockThermalGenerator, "C", 25 },
+	{ "blockSteamGenerator", &class_char, (intptr_t) &SF_mindustry_gen_Iconc_blockSteamGenerator, "C", 25 },
+	{ "blockDifferentialGenerator", &class_char, (intptr_t) &SF_mindustry_gen_Iconc_blockDifferentialGenerator, "C", 25 },
+	{ "blockRtgGenerator", &class_char, (intptr_t) &SF_mindustry_gen_Iconc_blockRtgGenerator, "C", 25 },
+	{ "blockSolarPanel", &class_char, (intptr_t) &SF_mindustry_gen_Iconc_blockSolarPanel, "C", 25 },
+	{ "blockSolarPanelLarge", &class_char, (intptr_t) &SF_mindustry_gen_Iconc_blockSolarPanelLarge, "C", 25 },
+	{ "blockThoriumReactor", &class_char, (intptr_t) &SF_mindustry_gen_Iconc_blockThoriumReactor, "C", 25 },
+	{ "blockImpactReactor", &class_char, (intptr_t) &SF_mindustry_gen_Iconc_blockImpactReactor, "C", 25 },
+	{ "blockMechanicalDrill", &class_char, (intptr_t) &SF_mindustry_gen_Iconc_blockMechanicalDrill, "C", 25 },
+	{ "blockPneumaticDrill", &class_char, (intptr_t) &SF_mindustry_gen_Iconc_blockPneumaticDrill, "C", 25 },
+	{ "blockLaserDrill", &class_char, (intptr_t) &SF_mindustry_gen_Iconc_blockLaserDrill, "C", 25 },
+	{ "blockBlastDrill", &class_char, (intptr_t) &SF_mindustry_gen_Iconc_blockBlastDrill, "C", 25 },
+	{ "blockWaterExtractor", &class_char, (intptr_t) &SF_mindustry_gen_Iconc_blockWaterExtractor, "C", 25 },
+	{ "blockCultivator", &class_char, (intptr_t) &SF_mindustry_gen_Iconc_blockCultivator, "C", 25 },
+	{ "blockOilExtractor", &class_char, (intptr_t) &SF_mindustry_gen_Iconc_blockOilExtractor, "C", 25 },
+	{ "blockCoreShard", &class_char, (intptr_t) &SF_mindustry_gen_Iconc_blockCoreShard, "C", 25 },
+	{ "blockCoreFoundation", &class_char, (intptr_t) &SF_mindustry_gen_Iconc_blockCoreFoundation, "C", 25 },
+	{ "blockCoreNucleus", &class_char, (intptr_t) &SF_mindustry_gen_Iconc_blockCoreNucleus, "C", 25 },
+	{ "blockVault", &class_char, (intptr_t) &SF_mindustry_gen_Iconc_blockVault, "C", 25 },
+	{ "blockContainer", &class_char, (intptr_t) &SF_mindustry_gen_Iconc_blockContainer, "C", 25 },
+	{ "blockUnloader", &class_char, (intptr_t) &SF_mindustry_gen_Iconc_blockUnloader, "C", 25 },
+	{ "blockLaunchPad", &class_char, (intptr_t) &SF_mindustry_gen_Iconc_blockLaunchPad, "C", 25 },
+	{ "blockLaunchPadLarge", &class_char, (intptr_t) &SF_mindustry_gen_Iconc_blockLaunchPadLarge, "C", 25 },
+	{ "blockDuo", &class_char, (intptr_t) &SF_mindustry_gen_Iconc_blockDuo, "C", 25 },
+	{ "blockScatter", &class_char, (intptr_t) &SF_mindustry_gen_Iconc_blockScatter, "C", 25 },
+	{ "blockScorch", &class_char, (intptr_t) &SF_mindustry_gen_Iconc_blockScorch, "C", 25 },
+	{ "blockHail", &class_char, (intptr_t) &SF_mindustry_gen_Iconc_blockHail, "C", 25 },
+	{ "blockWave", &class_char, (intptr_t) &SF_mindustry_gen_Iconc_blockWave, "C", 25 },
+	{ "blockLancer", &class_char, (intptr_t) &SF_mindustry_gen_Iconc_blockLancer, "C", 25 },
+	{ "blockArc", &class_char, (intptr_t) &SF_mindustry_gen_Iconc_blockArc, "C", 25 },
+	{ "blockSwarmer", &class_char, (intptr_t) &SF_mindustry_gen_Iconc_blockSwarmer, "C", 25 },
+	{ "blockSalvo", &class_char, (intptr_t) &SF_mindustry_gen_Iconc_blockSalvo, "C", 25 },
+	{ "blockFuse", &class_char, (intptr_t) &SF_mindustry_gen_Iconc_blockFuse, "C", 25 },
+	{ "blockRipple", &class_char, (intptr_t) &SF_mindustry_gen_Iconc_blockRipple, "C", 25 },
+	{ "blockCyclone", &class_char, (intptr_t) &SF_mindustry_gen_Iconc_blockCyclone, "C", 25 },
+	{ "blockSpectre", &class_char, (intptr_t) &SF_mindustry_gen_Iconc_blockSpectre, "C", 25 },
+	{ "blockMeltdown", &class_char, (intptr_t) &SF_mindustry_gen_Iconc_blockMeltdown, "C", 25 },
+	{ "blockDraugFactory", &class_char, (intptr_t) &SF_mindustry_gen_Iconc_blockDraugFactory, "C", 25 },
+	{ "blockSpiritFactory", &class_char, (intptr_t) &SF_mindustry_gen_Iconc_blockSpiritFactory, "C", 25 },
+	{ "blockPhantomFactory", &class_char, (intptr_t) &SF_mindustry_gen_Iconc_blockPhantomFactory, "C", 25 },
+	{ "blockCommandCenter", &class_char, (intptr_t) &SF_mindustry_gen_Iconc_blockCommandCenter, "C", 25 },
+	{ "blockWraithFactory", &class_char, (intptr_t) &SF_mindustry_gen_Iconc_blockWraithFactory, "C", 25 },
+	{ "blockGhoulFactory", &class_char, (intptr_t) &SF_mindustry_gen_Iconc_blockGhoulFactory, "C", 25 },
+	{ "blockRevenantFactory", &class_char, (intptr_t) &SF_mindustry_gen_Iconc_blockRevenantFactory, "C", 25 },
+	{ "blockDaggerFactory", &class_char, (intptr_t) &SF_mindustry_gen_Iconc_blockDaggerFactory, "C", 25 },
+	{ "blockCrawlerFactory", &class_char, (intptr_t) &SF_mindustry_gen_Iconc_blockCrawlerFactory, "C", 25 },
+	{ "blockTitanFactory", &class_char, (intptr_t) &SF_mindustry_gen_Iconc_blockTitanFactory, "C", 25 },
+	{ "blockFortressFactory", &class_char, (intptr_t) &SF_mindustry_gen_Iconc_blockFortressFactory, "C", 25 },
+	{ "blockRepairPoint", &class_char, (intptr_t) &SF_mindustry_gen_Iconc_blockRepairPoint, "C", 25 },
+	{ "blockDartMechPad", &class_char, (intptr_t) &SF_mindustry_gen_Iconc_blockDartMechPad, "C", 25 },
+	{ "blockDeltaMechPad", &class_char, (intptr_t) &SF_mindustry_gen_Iconc_blockDeltaMechPad, "C", 25 },
+	{ "blockTauMechPad", &class_char, (intptr_t) &SF_mindustry_gen_Iconc_blockTauMechPad, "C", 25 },
+	{ "blockOmegaMechPad", &class_char, (intptr_t) &SF_mindustry_gen_Iconc_blockOmegaMechPad, "C", 25 },
+	{ "blockJavelinShipPad", &class_char, (intptr_t) &SF_mindustry_gen_Iconc_blockJavelinShipPad, "C", 25 },
+	{ "blockTridentShipPad", &class_char, (intptr_t) &SF_mindustry_gen_Iconc_blockTridentShipPad, "C", 25 },
+	{ "blockGlaiveShipPad", &class_char, (intptr_t) &SF_mindustry_gen_Iconc_blockGlaiveShipPad, "C", 25 },
+	{ "blockPowerSource", &class_char, (intptr_t) &SF_mindustry_gen_Iconc_blockPowerSource, "C", 25 },
+	{ "blockPowerVoid", &class_char, (intptr_t) &SF_mindustry_gen_Iconc_blockPowerVoid, "C", 25 },
+	{ "blockItemSource", &class_char, (intptr_t) &SF_mindustry_gen_Iconc_blockItemSource, "C", 25 },
+	{ "blockItemVoid", &class_char, (intptr_t) &SF_mindustry_gen_Iconc_blockItemVoid, "C", 25 },
+	{ "blockLiquidSource", &class_char, (intptr_t) &SF_mindustry_gen_Iconc_blockLiquidSource, "C", 25 },
+	{ "blockLiquidVoid", &class_char, (intptr_t) &SF_mindustry_gen_Iconc_blockLiquidVoid, "C", 25 },
+	{ "blockMessage", &class_char, (intptr_t) &SF_mindustry_gen_Iconc_blockMessage, "C", 25 },
+	{ "blockIlluminator", &class_char, (intptr_t) &SF_mindustry_gen_Iconc_blockIlluminator, "C", 25 },
+	{ "itemCopper", &class_char, (intptr_t) &SF_mindustry_gen_Iconc_itemCopper, "C", 25 },
+	{ "itemLead", &class_char, (intptr_t) &SF_mindustry_gen_Iconc_itemLead, "C", 25 },
+	{ "itemMetaglass", &class_char, (intptr_t) &SF_mindustry_gen_Iconc_itemMetaglass, "C", 25 },
+	{ "itemGraphite", &class_char, (intptr_t) &SF_mindustry_gen_Iconc_itemGraphite, "C", 25 },
+	{ "itemSand", &class_char, (intptr_t) &SF_mindustry_gen_Iconc_itemSand, "C", 25 },
+	{ "itemCoal", &class_char, (intptr_t) &SF_mindustry_gen_Iconc_itemCoal, "C", 25 },
+	{ "itemTitanium", &class_char, (intptr_t) &SF_mindustry_gen_Iconc_itemTitanium, "C", 25 },
+	{ "itemThorium", &class_char, (intptr_t) &SF_mindustry_gen_Iconc_itemThorium, "C", 25 },
+	{ "itemScrap", &class_char, (intptr_t) &SF_mindustry_gen_Iconc_itemScrap, "C", 25 },
+	{ "itemSilicon", &class_char, (intptr_t) &SF_mindustry_gen_Iconc_itemSilicon, "C", 25 },
+	{ "itemPlastanium", &class_char, (intptr_t) &SF_mindustry_gen_Iconc_itemPlastanium, "C", 25 },
+	{ "itemPhaseFabric", &class_char, (intptr_t) &SF_mindustry_gen_Iconc_itemPhaseFabric, "C", 25 },
+	{ "itemSurgeAlloy", &class_char, (intptr_t) &SF_mindustry_gen_Iconc_itemSurgeAlloy, "C", 25 },
+	{ "itemSporePod", &class_char, (intptr_t) &SF_mindustry_gen_Iconc_itemSporePod, "C", 25 },
+	{ "itemBlastCompound", &class_char, (intptr_t) &SF_mindustry_gen_Iconc_itemBlastCompound, "C", 25 },
+	{ "itemPyratite", &class_char, (intptr_t) &SF_mindustry_gen_Iconc_itemPyratite, "C", 25 },
+	{ "liquidWater", &class_char, (intptr_t) &SF_mindustry_gen_Iconc_liquidWater, "C", 25 },
+	{ "liquidSlag", &class_char, (intptr_t) &SF_mindustry_gen_Iconc_liquidSlag, "C", 25 },
+	{ "liquidOil", &class_char, (intptr_t) &SF_mindustry_gen_Iconc_liquidOil, "C", 25 },
+	{ "liquidCryofluid", &class_char, (intptr_t) &SF_mindustry_gen_Iconc_liquidCryofluid, "C", 25 },
+	{ "blockUnderflowGate", &class_char, (intptr_t) &SF_mindustry_gen_Iconc_blockUnderflowGate, "C", 25 },
+	{ "blockDartShipPad", &class_char, (intptr_t) &SF_mindustry_gen_Iconc_blockDartShipPad, "C", 25 },
+	{ "blockAlphaMechPad", &class_char, (intptr_t) &SF_mindustry_gen_Iconc_blockAlphaMechPad, "C", 25 },
+	{ "blockCliff", &class_char, (intptr_t) &SF_mindustry_gen_Iconc_blockCliff, "C", 25 },
+	{ "blockLegacyMechPad", &class_char, (intptr_t) &SF_mindustry_gen_Iconc_blockLegacyMechPad, "C", 25 },
+	{ "blockGroundFactory", &class_char, (intptr_t) &SF_mindustry_gen_Iconc_blockGroundFactory, "C", 25 },
+	{ "blockLegacyUnitFactory", &class_char, (intptr_t) &SF_mindustry_gen_Iconc_blockLegacyUnitFactory, "C", 25 },
+	{ "blockMassConveyor", &class_char, (intptr_t) &SF_mindustry_gen_Iconc_blockMassConveyor, "C", 25 },
+	{ "blockLegacyCommandCenter", &class_char, (intptr_t) &SF_mindustry_gen_Iconc_blockLegacyCommandCenter, "C", 25 },
+	{ "blockBlockForge", &class_char, (intptr_t) &SF_mindustry_gen_Iconc_blockBlockForge, "C", 25 },
+	{ "blockBlockLauncher", &class_char, (intptr_t) &SF_mindustry_gen_Iconc_blockBlockLauncher, "C", 25 },
+	{ "blockPlastaniumConveyor", &class_char, (intptr_t) &SF_mindustry_gen_Iconc_blockPlastaniumConveyor, "C", 25 },
+	{ "crater", &class_char, (intptr_t) &SF_mindustry_gen_Iconc_crater, "C", 25 },
+	{ "blockNavalFactory", &class_char, (intptr_t) &SF_mindustry_gen_Iconc_blockNavalFactory, "C", 25 },
+	{ "blockAirFactory", &class_char, (intptr_t) &SF_mindustry_gen_Iconc_blockAirFactory, "C", 25 },
+	{ "blockBasicReconstructor", &class_char, (intptr_t) &SF_mindustry_gen_Iconc_blockBasicReconstructor, "C", 25 },
+	{ "blockBlockLoader", &class_char, (intptr_t) &SF_mindustry_gen_Iconc_blockBlockLoader, "C", 25 },
+	{ "blockBlockUnloader", &class_char, (intptr_t) &SF_mindustry_gen_Iconc_blockBlockUnloader, "C", 25 },
+	{ "blockCoreSilo", &class_char, (intptr_t) &SF_mindustry_gen_Iconc_blockCoreSilo, "C", 25 },
+	{ "blockDataProcessor", &class_char, (intptr_t) &SF_mindustry_gen_Iconc_blockDataProcessor, "C", 25 },
+	{ "blockPayloadRouter", &class_char, (intptr_t) &SF_mindustry_gen_Iconc_blockPayloadRouter, "C", 25 },
+	{ "blockSiliconCrucible", &class_char, (intptr_t) &SF_mindustry_gen_Iconc_blockSiliconCrucible, "C", 25 },
+	{ "blockSegment", &class_char, (intptr_t) &SF_mindustry_gen_Iconc_blockSegment, "C", 25 },
+	{ "blockLargeOverdriveProjector", &class_char, (intptr_t) &SF_mindustry_gen_Iconc_blockLargeOverdriveProjector, "C", 25 },
+	{ "blockDisassembler", &class_char, (intptr_t) &SF_mindustry_gen_Iconc_blockDisassembler, "C", 25 },
+	{ "blockAdditiveReconstructor", &class_char, (intptr_t) &SF_mindustry_gen_Iconc_blockAdditiveReconstructor, "C", 25 },
+	{ "blockMultiplicativeReconstructor", &class_char, (intptr_t) &SF_mindustry_gen_Iconc_blockMultiplicativeReconstructor, "C", 25 },
+	{ "blockExponentialReconstructor", &class_char, (intptr_t) &SF_mindustry_gen_Iconc_blockExponentialReconstructor, "C", 25 },
+	{ "blockTetrativeReconstructor", &class_char, (intptr_t) &SF_mindustry_gen_Iconc_blockTetrativeReconstructor, "C", 25 },
+	{ "blockResupplyPoint", &class_char, (intptr_t) &SF_mindustry_gen_Iconc_blockResupplyPoint, "C", 25 },
+	{ "blockParallax", &class_char, (intptr_t) &SF_mindustry_gen_Iconc_blockParallax, "C", 25 },
+	{ "unitDagger", &class_char, (intptr_t) &SF_mindustry_gen_Iconc_unitDagger, "C", 25 },
+	{ "unitMace", &class_char, (intptr_t) &SF_mindustry_gen_Iconc_unitMace, "C", 25 },
+	{ "unitFortress", &class_char, (intptr_t) &SF_mindustry_gen_Iconc_unitFortress, "C", 25 },
+	{ "unitNova", &class_char, (intptr_t) &SF_mindustry_gen_Iconc_unitNova, "C", 25 },
+	{ "unitPulsar", &class_char, (intptr_t) &SF_mindustry_gen_Iconc_unitPulsar, "C", 25 },
+	{ "unitQuasar", &class_char, (intptr_t) &SF_mindustry_gen_Iconc_unitQuasar, "C", 25 },
+	{ "unitCrawler", &class_char, (intptr_t) &SF_mindustry_gen_Iconc_unitCrawler, "C", 25 },
+	{ "unitAtrax", &class_char, (intptr_t) &SF_mindustry_gen_Iconc_unitAtrax, "C", 25 },
+	{ "unitSpiroct", &class_char, (intptr_t) &SF_mindustry_gen_Iconc_unitSpiroct, "C", 25 },
+	{ "unitArkyid", &class_char, (intptr_t) &SF_mindustry_gen_Iconc_unitArkyid, "C", 25 },
+	{ "unitFlare", &class_char, (intptr_t) &SF_mindustry_gen_Iconc_unitFlare, "C", 25 },
+	{ "unitHorizon", &class_char, (intptr_t) &SF_mindustry_gen_Iconc_unitHorizon, "C", 25 },
+	{ "unitZenith", &class_char, (intptr_t) &SF_mindustry_gen_Iconc_unitZenith, "C", 25 },
+	{ "unitAntumbra", &class_char, (intptr_t) &SF_mindustry_gen_Iconc_unitAntumbra, "C", 25 },
+	{ "unitEclipse", &class_char, (intptr_t) &SF_mindustry_gen_Iconc_unitEclipse, "C", 25 },
+	{ "unitMono", &class_char, (intptr_t) &SF_mindustry_gen_Iconc_unitMono, "C", 25 },
+	{ "unitPoly", &class_char, (intptr_t) &SF_mindustry_gen_Iconc_unitPoly, "C", 25 },
+	{ "unitMega", &class_char, (intptr_t) &SF_mindustry_gen_Iconc_unitMega, "C", 25 },
+	{ "unitRisse", &class_char, (intptr_t) &SF_mindustry_gen_Iconc_unitRisse, "C", 25 },
+	{ "unitMinke", &class_char, (intptr_t) &SF_mindustry_gen_Iconc_unitMinke, "C", 25 },
+	{ "unitBryde", &class_char, (intptr_t) &SF_mindustry_gen_Iconc_unitBryde, "C", 25 },
+	{ "unitAlpha", &class_char, (intptr_t) &SF_mindustry_gen_Iconc_unitAlpha, "C", 25 },
+	{ "unitBeta", &class_char, (intptr_t) &SF_mindustry_gen_Iconc_unitBeta, "C", 25 },
+	{ "unitGamma", &class_char, (intptr_t) &SF_mindustry_gen_Iconc_unitGamma, "C", 25 },
+	{ "unitBlock", &class_char, (intptr_t) &SF_mindustry_gen_Iconc_unitBlock, "C", 25 },
+	{ "unitRisso", &class_char, (intptr_t) &SF_mindustry_gen_Iconc_unitRisso, "C", 25 },
+	{ "blockOverdriveDome", &class_char, (intptr_t) &SF_mindustry_gen_Iconc_blockOverdriveDome, "C", 25 },
+	{ "blockLogicProcessor", &class_char, (intptr_t) &SF_mindustry_gen_Iconc_blockLogicProcessor, "C", 25 },
+	{ "blockMicroProcessor", &class_char, (intptr_t) &SF_mindustry_gen_Iconc_blockMicroProcessor, "C", 25 },
+	{ "blockLogicDisplay", &class_char, (intptr_t) &SF_mindustry_gen_Iconc_blockLogicDisplay, "C", 25 },
+	{ "blockSwitch", &class_char, (intptr_t) &SF_mindustry_gen_Iconc_blockSwitch, "C", 25 },
+	{ "blockMemoryCell", &class_char, (intptr_t) &SF_mindustry_gen_Iconc_blockMemoryCell, "C", 25 },
+	{ "blockPayloadConveyor", &class_char, (intptr_t) &SF_mindustry_gen_Iconc_blockPayloadConveyor, "C", 25 },
+	{ "blockHyperProcessor", &class_char, (intptr_t) &SF_mindustry_gen_Iconc_blockHyperProcessor, "C", 25 },
+	{ "unitToxopid", &class_char, (intptr_t) &SF_mindustry_gen_Iconc_unitToxopid, "C", 25 },
+	{ "unitVestige", &class_char, (intptr_t) &SF_mindustry_gen_Iconc_unitVestige, "C", 25 },
+	{ "unitCataclyst", &class_char, (intptr_t) &SF_mindustry_gen_Iconc_unitCataclyst, "C", 25 },
+	{ "unitScepter", &class_char, (intptr_t) &SF_mindustry_gen_Iconc_unitScepter, "C", 25 },
+	{ "unitReign", &class_char, (intptr_t) &SF_mindustry_gen_Iconc_unitReign, "C", 25 },
+	{ "blockDirt", &class_char, (intptr_t) &SF_mindustry_gen_Iconc_blockDirt, "C", 25 },
+	{ "blockStoneWall", &class_char, (intptr_t) &SF_mindustry_gen_Iconc_blockStoneWall, "C", 25 },
+	{ "blockSporeWall", &class_char, (intptr_t) &SF_mindustry_gen_Iconc_blockSporeWall, "C", 25 },
+	{ "blockIceWall", &class_char, (intptr_t) &SF_mindustry_gen_Iconc_blockIceWall, "C", 25 },
+	{ "blockSnowWall", &class_char, (intptr_t) &SF_mindustry_gen_Iconc_blockSnowWall, "C", 25 },
+	{ "blockDuneWall", &class_char, (intptr_t) &SF_mindustry_gen_Iconc_blockDuneWall, "C", 25 },
+	{ "blockSandWall", &class_char, (intptr_t) &SF_mindustry_gen_Iconc_blockSandWall, "C", 25 },
+	{ "blockSaltWall", &class_char, (intptr_t) &SF_mindustry_gen_Iconc_blockSaltWall, "C", 25 },
+	{ "blockShaleWall", &class_char, (intptr_t) &SF_mindustry_gen_Iconc_blockShaleWall, "C", 25 },
+	{ "blockDirtWall", &class_char, (intptr_t) &SF_mindustry_gen_Iconc_blockDirtWall, "C", 25 },
+	{ "blockBasalt", &class_char, (intptr_t) &SF_mindustry_gen_Iconc_blockBasalt, "C", 25 },
+	{ "blockDacite", &class_char, (intptr_t) &SF_mindustry_gen_Iconc_blockDacite, "C", 25 },
+	{ "blockBoulder", &class_char, (intptr_t) &SF_mindustry_gen_Iconc_blockBoulder, "C", 25 },
+	{ "blockSnowBoulder", &class_char, (intptr_t) &SF_mindustry_gen_Iconc_blockSnowBoulder, "C", 25 },
+	{ "blockDaciteWall", &class_char, (intptr_t) &SF_mindustry_gen_Iconc_blockDaciteWall, "C", 25 },
+	{ "blockDaciteBoulder", &class_char, (intptr_t) &SF_mindustry_gen_Iconc_blockDaciteBoulder, "C", 25 },
+	{ "blockLargeLogicDisplay", &class_char, (intptr_t) &SF_mindustry_gen_Iconc_blockLargeLogicDisplay, "C", 25 },
+	{ "unitOmura", &class_char, (intptr_t) &SF_mindustry_gen_Iconc_unitOmura, "C", 25 },
+	{ "blockMud", &class_char, (intptr_t) &SF_mindustry_gen_Iconc_blockMud, "C", 25 },
+	{ "unitSei", &class_char, (intptr_t) &SF_mindustry_gen_Iconc_unitSei, "C", 25 },
+	{ "unitQuad", &class_char, (intptr_t) &SF_mindustry_gen_Iconc_unitQuad, "C", 25 },
+	{ "unitOct", &class_char, (intptr_t) &SF_mindustry_gen_Iconc_unitOct, "C", 25 },
+	{ "unitVela", &class_char, (intptr_t) &SF_mindustry_gen_Iconc_unitVela, "C", 25 },
+	{ "unitCorvus", &class_char, (intptr_t) &SF_mindustry_gen_Iconc_unitCorvus, "C", 25 },
+	{ "blockMemoryBank", &class_char, (intptr_t) &SF_mindustry_gen_Iconc_blockMemoryBank, "C", 25 },
+	{ "blockForeshadow", &class_char, (intptr_t) &SF_mindustry_gen_Iconc_blockForeshadow, "C", 25 },
+	{ "blockTsunami", &class_char, (intptr_t) &SF_mindustry_gen_Iconc_blockTsunami, "C", 25 },
+	{ "blockSpace", &class_char, (intptr_t) &SF_mindustry_gen_Iconc_blockSpace, "C", 25 },
+	{ "blockLegacyUnitFactoryAir", &class_char, (intptr_t) &SF_mindustry_gen_Iconc_blockLegacyUnitFactoryAir, "C", 25 },
+	{ "blockLegacyUnitFactoryGround", &class_char, (intptr_t) &SF_mindustry_gen_Iconc_blockLegacyUnitFactoryGround, "C", 25 },
+	{ "blockInterplanetaryAccelerator", &class_char, (intptr_t) &SF_mindustry_gen_Iconc_blockInterplanetaryAccelerator, "C", 25 },
+	{ "blockBasaltBoulder", &class_char, (intptr_t) &SF_mindustry_gen_Iconc_blockBasaltBoulder, "C", 25 },
+	{ "statusNone", &class_char, (intptr_t) &SF_mindustry_gen_Iconc_statusNone, "C", 25 },
+	{ "statusBurning", &class_char, (intptr_t) &SF_mindustry_gen_Iconc_statusBurning, "C", 25 },
+	{ "statusFreezing", &class_char, (intptr_t) &SF_mindustry_gen_Iconc_statusFreezing, "C", 25 },
+	{ "statusUnmoving", &class_char, (intptr_t) &SF_mindustry_gen_Iconc_statusUnmoving, "C", 25 },
+	{ "statusSlow", &class_char, (intptr_t) &SF_mindustry_gen_Iconc_statusSlow, "C", 25 },
+	{ "statusWet", &class_char, (intptr_t) &SF_mindustry_gen_Iconc_statusWet, "C", 25 },
+	{ "statusMuddy", &class_char, (intptr_t) &SF_mindustry_gen_Iconc_statusMuddy, "C", 25 },
+	{ "statusMelting", &class_char, (intptr_t) &SF_mindustry_gen_Iconc_statusMelting, "C", 25 },
+	{ "statusSapped", &class_char, (intptr_t) &SF_mindustry_gen_Iconc_statusSapped, "C", 25 },
+	{ "statusSporeSlowed", &class_char, (intptr_t) &SF_mindustry_gen_Iconc_statusSporeSlowed, "C", 25 },
+	{ "statusTarred", &class_char, (intptr_t) &SF_mindustry_gen_Iconc_statusTarred, "C", 25 },
+	{ "statusOverdrive", &class_char, (intptr_t) &SF_mindustry_gen_Iconc_statusOverdrive, "C", 25 },
+	{ "statusOverclock", &class_char, (intptr_t) &SF_mindustry_gen_Iconc_statusOverclock, "C", 25 },
+	{ "statusShielded", &class_char, (intptr_t) &SF_mindustry_gen_Iconc_statusShielded, "C", 25 },
+	{ "statusBoss", &class_char, (intptr_t) &SF_mindustry_gen_Iconc_statusBoss, "C", 25 },
+	{ "statusShocked", &class_char, (intptr_t) &SF_mindustry_gen_Iconc_statusShocked, "C", 25 },
+	{ "statusBlasted", &class_char, (intptr_t) &SF_mindustry_gen_Iconc_statusBlasted, "C", 25 },
+	{ "statusCorroded", &class_char, (intptr_t) &SF_mindustry_gen_Iconc_statusCorroded, "C", 25 },
+	{ "statusDisarmed", &class_char, (intptr_t) &SF_mindustry_gen_Iconc_statusDisarmed, "C", 25 },
+	{ "blockDuct", &class_char, (intptr_t) &SF_mindustry_gen_Iconc_blockDuct, "C", 25 },
+	{ "blockRepairTurret", &class_char, (intptr_t) &SF_mindustry_gen_Iconc_blockRepairTurret, "C", 25 },
+	{ "blockPayloadIncinerator", &class_char, (intptr_t) &SF_mindustry_gen_Iconc_blockPayloadIncinerator, "C", 25 },
+	{ "blockPayloadVoid", &class_char, (intptr_t) &SF_mindustry_gen_Iconc_blockPayloadVoid, "C", 25 },
+	{ "blockPayloadSource", &class_char, (intptr_t) &SF_mindustry_gen_Iconc_blockPayloadSource, "C", 25 },
+	{ "unitRetusa", &class_char, (intptr_t) &SF_mindustry_gen_Iconc_unitRetusa, "C", 25 },
+	{ "blockDuctRouter", &class_char, (intptr_t) &SF_mindustry_gen_Iconc_blockDuctRouter, "C", 25 },
+	{ "blockDuctBridge", &class_char, (intptr_t) &SF_mindustry_gen_Iconc_blockDuctBridge, "C", 25 },
+	{ "unitOxynoe", &class_char, (intptr_t) &SF_mindustry_gen_Iconc_unitOxynoe, "C", 25 },
+	{ "unitCyerce", &class_char, (intptr_t) &SF_mindustry_gen_Iconc_unitCyerce, "C", 25 },
+	{ "unitAegires", &class_char, (intptr_t) &SF_mindustry_gen_Iconc_unitAegires, "C", 25 },
+	{ "statusElectrified", &class_char, (intptr_t) &SF_mindustry_gen_Iconc_statusElectrified, "C", 25 },
+	{ "unitNavanax", &class_char, (intptr_t) &SF_mindustry_gen_Iconc_unitNavanax, "C", 25 },
+	{ "blockSiliconArcFurnace", &class_char, (intptr_t) &SF_mindustry_gen_Iconc_blockSiliconArcFurnace, "C", 25 },
+	{ "blockMetalFloor4", &class_char, (intptr_t) &SF_mindustry_gen_Iconc_blockMetalFloor4, "C", 25 },
+	{ "statusInvincible", &class_char, (intptr_t) &SF_mindustry_gen_Iconc_statusInvincible, "C", 25 },
+	{ "teamSharded", &class_char, (intptr_t) &SF_mindustry_gen_Iconc_teamSharded, "C", 25 },
+	{ "teamCrux", &class_char, (intptr_t) &SF_mindustry_gen_Iconc_teamCrux, "C", 25 },
+	{ "teamDerelict", &class_char, (intptr_t) &SF_mindustry_gen_Iconc_teamDerelict, "C", 25 },
+	{ "blockDeepWater", &class_char, (intptr_t) &SF_mindustry_gen_Iconc_blockDeepWater, "C", 25 },
+	{ "blockMoltenSlag", &class_char, (intptr_t) &SF_mindustry_gen_Iconc_blockMoltenSlag, "C", 25 },
+	{ "blockCraterStone", &class_char, (intptr_t) &SF_mindustry_gen_Iconc_blockCraterStone, "C", 25 },
+	{ "blockDeepTaintedWater", &class_char, (intptr_t) &SF_mindustry_gen_Iconc_blockDeepTaintedWater, "C", 25 },
+	{ "blockPooledCryofluid", &class_char, (intptr_t) &SF_mindustry_gen_Iconc_blockPooledCryofluid, "C", 25 },
+	{ "blockEmpty", &class_char, (intptr_t) &SF_mindustry_gen_Iconc_blockEmpty, "C", 25 },
+	{ "blockLiquidContainer", &class_char, (intptr_t) &SF_mindustry_gen_Iconc_blockLiquidContainer, "C", 25 },
+	{ "blockDeconstructor", &class_char, (intptr_t) &SF_mindustry_gen_Iconc_blockDeconstructor, "C", 25 },
+	{ "blockConstructor", &class_char, (intptr_t) &SF_mindustry_gen_Iconc_blockConstructor, "C", 25 },
+	{ "blockLargeConstructor", &class_char, (intptr_t) &SF_mindustry_gen_Iconc_blockLargeConstructor, "C", 25 },
+	{ "blockPayloadLoader", &class_char, (intptr_t) &SF_mindustry_gen_Iconc_blockPayloadLoader, "C", 25 },
+	{ "blockPayloadUnloader", &class_char, (intptr_t) &SF_mindustry_gen_Iconc_blockPayloadUnloader, "C", 25 },
+	{ "blockRhyolite", &class_char, (intptr_t) &SF_mindustry_gen_Iconc_blockRhyolite, "C", 25 },
+	{ "blockRhyoliteCrater", &class_char, (intptr_t) &SF_mindustry_gen_Iconc_blockRhyoliteCrater, "C", 25 },
+	{ "blockRegolith", &class_char, (intptr_t) &SF_mindustry_gen_Iconc_blockRegolith, "C", 25 },
+	{ "blockYellowStone", &class_char, (intptr_t) &SF_mindustry_gen_Iconc_blockYellowStone, "C", 25 },
+	{ "blockCarbonStone", &class_char, (intptr_t) &SF_mindustry_gen_Iconc_blockCarbonStone, "C", 25 },
+	{ "blockFerricStone", &class_char, (intptr_t) &SF_mindustry_gen_Iconc_blockFerricStone, "C", 25 },
+	{ "blockFerricCraters", &class_char, (intptr_t) &SF_mindustry_gen_Iconc_blockFerricCraters, "C", 25 },
+	{ "blockBeryllicStone", &class_char, (intptr_t) &SF_mindustry_gen_Iconc_blockBeryllicStone, "C", 25 },
+	{ "blockRedIce", &class_char, (intptr_t) &SF_mindustry_gen_Iconc_blockRedIce, "C", 25 },
+	{ "blockRedmat", &class_char, (intptr_t) &SF_mindustry_gen_Iconc_blockRedmat, "C", 25 },
+	{ "blockBluemat", &class_char, (intptr_t) &SF_mindustry_gen_Iconc_blockBluemat, "C", 25 },
+	{ "blockRegolithWall", &class_char, (intptr_t) &SF_mindustry_gen_Iconc_blockRegolithWall, "C", 25 },
+	{ "blockYellowStoneWall", &class_char, (intptr_t) &SF_mindustry_gen_Iconc_blockYellowStoneWall, "C", 25 },
+	{ "blockRhyoliteWall", &class_char, (intptr_t) &SF_mindustry_gen_Iconc_blockRhyoliteWall, "C", 25 },
+	{ "blockCarbonWall", &class_char, (intptr_t) &SF_mindustry_gen_Iconc_blockCarbonWall, "C", 25 },
+	{ "blockFerricStoneWall", &class_char, (intptr_t) &SF_mindustry_gen_Iconc_blockFerricStoneWall, "C", 25 },
+	{ "blockBeryllicStoneWall", &class_char, (intptr_t) &SF_mindustry_gen_Iconc_blockBeryllicStoneWall, "C", 25 },
+	{ "blockRedIceWall", &class_char, (intptr_t) &SF_mindustry_gen_Iconc_blockRedIceWall, "C", 25 },
+	{ "blockRedweed", &class_char, (intptr_t) &SF_mindustry_gen_Iconc_blockRedweed, "C", 25 },
+	{ "blockPurBush", &class_char, (intptr_t) &SF_mindustry_gen_Iconc_blockPurBush, "C", 25 },
+	{ "blockYellowcoral", &class_char, (intptr_t) &SF_mindustry_gen_Iconc_blockYellowcoral, "C", 25 },
+	{ "blockCarbonBoulder", &class_char, (intptr_t) &SF_mindustry_gen_Iconc_blockCarbonBoulder, "C", 25 },
+	{ "blockFerricBoulder", &class_char, (intptr_t) &SF_mindustry_gen_Iconc_blockFerricBoulder, "C", 25 },
+	{ "blockBeryllicBoulder", &class_char, (intptr_t) &SF_mindustry_gen_Iconc_blockBeryllicBoulder, "C", 25 },
+	{ "blockWallOreBeryllium", &class_char, (intptr_t) &SF_mindustry_gen_Iconc_blockWallOreBeryllium, "C", 25 },
+	{ "blockGraphiticWall", &class_char, (intptr_t) &SF_mindustry_gen_Iconc_blockGraphiticWall, "C", 25 },
+	{ "blockCellSynthesisChamber", &class_char, (intptr_t) &SF_mindustry_gen_Iconc_blockCellSynthesisChamber, "C", 25 },
+	{ "blockCliffCrusher", &class_char, (intptr_t) &SF_mindustry_gen_Iconc_blockCliffCrusher, "C", 25 },
+	{ "blockBeamDrill", &class_char, (intptr_t) &SF_mindustry_gen_Iconc_blockBeamDrill, "C", 25 },
+	{ "blockNuclearWarhead", &class_char, (intptr_t) &SF_mindustry_gen_Iconc_blockNuclearWarhead, "C", 25 },
+	{ "blockWarheadAssembler", &class_char, (intptr_t) &SF_mindustry_gen_Iconc_blockWarheadAssembler, "C", 25 },
+	{ "blockBallisticSilo", &class_char, (intptr_t) &SF_mindustry_gen_Iconc_blockBallisticSilo, "C", 25 },
+	{ "itemBeryllium", &class_char, (intptr_t) &SF_mindustry_gen_Iconc_itemBeryllium, "C", 25 },
+	{ "itemFissileMatter", &class_char, (intptr_t) &SF_mindustry_gen_Iconc_itemFissileMatter, "C", 25 },
+	{ "itemDormantCyst", &class_char, (intptr_t) &SF_mindustry_gen_Iconc_itemDormantCyst, "C", 25 },
+	{ "liquidNeoplasm", &class_char, (intptr_t) &SF_mindustry_gen_Iconc_liquidNeoplasm, "C", 25 },
+	{ "blockPlasmaBore", &class_char, (intptr_t) &SF_mindustry_gen_Iconc_blockPlasmaBore, "C", 25 },
+	{ "blockSteamVent", &class_char, (intptr_t) &SF_mindustry_gen_Iconc_blockSteamVent, "C", 25 },
+	{ "blockPressureTurbine", &class_char, (intptr_t) &SF_mindustry_gen_Iconc_blockPressureTurbine, "C", 25 },
+	{ "blockTurbineCondenser", &class_char, (intptr_t) &SF_mindustry_gen_Iconc_blockTurbineCondenser, "C", 25 },
+	{ "blockBeamNode", &class_char, (intptr_t) &SF_mindustry_gen_Iconc_blockBeamNode, "C", 25 },
+	{ "blockBeamTower", &class_char, (intptr_t) &SF_mindustry_gen_Iconc_blockBeamTower, "C", 25 },
+	{ "blockBuildTower", &class_char, (intptr_t) &SF_mindustry_gen_Iconc_blockBuildTower, "C", 25 },
+	{ "itemTungsten", &class_char, (intptr_t) &SF_mindustry_gen_Iconc_itemTungsten, "C", 25 },
+	{ "blockOreTungsten", &class_char, (intptr_t) &SF_mindustry_gen_Iconc_blockOreTungsten, "C", 25 },
+	{ "blockImpactDrill", &class_char, (intptr_t) &SF_mindustry_gen_Iconc_blockImpactDrill, "C", 25 },
+	{ "itemCarbide", &class_char, (intptr_t) &SF_mindustry_gen_Iconc_itemCarbide, "C", 25 },
+	{ "unitEvoke", &class_char, (intptr_t) &SF_mindustry_gen_Iconc_unitEvoke, "C", 25 },
+	{ "blockCarbideCrucible", &class_char, (intptr_t) &SF_mindustry_gen_Iconc_blockCarbideCrucible, "C", 25 },
+	{ "blockSurgeDuct", &class_char, (intptr_t) &SF_mindustry_gen_Iconc_blockSurgeDuct, "C", 25 },
+	{ "blockSurgeConveyor", &class_char, (intptr_t) &SF_mindustry_gen_Iconc_blockSurgeConveyor, "C", 25 },
+	{ "blockDuctUnloader", &class_char, (intptr_t) &SF_mindustry_gen_Iconc_blockDuctUnloader, "C", 25 },
+	{ "blockSurgeRouter", &class_char, (intptr_t) &SF_mindustry_gen_Iconc_blockSurgeRouter, "C", 25 },
+	{ "blockReinforcedConduit", &class_char, (intptr_t) &SF_mindustry_gen_Iconc_blockReinforcedConduit, "C", 25 },
+	{ "blockReinforcedLiquidRouter", &class_char, (intptr_t) &SF_mindustry_gen_Iconc_blockReinforcedLiquidRouter, "C", 25 },
+	{ "blockReinforcedLiquidContainer", &class_char, (intptr_t) &SF_mindustry_gen_Iconc_blockReinforcedLiquidContainer, "C", 25 },
+	{ "blockReinforcedLiquidTank", &class_char, (intptr_t) &SF_mindustry_gen_Iconc_blockReinforcedLiquidTank, "C", 25 },
+	{ "blockReinforcedBridgeConduit", &class_char, (intptr_t) &SF_mindustry_gen_Iconc_blockReinforcedBridgeConduit, "C", 25 },
+	{ "blockCoreCitadel", &class_char, (intptr_t) &SF_mindustry_gen_Iconc_blockCoreCitadel, "C", 25 },
+	{ "blockCoreAcropolis", &class_char, (intptr_t) &SF_mindustry_gen_Iconc_blockCoreAcropolis, "C", 25 },
+	{ "blockHeatReactor", &class_char, (intptr_t) &SF_mindustry_gen_Iconc_blockHeatReactor, "C", 25 },
+	{ "blockCoreBastion", &class_char, (intptr_t) &SF_mindustry_gen_Iconc_blockCoreBastion, "C", 25 },
+	{ "unitIncite", &class_char, (intptr_t) &SF_mindustry_gen_Iconc_unitIncite, "C", 25 },
+	{ "blockOxidizer", &class_char, (intptr_t) &SF_mindustry_gen_Iconc_blockOxidizer, "C", 25 },
+	{ "blockReinforcedPump", &class_char, (intptr_t) &SF_mindustry_gen_Iconc_blockReinforcedPump, "C", 25 },
+	{ "itemOxide", &class_char, (intptr_t) &SF_mindustry_gen_Iconc_itemOxide, "C", 25 },
+	{ "liquidOxygen", &class_char, (intptr_t) &SF_mindustry_gen_Iconc_liquidOxygen, "C", 25 },
+	{ "liquidHydrogen", &class_char, (intptr_t) &SF_mindustry_gen_Iconc_liquidHydrogen, "C", 25 },
+	{ "blockElectrolyzer", &class_char, (intptr_t) &SF_mindustry_gen_Iconc_blockElectrolyzer, "C", 25 },
+	{ "liquidOzone", &class_char, (intptr_t) &SF_mindustry_gen_Iconc_liquidOzone, "C", 25 },
+	{ "blockReinforcedLiquidJunction", &class_char, (intptr_t) &SF_mindustry_gen_Iconc_blockReinforcedLiquidJunction, "C", 25 },
+	{ "blockOxidationChamber", &class_char, (intptr_t) &SF_mindustry_gen_Iconc_blockOxidationChamber, "C", 25 },
+	{ "blockSurgeCrucible", &class_char, (intptr_t) &SF_mindustry_gen_Iconc_blockSurgeCrucible, "C", 25 },
+	{ "unitEmanate", &class_char, (intptr_t) &SF_mindustry_gen_Iconc_unitEmanate, "C", 25 },
+	{ "blockOverflowDuct", &class_char, (intptr_t) &SF_mindustry_gen_Iconc_blockOverflowDuct, "C", 25 },
+	{ "blockLargePlasmaBore", &class_char, (intptr_t) &SF_mindustry_gen_Iconc_blockLargePlasmaBore, "C", 25 },
+	{ "blockCyanogenSynthesizer", &class_char, (intptr_t) &SF_mindustry_gen_Iconc_blockCyanogenSynthesizer, "C", 25 },
+	{ "liquidCyanogen", &class_char, (intptr_t) &SF_mindustry_gen_Iconc_liquidCyanogen, "C", 25 },
+	{ "liquidGallium", &class_char, (intptr_t) &SF_mindustry_gen_Iconc_liquidGallium, "C", 25 },
+	{ "blockSlagCentrifuge", &class_char, (intptr_t) &SF_mindustry_gen_Iconc_blockSlagCentrifuge, "C", 25 },
+	{ "blockSlagIncinerator", &class_char, (intptr_t) &SF_mindustry_gen_Iconc_blockSlagIncinerator, "C", 25 },
+	{ "blockPhaseSynthesizer", &class_char, (intptr_t) &SF_mindustry_gen_Iconc_blockPhaseSynthesizer, "C", 25 },
+	{ "blockSublimate", &class_char, (intptr_t) &SF_mindustry_gen_Iconc_blockSublimate, "C", 25 },
+	{ "blockReinforcedContainer", &class_char, (intptr_t) &SF_mindustry_gen_Iconc_blockReinforcedContainer, "C", 25 },
+	{ "blockReinforcedVault", &class_char, (intptr_t) &SF_mindustry_gen_Iconc_blockReinforcedVault, "C", 25 },
+	{ "liquidNitrogen", &class_char, (intptr_t) &SF_mindustry_gen_Iconc_liquidNitrogen, "C", 25 },
+	{ "blockAtmosphericConcentrator", &class_char, (intptr_t) &SF_mindustry_gen_Iconc_blockAtmosphericConcentrator, "C", 25 },
+	{ "blockUnitCargoLoader", &class_char, (intptr_t) &SF_mindustry_gen_Iconc_blockUnitCargoLoader, "C", 25 },
+	{ "blockUnitCargoUnloadPoint", &class_char, (intptr_t) &SF_mindustry_gen_Iconc_blockUnitCargoUnloadPoint, "C", 25 },
+	{ "unitManifold", &class_char, (intptr_t) &SF_mindustry_gen_Iconc_unitManifold, "C", 25 },
+	{ "blockArkyciteFloor", &class_char, (intptr_t) &SF_mindustry_gen_Iconc_blockArkyciteFloor, "C", 25 },
+	{ "liquidArkycite", &class_char, (intptr_t) &SF_mindustry_gen_Iconc_liquidArkycite, "C", 25 },
+	{ "blockChemicalCombustionChamber", &class_char, (intptr_t) &SF_mindustry_gen_Iconc_blockChemicalCombustionChamber, "C", 25 },
+	{ "blockArkyicStone", &class_char, (intptr_t) &SF_mindustry_gen_Iconc_blockArkyicStone, "C", 25 },
+	{ "blockYellowStoneBoulder", &class_char, (intptr_t) &SF_mindustry_gen_Iconc_blockYellowStoneBoulder, "C", 25 },
+	{ "blockPyrolysisGenerator", &class_char, (intptr_t) &SF_mindustry_gen_Iconc_blockPyrolysisGenerator, "C", 25 },
+	{ "blockWallOreTungsten", &class_char, (intptr_t) &SF_mindustry_gen_Iconc_blockWallOreTungsten, "C", 25 },
+	{ "blockRegenProjector", &class_char, (intptr_t) &SF_mindustry_gen_Iconc_blockRegenProjector, "C", 25 },
+	{ "blockTitan", &class_char, (intptr_t) &SF_mindustry_gen_Iconc_blockTitan, "C", 25 },
+	{ "blockSmallDeconstructor", &class_char, (intptr_t) &SF_mindustry_gen_Iconc_blockSmallDeconstructor, "C", 25 },
+	{ "blockBarrierProjector", &class_char, (intptr_t) &SF_mindustry_gen_Iconc_blockBarrierProjector, "C", 25 },
+	{ "blockVentCondenser", &class_char, (intptr_t) &SF_mindustry_gen_Iconc_blockVentCondenser, "C", 25 },
+	{ "blockElectricHeater", &class_char, (intptr_t) &SF_mindustry_gen_Iconc_blockElectricHeater, "C", 25 },
+	{ "blockPhaseHeater", &class_char, (intptr_t) &SF_mindustry_gen_Iconc_blockPhaseHeater, "C", 25 },
+	{ "blockArkyicWall", &class_char, (intptr_t) &SF_mindustry_gen_Iconc_blockArkyicWall, "C", 25 },
+	{ "blockHeatRedirector", &class_char, (intptr_t) &SF_mindustry_gen_Iconc_blockHeatRedirector, "C", 25 },
+	{ "unitVanquish", &class_char, (intptr_t) &SF_mindustry_gen_Iconc_unitVanquish, "C", 25 },
+	{ "blockTungstenWall", &class_char, (intptr_t) &SF_mindustry_gen_Iconc_blockTungstenWall, "C", 25 },
+	{ "blockTungstenWallLarge", &class_char, (intptr_t) &SF_mindustry_gen_Iconc_blockTungstenWallLarge, "C", 25 },
+	{ "blockTankAssembler", &class_char, (intptr_t) &SF_mindustry_gen_Iconc_blockTankAssembler, "C", 25 },
+	{ "unitAssemblyDrone", &class_char, (intptr_t) &SF_mindustry_gen_Iconc_unitAssemblyDrone, "C", 25 },
+	{ "blockBerylliumWall", &class_char, (intptr_t) &SF_mindustry_gen_Iconc_blockBerylliumWall, "C", 25 },
+	{ "blockBerylliumWallLarge", &class_char, (intptr_t) &SF_mindustry_gen_Iconc_blockBerylliumWallLarge, "C", 25 },
+	{ "unitQuell", &class_char, (intptr_t) &SF_mindustry_gen_Iconc_unitQuell, "C", 25 },
+	{ "blockBreach", &class_char, (intptr_t) &SF_mindustry_gen_Iconc_blockBreach, "C", 25 },
+	{ "blockEruptionDrill", &class_char, (intptr_t) &SF_mindustry_gen_Iconc_blockEruptionDrill, "C", 25 },
+	{ "blockShipAssembler", &class_char, (intptr_t) &SF_mindustry_gen_Iconc_blockShipAssembler, "C", 25 },
+	{ "unitQuellMissile", &class_char, (intptr_t) &SF_mindustry_gen_Iconc_unitQuellMissile, "C", 25 },
+	{ "blockMechAssembler", &class_char, (intptr_t) &SF_mindustry_gen_Iconc_blockMechAssembler, "C", 25 },
+	{ "blockOreCrystalThorium", &class_char, (intptr_t) &SF_mindustry_gen_Iconc_blockOreCrystalThorium, "C", 25 },
+	{ "blockOreWallBeryllium", &class_char, (intptr_t) &SF_mindustry_gen_Iconc_blockOreWallBeryllium, "C", 25 },
+	{ "blockOreWallTungsten", &class_char, (intptr_t) &SF_mindustry_gen_Iconc_blockOreWallTungsten, "C", 25 },
+	{ "blockArkyicBoulder", &class_char, (intptr_t) &SF_mindustry_gen_Iconc_blockArkyicBoulder, "C", 25 },
+	{ "blockCrystallineStone", &class_char, (intptr_t) &SF_mindustry_gen_Iconc_blockCrystallineStone, "C", 25 },
+	{ "blockCrystallineStoneWall", &class_char, (intptr_t) &SF_mindustry_gen_Iconc_blockCrystallineStoneWall, "C", 25 },
+	{ "blockCrystalCluster", &class_char, (intptr_t) &SF_mindustry_gen_Iconc_blockCrystalCluster, "C", 25 },
+	{ "blockCrystallineBoulder", &class_char, (intptr_t) &SF_mindustry_gen_Iconc_blockCrystallineBoulder, "C", 25 },
+	{ "blockCrystalFloor", &class_char, (intptr_t) &SF_mindustry_gen_Iconc_blockCrystalFloor, "C", 25 },
+	{ "blockVibrantCrystalCluster", &class_char, (intptr_t) &SF_mindustry_gen_Iconc_blockVibrantCrystalCluster, "C", 25 },
+	{ "blockRedIceBoulder", &class_char, (intptr_t) &SF_mindustry_gen_Iconc_blockRedIceBoulder, "C", 25 },
+	{ "blockCrystalBlocks", &class_char, (intptr_t) &SF_mindustry_gen_Iconc_blockCrystalBlocks, "C", 25 },
+	{ "blockYellowStonePlates", &class_char, (intptr_t) &SF_mindustry_gen_Iconc_blockYellowStonePlates, "C", 25 },
+	{ "blockRoughRhyolite", &class_char, (intptr_t) &SF_mindustry_gen_Iconc_blockRoughRhyolite, "C", 25 },
+	{ "blockRhyoliteBoulder", &class_char, (intptr_t) &SF_mindustry_gen_Iconc_blockRhyoliteBoulder, "C", 25 },
+	{ "blockRedStone", &class_char, (intptr_t) &SF_mindustry_gen_Iconc_blockRedStone, "C", 25 },
+	{ "blockDenseRedStone", &class_char, (intptr_t) &SF_mindustry_gen_Iconc_blockDenseRedStone, "C", 25 },
+	{ "blockRedStoneWall", &class_char, (intptr_t) &SF_mindustry_gen_Iconc_blockRedStoneWall, "C", 25 },
+	{ "blockRedStoneBoulder", &class_char, (intptr_t) &SF_mindustry_gen_Iconc_blockRedStoneBoulder, "C", 25 },
+	{ "blockRedDiamondWall", &class_char, (intptr_t) &SF_mindustry_gen_Iconc_blockRedDiamondWall, "C", 25 },
+	{ "blockCrystalOrbs", &class_char, (intptr_t) &SF_mindustry_gen_Iconc_blockCrystalOrbs, "C", 25 },
+	{ "unitConquer", &class_char, (intptr_t) &SF_mindustry_gen_Iconc_unitConquer, "C", 25 },
+	{ "unitDisrupt", &class_char, (intptr_t) &SF_mindustry_gen_Iconc_unitDisrupt, "C", 25 },
+	{ "unitDisruptMissile", &class_char, (intptr_t) &SF_mindustry_gen_Iconc_unitDisruptMissile, "C", 25 },
+	{ "blockRhyoliteVent", &class_char, (intptr_t) &SF_mindustry_gen_Iconc_blockRhyoliteVent, "C", 25 },
+	{ "blockArkyicVent", &class_char, (intptr_t) &SF_mindustry_gen_Iconc_blockArkyicVent, "C", 25 },
+	{ "blockYellowStoneVent", &class_char, (intptr_t) &SF_mindustry_gen_Iconc_blockYellowStoneVent, "C", 25 },
+	{ "blockRedStoneVent", &class_char, (intptr_t) &SF_mindustry_gen_Iconc_blockRedStoneVent, "C", 25 },
+	{ "blockCarbonVent", &class_char, (intptr_t) &SF_mindustry_gen_Iconc_blockCarbonVent, "C", 25 },
+	{ "blockShieldProjector", &class_char, (intptr_t) &SF_mindustry_gen_Iconc_blockShieldProjector, "C", 25 },
+	{ "blockBeamLink", &class_char, (intptr_t) &SF_mindustry_gen_Iconc_blockBeamLink, "C", 25 },
+	{ "unitEffectDrone", &class_char, (intptr_t) &SF_mindustry_gen_Iconc_unitEffectDrone, "C", 25 },
+	{ "blockWorldProcessor", &class_char, (intptr_t) &SF_mindustry_gen_Iconc_blockWorldProcessor, "C", 25 },
+	{ "blockReinforcedPayloadConveyor", &class_char, (intptr_t) &SF_mindustry_gen_Iconc_blockReinforcedPayloadConveyor, "C", 25 },
+	{ "blockReinforcedPayloadRouter", &class_char, (intptr_t) &SF_mindustry_gen_Iconc_blockReinforcedPayloadRouter, "C", 25 },
+	{ "blockDisperse", &class_char, (intptr_t) &SF_mindustry_gen_Iconc_blockDisperse, "C", 25 },
+	{ "blockLargeShieldProjector", &class_char, (intptr_t) &SF_mindustry_gen_Iconc_blockLargeShieldProjector, "C", 25 },
+	{ "blockPayloadMassDriver", &class_char, (intptr_t) &SF_mindustry_gen_Iconc_blockPayloadMassDriver, "C", 25 },
+	{ "blockWorldCell", &class_char, (intptr_t) &SF_mindustry_gen_Iconc_blockWorldCell, "C", 25 },
+	{ "blockCarbideWall", &class_char, (intptr_t) &SF_mindustry_gen_Iconc_blockCarbideWall, "C", 25 },
+	{ "blockCarbideWallLarge", &class_char, (intptr_t) &SF_mindustry_gen_Iconc_blockCarbideWallLarge, "C", 25 },
+	{ "blockOreWallThorium", &class_char, (intptr_t) &SF_mindustry_gen_Iconc_blockOreWallThorium, "C", 25 },
+	{ "blockCoreZone", &class_char, (intptr_t) &SF_mindustry_gen_Iconc_blockCoreZone, "C", 25 },
+	{ "blockFabricator", &class_char, (intptr_t) &SF_mindustry_gen_Iconc_blockFabricator, "C", 25 },
+	{ "unitStell", &class_char, (intptr_t) &SF_mindustry_gen_Iconc_unitStell, "C", 25 },
+	{ "blockOreBeryllium", &class_char, (intptr_t) &SF_mindustry_gen_Iconc_blockOreBeryllium, "C", 25 },
+	{ "unitLocus", &class_char, (intptr_t) &SF_mindustry_gen_Iconc_unitLocus, "C", 25 },
+	{ "unitAvert", &class_char, (intptr_t) &SF_mindustry_gen_Iconc_unitAvert, "C", 25 },
+	{ "unitCleroi", &class_char, (intptr_t) &SF_mindustry_gen_Iconc_unitCleroi, "C", 25 },
+	{ "blockTankReconstructor", &class_char, (intptr_t) &SF_mindustry_gen_Iconc_blockTankReconstructor, "C", 25 },
+	{ "blockMechReconstructor", &class_char, (intptr_t) &SF_mindustry_gen_Iconc_blockMechReconstructor, "C", 25 },
+	{ "blockShipReconstructor", &class_char, (intptr_t) &SF_mindustry_gen_Iconc_blockShipReconstructor, "C", 25 },
+	{ "blockRadar", &class_char, (intptr_t) &SF_mindustry_gen_Iconc_blockRadar, "C", 25 },
+	{ "unitTurretUnitBuildTower", &class_char, (intptr_t) &SF_mindustry_gen_Iconc_unitTurretUnitBuildTower, "C", 25 },
+	{ "blockBlastDoor", &class_char, (intptr_t) &SF_mindustry_gen_Iconc_blockBlastDoor, "C", 25 },
+	{ "alphaaaa", &class_char, (intptr_t) &SF_mindustry_gen_Iconc_alphaaaa, "C", 25 },
+	{ "teamMalis", &class_char, (intptr_t) &SF_mindustry_gen_Iconc_teamMalis, "C", 25 },
+	{ "blockCanvas", &class_char, (intptr_t) &SF_mindustry_gen_Iconc_blockCanvas, "C", 25 },
+	{ "blockArmoredDuct", &class_char, (intptr_t) &SF_mindustry_gen_Iconc_blockArmoredDuct, "C", 25 },
+	{ "unitAnthicus", &class_char, (intptr_t) &SF_mindustry_gen_Iconc_unitAnthicus, "C", 25 },
+	{ "unitAnthicusMissile", &class_char, (intptr_t) &SF_mindustry_gen_Iconc_unitAnthicusMissile, "C", 25 },
+	{ "unitObviate", &class_char, (intptr_t) &SF_mindustry_gen_Iconc_unitObviate, "C", 25 },
+	{ "blockTankFabricator", &class_char, (intptr_t) &SF_mindustry_gen_Iconc_blockTankFabricator, "C", 25 },
+	{ "blockMechFabricator", &class_char, (intptr_t) &SF_mindustry_gen_Iconc_blockMechFabricator, "C", 25 },
+	{ "blockShipFabricator", &class_char, (intptr_t) &SF_mindustry_gen_Iconc_blockShipFabricator, "C", 25 },
+	{ "blockUnitRepairTower", &class_char, (intptr_t) &SF_mindustry_gen_Iconc_blockUnitRepairTower, "C", 25 },
+	{ "unitMerui", &class_char, (intptr_t) &SF_mindustry_gen_Iconc_unitMerui, "C", 25 },
+	{ "unitOsc", &class_char, (intptr_t) &SF_mindustry_gen_Iconc_unitOsc, "C", 25 },
+	{ "unitPrecept", &class_char, (intptr_t) &SF_mindustry_gen_Iconc_unitPrecept, "C", 25 },
+	{ "blockDiffuse", &class_char, (intptr_t) &SF_mindustry_gen_Iconc_blockDiffuse, "C", 25 },
+	{ "blockBasicAssemblerModule", &class_char, (intptr_t) &SF_mindustry_gen_Iconc_blockBasicAssemblerModule, "C", 25 },
+	{ "unitTecta", &class_char, (intptr_t) &SF_mindustry_gen_Iconc_unitTecta, "C", 25 },
+	{ "unitCollaris", &class_char, (intptr_t) &SF_mindustry_gen_Iconc_unitCollaris, "C", 25 },
+	{ "unitElude", &class_char, (intptr_t) &SF_mindustry_gen_Iconc_unitElude, "C", 25 },
+	{ "blockRefabricator", &class_char, (intptr_t) &SF_mindustry_gen_Iconc_blockRefabricator, "C", 25 },
+	{ "blockPrimeRefabricator", &class_char, (intptr_t) &SF_mindustry_gen_Iconc_blockPrimeRefabricator, "C", 25 },
+	{ "unitLatum", &class_char, (intptr_t) &SF_mindustry_gen_Iconc_unitLatum, "C", 25 },
+	{ "blockReinforcedSurgeWall", &class_char, (intptr_t) &SF_mindustry_gen_Iconc_blockReinforcedSurgeWall, "C", 25 },
+	{ "blockReinforcedSurgeWallLarge", &class_char, (intptr_t) &SF_mindustry_gen_Iconc_blockReinforcedSurgeWallLarge, "C", 25 },
+	{ "blockTankRefabricator", &class_char, (intptr_t) &SF_mindustry_gen_Iconc_blockTankRefabricator, "C", 25 },
+	{ "blockMechRefabricator", &class_char, (intptr_t) &SF_mindustry_gen_Iconc_blockMechRefabricator, "C", 25 },
+	{ "blockShipRefabricator", &class_char, (intptr_t) &SF_mindustry_gen_Iconc_blockShipRefabricator, "C", 25 },
+	{ "blockSlagHeater", &class_char, (intptr_t) &SF_mindustry_gen_Iconc_blockSlagHeater, "C", 25 },
+	{ "blockAfflict", &class_char, (intptr_t) &SF_mindustry_gen_Iconc_blockAfflict, "C", 25 },
+	{ "blockShieldedWall", &class_char, (intptr_t) &SF_mindustry_gen_Iconc_blockShieldedWall, "C", 25 },
+	{ "blockFracture", &class_char, (intptr_t) &SF_mindustry_gen_Iconc_blockFracture, "C", 25 },
+	{ "unitRenale", &class_char, (intptr_t) &SF_mindustry_gen_Iconc_unitRenale, "C", 25 },
+	{ "blockLustre", &class_char, (intptr_t) &SF_mindustry_gen_Iconc_blockLustre, "C", 25 },
+	{ "blockScathe", &class_char, (intptr_t) &SF_mindustry_gen_Iconc_blockScathe, "C", 25 },
+	{ "unitScatheMissile", &class_char, (intptr_t) &SF_mindustry_gen_Iconc_unitScatheMissile, "C", 25 },
+	{ "blockRavage", &class_char, (intptr_t) &SF_mindustry_gen_Iconc_blockRavage, "C", 25 },
+	{ "blockUnderflowDuct", &class_char, (intptr_t) &SF_mindustry_gen_Iconc_blockUnderflowDuct, "C", 25 },
+	{ "blockMalign", &class_char, (intptr_t) &SF_mindustry_gen_Iconc_blockMalign, "C", 25 },
+	{ "blockSmite", &class_char, (intptr_t) &SF_mindustry_gen_Iconc_blockSmite, "C", 25 },
+	{ "blockShockwaveTower", &class_char, (intptr_t) &SF_mindustry_gen_Iconc_blockShockwaveTower, "C", 25 },
+	{ "blockHeatSource", &class_char, (intptr_t) &SF_mindustry_gen_Iconc_blockHeatSource, "C", 25 },
+	{ "blockFluxReactor", &class_char, (intptr_t) &SF_mindustry_gen_Iconc_blockFluxReactor, "C", 25 },
+	{ "blockNeoplasiaReactor", &class_char, (intptr_t) &SF_mindustry_gen_Iconc_blockNeoplasiaReactor, "C", 25 },
+	{ "blockSandFloor", &class_char, (intptr_t) &SF_mindustry_gen_Iconc_blockSandFloor, "C", 25 },
+	{ "blockCrystallineVent", &class_char, (intptr_t) &SF_mindustry_gen_Iconc_blockCrystallineVent, "C", 25 },
+	{ "blockHeatRouter", &class_char, (intptr_t) &SF_mindustry_gen_Iconc_blockHeatRouter, "C", 25 },
+	{ "blockLargePayloadMassDriver", &class_char, (intptr_t) &SF_mindustry_gen_Iconc_blockLargePayloadMassDriver, "C", 25 },
+	{ "blockReinforcedMessage", &class_char, (intptr_t) &SF_mindustry_gen_Iconc_blockReinforcedMessage, "C", 25 },
+	{ "blockWorldMessage", &class_char, (intptr_t) &SF_mindustry_gen_Iconc_blockWorldMessage, "C", 25 },
+	{ "statusFast", &class_char, (intptr_t) &SF_mindustry_gen_Iconc_statusFast, "C", 25 },
+	{ "ranai", &class_char, (intptr_t) &SF_mindustry_gen_Iconc_ranai, "C", 25 },
+	{ "cat", &class_char, (intptr_t) &SF_mindustry_gen_Iconc_cat, "C", 25 },
+	{ "blockWorldSwitch", &class_char, (intptr_t) &SF_mindustry_gen_Iconc_blockWorldSwitch, "C", 25 },
+	{ "statusDynamic", &class_char, (intptr_t) &SF_mindustry_gen_Iconc_statusDynamic, "C", 25 },
+	{ "blockRemoveWall", &class_char, (intptr_t) &SF_mindustry_gen_Iconc_blockRemoveWall, "C", 25 },
+	{ "blockRemoveOre", &class_char, (intptr_t) &SF_mindustry_gen_Iconc_blockRemoveOre, "C", 25 },
+	{ "blockSmallHeatRedirector", &class_char, (intptr_t) &SF_mindustry_gen_Iconc_blockSmallHeatRedirector, "C", 25 },
+	{ "blockLargeCliffCrusher", &class_char, (intptr_t) &SF_mindustry_gen_Iconc_blockLargeCliffCrusher, "C", 25 },
+	{ "unitScatheMissilePhase", &class_char, (intptr_t) &SF_mindustry_gen_Iconc_unitScatheMissilePhase, "C", 25 },
+	{ "unitScatheMissileSurge", &class_char, (intptr_t) &SF_mindustry_gen_Iconc_unitScatheMissileSurge, "C", 25 },
+	{ "unitScatheMissileSurgeSplit", &class_char, (intptr_t) &SF_mindustry_gen_Iconc_unitScatheMissileSurgeSplit, "C", 25 },
+	{ "blockAdvancedLaunchPad", &class_char, (intptr_t) &SF_mindustry_gen_Iconc_blockAdvancedLaunchPad, "C", 25 },
+	{ "blockLandingPad", &class_char, (intptr_t) &SF_mindustry_gen_Iconc_blockLandingPad, "C", 25 },
+	{ "blockStoneVent", &class_char, (intptr_t) &SF_mindustry_gen_Iconc_blockStoneVent, "C", 25 },
+	{ "blockBasaltVent", &class_char, (intptr_t) &SF_mindustry_gen_Iconc_blockBasaltVent, "C", 25 },
+	{ "blockTileLogicDisplay", &class_char, (intptr_t) &SF_mindustry_gen_Iconc_blockTileLogicDisplay, "C", 25 },
+	{ "blockMetalTiles1", &class_char, (intptr_t) &SF_mindustry_gen_Iconc_blockMetalTiles1, "C", 25 },
+	{ "blockMetalTiles2", &class_char, (intptr_t) &SF_mindustry_gen_Iconc_blockMetalTiles2, "C", 25 },
+	{ "blockMetalTiles3", &class_char, (intptr_t) &SF_mindustry_gen_Iconc_blockMetalTiles3, "C", 25 },
+	{ "blockMetalTiles4", &class_char, (intptr_t) &SF_mindustry_gen_Iconc_blockMetalTiles4, "C", 25 },
+	{ "blockColoredFloor", &class_char, (intptr_t) &SF_mindustry_gen_Iconc_blockColoredFloor, "C", 25 },
+	{ "blockMetalTiles5", &class_char, (intptr_t) &SF_mindustry_gen_Iconc_blockMetalTiles5, "C", 25 },
+	{ "blockMetalTiles6", &class_char, (intptr_t) &SF_mindustry_gen_Iconc_blockMetalTiles6, "C", 25 },
+	{ "blockMetalTiles7", &class_char, (intptr_t) &SF_mindustry_gen_Iconc_blockMetalTiles7, "C", 25 },
+	{ "blockMetalTiles8", &class_char, (intptr_t) &SF_mindustry_gen_Iconc_blockMetalTiles8, "C", 25 },
+	{ "blockMetalTiles9", &class_char, (intptr_t) &SF_mindustry_gen_Iconc_blockMetalTiles9, "C", 25 },
+	{ "blockMetalTiles10", &class_char, (intptr_t) &SF_mindustry_gen_Iconc_blockMetalTiles10, "C", 25 },
+	{ "blockColoredWall", &class_char, (intptr_t) &SF_mindustry_gen_Iconc_blockColoredWall, "C", 25 },
+	{ "blockMetalTiles11", &class_char, (intptr_t) &SF_mindustry_gen_Iconc_blockMetalTiles11, "C", 25 },
+	{ "blockMetalTiles12", &class_char, (intptr_t) &SF_mindustry_gen_Iconc_blockMetalTiles12, "C", 25 },
+	{ "blockCharacterOverlay", &class_char, (intptr_t) &SF_mindustry_gen_Iconc_blockCharacterOverlay, "C", 25 },
+	{ "blockCharacterOverlayWhite", &class_char, (intptr_t) &SF_mindustry_gen_Iconc_blockCharacterOverlayWhite, "C", 25 },
+	{ "blockRuneOverlayCrux", &class_char, (intptr_t) &SF_mindustry_gen_Iconc_blockRuneOverlayCrux, "C", 25 },
+	{ "blockRuneOverlay", &class_char, (intptr_t) &SF_mindustry_gen_Iconc_blockRuneOverlay, "C", 25 },
+	{ "blockMetalWall1", &class_char, (intptr_t) &SF_mindustry_gen_Iconc_blockMetalWall1, "C", 25 },
+	{ "blockMetalWall2", &class_char, (intptr_t) &SF_mindustry_gen_Iconc_blockMetalWall2, "C", 25 },
+	{ "blockMetalTiles13", &class_char, (intptr_t) &SF_mindustry_gen_Iconc_blockMetalTiles13, "C", 25 },
+	{ "blockMetalWall3", &class_char, (intptr_t) &SF_mindustry_gen_Iconc_blockMetalWall3, "C", 25 },
+	{ "blockOreWallGraphite", &class_char, (intptr_t) &SF_mindustry_gen_Iconc_blockOreWallGraphite, "C", 25 },
+	{ "blockLargeCanvas", &class_char, (intptr_t) &SF_mindustry_gen_Iconc_blockLargeCanvas, "C", 25 },
+	{ "blockTargetDummy", &class_char, (intptr_t) &SF_mindustry_gen_Iconc_blockTargetDummy, "C", 25 },
+	{ "unitDummy", &class_char, (intptr_t) &SF_mindustry_gen_Iconc_unitDummy, "C", 25 },
+	{ "codes", &class_arc_struct_ObjectIntMap, (intptr_t) &SF_mindustry_gen_Iconc_codes, "Larc/struct/ObjectIntMap;", 25 },
+	{ "codeToName", &class_arc_struct_IntMap, (intptr_t) &SF_mindustry_gen_Iconc_codeToName, "Larc/struct/IntMap;", 25 },
+	{ "fileTextFill", &class_char, (intptr_t) &SF_mindustry_gen_Iconc_fileTextFill, "C", 25 },
+	{ "file", &class_char, (intptr_t) &SF_mindustry_gen_Iconc_file, "C", 25 },
+	{ "fileText", &class_char, (intptr_t) &SF_mindustry_gen_Iconc_fileText, "C", 25 },
+	{ "left", &class_char, (intptr_t) &SF_mindustry_gen_Iconc_left, "C", 25 },
+	{ "right", &class_char, (intptr_t) &SF_mindustry_gen_Iconc_right, "C", 25 },
+	{ "up", &class_char, (intptr_t) &SF_mindustry_gen_Iconc_up, "C", 25 },
+	{ "down", &class_char, (intptr_t) &SF_mindustry_gen_Iconc_down, "C", 25 },
+	{ "home", &class_char, (intptr_t) &SF_mindustry_gen_Iconc_home, "C", 25 },
+	{ "ok", &class_char, (intptr_t) &SF_mindustry_gen_Iconc_ok, "C", 25 },
+	{ "image", &class_char, (intptr_t) &SF_mindustry_gen_Iconc_image, "C", 25 },
+	{ "star", &class_char, (intptr_t) &SF_mindustry_gen_Iconc_star, "C", 25 },
+	{ "resize", &class_char, (intptr_t) &SF_mindustry_gen_Iconc_resize, "C", 25 },
+	{ "wrench", &class_char, (intptr_t) &SF_mindustry_gen_Iconc_wrench, "C", 25 },
+	{ "githubSquare", &class_char, (intptr_t) &SF_mindustry_gen_Iconc_githubSquare, "C", 25 },
+	{ "fileImage", &class_char, (intptr_t) &SF_mindustry_gen_Iconc_fileImage, "C", 25 },
+	{ "add", &class_char, (intptr_t) &SF_mindustry_gen_Iconc_add, "C", 25 },
+	{ "edit", &class_char, (intptr_t) &SF_mindustry_gen_Iconc_edit, "C", 25 },
+	{ "chartBar", &class_char, (intptr_t) &SF_mindustry_gen_Iconc_chartBar, "C", 25 },
+	{ "planeOutline", &class_char, (intptr_t) &SF_mindustry_gen_Iconc_planeOutline, "C", 25 },
+	{ "filter", &class_char, (intptr_t) &SF_mindustry_gen_Iconc_filter, "C", 25 },
+	{ "folder", &class_char, (intptr_t) &SF_mindustry_gen_Iconc_folder, "C", 25 },
+	{ "steam", &class_char, (intptr_t) &SF_mindustry_gen_Iconc_steam, "C", 25 },
+	{ "downOpen", &class_char, (intptr_t) &SF_mindustry_gen_Iconc_downOpen, "C", 25 },
+	{ "leftOpen", &class_char, (intptr_t) &SF_mindustry_gen_Iconc_leftOpen, "C", 25 },
+	{ "upOpen", &class_char, (intptr_t) &SF_mindustry_gen_Iconc_upOpen, "C", 25 },
+	{ "map", &class_char, (intptr_t) &SF_mindustry_gen_Iconc_map, "C", 25 },
+	{ "rotate", &class_char, (intptr_t) &SF_mindustry_gen_Iconc_rotate, "C", 25 },
+	{ "play", &class_char, (intptr_t) &SF_mindustry_gen_Iconc_play, "C", 25 },
+	{ "pause", &class_char, (intptr_t) &SF_mindustry_gen_Iconc_pause, "C", 25 },
+	{ "list", &class_char, (intptr_t) &SF_mindustry_gen_Iconc_list, "C", 25 },
+	{ "cancel", &class_char, (intptr_t) &SF_mindustry_gen_Iconc_cancel, "C", 25 },
+	{ "move", &class_char, (intptr_t) &SF_mindustry_gen_Iconc_move, "C", 25 },
+	{ "terminal", &class_char, (intptr_t) &SF_mindustry_gen_Iconc_terminal, "C", 25 },
+	{ "undo", &class_char, (intptr_t) &SF_mindustry_gen_Iconc_undo, "C", 25 },
+	{ "redo", &class_char, (intptr_t) &SF_mindustry_gen_Iconc_redo, "C", 25 },
+	{ "info", &class_char, (intptr_t) &SF_mindustry_gen_Iconc_info, "C", 25 },
+	{ "infoCircle", &class_char, (intptr_t) &SF_mindustry_gen_Iconc_infoCircle, "C", 25 },
+	{ "rightOpenOut", &class_char, (intptr_t) &SF_mindustry_gen_Iconc_rightOpenOut, "C", 25 },
+	{ "rightOpen", &class_char, (intptr_t) &SF_mindustry_gen_Iconc_rightOpen, "C", 25 },
+	{ "waves", &class_char, (intptr_t) &SF_mindustry_gen_Iconc_waves, "C", 25 },
+	{ "filters", &class_char, (intptr_t) &SF_mindustry_gen_Iconc_filters, "C", 25 },
+	{ "layers", &class_char, (intptr_t) &SF_mindustry_gen_Iconc_layers, "C", 25 },
+	{ "eraser", &class_char, (intptr_t) &SF_mindustry_gen_Iconc_eraser, "C", 25 },
+	{ "bookOpen", &class_char, (intptr_t) &SF_mindustry_gen_Iconc_bookOpen, "C", 25 },
+	{ "grid", &class_char, (intptr_t) &SF_mindustry_gen_Iconc_grid, "C", 25 },
+	{ "flipX", &class_char, (intptr_t) &SF_mindustry_gen_Iconc_flipX, "C", 25 },
+	{ "flipY", &class_char, (intptr_t) &SF_mindustry_gen_Iconc_flipY, "C", 25 },
+	{ "diagonal", &class_char, (intptr_t) &SF_mindustry_gen_Iconc_diagonal, "C", 25 },
+	{ "discord", &class_char, (intptr_t) &SF_mindustry_gen_Iconc_discord, "C", 25 },
+	{ "redditAlien", &class_char, (intptr_t) &SF_mindustry_gen_Iconc_redditAlien, "C", 25 },
+	{ "github", &class_char, (intptr_t) &SF_mindustry_gen_Iconc_github, "C", 25 },
+	{ "googleplay", &class_char, (intptr_t) &SF_mindustry_gen_Iconc_googleplay, "C", 25 },
+	{ "android", &class_char, (intptr_t) &SF_mindustry_gen_Iconc_android, "C", 25 },
+	{ "trello", &class_char, (intptr_t) &SF_mindustry_gen_Iconc_trello, "C", 25 },
+	{ "logic", &class_char, (intptr_t) &SF_mindustry_gen_Iconc_logic, "C", 25 },
+	{ "distribution", &class_char, (intptr_t) &SF_mindustry_gen_Iconc_distribution, "C", 25 },
+	{ "hammer", &class_char, (intptr_t) &SF_mindustry_gen_Iconc_hammer, "C", 25 },
+	{ "save", &class_char, (intptr_t) &SF_mindustry_gen_Iconc_save, "C", 25 },
+	{ "link", &class_char, (intptr_t) &SF_mindustry_gen_Iconc_link, "C", 25 },
+	{ "itchio", &class_char, (intptr_t) &SF_mindustry_gen_Iconc_itchio, "C", 25 },
+	{ "line", &class_char, (intptr_t) &SF_mindustry_gen_Iconc_line, "C", 25 },
+	{ "admin", &class_char, (intptr_t) &SF_mindustry_gen_Iconc_admin, "C", 25 },
+	{ "spray1", &class_char, (intptr_t) &SF_mindustry_gen_Iconc_spray1, "C", 25 },
+	{ "crafting", &class_char, (intptr_t) &SF_mindustry_gen_Iconc_crafting, "C", 25 },
+	{ "fill", &class_char, (intptr_t) &SF_mindustry_gen_Iconc_fill, "C", 25 },
+	{ "paste", &class_char, (intptr_t) &SF_mindustry_gen_Iconc_paste, "C", 25 },
+	{ "effect", &class_char, (intptr_t) &SF_mindustry_gen_Iconc_effect, "C", 25 },
+	{ "book", &class_char, (intptr_t) &SF_mindustry_gen_Iconc_book, "C", 25 },
+	{ "liquid", &class_char, (intptr_t) &SF_mindustry_gen_Iconc_liquid, "C", 25 },
+	{ "host", &class_char, (intptr_t) &SF_mindustry_gen_Iconc_host, "C", 25 },
+	{ "production", &class_char, (intptr_t) &SF_mindustry_gen_Iconc_production, "C", 25 },
+	{ "exit", &class_char, (intptr_t) &SF_mindustry_gen_Iconc_exit, "C", 25 },
+	{ "modePvp", &class_char, (intptr_t) &SF_mindustry_gen_Iconc_modePvp, "C", 25 },
+	{ "modeAttack", &class_char, (intptr_t) &SF_mindustry_gen_Iconc_modeAttack, "C", 25 },
+	{ "refresh1", &class_char, (intptr_t) &SF_mindustry_gen_Iconc_refresh1, "C", 25 },
+	{ "none", &class_char, (intptr_t) &SF_mindustry_gen_Iconc_none, "C", 25 },
+	{ "pencil", &class_char, (intptr_t) &SF_mindustry_gen_Iconc_pencil, "C", 25 },
+	{ "refresh", &class_char, (intptr_t) &SF_mindustry_gen_Iconc_refresh, "C", 25 },
+	{ "modeSurvival", &class_char, (intptr_t) &SF_mindustry_gen_Iconc_modeSurvival, "C", 25 },
+	{ "commandRally", &class_char, (intptr_t) &SF_mindustry_gen_Iconc_commandRally, "C", 25 },
+	{ "units", &class_char, (intptr_t) &SF_mindustry_gen_Iconc_units, "C", 25 },
+	{ "commandAttack", &class_char, (intptr_t) &SF_mindustry_gen_Iconc_commandAttack, "C", 25 },
+	{ "trash", &class_char, (intptr_t) &SF_mindustry_gen_Iconc_trash, "C", 25 },
+	{ "chat", &class_char, (intptr_t) &SF_mindustry_gen_Iconc_chat, "C", 25 },
+	{ "turret", &class_char, (intptr_t) &SF_mindustry_gen_Iconc_turret, "C", 25 },
+	{ "players", &class_char, (intptr_t) &SF_mindustry_gen_Iconc_players, "C", 25 },
+	{ "editor", &class_char, (intptr_t) &SF_mindustry_gen_Iconc_editor, "C", 25 },
+	{ "copy", &class_char, (intptr_t) &SF_mindustry_gen_Iconc_copy, "C", 25 },
+	{ "tree", &class_char, (intptr_t) &SF_mindustry_gen_Iconc_tree, "C", 25 },
+	{ "lockOpen", &class_char, (intptr_t) &SF_mindustry_gen_Iconc_lockOpen, "C", 25 },
+	{ "pick", &class_char, (intptr_t) &SF_mindustry_gen_Iconc_pick, "C", 25 },
+	{ "export", &class_char, (intptr_t) &SF_mindustry_gen_Iconc_export, "C", 25 },
+	{ "download", &class_char, (intptr_t) &SF_mindustry_gen_Iconc_download, "C", 25 },
+	{ "upload", &class_char, (intptr_t) &SF_mindustry_gen_Iconc_upload, "C", 25 },
+	{ "settings", &class_char, (intptr_t) &SF_mindustry_gen_Iconc_settings, "C", 25 },
+	{ "spray", &class_char, (intptr_t) &SF_mindustry_gen_Iconc_spray, "C", 25 },
+	{ "zoom", &class_char, (intptr_t) &SF_mindustry_gen_Iconc_zoom, "C", 25 },
+	{ "powerOld", &class_char, (intptr_t) &SF_mindustry_gen_Iconc_powerOld, "C", 25 },
+	{ "power", &class_char, (intptr_t) &SF_mindustry_gen_Iconc_power, "C", 25 },
+	{ "menu", &class_char, (intptr_t) &SF_mindustry_gen_Iconc_menu, "C", 25 },
+	{ "lock", &class_char, (intptr_t) &SF_mindustry_gen_Iconc_lock, "C", 25 },
+	{ "eye", &class_char, (intptr_t) &SF_mindustry_gen_Iconc_eye, "C", 25 },
+	{ "eyeOff", &class_char, (intptr_t) &SF_mindustry_gen_Iconc_eyeOff, "C", 25 },
+	{ "warning", &class_char, (intptr_t) &SF_mindustry_gen_Iconc_warning, "C", 25 },
+	{ "terrain", &class_char, (intptr_t) &SF_mindustry_gen_Iconc_terrain, "C", 25 },
+	{ "defense", &class_char, (intptr_t) &SF_mindustry_gen_Iconc_defense, "C", 25 },
+	{ "planet", &class_char, (intptr_t) &SF_mindustry_gen_Iconc_planet, "C", 25 },
+	{ "arrowNote", &class_char, (intptr_t) &SF_mindustry_gen_Iconc_arrowNote, "C", 25 },
+	{ "music", &class_char, (intptr_t) &SF_mindustry_gen_Iconc_music, "C", 25 },
+	{ "fileAudio", &class_char, (intptr_t) &SF_mindustry_gen_Iconc_fileAudio, "C", 25 },
+	{ "volumeOff", &class_char, (intptr_t) &SF_mindustry_gen_Iconc_volumeOff, "C", 25 },
+	{ "volumeDown", &class_char, (intptr_t) &SF_mindustry_gen_Iconc_volumeDown, "C", 25 },
+	{ "volumeUp", &class_char, (intptr_t) &SF_mindustry_gen_Iconc_volumeUp, "C", 25 },
+	{ "tag", &class_char, (intptr_t) &SF_mindustry_gen_Iconc_tag, "C", 25 },
+	{ "tags", &class_char, (intptr_t) &SF_mindustry_gen_Iconc_tags, "C", 25 },
+	{ "battery4", &class_char, (intptr_t) &SF_mindustry_gen_Iconc_battery4, "C", 25 },
+	{ "battery3", &class_char, (intptr_t) &SF_mindustry_gen_Iconc_battery3, "C", 25 },
+	{ "battery2", &class_char, (intptr_t) &SF_mindustry_gen_Iconc_battery2, "C", 25 },
+	{ "battery1", &class_char, (intptr_t) &SF_mindustry_gen_Iconc_battery1, "C", 25 },
+	{ "battery0", &class_char, (intptr_t) &SF_mindustry_gen_Iconc_battery0, "C", 25 },
+	{ "fileCode", &class_char, (intptr_t) &SF_mindustry_gen_Iconc_fileCode, "C", 25 },
+	{ "fileVideo", &class_char, (intptr_t) &SF_mindustry_gen_Iconc_fileVideo, "C", 25 },
+	{ "fileArchive", &class_char, (intptr_t) &SF_mindustry_gen_Iconc_fileArchive, "C", 25 },
+	{ "folderOpen", &class_char, (intptr_t) &SF_mindustry_gen_Iconc_folderOpen, "C", 25 },
+	{ "folderEmpty", &class_char, (intptr_t) &SF_mindustry_gen_Iconc_folderEmpty, "C", 25 },
+	{ "folderOpenEmpty", &class_char, (intptr_t) &SF_mindustry_gen_Iconc_folderOpenEmpty, "C", 25 },
+	{ "inbox", &class_char, (intptr_t) &SF_mindustry_gen_Iconc_inbox, "C", 25 },
+	{ "sitemap", &class_char, (intptr_t) &SF_mindustry_gen_Iconc_sitemap, "C", 25 },
+	{ "cloud", &class_char, (intptr_t) &SF_mindustry_gen_Iconc_cloud, "C", 25 },
+	{ "uploadCloud", &class_char, (intptr_t) &SF_mindustry_gen_Iconc_uploadCloud, "C", 25 },
+	{ "downloadCloud", &class_char, (intptr_t) &SF_mindustry_gen_Iconc_downloadCloud, "C", 25 },
+	{ "rain", &class_char, (intptr_t) &SF_mindustry_gen_Iconc_rain, "C", 25 },
+	{ "cloudSun", &class_char, (intptr_t) &SF_mindustry_gen_Iconc_cloudSun, "C", 25 },
+	{ "drizzle", &class_char, (intptr_t) &SF_mindustry_gen_Iconc_drizzle, "C", 25 },
+	{ "cloudFlash", &class_char, (intptr_t) &SF_mindustry_gen_Iconc_cloudFlash, "C", 25 },
+	{ "cloudWind", &class_char, (intptr_t) &SF_mindustry_gen_Iconc_cloudWind, "C", 25 },
+	{ "box", &class_char, (intptr_t) &SF_mindustry_gen_Iconc_box, "C", 25 },
+	{ "chartAlt", &class_char, (intptr_t) &SF_mindustry_gen_Iconc_chartAlt, "C", 25 },
+	{ "all", &class_java_lang_String, (intptr_t) &SF_mindustry_gen_Iconc_all, "Ljava/lang/String;", 25 },
+};
+
+static MethodMetadata methods[] {
+	{ "<init>", (intptr_t) init_mindustry_gen_Iconc, 0, "()V", 1 },
+	{ "<clinit>", (intptr_t) clinit_mindustry_gen_Iconc, 0, "()V", 8 },
+};
+
+Class class_mindustry_gen_Iconc{
+		.nativeName = (intptr_t) "mindustry/gen/Iconc",
+		.parentClass = (intptr_t) &class_java_lang_Object,
+		.size = sizeof(mindustry_gen_Iconc),
+		.classVtable = (intptr_t) vtable_mindustry_gen_Iconc,
+		.staticInitializer = (intptr_t) clinit_mindustry_gen_Iconc,
+		.annotationInitializer = (intptr_t) nullptr,
+		.markFunction = (intptr_t) mark_mindustry_gen_Iconc,
+		.primitive = false,
+		.arrayDimensions = 0,
+		.componentClass = (intptr_t) nullptr,
+		.outerClass = (intptr_t) nullptr,
+		.innerClassCount = 0,
+		.nativeInnerClasses = (intptr_t) nullptr,
+		.access = 33,
+		.interfaceCount = 0,
+		.nativeInterfaces = (intptr_t) nullptr,
+		.fieldCount = 769,
+		.nativeFields = (intptr_t) fields,
+		.methodCount = 2,
+		.nativeMethods = (intptr_t) methods,
+		.vtableSize = 11,
+		.vtableEntries = (intptr_t) vtableEntries,
+		.anonymous = false,
+		.synthetic = false,
+};
+static bool registered_mindustry_gen_Iconc = registerClass(&class_mindustry_gen_Iconc);
+
+}

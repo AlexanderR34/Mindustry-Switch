@@ -1,0 +1,65 @@
+#ifndef HEADER_mindustry_ui_dialogs_SettingsMenuDialog$SettingsTable$TextSetting
+#define HEADER_mindustry_ui_dialogs_SettingsMenuDialog$SettingsTable$TextSetting
+
+#include "Clearwing.h"
+#include "mindustry/ui/dialogs/SettingsMenuDialog_SettingsTable_Setting.h"
+
+#ifdef __cplusplus
+extern "C" {
+#endif
+
+typedef struct mindustry_ui_dialogs_SettingsMenuDialog$SettingsTable$TextSetting {
+	mindustry_ui_dialogs_SettingsMenuDialog$SettingsTable$Setting parent;
+	jref F_def;
+	jref F_changed;
+} mindustry_ui_dialogs_SettingsMenuDialog$SettingsTable$TextSetting;
+
+extern Class class_mindustry_ui_dialogs_SettingsMenuDialog$SettingsTable$TextSetting;
+
+
+#define VTABLE_mindustry_ui_dialogs_SettingsMenuDialog$SettingsTable$TextSetting_hashCode_R_int 0
+typedef jint (*func_mindustry_ui_dialogs_SettingsMenuDialog$SettingsTable$TextSetting_hashCode_R_int)(jcontext ctx, jobject self);
+#define VTABLE_mindustry_ui_dialogs_SettingsMenuDialog$SettingsTable$TextSetting_equals_java_lang_Object_R_boolean 1
+typedef jbool (*func_mindustry_ui_dialogs_SettingsMenuDialog$SettingsTable$TextSetting_equals_java_lang_Object_R_boolean)(jcontext ctx, jobject self, jobject param0);
+#define VTABLE_mindustry_ui_dialogs_SettingsMenuDialog$SettingsTable$TextSetting_clone_R_java_lang_Object 2
+typedef jobject (*func_mindustry_ui_dialogs_SettingsMenuDialog$SettingsTable$TextSetting_clone_R_java_lang_Object)(jcontext ctx, jobject self);
+#define VTABLE_mindustry_ui_dialogs_SettingsMenuDialog$SettingsTable$TextSetting_getClass_R_java_lang_Class 3
+typedef jobject (*func_mindustry_ui_dialogs_SettingsMenuDialog$SettingsTable$TextSetting_getClass_R_java_lang_Class)(jcontext ctx, jobject self);
+#define VTABLE_mindustry_ui_dialogs_SettingsMenuDialog$SettingsTable$TextSetting_toString_R_java_lang_String 4
+typedef jobject (*func_mindustry_ui_dialogs_SettingsMenuDialog$SettingsTable$TextSetting_toString_R_java_lang_String)(jcontext ctx, jobject self);
+#define VTABLE_mindustry_ui_dialogs_SettingsMenuDialog$SettingsTable$TextSetting_finalize 5
+typedef void (*func_mindustry_ui_dialogs_SettingsMenuDialog$SettingsTable$TextSetting_finalize)(jcontext ctx, jobject self);
+#define VTABLE_mindustry_ui_dialogs_SettingsMenuDialog$SettingsTable$TextSetting_notify 6
+typedef void (*func_mindustry_ui_dialogs_SettingsMenuDialog$SettingsTable$TextSetting_notify)(jcontext ctx, jobject self);
+#define VTABLE_mindustry_ui_dialogs_SettingsMenuDialog$SettingsTable$TextSetting_notifyAll 7
+typedef void (*func_mindustry_ui_dialogs_SettingsMenuDialog$SettingsTable$TextSetting_notifyAll)(jcontext ctx, jobject self);
+#define VTABLE_mindustry_ui_dialogs_SettingsMenuDialog$SettingsTable$TextSetting_wait 8
+typedef void (*func_mindustry_ui_dialogs_SettingsMenuDialog$SettingsTable$TextSetting_wait)(jcontext ctx, jobject self);
+#define VTABLE_mindustry_ui_dialogs_SettingsMenuDialog$SettingsTable$TextSetting_wait_long 9
+typedef void (*func_mindustry_ui_dialogs_SettingsMenuDialog$SettingsTable$TextSetting_wait_long)(jcontext ctx, jobject self, jlong param0);
+#define VTABLE_mindustry_ui_dialogs_SettingsMenuDialog$SettingsTable$TextSetting_wait_long_int 10
+typedef void (*func_mindustry_ui_dialogs_SettingsMenuDialog$SettingsTable$TextSetting_wait_long_int)(jcontext ctx, jobject self, jlong param0, jint param1);
+#define VTABLE_mindustry_ui_dialogs_SettingsMenuDialog$SettingsTable$TextSetting_add_mindustry_ui_dialogs_SettingsMenuDialog$SettingsTable 11
+typedef void (*func_mindustry_ui_dialogs_SettingsMenuDialog$SettingsTable$TextSetting_add_mindustry_ui_dialogs_SettingsMenuDialog$SettingsTable)(jcontext ctx, jobject self, jobject param0);
+#define VTABLE_mindustry_ui_dialogs_SettingsMenuDialog$SettingsTable$TextSetting_addDesc_arc_scene_Element 12
+typedef void (*func_mindustry_ui_dialogs_SettingsMenuDialog$SettingsTable$TextSetting_addDesc_arc_scene_Element)(jcontext ctx, jobject self, jobject param0);
+#define VTABLE_mindustry_ui_dialogs_SettingsMenuDialog$SettingsTable$TextSetting_lambda$add$2_R_java_lang_CharSequence 13
+typedef jobject (*func_mindustry_ui_dialogs_SettingsMenuDialog$SettingsTable$TextSetting_lambda$add$2_R_java_lang_CharSequence)(jcontext ctx, jobject self);
+#define VTABLE_mindustry_ui_dialogs_SettingsMenuDialog$SettingsTable$TextSetting_lambda$add$1_arc_scene_ui_TextField 14
+typedef void (*func_mindustry_ui_dialogs_SettingsMenuDialog$SettingsTable$TextSetting_lambda$add$1_arc_scene_ui_TextField)(jcontext ctx, jobject self, jobject param0);
+#define VTABLE_mindustry_ui_dialogs_SettingsMenuDialog$SettingsTable$TextSetting_lambda$add$0_arc_scene_ui_TextField 15
+typedef void (*func_mindustry_ui_dialogs_SettingsMenuDialog$SettingsTable$TextSetting_lambda$add$0_arc_scene_ui_TextField)(jcontext ctx, jobject self, jobject param0);
+
+void mark_mindustry_ui_dialogs_SettingsMenuDialog$SettingsTable$TextSetting(jobject object, jint mark, jint depth);
+void clinit_mindustry_ui_dialogs_SettingsMenuDialog$SettingsTable$TextSetting(jcontext ctx);
+void init_mindustry_ui_dialogs_SettingsMenuDialog$SettingsTable$TextSetting_java_lang_String_java_lang_String_arc_func_Cons(jcontext ctx, jobject self, jobject param0, jobject param1, jobject param2);
+void M_mindustry_ui_dialogs_SettingsMenuDialog$SettingsTable$TextSetting_add_mindustry_ui_dialogs_SettingsMenuDialog$SettingsTable(jcontext ctx, jobject self, jobject param0);
+jobject M_mindustry_ui_dialogs_SettingsMenuDialog$SettingsTable$TextSetting_lambda$add$2_R_java_lang_CharSequence(jcontext ctx, jobject self);
+void M_mindustry_ui_dialogs_SettingsMenuDialog$SettingsTable$TextSetting_lambda$add$1_arc_scene_ui_TextField(jcontext ctx, jobject self, jobject param0);
+void M_mindustry_ui_dialogs_SettingsMenuDialog$SettingsTable$TextSetting_lambda$add$0_arc_scene_ui_TextField(jcontext ctx, jobject self, jobject param0);
+
+#ifdef __cplusplus
+}
+#endif
+
+#endif

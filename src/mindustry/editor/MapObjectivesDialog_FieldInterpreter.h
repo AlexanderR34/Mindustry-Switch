@@ -1,0 +1,28 @@
+#ifndef HEADER_mindustry_editor_MapObjectivesDialog$FieldInterpreter
+#define HEADER_mindustry_editor_MapObjectivesDialog$FieldInterpreter
+
+#include "Clearwing.h"
+#include "java/lang/Object.h"
+
+#ifdef __cplusplus
+extern "C" {
+#endif
+
+typedef struct mindustry_editor_MapObjectivesDialog$FieldInterpreter {
+	java_lang_Object parent;
+} mindustry_editor_MapObjectivesDialog$FieldInterpreter;
+
+extern Class class_mindustry_editor_MapObjectivesDialog$FieldInterpreter;
+
+
+#define INDEX_mindustry_editor_MapObjectivesDialog$FieldInterpreter_build_arc_scene_ui_layout_Table_java_lang_CharSequence_mindustry_editor_MapObjectivesDialog$TypeInfo_java_lang_reflect_Field_java_lang_Runnable_arc_func_Boolc_arc_func_Prov_arc_func_Cons 0
+typedef void (*func_mindustry_editor_MapObjectivesDialog$FieldInterpreter_build_arc_scene_ui_layout_Table_java_lang_CharSequence_mindustry_editor_MapObjectivesDialog$TypeInfo_java_lang_reflect_Field_java_lang_Runnable_arc_func_Boolc_arc_func_Prov_arc_func_Cons)(jcontext ctx, jobject self, jobject param0, jobject param1, jobject param2, jobject param3, jobject param4, jobject param5, jobject param6, jobject param7);
+
+void mark_mindustry_editor_MapObjectivesDialog$FieldInterpreter(jobject object, jint mark, jint depth);
+void clinit_mindustry_editor_MapObjectivesDialog$FieldInterpreter(jcontext ctx);
+
+#ifdef __cplusplus
+}
+#endif
+
+#endif

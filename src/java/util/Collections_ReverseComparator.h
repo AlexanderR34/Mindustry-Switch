@@ -1,0 +1,71 @@
+#ifndef HEADER_java_util_Collections$ReverseComparator
+#define HEADER_java_util_Collections$ReverseComparator
+
+#include "Clearwing.h"
+#include "java/lang/Object.h"
+#include "java/util/Comparator.h"
+
+#ifdef __cplusplus
+extern "C" {
+#endif
+
+typedef struct java_util_Collections$ReverseComparator {
+	java_lang_Object parent;
+} java_util_Collections$ReverseComparator;
+
+extern Class class_java_util_Collections$ReverseComparator;
+
+extern jobject SF_java_util_Collections$ReverseComparator_INSTANCE;
+
+#define VTABLE_java_util_Collections$ReverseComparator_hashCode_R_int 0
+typedef jint (*func_java_util_Collections$ReverseComparator_hashCode_R_int)(jcontext ctx, jobject self);
+#define VTABLE_java_util_Collections$ReverseComparator_equals_java_lang_Object_R_boolean 1
+typedef jbool (*func_java_util_Collections$ReverseComparator_equals_java_lang_Object_R_boolean)(jcontext ctx, jobject self, jobject param0);
+#define VTABLE_java_util_Collections$ReverseComparator_clone_R_java_lang_Object 2
+typedef jobject (*func_java_util_Collections$ReverseComparator_clone_R_java_lang_Object)(jcontext ctx, jobject self);
+#define VTABLE_java_util_Collections$ReverseComparator_getClass_R_java_lang_Class 3
+typedef jobject (*func_java_util_Collections$ReverseComparator_getClass_R_java_lang_Class)(jcontext ctx, jobject self);
+#define VTABLE_java_util_Collections$ReverseComparator_toString_R_java_lang_String 4
+typedef jobject (*func_java_util_Collections$ReverseComparator_toString_R_java_lang_String)(jcontext ctx, jobject self);
+#define VTABLE_java_util_Collections$ReverseComparator_finalize 5
+typedef void (*func_java_util_Collections$ReverseComparator_finalize)(jcontext ctx, jobject self);
+#define VTABLE_java_util_Collections$ReverseComparator_notify 6
+typedef void (*func_java_util_Collections$ReverseComparator_notify)(jcontext ctx, jobject self);
+#define VTABLE_java_util_Collections$ReverseComparator_notifyAll 7
+typedef void (*func_java_util_Collections$ReverseComparator_notifyAll)(jcontext ctx, jobject self);
+#define VTABLE_java_util_Collections$ReverseComparator_wait 8
+typedef void (*func_java_util_Collections$ReverseComparator_wait)(jcontext ctx, jobject self);
+#define VTABLE_java_util_Collections$ReverseComparator_wait_long 9
+typedef void (*func_java_util_Collections$ReverseComparator_wait_long)(jcontext ctx, jobject self, jlong param0);
+#define VTABLE_java_util_Collections$ReverseComparator_wait_long_int 10
+typedef void (*func_java_util_Collections$ReverseComparator_wait_long_int)(jcontext ctx, jobject self, jlong param0, jint param1);
+#define VTABLE_java_util_Collections$ReverseComparator_compare_java_lang_Object_java_lang_Object_R_int 11
+typedef jint (*func_java_util_Collections$ReverseComparator_compare_java_lang_Object_java_lang_Object_R_int)(jcontext ctx, jobject self, jobject param0, jobject param1);
+#define VTABLE_java_util_Collections$ReverseComparator_reversed_R_java_util_Comparator 12
+typedef jobject (*func_java_util_Collections$ReverseComparator_reversed_R_java_util_Comparator)(jcontext ctx, jobject self);
+#define VTABLE_java_util_Collections$ReverseComparator_thenComparing_java_util_Comparator_R_java_util_Comparator 13
+typedef jobject (*func_java_util_Collections$ReverseComparator_thenComparing_java_util_Comparator_R_java_util_Comparator)(jcontext ctx, jobject self, jobject param0);
+#define VTABLE_java_util_Collections$ReverseComparator_thenComparing_java_util_function_Function_java_util_Comparator_R_java_util_Comparator 14
+typedef jobject (*func_java_util_Collections$ReverseComparator_thenComparing_java_util_function_Function_java_util_Comparator_R_java_util_Comparator)(jcontext ctx, jobject self, jobject param0, jobject param1);
+#define VTABLE_java_util_Collections$ReverseComparator_thenComparing_java_util_function_Function_R_java_util_Comparator 15
+typedef jobject (*func_java_util_Collections$ReverseComparator_thenComparing_java_util_function_Function_R_java_util_Comparator)(jcontext ctx, jobject self, jobject param0);
+#define VTABLE_java_util_Collections$ReverseComparator_thenComparingInt_java_util_function_ToIntFunction_R_java_util_Comparator 16
+typedef jobject (*func_java_util_Collections$ReverseComparator_thenComparingInt_java_util_function_ToIntFunction_R_java_util_Comparator)(jcontext ctx, jobject self, jobject param0);
+#define VTABLE_java_util_Collections$ReverseComparator_thenComparingLong_java_util_function_ToLongFunction_R_java_util_Comparator 17
+typedef jobject (*func_java_util_Collections$ReverseComparator_thenComparingLong_java_util_function_ToLongFunction_R_java_util_Comparator)(jcontext ctx, jobject self, jobject param0);
+#define VTABLE_java_util_Collections$ReverseComparator_thenComparingDouble_java_util_function_ToDoubleFunction_R_java_util_Comparator 18
+typedef jobject (*func_java_util_Collections$ReverseComparator_thenComparingDouble_java_util_function_ToDoubleFunction_R_java_util_Comparator)(jcontext ctx, jobject self, jobject param0);
+#define VTABLE_java_util_Collections$ReverseComparator_lambda$thenComparing$0_java_util_Comparator_java_lang_Object_java_lang_Object_R_int 19
+typedef jint (*func_java_util_Collections$ReverseComparator_lambda$thenComparing$0_java_util_Comparator_java_lang_Object_java_lang_Object_R_int)(jcontext ctx, jobject self, jobject param0, jobject param1, jobject param2);
+
+void mark_java_util_Collections$ReverseComparator(jobject object, jint mark, jint depth);
+void clinit_java_util_Collections$ReverseComparator(jcontext ctx);
+void init_java_util_Collections$ReverseComparator(jcontext ctx, jobject self);
+jint M_java_util_Collections$ReverseComparator_compare_java_lang_Object_java_lang_Object_R_int(jcontext ctx, jobject self, jobject param0, jobject param1);
+jobject SM_java_util_Collections$ReverseComparator_access$300_R_java_util_Collections$ReverseComparator(jcontext ctx);
+
+#ifdef __cplusplus
+}
+#endif
+
+#endif

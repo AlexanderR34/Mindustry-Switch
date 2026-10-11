@@ -1,0 +1,110 @@
+#ifndef HEADER_arc_freetype_FreeTypeFontGenerator$FreeTypeFontData
+#define HEADER_arc_freetype_FreeTypeFontGenerator$FreeTypeFontData
+
+#include "Clearwing.h"
+#include "arc/graphics/g2d/Font_FontData.h"
+#include "arc/util/Disposable.h"
+
+#ifdef __cplusplus
+extern "C" {
+#endif
+
+typedef struct arc_freetype_FreeTypeFontGenerator$FreeTypeFontData {
+	arc_graphics_g2d_Font$FontData parent;
+	jref F_regions;
+	jref F_generator;
+	jref F_parameter;
+	jref F_stroker;
+	jref F_packer;
+	jref F_glyphs;
+	jbool F_dirty;
+	jref F_fallback;
+	jref F_override;
+} arc_freetype_FreeTypeFontGenerator$FreeTypeFontData;
+
+extern Class class_arc_freetype_FreeTypeFontGenerator$FreeTypeFontData;
+
+extern jbool SF_arc_freetype_FreeTypeFontGenerator$FreeTypeFontData_ignoreDirty;
+
+#define VTABLE_arc_freetype_FreeTypeFontGenerator$FreeTypeFontData_hashCode_R_int 0
+typedef jint (*func_arc_freetype_FreeTypeFontGenerator$FreeTypeFontData_hashCode_R_int)(jcontext ctx, jobject self);
+#define VTABLE_arc_freetype_FreeTypeFontGenerator$FreeTypeFontData_equals_java_lang_Object_R_boolean 1
+typedef jbool (*func_arc_freetype_FreeTypeFontGenerator$FreeTypeFontData_equals_java_lang_Object_R_boolean)(jcontext ctx, jobject self, jobject param0);
+#define VTABLE_arc_freetype_FreeTypeFontGenerator$FreeTypeFontData_clone_R_java_lang_Object 2
+typedef jobject (*func_arc_freetype_FreeTypeFontGenerator$FreeTypeFontData_clone_R_java_lang_Object)(jcontext ctx, jobject self);
+#define VTABLE_arc_freetype_FreeTypeFontGenerator$FreeTypeFontData_getClass_R_java_lang_Class 3
+typedef jobject (*func_arc_freetype_FreeTypeFontGenerator$FreeTypeFontData_getClass_R_java_lang_Class)(jcontext ctx, jobject self);
+#define VTABLE_arc_freetype_FreeTypeFontGenerator$FreeTypeFontData_toString_R_java_lang_String 4
+typedef jobject (*func_arc_freetype_FreeTypeFontGenerator$FreeTypeFontData_toString_R_java_lang_String)(jcontext ctx, jobject self);
+#define VTABLE_arc_freetype_FreeTypeFontGenerator$FreeTypeFontData_finalize 5
+typedef void (*func_arc_freetype_FreeTypeFontGenerator$FreeTypeFontData_finalize)(jcontext ctx, jobject self);
+#define VTABLE_arc_freetype_FreeTypeFontGenerator$FreeTypeFontData_notify 6
+typedef void (*func_arc_freetype_FreeTypeFontGenerator$FreeTypeFontData_notify)(jcontext ctx, jobject self);
+#define VTABLE_arc_freetype_FreeTypeFontGenerator$FreeTypeFontData_notifyAll 7
+typedef void (*func_arc_freetype_FreeTypeFontGenerator$FreeTypeFontData_notifyAll)(jcontext ctx, jobject self);
+#define VTABLE_arc_freetype_FreeTypeFontGenerator$FreeTypeFontData_wait 8
+typedef void (*func_arc_freetype_FreeTypeFontGenerator$FreeTypeFontData_wait)(jcontext ctx, jobject self);
+#define VTABLE_arc_freetype_FreeTypeFontGenerator$FreeTypeFontData_wait_long 9
+typedef void (*func_arc_freetype_FreeTypeFontGenerator$FreeTypeFontData_wait_long)(jcontext ctx, jobject self, jlong param0);
+#define VTABLE_arc_freetype_FreeTypeFontGenerator$FreeTypeFontData_wait_long_int 10
+typedef void (*func_arc_freetype_FreeTypeFontGenerator$FreeTypeFontData_wait_long_int)(jcontext ctx, jobject self, jlong param0, jint param1);
+#define VTABLE_arc_freetype_FreeTypeFontGenerator$FreeTypeFontData_setOverride_arc_graphics_g2d_Font$FontData 11
+typedef void (*func_arc_freetype_FreeTypeFontGenerator$FreeTypeFontData_setOverride_arc_graphics_g2d_Font$FontData)(jcontext ctx, jobject self, jobject param0);
+#define VTABLE_arc_freetype_FreeTypeFontGenerator$FreeTypeFontData_addFallback_arc_graphics_g2d_Font$FontData 12
+typedef void (*func_arc_freetype_FreeTypeFontGenerator$FreeTypeFontData_addFallback_arc_graphics_g2d_Font$FontData)(jcontext ctx, jobject self, jobject param0);
+#define VTABLE_arc_freetype_FreeTypeFontGenerator$FreeTypeFontData_load_arc_files_Fi_boolean 13
+typedef void (*func_arc_freetype_FreeTypeFontGenerator$FreeTypeFontData_load_arc_files_Fi_boolean)(jcontext ctx, jobject self, jobject param0, jbool param1);
+#define VTABLE_arc_freetype_FreeTypeFontGenerator$FreeTypeFontData_setGlyphRegion_arc_graphics_g2d_Font$Glyph_arc_graphics_g2d_TextureRegion 14
+typedef void (*func_arc_freetype_FreeTypeFontGenerator$FreeTypeFontData_setGlyphRegion_arc_graphics_g2d_Font$Glyph_arc_graphics_g2d_TextureRegion)(jcontext ctx, jobject self, jobject param0, jobject param1);
+#define VTABLE_arc_freetype_FreeTypeFontGenerator$FreeTypeFontData_setLineHeight_float 15
+typedef void (*func_arc_freetype_FreeTypeFontGenerator$FreeTypeFontData_setLineHeight_float)(jcontext ctx, jobject self, jfloat param0);
+#define VTABLE_arc_freetype_FreeTypeFontGenerator$FreeTypeFontData_setGlyph_int_arc_graphics_g2d_Font$Glyph 16
+typedef void (*func_arc_freetype_FreeTypeFontGenerator$FreeTypeFontData_setGlyph_int_arc_graphics_g2d_Font$Glyph)(jcontext ctx, jobject self, jint param0, jobject param1);
+#define VTABLE_arc_freetype_FreeTypeFontGenerator$FreeTypeFontData_getFirstGlyph_R_arc_graphics_g2d_Font$Glyph 17
+typedef jobject (*func_arc_freetype_FreeTypeFontGenerator$FreeTypeFontData_getFirstGlyph_R_arc_graphics_g2d_Font$Glyph)(jcontext ctx, jobject self);
+#define VTABLE_arc_freetype_FreeTypeFontGenerator$FreeTypeFontData_hasGlyph_char_R_boolean 18
+typedef jbool (*func_arc_freetype_FreeTypeFontGenerator$FreeTypeFontData_hasGlyph_char_R_boolean)(jcontext ctx, jobject self, jchar param0);
+#define VTABLE_arc_freetype_FreeTypeFontGenerator$FreeTypeFontData_getGlyph_char_R_arc_graphics_g2d_Font$Glyph 19
+typedef jobject (*func_arc_freetype_FreeTypeFontGenerator$FreeTypeFontData_getGlyph_char_R_arc_graphics_g2d_Font$Glyph)(jcontext ctx, jobject self, jchar param0);
+#define VTABLE_arc_freetype_FreeTypeFontGenerator$FreeTypeFontData_getGlyphs_arc_graphics_g2d_GlyphLayout$GlyphRun_java_lang_CharSequence_int_int_arc_graphics_g2d_Font$Glyph 20
+typedef void (*func_arc_freetype_FreeTypeFontGenerator$FreeTypeFontData_getGlyphs_arc_graphics_g2d_GlyphLayout$GlyphRun_java_lang_CharSequence_int_int_arc_graphics_g2d_Font$Glyph)(jcontext ctx, jobject self, jobject param0, jobject param1, jint param2, jint param3, jobject param4);
+#define VTABLE_arc_freetype_FreeTypeFontGenerator$FreeTypeFontData_getWrapIndex_arc_struct_Seq_int_R_int 21
+typedef jint (*func_arc_freetype_FreeTypeFontGenerator$FreeTypeFontData_getWrapIndex_arc_struct_Seq_int_R_int)(jcontext ctx, jobject self, jobject param0, jint param1);
+#define VTABLE_arc_freetype_FreeTypeFontGenerator$FreeTypeFontData_isBreakChar_char_R_boolean 22
+typedef jbool (*func_arc_freetype_FreeTypeFontGenerator$FreeTypeFontData_isBreakChar_char_R_boolean)(jcontext ctx, jobject self, jchar param0);
+#define VTABLE_arc_freetype_FreeTypeFontGenerator$FreeTypeFontData_isWhitespace_char_R_boolean 23
+typedef jbool (*func_arc_freetype_FreeTypeFontGenerator$FreeTypeFontData_isWhitespace_char_R_boolean)(jcontext ctx, jobject self, jchar param0);
+#define VTABLE_arc_freetype_FreeTypeFontGenerator$FreeTypeFontData_getImagePath_int_R_java_lang_String 24
+typedef jobject (*func_arc_freetype_FreeTypeFontGenerator$FreeTypeFontData_getImagePath_int_R_java_lang_String)(jcontext ctx, jobject self, jint param0);
+#define VTABLE_arc_freetype_FreeTypeFontGenerator$FreeTypeFontData_getImagePaths_R_Array1_java_lang_String 25
+typedef jobject (*func_arc_freetype_FreeTypeFontGenerator$FreeTypeFontData_getImagePaths_R_Array1_java_lang_String)(jcontext ctx, jobject self);
+#define VTABLE_arc_freetype_FreeTypeFontGenerator$FreeTypeFontData_getFontFile_R_arc_files_Fi 26
+typedef jobject (*func_arc_freetype_FreeTypeFontGenerator$FreeTypeFontData_getFontFile_R_arc_files_Fi)(jcontext ctx, jobject self);
+#define VTABLE_arc_freetype_FreeTypeFontGenerator$FreeTypeFontData_setScale_float_float 27
+typedef void (*func_arc_freetype_FreeTypeFontGenerator$FreeTypeFontData_setScale_float_float)(jcontext ctx, jobject self, jfloat param0, jfloat param1);
+#define VTABLE_arc_freetype_FreeTypeFontGenerator$FreeTypeFontData_setScale_float 28
+typedef void (*func_arc_freetype_FreeTypeFontGenerator$FreeTypeFontData_setScale_float)(jcontext ctx, jobject self, jfloat param0);
+#define VTABLE_arc_freetype_FreeTypeFontGenerator$FreeTypeFontData_scale_float 29
+typedef void (*func_arc_freetype_FreeTypeFontGenerator$FreeTypeFontData_scale_float)(jcontext ctx, jobject self, jfloat param0);
+#define VTABLE_arc_freetype_FreeTypeFontGenerator$FreeTypeFontData_dispose 30
+typedef void (*func_arc_freetype_FreeTypeFontGenerator$FreeTypeFontData_dispose)(jcontext ctx, jobject self);
+#define VTABLE_arc_freetype_FreeTypeFontGenerator$FreeTypeFontData_isDisposed_R_boolean 31
+typedef jbool (*func_arc_freetype_FreeTypeFontGenerator$FreeTypeFontData_isDisposed_R_boolean)(jcontext ctx, jobject self);
+#define VTABLE_arc_freetype_FreeTypeFontGenerator$FreeTypeFontData_lambda$getGlyphs$0 32
+typedef void (*func_arc_freetype_FreeTypeFontGenerator$FreeTypeFontData_lambda$getGlyphs$0)(jcontext ctx, jobject self);
+
+void mark_arc_freetype_FreeTypeFontGenerator$FreeTypeFontData(jobject object, jint mark, jint depth);
+void clinit_arc_freetype_FreeTypeFontGenerator$FreeTypeFontData(jcontext ctx);
+void init_arc_freetype_FreeTypeFontGenerator$FreeTypeFontData(jcontext ctx, jobject self);
+void M_arc_freetype_FreeTypeFontGenerator$FreeTypeFontData_setOverride_arc_graphics_g2d_Font$FontData(jcontext ctx, jobject self, jobject param0);
+void M_arc_freetype_FreeTypeFontGenerator$FreeTypeFontData_addFallback_arc_graphics_g2d_Font$FontData(jcontext ctx, jobject self, jobject param0);
+jobject M_arc_freetype_FreeTypeFontGenerator$FreeTypeFontData_getGlyph_char_R_arc_graphics_g2d_Font$Glyph(jcontext ctx, jobject self, jchar param0);
+void M_arc_freetype_FreeTypeFontGenerator$FreeTypeFontData_getGlyphs_arc_graphics_g2d_GlyphLayout$GlyphRun_java_lang_CharSequence_int_int_arc_graphics_g2d_Font$Glyph(jcontext ctx, jobject self, jobject param0, jobject param1, jint param2, jint param3, jobject param4);
+void M_arc_freetype_FreeTypeFontGenerator$FreeTypeFontData_dispose(jcontext ctx, jobject self);
+void M_arc_freetype_FreeTypeFontGenerator$FreeTypeFontData_lambda$getGlyphs$0(jcontext ctx, jobject self);
+
+#ifdef __cplusplus
+}
+#endif
+
+#endif

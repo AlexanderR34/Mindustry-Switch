@@ -1,0 +1,189 @@
+#ifndef HEADER_java_util_concurrent_locks_StampedLock
+#define HEADER_java_util_concurrent_locks_StampedLock
+
+#include "Clearwing.h"
+#include "java/lang/Object.h"
+#include "java/io/Serializable.h"
+
+#ifdef __cplusplus
+extern "C" {
+#endif
+
+typedef struct java_util_concurrent_locks_StampedLock {
+	java_lang_Object parent;
+	volatile jref F_whead;
+	volatile jref F_wtail;
+	jref F_readLockView;
+	jref F_writeLockView;
+	jref F_readWriteLockView;
+	volatile jlong F_state;
+	jint F_readerOverflow;
+} java_util_concurrent_locks_StampedLock;
+
+extern Class class_java_util_concurrent_locks_StampedLock;
+
+extern jlong SF_java_util_concurrent_locks_StampedLock_serialVersionUID;
+extern jint SF_java_util_concurrent_locks_StampedLock_NCPU;
+extern jint SF_java_util_concurrent_locks_StampedLock_SPINS;
+extern jint SF_java_util_concurrent_locks_StampedLock_HEAD_SPINS;
+extern jint SF_java_util_concurrent_locks_StampedLock_MAX_HEAD_SPINS;
+extern jint SF_java_util_concurrent_locks_StampedLock_OVERFLOW_YIELD_RATE;
+extern jint SF_java_util_concurrent_locks_StampedLock_LG_READERS;
+extern jlong SF_java_util_concurrent_locks_StampedLock_RUNIT;
+extern jlong SF_java_util_concurrent_locks_StampedLock_WBIT;
+extern jlong SF_java_util_concurrent_locks_StampedLock_RBITS;
+extern jlong SF_java_util_concurrent_locks_StampedLock_RFULL;
+extern jlong SF_java_util_concurrent_locks_StampedLock_ABITS;
+extern jlong SF_java_util_concurrent_locks_StampedLock_SBITS;
+extern jlong SF_java_util_concurrent_locks_StampedLock_ORIGIN;
+extern jlong SF_java_util_concurrent_locks_StampedLock_INTERRUPTED;
+extern jint SF_java_util_concurrent_locks_StampedLock_WAITING;
+extern jint SF_java_util_concurrent_locks_StampedLock_CANCELLED;
+extern jint SF_java_util_concurrent_locks_StampedLock_RMODE;
+extern jint SF_java_util_concurrent_locks_StampedLock_WMODE;
+
+#define VTABLE_java_util_concurrent_locks_StampedLock_hashCode_R_int 0
+typedef jint (*func_java_util_concurrent_locks_StampedLock_hashCode_R_int)(jcontext ctx, jobject self);
+#define VTABLE_java_util_concurrent_locks_StampedLock_equals_java_lang_Object_R_boolean 1
+typedef jbool (*func_java_util_concurrent_locks_StampedLock_equals_java_lang_Object_R_boolean)(jcontext ctx, jobject self, jobject param0);
+#define VTABLE_java_util_concurrent_locks_StampedLock_clone_R_java_lang_Object 2
+typedef jobject (*func_java_util_concurrent_locks_StampedLock_clone_R_java_lang_Object)(jcontext ctx, jobject self);
+#define VTABLE_java_util_concurrent_locks_StampedLock_getClass_R_java_lang_Class 3
+typedef jobject (*func_java_util_concurrent_locks_StampedLock_getClass_R_java_lang_Class)(jcontext ctx, jobject self);
+#define VTABLE_java_util_concurrent_locks_StampedLock_toString_R_java_lang_String 4
+typedef jobject (*func_java_util_concurrent_locks_StampedLock_toString_R_java_lang_String)(jcontext ctx, jobject self);
+#define VTABLE_java_util_concurrent_locks_StampedLock_finalize 5
+typedef void (*func_java_util_concurrent_locks_StampedLock_finalize)(jcontext ctx, jobject self);
+#define VTABLE_java_util_concurrent_locks_StampedLock_notify 6
+typedef void (*func_java_util_concurrent_locks_StampedLock_notify)(jcontext ctx, jobject self);
+#define VTABLE_java_util_concurrent_locks_StampedLock_notifyAll 7
+typedef void (*func_java_util_concurrent_locks_StampedLock_notifyAll)(jcontext ctx, jobject self);
+#define VTABLE_java_util_concurrent_locks_StampedLock_wait 8
+typedef void (*func_java_util_concurrent_locks_StampedLock_wait)(jcontext ctx, jobject self);
+#define VTABLE_java_util_concurrent_locks_StampedLock_wait_long 9
+typedef void (*func_java_util_concurrent_locks_StampedLock_wait_long)(jcontext ctx, jobject self, jlong param0);
+#define VTABLE_java_util_concurrent_locks_StampedLock_wait_long_int 10
+typedef void (*func_java_util_concurrent_locks_StampedLock_wait_long_int)(jcontext ctx, jobject self, jlong param0, jint param1);
+#define VTABLE_java_util_concurrent_locks_StampedLock_casState_long_long_R_boolean 11
+typedef jbool (*func_java_util_concurrent_locks_StampedLock_casState_long_long_R_boolean)(jcontext ctx, jobject self, jlong param0, jlong param1);
+#define VTABLE_java_util_concurrent_locks_StampedLock_tryWriteLock_long_R_long 12
+typedef jlong (*func_java_util_concurrent_locks_StampedLock_tryWriteLock_long_R_long)(jcontext ctx, jobject self, jlong param0);
+#define VTABLE_java_util_concurrent_locks_StampedLock_writeLock_R_long 13
+typedef jlong (*func_java_util_concurrent_locks_StampedLock_writeLock_R_long)(jcontext ctx, jobject self);
+#define VTABLE_java_util_concurrent_locks_StampedLock_tryWriteLock_R_long 14
+typedef jlong (*func_java_util_concurrent_locks_StampedLock_tryWriteLock_R_long)(jcontext ctx, jobject self);
+#define VTABLE_java_util_concurrent_locks_StampedLock_tryWriteLock_long_java_util_concurrent_TimeUnit_R_long 15
+typedef jlong (*func_java_util_concurrent_locks_StampedLock_tryWriteLock_long_java_util_concurrent_TimeUnit_R_long)(jcontext ctx, jobject self, jlong param0, jobject param1);
+#define VTABLE_java_util_concurrent_locks_StampedLock_writeLockInterruptibly_R_long 16
+typedef jlong (*func_java_util_concurrent_locks_StampedLock_writeLockInterruptibly_R_long)(jcontext ctx, jobject self);
+#define VTABLE_java_util_concurrent_locks_StampedLock_readLock_R_long 17
+typedef jlong (*func_java_util_concurrent_locks_StampedLock_readLock_R_long)(jcontext ctx, jobject self);
+#define VTABLE_java_util_concurrent_locks_StampedLock_tryReadLock_R_long 18
+typedef jlong (*func_java_util_concurrent_locks_StampedLock_tryReadLock_R_long)(jcontext ctx, jobject self);
+#define VTABLE_java_util_concurrent_locks_StampedLock_tryReadLock_long_java_util_concurrent_TimeUnit_R_long 19
+typedef jlong (*func_java_util_concurrent_locks_StampedLock_tryReadLock_long_java_util_concurrent_TimeUnit_R_long)(jcontext ctx, jobject self, jlong param0, jobject param1);
+#define VTABLE_java_util_concurrent_locks_StampedLock_readLockInterruptibly_R_long 20
+typedef jlong (*func_java_util_concurrent_locks_StampedLock_readLockInterruptibly_R_long)(jcontext ctx, jobject self);
+#define VTABLE_java_util_concurrent_locks_StampedLock_tryOptimisticRead_R_long 21
+typedef jlong (*func_java_util_concurrent_locks_StampedLock_tryOptimisticRead_R_long)(jcontext ctx, jobject self);
+#define VTABLE_java_util_concurrent_locks_StampedLock_validate_long_R_boolean 22
+typedef jbool (*func_java_util_concurrent_locks_StampedLock_validate_long_R_boolean)(jcontext ctx, jobject self, jlong param0);
+#define VTABLE_java_util_concurrent_locks_StampedLock_unlockWriteInternal_long_R_long 23
+typedef jlong (*func_java_util_concurrent_locks_StampedLock_unlockWriteInternal_long_R_long)(jcontext ctx, jobject self, jlong param0);
+#define VTABLE_java_util_concurrent_locks_StampedLock_unlockWrite_long 24
+typedef void (*func_java_util_concurrent_locks_StampedLock_unlockWrite_long)(jcontext ctx, jobject self, jlong param0);
+#define VTABLE_java_util_concurrent_locks_StampedLock_unlockRead_long 25
+typedef void (*func_java_util_concurrent_locks_StampedLock_unlockRead_long)(jcontext ctx, jobject self, jlong param0);
+#define VTABLE_java_util_concurrent_locks_StampedLock_unlock_long 26
+typedef void (*func_java_util_concurrent_locks_StampedLock_unlock_long)(jcontext ctx, jobject self, jlong param0);
+#define VTABLE_java_util_concurrent_locks_StampedLock_tryConvertToWriteLock_long_R_long 27
+typedef jlong (*func_java_util_concurrent_locks_StampedLock_tryConvertToWriteLock_long_R_long)(jcontext ctx, jobject self, jlong param0);
+#define VTABLE_java_util_concurrent_locks_StampedLock_tryConvertToReadLock_long_R_long 28
+typedef jlong (*func_java_util_concurrent_locks_StampedLock_tryConvertToReadLock_long_R_long)(jcontext ctx, jobject self, jlong param0);
+#define VTABLE_java_util_concurrent_locks_StampedLock_tryConvertToOptimisticRead_long_R_long 29
+typedef jlong (*func_java_util_concurrent_locks_StampedLock_tryConvertToOptimisticRead_long_R_long)(jcontext ctx, jobject self, jlong param0);
+#define VTABLE_java_util_concurrent_locks_StampedLock_tryUnlockWrite_R_boolean 30
+typedef jbool (*func_java_util_concurrent_locks_StampedLock_tryUnlockWrite_R_boolean)(jcontext ctx, jobject self);
+#define VTABLE_java_util_concurrent_locks_StampedLock_tryUnlockRead_R_boolean 31
+typedef jbool (*func_java_util_concurrent_locks_StampedLock_tryUnlockRead_R_boolean)(jcontext ctx, jobject self);
+#define VTABLE_java_util_concurrent_locks_StampedLock_getReadLockCount_long_R_int 32
+typedef jint (*func_java_util_concurrent_locks_StampedLock_getReadLockCount_long_R_int)(jcontext ctx, jobject self, jlong param0);
+#define VTABLE_java_util_concurrent_locks_StampedLock_isWriteLocked_R_boolean 33
+typedef jbool (*func_java_util_concurrent_locks_StampedLock_isWriteLocked_R_boolean)(jcontext ctx, jobject self);
+#define VTABLE_java_util_concurrent_locks_StampedLock_isReadLocked_R_boolean 34
+typedef jbool (*func_java_util_concurrent_locks_StampedLock_isReadLocked_R_boolean)(jcontext ctx, jobject self);
+#define VTABLE_java_util_concurrent_locks_StampedLock_getReadLockCount_R_int 35
+typedef jint (*func_java_util_concurrent_locks_StampedLock_getReadLockCount_R_int)(jcontext ctx, jobject self);
+#define VTABLE_java_util_concurrent_locks_StampedLock_asReadLock_R_java_util_concurrent_locks_Lock 36
+typedef jobject (*func_java_util_concurrent_locks_StampedLock_asReadLock_R_java_util_concurrent_locks_Lock)(jcontext ctx, jobject self);
+#define VTABLE_java_util_concurrent_locks_StampedLock_asWriteLock_R_java_util_concurrent_locks_Lock 37
+typedef jobject (*func_java_util_concurrent_locks_StampedLock_asWriteLock_R_java_util_concurrent_locks_Lock)(jcontext ctx, jobject self);
+#define VTABLE_java_util_concurrent_locks_StampedLock_asReadWriteLock_R_java_util_concurrent_locks_ReadWriteLock 38
+typedef jobject (*func_java_util_concurrent_locks_StampedLock_asReadWriteLock_R_java_util_concurrent_locks_ReadWriteLock)(jcontext ctx, jobject self);
+#define VTABLE_java_util_concurrent_locks_StampedLock_unstampedUnlockWrite 39
+typedef void (*func_java_util_concurrent_locks_StampedLock_unstampedUnlockWrite)(jcontext ctx, jobject self);
+#define VTABLE_java_util_concurrent_locks_StampedLock_unstampedUnlockRead 40
+typedef void (*func_java_util_concurrent_locks_StampedLock_unstampedUnlockRead)(jcontext ctx, jobject self);
+#define VTABLE_java_util_concurrent_locks_StampedLock_readObject_java_io_ObjectInputStream 41
+typedef void (*func_java_util_concurrent_locks_StampedLock_readObject_java_io_ObjectInputStream)(jcontext ctx, jobject self, jobject param0);
+#define VTABLE_java_util_concurrent_locks_StampedLock_tryIncReaderOverflow_long_R_long 42
+typedef jlong (*func_java_util_concurrent_locks_StampedLock_tryIncReaderOverflow_long_R_long)(jcontext ctx, jobject self, jlong param0);
+#define VTABLE_java_util_concurrent_locks_StampedLock_tryDecReaderOverflow_long_R_long 43
+typedef jlong (*func_java_util_concurrent_locks_StampedLock_tryDecReaderOverflow_long_R_long)(jcontext ctx, jobject self, jlong param0);
+#define VTABLE_java_util_concurrent_locks_StampedLock_release_java_util_concurrent_locks_StampedLock$WNode 44
+typedef void (*func_java_util_concurrent_locks_StampedLock_release_java_util_concurrent_locks_StampedLock$WNode)(jcontext ctx, jobject self, jobject param0);
+#define VTABLE_java_util_concurrent_locks_StampedLock_acquireWrite_boolean_long_R_long 45
+typedef jlong (*func_java_util_concurrent_locks_StampedLock_acquireWrite_boolean_long_R_long)(jcontext ctx, jobject self, jbool param0, jlong param1);
+#define VTABLE_java_util_concurrent_locks_StampedLock_acquireRead_boolean_long_R_long 46
+typedef jlong (*func_java_util_concurrent_locks_StampedLock_acquireRead_boolean_long_R_long)(jcontext ctx, jobject self, jbool param0, jlong param1);
+#define VTABLE_java_util_concurrent_locks_StampedLock_cancelWaiter_java_util_concurrent_locks_StampedLock$WNode_java_util_concurrent_locks_StampedLock$WNode_boolean_R_long 47
+typedef jlong (*func_java_util_concurrent_locks_StampedLock_cancelWaiter_java_util_concurrent_locks_StampedLock$WNode_java_util_concurrent_locks_StampedLock$WNode_boolean_R_long)(jcontext ctx, jobject self, jobject param0, jobject param1, jbool param2);
+
+void mark_java_util_concurrent_locks_StampedLock(jobject object, jint mark, jint depth);
+void clinit_java_util_concurrent_locks_StampedLock(jcontext ctx);
+void init_java_util_concurrent_locks_StampedLock(jcontext ctx, jobject self);
+jbool M_java_util_concurrent_locks_StampedLock_casState_long_long_R_boolean(jcontext ctx, jobject self, jlong param0, jlong param1);
+jlong M_java_util_concurrent_locks_StampedLock_tryWriteLock_long_R_long(jcontext ctx, jobject self, jlong param0);
+jlong M_java_util_concurrent_locks_StampedLock_writeLock_R_long(jcontext ctx, jobject self);
+jlong M_java_util_concurrent_locks_StampedLock_tryWriteLock_R_long(jcontext ctx, jobject self);
+jlong M_java_util_concurrent_locks_StampedLock_tryWriteLock_long_java_util_concurrent_TimeUnit_R_long(jcontext ctx, jobject self, jlong param0, jobject param1);
+jlong M_java_util_concurrent_locks_StampedLock_writeLockInterruptibly_R_long(jcontext ctx, jobject self);
+jlong M_java_util_concurrent_locks_StampedLock_readLock_R_long(jcontext ctx, jobject self);
+jlong M_java_util_concurrent_locks_StampedLock_tryReadLock_R_long(jcontext ctx, jobject self);
+jlong M_java_util_concurrent_locks_StampedLock_tryReadLock_long_java_util_concurrent_TimeUnit_R_long(jcontext ctx, jobject self, jlong param0, jobject param1);
+jlong M_java_util_concurrent_locks_StampedLock_readLockInterruptibly_R_long(jcontext ctx, jobject self);
+jlong M_java_util_concurrent_locks_StampedLock_tryOptimisticRead_R_long(jcontext ctx, jobject self);
+jbool M_java_util_concurrent_locks_StampedLock_validate_long_R_boolean(jcontext ctx, jobject self, jlong param0);
+jlong SM_java_util_concurrent_locks_StampedLock_unlockWriteState_long_R_long(jcontext ctx, jlong param0);
+jlong M_java_util_concurrent_locks_StampedLock_unlockWriteInternal_long_R_long(jcontext ctx, jobject self, jlong param0);
+void M_java_util_concurrent_locks_StampedLock_unlockWrite_long(jcontext ctx, jobject self, jlong param0);
+void M_java_util_concurrent_locks_StampedLock_unlockRead_long(jcontext ctx, jobject self, jlong param0);
+void M_java_util_concurrent_locks_StampedLock_unlock_long(jcontext ctx, jobject self, jlong param0);
+jlong M_java_util_concurrent_locks_StampedLock_tryConvertToWriteLock_long_R_long(jcontext ctx, jobject self, jlong param0);
+jlong M_java_util_concurrent_locks_StampedLock_tryConvertToReadLock_long_R_long(jcontext ctx, jobject self, jlong param0);
+jlong M_java_util_concurrent_locks_StampedLock_tryConvertToOptimisticRead_long_R_long(jcontext ctx, jobject self, jlong param0);
+jbool M_java_util_concurrent_locks_StampedLock_tryUnlockWrite_R_boolean(jcontext ctx, jobject self);
+jbool M_java_util_concurrent_locks_StampedLock_tryUnlockRead_R_boolean(jcontext ctx, jobject self);
+jint M_java_util_concurrent_locks_StampedLock_getReadLockCount_long_R_int(jcontext ctx, jobject self, jlong param0);
+jbool M_java_util_concurrent_locks_StampedLock_isWriteLocked_R_boolean(jcontext ctx, jobject self);
+jbool M_java_util_concurrent_locks_StampedLock_isReadLocked_R_boolean(jcontext ctx, jobject self);
+jint M_java_util_concurrent_locks_StampedLock_getReadLockCount_R_int(jcontext ctx, jobject self);
+jobject M_java_util_concurrent_locks_StampedLock_toString_R_java_lang_String(jcontext ctx, jobject self);
+jobject M_java_util_concurrent_locks_StampedLock_asReadLock_R_java_util_concurrent_locks_Lock(jcontext ctx, jobject self);
+jobject M_java_util_concurrent_locks_StampedLock_asWriteLock_R_java_util_concurrent_locks_Lock(jcontext ctx, jobject self);
+jobject M_java_util_concurrent_locks_StampedLock_asReadWriteLock_R_java_util_concurrent_locks_ReadWriteLock(jcontext ctx, jobject self);
+void M_java_util_concurrent_locks_StampedLock_unstampedUnlockWrite(jcontext ctx, jobject self);
+void M_java_util_concurrent_locks_StampedLock_unstampedUnlockRead(jcontext ctx, jobject self);
+void M_java_util_concurrent_locks_StampedLock_readObject_java_io_ObjectInputStream(jcontext ctx, jobject self, jobject param0);
+jlong M_java_util_concurrent_locks_StampedLock_tryIncReaderOverflow_long_R_long(jcontext ctx, jobject self, jlong param0);
+jlong M_java_util_concurrent_locks_StampedLock_tryDecReaderOverflow_long_R_long(jcontext ctx, jobject self, jlong param0);
+void M_java_util_concurrent_locks_StampedLock_release_java_util_concurrent_locks_StampedLock$WNode(jcontext ctx, jobject self, jobject param0);
+jlong M_java_util_concurrent_locks_StampedLock_acquireWrite_boolean_long_R_long(jcontext ctx, jobject self, jbool param0, jlong param1);
+jlong M_java_util_concurrent_locks_StampedLock_acquireRead_boolean_long_R_long(jcontext ctx, jobject self, jbool param0, jlong param1);
+jlong M_java_util_concurrent_locks_StampedLock_cancelWaiter_java_util_concurrent_locks_StampedLock$WNode_java_util_concurrent_locks_StampedLock$WNode_boolean_R_long(jcontext ctx, jobject self, jobject param0, jobject param1, jbool param2);
+
+#ifdef __cplusplus
+}
+#endif
+
+#endif

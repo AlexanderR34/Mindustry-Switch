@@ -1,0 +1,121 @@
+#ifndef HEADER_arc_util_serialization_JsonWriter
+#define HEADER_arc_util_serialization_JsonWriter
+
+#include "Clearwing.h"
+#include "java/io/Writer.h"
+#include "arc/util/serialization/BaseJsonWriter.h"
+
+#ifdef __cplusplus
+extern "C" {
+#endif
+
+typedef struct arc_util_serialization_JsonWriter {
+	java_io_Writer parent;
+	jref F_writer;
+	jref F_stack;
+	jref F_current;
+	jbool F_named;
+	jref F_outputType;
+	jbool F_quoteLongValues;
+} arc_util_serialization_JsonWriter;
+
+extern Class class_arc_util_serialization_JsonWriter;
+
+
+#define VTABLE_arc_util_serialization_JsonWriter_hashCode_R_int 0
+typedef jint (*func_arc_util_serialization_JsonWriter_hashCode_R_int)(jcontext ctx, jobject self);
+#define VTABLE_arc_util_serialization_JsonWriter_equals_java_lang_Object_R_boolean 1
+typedef jbool (*func_arc_util_serialization_JsonWriter_equals_java_lang_Object_R_boolean)(jcontext ctx, jobject self, jobject param0);
+#define VTABLE_arc_util_serialization_JsonWriter_clone_R_java_lang_Object 2
+typedef jobject (*func_arc_util_serialization_JsonWriter_clone_R_java_lang_Object)(jcontext ctx, jobject self);
+#define VTABLE_arc_util_serialization_JsonWriter_getClass_R_java_lang_Class 3
+typedef jobject (*func_arc_util_serialization_JsonWriter_getClass_R_java_lang_Class)(jcontext ctx, jobject self);
+#define VTABLE_arc_util_serialization_JsonWriter_toString_R_java_lang_String 4
+typedef jobject (*func_arc_util_serialization_JsonWriter_toString_R_java_lang_String)(jcontext ctx, jobject self);
+#define VTABLE_arc_util_serialization_JsonWriter_finalize 5
+typedef void (*func_arc_util_serialization_JsonWriter_finalize)(jcontext ctx, jobject self);
+#define VTABLE_arc_util_serialization_JsonWriter_notify 6
+typedef void (*func_arc_util_serialization_JsonWriter_notify)(jcontext ctx, jobject self);
+#define VTABLE_arc_util_serialization_JsonWriter_notifyAll 7
+typedef void (*func_arc_util_serialization_JsonWriter_notifyAll)(jcontext ctx, jobject self);
+#define VTABLE_arc_util_serialization_JsonWriter_wait 8
+typedef void (*func_arc_util_serialization_JsonWriter_wait)(jcontext ctx, jobject self);
+#define VTABLE_arc_util_serialization_JsonWriter_wait_long 9
+typedef void (*func_arc_util_serialization_JsonWriter_wait_long)(jcontext ctx, jobject self, jlong param0);
+#define VTABLE_arc_util_serialization_JsonWriter_wait_long_int 10
+typedef void (*func_arc_util_serialization_JsonWriter_wait_long_int)(jcontext ctx, jobject self, jlong param0, jint param1);
+#define VTABLE_arc_util_serialization_JsonWriter_append_char_R_java_lang_Appendable 11
+typedef jobject (*func_arc_util_serialization_JsonWriter_append_char_R_java_lang_Appendable)(jcontext ctx, jobject self, jchar param0);
+#define VTABLE_arc_util_serialization_JsonWriter_append_java_lang_CharSequence_R_java_lang_Appendable 12
+typedef jobject (*func_arc_util_serialization_JsonWriter_append_java_lang_CharSequence_R_java_lang_Appendable)(jcontext ctx, jobject self, jobject param0);
+#define VTABLE_arc_util_serialization_JsonWriter_append_java_lang_CharSequence_int_int_R_java_lang_Appendable 13
+typedef jobject (*func_arc_util_serialization_JsonWriter_append_java_lang_CharSequence_int_int_R_java_lang_Appendable)(jcontext ctx, jobject self, jobject param0, jint param1, jint param2);
+#define VTABLE_arc_util_serialization_JsonWriter_close 14
+typedef void (*func_arc_util_serialization_JsonWriter_close)(jcontext ctx, jobject self);
+#define VTABLE_arc_util_serialization_JsonWriter_flush 15
+typedef void (*func_arc_util_serialization_JsonWriter_flush)(jcontext ctx, jobject self);
+#define VTABLE_arc_util_serialization_JsonWriter_write_Array1_char 16
+typedef void (*func_arc_util_serialization_JsonWriter_write_Array1_char)(jcontext ctx, jobject self, jobject param0);
+#define VTABLE_arc_util_serialization_JsonWriter_write_Array1_char_int_int 17
+typedef void (*func_arc_util_serialization_JsonWriter_write_Array1_char_int_int)(jcontext ctx, jobject self, jobject param0, jint param1, jint param2);
+#define VTABLE_arc_util_serialization_JsonWriter_write_int 18
+typedef void (*func_arc_util_serialization_JsonWriter_write_int)(jcontext ctx, jobject self, jint param0);
+#define VTABLE_arc_util_serialization_JsonWriter_write_java_lang_String 19
+typedef void (*func_arc_util_serialization_JsonWriter_write_java_lang_String)(jcontext ctx, jobject self, jobject param0);
+#define VTABLE_arc_util_serialization_JsonWriter_write_java_lang_String_int_int 20
+typedef void (*func_arc_util_serialization_JsonWriter_write_java_lang_String_int_int)(jcontext ctx, jobject self, jobject param0, jint param1, jint param2);
+#define VTABLE_arc_util_serialization_JsonWriter_append_java_lang_CharSequence_R_java_io_Writer 21
+typedef jobject (*func_arc_util_serialization_JsonWriter_append_java_lang_CharSequence_R_java_io_Writer)(jcontext ctx, jobject self, jobject param0);
+#define VTABLE_arc_util_serialization_JsonWriter_append_char_R_java_io_Writer 22
+typedef jobject (*func_arc_util_serialization_JsonWriter_append_char_R_java_io_Writer)(jcontext ctx, jobject self, jchar param0);
+#define VTABLE_arc_util_serialization_JsonWriter_append_java_lang_CharSequence_int_int_R_java_io_Writer 23
+typedef jobject (*func_arc_util_serialization_JsonWriter_append_java_lang_CharSequence_int_int_R_java_io_Writer)(jcontext ctx, jobject self, jobject param0, jint param1, jint param2);
+#define VTABLE_arc_util_serialization_JsonWriter_setOutputType_arc_util_serialization_JsonWriter$OutputType 24
+typedef void (*func_arc_util_serialization_JsonWriter_setOutputType_arc_util_serialization_JsonWriter$OutputType)(jcontext ctx, jobject self, jobject param0);
+#define VTABLE_arc_util_serialization_JsonWriter_setQuoteLongValues_boolean 25
+typedef void (*func_arc_util_serialization_JsonWriter_setQuoteLongValues_boolean)(jcontext ctx, jobject self, jbool param0);
+#define VTABLE_arc_util_serialization_JsonWriter_name_java_lang_String_R_arc_util_serialization_BaseJsonWriter 26
+typedef jobject (*func_arc_util_serialization_JsonWriter_name_java_lang_String_R_arc_util_serialization_BaseJsonWriter)(jcontext ctx, jobject self, jobject param0);
+#define VTABLE_arc_util_serialization_JsonWriter_object_R_arc_util_serialization_BaseJsonWriter 27
+typedef jobject (*func_arc_util_serialization_JsonWriter_object_R_arc_util_serialization_BaseJsonWriter)(jcontext ctx, jobject self);
+#define VTABLE_arc_util_serialization_JsonWriter_array_R_arc_util_serialization_BaseJsonWriter 28
+typedef jobject (*func_arc_util_serialization_JsonWriter_array_R_arc_util_serialization_BaseJsonWriter)(jcontext ctx, jobject self);
+#define VTABLE_arc_util_serialization_JsonWriter_value_java_lang_Object_R_arc_util_serialization_BaseJsonWriter 29
+typedef jobject (*func_arc_util_serialization_JsonWriter_value_java_lang_Object_R_arc_util_serialization_BaseJsonWriter)(jcontext ctx, jobject self, jobject param0);
+#define VTABLE_arc_util_serialization_JsonWriter_object_java_lang_String_R_arc_util_serialization_BaseJsonWriter 30
+typedef jobject (*func_arc_util_serialization_JsonWriter_object_java_lang_String_R_arc_util_serialization_BaseJsonWriter)(jcontext ctx, jobject self, jobject param0);
+#define VTABLE_arc_util_serialization_JsonWriter_array_java_lang_String_R_arc_util_serialization_BaseJsonWriter 31
+typedef jobject (*func_arc_util_serialization_JsonWriter_array_java_lang_String_R_arc_util_serialization_BaseJsonWriter)(jcontext ctx, jobject self, jobject param0);
+#define VTABLE_arc_util_serialization_JsonWriter_set_java_lang_String_java_lang_Object_R_arc_util_serialization_BaseJsonWriter 32
+typedef jobject (*func_arc_util_serialization_JsonWriter_set_java_lang_String_java_lang_Object_R_arc_util_serialization_BaseJsonWriter)(jcontext ctx, jobject self, jobject param0, jobject param1);
+#define VTABLE_arc_util_serialization_JsonWriter_pop_R_arc_util_serialization_BaseJsonWriter 33
+typedef jobject (*func_arc_util_serialization_JsonWriter_pop_R_arc_util_serialization_BaseJsonWriter)(jcontext ctx, jobject self);
+#define VTABLE_arc_util_serialization_JsonWriter_getWriter_R_java_io_Writer 34
+typedef jobject (*func_arc_util_serialization_JsonWriter_getWriter_R_java_io_Writer)(jcontext ctx, jobject self);
+#define VTABLE_arc_util_serialization_JsonWriter_requireCommaOrName 35
+typedef void (*func_arc_util_serialization_JsonWriter_requireCommaOrName)(jcontext ctx, jobject self);
+
+void mark_arc_util_serialization_JsonWriter(jobject object, jint mark, jint depth);
+void clinit_arc_util_serialization_JsonWriter(jcontext ctx);
+void init_arc_util_serialization_JsonWriter_java_io_Writer(jcontext ctx, jobject self, jobject param0);
+jobject M_arc_util_serialization_JsonWriter_getWriter_R_java_io_Writer(jcontext ctx, jobject self);
+void M_arc_util_serialization_JsonWriter_setOutputType_arc_util_serialization_JsonWriter$OutputType(jcontext ctx, jobject self, jobject param0);
+void M_arc_util_serialization_JsonWriter_setQuoteLongValues_boolean(jcontext ctx, jobject self, jbool param0);
+jobject M_arc_util_serialization_JsonWriter_name_java_lang_String_R_arc_util_serialization_BaseJsonWriter(jcontext ctx, jobject self, jobject param0);
+jobject M_arc_util_serialization_JsonWriter_object_R_arc_util_serialization_BaseJsonWriter(jcontext ctx, jobject self);
+jobject M_arc_util_serialization_JsonWriter_array_R_arc_util_serialization_BaseJsonWriter(jcontext ctx, jobject self);
+jobject M_arc_util_serialization_JsonWriter_value_java_lang_Object_R_arc_util_serialization_BaseJsonWriter(jcontext ctx, jobject self, jobject param0);
+void M_arc_util_serialization_JsonWriter_requireCommaOrName(jcontext ctx, jobject self);
+jobject M_arc_util_serialization_JsonWriter_object_java_lang_String_R_arc_util_serialization_BaseJsonWriter(jcontext ctx, jobject self, jobject param0);
+jobject M_arc_util_serialization_JsonWriter_array_java_lang_String_R_arc_util_serialization_BaseJsonWriter(jcontext ctx, jobject self, jobject param0);
+jobject M_arc_util_serialization_JsonWriter_set_java_lang_String_java_lang_Object_R_arc_util_serialization_BaseJsonWriter(jcontext ctx, jobject self, jobject param0, jobject param1);
+jobject M_arc_util_serialization_JsonWriter_pop_R_arc_util_serialization_BaseJsonWriter(jcontext ctx, jobject self);
+void M_arc_util_serialization_JsonWriter_write_Array1_char_int_int(jcontext ctx, jobject self, jobject param0, jint param1, jint param2);
+void M_arc_util_serialization_JsonWriter_flush(jcontext ctx, jobject self);
+void M_arc_util_serialization_JsonWriter_close(jcontext ctx, jobject self);
+
+#ifdef __cplusplus
+}
+#endif
+
+#endif

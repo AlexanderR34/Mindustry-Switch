@@ -1,0 +1,88 @@
+#ifndef HEADER_mindustry_game_MapObjectives$UnitCountObjective
+#define HEADER_mindustry_game_MapObjectives$UnitCountObjective
+
+#include "Clearwing.h"
+#include "mindustry/game/MapObjectives_MapObjective.h"
+
+#ifdef __cplusplus
+extern "C" {
+#endif
+
+typedef struct mindustry_game_MapObjectives$UnitCountObjective {
+	mindustry_game_MapObjectives$MapObjective parent;
+	jref F_unit;
+	jint F_count;
+} mindustry_game_MapObjectives$UnitCountObjective;
+
+extern Class class_mindustry_game_MapObjectives$UnitCountObjective;
+
+
+#define VTABLE_mindustry_game_MapObjectives$UnitCountObjective_hashCode_R_int 0
+typedef jint (*func_mindustry_game_MapObjectives$UnitCountObjective_hashCode_R_int)(jcontext ctx, jobject self);
+#define VTABLE_mindustry_game_MapObjectives$UnitCountObjective_equals_java_lang_Object_R_boolean 1
+typedef jbool (*func_mindustry_game_MapObjectives$UnitCountObjective_equals_java_lang_Object_R_boolean)(jcontext ctx, jobject self, jobject param0);
+#define VTABLE_mindustry_game_MapObjectives$UnitCountObjective_clone_R_java_lang_Object 2
+typedef jobject (*func_mindustry_game_MapObjectives$UnitCountObjective_clone_R_java_lang_Object)(jcontext ctx, jobject self);
+#define VTABLE_mindustry_game_MapObjectives$UnitCountObjective_getClass_R_java_lang_Class 3
+typedef jobject (*func_mindustry_game_MapObjectives$UnitCountObjective_getClass_R_java_lang_Class)(jcontext ctx, jobject self);
+#define VTABLE_mindustry_game_MapObjectives$UnitCountObjective_toString_R_java_lang_String 4
+typedef jobject (*func_mindustry_game_MapObjectives$UnitCountObjective_toString_R_java_lang_String)(jcontext ctx, jobject self);
+#define VTABLE_mindustry_game_MapObjectives$UnitCountObjective_finalize 5
+typedef void (*func_mindustry_game_MapObjectives$UnitCountObjective_finalize)(jcontext ctx, jobject self);
+#define VTABLE_mindustry_game_MapObjectives$UnitCountObjective_notify 6
+typedef void (*func_mindustry_game_MapObjectives$UnitCountObjective_notify)(jcontext ctx, jobject self);
+#define VTABLE_mindustry_game_MapObjectives$UnitCountObjective_notifyAll 7
+typedef void (*func_mindustry_game_MapObjectives$UnitCountObjective_notifyAll)(jcontext ctx, jobject self);
+#define VTABLE_mindustry_game_MapObjectives$UnitCountObjective_wait 8
+typedef void (*func_mindustry_game_MapObjectives$UnitCountObjective_wait)(jcontext ctx, jobject self);
+#define VTABLE_mindustry_game_MapObjectives$UnitCountObjective_wait_long 9
+typedef void (*func_mindustry_game_MapObjectives$UnitCountObjective_wait_long)(jcontext ctx, jobject self, jlong param0);
+#define VTABLE_mindustry_game_MapObjectives$UnitCountObjective_wait_long_int 10
+typedef void (*func_mindustry_game_MapObjectives$UnitCountObjective_wait_long_int)(jcontext ctx, jobject self, jlong param0, jint param1);
+#define VTABLE_mindustry_game_MapObjectives$UnitCountObjective_update_R_boolean 11
+typedef jbool (*func_mindustry_game_MapObjectives$UnitCountObjective_update_R_boolean)(jcontext ctx, jobject self);
+#define VTABLE_mindustry_game_MapObjectives$UnitCountObjective_reset 12
+typedef void (*func_mindustry_game_MapObjectives$UnitCountObjective_reset)(jcontext ctx, jobject self);
+#define VTABLE_mindustry_game_MapObjectives$UnitCountObjective_done 13
+typedef void (*func_mindustry_game_MapObjectives$UnitCountObjective_done)(jcontext ctx, jobject self);
+#define VTABLE_mindustry_game_MapObjectives$UnitCountObjective_dependencyFinished_R_boolean 14
+typedef jbool (*func_mindustry_game_MapObjectives$UnitCountObjective_dependencyFinished_R_boolean)(jcontext ctx, jobject self);
+#define VTABLE_mindustry_game_MapObjectives$UnitCountObjective_isCompleted_R_boolean 15
+typedef jbool (*func_mindustry_game_MapObjectives$UnitCountObjective_isCompleted_R_boolean)(jcontext ctx, jobject self);
+#define VTABLE_mindustry_game_MapObjectives$UnitCountObjective_qualified_R_boolean 16
+typedef jbool (*func_mindustry_game_MapObjectives$UnitCountObjective_qualified_R_boolean)(jcontext ctx, jobject self);
+#define VTABLE_mindustry_game_MapObjectives$UnitCountObjective_child_mindustry_game_MapObjectives$MapObjective_R_mindustry_game_MapObjectives$MapObjective 17
+typedef jobject (*func_mindustry_game_MapObjectives$UnitCountObjective_child_mindustry_game_MapObjectives$MapObjective_R_mindustry_game_MapObjectives$MapObjective)(jcontext ctx, jobject self, jobject param0);
+#define VTABLE_mindustry_game_MapObjectives$UnitCountObjective_parent_mindustry_game_MapObjectives$MapObjective_R_mindustry_game_MapObjectives$MapObjective 18
+typedef jobject (*func_mindustry_game_MapObjectives$UnitCountObjective_parent_mindustry_game_MapObjectives$MapObjective_R_mindustry_game_MapObjectives$MapObjective)(jcontext ctx, jobject self, jobject param0);
+#define VTABLE_mindustry_game_MapObjectives$UnitCountObjective_details_java_lang_String_R_mindustry_game_MapObjectives$MapObjective 19
+typedef jobject (*func_mindustry_game_MapObjectives$UnitCountObjective_details_java_lang_String_R_mindustry_game_MapObjectives$MapObjective)(jcontext ctx, jobject self, jobject param0);
+#define VTABLE_mindustry_game_MapObjectives$UnitCountObjective_flagsAdded_Array1_java_lang_String_R_mindustry_game_MapObjectives$MapObjective 20
+typedef jobject (*func_mindustry_game_MapObjectives$UnitCountObjective_flagsAdded_Array1_java_lang_String_R_mindustry_game_MapObjectives$MapObjective)(jcontext ctx, jobject self, jobject param0);
+#define VTABLE_mindustry_game_MapObjectives$UnitCountObjective_flagsRemoved_Array1_java_lang_String_R_mindustry_game_MapObjectives$MapObjective 21
+typedef jobject (*func_mindustry_game_MapObjectives$UnitCountObjective_flagsRemoved_Array1_java_lang_String_R_mindustry_game_MapObjectives$MapObjective)(jcontext ctx, jobject self, jobject param0);
+#define VTABLE_mindustry_game_MapObjectives$UnitCountObjective_markers_Array1_mindustry_game_MapObjectives$ObjectiveMarker_R_mindustry_game_MapObjectives$MapObjective 22
+typedef jobject (*func_mindustry_game_MapObjectives$UnitCountObjective_markers_Array1_mindustry_game_MapObjectives$ObjectiveMarker_R_mindustry_game_MapObjectives$MapObjective)(jcontext ctx, jobject self, jobject param0);
+#define VTABLE_mindustry_game_MapObjectives$UnitCountObjective_text_R_java_lang_String 23
+typedef jobject (*func_mindustry_game_MapObjectives$UnitCountObjective_text_R_java_lang_String)(jcontext ctx, jobject self);
+#define VTABLE_mindustry_game_MapObjectives$UnitCountObjective_details_R_java_lang_String 24
+typedef jobject (*func_mindustry_game_MapObjectives$UnitCountObjective_details_R_java_lang_String)(jcontext ctx, jobject self);
+#define VTABLE_mindustry_game_MapObjectives$UnitCountObjective_typeName_R_java_lang_String 25
+typedef jobject (*func_mindustry_game_MapObjectives$UnitCountObjective_typeName_R_java_lang_String)(jcontext ctx, jobject self);
+#define VTABLE_mindustry_game_MapObjectives$UnitCountObjective_validate 26
+typedef void (*func_mindustry_game_MapObjectives$UnitCountObjective_validate)(jcontext ctx, jobject self);
+
+void mark_mindustry_game_MapObjectives$UnitCountObjective(jobject object, jint mark, jint depth);
+void clinit_mindustry_game_MapObjectives$UnitCountObjective(jcontext ctx);
+void init_mindustry_game_MapObjectives$UnitCountObjective_mindustry_type_UnitType_int(jcontext ctx, jobject self, jobject param0, jint param1);
+void init_mindustry_game_MapObjectives$UnitCountObjective(jcontext ctx, jobject self);
+jbool M_mindustry_game_MapObjectives$UnitCountObjective_update_R_boolean(jcontext ctx, jobject self);
+jobject M_mindustry_game_MapObjectives$UnitCountObjective_text_R_java_lang_String(jcontext ctx, jobject self);
+void M_mindustry_game_MapObjectives$UnitCountObjective_validate(jcontext ctx, jobject self);
+jobject M_mindustry_game_MapObjectives$UnitCountObjective_toString_R_java_lang_String(jcontext ctx, jobject self);
+
+#ifdef __cplusplus
+}
+#endif
+
+#endif

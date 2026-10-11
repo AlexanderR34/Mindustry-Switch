@@ -1,0 +1,128 @@
+#ifndef HEADER_arc_freetype_FreeType
+#define HEADER_arc_freetype_FreeType
+
+#include "Clearwing.h"
+#include "java/lang/Object.h"
+
+#ifdef __cplusplus
+extern "C" {
+#endif
+
+typedef struct arc_freetype_FreeType {
+	java_lang_Object parent;
+} arc_freetype_FreeType;
+
+extern Class class_arc_freetype_FreeType;
+
+extern jint SF_arc_freetype_FreeType_FT_PIXEL_MODE_NONE;
+extern jint SF_arc_freetype_FreeType_FT_PIXEL_MODE_MONO;
+extern jint SF_arc_freetype_FreeType_FT_PIXEL_MODE_GRAY;
+extern jint SF_arc_freetype_FreeType_FT_PIXEL_MODE_GRAY2;
+extern jint SF_arc_freetype_FreeType_FT_PIXEL_MODE_GRAY4;
+extern jint SF_arc_freetype_FreeType_FT_PIXEL_MODE_LCD;
+extern jint SF_arc_freetype_FreeType_FT_PIXEL_MODE_LCD_V;
+extern jint SF_arc_freetype_FreeType_FT_ENCODING_NONE;
+extern jint SF_arc_freetype_FreeType_FT_ENCODING_MS_SYMBOL;
+extern jint SF_arc_freetype_FreeType_FT_ENCODING_UNICODE;
+extern jint SF_arc_freetype_FreeType_FT_ENCODING_SJIS;
+extern jint SF_arc_freetype_FreeType_FT_ENCODING_GB2312;
+extern jint SF_arc_freetype_FreeType_FT_ENCODING_BIG5;
+extern jint SF_arc_freetype_FreeType_FT_ENCODING_WANSUNG;
+extern jint SF_arc_freetype_FreeType_FT_ENCODING_JOHAB;
+extern jint SF_arc_freetype_FreeType_FT_ENCODING_ADOBE_STANDARD;
+extern jint SF_arc_freetype_FreeType_FT_ENCODING_ADOBE_EXPERT;
+extern jint SF_arc_freetype_FreeType_FT_ENCODING_ADOBE_CUSTOM;
+extern jint SF_arc_freetype_FreeType_FT_ENCODING_ADOBE_LATIN_1;
+extern jint SF_arc_freetype_FreeType_FT_ENCODING_OLD_LATIN_2;
+extern jint SF_arc_freetype_FreeType_FT_ENCODING_APPLE_ROMAN;
+extern jint SF_arc_freetype_FreeType_FT_FACE_FLAG_SCALABLE;
+extern jint SF_arc_freetype_FreeType_FT_FACE_FLAG_FIXED_SIZES;
+extern jint SF_arc_freetype_FreeType_FT_FACE_FLAG_FIXED_WIDTH;
+extern jint SF_arc_freetype_FreeType_FT_FACE_FLAG_SFNT;
+extern jint SF_arc_freetype_FreeType_FT_FACE_FLAG_HORIZONTAL;
+extern jint SF_arc_freetype_FreeType_FT_FACE_FLAG_VERTICAL;
+extern jint SF_arc_freetype_FreeType_FT_FACE_FLAG_KERNING;
+extern jint SF_arc_freetype_FreeType_FT_FACE_FLAG_FAST_GLYPHS;
+extern jint SF_arc_freetype_FreeType_FT_FACE_FLAG_MULTIPLE_MASTERS;
+extern jint SF_arc_freetype_FreeType_FT_FACE_FLAG_GLYPH_NAMES;
+extern jint SF_arc_freetype_FreeType_FT_FACE_FLAG_EXTERNAL_STREAM;
+extern jint SF_arc_freetype_FreeType_FT_FACE_FLAG_HINTER;
+extern jint SF_arc_freetype_FreeType_FT_FACE_FLAG_CID_KEYED;
+extern jint SF_arc_freetype_FreeType_FT_FACE_FLAG_TRICKY;
+extern jint SF_arc_freetype_FreeType_FT_STYLE_FLAG_ITALIC;
+extern jint SF_arc_freetype_FreeType_FT_STYLE_FLAG_BOLD;
+extern jint SF_arc_freetype_FreeType_FT_LOAD_DEFAULT;
+extern jint SF_arc_freetype_FreeType_FT_LOAD_NO_SCALE;
+extern jint SF_arc_freetype_FreeType_FT_LOAD_NO_HINTING;
+extern jint SF_arc_freetype_FreeType_FT_LOAD_RENDER;
+extern jint SF_arc_freetype_FreeType_FT_LOAD_NO_BITMAP;
+extern jint SF_arc_freetype_FreeType_FT_LOAD_VERTICAL_LAYOUT;
+extern jint SF_arc_freetype_FreeType_FT_LOAD_FORCE_AUTOHINT;
+extern jint SF_arc_freetype_FreeType_FT_LOAD_CROP_BITMAP;
+extern jint SF_arc_freetype_FreeType_FT_LOAD_PEDANTIC;
+extern jint SF_arc_freetype_FreeType_FT_LOAD_IGNORE_GLOBAL_ADVANCE_WIDTH;
+extern jint SF_arc_freetype_FreeType_FT_LOAD_NO_RECURSE;
+extern jint SF_arc_freetype_FreeType_FT_LOAD_IGNORE_TRANSFORM;
+extern jint SF_arc_freetype_FreeType_FT_LOAD_MONOCHROME;
+extern jint SF_arc_freetype_FreeType_FT_LOAD_LINEAR_DESIGN;
+extern jint SF_arc_freetype_FreeType_FT_LOAD_NO_AUTOHINT;
+extern jint SF_arc_freetype_FreeType_FT_LOAD_TARGET_NORMAL;
+extern jint SF_arc_freetype_FreeType_FT_LOAD_TARGET_LIGHT;
+extern jint SF_arc_freetype_FreeType_FT_LOAD_TARGET_MONO;
+extern jint SF_arc_freetype_FreeType_FT_LOAD_TARGET_LCD;
+extern jint SF_arc_freetype_FreeType_FT_LOAD_TARGET_LCD_V;
+extern jint SF_arc_freetype_FreeType_FT_RENDER_MODE_NORMAL;
+extern jint SF_arc_freetype_FreeType_FT_RENDER_MODE_LIGHT;
+extern jint SF_arc_freetype_FreeType_FT_RENDER_MODE_MONO;
+extern jint SF_arc_freetype_FreeType_FT_RENDER_MODE_LCD;
+extern jint SF_arc_freetype_FreeType_FT_RENDER_MODE_LCD_V;
+extern jint SF_arc_freetype_FreeType_FT_RENDER_MODE_MAX;
+extern jint SF_arc_freetype_FreeType_FT_KERNING_DEFAULT;
+extern jint SF_arc_freetype_FreeType_FT_KERNING_UNFITTED;
+extern jint SF_arc_freetype_FreeType_FT_KERNING_UNSCALED;
+extern jint SF_arc_freetype_FreeType_FT_STROKER_LINECAP_BUTT;
+extern jint SF_arc_freetype_FreeType_FT_STROKER_LINECAP_ROUND;
+extern jint SF_arc_freetype_FreeType_FT_STROKER_LINECAP_SQUARE;
+extern jint SF_arc_freetype_FreeType_FT_STROKER_LINEJOIN_ROUND;
+extern jint SF_arc_freetype_FreeType_FT_STROKER_LINEJOIN_BEVEL;
+extern jint SF_arc_freetype_FreeType_FT_STROKER_LINEJOIN_MITER_VARIABLE;
+extern jint SF_arc_freetype_FreeType_FT_STROKER_LINEJOIN_MITER;
+extern jint SF_arc_freetype_FreeType_FT_STROKER_LINEJOIN_MITER_FIXED;
+
+#define VTABLE_arc_freetype_FreeType_hashCode_R_int 0
+typedef jint (*func_arc_freetype_FreeType_hashCode_R_int)(jcontext ctx, jobject self);
+#define VTABLE_arc_freetype_FreeType_equals_java_lang_Object_R_boolean 1
+typedef jbool (*func_arc_freetype_FreeType_equals_java_lang_Object_R_boolean)(jcontext ctx, jobject self, jobject param0);
+#define VTABLE_arc_freetype_FreeType_clone_R_java_lang_Object 2
+typedef jobject (*func_arc_freetype_FreeType_clone_R_java_lang_Object)(jcontext ctx, jobject self);
+#define VTABLE_arc_freetype_FreeType_getClass_R_java_lang_Class 3
+typedef jobject (*func_arc_freetype_FreeType_getClass_R_java_lang_Class)(jcontext ctx, jobject self);
+#define VTABLE_arc_freetype_FreeType_toString_R_java_lang_String 4
+typedef jobject (*func_arc_freetype_FreeType_toString_R_java_lang_String)(jcontext ctx, jobject self);
+#define VTABLE_arc_freetype_FreeType_finalize 5
+typedef void (*func_arc_freetype_FreeType_finalize)(jcontext ctx, jobject self);
+#define VTABLE_arc_freetype_FreeType_notify 6
+typedef void (*func_arc_freetype_FreeType_notify)(jcontext ctx, jobject self);
+#define VTABLE_arc_freetype_FreeType_notifyAll 7
+typedef void (*func_arc_freetype_FreeType_notifyAll)(jcontext ctx, jobject self);
+#define VTABLE_arc_freetype_FreeType_wait 8
+typedef void (*func_arc_freetype_FreeType_wait)(jcontext ctx, jobject self);
+#define VTABLE_arc_freetype_FreeType_wait_long 9
+typedef void (*func_arc_freetype_FreeType_wait_long)(jcontext ctx, jobject self, jlong param0);
+#define VTABLE_arc_freetype_FreeType_wait_long_int 10
+typedef void (*func_arc_freetype_FreeType_wait_long_int)(jcontext ctx, jobject self, jlong param0, jint param1);
+
+void mark_arc_freetype_FreeType(jobject object, jint mark, jint depth);
+void clinit_arc_freetype_FreeType(jcontext ctx);
+void init_arc_freetype_FreeType(jcontext ctx, jobject self);
+jint SM_arc_freetype_FreeType_getLastErrorCode_R_int(jcontext ctx);
+jint SM_arc_freetype_FreeType_encode_char_char_char_char_R_int(jcontext ctx, jchar param0, jchar param1, jchar param2, jchar param3);
+jobject SM_arc_freetype_FreeType_initFreeType_R_arc_freetype_FreeType$Library(jcontext ctx);
+jlong SM_arc_freetype_FreeType_initFreeTypeJni_R_long(jcontext ctx);
+jint SM_arc_freetype_FreeType_toInt_int_R_int(jcontext ctx, jint param0);
+
+#ifdef __cplusplus
+}
+#endif
+
+#endif

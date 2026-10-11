@@ -1,0 +1,348 @@
+#ifndef HEADER_arc_util_serialization_JsonValue
+#define HEADER_arc_util_serialization_JsonValue
+
+#include "Clearwing.h"
+#include "java/lang/Object.h"
+#include "java/lang/Iterable.h"
+
+#ifdef __cplusplus
+extern "C" {
+#endif
+
+typedef struct arc_util_serialization_JsonValue {
+	java_lang_Object parent;
+	jref F_name;
+	jref F_child;
+	jref F_next;
+	jref F_prev;
+	jref F_parent;
+	jint F_size;
+	jref F_type;
+	jref F_stringValue;
+	jdouble F_doubleValue;
+	jlong F_longValue;
+} arc_util_serialization_JsonValue;
+
+extern Class class_arc_util_serialization_JsonValue;
+
+
+#define VTABLE_arc_util_serialization_JsonValue_hashCode_R_int 0
+typedef jint (*func_arc_util_serialization_JsonValue_hashCode_R_int)(jcontext ctx, jobject self);
+#define VTABLE_arc_util_serialization_JsonValue_equals_java_lang_Object_R_boolean 1
+typedef jbool (*func_arc_util_serialization_JsonValue_equals_java_lang_Object_R_boolean)(jcontext ctx, jobject self, jobject param0);
+#define VTABLE_arc_util_serialization_JsonValue_clone_R_java_lang_Object 2
+typedef jobject (*func_arc_util_serialization_JsonValue_clone_R_java_lang_Object)(jcontext ctx, jobject self);
+#define VTABLE_arc_util_serialization_JsonValue_getClass_R_java_lang_Class 3
+typedef jobject (*func_arc_util_serialization_JsonValue_getClass_R_java_lang_Class)(jcontext ctx, jobject self);
+#define VTABLE_arc_util_serialization_JsonValue_toString_R_java_lang_String 4
+typedef jobject (*func_arc_util_serialization_JsonValue_toString_R_java_lang_String)(jcontext ctx, jobject self);
+#define VTABLE_arc_util_serialization_JsonValue_finalize 5
+typedef void (*func_arc_util_serialization_JsonValue_finalize)(jcontext ctx, jobject self);
+#define VTABLE_arc_util_serialization_JsonValue_notify 6
+typedef void (*func_arc_util_serialization_JsonValue_notify)(jcontext ctx, jobject self);
+#define VTABLE_arc_util_serialization_JsonValue_notifyAll 7
+typedef void (*func_arc_util_serialization_JsonValue_notifyAll)(jcontext ctx, jobject self);
+#define VTABLE_arc_util_serialization_JsonValue_wait 8
+typedef void (*func_arc_util_serialization_JsonValue_wait)(jcontext ctx, jobject self);
+#define VTABLE_arc_util_serialization_JsonValue_wait_long 9
+typedef void (*func_arc_util_serialization_JsonValue_wait_long)(jcontext ctx, jobject self, jlong param0);
+#define VTABLE_arc_util_serialization_JsonValue_wait_long_int 10
+typedef void (*func_arc_util_serialization_JsonValue_wait_long_int)(jcontext ctx, jobject self, jlong param0, jint param1);
+#define VTABLE_arc_util_serialization_JsonValue_iterator_R_java_util_Iterator 11
+typedef jobject (*func_arc_util_serialization_JsonValue_iterator_R_java_util_Iterator)(jcontext ctx, jobject self);
+#define VTABLE_arc_util_serialization_JsonValue_forEach_java_util_function_Consumer 12
+typedef void (*func_arc_util_serialization_JsonValue_forEach_java_util_function_Consumer)(jcontext ctx, jobject self, jobject param0);
+#define VTABLE_arc_util_serialization_JsonValue_spliterator_R_java_util_Spliterator 13
+typedef jobject (*func_arc_util_serialization_JsonValue_spliterator_R_java_util_Spliterator)(jcontext ctx, jobject self);
+#define VTABLE_arc_util_serialization_JsonValue_get_int_R_arc_util_serialization_JsonValue 14
+typedef jobject (*func_arc_util_serialization_JsonValue_get_int_R_arc_util_serialization_JsonValue)(jcontext ctx, jobject self, jint param0);
+#define VTABLE_arc_util_serialization_JsonValue_get_java_lang_String_R_arc_util_serialization_JsonValue 15
+typedef jobject (*func_arc_util_serialization_JsonValue_get_java_lang_String_R_arc_util_serialization_JsonValue)(jcontext ctx, jobject self, jobject param0);
+#define VTABLE_arc_util_serialization_JsonValue_has_java_lang_String_R_boolean 16
+typedef jbool (*func_arc_util_serialization_JsonValue_has_java_lang_String_R_boolean)(jcontext ctx, jobject self, jobject param0);
+#define VTABLE_arc_util_serialization_JsonValue_require_int_R_arc_util_serialization_JsonValue 17
+typedef jobject (*func_arc_util_serialization_JsonValue_require_int_R_arc_util_serialization_JsonValue)(jcontext ctx, jobject self, jint param0);
+#define VTABLE_arc_util_serialization_JsonValue_require_java_lang_String_R_arc_util_serialization_JsonValue 18
+typedef jobject (*func_arc_util_serialization_JsonValue_require_java_lang_String_R_arc_util_serialization_JsonValue)(jcontext ctx, jobject self, jobject param0);
+#define VTABLE_arc_util_serialization_JsonValue_remove_int_R_arc_util_serialization_JsonValue 19
+typedef jobject (*func_arc_util_serialization_JsonValue_remove_int_R_arc_util_serialization_JsonValue)(jcontext ctx, jobject self, jint param0);
+#define VTABLE_arc_util_serialization_JsonValue_remove_java_lang_String_R_arc_util_serialization_JsonValue 20
+typedef jobject (*func_arc_util_serialization_JsonValue_remove_java_lang_String_R_arc_util_serialization_JsonValue)(jcontext ctx, jobject self, jobject param0);
+#define VTABLE_arc_util_serialization_JsonValue_asString_R_java_lang_String 21
+typedef jobject (*func_arc_util_serialization_JsonValue_asString_R_java_lang_String)(jcontext ctx, jobject self);
+#define VTABLE_arc_util_serialization_JsonValue_asFloat_R_float 22
+typedef jfloat (*func_arc_util_serialization_JsonValue_asFloat_R_float)(jcontext ctx, jobject self);
+#define VTABLE_arc_util_serialization_JsonValue_asDouble_R_double 23
+typedef jdouble (*func_arc_util_serialization_JsonValue_asDouble_R_double)(jcontext ctx, jobject self);
+#define VTABLE_arc_util_serialization_JsonValue_asLong_R_long 24
+typedef jlong (*func_arc_util_serialization_JsonValue_asLong_R_long)(jcontext ctx, jobject self);
+#define VTABLE_arc_util_serialization_JsonValue_asInt_R_int 25
+typedef jint (*func_arc_util_serialization_JsonValue_asInt_R_int)(jcontext ctx, jobject self);
+#define VTABLE_arc_util_serialization_JsonValue_asBoolean_R_boolean 26
+typedef jbool (*func_arc_util_serialization_JsonValue_asBoolean_R_boolean)(jcontext ctx, jobject self);
+#define VTABLE_arc_util_serialization_JsonValue_asByte_R_byte 27
+typedef jbyte (*func_arc_util_serialization_JsonValue_asByte_R_byte)(jcontext ctx, jobject self);
+#define VTABLE_arc_util_serialization_JsonValue_asShort_R_short 28
+typedef jshort (*func_arc_util_serialization_JsonValue_asShort_R_short)(jcontext ctx, jobject self);
+#define VTABLE_arc_util_serialization_JsonValue_asChar_R_char 29
+typedef jchar (*func_arc_util_serialization_JsonValue_asChar_R_char)(jcontext ctx, jobject self);
+#define VTABLE_arc_util_serialization_JsonValue_asStringArray_R_Array1_java_lang_String 30
+typedef jobject (*func_arc_util_serialization_JsonValue_asStringArray_R_Array1_java_lang_String)(jcontext ctx, jobject self);
+#define VTABLE_arc_util_serialization_JsonValue_asFloatArray_R_Array1_float 31
+typedef jobject (*func_arc_util_serialization_JsonValue_asFloatArray_R_Array1_float)(jcontext ctx, jobject self);
+#define VTABLE_arc_util_serialization_JsonValue_asDoubleArray_R_Array1_double 32
+typedef jobject (*func_arc_util_serialization_JsonValue_asDoubleArray_R_Array1_double)(jcontext ctx, jobject self);
+#define VTABLE_arc_util_serialization_JsonValue_asLongArray_R_Array1_long 33
+typedef jobject (*func_arc_util_serialization_JsonValue_asLongArray_R_Array1_long)(jcontext ctx, jobject self);
+#define VTABLE_arc_util_serialization_JsonValue_asIntArray_R_Array1_int 34
+typedef jobject (*func_arc_util_serialization_JsonValue_asIntArray_R_Array1_int)(jcontext ctx, jobject self);
+#define VTABLE_arc_util_serialization_JsonValue_asBooleanArray_R_Array1_boolean 35
+typedef jobject (*func_arc_util_serialization_JsonValue_asBooleanArray_R_Array1_boolean)(jcontext ctx, jobject self);
+#define VTABLE_arc_util_serialization_JsonValue_asByteArray_R_Array1_byte 36
+typedef jobject (*func_arc_util_serialization_JsonValue_asByteArray_R_Array1_byte)(jcontext ctx, jobject self);
+#define VTABLE_arc_util_serialization_JsonValue_asShortArray_R_Array1_short 37
+typedef jobject (*func_arc_util_serialization_JsonValue_asShortArray_R_Array1_short)(jcontext ctx, jobject self);
+#define VTABLE_arc_util_serialization_JsonValue_mismatch_java_lang_String 38
+typedef void (*func_arc_util_serialization_JsonValue_mismatch_java_lang_String)(jcontext ctx, jobject self, jobject param0);
+#define VTABLE_arc_util_serialization_JsonValue_typeMismatch_java_lang_String_R_java_lang_RuntimeException 39
+typedef jobject (*func_arc_util_serialization_JsonValue_typeMismatch_java_lang_String_R_java_lang_RuntimeException)(jcontext ctx, jobject self, jobject param0);
+#define VTABLE_arc_util_serialization_JsonValue_asCharArray_R_Array1_char 40
+typedef jobject (*func_arc_util_serialization_JsonValue_asCharArray_R_Array1_char)(jcontext ctx, jobject self);
+#define VTABLE_arc_util_serialization_JsonValue_hasChild_java_lang_String_R_boolean 41
+typedef jbool (*func_arc_util_serialization_JsonValue_hasChild_java_lang_String_R_boolean)(jcontext ctx, jobject self, jobject param0);
+#define VTABLE_arc_util_serialization_JsonValue_getChild_java_lang_String_R_arc_util_serialization_JsonValue 42
+typedef jobject (*func_arc_util_serialization_JsonValue_getChild_java_lang_String_R_arc_util_serialization_JsonValue)(jcontext ctx, jobject self, jobject param0);
+#define VTABLE_arc_util_serialization_JsonValue_getString_java_lang_String_java_lang_String_R_java_lang_String 43
+typedef jobject (*func_arc_util_serialization_JsonValue_getString_java_lang_String_java_lang_String_R_java_lang_String)(jcontext ctx, jobject self, jobject param0, jobject param1);
+#define VTABLE_arc_util_serialization_JsonValue_getFloat_java_lang_String_float_R_float 44
+typedef jfloat (*func_arc_util_serialization_JsonValue_getFloat_java_lang_String_float_R_float)(jcontext ctx, jobject self, jobject param0, jfloat param1);
+#define VTABLE_arc_util_serialization_JsonValue_getDouble_java_lang_String_double_R_double 45
+typedef jdouble (*func_arc_util_serialization_JsonValue_getDouble_java_lang_String_double_R_double)(jcontext ctx, jobject self, jobject param0, jdouble param1);
+#define VTABLE_arc_util_serialization_JsonValue_getLong_java_lang_String_long_R_long 46
+typedef jlong (*func_arc_util_serialization_JsonValue_getLong_java_lang_String_long_R_long)(jcontext ctx, jobject self, jobject param0, jlong param1);
+#define VTABLE_arc_util_serialization_JsonValue_getInt_java_lang_String_int_R_int 47
+typedef jint (*func_arc_util_serialization_JsonValue_getInt_java_lang_String_int_R_int)(jcontext ctx, jobject self, jobject param0, jint param1);
+#define VTABLE_arc_util_serialization_JsonValue_getBoolean_java_lang_String_boolean_R_boolean 48
+typedef jbool (*func_arc_util_serialization_JsonValue_getBoolean_java_lang_String_boolean_R_boolean)(jcontext ctx, jobject self, jobject param0, jbool param1);
+#define VTABLE_arc_util_serialization_JsonValue_getByte_java_lang_String_byte_R_byte 49
+typedef jbyte (*func_arc_util_serialization_JsonValue_getByte_java_lang_String_byte_R_byte)(jcontext ctx, jobject self, jobject param0, jbyte param1);
+#define VTABLE_arc_util_serialization_JsonValue_getShort_java_lang_String_short_R_short 50
+typedef jshort (*func_arc_util_serialization_JsonValue_getShort_java_lang_String_short_R_short)(jcontext ctx, jobject self, jobject param0, jshort param1);
+#define VTABLE_arc_util_serialization_JsonValue_getChar_java_lang_String_char_R_char 51
+typedef jchar (*func_arc_util_serialization_JsonValue_getChar_java_lang_String_char_R_char)(jcontext ctx, jobject self, jobject param0, jchar param1);
+#define VTABLE_arc_util_serialization_JsonValue_getString_java_lang_String_R_java_lang_String 52
+typedef jobject (*func_arc_util_serialization_JsonValue_getString_java_lang_String_R_java_lang_String)(jcontext ctx, jobject self, jobject param0);
+#define VTABLE_arc_util_serialization_JsonValue_getFloat_java_lang_String_R_float 53
+typedef jfloat (*func_arc_util_serialization_JsonValue_getFloat_java_lang_String_R_float)(jcontext ctx, jobject self, jobject param0);
+#define VTABLE_arc_util_serialization_JsonValue_getDouble_java_lang_String_R_double 54
+typedef jdouble (*func_arc_util_serialization_JsonValue_getDouble_java_lang_String_R_double)(jcontext ctx, jobject self, jobject param0);
+#define VTABLE_arc_util_serialization_JsonValue_getLong_java_lang_String_R_long 55
+typedef jlong (*func_arc_util_serialization_JsonValue_getLong_java_lang_String_R_long)(jcontext ctx, jobject self, jobject param0);
+#define VTABLE_arc_util_serialization_JsonValue_getInt_java_lang_String_R_int 56
+typedef jint (*func_arc_util_serialization_JsonValue_getInt_java_lang_String_R_int)(jcontext ctx, jobject self, jobject param0);
+#define VTABLE_arc_util_serialization_JsonValue_getBoolean_java_lang_String_R_boolean 57
+typedef jbool (*func_arc_util_serialization_JsonValue_getBoolean_java_lang_String_R_boolean)(jcontext ctx, jobject self, jobject param0);
+#define VTABLE_arc_util_serialization_JsonValue_getByte_java_lang_String_R_byte 58
+typedef jbyte (*func_arc_util_serialization_JsonValue_getByte_java_lang_String_R_byte)(jcontext ctx, jobject self, jobject param0);
+#define VTABLE_arc_util_serialization_JsonValue_getShort_java_lang_String_R_short 59
+typedef jshort (*func_arc_util_serialization_JsonValue_getShort_java_lang_String_R_short)(jcontext ctx, jobject self, jobject param0);
+#define VTABLE_arc_util_serialization_JsonValue_getChar_java_lang_String_R_char 60
+typedef jchar (*func_arc_util_serialization_JsonValue_getChar_java_lang_String_R_char)(jcontext ctx, jobject self, jobject param0);
+#define VTABLE_arc_util_serialization_JsonValue_getString_int_R_java_lang_String 61
+typedef jobject (*func_arc_util_serialization_JsonValue_getString_int_R_java_lang_String)(jcontext ctx, jobject self, jint param0);
+#define VTABLE_arc_util_serialization_JsonValue_getFloat_int_R_float 62
+typedef jfloat (*func_arc_util_serialization_JsonValue_getFloat_int_R_float)(jcontext ctx, jobject self, jint param0);
+#define VTABLE_arc_util_serialization_JsonValue_getDouble_int_R_double 63
+typedef jdouble (*func_arc_util_serialization_JsonValue_getDouble_int_R_double)(jcontext ctx, jobject self, jint param0);
+#define VTABLE_arc_util_serialization_JsonValue_getLong_int_R_long 64
+typedef jlong (*func_arc_util_serialization_JsonValue_getLong_int_R_long)(jcontext ctx, jobject self, jint param0);
+#define VTABLE_arc_util_serialization_JsonValue_getInt_int_R_int 65
+typedef jint (*func_arc_util_serialization_JsonValue_getInt_int_R_int)(jcontext ctx, jobject self, jint param0);
+#define VTABLE_arc_util_serialization_JsonValue_getBoolean_int_R_boolean 66
+typedef jbool (*func_arc_util_serialization_JsonValue_getBoolean_int_R_boolean)(jcontext ctx, jobject self, jint param0);
+#define VTABLE_arc_util_serialization_JsonValue_getByte_int_R_byte 67
+typedef jbyte (*func_arc_util_serialization_JsonValue_getByte_int_R_byte)(jcontext ctx, jobject self, jint param0);
+#define VTABLE_arc_util_serialization_JsonValue_getShort_int_R_short 68
+typedef jshort (*func_arc_util_serialization_JsonValue_getShort_int_R_short)(jcontext ctx, jobject self, jint param0);
+#define VTABLE_arc_util_serialization_JsonValue_getChar_int_R_char 69
+typedef jchar (*func_arc_util_serialization_JsonValue_getChar_int_R_char)(jcontext ctx, jobject self, jint param0);
+#define VTABLE_arc_util_serialization_JsonValue_type_R_arc_util_serialization_JsonValue$ValueType 70
+typedef jobject (*func_arc_util_serialization_JsonValue_type_R_arc_util_serialization_JsonValue$ValueType)(jcontext ctx, jobject self);
+#define VTABLE_arc_util_serialization_JsonValue_setType_arc_util_serialization_JsonValue$ValueType 71
+typedef void (*func_arc_util_serialization_JsonValue_setType_arc_util_serialization_JsonValue$ValueType)(jcontext ctx, jobject self, jobject param0);
+#define VTABLE_arc_util_serialization_JsonValue_isArray_R_boolean 72
+typedef jbool (*func_arc_util_serialization_JsonValue_isArray_R_boolean)(jcontext ctx, jobject self);
+#define VTABLE_arc_util_serialization_JsonValue_isObject_R_boolean 73
+typedef jbool (*func_arc_util_serialization_JsonValue_isObject_R_boolean)(jcontext ctx, jobject self);
+#define VTABLE_arc_util_serialization_JsonValue_isString_R_boolean 74
+typedef jbool (*func_arc_util_serialization_JsonValue_isString_R_boolean)(jcontext ctx, jobject self);
+#define VTABLE_arc_util_serialization_JsonValue_isNumber_R_boolean 75
+typedef jbool (*func_arc_util_serialization_JsonValue_isNumber_R_boolean)(jcontext ctx, jobject self);
+#define VTABLE_arc_util_serialization_JsonValue_isDouble_R_boolean 76
+typedef jbool (*func_arc_util_serialization_JsonValue_isDouble_R_boolean)(jcontext ctx, jobject self);
+#define VTABLE_arc_util_serialization_JsonValue_isLong_R_boolean 77
+typedef jbool (*func_arc_util_serialization_JsonValue_isLong_R_boolean)(jcontext ctx, jobject self);
+#define VTABLE_arc_util_serialization_JsonValue_isBoolean_R_boolean 78
+typedef jbool (*func_arc_util_serialization_JsonValue_isBoolean_R_boolean)(jcontext ctx, jobject self);
+#define VTABLE_arc_util_serialization_JsonValue_isNull_R_boolean 79
+typedef jbool (*func_arc_util_serialization_JsonValue_isNull_R_boolean)(jcontext ctx, jobject self);
+#define VTABLE_arc_util_serialization_JsonValue_isValue_R_boolean 80
+typedef jbool (*func_arc_util_serialization_JsonValue_isValue_R_boolean)(jcontext ctx, jobject self);
+#define VTABLE_arc_util_serialization_JsonValue_name_R_java_lang_String 81
+typedef jobject (*func_arc_util_serialization_JsonValue_name_R_java_lang_String)(jcontext ctx, jobject self);
+#define VTABLE_arc_util_serialization_JsonValue_setName_java_lang_String 82
+typedef void (*func_arc_util_serialization_JsonValue_setName_java_lang_String)(jcontext ctx, jobject self, jobject param0);
+#define VTABLE_arc_util_serialization_JsonValue_parent_R_arc_util_serialization_JsonValue 83
+typedef jobject (*func_arc_util_serialization_JsonValue_parent_R_arc_util_serialization_JsonValue)(jcontext ctx, jobject self);
+#define VTABLE_arc_util_serialization_JsonValue_child_R_arc_util_serialization_JsonValue 84
+typedef jobject (*func_arc_util_serialization_JsonValue_child_R_arc_util_serialization_JsonValue)(jcontext ctx, jobject self);
+#define VTABLE_arc_util_serialization_JsonValue_addChild_java_lang_String_arc_util_serialization_JsonValue 85
+typedef void (*func_arc_util_serialization_JsonValue_addChild_java_lang_String_arc_util_serialization_JsonValue)(jcontext ctx, jobject self, jobject param0, jobject param1);
+#define VTABLE_arc_util_serialization_JsonValue_addChild_arc_util_serialization_JsonValue 86
+typedef void (*func_arc_util_serialization_JsonValue_addChild_arc_util_serialization_JsonValue)(jcontext ctx, jobject self, jobject param0);
+#define VTABLE_arc_util_serialization_JsonValue_next_R_arc_util_serialization_JsonValue 87
+typedef jobject (*func_arc_util_serialization_JsonValue_next_R_arc_util_serialization_JsonValue)(jcontext ctx, jobject self);
+#define VTABLE_arc_util_serialization_JsonValue_setNext_arc_util_serialization_JsonValue 88
+typedef void (*func_arc_util_serialization_JsonValue_setNext_arc_util_serialization_JsonValue)(jcontext ctx, jobject self, jobject param0);
+#define VTABLE_arc_util_serialization_JsonValue_prev_R_arc_util_serialization_JsonValue 89
+typedef jobject (*func_arc_util_serialization_JsonValue_prev_R_arc_util_serialization_JsonValue)(jcontext ctx, jobject self);
+#define VTABLE_arc_util_serialization_JsonValue_setPrev_arc_util_serialization_JsonValue 90
+typedef void (*func_arc_util_serialization_JsonValue_setPrev_arc_util_serialization_JsonValue)(jcontext ctx, jobject self, jobject param0);
+#define VTABLE_arc_util_serialization_JsonValue_set_java_lang_String 91
+typedef void (*func_arc_util_serialization_JsonValue_set_java_lang_String)(jcontext ctx, jobject self, jobject param0);
+#define VTABLE_arc_util_serialization_JsonValue_set_double_java_lang_String 92
+typedef void (*func_arc_util_serialization_JsonValue_set_double_java_lang_String)(jcontext ctx, jobject self, jdouble param0, jobject param1);
+#define VTABLE_arc_util_serialization_JsonValue_set_long_java_lang_String 93
+typedef void (*func_arc_util_serialization_JsonValue_set_long_java_lang_String)(jcontext ctx, jobject self, jlong param0, jobject param1);
+#define VTABLE_arc_util_serialization_JsonValue_set_boolean 94
+typedef void (*func_arc_util_serialization_JsonValue_set_boolean)(jcontext ctx, jobject self, jbool param0);
+#define VTABLE_arc_util_serialization_JsonValue_toJson_arc_util_serialization_JsonWriter$OutputType_R_java_lang_String 95
+typedef jobject (*func_arc_util_serialization_JsonValue_toJson_arc_util_serialization_JsonWriter$OutputType_R_java_lang_String)(jcontext ctx, jobject self, jobject param0);
+#define VTABLE_arc_util_serialization_JsonValue_json_arc_util_serialization_JsonValue_java_lang_StringBuilder_arc_util_serialization_JsonWriter$OutputType 96
+typedef void (*func_arc_util_serialization_JsonValue_json_arc_util_serialization_JsonValue_java_lang_StringBuilder_arc_util_serialization_JsonWriter$OutputType)(jcontext ctx, jobject self, jobject param0, jobject param1, jobject param2);
+#define VTABLE_arc_util_serialization_JsonValue_prettyPrint_arc_util_serialization_JsonWriter$OutputType_int_R_java_lang_String 97
+typedef jobject (*func_arc_util_serialization_JsonValue_prettyPrint_arc_util_serialization_JsonWriter$OutputType_int_R_java_lang_String)(jcontext ctx, jobject self, jobject param0, jint param1);
+#define VTABLE_arc_util_serialization_JsonValue_prettyPrint_arc_util_serialization_JsonValue$PrettyPrintSettings_R_java_lang_String 98
+typedef jobject (*func_arc_util_serialization_JsonValue_prettyPrint_arc_util_serialization_JsonValue$PrettyPrintSettings_R_java_lang_String)(jcontext ctx, jobject self, jobject param0);
+#define VTABLE_arc_util_serialization_JsonValue_prettyPrint_arc_util_serialization_JsonValue_java_lang_StringBuilder_int_arc_util_serialization_JsonValue$PrettyPrintSettings 99
+typedef void (*func_arc_util_serialization_JsonValue_prettyPrint_arc_util_serialization_JsonValue_java_lang_StringBuilder_int_arc_util_serialization_JsonValue$PrettyPrintSettings)(jcontext ctx, jobject self, jobject param0, jobject param1, jint param2, jobject param3);
+#define VTABLE_arc_util_serialization_JsonValue_prettyPrint_arc_util_serialization_JsonWriter$OutputType_java_io_Writer 100
+typedef void (*func_arc_util_serialization_JsonValue_prettyPrint_arc_util_serialization_JsonWriter$OutputType_java_io_Writer)(jcontext ctx, jobject self, jobject param0, jobject param1);
+#define VTABLE_arc_util_serialization_JsonValue_prettyPrint_arc_util_serialization_JsonValue_java_io_Writer_int_arc_util_serialization_JsonValue$PrettyPrintSettings 101
+typedef void (*func_arc_util_serialization_JsonValue_prettyPrint_arc_util_serialization_JsonValue_java_io_Writer_int_arc_util_serialization_JsonValue$PrettyPrintSettings)(jcontext ctx, jobject self, jobject param0, jobject param1, jint param2, jobject param3);
+#define VTABLE_arc_util_serialization_JsonValue_iterator_R_arc_util_serialization_JsonValue$JsonIterator 102
+typedef jobject (*func_arc_util_serialization_JsonValue_iterator_R_arc_util_serialization_JsonValue$JsonIterator)(jcontext ctx, jobject self);
+#define VTABLE_arc_util_serialization_JsonValue_trace_R_java_lang_String 103
+typedef jobject (*func_arc_util_serialization_JsonValue_trace_R_java_lang_String)(jcontext ctx, jobject self);
+
+void mark_arc_util_serialization_JsonValue(jobject object, jint mark, jint depth);
+void clinit_arc_util_serialization_JsonValue(jcontext ctx);
+void init_arc_util_serialization_JsonValue_arc_util_serialization_JsonValue$ValueType(jcontext ctx, jobject self, jobject param0);
+void init_arc_util_serialization_JsonValue_java_lang_String(jcontext ctx, jobject self, jobject param0);
+void init_arc_util_serialization_JsonValue_double(jcontext ctx, jobject self, jdouble param0);
+void init_arc_util_serialization_JsonValue_long(jcontext ctx, jobject self, jlong param0);
+void init_arc_util_serialization_JsonValue_double_java_lang_String(jcontext ctx, jobject self, jdouble param0, jobject param1);
+void init_arc_util_serialization_JsonValue_long_java_lang_String(jcontext ctx, jobject self, jlong param0, jobject param1);
+void init_arc_util_serialization_JsonValue_boolean(jcontext ctx, jobject self, jbool param0);
+jbool SM_arc_util_serialization_JsonValue_isFlat_arc_util_serialization_JsonValue_R_boolean(jcontext ctx, jobject param0);
+jbool SM_arc_util_serialization_JsonValue_isNumeric_arc_util_serialization_JsonValue_R_boolean(jcontext ctx, jobject param0);
+void SM_arc_util_serialization_JsonValue_indent_int_java_lang_StringBuilder(jcontext ctx, jint param0, jobject param1);
+void SM_arc_util_serialization_JsonValue_indent_int_java_io_Writer(jcontext ctx, jint param0, jobject param1);
+jobject M_arc_util_serialization_JsonValue_get_int_R_arc_util_serialization_JsonValue(jcontext ctx, jobject self, jint param0);
+jobject M_arc_util_serialization_JsonValue_get_java_lang_String_R_arc_util_serialization_JsonValue(jcontext ctx, jobject self, jobject param0);
+jbool M_arc_util_serialization_JsonValue_has_java_lang_String_R_boolean(jcontext ctx, jobject self, jobject param0);
+jobject M_arc_util_serialization_JsonValue_require_int_R_arc_util_serialization_JsonValue(jcontext ctx, jobject self, jint param0);
+jobject M_arc_util_serialization_JsonValue_require_java_lang_String_R_arc_util_serialization_JsonValue(jcontext ctx, jobject self, jobject param0);
+jobject M_arc_util_serialization_JsonValue_remove_int_R_arc_util_serialization_JsonValue(jcontext ctx, jobject self, jint param0);
+jobject M_arc_util_serialization_JsonValue_remove_java_lang_String_R_arc_util_serialization_JsonValue(jcontext ctx, jobject self, jobject param0);
+jobject M_arc_util_serialization_JsonValue_asString_R_java_lang_String(jcontext ctx, jobject self);
+jfloat M_arc_util_serialization_JsonValue_asFloat_R_float(jcontext ctx, jobject self);
+jdouble M_arc_util_serialization_JsonValue_asDouble_R_double(jcontext ctx, jobject self);
+jlong M_arc_util_serialization_JsonValue_asLong_R_long(jcontext ctx, jobject self);
+jint M_arc_util_serialization_JsonValue_asInt_R_int(jcontext ctx, jobject self);
+jbool M_arc_util_serialization_JsonValue_asBoolean_R_boolean(jcontext ctx, jobject self);
+jbyte M_arc_util_serialization_JsonValue_asByte_R_byte(jcontext ctx, jobject self);
+jshort M_arc_util_serialization_JsonValue_asShort_R_short(jcontext ctx, jobject self);
+jchar M_arc_util_serialization_JsonValue_asChar_R_char(jcontext ctx, jobject self);
+jobject M_arc_util_serialization_JsonValue_asStringArray_R_Array1_java_lang_String(jcontext ctx, jobject self);
+jobject M_arc_util_serialization_JsonValue_asFloatArray_R_Array1_float(jcontext ctx, jobject self);
+jobject M_arc_util_serialization_JsonValue_asDoubleArray_R_Array1_double(jcontext ctx, jobject self);
+jobject M_arc_util_serialization_JsonValue_asLongArray_R_Array1_long(jcontext ctx, jobject self);
+jobject M_arc_util_serialization_JsonValue_asIntArray_R_Array1_int(jcontext ctx, jobject self);
+jobject M_arc_util_serialization_JsonValue_asBooleanArray_R_Array1_boolean(jcontext ctx, jobject self);
+jobject M_arc_util_serialization_JsonValue_asByteArray_R_Array1_byte(jcontext ctx, jobject self);
+jobject M_arc_util_serialization_JsonValue_asShortArray_R_Array1_short(jcontext ctx, jobject self);
+void M_arc_util_serialization_JsonValue_mismatch_java_lang_String(jcontext ctx, jobject self, jobject param0);
+jobject M_arc_util_serialization_JsonValue_typeMismatch_java_lang_String_R_java_lang_RuntimeException(jcontext ctx, jobject self, jobject param0);
+jobject M_arc_util_serialization_JsonValue_asCharArray_R_Array1_char(jcontext ctx, jobject self);
+jbool M_arc_util_serialization_JsonValue_hasChild_java_lang_String_R_boolean(jcontext ctx, jobject self, jobject param0);
+jobject M_arc_util_serialization_JsonValue_getChild_java_lang_String_R_arc_util_serialization_JsonValue(jcontext ctx, jobject self, jobject param0);
+jobject M_arc_util_serialization_JsonValue_getString_java_lang_String_java_lang_String_R_java_lang_String(jcontext ctx, jobject self, jobject param0, jobject param1);
+jfloat M_arc_util_serialization_JsonValue_getFloat_java_lang_String_float_R_float(jcontext ctx, jobject self, jobject param0, jfloat param1);
+jdouble M_arc_util_serialization_JsonValue_getDouble_java_lang_String_double_R_double(jcontext ctx, jobject self, jobject param0, jdouble param1);
+jlong M_arc_util_serialization_JsonValue_getLong_java_lang_String_long_R_long(jcontext ctx, jobject self, jobject param0, jlong param1);
+jint M_arc_util_serialization_JsonValue_getInt_java_lang_String_int_R_int(jcontext ctx, jobject self, jobject param0, jint param1);
+jbool M_arc_util_serialization_JsonValue_getBoolean_java_lang_String_boolean_R_boolean(jcontext ctx, jobject self, jobject param0, jbool param1);
+jbyte M_arc_util_serialization_JsonValue_getByte_java_lang_String_byte_R_byte(jcontext ctx, jobject self, jobject param0, jbyte param1);
+jshort M_arc_util_serialization_JsonValue_getShort_java_lang_String_short_R_short(jcontext ctx, jobject self, jobject param0, jshort param1);
+jchar M_arc_util_serialization_JsonValue_getChar_java_lang_String_char_R_char(jcontext ctx, jobject self, jobject param0, jchar param1);
+jobject M_arc_util_serialization_JsonValue_getString_java_lang_String_R_java_lang_String(jcontext ctx, jobject self, jobject param0);
+jfloat M_arc_util_serialization_JsonValue_getFloat_java_lang_String_R_float(jcontext ctx, jobject self, jobject param0);
+jdouble M_arc_util_serialization_JsonValue_getDouble_java_lang_String_R_double(jcontext ctx, jobject self, jobject param0);
+jlong M_arc_util_serialization_JsonValue_getLong_java_lang_String_R_long(jcontext ctx, jobject self, jobject param0);
+jint M_arc_util_serialization_JsonValue_getInt_java_lang_String_R_int(jcontext ctx, jobject self, jobject param0);
+jbool M_arc_util_serialization_JsonValue_getBoolean_java_lang_String_R_boolean(jcontext ctx, jobject self, jobject param0);
+jbyte M_arc_util_serialization_JsonValue_getByte_java_lang_String_R_byte(jcontext ctx, jobject self, jobject param0);
+jshort M_arc_util_serialization_JsonValue_getShort_java_lang_String_R_short(jcontext ctx, jobject self, jobject param0);
+jchar M_arc_util_serialization_JsonValue_getChar_java_lang_String_R_char(jcontext ctx, jobject self, jobject param0);
+jobject M_arc_util_serialization_JsonValue_getString_int_R_java_lang_String(jcontext ctx, jobject self, jint param0);
+jfloat M_arc_util_serialization_JsonValue_getFloat_int_R_float(jcontext ctx, jobject self, jint param0);
+jdouble M_arc_util_serialization_JsonValue_getDouble_int_R_double(jcontext ctx, jobject self, jint param0);
+jlong M_arc_util_serialization_JsonValue_getLong_int_R_long(jcontext ctx, jobject self, jint param0);
+jint M_arc_util_serialization_JsonValue_getInt_int_R_int(jcontext ctx, jobject self, jint param0);
+jbool M_arc_util_serialization_JsonValue_getBoolean_int_R_boolean(jcontext ctx, jobject self, jint param0);
+jbyte M_arc_util_serialization_JsonValue_getByte_int_R_byte(jcontext ctx, jobject self, jint param0);
+jshort M_arc_util_serialization_JsonValue_getShort_int_R_short(jcontext ctx, jobject self, jint param0);
+jchar M_arc_util_serialization_JsonValue_getChar_int_R_char(jcontext ctx, jobject self, jint param0);
+jobject M_arc_util_serialization_JsonValue_type_R_arc_util_serialization_JsonValue$ValueType(jcontext ctx, jobject self);
+void M_arc_util_serialization_JsonValue_setType_arc_util_serialization_JsonValue$ValueType(jcontext ctx, jobject self, jobject param0);
+jbool M_arc_util_serialization_JsonValue_isArray_R_boolean(jcontext ctx, jobject self);
+jbool M_arc_util_serialization_JsonValue_isObject_R_boolean(jcontext ctx, jobject self);
+jbool M_arc_util_serialization_JsonValue_isString_R_boolean(jcontext ctx, jobject self);
+jbool M_arc_util_serialization_JsonValue_isNumber_R_boolean(jcontext ctx, jobject self);
+jbool M_arc_util_serialization_JsonValue_isDouble_R_boolean(jcontext ctx, jobject self);
+jbool M_arc_util_serialization_JsonValue_isLong_R_boolean(jcontext ctx, jobject self);
+jbool M_arc_util_serialization_JsonValue_isBoolean_R_boolean(jcontext ctx, jobject self);
+jbool M_arc_util_serialization_JsonValue_isNull_R_boolean(jcontext ctx, jobject self);
+jbool M_arc_util_serialization_JsonValue_isValue_R_boolean(jcontext ctx, jobject self);
+jobject M_arc_util_serialization_JsonValue_name_R_java_lang_String(jcontext ctx, jobject self);
+void M_arc_util_serialization_JsonValue_setName_java_lang_String(jcontext ctx, jobject self, jobject param0);
+jobject M_arc_util_serialization_JsonValue_parent_R_arc_util_serialization_JsonValue(jcontext ctx, jobject self);
+jobject M_arc_util_serialization_JsonValue_child_R_arc_util_serialization_JsonValue(jcontext ctx, jobject self);
+void M_arc_util_serialization_JsonValue_addChild_java_lang_String_arc_util_serialization_JsonValue(jcontext ctx, jobject self, jobject param0, jobject param1);
+void M_arc_util_serialization_JsonValue_addChild_arc_util_serialization_JsonValue(jcontext ctx, jobject self, jobject param0);
+jobject M_arc_util_serialization_JsonValue_next_R_arc_util_serialization_JsonValue(jcontext ctx, jobject self);
+void M_arc_util_serialization_JsonValue_setNext_arc_util_serialization_JsonValue(jcontext ctx, jobject self, jobject param0);
+jobject M_arc_util_serialization_JsonValue_prev_R_arc_util_serialization_JsonValue(jcontext ctx, jobject self);
+void M_arc_util_serialization_JsonValue_setPrev_arc_util_serialization_JsonValue(jcontext ctx, jobject self, jobject param0);
+void M_arc_util_serialization_JsonValue_set_java_lang_String(jcontext ctx, jobject self, jobject param0);
+void M_arc_util_serialization_JsonValue_set_double_java_lang_String(jcontext ctx, jobject self, jdouble param0, jobject param1);
+void M_arc_util_serialization_JsonValue_set_long_java_lang_String(jcontext ctx, jobject self, jlong param0, jobject param1);
+void M_arc_util_serialization_JsonValue_set_boolean(jcontext ctx, jobject self, jbool param0);
+jobject M_arc_util_serialization_JsonValue_toJson_arc_util_serialization_JsonWriter$OutputType_R_java_lang_String(jcontext ctx, jobject self, jobject param0);
+void M_arc_util_serialization_JsonValue_json_arc_util_serialization_JsonValue_java_lang_StringBuilder_arc_util_serialization_JsonWriter$OutputType(jcontext ctx, jobject self, jobject param0, jobject param1, jobject param2);
+jobject M_arc_util_serialization_JsonValue_toString_R_java_lang_String(jcontext ctx, jobject self);
+jobject M_arc_util_serialization_JsonValue_prettyPrint_arc_util_serialization_JsonWriter$OutputType_int_R_java_lang_String(jcontext ctx, jobject self, jobject param0, jint param1);
+jobject M_arc_util_serialization_JsonValue_prettyPrint_arc_util_serialization_JsonValue$PrettyPrintSettings_R_java_lang_String(jcontext ctx, jobject self, jobject param0);
+void M_arc_util_serialization_JsonValue_prettyPrint_arc_util_serialization_JsonValue_java_lang_StringBuilder_int_arc_util_serialization_JsonValue$PrettyPrintSettings(jcontext ctx, jobject self, jobject param0, jobject param1, jint param2, jobject param3);
+void M_arc_util_serialization_JsonValue_prettyPrint_arc_util_serialization_JsonWriter$OutputType_java_io_Writer(jcontext ctx, jobject self, jobject param0, jobject param1);
+void M_arc_util_serialization_JsonValue_prettyPrint_arc_util_serialization_JsonValue_java_io_Writer_int_arc_util_serialization_JsonValue$PrettyPrintSettings(jcontext ctx, jobject self, jobject param0, jobject param1, jint param2, jobject param3);
+jobject M_arc_util_serialization_JsonValue_iterator_R_arc_util_serialization_JsonValue$JsonIterator(jcontext ctx, jobject self);
+jobject M_arc_util_serialization_JsonValue_trace_R_java_lang_String(jcontext ctx, jobject self);
+jobject M_arc_util_serialization_JsonValue_iterator_R_java_util_Iterator(jcontext ctx, jobject self);
+
+#ifdef __cplusplus
+}
+#endif
+
+#endif

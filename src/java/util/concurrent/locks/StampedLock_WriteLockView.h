@@ -1,0 +1,69 @@
+#ifndef HEADER_java_util_concurrent_locks_StampedLock$WriteLockView
+#define HEADER_java_util_concurrent_locks_StampedLock$WriteLockView
+
+#include "Clearwing.h"
+#include "java/lang/Object.h"
+#include "java/util/concurrent/locks/Lock.h"
+
+#ifdef __cplusplus
+extern "C" {
+#endif
+
+typedef struct java_util_concurrent_locks_StampedLock$WriteLockView {
+	java_lang_Object parent;
+	jref F_this$0;
+} java_util_concurrent_locks_StampedLock$WriteLockView;
+
+extern Class class_java_util_concurrent_locks_StampedLock$WriteLockView;
+
+
+#define VTABLE_java_util_concurrent_locks_StampedLock$WriteLockView_hashCode_R_int 0
+typedef jint (*func_java_util_concurrent_locks_StampedLock$WriteLockView_hashCode_R_int)(jcontext ctx, jobject self);
+#define VTABLE_java_util_concurrent_locks_StampedLock$WriteLockView_equals_java_lang_Object_R_boolean 1
+typedef jbool (*func_java_util_concurrent_locks_StampedLock$WriteLockView_equals_java_lang_Object_R_boolean)(jcontext ctx, jobject self, jobject param0);
+#define VTABLE_java_util_concurrent_locks_StampedLock$WriteLockView_clone_R_java_lang_Object 2
+typedef jobject (*func_java_util_concurrent_locks_StampedLock$WriteLockView_clone_R_java_lang_Object)(jcontext ctx, jobject self);
+#define VTABLE_java_util_concurrent_locks_StampedLock$WriteLockView_getClass_R_java_lang_Class 3
+typedef jobject (*func_java_util_concurrent_locks_StampedLock$WriteLockView_getClass_R_java_lang_Class)(jcontext ctx, jobject self);
+#define VTABLE_java_util_concurrent_locks_StampedLock$WriteLockView_toString_R_java_lang_String 4
+typedef jobject (*func_java_util_concurrent_locks_StampedLock$WriteLockView_toString_R_java_lang_String)(jcontext ctx, jobject self);
+#define VTABLE_java_util_concurrent_locks_StampedLock$WriteLockView_finalize 5
+typedef void (*func_java_util_concurrent_locks_StampedLock$WriteLockView_finalize)(jcontext ctx, jobject self);
+#define VTABLE_java_util_concurrent_locks_StampedLock$WriteLockView_notify 6
+typedef void (*func_java_util_concurrent_locks_StampedLock$WriteLockView_notify)(jcontext ctx, jobject self);
+#define VTABLE_java_util_concurrent_locks_StampedLock$WriteLockView_notifyAll 7
+typedef void (*func_java_util_concurrent_locks_StampedLock$WriteLockView_notifyAll)(jcontext ctx, jobject self);
+#define VTABLE_java_util_concurrent_locks_StampedLock$WriteLockView_wait 8
+typedef void (*func_java_util_concurrent_locks_StampedLock$WriteLockView_wait)(jcontext ctx, jobject self);
+#define VTABLE_java_util_concurrent_locks_StampedLock$WriteLockView_wait_long 9
+typedef void (*func_java_util_concurrent_locks_StampedLock$WriteLockView_wait_long)(jcontext ctx, jobject self, jlong param0);
+#define VTABLE_java_util_concurrent_locks_StampedLock$WriteLockView_wait_long_int 10
+typedef void (*func_java_util_concurrent_locks_StampedLock$WriteLockView_wait_long_int)(jcontext ctx, jobject self, jlong param0, jint param1);
+#define VTABLE_java_util_concurrent_locks_StampedLock$WriteLockView_lock 11
+typedef void (*func_java_util_concurrent_locks_StampedLock$WriteLockView_lock)(jcontext ctx, jobject self);
+#define VTABLE_java_util_concurrent_locks_StampedLock$WriteLockView_lockInterruptibly 12
+typedef void (*func_java_util_concurrent_locks_StampedLock$WriteLockView_lockInterruptibly)(jcontext ctx, jobject self);
+#define VTABLE_java_util_concurrent_locks_StampedLock$WriteLockView_tryLock_R_boolean 13
+typedef jbool (*func_java_util_concurrent_locks_StampedLock$WriteLockView_tryLock_R_boolean)(jcontext ctx, jobject self);
+#define VTABLE_java_util_concurrent_locks_StampedLock$WriteLockView_tryLock_long_java_util_concurrent_TimeUnit_R_boolean 14
+typedef jbool (*func_java_util_concurrent_locks_StampedLock$WriteLockView_tryLock_long_java_util_concurrent_TimeUnit_R_boolean)(jcontext ctx, jobject self, jlong param0, jobject param1);
+#define VTABLE_java_util_concurrent_locks_StampedLock$WriteLockView_unlock 15
+typedef void (*func_java_util_concurrent_locks_StampedLock$WriteLockView_unlock)(jcontext ctx, jobject self);
+#define VTABLE_java_util_concurrent_locks_StampedLock$WriteLockView_newCondition_R_java_util_concurrent_locks_Condition 16
+typedef jobject (*func_java_util_concurrent_locks_StampedLock$WriteLockView_newCondition_R_java_util_concurrent_locks_Condition)(jcontext ctx, jobject self);
+
+void mark_java_util_concurrent_locks_StampedLock$WriteLockView(jobject object, jint mark, jint depth);
+void clinit_java_util_concurrent_locks_StampedLock$WriteLockView(jcontext ctx);
+void init_java_util_concurrent_locks_StampedLock$WriteLockView_java_util_concurrent_locks_StampedLock(jcontext ctx, jobject self, jobject param0);
+void M_java_util_concurrent_locks_StampedLock$WriteLockView_lock(jcontext ctx, jobject self);
+void M_java_util_concurrent_locks_StampedLock$WriteLockView_lockInterruptibly(jcontext ctx, jobject self);
+jbool M_java_util_concurrent_locks_StampedLock$WriteLockView_tryLock_R_boolean(jcontext ctx, jobject self);
+jbool M_java_util_concurrent_locks_StampedLock$WriteLockView_tryLock_long_java_util_concurrent_TimeUnit_R_boolean(jcontext ctx, jobject self, jlong param0, jobject param1);
+void M_java_util_concurrent_locks_StampedLock$WriteLockView_unlock(jcontext ctx, jobject self);
+jobject M_java_util_concurrent_locks_StampedLock$WriteLockView_newCondition_R_java_util_concurrent_locks_Condition(jcontext ctx, jobject self);
+
+#ifdef __cplusplus
+}
+#endif
+
+#endif

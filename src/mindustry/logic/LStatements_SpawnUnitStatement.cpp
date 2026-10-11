@@ -1,0 +1,562 @@
+#include "mindustry/logic/LStatements_SpawnUnitStatement.h"
+#include "mindustry/logic/LStatements_SpawnUnitStatement_invoke_arc_func_Cons_9.h"
+#include "mindustry/logic/LVar.h"
+#include "mindustry/logic/LStatement.h"
+#include "arc/scene/ui/layout/Table.h"
+#include "mindustry/logic/LAssembler.h"
+#include "mindustry/logic/LExecutor_LInstruction.h"
+#include "mindustry/logic/LStatements_SpawnUnitStatement_invoke_arc_func_Cons_8.h"
+#include "mindustry/logic/LStatements_SpawnUnitStatement_invoke_arc_func_Cons_12.h"
+#include "mindustry/logic/LStatements_SpawnUnitStatement_invoke_arc_func_Cons_7.h"
+#include "mindustry/logic/LStatements_SpawnUnitStatement_invoke_arc_func_Cons_13.h"
+#include "mindustry/logic/LStatements_SpawnUnitStatement_invoke_arc_func_Cons_10.h"
+#include "mindustry/logic/LStatements_SpawnUnitStatement_invoke_arc_func_Cons_11.h"
+#include "arc/func/Cons.h"
+#include "mindustry/logic/LStatements.h"
+#include "java/lang/Object.h"
+#include "java/lang/String.h"
+#include "mindustry/logic/LExecutor_SpawnUnitI.h"
+#include "mindustry/logic/LCategory.h"
+#include "arc/scene/ui/layout/Cell.h"
+#include "mindustry/logic/LStatements_SpawnUnitStatement.h"
+
+extern "C" {
+
+
+void mark_mindustry_logic_LStatements$SpawnUnitStatement(jobject object, jint mark, jint depth) {
+	if (!object) {
+		return;
+	}
+	if (depth > GC_DEPTH_ALWAYS && (object->gcMark < GC_MARK_START || object->gcMark == mark))
+		return;
+	if (depth > MAX_GC_MARK_DEPTH) {
+		markDeepObject(object);
+		return;
+	}
+	mark_mindustry_logic_LStatement(object, mark, depth);
+	if (object->gcMark >= GC_MARK_START)
+		object->gcMark = mark;
+	auto self = (mindustry_logic_LStatements$SpawnUnitStatement *) object;
+	if (self->F_type)
+		((gc_mark_ptr) ((jclass) ((jobject) self->F_type)->clazz)->markFunction)((jobject) self->F_type, mark, depth + 1);
+	if (self->F_x)
+		((gc_mark_ptr) ((jclass) ((jobject) self->F_x)->clazz)->markFunction)((jobject) self->F_x, mark, depth + 1);
+	if (self->F_y)
+		((gc_mark_ptr) ((jclass) ((jobject) self->F_y)->clazz)->markFunction)((jobject) self->F_y, mark, depth + 1);
+	if (self->F_rotation)
+		((gc_mark_ptr) ((jclass) ((jobject) self->F_rotation)->clazz)->markFunction)((jobject) self->F_rotation, mark, depth + 1);
+	if (self->F_team)
+		((gc_mark_ptr) ((jclass) ((jobject) self->F_team)->clazz)->markFunction)((jobject) self->F_team, mark, depth + 1);
+	if (self->F_result)
+		((gc_mark_ptr) ((jclass) ((jobject) self->F_result)->clazz)->markFunction)((jobject) self->F_result, mark, depth + 1);
+	if (self->F_effect)
+		((gc_mark_ptr) ((jclass) ((jobject) self->F_effect)->clazz)->markFunction)((jobject) self->F_effect, mark, depth + 1);
+}
+
+void clinit_mindustry_logic_LStatements$SpawnUnitStatement(jcontext ctx) {
+	static bool initialized;
+	if (initialized) return;
+	initialized = true;
+	clinit_mindustry_logic_LStatement(ctx);
+}
+
+void init_mindustry_logic_LStatements$SpawnUnitStatement(jcontext ctx, jobject self) {
+	NULL_CHECK(self);
+	jtype frame[3];
+	auto stack = &frame[1];
+	jtype *sp = stack;
+	FrameInfo frameInfo { "mindustry/logic/LStatements$SpawnUnitStatement:<init>", 3 };
+	auto frameRef = pushStackFrame(ctx, &frameInfo, frame, nullptr);
+
+	clinit_mindustry_logic_LStatements$SpawnUnitStatement(ctx);
+	frame[0].o = self;
+	{
+	LINE_NUMBER(1357);
+	init_mindustry_logic_LStatement(ctx, (frame[0].o));
+	LINE_NUMBER(1358);
+	((mindustry_logic_LStatements$SpawnUnitStatement *) NULL_CHECK((frame[0].o)))->F_type = (jref) (((jobject) createStringLiteral(ctx, u8"@dagger"_j)));
+	((mindustry_logic_LStatements$SpawnUnitStatement *) NULL_CHECK((frame[0].o)))->F_x = (jref) (((jobject) createStringLiteral(ctx, u8"10"_j)));
+	((mindustry_logic_LStatements$SpawnUnitStatement *) NULL_CHECK((frame[0].o)))->F_y = (jref) (((jobject) createStringLiteral(ctx, u8"10"_j)));
+	((mindustry_logic_LStatements$SpawnUnitStatement *) NULL_CHECK((frame[0].o)))->F_rotation = (jref) (((jobject) createStringLiteral(ctx, u8"90"_j)));
+	((mindustry_logic_LStatements$SpawnUnitStatement *) NULL_CHECK((frame[0].o)))->F_team = (jref) (((jobject) createStringLiteral(ctx, u8"@sharded"_j)));
+	((mindustry_logic_LStatements$SpawnUnitStatement *) NULL_CHECK((frame[0].o)))->F_result = (jref) (((jobject) createStringLiteral(ctx, u8"result"_j)));
+	((mindustry_logic_LStatements$SpawnUnitStatement *) NULL_CHECK((frame[0].o)))->F_effect = (jref) (((jobject) createStringLiteral(ctx, u8"true"_j)));
+	popStackFrame(ctx);
+	return;
+	}
+
+	popStackFrame(ctx);
+}
+
+void M_mindustry_logic_LStatements$SpawnUnitStatement_build_arc_scene_ui_layout_Table(jcontext ctx, jobject self, jobject param0) {
+	NULL_CHECK(self);
+	jtype frame[8];
+	auto stack = &frame[2];
+	jtype *sp = stack;
+	FrameInfo frameInfo { "mindustry/logic/LStatements$SpawnUnitStatement:build", 8 };
+	auto frameRef = pushStackFrame(ctx, &frameInfo, frame, nullptr);
+
+	frame[0].o = self;
+	frame[1].o = param0;
+	{
+	LINE_NUMBER(1362);
+	sp[0].o = frame[0].o;
+	sp[1].o = frame[1].o;
+	sp[2].o = ((jobject) createStringLiteral(ctx, u8"-spawn"_j));
+	jint temp0 = jint(1);
+	sp[3].o = (jobject)((mindustry_logic_LStatements$SpawnUnitStatement *) NULL_CHECK((frame[0].o)))->F_result;
+	{ /* InvokeDynamic */
+		clinit_mindustry_logic_LStatements$SpawnUnitStatement_invoke_arc_func_Cons_7(ctx);
+		auto proxy = (mindustry_logic_LStatements$SpawnUnitStatement_invoke_arc_func_Cons_7 *) gcAlloc(ctx, &class_mindustry_logic_LStatements$SpawnUnitStatement_invoke_arc_func_Cons_7);
+		proxy->F_field0 = (jref) (frame[0].o);
+		sp[4].o = (jobject) proxy;
+	}
+	sp[0].o = (jobject)((func_mindustry_logic_LStatements$SpawnUnitStatement_fields_arc_scene_ui_layout_Table_java_lang_String_boolean_java_lang_String_arc_func_Cons_R_arc_scene_ui_layout_Cell) ((void **) nullCheck(ctx, sp[0].o)->vtable)[VTABLE_mindustry_logic_LStatements$SpawnUnitStatement_fields_arc_scene_ui_layout_Table_java_lang_String_boolean_java_lang_String_arc_func_Cons_R_arc_scene_ui_layout_Cell])(ctx, sp[0].o, sp[1].o, sp[2].o, temp0, sp[3].o, sp[4].o);
+	LINE_NUMBER(1363);
+	sp[0].o = frame[0].o;
+	sp[1].o = frame[1].o;
+	sp[2].o = ((jobject) createStringLiteral(ctx, u8"type"_j));
+	sp[3].o = (jobject)((mindustry_logic_LStatements$SpawnUnitStatement *) NULL_CHECK((frame[0].o)))->F_type;
+	{ /* InvokeDynamic */
+		clinit_mindustry_logic_LStatements$SpawnUnitStatement_invoke_arc_func_Cons_8(ctx);
+		auto proxy = (mindustry_logic_LStatements$SpawnUnitStatement_invoke_arc_func_Cons_8 *) gcAlloc(ctx, &class_mindustry_logic_LStatements$SpawnUnitStatement_invoke_arc_func_Cons_8);
+		proxy->F_field0 = (jref) (frame[0].o);
+		sp[4].o = (jobject) proxy;
+	}
+	sp[0].o = (jobject)((func_mindustry_logic_LStatements$SpawnUnitStatement_fields_arc_scene_ui_layout_Table_java_lang_String_java_lang_String_arc_func_Cons_R_arc_scene_ui_layout_Cell) ((void **) nullCheck(ctx, sp[0].o)->vtable)[VTABLE_mindustry_logic_LStatements$SpawnUnitStatement_fields_arc_scene_ui_layout_Table_java_lang_String_java_lang_String_arc_func_Cons_R_arc_scene_ui_layout_Cell])(ctx, sp[0].o, sp[1].o, sp[2].o, sp[3].o, sp[4].o);
+	LINE_NUMBER(1364);
+	sp[0].o = frame[0].o;
+	sp[1].o = frame[1].o;
+	sp[2].o = ((jobject) createStringLiteral(ctx, u8"x"_j));
+	sp[3].o = (jobject)((mindustry_logic_LStatements$SpawnUnitStatement *) NULL_CHECK((frame[0].o)))->F_x;
+	{ /* InvokeDynamic */
+		clinit_mindustry_logic_LStatements$SpawnUnitStatement_invoke_arc_func_Cons_9(ctx);
+		auto proxy = (mindustry_logic_LStatements$SpawnUnitStatement_invoke_arc_func_Cons_9 *) gcAlloc(ctx, &class_mindustry_logic_LStatements$SpawnUnitStatement_invoke_arc_func_Cons_9);
+		proxy->F_field0 = (jref) (frame[0].o);
+		sp[4].o = (jobject) proxy;
+	}
+	sp[0].o = (jobject)((func_mindustry_logic_LStatements$SpawnUnitStatement_fields_arc_scene_ui_layout_Table_java_lang_String_java_lang_String_arc_func_Cons_R_arc_scene_ui_layout_Cell) ((void **) nullCheck(ctx, sp[0].o)->vtable)[VTABLE_mindustry_logic_LStatements$SpawnUnitStatement_fields_arc_scene_ui_layout_Table_java_lang_String_java_lang_String_arc_func_Cons_R_arc_scene_ui_layout_Cell])(ctx, sp[0].o, sp[1].o, sp[2].o, sp[3].o, sp[4].o);
+	LINE_NUMBER(1365);
+	sp[0].o = frame[0].o;
+	sp[1].o = frame[1].o;
+	sp[2].o = ((jobject) createStringLiteral(ctx, u8"y"_j));
+	sp[3].o = (jobject)((mindustry_logic_LStatements$SpawnUnitStatement *) NULL_CHECK((frame[0].o)))->F_y;
+	{ /* InvokeDynamic */
+		clinit_mindustry_logic_LStatements$SpawnUnitStatement_invoke_arc_func_Cons_10(ctx);
+		auto proxy = (mindustry_logic_LStatements$SpawnUnitStatement_invoke_arc_func_Cons_10 *) gcAlloc(ctx, &class_mindustry_logic_LStatements$SpawnUnitStatement_invoke_arc_func_Cons_10);
+		proxy->F_field0 = (jref) (frame[0].o);
+		sp[4].o = (jobject) proxy;
+	}
+	sp[0].o = (jobject)((func_mindustry_logic_LStatements$SpawnUnitStatement_fields_arc_scene_ui_layout_Table_java_lang_String_java_lang_String_arc_func_Cons_R_arc_scene_ui_layout_Cell) ((void **) nullCheck(ctx, sp[0].o)->vtable)[VTABLE_mindustry_logic_LStatements$SpawnUnitStatement_fields_arc_scene_ui_layout_Table_java_lang_String_java_lang_String_arc_func_Cons_R_arc_scene_ui_layout_Cell])(ctx, sp[0].o, sp[1].o, sp[2].o, sp[3].o, sp[4].o);
+	LINE_NUMBER(1366);
+	sp[0].o = frame[0].o;
+	sp[1].o = frame[1].o;
+	sp[2].o = ((jobject) createStringLiteral(ctx, u8"team"_j));
+	sp[3].o = (jobject)((mindustry_logic_LStatements$SpawnUnitStatement *) NULL_CHECK((frame[0].o)))->F_team;
+	{ /* InvokeDynamic */
+		clinit_mindustry_logic_LStatements$SpawnUnitStatement_invoke_arc_func_Cons_11(ctx);
+		auto proxy = (mindustry_logic_LStatements$SpawnUnitStatement_invoke_arc_func_Cons_11 *) gcAlloc(ctx, &class_mindustry_logic_LStatements$SpawnUnitStatement_invoke_arc_func_Cons_11);
+		proxy->F_field0 = (jref) (frame[0].o);
+		sp[4].o = (jobject) proxy;
+	}
+	sp[0].o = (jobject)((func_mindustry_logic_LStatements$SpawnUnitStatement_fields_arc_scene_ui_layout_Table_java_lang_String_java_lang_String_arc_func_Cons_R_arc_scene_ui_layout_Cell) ((void **) nullCheck(ctx, sp[0].o)->vtable)[VTABLE_mindustry_logic_LStatements$SpawnUnitStatement_fields_arc_scene_ui_layout_Table_java_lang_String_java_lang_String_arc_func_Cons_R_arc_scene_ui_layout_Cell])(ctx, sp[0].o, sp[1].o, sp[2].o, sp[3].o, sp[4].o);
+	LINE_NUMBER(1367);
+	sp[0].o = frame[0].o;
+	sp[1].o = frame[1].o;
+	sp[2].o = ((jobject) createStringLiteral(ctx, u8"angle"_j));
+	sp[3].o = (jobject)((mindustry_logic_LStatements$SpawnUnitStatement *) NULL_CHECK((frame[0].o)))->F_rotation;
+	{ /* InvokeDynamic */
+		clinit_mindustry_logic_LStatements$SpawnUnitStatement_invoke_arc_func_Cons_12(ctx);
+		auto proxy = (mindustry_logic_LStatements$SpawnUnitStatement_invoke_arc_func_Cons_12 *) gcAlloc(ctx, &class_mindustry_logic_LStatements$SpawnUnitStatement_invoke_arc_func_Cons_12);
+		proxy->F_field0 = (jref) (frame[0].o);
+		sp[4].o = (jobject) proxy;
+	}
+	sp[0].o = (jobject)((func_mindustry_logic_LStatements$SpawnUnitStatement_fields_arc_scene_ui_layout_Table_java_lang_String_java_lang_String_arc_func_Cons_R_arc_scene_ui_layout_Cell) ((void **) nullCheck(ctx, sp[0].o)->vtable)[VTABLE_mindustry_logic_LStatements$SpawnUnitStatement_fields_arc_scene_ui_layout_Table_java_lang_String_java_lang_String_arc_func_Cons_R_arc_scene_ui_layout_Cell])(ctx, sp[0].o, sp[1].o, sp[2].o, sp[3].o, sp[4].o);
+	LINE_NUMBER(1368);
+	sp[0].o = frame[0].o;
+	sp[1].o = frame[1].o;
+	sp[2].o = ((jobject) createStringLiteral(ctx, u8"effect"_j));
+	sp[3].o = (jobject)((mindustry_logic_LStatements$SpawnUnitStatement *) NULL_CHECK((frame[0].o)))->F_effect;
+	{ /* InvokeDynamic */
+		clinit_mindustry_logic_LStatements$SpawnUnitStatement_invoke_arc_func_Cons_13(ctx);
+		auto proxy = (mindustry_logic_LStatements$SpawnUnitStatement_invoke_arc_func_Cons_13 *) gcAlloc(ctx, &class_mindustry_logic_LStatements$SpawnUnitStatement_invoke_arc_func_Cons_13);
+		proxy->F_field0 = (jref) (frame[0].o);
+		sp[4].o = (jobject) proxy;
+	}
+	sp[0].o = (jobject)((func_mindustry_logic_LStatements$SpawnUnitStatement_fields_arc_scene_ui_layout_Table_java_lang_String_java_lang_String_arc_func_Cons_R_arc_scene_ui_layout_Cell) ((void **) nullCheck(ctx, sp[0].o)->vtable)[VTABLE_mindustry_logic_LStatements$SpawnUnitStatement_fields_arc_scene_ui_layout_Table_java_lang_String_java_lang_String_arc_func_Cons_R_arc_scene_ui_layout_Cell])(ctx, sp[0].o, sp[1].o, sp[2].o, sp[3].o, sp[4].o);
+	LINE_NUMBER(1369);
+	popStackFrame(ctx);
+	return;
+	}
+
+	popStackFrame(ctx);
+}
+
+jbool M_mindustry_logic_LStatements$SpawnUnitStatement_privileged_R_boolean(jcontext ctx, jobject self) {
+	NULL_CHECK(self);
+	jtype frame[2];
+	auto stack = &frame[1];
+	jtype *sp = stack;
+	FrameInfo frameInfo { "mindustry/logic/LStatements$SpawnUnitStatement:privileged", 2 };
+	auto frameRef = pushStackFrame(ctx, &frameInfo, frame, nullptr);
+
+	frame[0].o = self;
+	{
+	LINE_NUMBER(1373);
+	popStackFrame(ctx);
+	return (jint(1));
+	}
+
+	popStackFrame(ctx);
+}
+
+jobject M_mindustry_logic_LStatements$SpawnUnitStatement_build_mindustry_logic_LAssembler_R_mindustry_logic_LExecutor$LInstruction(jcontext ctx, jobject self, jobject param0) {
+	NULL_CHECK(self);
+	jtype frame[12];
+	auto stack = &frame[2];
+	jtype *sp = stack;
+	FrameInfo frameInfo { "mindustry/logic/LStatements$SpawnUnitStatement:build", 12 };
+	auto frameRef = pushStackFrame(ctx, &frameInfo, frame, nullptr);
+
+	frame[0].o = self;
+	frame[1].o = param0;
+	{
+	LINE_NUMBER(1378);
+	clinit_mindustry_logic_LExecutor$SpawnUnitI(ctx);
+	sp[0].o = gcAlloc(ctx, &class_mindustry_logic_LExecutor$SpawnUnitI);
+	sp[1].o = frame[1].o;
+	sp[2].o = (jobject)((mindustry_logic_LStatements$SpawnUnitStatement *) NULL_CHECK((frame[0].o)))->F_type;
+	sp[1].o = (jobject)((func_mindustry_logic_LAssembler_var_java_lang_String_R_mindustry_logic_LVar) ((void **) nullCheck(ctx, sp[1].o)->vtable)[VTABLE_mindustry_logic_LAssembler_var_java_lang_String_R_mindustry_logic_LVar])(ctx, sp[1].o, sp[2].o);
+	sp[2].o = frame[1].o;
+	sp[3].o = (jobject)((mindustry_logic_LStatements$SpawnUnitStatement *) NULL_CHECK((frame[0].o)))->F_x;
+	sp[2].o = (jobject)((func_mindustry_logic_LAssembler_var_java_lang_String_R_mindustry_logic_LVar) ((void **) nullCheck(ctx, sp[2].o)->vtable)[VTABLE_mindustry_logic_LAssembler_var_java_lang_String_R_mindustry_logic_LVar])(ctx, sp[2].o, sp[3].o);
+	sp[3].o = frame[1].o;
+	sp[4].o = (jobject)((mindustry_logic_LStatements$SpawnUnitStatement *) NULL_CHECK((frame[0].o)))->F_y;
+	sp[3].o = (jobject)((func_mindustry_logic_LAssembler_var_java_lang_String_R_mindustry_logic_LVar) ((void **) nullCheck(ctx, sp[3].o)->vtable)[VTABLE_mindustry_logic_LAssembler_var_java_lang_String_R_mindustry_logic_LVar])(ctx, sp[3].o, sp[4].o);
+	sp[4].o = frame[1].o;
+	sp[5].o = (jobject)((mindustry_logic_LStatements$SpawnUnitStatement *) NULL_CHECK((frame[0].o)))->F_rotation;
+	sp[4].o = (jobject)((func_mindustry_logic_LAssembler_var_java_lang_String_R_mindustry_logic_LVar) ((void **) nullCheck(ctx, sp[4].o)->vtable)[VTABLE_mindustry_logic_LAssembler_var_java_lang_String_R_mindustry_logic_LVar])(ctx, sp[4].o, sp[5].o);
+	sp[5].o = frame[1].o;
+	sp[6].o = (jobject)((mindustry_logic_LStatements$SpawnUnitStatement *) NULL_CHECK((frame[0].o)))->F_team;
+	sp[5].o = (jobject)((func_mindustry_logic_LAssembler_var_java_lang_String_R_mindustry_logic_LVar) ((void **) nullCheck(ctx, sp[5].o)->vtable)[VTABLE_mindustry_logic_LAssembler_var_java_lang_String_R_mindustry_logic_LVar])(ctx, sp[5].o, sp[6].o);
+	sp[6].o = frame[1].o;
+	sp[7].o = (jobject)((mindustry_logic_LStatements$SpawnUnitStatement *) NULL_CHECK((frame[0].o)))->F_result;
+	sp[6].o = (jobject)((func_mindustry_logic_LAssembler_var_java_lang_String_R_mindustry_logic_LVar) ((void **) nullCheck(ctx, sp[6].o)->vtable)[VTABLE_mindustry_logic_LAssembler_var_java_lang_String_R_mindustry_logic_LVar])(ctx, sp[6].o, sp[7].o);
+	sp[7].o = frame[1].o;
+	sp[8].o = (jobject)((mindustry_logic_LStatements$SpawnUnitStatement *) NULL_CHECK((frame[0].o)))->F_effect;
+	sp[7].o = (jobject)((func_mindustry_logic_LAssembler_var_java_lang_String_R_mindustry_logic_LVar) ((void **) nullCheck(ctx, sp[7].o)->vtable)[VTABLE_mindustry_logic_LAssembler_var_java_lang_String_R_mindustry_logic_LVar])(ctx, sp[7].o, sp[8].o);
+	init_mindustry_logic_LExecutor$SpawnUnitI_mindustry_logic_LVar_mindustry_logic_LVar_mindustry_logic_LVar_mindustry_logic_LVar_mindustry_logic_LVar_mindustry_logic_LVar_mindustry_logic_LVar(ctx, sp[0].o, sp[1].o, sp[2].o, sp[3].o, sp[4].o, sp[5].o, sp[6].o, sp[7].o);
+	popStackFrame(ctx);
+	return sp[0].o;
+	}
+
+	popStackFrame(ctx);
+}
+
+jobject M_mindustry_logic_LStatements$SpawnUnitStatement_category_R_mindustry_logic_LCategory(jcontext ctx, jobject self) {
+	NULL_CHECK(self);
+	jtype frame[2];
+	auto stack = &frame[1];
+	jtype *sp = stack;
+	FrameInfo frameInfo { "mindustry/logic/LStatements$SpawnUnitStatement:category", 2 };
+	auto frameRef = pushStackFrame(ctx, &frameInfo, frame, nullptr);
+
+	frame[0].o = self;
+	{
+	LINE_NUMBER(1383);
+	clinit_mindustry_logic_LCategory(ctx);
+	sp[0].o = (jobject)SF_mindustry_logic_LCategory_world;
+	popStackFrame(ctx);
+	return sp[0].o;
+	}
+
+	popStackFrame(ctx);
+}
+
+void M_mindustry_logic_LStatements$SpawnUnitStatement_lambda$build$6_java_lang_String(jcontext ctx, jobject self, jobject param0) {
+	NULL_CHECK(self);
+	jtype frame[4];
+	auto stack = &frame[2];
+	jtype *sp = stack;
+	FrameInfo frameInfo { "mindustry/logic/LStatements$SpawnUnitStatement:lambda$build$6", 4 };
+	auto frameRef = pushStackFrame(ctx, &frameInfo, frame, nullptr);
+
+	frame[0].o = self;
+	frame[1].o = param0;
+	{
+	LINE_NUMBER(1368);
+	((mindustry_logic_LStatements$SpawnUnitStatement *) NULL_CHECK((frame[0].o)))->F_effect = (jref) (frame[1].o);
+	popStackFrame(ctx);
+	return;
+	}
+
+	popStackFrame(ctx);
+}
+
+void M_mindustry_logic_LStatements$SpawnUnitStatement_lambda$build$5_java_lang_String(jcontext ctx, jobject self, jobject param0) {
+	NULL_CHECK(self);
+	jtype frame[4];
+	auto stack = &frame[2];
+	jtype *sp = stack;
+	FrameInfo frameInfo { "mindustry/logic/LStatements$SpawnUnitStatement:lambda$build$5", 4 };
+	auto frameRef = pushStackFrame(ctx, &frameInfo, frame, nullptr);
+
+	frame[0].o = self;
+	frame[1].o = param0;
+	{
+	LINE_NUMBER(1367);
+	((mindustry_logic_LStatements$SpawnUnitStatement *) NULL_CHECK((frame[0].o)))->F_rotation = (jref) (frame[1].o);
+	popStackFrame(ctx);
+	return;
+	}
+
+	popStackFrame(ctx);
+}
+
+void M_mindustry_logic_LStatements$SpawnUnitStatement_lambda$build$4_java_lang_String(jcontext ctx, jobject self, jobject param0) {
+	NULL_CHECK(self);
+	jtype frame[4];
+	auto stack = &frame[2];
+	jtype *sp = stack;
+	FrameInfo frameInfo { "mindustry/logic/LStatements$SpawnUnitStatement:lambda$build$4", 4 };
+	auto frameRef = pushStackFrame(ctx, &frameInfo, frame, nullptr);
+
+	frame[0].o = self;
+	frame[1].o = param0;
+	{
+	LINE_NUMBER(1366);
+	((mindustry_logic_LStatements$SpawnUnitStatement *) NULL_CHECK((frame[0].o)))->F_team = (jref) (frame[1].o);
+	popStackFrame(ctx);
+	return;
+	}
+
+	popStackFrame(ctx);
+}
+
+void M_mindustry_logic_LStatements$SpawnUnitStatement_lambda$build$3_java_lang_String(jcontext ctx, jobject self, jobject param0) {
+	NULL_CHECK(self);
+	jtype frame[4];
+	auto stack = &frame[2];
+	jtype *sp = stack;
+	FrameInfo frameInfo { "mindustry/logic/LStatements$SpawnUnitStatement:lambda$build$3", 4 };
+	auto frameRef = pushStackFrame(ctx, &frameInfo, frame, nullptr);
+
+	frame[0].o = self;
+	frame[1].o = param0;
+	{
+	LINE_NUMBER(1365);
+	((mindustry_logic_LStatements$SpawnUnitStatement *) NULL_CHECK((frame[0].o)))->F_y = (jref) (frame[1].o);
+	popStackFrame(ctx);
+	return;
+	}
+
+	popStackFrame(ctx);
+}
+
+void M_mindustry_logic_LStatements$SpawnUnitStatement_lambda$build$2_java_lang_String(jcontext ctx, jobject self, jobject param0) {
+	NULL_CHECK(self);
+	jtype frame[4];
+	auto stack = &frame[2];
+	jtype *sp = stack;
+	FrameInfo frameInfo { "mindustry/logic/LStatements$SpawnUnitStatement:lambda$build$2", 4 };
+	auto frameRef = pushStackFrame(ctx, &frameInfo, frame, nullptr);
+
+	frame[0].o = self;
+	frame[1].o = param0;
+	{
+	LINE_NUMBER(1364);
+	((mindustry_logic_LStatements$SpawnUnitStatement *) NULL_CHECK((frame[0].o)))->F_x = (jref) (frame[1].o);
+	popStackFrame(ctx);
+	return;
+	}
+
+	popStackFrame(ctx);
+}
+
+void M_mindustry_logic_LStatements$SpawnUnitStatement_lambda$build$1_java_lang_String(jcontext ctx, jobject self, jobject param0) {
+	NULL_CHECK(self);
+	jtype frame[4];
+	auto stack = &frame[2];
+	jtype *sp = stack;
+	FrameInfo frameInfo { "mindustry/logic/LStatements$SpawnUnitStatement:lambda$build$1", 4 };
+	auto frameRef = pushStackFrame(ctx, &frameInfo, frame, nullptr);
+
+	frame[0].o = self;
+	frame[1].o = param0;
+	{
+	LINE_NUMBER(1363);
+	((mindustry_logic_LStatements$SpawnUnitStatement *) NULL_CHECK((frame[0].o)))->F_type = (jref) (frame[1].o);
+	popStackFrame(ctx);
+	return;
+	}
+
+	popStackFrame(ctx);
+}
+
+void M_mindustry_logic_LStatements$SpawnUnitStatement_lambda$build$0_java_lang_String(jcontext ctx, jobject self, jobject param0) {
+	NULL_CHECK(self);
+	jtype frame[4];
+	auto stack = &frame[2];
+	jtype *sp = stack;
+	FrameInfo frameInfo { "mindustry/logic/LStatements$SpawnUnitStatement:lambda$build$0", 4 };
+	auto frameRef = pushStackFrame(ctx, &frameInfo, frame, nullptr);
+
+	frame[0].o = self;
+	frame[1].o = param0;
+	{
+	LINE_NUMBER(1362);
+	((mindustry_logic_LStatements$SpawnUnitStatement *) NULL_CHECK((frame[0].o)))->F_result = (jref) (frame[1].o);
+	popStackFrame(ctx);
+	return;
+	}
+
+	popStackFrame(ctx);
+}
+
+void *vtable_mindustry_logic_LStatements$SpawnUnitStatement[] {
+	(void *) M_java_lang_Object_hashCode_R_int,
+	(void *) M_java_lang_Object_equals_java_lang_Object_R_boolean,
+	(void *) M_java_lang_Object_clone_R_java_lang_Object,
+	(void *) M_java_lang_Object_getClass_R_java_lang_Class,
+	(void *) M_java_lang_Object_toString_R_java_lang_String,
+	(void *) M_java_lang_Object_finalize,
+	(void *) M_java_lang_Object_notify,
+	(void *) M_java_lang_Object_notifyAll,
+	(void *) M_java_lang_Object_wait,
+	(void *) M_java_lang_Object_wait_long,
+	(void *) M_java_lang_Object_wait_long_int,
+	(void *) M_mindustry_logic_LStatements$SpawnUnitStatement_build_arc_scene_ui_layout_Table,
+	(void *) M_mindustry_logic_LStatements$SpawnUnitStatement_build_mindustry_logic_LAssembler_R_mindustry_logic_LExecutor$LInstruction,
+	(void *) M_mindustry_logic_LStatements$SpawnUnitStatement_category_R_mindustry_logic_LCategory,
+	(void *) M_mindustry_logic_LStatement_copy_R_mindustry_logic_LStatement,
+	(void *) M_mindustry_logic_LStatement_useWrapping_R_boolean,
+	(void *) M_mindustry_logic_LStatement_hidden_R_boolean,
+	(void *) M_mindustry_logic_LStatements$SpawnUnitStatement_privileged_R_boolean,
+	(void *) M_mindustry_logic_LStatement_nonPrivileged_R_boolean,
+	(void *) M_mindustry_logic_LStatement_param_arc_scene_ui_layout_Cell,
+	(void *) M_mindustry_logic_LStatement_field_arc_scene_ui_layout_Table_java_lang_String_arc_func_Cons_R_arc_scene_ui_layout_Cell,
+	(void *) M_mindustry_logic_LStatement_fields_arc_scene_ui_layout_Table_java_lang_String_java_lang_String_arc_func_Cons_R_arc_scene_ui_layout_Cell,
+	(void *) M_mindustry_logic_LStatement_fields_arc_scene_ui_layout_Table_java_lang_String_arc_func_Cons_R_arc_scene_ui_layout_Cell,
+	(void *) M_mindustry_logic_LStatement_fields_arc_scene_ui_layout_Table_java_lang_String_boolean_java_lang_String_arc_func_Cons_R_arc_scene_ui_layout_Cell,
+	(void *) M_mindustry_logic_LStatement_col_arc_scene_ui_layout_Table_java_lang_String_arc_func_Cons_R_arc_scene_ui_layout_Cell,
+	(void *) M_mindustry_logic_LStatement_showSelect_arc_scene_ui_Button_Array1_java_lang_Object_java_lang_Object_arc_func_Cons_int_arc_func_Cons,
+	(void *) M_mindustry_logic_LStatement_showSelect_arc_scene_ui_Button_Array1_java_lang_Object_java_lang_Object_arc_func_Cons,
+	(void *) M_mindustry_logic_LStatement_fieldAlignSelect_arc_scene_ui_layout_Table_arc_func_Prov_arc_func_Cons_boolean_boolean,
+	(void *) M_mindustry_logic_LStatement_afterRead,
+	(void *) M_mindustry_logic_LStatement_write_java_lang_StringBuilder,
+	(void *) M_mindustry_logic_LStatement_setupUI,
+	(void *) M_mindustry_logic_LStatement_saveUI,
+	(void *) M_mindustry_logic_LStatement_typeName_R_java_lang_String,
+	(void *) M_mindustry_logic_LStatement_statementKey_R_java_lang_String,
+	(void *) M_mindustry_logic_LStatement_localizedName_R_java_lang_String,
+	(void *) M_mindustry_logic_LStatement_name_R_java_lang_String,
+	(void *) M_mindustry_logic_LStatements$SpawnUnitStatement_lambda$build$6_java_lang_String,
+	(void *) M_mindustry_logic_LStatements$SpawnUnitStatement_lambda$build$5_java_lang_String,
+	(void *) M_mindustry_logic_LStatements$SpawnUnitStatement_lambda$build$4_java_lang_String,
+	(void *) M_mindustry_logic_LStatements$SpawnUnitStatement_lambda$build$3_java_lang_String,
+	(void *) M_mindustry_logic_LStatements$SpawnUnitStatement_lambda$build$2_java_lang_String,
+	(void *) M_mindustry_logic_LStatements$SpawnUnitStatement_lambda$build$1_java_lang_String,
+	(void *) M_mindustry_logic_LStatements$SpawnUnitStatement_lambda$build$0_java_lang_String,
+};
+
+static VtableEntry vtableEntries[] {
+	{ "hashCode", "()I" },
+	{ "equals", "(Ljava/lang/Object;)Z" },
+	{ "clone", "()Ljava/lang/Object;" },
+	{ "getClass", "()Ljava/lang/Class;" },
+	{ "toString", "()Ljava/lang/String;" },
+	{ "finalize", "()V" },
+	{ "notify", "()V" },
+	{ "notifyAll", "()V" },
+	{ "wait", "()V" },
+	{ "wait", "(J)V" },
+	{ "wait", "(JI)V" },
+	{ "build", "(Larc/scene/ui/layout/Table;)V" },
+	{ "build", "(Lmindustry/logic/LAssembler;)Lmindustry/logic/LExecutor$LInstruction;" },
+	{ "category", "()Lmindustry/logic/LCategory;" },
+	{ "copy", "()Lmindustry/logic/LStatement;" },
+	{ "useWrapping", "()Z" },
+	{ "hidden", "()Z" },
+	{ "privileged", "()Z" },
+	{ "nonPrivileged", "()Z" },
+	{ "param", "(Larc/scene/ui/layout/Cell;)V" },
+	{ "field", "(Larc/scene/ui/layout/Table;Ljava/lang/String;Larc/func/Cons;)Larc/scene/ui/layout/Cell;" },
+	{ "fields", "(Larc/scene/ui/layout/Table;Ljava/lang/String;Ljava/lang/String;Larc/func/Cons;)Larc/scene/ui/layout/Cell;" },
+	{ "fields", "(Larc/scene/ui/layout/Table;Ljava/lang/String;Larc/func/Cons;)Larc/scene/ui/layout/Cell;" },
+	{ "fields", "(Larc/scene/ui/layout/Table;Ljava/lang/String;ZLjava/lang/String;Larc/func/Cons;)Larc/scene/ui/layout/Cell;" },
+	{ "col", "(Larc/scene/ui/layout/Table;Ljava/lang/String;Larc/func/Cons;)Larc/scene/ui/layout/Cell;" },
+	{ "showSelect", "(Larc/scene/ui/Button;[Ljava/lang/Object;Ljava/lang/Object;Larc/func/Cons;ILarc/func/Cons;)V" },
+	{ "showSelect", "(Larc/scene/ui/Button;[Ljava/lang/Object;Ljava/lang/Object;Larc/func/Cons;)V" },
+	{ "fieldAlignSelect", "(Larc/scene/ui/layout/Table;Larc/func/Prov;Larc/func/Cons;ZZ)V" },
+	{ "afterRead", "()V" },
+	{ "write", "(Ljava/lang/StringBuilder;)V" },
+	{ "setupUI", "()V" },
+	{ "saveUI", "()V" },
+	{ "typeName", "()Ljava/lang/String;" },
+	{ "statementKey", "()Ljava/lang/String;" },
+	{ "localizedName", "()Ljava/lang/String;" },
+	{ "name", "()Ljava/lang/String;" },
+	{ "lambda$build$6", "(Ljava/lang/String;)V" },
+	{ "lambda$build$5", "(Ljava/lang/String;)V" },
+	{ "lambda$build$4", "(Ljava/lang/String;)V" },
+	{ "lambda$build$3", "(Ljava/lang/String;)V" },
+	{ "lambda$build$2", "(Ljava/lang/String;)V" },
+	{ "lambda$build$1", "(Ljava/lang/String;)V" },
+	{ "lambda$build$0", "(Ljava/lang/String;)V" },
+};
+
+static FieldMetadata fields[] {
+	{ "type", &class_java_lang_String, offsetof(mindustry_logic_LStatements$SpawnUnitStatement, F_type), "Ljava/lang/String;", 1 },
+	{ "x", &class_java_lang_String, offsetof(mindustry_logic_LStatements$SpawnUnitStatement, F_x), "Ljava/lang/String;", 1 },
+	{ "y", &class_java_lang_String, offsetof(mindustry_logic_LStatements$SpawnUnitStatement, F_y), "Ljava/lang/String;", 1 },
+	{ "rotation", &class_java_lang_String, offsetof(mindustry_logic_LStatements$SpawnUnitStatement, F_rotation), "Ljava/lang/String;", 1 },
+	{ "team", &class_java_lang_String, offsetof(mindustry_logic_LStatements$SpawnUnitStatement, F_team), "Ljava/lang/String;", 1 },
+	{ "result", &class_java_lang_String, offsetof(mindustry_logic_LStatements$SpawnUnitStatement, F_result), "Ljava/lang/String;", 1 },
+	{ "effect", &class_java_lang_String, offsetof(mindustry_logic_LStatements$SpawnUnitStatement, F_effect), "Ljava/lang/String;", 1 },
+};
+
+static MethodMetadata methods[] {
+	{ "<init>", (intptr_t) init_mindustry_logic_LStatements$SpawnUnitStatement, 0, "()V", 1 },
+	{ "build", (intptr_t) M_mindustry_logic_LStatements$SpawnUnitStatement_build_arc_scene_ui_layout_Table, VTABLE_mindustry_logic_LStatements$SpawnUnitStatement_build_arc_scene_ui_layout_Table, "(Larc/scene/ui/layout/Table;)V", 1 },
+	{ "privileged", (intptr_t) M_mindustry_logic_LStatements$SpawnUnitStatement_privileged_R_boolean, VTABLE_mindustry_logic_LStatements$SpawnUnitStatement_privileged_R_boolean, "()Z", 1 },
+	{ "build", (intptr_t) M_mindustry_logic_LStatements$SpawnUnitStatement_build_mindustry_logic_LAssembler_R_mindustry_logic_LExecutor$LInstruction, VTABLE_mindustry_logic_LStatements$SpawnUnitStatement_build_mindustry_logic_LAssembler_R_mindustry_logic_LExecutor$LInstruction, "(Lmindustry/logic/LAssembler;)Lmindustry/logic/LExecutor$LInstruction;", 1 },
+	{ "category", (intptr_t) M_mindustry_logic_LStatements$SpawnUnitStatement_category_R_mindustry_logic_LCategory, VTABLE_mindustry_logic_LStatements$SpawnUnitStatement_category_R_mindustry_logic_LCategory, "()Lmindustry/logic/LCategory;", 1 },
+	{ "lambda$build$6", (intptr_t) M_mindustry_logic_LStatements$SpawnUnitStatement_lambda$build$6_java_lang_String, VTABLE_mindustry_logic_LStatements$SpawnUnitStatement_lambda$build$6_java_lang_String, "(Ljava/lang/String;)V", 4098 },
+	{ "lambda$build$5", (intptr_t) M_mindustry_logic_LStatements$SpawnUnitStatement_lambda$build$5_java_lang_String, VTABLE_mindustry_logic_LStatements$SpawnUnitStatement_lambda$build$5_java_lang_String, "(Ljava/lang/String;)V", 4098 },
+	{ "lambda$build$4", (intptr_t) M_mindustry_logic_LStatements$SpawnUnitStatement_lambda$build$4_java_lang_String, VTABLE_mindustry_logic_LStatements$SpawnUnitStatement_lambda$build$4_java_lang_String, "(Ljava/lang/String;)V", 4098 },
+	{ "lambda$build$3", (intptr_t) M_mindustry_logic_LStatements$SpawnUnitStatement_lambda$build$3_java_lang_String, VTABLE_mindustry_logic_LStatements$SpawnUnitStatement_lambda$build$3_java_lang_String, "(Ljava/lang/String;)V", 4098 },
+	{ "lambda$build$2", (intptr_t) M_mindustry_logic_LStatements$SpawnUnitStatement_lambda$build$2_java_lang_String, VTABLE_mindustry_logic_LStatements$SpawnUnitStatement_lambda$build$2_java_lang_String, "(Ljava/lang/String;)V", 4098 },
+	{ "lambda$build$1", (intptr_t) M_mindustry_logic_LStatements$SpawnUnitStatement_lambda$build$1_java_lang_String, VTABLE_mindustry_logic_LStatements$SpawnUnitStatement_lambda$build$1_java_lang_String, "(Ljava/lang/String;)V", 4098 },
+	{ "lambda$build$0", (intptr_t) M_mindustry_logic_LStatements$SpawnUnitStatement_lambda$build$0_java_lang_String, VTABLE_mindustry_logic_LStatements$SpawnUnitStatement_lambda$build$0_java_lang_String, "(Ljava/lang/String;)V", 4098 },
+};
+
+Class class_mindustry_logic_LStatements$SpawnUnitStatement{
+		.nativeName = (intptr_t) "mindustry/logic/LStatements$SpawnUnitStatement",
+		.parentClass = (intptr_t) &class_mindustry_logic_LStatement,
+		.size = sizeof(mindustry_logic_LStatements$SpawnUnitStatement),
+		.classVtable = (intptr_t) vtable_mindustry_logic_LStatements$SpawnUnitStatement,
+		.staticInitializer = (intptr_t) clinit_mindustry_logic_LStatements$SpawnUnitStatement,
+		.annotationInitializer = (intptr_t) nullptr,
+		.markFunction = (intptr_t) mark_mindustry_logic_LStatements$SpawnUnitStatement,
+		.primitive = false,
+		.arrayDimensions = 0,
+		.componentClass = (intptr_t) nullptr,
+		.outerClass = (intptr_t) &class_mindustry_logic_LStatements,
+		.innerClassCount = 0,
+		.nativeInnerClasses = (intptr_t) nullptr,
+		.access = 33,
+		.interfaceCount = 0,
+		.nativeInterfaces = (intptr_t) nullptr,
+		.fieldCount = 7,
+		.nativeFields = (intptr_t) fields,
+		.methodCount = 12,
+		.nativeMethods = (intptr_t) methods,
+		.vtableSize = 43,
+		.vtableEntries = (intptr_t) vtableEntries,
+		.anonymous = false,
+		.synthetic = false,
+};
+static bool registered_mindustry_logic_LStatements$SpawnUnitStatement = registerClass(&class_mindustry_logic_LStatements$SpawnUnitStatement);
+
+}
+

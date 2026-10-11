@@ -1,0 +1,67 @@
+#ifndef HEADER_mindustry_world_blocks_Autotiler
+#define HEADER_mindustry_world_blocks_Autotiler
+
+#include "Clearwing.h"
+#include "java/lang/Object.h"
+
+#ifdef __cplusplus
+extern "C" {
+#endif
+
+typedef struct mindustry_world_blocks_Autotiler {
+	java_lang_Object parent;
+} mindustry_world_blocks_Autotiler;
+
+extern Class class_mindustry_world_blocks_Autotiler;
+
+
+#define INDEX_mindustry_world_blocks_Autotiler_sliced_arc_graphics_g2d_TextureRegion_mindustry_world_blocks_Autotiler$SliceMode_R_arc_graphics_g2d_TextureRegion 0
+typedef jobject (*func_mindustry_world_blocks_Autotiler_sliced_arc_graphics_g2d_TextureRegion_mindustry_world_blocks_Autotiler$SliceMode_R_arc_graphics_g2d_TextureRegion)(jcontext ctx, jobject self, jobject param0, jobject param1);
+#define INDEX_mindustry_world_blocks_Autotiler_topHalf_arc_graphics_g2d_TextureRegion_R_arc_graphics_g2d_TextureRegion 1
+typedef jobject (*func_mindustry_world_blocks_Autotiler_topHalf_arc_graphics_g2d_TextureRegion_R_arc_graphics_g2d_TextureRegion)(jcontext ctx, jobject self, jobject param0);
+#define INDEX_mindustry_world_blocks_Autotiler_botHalf_arc_graphics_g2d_TextureRegion_R_arc_graphics_g2d_TextureRegion 2
+typedef jobject (*func_mindustry_world_blocks_Autotiler_botHalf_arc_graphics_g2d_TextureRegion_R_arc_graphics_g2d_TextureRegion)(jcontext ctx, jobject self, jobject param0);
+#define INDEX_mindustry_world_blocks_Autotiler_getTiling_mindustry_entities_units_BuildPlan_arc_util_Eachable_R_Array1_int 3
+typedef jobject (*func_mindustry_world_blocks_Autotiler_getTiling_mindustry_entities_units_BuildPlan_arc_util_Eachable_R_Array1_int)(jcontext ctx, jobject self, jobject param0, jobject param1);
+#define INDEX_mindustry_world_blocks_Autotiler_buildBlending_mindustry_world_Tile_int_Array1_mindustry_entities_units_BuildPlan_boolean_R_Array1_int 4
+typedef jobject (*func_mindustry_world_blocks_Autotiler_buildBlending_mindustry_world_Tile_int_Array1_mindustry_entities_units_BuildPlan_boolean_R_Array1_int)(jcontext ctx, jobject self, jobject param0, jint param1, jobject param2, jbool param3);
+#define INDEX_mindustry_world_blocks_Autotiler_transformCase_int_Array1_int 5
+typedef void (*func_mindustry_world_blocks_Autotiler_transformCase_int_Array1_int)(jcontext ctx, jobject self, jint param0, jobject param1);
+#define INDEX_mindustry_world_blocks_Autotiler_facing_int_int_int_int_int_R_boolean 6
+typedef jbool (*func_mindustry_world_blocks_Autotiler_facing_int_int_int_int_int_R_boolean)(jcontext ctx, jobject self, jint param0, jint param1, jint param2, jint param3, jint param4);
+#define INDEX_mindustry_world_blocks_Autotiler_blends_mindustry_world_Tile_int_Array1_mindustry_entities_units_BuildPlan_int_boolean_R_boolean 7
+typedef jbool (*func_mindustry_world_blocks_Autotiler_blends_mindustry_world_Tile_int_Array1_mindustry_entities_units_BuildPlan_int_boolean_R_boolean)(jcontext ctx, jobject self, jobject param0, jint param1, jobject param2, jint param3, jbool param4);
+#define INDEX_mindustry_world_blocks_Autotiler_blends_mindustry_world_Tile_int_int_R_boolean 8
+typedef jbool (*func_mindustry_world_blocks_Autotiler_blends_mindustry_world_Tile_int_int_R_boolean)(jcontext ctx, jobject self, jobject param0, jint param1, jint param2);
+#define INDEX_mindustry_world_blocks_Autotiler_blendsArmored_mindustry_world_Tile_int_int_int_int_mindustry_world_Block_R_boolean 9
+typedef jbool (*func_mindustry_world_blocks_Autotiler_blendsArmored_mindustry_world_Tile_int_int_int_int_mindustry_world_Block_R_boolean)(jcontext ctx, jobject self, jobject param0, jint param1, jint param2, jint param3, jint param4, jobject param5);
+#define INDEX_mindustry_world_blocks_Autotiler_notLookingAt_mindustry_world_Tile_int_int_int_int_mindustry_world_Block_R_boolean 10
+typedef jbool (*func_mindustry_world_blocks_Autotiler_notLookingAt_mindustry_world_Tile_int_int_int_int_mindustry_world_Block_R_boolean)(jcontext ctx, jobject self, jobject param0, jint param1, jint param2, jint param3, jint param4, jobject param5);
+#define INDEX_mindustry_world_blocks_Autotiler_lookingAtEither_mindustry_world_Tile_int_int_int_int_mindustry_world_Block_R_boolean 11
+typedef jbool (*func_mindustry_world_blocks_Autotiler_lookingAtEither_mindustry_world_Tile_int_int_int_int_mindustry_world_Block_R_boolean)(jcontext ctx, jobject self, jobject param0, jint param1, jint param2, jint param3, jint param4, jobject param5);
+#define INDEX_mindustry_world_blocks_Autotiler_lookingAt_mindustry_world_Tile_int_int_int_mindustry_world_Block_R_boolean 12
+typedef jbool (*func_mindustry_world_blocks_Autotiler_lookingAt_mindustry_world_Tile_int_int_int_mindustry_world_Block_R_boolean)(jcontext ctx, jobject self, jobject param0, jint param1, jint param2, jint param3, jobject param4);
+#define INDEX_mindustry_world_blocks_Autotiler_blends_mindustry_world_Tile_int_int_int_int_mindustry_world_Block_R_boolean 13
+typedef jbool (*func_mindustry_world_blocks_Autotiler_blends_mindustry_world_Tile_int_int_int_int_mindustry_world_Block_R_boolean)(jcontext ctx, jobject self, jobject param0, jint param1, jint param2, jint param3, jint param4, jobject param5);
+
+void mark_mindustry_world_blocks_Autotiler(jobject object, jint mark, jint depth);
+void clinit_mindustry_world_blocks_Autotiler(jcontext ctx);
+jobject M_mindustry_world_blocks_Autotiler_sliced_arc_graphics_g2d_TextureRegion_mindustry_world_blocks_Autotiler$SliceMode_R_arc_graphics_g2d_TextureRegion(jcontext ctx, jobject self, jobject param0, jobject param1);
+jobject M_mindustry_world_blocks_Autotiler_topHalf_arc_graphics_g2d_TextureRegion_R_arc_graphics_g2d_TextureRegion(jcontext ctx, jobject self, jobject param0);
+jobject M_mindustry_world_blocks_Autotiler_botHalf_arc_graphics_g2d_TextureRegion_R_arc_graphics_g2d_TextureRegion(jcontext ctx, jobject self, jobject param0);
+jobject M_mindustry_world_blocks_Autotiler_getTiling_mindustry_entities_units_BuildPlan_arc_util_Eachable_R_Array1_int(jcontext ctx, jobject self, jobject param0, jobject param1);
+jobject M_mindustry_world_blocks_Autotiler_buildBlending_mindustry_world_Tile_int_Array1_mindustry_entities_units_BuildPlan_boolean_R_Array1_int(jcontext ctx, jobject self, jobject param0, jint param1, jobject param2, jbool param3);
+void M_mindustry_world_blocks_Autotiler_transformCase_int_Array1_int(jcontext ctx, jobject self, jint param0, jobject param1);
+jbool M_mindustry_world_blocks_Autotiler_facing_int_int_int_int_int_R_boolean(jcontext ctx, jobject self, jint param0, jint param1, jint param2, jint param3, jint param4);
+jbool M_mindustry_world_blocks_Autotiler_blends_mindustry_world_Tile_int_Array1_mindustry_entities_units_BuildPlan_int_boolean_R_boolean(jcontext ctx, jobject self, jobject param0, jint param1, jobject param2, jint param3, jbool param4);
+jbool M_mindustry_world_blocks_Autotiler_blends_mindustry_world_Tile_int_int_R_boolean(jcontext ctx, jobject self, jobject param0, jint param1, jint param2);
+jbool M_mindustry_world_blocks_Autotiler_blendsArmored_mindustry_world_Tile_int_int_int_int_mindustry_world_Block_R_boolean(jcontext ctx, jobject self, jobject param0, jint param1, jint param2, jint param3, jint param4, jobject param5);
+jbool M_mindustry_world_blocks_Autotiler_notLookingAt_mindustry_world_Tile_int_int_int_int_mindustry_world_Block_R_boolean(jcontext ctx, jobject self, jobject param0, jint param1, jint param2, jint param3, jint param4, jobject param5);
+jbool M_mindustry_world_blocks_Autotiler_lookingAtEither_mindustry_world_Tile_int_int_int_int_mindustry_world_Block_R_boolean(jcontext ctx, jobject self, jobject param0, jint param1, jint param2, jint param3, jint param4, jobject param5);
+jbool M_mindustry_world_blocks_Autotiler_lookingAt_mindustry_world_Tile_int_int_int_mindustry_world_Block_R_boolean(jcontext ctx, jobject self, jobject param0, jint param1, jint param2, jint param3, jobject param4);
+
+#ifdef __cplusplus
+}
+#endif
+
+#endif

@@ -1,0 +1,176 @@
+#ifndef HEADER_mindustry_ui_fragments_HintsFragment$DefaultHint
+#define HEADER_mindustry_ui_fragments_HintsFragment$DefaultHint
+
+#include "Clearwing.h"
+#include "java/lang/Enum.h"
+#include "mindustry/ui/fragments/HintsFragment_Hint.h"
+
+#ifdef __cplusplus
+extern "C" {
+#endif
+
+typedef struct mindustry_ui_fragments_HintsFragment$DefaultHint {
+	java_lang_Enum parent;
+	jref F_text;
+	jint F_visibility;
+	jref F_dependencies;
+	jbool F_finished;
+	jbool F_cached;
+	jref F_complete;
+	jref F_shown;
+} mindustry_ui_fragments_HintsFragment$DefaultHint;
+
+extern Class class_mindustry_ui_fragments_HintsFragment$DefaultHint;
+
+extern jobject SF_mindustry_ui_fragments_HintsFragment$DefaultHint_desktopMove;
+extern jobject SF_mindustry_ui_fragments_HintsFragment$DefaultHint_zoom;
+extern jobject SF_mindustry_ui_fragments_HintsFragment$DefaultHint_breaking;
+extern jobject SF_mindustry_ui_fragments_HintsFragment$DefaultHint_desktopShoot;
+extern jobject SF_mindustry_ui_fragments_HintsFragment$DefaultHint_depositItems;
+extern jobject SF_mindustry_ui_fragments_HintsFragment$DefaultHint_desktopPause;
+extern jobject SF_mindustry_ui_fragments_HintsFragment$DefaultHint_unitControl;
+extern jobject SF_mindustry_ui_fragments_HintsFragment$DefaultHint_unitSelectControl;
+extern jobject SF_mindustry_ui_fragments_HintsFragment$DefaultHint_respawn;
+extern jobject SF_mindustry_ui_fragments_HintsFragment$DefaultHint_launch;
+extern jobject SF_mindustry_ui_fragments_HintsFragment$DefaultHint_schematicSelect;
+extern jobject SF_mindustry_ui_fragments_HintsFragment$DefaultHint_conveyorPathfind;
+extern jobject SF_mindustry_ui_fragments_HintsFragment$DefaultHint_boost;
+extern jobject SF_mindustry_ui_fragments_HintsFragment$DefaultHint_blockInfo;
+extern jobject SF_mindustry_ui_fragments_HintsFragment$DefaultHint_derelict;
+extern jobject SF_mindustry_ui_fragments_HintsFragment$DefaultHint_payloadPickup;
+extern jobject SF_mindustry_ui_fragments_HintsFragment$DefaultHint_payloadDrop;
+extern jobject SF_mindustry_ui_fragments_HintsFragment$DefaultHint_waveFire;
+extern jobject SF_mindustry_ui_fragments_HintsFragment$DefaultHint_rebuildSelect;
+extern jobject SF_mindustry_ui_fragments_HintsFragment$DefaultHint_guardian;
+extern jobject SF_mindustry_ui_fragments_HintsFragment$DefaultHint_cannotUpgrade;
+extern jobject SF_mindustry_ui_fragments_HintsFragment$DefaultHint_factoryControl;
+extern jobject SF_mindustry_ui_fragments_HintsFragment$DefaultHint_coreUpgrade;
+extern jobject SF_mindustry_ui_fragments_HintsFragment$DefaultHint_serpuloCoreZone;
+extern jobject SF_mindustry_ui_fragments_HintsFragment$DefaultHint_presetLaunch;
+extern jobject SF_mindustry_ui_fragments_HintsFragment$DefaultHint_presetDifficulty;
+extern jobject SF_mindustry_ui_fragments_HintsFragment$DefaultHint_coreIncinerate;
+extern jobject SF_mindustry_ui_fragments_HintsFragment$DefaultHint_$VALUES;
+
+#define VTABLE_mindustry_ui_fragments_HintsFragment$DefaultHint_hashCode_R_int 0
+typedef jint (*func_mindustry_ui_fragments_HintsFragment$DefaultHint_hashCode_R_int)(jcontext ctx, jobject self);
+#define VTABLE_mindustry_ui_fragments_HintsFragment$DefaultHint_equals_java_lang_Object_R_boolean 1
+typedef jbool (*func_mindustry_ui_fragments_HintsFragment$DefaultHint_equals_java_lang_Object_R_boolean)(jcontext ctx, jobject self, jobject param0);
+#define VTABLE_mindustry_ui_fragments_HintsFragment$DefaultHint_clone_R_java_lang_Object 2
+typedef jobject (*func_mindustry_ui_fragments_HintsFragment$DefaultHint_clone_R_java_lang_Object)(jcontext ctx, jobject self);
+#define VTABLE_mindustry_ui_fragments_HintsFragment$DefaultHint_getClass_R_java_lang_Class 3
+typedef jobject (*func_mindustry_ui_fragments_HintsFragment$DefaultHint_getClass_R_java_lang_Class)(jcontext ctx, jobject self);
+#define VTABLE_mindustry_ui_fragments_HintsFragment$DefaultHint_toString_R_java_lang_String 4
+typedef jobject (*func_mindustry_ui_fragments_HintsFragment$DefaultHint_toString_R_java_lang_String)(jcontext ctx, jobject self);
+#define VTABLE_mindustry_ui_fragments_HintsFragment$DefaultHint_finalize 5
+typedef void (*func_mindustry_ui_fragments_HintsFragment$DefaultHint_finalize)(jcontext ctx, jobject self);
+#define VTABLE_mindustry_ui_fragments_HintsFragment$DefaultHint_notify 6
+typedef void (*func_mindustry_ui_fragments_HintsFragment$DefaultHint_notify)(jcontext ctx, jobject self);
+#define VTABLE_mindustry_ui_fragments_HintsFragment$DefaultHint_notifyAll 7
+typedef void (*func_mindustry_ui_fragments_HintsFragment$DefaultHint_notifyAll)(jcontext ctx, jobject self);
+#define VTABLE_mindustry_ui_fragments_HintsFragment$DefaultHint_wait 8
+typedef void (*func_mindustry_ui_fragments_HintsFragment$DefaultHint_wait)(jcontext ctx, jobject self);
+#define VTABLE_mindustry_ui_fragments_HintsFragment$DefaultHint_wait_long 9
+typedef void (*func_mindustry_ui_fragments_HintsFragment$DefaultHint_wait_long)(jcontext ctx, jobject self, jlong param0);
+#define VTABLE_mindustry_ui_fragments_HintsFragment$DefaultHint_wait_long_int 10
+typedef void (*func_mindustry_ui_fragments_HintsFragment$DefaultHint_wait_long_int)(jcontext ctx, jobject self, jlong param0, jint param1);
+#define VTABLE_mindustry_ui_fragments_HintsFragment$DefaultHint_compareTo_java_lang_Object_R_int 11
+typedef jint (*func_mindustry_ui_fragments_HintsFragment$DefaultHint_compareTo_java_lang_Object_R_int)(jcontext ctx, jobject self, jobject param0);
+#define VTABLE_mindustry_ui_fragments_HintsFragment$DefaultHint_compareTo_java_lang_Enum_R_int 12
+typedef jint (*func_mindustry_ui_fragments_HintsFragment$DefaultHint_compareTo_java_lang_Enum_R_int)(jcontext ctx, jobject self, jobject param0);
+#define VTABLE_mindustry_ui_fragments_HintsFragment$DefaultHint_name_R_java_lang_String 13
+typedef jobject (*func_mindustry_ui_fragments_HintsFragment$DefaultHint_name_R_java_lang_String)(jcontext ctx, jobject self);
+#define VTABLE_mindustry_ui_fragments_HintsFragment$DefaultHint_ordinal_R_int 14
+typedef jint (*func_mindustry_ui_fragments_HintsFragment$DefaultHint_ordinal_R_int)(jcontext ctx, jobject self);
+#define VTABLE_mindustry_ui_fragments_HintsFragment$DefaultHint_getDeclaringClass_R_java_lang_Class 15
+typedef jobject (*func_mindustry_ui_fragments_HintsFragment$DefaultHint_getDeclaringClass_R_java_lang_Class)(jcontext ctx, jobject self);
+#define VTABLE_mindustry_ui_fragments_HintsFragment$DefaultHint_text_R_java_lang_String 16
+typedef jobject (*func_mindustry_ui_fragments_HintsFragment$DefaultHint_text_R_java_lang_String)(jcontext ctx, jobject self);
+#define VTABLE_mindustry_ui_fragments_HintsFragment$DefaultHint_complete_R_boolean 17
+typedef jbool (*func_mindustry_ui_fragments_HintsFragment$DefaultHint_complete_R_boolean)(jcontext ctx, jobject self);
+#define VTABLE_mindustry_ui_fragments_HintsFragment$DefaultHint_show_R_boolean 18
+typedef jbool (*func_mindustry_ui_fragments_HintsFragment$DefaultHint_show_R_boolean)(jcontext ctx, jobject self);
+#define VTABLE_mindustry_ui_fragments_HintsFragment$DefaultHint_order_R_int 19
+typedef jint (*func_mindustry_ui_fragments_HintsFragment$DefaultHint_order_R_int)(jcontext ctx, jobject self);
+#define VTABLE_mindustry_ui_fragments_HintsFragment$DefaultHint_valid_R_boolean 20
+typedef jbool (*func_mindustry_ui_fragments_HintsFragment$DefaultHint_valid_R_boolean)(jcontext ctx, jobject self);
+#define VTABLE_mindustry_ui_fragments_HintsFragment$DefaultHint_finish 21
+typedef void (*func_mindustry_ui_fragments_HintsFragment$DefaultHint_finish)(jcontext ctx, jobject self);
+#define VTABLE_mindustry_ui_fragments_HintsFragment$DefaultHint_finished_R_boolean 22
+typedef jbool (*func_mindustry_ui_fragments_HintsFragment$DefaultHint_finished_R_boolean)(jcontext ctx, jobject self);
+
+void mark_mindustry_ui_fragments_HintsFragment$DefaultHint(jobject object, jint mark, jint depth);
+void clinit_mindustry_ui_fragments_HintsFragment$DefaultHint(jcontext ctx);
+jobject SM_mindustry_ui_fragments_HintsFragment$DefaultHint_values_R_Array1_mindustry_ui_fragments_HintsFragment$DefaultHint(jcontext ctx);
+jobject SM_mindustry_ui_fragments_HintsFragment$DefaultHint_valueOf_java_lang_String_R_mindustry_ui_fragments_HintsFragment$DefaultHint(jcontext ctx, jobject param0);
+void init_mindustry_ui_fragments_HintsFragment$DefaultHint_java_lang_String_int_arc_func_Boolp(jcontext ctx, jobject self, jobject param0, jint param1, jobject param2);
+void init_mindustry_ui_fragments_HintsFragment$DefaultHint_java_lang_String_int_int_arc_func_Boolp(jcontext ctx, jobject self, jobject param0, jint param1, jint param2, jobject param3);
+void init_mindustry_ui_fragments_HintsFragment$DefaultHint_java_lang_String_int_arc_func_Boolp_arc_func_Boolp(jcontext ctx, jobject self, jobject param0, jint param1, jobject param2, jobject param3);
+void init_mindustry_ui_fragments_HintsFragment$DefaultHint_java_lang_String_int_int_arc_func_Boolp_arc_func_Boolp(jcontext ctx, jobject self, jobject param0, jint param1, jint param2, jobject param3, jobject param4);
+jbool M_mindustry_ui_fragments_HintsFragment$DefaultHint_finished_R_boolean(jcontext ctx, jobject self);
+void M_mindustry_ui_fragments_HintsFragment$DefaultHint_finish(jcontext ctx, jobject self);
+jobject M_mindustry_ui_fragments_HintsFragment$DefaultHint_text_R_java_lang_String(jcontext ctx, jobject self);
+jbool M_mindustry_ui_fragments_HintsFragment$DefaultHint_complete_R_boolean(jcontext ctx, jobject self);
+jbool M_mindustry_ui_fragments_HintsFragment$DefaultHint_show_R_boolean(jcontext ctx, jobject self);
+jint M_mindustry_ui_fragments_HintsFragment$DefaultHint_order_R_int(jcontext ctx, jobject self);
+jbool M_mindustry_ui_fragments_HintsFragment$DefaultHint_valid_R_boolean(jcontext ctx, jobject self);
+jobject SM_mindustry_ui_fragments_HintsFragment$DefaultHint_$values_R_Array1_mindustry_ui_fragments_HintsFragment$DefaultHint(jcontext ctx);
+jbool SM_mindustry_ui_fragments_HintsFragment$DefaultHint_lambda$show$0_mindustry_ui_fragments_HintsFragment$Hint_R_boolean(jcontext ctx, jobject param0);
+jbool SM_mindustry_ui_fragments_HintsFragment$DefaultHint_lambda$new$0_R_boolean(jcontext ctx);
+jbool SM_mindustry_ui_fragments_HintsFragment$DefaultHint_lambda$static$51_R_boolean(jcontext ctx);
+jbool SM_mindustry_ui_fragments_HintsFragment$DefaultHint_lambda$static$50_R_boolean(jcontext ctx);
+jbool SM_mindustry_ui_fragments_HintsFragment$DefaultHint_lambda$static$49_R_boolean(jcontext ctx);
+jbool SM_mindustry_ui_fragments_HintsFragment$DefaultHint_lambda$static$48_R_boolean(jcontext ctx);
+jbool SM_mindustry_ui_fragments_HintsFragment$DefaultHint_lambda$static$47_R_boolean(jcontext ctx);
+jbool SM_mindustry_ui_fragments_HintsFragment$DefaultHint_lambda$static$46_R_boolean(jcontext ctx);
+jbool SM_mindustry_ui_fragments_HintsFragment$DefaultHint_lambda$static$45_R_boolean(jcontext ctx);
+jbool SM_mindustry_ui_fragments_HintsFragment$DefaultHint_lambda$static$44_R_boolean(jcontext ctx);
+jbool SM_mindustry_ui_fragments_HintsFragment$DefaultHint_lambda$static$43_R_boolean(jcontext ctx);
+jbool SM_mindustry_ui_fragments_HintsFragment$DefaultHint_lambda$static$42_R_boolean(jcontext ctx);
+jbool SM_mindustry_ui_fragments_HintsFragment$DefaultHint_lambda$static$41_R_boolean(jcontext ctx);
+jbool SM_mindustry_ui_fragments_HintsFragment$DefaultHint_lambda$static$40_R_boolean(jcontext ctx);
+jbool SM_mindustry_ui_fragments_HintsFragment$DefaultHint_lambda$static$39_R_boolean(jcontext ctx);
+jbool SM_mindustry_ui_fragments_HintsFragment$DefaultHint_lambda$static$38_R_boolean(jcontext ctx);
+jbool SM_mindustry_ui_fragments_HintsFragment$DefaultHint_lambda$static$37_R_boolean(jcontext ctx);
+jbool SM_mindustry_ui_fragments_HintsFragment$DefaultHint_lambda$static$36_R_boolean(jcontext ctx);
+jbool SM_mindustry_ui_fragments_HintsFragment$DefaultHint_lambda$static$35_R_boolean(jcontext ctx);
+jbool SM_mindustry_ui_fragments_HintsFragment$DefaultHint_lambda$static$34_R_boolean(jcontext ctx);
+jbool SM_mindustry_ui_fragments_HintsFragment$DefaultHint_lambda$static$33_R_boolean(jcontext ctx);
+jbool SM_mindustry_ui_fragments_HintsFragment$DefaultHint_lambda$static$32_R_boolean(jcontext ctx);
+jbool SM_mindustry_ui_fragments_HintsFragment$DefaultHint_lambda$static$31_R_boolean(jcontext ctx);
+jbool SM_mindustry_ui_fragments_HintsFragment$DefaultHint_lambda$static$30_R_boolean(jcontext ctx);
+jbool SM_mindustry_ui_fragments_HintsFragment$DefaultHint_lambda$static$29_R_boolean(jcontext ctx);
+jbool SM_mindustry_ui_fragments_HintsFragment$DefaultHint_lambda$static$28_R_boolean(jcontext ctx);
+jbool SM_mindustry_ui_fragments_HintsFragment$DefaultHint_lambda$static$27_R_boolean(jcontext ctx);
+jbool SM_mindustry_ui_fragments_HintsFragment$DefaultHint_lambda$static$26_R_boolean(jcontext ctx);
+jbool SM_mindustry_ui_fragments_HintsFragment$DefaultHint_lambda$static$25_R_boolean(jcontext ctx);
+jbool SM_mindustry_ui_fragments_HintsFragment$DefaultHint_lambda$static$24_R_boolean(jcontext ctx);
+jbool SM_mindustry_ui_fragments_HintsFragment$DefaultHint_lambda$static$23_R_boolean(jcontext ctx);
+jbool SM_mindustry_ui_fragments_HintsFragment$DefaultHint_lambda$static$22_R_boolean(jcontext ctx);
+jbool SM_mindustry_ui_fragments_HintsFragment$DefaultHint_lambda$static$21_R_boolean(jcontext ctx);
+jbool SM_mindustry_ui_fragments_HintsFragment$DefaultHint_lambda$static$20_R_boolean(jcontext ctx);
+jbool SM_mindustry_ui_fragments_HintsFragment$DefaultHint_lambda$static$19_R_boolean(jcontext ctx);
+jbool SM_mindustry_ui_fragments_HintsFragment$DefaultHint_lambda$static$18_R_boolean(jcontext ctx);
+jbool SM_mindustry_ui_fragments_HintsFragment$DefaultHint_lambda$static$17_R_boolean(jcontext ctx);
+jbool SM_mindustry_ui_fragments_HintsFragment$DefaultHint_lambda$static$16_R_boolean(jcontext ctx);
+jbool SM_mindustry_ui_fragments_HintsFragment$DefaultHint_lambda$static$15_R_boolean(jcontext ctx);
+jbool SM_mindustry_ui_fragments_HintsFragment$DefaultHint_lambda$static$14_R_boolean(jcontext ctx);
+jbool SM_mindustry_ui_fragments_HintsFragment$DefaultHint_lambda$static$13_R_boolean(jcontext ctx);
+jbool SM_mindustry_ui_fragments_HintsFragment$DefaultHint_lambda$static$12_R_boolean(jcontext ctx);
+jbool SM_mindustry_ui_fragments_HintsFragment$DefaultHint_lambda$static$11_R_boolean(jcontext ctx);
+jbool SM_mindustry_ui_fragments_HintsFragment$DefaultHint_lambda$static$10_R_boolean(jcontext ctx);
+jbool SM_mindustry_ui_fragments_HintsFragment$DefaultHint_lambda$static$9_R_boolean(jcontext ctx);
+jbool SM_mindustry_ui_fragments_HintsFragment$DefaultHint_lambda$static$8_R_boolean(jcontext ctx);
+jbool SM_mindustry_ui_fragments_HintsFragment$DefaultHint_lambda$static$7_R_boolean(jcontext ctx);
+jbool SM_mindustry_ui_fragments_HintsFragment$DefaultHint_lambda$static$6_R_boolean(jcontext ctx);
+jbool SM_mindustry_ui_fragments_HintsFragment$DefaultHint_lambda$static$5_R_boolean(jcontext ctx);
+jbool SM_mindustry_ui_fragments_HintsFragment$DefaultHint_lambda$static$4_R_boolean(jcontext ctx);
+jbool SM_mindustry_ui_fragments_HintsFragment$DefaultHint_lambda$static$3_R_boolean(jcontext ctx);
+jbool SM_mindustry_ui_fragments_HintsFragment$DefaultHint_lambda$static$2_R_boolean(jcontext ctx);
+jbool SM_mindustry_ui_fragments_HintsFragment$DefaultHint_lambda$static$1_R_boolean(jcontext ctx);
+jbool SM_mindustry_ui_fragments_HintsFragment$DefaultHint_lambda$static$0_R_boolean(jcontext ctx);
+
+#ifdef __cplusplus
+}
+#endif
+
+#endif

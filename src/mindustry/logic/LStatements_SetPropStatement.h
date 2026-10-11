@@ -1,0 +1,158 @@
+#ifndef HEADER_mindustry_logic_LStatements$SetPropStatement
+#define HEADER_mindustry_logic_LStatements$SetPropStatement
+
+#include "Clearwing.h"
+#include "mindustry/logic/LStatement.h"
+
+#ifdef __cplusplus
+extern "C" {
+#endif
+
+typedef struct mindustry_logic_LStatements$SetPropStatement {
+	mindustry_logic_LStatement parent;
+	jref F_type;
+	jref F_of;
+	jref F_value;
+	jint F_selected;
+	jref F_tfield;
+} mindustry_logic_LStatements$SetPropStatement;
+
+extern Class class_mindustry_logic_LStatements$SetPropStatement;
+
+
+#define VTABLE_mindustry_logic_LStatements$SetPropStatement_hashCode_R_int 0
+typedef jint (*func_mindustry_logic_LStatements$SetPropStatement_hashCode_R_int)(jcontext ctx, jobject self);
+#define VTABLE_mindustry_logic_LStatements$SetPropStatement_equals_java_lang_Object_R_boolean 1
+typedef jbool (*func_mindustry_logic_LStatements$SetPropStatement_equals_java_lang_Object_R_boolean)(jcontext ctx, jobject self, jobject param0);
+#define VTABLE_mindustry_logic_LStatements$SetPropStatement_clone_R_java_lang_Object 2
+typedef jobject (*func_mindustry_logic_LStatements$SetPropStatement_clone_R_java_lang_Object)(jcontext ctx, jobject self);
+#define VTABLE_mindustry_logic_LStatements$SetPropStatement_getClass_R_java_lang_Class 3
+typedef jobject (*func_mindustry_logic_LStatements$SetPropStatement_getClass_R_java_lang_Class)(jcontext ctx, jobject self);
+#define VTABLE_mindustry_logic_LStatements$SetPropStatement_toString_R_java_lang_String 4
+typedef jobject (*func_mindustry_logic_LStatements$SetPropStatement_toString_R_java_lang_String)(jcontext ctx, jobject self);
+#define VTABLE_mindustry_logic_LStatements$SetPropStatement_finalize 5
+typedef void (*func_mindustry_logic_LStatements$SetPropStatement_finalize)(jcontext ctx, jobject self);
+#define VTABLE_mindustry_logic_LStatements$SetPropStatement_notify 6
+typedef void (*func_mindustry_logic_LStatements$SetPropStatement_notify)(jcontext ctx, jobject self);
+#define VTABLE_mindustry_logic_LStatements$SetPropStatement_notifyAll 7
+typedef void (*func_mindustry_logic_LStatements$SetPropStatement_notifyAll)(jcontext ctx, jobject self);
+#define VTABLE_mindustry_logic_LStatements$SetPropStatement_wait 8
+typedef void (*func_mindustry_logic_LStatements$SetPropStatement_wait)(jcontext ctx, jobject self);
+#define VTABLE_mindustry_logic_LStatements$SetPropStatement_wait_long 9
+typedef void (*func_mindustry_logic_LStatements$SetPropStatement_wait_long)(jcontext ctx, jobject self, jlong param0);
+#define VTABLE_mindustry_logic_LStatements$SetPropStatement_wait_long_int 10
+typedef void (*func_mindustry_logic_LStatements$SetPropStatement_wait_long_int)(jcontext ctx, jobject self, jlong param0, jint param1);
+#define VTABLE_mindustry_logic_LStatements$SetPropStatement_build_arc_scene_ui_layout_Table 11
+typedef void (*func_mindustry_logic_LStatements$SetPropStatement_build_arc_scene_ui_layout_Table)(jcontext ctx, jobject self, jobject param0);
+#define VTABLE_mindustry_logic_LStatements$SetPropStatement_build_mindustry_logic_LAssembler_R_mindustry_logic_LExecutor$LInstruction 12
+typedef jobject (*func_mindustry_logic_LStatements$SetPropStatement_build_mindustry_logic_LAssembler_R_mindustry_logic_LExecutor$LInstruction)(jcontext ctx, jobject self, jobject param0);
+#define VTABLE_mindustry_logic_LStatements$SetPropStatement_category_R_mindustry_logic_LCategory 13
+typedef jobject (*func_mindustry_logic_LStatements$SetPropStatement_category_R_mindustry_logic_LCategory)(jcontext ctx, jobject self);
+#define VTABLE_mindustry_logic_LStatements$SetPropStatement_copy_R_mindustry_logic_LStatement 14
+typedef jobject (*func_mindustry_logic_LStatements$SetPropStatement_copy_R_mindustry_logic_LStatement)(jcontext ctx, jobject self);
+#define VTABLE_mindustry_logic_LStatements$SetPropStatement_useWrapping_R_boolean 15
+typedef jbool (*func_mindustry_logic_LStatements$SetPropStatement_useWrapping_R_boolean)(jcontext ctx, jobject self);
+#define VTABLE_mindustry_logic_LStatements$SetPropStatement_hidden_R_boolean 16
+typedef jbool (*func_mindustry_logic_LStatements$SetPropStatement_hidden_R_boolean)(jcontext ctx, jobject self);
+#define VTABLE_mindustry_logic_LStatements$SetPropStatement_privileged_R_boolean 17
+typedef jbool (*func_mindustry_logic_LStatements$SetPropStatement_privileged_R_boolean)(jcontext ctx, jobject self);
+#define VTABLE_mindustry_logic_LStatements$SetPropStatement_nonPrivileged_R_boolean 18
+typedef jbool (*func_mindustry_logic_LStatements$SetPropStatement_nonPrivileged_R_boolean)(jcontext ctx, jobject self);
+#define VTABLE_mindustry_logic_LStatements$SetPropStatement_param_arc_scene_ui_layout_Cell 19
+typedef void (*func_mindustry_logic_LStatements$SetPropStatement_param_arc_scene_ui_layout_Cell)(jcontext ctx, jobject self, jobject param0);
+#define VTABLE_mindustry_logic_LStatements$SetPropStatement_field_arc_scene_ui_layout_Table_java_lang_String_arc_func_Cons_R_arc_scene_ui_layout_Cell 20
+typedef jobject (*func_mindustry_logic_LStatements$SetPropStatement_field_arc_scene_ui_layout_Table_java_lang_String_arc_func_Cons_R_arc_scene_ui_layout_Cell)(jcontext ctx, jobject self, jobject param0, jobject param1, jobject param2);
+#define VTABLE_mindustry_logic_LStatements$SetPropStatement_fields_arc_scene_ui_layout_Table_java_lang_String_java_lang_String_arc_func_Cons_R_arc_scene_ui_layout_Cell 21
+typedef jobject (*func_mindustry_logic_LStatements$SetPropStatement_fields_arc_scene_ui_layout_Table_java_lang_String_java_lang_String_arc_func_Cons_R_arc_scene_ui_layout_Cell)(jcontext ctx, jobject self, jobject param0, jobject param1, jobject param2, jobject param3);
+#define VTABLE_mindustry_logic_LStatements$SetPropStatement_fields_arc_scene_ui_layout_Table_java_lang_String_arc_func_Cons_R_arc_scene_ui_layout_Cell 22
+typedef jobject (*func_mindustry_logic_LStatements$SetPropStatement_fields_arc_scene_ui_layout_Table_java_lang_String_arc_func_Cons_R_arc_scene_ui_layout_Cell)(jcontext ctx, jobject self, jobject param0, jobject param1, jobject param2);
+#define VTABLE_mindustry_logic_LStatements$SetPropStatement_fields_arc_scene_ui_layout_Table_java_lang_String_boolean_java_lang_String_arc_func_Cons_R_arc_scene_ui_layout_Cell 23
+typedef jobject (*func_mindustry_logic_LStatements$SetPropStatement_fields_arc_scene_ui_layout_Table_java_lang_String_boolean_java_lang_String_arc_func_Cons_R_arc_scene_ui_layout_Cell)(jcontext ctx, jobject self, jobject param0, jobject param1, jbool param2, jobject param3, jobject param4);
+#define VTABLE_mindustry_logic_LStatements$SetPropStatement_col_arc_scene_ui_layout_Table_java_lang_String_arc_func_Cons_R_arc_scene_ui_layout_Cell 24
+typedef jobject (*func_mindustry_logic_LStatements$SetPropStatement_col_arc_scene_ui_layout_Table_java_lang_String_arc_func_Cons_R_arc_scene_ui_layout_Cell)(jcontext ctx, jobject self, jobject param0, jobject param1, jobject param2);
+#define VTABLE_mindustry_logic_LStatements$SetPropStatement_showSelect_arc_scene_ui_Button_Array1_java_lang_Object_java_lang_Object_arc_func_Cons_int_arc_func_Cons 25
+typedef void (*func_mindustry_logic_LStatements$SetPropStatement_showSelect_arc_scene_ui_Button_Array1_java_lang_Object_java_lang_Object_arc_func_Cons_int_arc_func_Cons)(jcontext ctx, jobject self, jobject param0, jobject param1, jobject param2, jobject param3, jint param4, jobject param5);
+#define VTABLE_mindustry_logic_LStatements$SetPropStatement_showSelect_arc_scene_ui_Button_Array1_java_lang_Object_java_lang_Object_arc_func_Cons 26
+typedef void (*func_mindustry_logic_LStatements$SetPropStatement_showSelect_arc_scene_ui_Button_Array1_java_lang_Object_java_lang_Object_arc_func_Cons)(jcontext ctx, jobject self, jobject param0, jobject param1, jobject param2, jobject param3);
+#define VTABLE_mindustry_logic_LStatements$SetPropStatement_fieldAlignSelect_arc_scene_ui_layout_Table_arc_func_Prov_arc_func_Cons_boolean_boolean 27
+typedef void (*func_mindustry_logic_LStatements$SetPropStatement_fieldAlignSelect_arc_scene_ui_layout_Table_arc_func_Prov_arc_func_Cons_boolean_boolean)(jcontext ctx, jobject self, jobject param0, jobject param1, jobject param2, jbool param3, jbool param4);
+#define VTABLE_mindustry_logic_LStatements$SetPropStatement_afterRead 28
+typedef void (*func_mindustry_logic_LStatements$SetPropStatement_afterRead)(jcontext ctx, jobject self);
+#define VTABLE_mindustry_logic_LStatements$SetPropStatement_write_java_lang_StringBuilder 29
+typedef void (*func_mindustry_logic_LStatements$SetPropStatement_write_java_lang_StringBuilder)(jcontext ctx, jobject self, jobject param0);
+#define VTABLE_mindustry_logic_LStatements$SetPropStatement_setupUI 30
+typedef void (*func_mindustry_logic_LStatements$SetPropStatement_setupUI)(jcontext ctx, jobject self);
+#define VTABLE_mindustry_logic_LStatements$SetPropStatement_saveUI 31
+typedef void (*func_mindustry_logic_LStatements$SetPropStatement_saveUI)(jcontext ctx, jobject self);
+#define VTABLE_mindustry_logic_LStatements$SetPropStatement_typeName_R_java_lang_String 32
+typedef jobject (*func_mindustry_logic_LStatements$SetPropStatement_typeName_R_java_lang_String)(jcontext ctx, jobject self);
+#define VTABLE_mindustry_logic_LStatements$SetPropStatement_statementKey_R_java_lang_String 33
+typedef jobject (*func_mindustry_logic_LStatements$SetPropStatement_statementKey_R_java_lang_String)(jcontext ctx, jobject self);
+#define VTABLE_mindustry_logic_LStatements$SetPropStatement_localizedName_R_java_lang_String 34
+typedef jobject (*func_mindustry_logic_LStatements$SetPropStatement_localizedName_R_java_lang_String)(jcontext ctx, jobject self);
+#define VTABLE_mindustry_logic_LStatements$SetPropStatement_name_R_java_lang_String 35
+typedef jobject (*func_mindustry_logic_LStatements$SetPropStatement_name_R_java_lang_String)(jcontext ctx, jobject self);
+#define VTABLE_mindustry_logic_LStatements$SetPropStatement_stype_java_lang_String 36
+typedef void (*func_mindustry_logic_LStatements$SetPropStatement_stype_java_lang_String)(jcontext ctx, jobject self, jobject param0);
+#define VTABLE_mindustry_logic_LStatements$SetPropStatement_lambda$build$16_java_lang_String 37
+typedef void (*func_mindustry_logic_LStatements$SetPropStatement_lambda$build$16_java_lang_String)(jcontext ctx, jobject self, jobject param0);
+#define VTABLE_mindustry_logic_LStatements$SetPropStatement_lambda$build$15_java_lang_String 38
+typedef void (*func_mindustry_logic_LStatements$SetPropStatement_lambda$build$15_java_lang_String)(jcontext ctx, jobject self, jobject param0);
+#define VTABLE_mindustry_logic_LStatements$SetPropStatement_lambda$build$1_arc_scene_ui_Button 39
+typedef void (*func_mindustry_logic_LStatements$SetPropStatement_lambda$build$1_arc_scene_ui_Button)(jcontext ctx, jobject self, jobject param0);
+#define VTABLE_mindustry_logic_LStatements$SetPropStatement_lambda$build$2_arc_scene_ui_Button 40
+typedef void (*func_mindustry_logic_LStatements$SetPropStatement_lambda$build$2_arc_scene_ui_Button)(jcontext ctx, jobject self, jobject param0);
+#define VTABLE_mindustry_logic_LStatements$SetPropStatement_lambda$build$3_arc_scene_ui_layout_Table_java_lang_Runnable 41
+typedef void (*func_mindustry_logic_LStatements$SetPropStatement_lambda$build$3_arc_scene_ui_layout_Table_java_lang_Runnable)(jcontext ctx, jobject self, jobject param0, jobject param1);
+#define VTABLE_mindustry_logic_LStatements$SetPropStatement_lambda$build$13_int_arc_scene_ui_layout_Stack_Array1_arc_scene_ui_layout_Table_arc_scene_ui_layout_Table 42
+typedef void (*func_mindustry_logic_LStatements$SetPropStatement_lambda$build$13_int_arc_scene_ui_layout_Stack_Array1_arc_scene_ui_layout_Table_arc_scene_ui_layout_Table)(jcontext ctx, jobject self, jint param0, jobject param1, jobject param2, jobject param3);
+#define VTABLE_mindustry_logic_LStatements$SetPropStatement_lambda$build$10_java_lang_Runnable_arc_scene_ui_layout_Table 43
+typedef void (*func_mindustry_logic_LStatements$SetPropStatement_lambda$build$10_java_lang_Runnable_arc_scene_ui_layout_Table)(jcontext ctx, jobject self, jobject param0, jobject param1);
+#define VTABLE_mindustry_logic_LStatements$SetPropStatement_lambda$build$11_mindustry_logic_LAccess_java_lang_Runnable 44
+typedef void (*func_mindustry_logic_LStatements$SetPropStatement_lambda$build$11_mindustry_logic_LAccess_java_lang_Runnable)(jcontext ctx, jobject self, jobject param0, jobject param1);
+#define VTABLE_mindustry_logic_LStatements$SetPropStatement_lambda$build$8_java_lang_Runnable_arc_scene_ui_layout_Table 45
+typedef void (*func_mindustry_logic_LStatements$SetPropStatement_lambda$build$8_java_lang_Runnable_arc_scene_ui_layout_Table)(jcontext ctx, jobject self, jobject param0, jobject param1);
+#define VTABLE_mindustry_logic_LStatements$SetPropStatement_lambda$build$9_mindustry_type_StatusEffect_java_lang_Runnable 46
+typedef void (*func_mindustry_logic_LStatements$SetPropStatement_lambda$build$9_mindustry_type_StatusEffect_java_lang_Runnable)(jcontext ctx, jobject self, jobject param0, jobject param1);
+#define VTABLE_mindustry_logic_LStatements$SetPropStatement_lambda$build$6_java_lang_Runnable_arc_scene_ui_layout_Table 47
+typedef void (*func_mindustry_logic_LStatements$SetPropStatement_lambda$build$6_java_lang_Runnable_arc_scene_ui_layout_Table)(jcontext ctx, jobject self, jobject param0, jobject param1);
+#define VTABLE_mindustry_logic_LStatements$SetPropStatement_lambda$build$7_mindustry_type_Liquid_java_lang_Runnable 48
+typedef void (*func_mindustry_logic_LStatements$SetPropStatement_lambda$build$7_mindustry_type_Liquid_java_lang_Runnable)(jcontext ctx, jobject self, jobject param0, jobject param1);
+#define VTABLE_mindustry_logic_LStatements$SetPropStatement_lambda$build$4_java_lang_Runnable_arc_scene_ui_layout_Table 49
+typedef void (*func_mindustry_logic_LStatements$SetPropStatement_lambda$build$4_java_lang_Runnable_arc_scene_ui_layout_Table)(jcontext ctx, jobject self, jobject param0, jobject param1);
+#define VTABLE_mindustry_logic_LStatements$SetPropStatement_lambda$build$5_mindustry_type_Item_java_lang_Runnable 50
+typedef void (*func_mindustry_logic_LStatements$SetPropStatement_lambda$build$5_mindustry_type_Item_java_lang_Runnable)(jcontext ctx, jobject self, jobject param0, jobject param1);
+#define VTABLE_mindustry_logic_LStatements$SetPropStatement_lambda$build$0_java_lang_String 51
+typedef void (*func_mindustry_logic_LStatements$SetPropStatement_lambda$build$0_java_lang_String)(jcontext ctx, jobject self, jobject param0);
+
+void mark_mindustry_logic_LStatements$SetPropStatement(jobject object, jint mark, jint depth);
+void clinit_mindustry_logic_LStatements$SetPropStatement(jcontext ctx);
+void init_mindustry_logic_LStatements$SetPropStatement(jcontext ctx, jobject self);
+void M_mindustry_logic_LStatements$SetPropStatement_build_arc_scene_ui_layout_Table(jcontext ctx, jobject self, jobject param0);
+void M_mindustry_logic_LStatements$SetPropStatement_stype_java_lang_String(jcontext ctx, jobject self, jobject param0);
+jbool M_mindustry_logic_LStatements$SetPropStatement_privileged_R_boolean(jcontext ctx, jobject self);
+jobject M_mindustry_logic_LStatements$SetPropStatement_build_mindustry_logic_LAssembler_R_mindustry_logic_LExecutor$LInstruction(jcontext ctx, jobject self, jobject param0);
+jobject M_mindustry_logic_LStatements$SetPropStatement_category_R_mindustry_logic_LCategory(jcontext ctx, jobject self);
+void M_mindustry_logic_LStatements$SetPropStatement_lambda$build$16_java_lang_String(jcontext ctx, jobject self, jobject param0);
+void M_mindustry_logic_LStatements$SetPropStatement_lambda$build$15_java_lang_String(jcontext ctx, jobject self, jobject param0);
+void SM_mindustry_logic_LStatements$SetPropStatement_lambda$build$14(jcontext ctx);
+void M_mindustry_logic_LStatements$SetPropStatement_lambda$build$1_arc_scene_ui_Button(jcontext ctx, jobject self, jobject param0);
+void M_mindustry_logic_LStatements$SetPropStatement_lambda$build$2_arc_scene_ui_Button(jcontext ctx, jobject self, jobject param0);
+void M_mindustry_logic_LStatements$SetPropStatement_lambda$build$3_arc_scene_ui_layout_Table_java_lang_Runnable(jcontext ctx, jobject self, jobject param0, jobject param1);
+void M_mindustry_logic_LStatements$SetPropStatement_lambda$build$13_int_arc_scene_ui_layout_Stack_Array1_arc_scene_ui_layout_Table_arc_scene_ui_layout_Table(jcontext ctx, jobject self, jint param0, jobject param1, jobject param2, jobject param3);
+void M_mindustry_logic_LStatements$SetPropStatement_lambda$build$10_java_lang_Runnable_arc_scene_ui_layout_Table(jcontext ctx, jobject self, jobject param0, jobject param1);
+void SM_mindustry_logic_LStatements$SetPropStatement_lambda$build$12_mindustry_logic_LAccess_arc_scene_ui_layout_Cell(jcontext ctx, jobject param0, jobject param1);
+void M_mindustry_logic_LStatements$SetPropStatement_lambda$build$11_mindustry_logic_LAccess_java_lang_Runnable(jcontext ctx, jobject self, jobject param0, jobject param1);
+void M_mindustry_logic_LStatements$SetPropStatement_lambda$build$8_java_lang_Runnable_arc_scene_ui_layout_Table(jcontext ctx, jobject self, jobject param0, jobject param1);
+void M_mindustry_logic_LStatements$SetPropStatement_lambda$build$9_mindustry_type_StatusEffect_java_lang_Runnable(jcontext ctx, jobject self, jobject param0, jobject param1);
+void M_mindustry_logic_LStatements$SetPropStatement_lambda$build$6_java_lang_Runnable_arc_scene_ui_layout_Table(jcontext ctx, jobject self, jobject param0, jobject param1);
+void M_mindustry_logic_LStatements$SetPropStatement_lambda$build$7_mindustry_type_Liquid_java_lang_Runnable(jcontext ctx, jobject self, jobject param0, jobject param1);
+void M_mindustry_logic_LStatements$SetPropStatement_lambda$build$4_java_lang_Runnable_arc_scene_ui_layout_Table(jcontext ctx, jobject self, jobject param0, jobject param1);
+void M_mindustry_logic_LStatements$SetPropStatement_lambda$build$5_mindustry_type_Item_java_lang_Runnable(jcontext ctx, jobject self, jobject param0, jobject param1);
+void M_mindustry_logic_LStatements$SetPropStatement_lambda$build$0_java_lang_String(jcontext ctx, jobject self, jobject param0);
+
+#ifdef __cplusplus
+}
+#endif
+
+#endif

@@ -1,0 +1,99 @@
+#ifndef HEADER_mindustry_io_SaveFileReader
+#define HEADER_mindustry_io_SaveFileReader
+
+#include "Clearwing.h"
+#include "java/lang/Object.h"
+
+#ifdef __cplusplus
+extern "C" {
+#endif
+
+typedef struct mindustry_io_SaveFileReader {
+	java_lang_Object parent;
+} mindustry_io_SaveFileReader;
+
+extern Class class_mindustry_io_SaveFileReader;
+
+extern jobject SF_mindustry_io_SaveFileReader_fallback;
+extern jobject SF_mindustry_io_SaveFileReader_modContentNameMap;
+extern jobject SF_mindustry_io_SaveFileReader_byteOutput;
+extern jobject SF_mindustry_io_SaveFileReader_byteOutput2;
+extern jobject SF_mindustry_io_SaveFileReader_dataBytes;
+extern jobject SF_mindustry_io_SaveFileReader_dataBytes2;
+extern jobject SF_mindustry_io_SaveFileReader_writes1;
+extern jobject SF_mindustry_io_SaveFileReader_writes2;
+extern jobject SF_mindustry_io_SaveFileReader_chunkReads;
+extern jbool SF_mindustry_io_SaveFileReader_chunkNested;
+
+#define VTABLE_mindustry_io_SaveFileReader_hashCode_R_int 0
+typedef jint (*func_mindustry_io_SaveFileReader_hashCode_R_int)(jcontext ctx, jobject self);
+#define VTABLE_mindustry_io_SaveFileReader_equals_java_lang_Object_R_boolean 1
+typedef jbool (*func_mindustry_io_SaveFileReader_equals_java_lang_Object_R_boolean)(jcontext ctx, jobject self, jobject param0);
+#define VTABLE_mindustry_io_SaveFileReader_clone_R_java_lang_Object 2
+typedef jobject (*func_mindustry_io_SaveFileReader_clone_R_java_lang_Object)(jcontext ctx, jobject self);
+#define VTABLE_mindustry_io_SaveFileReader_getClass_R_java_lang_Class 3
+typedef jobject (*func_mindustry_io_SaveFileReader_getClass_R_java_lang_Class)(jcontext ctx, jobject self);
+#define VTABLE_mindustry_io_SaveFileReader_toString_R_java_lang_String 4
+typedef jobject (*func_mindustry_io_SaveFileReader_toString_R_java_lang_String)(jcontext ctx, jobject self);
+#define VTABLE_mindustry_io_SaveFileReader_finalize 5
+typedef void (*func_mindustry_io_SaveFileReader_finalize)(jcontext ctx, jobject self);
+#define VTABLE_mindustry_io_SaveFileReader_notify 6
+typedef void (*func_mindustry_io_SaveFileReader_notify)(jcontext ctx, jobject self);
+#define VTABLE_mindustry_io_SaveFileReader_notifyAll 7
+typedef void (*func_mindustry_io_SaveFileReader_notifyAll)(jcontext ctx, jobject self);
+#define VTABLE_mindustry_io_SaveFileReader_wait 8
+typedef void (*func_mindustry_io_SaveFileReader_wait)(jcontext ctx, jobject self);
+#define VTABLE_mindustry_io_SaveFileReader_wait_long 9
+typedef void (*func_mindustry_io_SaveFileReader_wait_long)(jcontext ctx, jobject self, jlong param0);
+#define VTABLE_mindustry_io_SaveFileReader_wait_long_int 10
+typedef void (*func_mindustry_io_SaveFileReader_wait_long_int)(jcontext ctx, jobject self, jlong param0, jint param1);
+#define VTABLE_mindustry_io_SaveFileReader_readRegion_java_lang_String_java_io_DataInput_arc_util_io_CounterInputStream_mindustry_io_SaveFileReader$IORunner 11
+typedef void (*func_mindustry_io_SaveFileReader_readRegion_java_lang_String_java_io_DataInput_arc_util_io_CounterInputStream_mindustry_io_SaveFileReader$IORunner)(jcontext ctx, jobject self, jobject param0, jobject param1, jobject param2, jobject param3);
+#define VTABLE_mindustry_io_SaveFileReader_writeRegion_java_lang_String_java_io_DataOutput_mindustry_io_SaveFileReader$IORunner 12
+typedef void (*func_mindustry_io_SaveFileReader_writeRegion_java_lang_String_java_io_DataOutput_mindustry_io_SaveFileReader$IORunner)(jcontext ctx, jobject self, jobject param0, jobject param1, jobject param2);
+#define VTABLE_mindustry_io_SaveFileReader_writeChunk_java_io_DataOutput_mindustry_io_SaveFileReader$IORunner 13
+typedef void (*func_mindustry_io_SaveFileReader_writeChunk_java_io_DataOutput_mindustry_io_SaveFileReader$IORunner)(jcontext ctx, jobject self, jobject param0, jobject param1);
+#define VTABLE_mindustry_io_SaveFileReader_readChunk_java_io_DataInput_mindustry_io_SaveFileReader$IORunnerLength_R_int 14
+typedef jint (*func_mindustry_io_SaveFileReader_readChunk_java_io_DataInput_mindustry_io_SaveFileReader$IORunnerLength_R_int)(jcontext ctx, jobject self, jobject param0, jobject param1);
+#define VTABLE_mindustry_io_SaveFileReader_readChunkReads_java_io_DataInput_mindustry_io_SaveFileReader$IORunnerLength_R_int 15
+typedef jint (*func_mindustry_io_SaveFileReader_readChunkReads_java_io_DataInput_mindustry_io_SaveFileReader$IORunnerLength_R_int)(jcontext ctx, jobject self, jobject param0, jobject param1);
+#define VTABLE_mindustry_io_SaveFileReader_skipChunk_java_io_DataInput 16
+typedef void (*func_mindustry_io_SaveFileReader_skipChunk_java_io_DataInput)(jcontext ctx, jobject self, jobject param0);
+#define VTABLE_mindustry_io_SaveFileReader_readLegacyShortChunk_java_io_DataInput_mindustry_io_SaveFileReader$IORunnerLength_R_int 17
+typedef jint (*func_mindustry_io_SaveFileReader_readLegacyShortChunk_java_io_DataInput_mindustry_io_SaveFileReader$IORunnerLength_R_int)(jcontext ctx, jobject self, jobject param0, jobject param1);
+#define VTABLE_mindustry_io_SaveFileReader_skipLegacyShortChunk_java_io_DataInput 18
+typedef void (*func_mindustry_io_SaveFileReader_skipLegacyShortChunk_java_io_DataInput)(jcontext ctx, jobject self, jobject param0);
+#define VTABLE_mindustry_io_SaveFileReader_writeStringMap_java_io_DataOutput_arc_struct_ObjectMap 19
+typedef void (*func_mindustry_io_SaveFileReader_writeStringMap_java_io_DataOutput_arc_struct_ObjectMap)(jcontext ctx, jobject self, jobject param0, jobject param1);
+#define VTABLE_mindustry_io_SaveFileReader_readStringMap_java_io_DataInput_R_arc_struct_StringMap 20
+typedef jobject (*func_mindustry_io_SaveFileReader_readStringMap_java_io_DataInput_R_arc_struct_StringMap)(jcontext ctx, jobject self, jobject param0);
+#define VTABLE_mindustry_io_SaveFileReader_read_java_io_DataInputStream_arc_util_io_CounterInputStream_mindustry_io_SaveReadState 21
+typedef void (*func_mindustry_io_SaveFileReader_read_java_io_DataInputStream_arc_util_io_CounterInputStream_mindustry_io_SaveReadState)(jcontext ctx, jobject self, jobject param0, jobject param1, jobject param2);
+#define VTABLE_mindustry_io_SaveFileReader_write_java_io_DataOutputStream_mindustry_io_SaveOptions 22
+typedef void (*func_mindustry_io_SaveFileReader_write_java_io_DataOutputStream_mindustry_io_SaveOptions)(jcontext ctx, jobject self, jobject param0, jobject param1);
+
+void mark_mindustry_io_SaveFileReader(jobject object, jint mark, jint depth);
+void clinit_mindustry_io_SaveFileReader(jcontext ctx);
+void init_mindustry_io_SaveFileReader(jcontext ctx, jobject self);
+jobject SM_mindustry_io_SaveFileReader_mapFallback_java_lang_String_R_java_lang_String(jcontext ctx, jobject param0);
+void M_mindustry_io_SaveFileReader_readRegion_java_lang_String_java_io_DataInput_arc_util_io_CounterInputStream_mindustry_io_SaveFileReader$IORunner(jcontext ctx, jobject self, jobject param0, jobject param1, jobject param2, jobject param3);
+void M_mindustry_io_SaveFileReader_writeRegion_java_lang_String_java_io_DataOutput_mindustry_io_SaveFileReader$IORunner(jcontext ctx, jobject self, jobject param0, jobject param1, jobject param2);
+void M_mindustry_io_SaveFileReader_writeChunk_java_io_DataOutput_mindustry_io_SaveFileReader$IORunner(jcontext ctx, jobject self, jobject param0, jobject param1);
+jint M_mindustry_io_SaveFileReader_readChunk_java_io_DataInput_mindustry_io_SaveFileReader$IORunnerLength_R_int(jcontext ctx, jobject self, jobject param0, jobject param1);
+jint M_mindustry_io_SaveFileReader_readChunkReads_java_io_DataInput_mindustry_io_SaveFileReader$IORunnerLength_R_int(jcontext ctx, jobject self, jobject param0, jobject param1);
+void M_mindustry_io_SaveFileReader_skipChunk_java_io_DataInput(jcontext ctx, jobject self, jobject param0);
+jint M_mindustry_io_SaveFileReader_readLegacyShortChunk_java_io_DataInput_mindustry_io_SaveFileReader$IORunnerLength_R_int(jcontext ctx, jobject self, jobject param0, jobject param1);
+void M_mindustry_io_SaveFileReader_skipLegacyShortChunk_java_io_DataInput(jcontext ctx, jobject self, jobject param0);
+void M_mindustry_io_SaveFileReader_writeStringMap_java_io_DataOutput_arc_struct_ObjectMap(jcontext ctx, jobject self, jobject param0, jobject param1);
+jobject M_mindustry_io_SaveFileReader_readStringMap_java_io_DataInput_R_arc_struct_StringMap(jcontext ctx, jobject self, jobject param0);
+void SM_mindustry_io_SaveFileReader_lambda$skipLegacyShortChunk$0_arc_util_io_Reads_int(jcontext ctx, jobject param0, jint param1);
+void SM_mindustry_io_SaveFileReader_lambda$skipChunk$0_java_io_DataInput_int(jcontext ctx, jobject param0, jint param1);
+void SM_mindustry_io_SaveFileReader_lambda$readChunkReads$0_mindustry_io_SaveFileReader$IORunnerLength_java_io_DataInput_int(jcontext ctx, jobject param0, jobject param1, jint param2);
+void SM_mindustry_io_SaveFileReader_lambda$writeRegion$0_mindustry_io_SaveFileReader$IORunner_arc_util_io_Writes(jcontext ctx, jobject param0, jobject param1);
+void SM_mindustry_io_SaveFileReader_lambda$readRegion$0_mindustry_io_SaveFileReader$IORunner_java_io_DataInput_int(jcontext ctx, jobject param0, jobject param1, jint param2);
+
+#ifdef __cplusplus
+}
+#endif
+
+#endif

@@ -1,0 +1,86 @@
+#ifndef HEADER_mindustry_net_ArcNetProvider$PacketSerializer
+#define HEADER_mindustry_net_ArcNetProvider$PacketSerializer
+
+#include "Clearwing.h"
+#include "java/lang/Object.h"
+#include "arc/net/NetSerializer.h"
+
+#ifdef __cplusplus
+extern "C" {
+#endif
+
+typedef struct mindustry_net_ArcNetProvider$PacketSerializer {
+	java_lang_Object parent;
+	jref F_decompressBuffer;
+	jref F_reads;
+	jref F_writes;
+} mindustry_net_ArcNetProvider$PacketSerializer;
+
+extern Class class_mindustry_net_ArcNetProvider$PacketSerializer;
+
+extern jbool SF_mindustry_net_ArcNetProvider$PacketSerializer_debug;
+extern jobject SF_mindustry_net_ArcNetProvider$PacketSerializer_upload;
+extern jobject SF_mindustry_net_ArcNetProvider$PacketSerializer_download;
+extern jlong SF_mindustry_net_ArcNetProvider$PacketSerializer_lastUpload;
+extern jlong SF_mindustry_net_ArcNetProvider$PacketSerializer_lastDownload;
+extern jlong SF_mindustry_net_ArcNetProvider$PacketSerializer_uploadAccum;
+extern jlong SF_mindustry_net_ArcNetProvider$PacketSerializer_downloadAccum;
+extern jint SF_mindustry_net_ArcNetProvider$PacketSerializer_lastPos;
+
+#define VTABLE_mindustry_net_ArcNetProvider$PacketSerializer_hashCode_R_int 0
+typedef jint (*func_mindustry_net_ArcNetProvider$PacketSerializer_hashCode_R_int)(jcontext ctx, jobject self);
+#define VTABLE_mindustry_net_ArcNetProvider$PacketSerializer_equals_java_lang_Object_R_boolean 1
+typedef jbool (*func_mindustry_net_ArcNetProvider$PacketSerializer_equals_java_lang_Object_R_boolean)(jcontext ctx, jobject self, jobject param0);
+#define VTABLE_mindustry_net_ArcNetProvider$PacketSerializer_clone_R_java_lang_Object 2
+typedef jobject (*func_mindustry_net_ArcNetProvider$PacketSerializer_clone_R_java_lang_Object)(jcontext ctx, jobject self);
+#define VTABLE_mindustry_net_ArcNetProvider$PacketSerializer_getClass_R_java_lang_Class 3
+typedef jobject (*func_mindustry_net_ArcNetProvider$PacketSerializer_getClass_R_java_lang_Class)(jcontext ctx, jobject self);
+#define VTABLE_mindustry_net_ArcNetProvider$PacketSerializer_toString_R_java_lang_String 4
+typedef jobject (*func_mindustry_net_ArcNetProvider$PacketSerializer_toString_R_java_lang_String)(jcontext ctx, jobject self);
+#define VTABLE_mindustry_net_ArcNetProvider$PacketSerializer_finalize 5
+typedef void (*func_mindustry_net_ArcNetProvider$PacketSerializer_finalize)(jcontext ctx, jobject self);
+#define VTABLE_mindustry_net_ArcNetProvider$PacketSerializer_notify 6
+typedef void (*func_mindustry_net_ArcNetProvider$PacketSerializer_notify)(jcontext ctx, jobject self);
+#define VTABLE_mindustry_net_ArcNetProvider$PacketSerializer_notifyAll 7
+typedef void (*func_mindustry_net_ArcNetProvider$PacketSerializer_notifyAll)(jcontext ctx, jobject self);
+#define VTABLE_mindustry_net_ArcNetProvider$PacketSerializer_wait 8
+typedef void (*func_mindustry_net_ArcNetProvider$PacketSerializer_wait)(jcontext ctx, jobject self);
+#define VTABLE_mindustry_net_ArcNetProvider$PacketSerializer_wait_long 9
+typedef void (*func_mindustry_net_ArcNetProvider$PacketSerializer_wait_long)(jcontext ctx, jobject self, jlong param0);
+#define VTABLE_mindustry_net_ArcNetProvider$PacketSerializer_wait_long_int 10
+typedef void (*func_mindustry_net_ArcNetProvider$PacketSerializer_wait_long_int)(jcontext ctx, jobject self, jlong param0, jint param1);
+#define VTABLE_mindustry_net_ArcNetProvider$PacketSerializer_write_java_nio_ByteBuffer_java_lang_Object 11
+typedef void (*func_mindustry_net_ArcNetProvider$PacketSerializer_write_java_nio_ByteBuffer_java_lang_Object)(jcontext ctx, jobject self, jobject param0, jobject param1);
+#define VTABLE_mindustry_net_ArcNetProvider$PacketSerializer_read_java_nio_ByteBuffer_R_java_lang_Object 12
+typedef jobject (*func_mindustry_net_ArcNetProvider$PacketSerializer_read_java_nio_ByteBuffer_R_java_lang_Object)(jcontext ctx, jobject self, jobject param0);
+#define VTABLE_mindustry_net_ArcNetProvider$PacketSerializer_getLengthLength_R_int 13
+typedef jint (*func_mindustry_net_ArcNetProvider$PacketSerializer_getLengthLength_R_int)(jcontext ctx, jobject self);
+#define VTABLE_mindustry_net_ArcNetProvider$PacketSerializer_writeLength_java_nio_ByteBuffer_int 14
+typedef void (*func_mindustry_net_ArcNetProvider$PacketSerializer_writeLength_java_nio_ByteBuffer_int)(jcontext ctx, jobject self, jobject param0, jint param1);
+#define VTABLE_mindustry_net_ArcNetProvider$PacketSerializer_readLength_java_nio_ByteBuffer_R_int 15
+typedef jint (*func_mindustry_net_ArcNetProvider$PacketSerializer_readLength_java_nio_ByteBuffer_R_int)(jcontext ctx, jobject self, jobject param0);
+#define VTABLE_mindustry_net_ArcNetProvider$PacketSerializer_writeFramework_java_nio_ByteBuffer_arc_net_FrameworkMessage 16
+typedef void (*func_mindustry_net_ArcNetProvider$PacketSerializer_writeFramework_java_nio_ByteBuffer_arc_net_FrameworkMessage)(jcontext ctx, jobject self, jobject param0, jobject param1);
+#define VTABLE_mindustry_net_ArcNetProvider$PacketSerializer_readFramework_java_nio_ByteBuffer_R_arc_net_FrameworkMessage 17
+typedef jobject (*func_mindustry_net_ArcNetProvider$PacketSerializer_readFramework_java_nio_ByteBuffer_R_arc_net_FrameworkMessage)(jcontext ctx, jobject self, jobject param0);
+#define VTABLE_mindustry_net_ArcNetProvider$PacketSerializer_lambda$new$2_R_arc_util_io_Writes 18
+typedef jobject (*func_mindustry_net_ArcNetProvider$PacketSerializer_lambda$new$2_R_arc_util_io_Writes)(jcontext ctx, jobject self);
+#define VTABLE_mindustry_net_ArcNetProvider$PacketSerializer_lambda$new$1_R_arc_util_io_Reads 19
+typedef jobject (*func_mindustry_net_ArcNetProvider$PacketSerializer_lambda$new$1_R_arc_util_io_Reads)(jcontext ctx, jobject self);
+
+void mark_mindustry_net_ArcNetProvider$PacketSerializer(jobject object, jint mark, jint depth);
+void clinit_mindustry_net_ArcNetProvider$PacketSerializer(jcontext ctx);
+void init_mindustry_net_ArcNetProvider$PacketSerializer(jcontext ctx, jobject self);
+jobject M_mindustry_net_ArcNetProvider$PacketSerializer_read_java_nio_ByteBuffer_R_java_lang_Object(jcontext ctx, jobject self, jobject param0);
+void M_mindustry_net_ArcNetProvider$PacketSerializer_write_java_nio_ByteBuffer_java_lang_Object(jcontext ctx, jobject self, jobject param0, jobject param1);
+void M_mindustry_net_ArcNetProvider$PacketSerializer_writeFramework_java_nio_ByteBuffer_arc_net_FrameworkMessage(jcontext ctx, jobject self, jobject param0, jobject param1);
+jobject M_mindustry_net_ArcNetProvider$PacketSerializer_readFramework_java_nio_ByteBuffer_R_arc_net_FrameworkMessage(jcontext ctx, jobject self, jobject param0);
+jobject M_mindustry_net_ArcNetProvider$PacketSerializer_lambda$new$2_R_arc_util_io_Writes(jcontext ctx, jobject self);
+jobject M_mindustry_net_ArcNetProvider$PacketSerializer_lambda$new$1_R_arc_util_io_Reads(jcontext ctx, jobject self);
+jobject SM_mindustry_net_ArcNetProvider$PacketSerializer_lambda$new$0_R_java_nio_ByteBuffer(jcontext ctx);
+
+#ifdef __cplusplus
+}
+#endif
+
+#endif

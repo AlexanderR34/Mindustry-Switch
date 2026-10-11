@@ -1,0 +1,78 @@
+#ifndef HEADER_java_lang_IllegalAccessException
+#define HEADER_java_lang_IllegalAccessException
+
+#include "Clearwing.h"
+#include "java/lang/Exception.h"
+
+#ifdef __cplusplus
+extern "C" {
+#endif
+
+typedef struct java_lang_IllegalAccessException {
+	java_lang_Exception parent;
+} java_lang_IllegalAccessException;
+
+extern Class class_java_lang_IllegalAccessException;
+
+
+#define VTABLE_java_lang_IllegalAccessException_hashCode_R_int 0
+typedef jint (*func_java_lang_IllegalAccessException_hashCode_R_int)(jcontext ctx, jobject self);
+#define VTABLE_java_lang_IllegalAccessException_equals_java_lang_Object_R_boolean 1
+typedef jbool (*func_java_lang_IllegalAccessException_equals_java_lang_Object_R_boolean)(jcontext ctx, jobject self, jobject param0);
+#define VTABLE_java_lang_IllegalAccessException_clone_R_java_lang_Object 2
+typedef jobject (*func_java_lang_IllegalAccessException_clone_R_java_lang_Object)(jcontext ctx, jobject self);
+#define VTABLE_java_lang_IllegalAccessException_getClass_R_java_lang_Class 3
+typedef jobject (*func_java_lang_IllegalAccessException_getClass_R_java_lang_Class)(jcontext ctx, jobject self);
+#define VTABLE_java_lang_IllegalAccessException_toString_R_java_lang_String 4
+typedef jobject (*func_java_lang_IllegalAccessException_toString_R_java_lang_String)(jcontext ctx, jobject self);
+#define VTABLE_java_lang_IllegalAccessException_finalize 5
+typedef void (*func_java_lang_IllegalAccessException_finalize)(jcontext ctx, jobject self);
+#define VTABLE_java_lang_IllegalAccessException_notify 6
+typedef void (*func_java_lang_IllegalAccessException_notify)(jcontext ctx, jobject self);
+#define VTABLE_java_lang_IllegalAccessException_notifyAll 7
+typedef void (*func_java_lang_IllegalAccessException_notifyAll)(jcontext ctx, jobject self);
+#define VTABLE_java_lang_IllegalAccessException_wait 8
+typedef void (*func_java_lang_IllegalAccessException_wait)(jcontext ctx, jobject self);
+#define VTABLE_java_lang_IllegalAccessException_wait_long 9
+typedef void (*func_java_lang_IllegalAccessException_wait_long)(jcontext ctx, jobject self, jlong param0);
+#define VTABLE_java_lang_IllegalAccessException_wait_long_int 10
+typedef void (*func_java_lang_IllegalAccessException_wait_long_int)(jcontext ctx, jobject self, jlong param0, jint param1);
+#define VTABLE_java_lang_IllegalAccessException_initCause_java_lang_Throwable_R_java_lang_Throwable 11
+typedef jobject (*func_java_lang_IllegalAccessException_initCause_java_lang_Throwable_R_java_lang_Throwable)(jcontext ctx, jobject self, jobject param0);
+#define VTABLE_java_lang_IllegalAccessException_getStack_R_java_lang_String 12
+typedef jobject (*func_java_lang_IllegalAccessException_getStack_R_java_lang_String)(jcontext ctx, jobject self);
+#define VTABLE_java_lang_IllegalAccessException_getCause_R_java_lang_Throwable 13
+typedef jobject (*func_java_lang_IllegalAccessException_getCause_R_java_lang_Throwable)(jcontext ctx, jobject self);
+#define VTABLE_java_lang_IllegalAccessException_getMessage_R_java_lang_String 14
+typedef jobject (*func_java_lang_IllegalAccessException_getMessage_R_java_lang_String)(jcontext ctx, jobject self);
+#define VTABLE_java_lang_IllegalAccessException_fillInStack 15
+typedef void (*func_java_lang_IllegalAccessException_fillInStack)(jcontext ctx, jobject self);
+#define VTABLE_java_lang_IllegalAccessException_fillInStackTrace_R_java_lang_Throwable 16
+typedef jobject (*func_java_lang_IllegalAccessException_fillInStackTrace_R_java_lang_Throwable)(jcontext ctx, jobject self);
+#define VTABLE_java_lang_IllegalAccessException_printStackTrace 17
+typedef void (*func_java_lang_IllegalAccessException_printStackTrace)(jcontext ctx, jobject self);
+#define VTABLE_java_lang_IllegalAccessException_printStackTrace_java_io_PrintStream 18
+typedef void (*func_java_lang_IllegalAccessException_printStackTrace_java_io_PrintStream)(jcontext ctx, jobject self, jobject param0);
+#define VTABLE_java_lang_IllegalAccessException_printStackTrace_java_io_PrintWriter 19
+typedef void (*func_java_lang_IllegalAccessException_printStackTrace_java_io_PrintWriter)(jcontext ctx, jobject self, jobject param0);
+#define VTABLE_java_lang_IllegalAccessException_getStackTrace_R_Array1_java_lang_StackTraceElement 20
+typedef jobject (*func_java_lang_IllegalAccessException_getStackTrace_R_Array1_java_lang_StackTraceElement)(jcontext ctx, jobject self);
+#define VTABLE_java_lang_IllegalAccessException_setStackTrace_Array1_java_lang_StackTraceElement 21
+typedef void (*func_java_lang_IllegalAccessException_setStackTrace_Array1_java_lang_StackTraceElement)(jcontext ctx, jobject self, jobject param0);
+#define VTABLE_java_lang_IllegalAccessException_addSuppressed_java_lang_Throwable 22
+typedef void (*func_java_lang_IllegalAccessException_addSuppressed_java_lang_Throwable)(jcontext ctx, jobject self, jobject param0);
+#define VTABLE_java_lang_IllegalAccessException_getSuppressed_R_Array1_java_lang_Throwable 23
+typedef jobject (*func_java_lang_IllegalAccessException_getSuppressed_R_Array1_java_lang_Throwable)(jcontext ctx, jobject self);
+#define VTABLE_java_lang_IllegalAccessException_getLocalizedMessage_R_java_lang_String 24
+typedef jobject (*func_java_lang_IllegalAccessException_getLocalizedMessage_R_java_lang_String)(jcontext ctx, jobject self);
+
+void mark_java_lang_IllegalAccessException(jobject object, jint mark, jint depth);
+void clinit_java_lang_IllegalAccessException(jcontext ctx);
+void init_java_lang_IllegalAccessException(jcontext ctx, jobject self);
+void init_java_lang_IllegalAccessException_java_lang_String(jcontext ctx, jobject self, jobject param0);
+
+#ifdef __cplusplus
+}
+#endif
+
+#endif

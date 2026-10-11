@@ -1,0 +1,272 @@
+#ifndef HEADER_java_math_MutableBigInteger
+#define HEADER_java_math_MutableBigInteger
+
+#include "Clearwing.h"
+#include "java/lang/Object.h"
+
+#ifdef __cplusplus
+extern "C" {
+#endif
+
+typedef struct java_math_MutableBigInteger {
+	java_lang_Object parent;
+	jref F_value;
+	jint F_intLen;
+	jint F_offset;
+} java_math_MutableBigInteger;
+
+extern Class class_java_math_MutableBigInteger;
+
+extern jobject SF_java_math_MutableBigInteger_ONE;
+extern jint SF_java_math_MutableBigInteger_KNUTH_POW2_THRESH_LEN;
+extern jint SF_java_math_MutableBigInteger_KNUTH_POW2_THRESH_ZEROS;
+extern jbool SF_java_math_MutableBigInteger_$assertionsDisabled;
+
+#define VTABLE_java_math_MutableBigInteger_hashCode_R_int 0
+typedef jint (*func_java_math_MutableBigInteger_hashCode_R_int)(jcontext ctx, jobject self);
+#define VTABLE_java_math_MutableBigInteger_equals_java_lang_Object_R_boolean 1
+typedef jbool (*func_java_math_MutableBigInteger_equals_java_lang_Object_R_boolean)(jcontext ctx, jobject self, jobject param0);
+#define VTABLE_java_math_MutableBigInteger_clone_R_java_lang_Object 2
+typedef jobject (*func_java_math_MutableBigInteger_clone_R_java_lang_Object)(jcontext ctx, jobject self);
+#define VTABLE_java_math_MutableBigInteger_getClass_R_java_lang_Class 3
+typedef jobject (*func_java_math_MutableBigInteger_getClass_R_java_lang_Class)(jcontext ctx, jobject self);
+#define VTABLE_java_math_MutableBigInteger_toString_R_java_lang_String 4
+typedef jobject (*func_java_math_MutableBigInteger_toString_R_java_lang_String)(jcontext ctx, jobject self);
+#define VTABLE_java_math_MutableBigInteger_finalize 5
+typedef void (*func_java_math_MutableBigInteger_finalize)(jcontext ctx, jobject self);
+#define VTABLE_java_math_MutableBigInteger_notify 6
+typedef void (*func_java_math_MutableBigInteger_notify)(jcontext ctx, jobject self);
+#define VTABLE_java_math_MutableBigInteger_notifyAll 7
+typedef void (*func_java_math_MutableBigInteger_notifyAll)(jcontext ctx, jobject self);
+#define VTABLE_java_math_MutableBigInteger_wait 8
+typedef void (*func_java_math_MutableBigInteger_wait)(jcontext ctx, jobject self);
+#define VTABLE_java_math_MutableBigInteger_wait_long 9
+typedef void (*func_java_math_MutableBigInteger_wait_long)(jcontext ctx, jobject self, jlong param0);
+#define VTABLE_java_math_MutableBigInteger_wait_long_int 10
+typedef void (*func_java_math_MutableBigInteger_wait_long_int)(jcontext ctx, jobject self, jlong param0, jint param1);
+#define VTABLE_java_math_MutableBigInteger_ones_int 11
+typedef void (*func_java_math_MutableBigInteger_ones_int)(jcontext ctx, jobject self, jint param0);
+#define VTABLE_java_math_MutableBigInteger_getMagnitudeArray_R_Array1_int 12
+typedef jobject (*func_java_math_MutableBigInteger_getMagnitudeArray_R_Array1_int)(jcontext ctx, jobject self);
+#define VTABLE_java_math_MutableBigInteger_toLong_R_long 13
+typedef jlong (*func_java_math_MutableBigInteger_toLong_R_long)(jcontext ctx, jobject self);
+#define VTABLE_java_math_MutableBigInteger_toBigInteger_int_R_java_math_BigInteger 14
+typedef jobject (*func_java_math_MutableBigInteger_toBigInteger_int_R_java_math_BigInteger)(jcontext ctx, jobject self, jint param0);
+#define VTABLE_java_math_MutableBigInteger_toBigInteger_R_java_math_BigInteger 15
+typedef jobject (*func_java_math_MutableBigInteger_toBigInteger_R_java_math_BigInteger)(jcontext ctx, jobject self);
+#define VTABLE_java_math_MutableBigInteger_toBigDecimal_int_int_R_java_math_BigDecimal 16
+typedef jobject (*func_java_math_MutableBigInteger_toBigDecimal_int_int_R_java_math_BigDecimal)(jcontext ctx, jobject self, jint param0, jint param1);
+#define VTABLE_java_math_MutableBigInteger_toCompactValue_int_R_long 17
+typedef jlong (*func_java_math_MutableBigInteger_toCompactValue_int_R_long)(jcontext ctx, jobject self, jint param0);
+#define VTABLE_java_math_MutableBigInteger_clear 18
+typedef void (*func_java_math_MutableBigInteger_clear)(jcontext ctx, jobject self);
+#define VTABLE_java_math_MutableBigInteger_reset 19
+typedef void (*func_java_math_MutableBigInteger_reset)(jcontext ctx, jobject self);
+#define VTABLE_java_math_MutableBigInteger_compare_java_math_MutableBigInteger_R_int 20
+typedef jint (*func_java_math_MutableBigInteger_compare_java_math_MutableBigInteger_R_int)(jcontext ctx, jobject self, jobject param0);
+#define VTABLE_java_math_MutableBigInteger_compareShifted_java_math_MutableBigInteger_int_R_int 21
+typedef jint (*func_java_math_MutableBigInteger_compareShifted_java_math_MutableBigInteger_int_R_int)(jcontext ctx, jobject self, jobject param0, jint param1);
+#define VTABLE_java_math_MutableBigInteger_compareHalf_java_math_MutableBigInteger_R_int 22
+typedef jint (*func_java_math_MutableBigInteger_compareHalf_java_math_MutableBigInteger_R_int)(jcontext ctx, jobject self, jobject param0);
+#define VTABLE_java_math_MutableBigInteger_getLowestSetBit_R_int 23
+typedef jint (*func_java_math_MutableBigInteger_getLowestSetBit_R_int)(jcontext ctx, jobject self);
+#define VTABLE_java_math_MutableBigInteger_getInt_int_R_int 24
+typedef jint (*func_java_math_MutableBigInteger_getInt_int_R_int)(jcontext ctx, jobject self, jint param0);
+#define VTABLE_java_math_MutableBigInteger_getLong_int_R_long 25
+typedef jlong (*func_java_math_MutableBigInteger_getLong_int_R_long)(jcontext ctx, jobject self, jint param0);
+#define VTABLE_java_math_MutableBigInteger_normalize 26
+typedef void (*func_java_math_MutableBigInteger_normalize)(jcontext ctx, jobject self);
+#define VTABLE_java_math_MutableBigInteger_ensureCapacity_int 27
+typedef void (*func_java_math_MutableBigInteger_ensureCapacity_int)(jcontext ctx, jobject self, jint param0);
+#define VTABLE_java_math_MutableBigInteger_toIntArray_R_Array1_int 28
+typedef jobject (*func_java_math_MutableBigInteger_toIntArray_R_Array1_int)(jcontext ctx, jobject self);
+#define VTABLE_java_math_MutableBigInteger_setInt_int_int 29
+typedef void (*func_java_math_MutableBigInteger_setInt_int_int)(jcontext ctx, jobject self, jint param0, jint param1);
+#define VTABLE_java_math_MutableBigInteger_setValue_Array1_int_int 30
+typedef void (*func_java_math_MutableBigInteger_setValue_Array1_int_int)(jcontext ctx, jobject self, jobject param0, jint param1);
+#define VTABLE_java_math_MutableBigInteger_copyValue_java_math_MutableBigInteger 31
+typedef void (*func_java_math_MutableBigInteger_copyValue_java_math_MutableBigInteger)(jcontext ctx, jobject self, jobject param0);
+#define VTABLE_java_math_MutableBigInteger_copyValue_Array1_int 32
+typedef void (*func_java_math_MutableBigInteger_copyValue_Array1_int)(jcontext ctx, jobject self, jobject param0);
+#define VTABLE_java_math_MutableBigInteger_isOne_R_boolean 33
+typedef jbool (*func_java_math_MutableBigInteger_isOne_R_boolean)(jcontext ctx, jobject self);
+#define VTABLE_java_math_MutableBigInteger_isZero_R_boolean 34
+typedef jbool (*func_java_math_MutableBigInteger_isZero_R_boolean)(jcontext ctx, jobject self);
+#define VTABLE_java_math_MutableBigInteger_isEven_R_boolean 35
+typedef jbool (*func_java_math_MutableBigInteger_isEven_R_boolean)(jcontext ctx, jobject self);
+#define VTABLE_java_math_MutableBigInteger_isOdd_R_boolean 36
+typedef jbool (*func_java_math_MutableBigInteger_isOdd_R_boolean)(jcontext ctx, jobject self);
+#define VTABLE_java_math_MutableBigInteger_isNormal_R_boolean 37
+typedef jbool (*func_java_math_MutableBigInteger_isNormal_R_boolean)(jcontext ctx, jobject self);
+#define VTABLE_java_math_MutableBigInteger_safeRightShift_int 38
+typedef void (*func_java_math_MutableBigInteger_safeRightShift_int)(jcontext ctx, jobject self, jint param0);
+#define VTABLE_java_math_MutableBigInteger_rightShift_int 39
+typedef void (*func_java_math_MutableBigInteger_rightShift_int)(jcontext ctx, jobject self, jint param0);
+#define VTABLE_java_math_MutableBigInteger_safeLeftShift_int 40
+typedef void (*func_java_math_MutableBigInteger_safeLeftShift_int)(jcontext ctx, jobject self, jint param0);
+#define VTABLE_java_math_MutableBigInteger_leftShift_int 41
+typedef void (*func_java_math_MutableBigInteger_leftShift_int)(jcontext ctx, jobject self, jint param0);
+#define VTABLE_java_math_MutableBigInteger_divadd_Array1_int_Array1_int_int_R_int 42
+typedef jint (*func_java_math_MutableBigInteger_divadd_Array1_int_Array1_int_int_R_int)(jcontext ctx, jobject self, jobject param0, jobject param1, jint param2);
+#define VTABLE_java_math_MutableBigInteger_mulsub_Array1_int_Array1_int_int_int_int_R_int 43
+typedef jint (*func_java_math_MutableBigInteger_mulsub_Array1_int_Array1_int_int_int_int_R_int)(jcontext ctx, jobject self, jobject param0, jobject param1, jint param2, jint param3, jint param4);
+#define VTABLE_java_math_MutableBigInteger_mulsubBorrow_Array1_int_Array1_int_int_int_int_R_int 44
+typedef jint (*func_java_math_MutableBigInteger_mulsubBorrow_Array1_int_Array1_int_int_int_int_R_int)(jcontext ctx, jobject self, jobject param0, jobject param1, jint param2, jint param3, jint param4);
+#define VTABLE_java_math_MutableBigInteger_primitiveRightShift_int 45
+typedef void (*func_java_math_MutableBigInteger_primitiveRightShift_int)(jcontext ctx, jobject self, jint param0);
+#define VTABLE_java_math_MutableBigInteger_primitiveLeftShift_int 46
+typedef void (*func_java_math_MutableBigInteger_primitiveLeftShift_int)(jcontext ctx, jobject self, jint param0);
+#define VTABLE_java_math_MutableBigInteger_getLower_int_R_java_math_BigInteger 47
+typedef jobject (*func_java_math_MutableBigInteger_getLower_int_R_java_math_BigInteger)(jcontext ctx, jobject self, jint param0);
+#define VTABLE_java_math_MutableBigInteger_keepLower_int 48
+typedef void (*func_java_math_MutableBigInteger_keepLower_int)(jcontext ctx, jobject self, jint param0);
+#define VTABLE_java_math_MutableBigInteger_add_java_math_MutableBigInteger 49
+typedef void (*func_java_math_MutableBigInteger_add_java_math_MutableBigInteger)(jcontext ctx, jobject self, jobject param0);
+#define VTABLE_java_math_MutableBigInteger_addShifted_java_math_MutableBigInteger_int 50
+typedef void (*func_java_math_MutableBigInteger_addShifted_java_math_MutableBigInteger_int)(jcontext ctx, jobject self, jobject param0, jint param1);
+#define VTABLE_java_math_MutableBigInteger_addDisjoint_java_math_MutableBigInteger_int 51
+typedef void (*func_java_math_MutableBigInteger_addDisjoint_java_math_MutableBigInteger_int)(jcontext ctx, jobject self, jobject param0, jint param1);
+#define VTABLE_java_math_MutableBigInteger_addLower_java_math_MutableBigInteger_int 52
+typedef void (*func_java_math_MutableBigInteger_addLower_java_math_MutableBigInteger_int)(jcontext ctx, jobject self, jobject param0, jint param1);
+#define VTABLE_java_math_MutableBigInteger_subtract_java_math_MutableBigInteger_R_int 53
+typedef jint (*func_java_math_MutableBigInteger_subtract_java_math_MutableBigInteger_R_int)(jcontext ctx, jobject self, jobject param0);
+#define VTABLE_java_math_MutableBigInteger_difference_java_math_MutableBigInteger_R_int 54
+typedef jint (*func_java_math_MutableBigInteger_difference_java_math_MutableBigInteger_R_int)(jcontext ctx, jobject self, jobject param0);
+#define VTABLE_java_math_MutableBigInteger_multiply_java_math_MutableBigInteger_java_math_MutableBigInteger 55
+typedef void (*func_java_math_MutableBigInteger_multiply_java_math_MutableBigInteger_java_math_MutableBigInteger)(jcontext ctx, jobject self, jobject param0, jobject param1);
+#define VTABLE_java_math_MutableBigInteger_mul_int_java_math_MutableBigInteger 56
+typedef void (*func_java_math_MutableBigInteger_mul_int_java_math_MutableBigInteger)(jcontext ctx, jobject self, jint param0, jobject param1);
+#define VTABLE_java_math_MutableBigInteger_divideOneWord_int_java_math_MutableBigInteger_R_int 57
+typedef jint (*func_java_math_MutableBigInteger_divideOneWord_int_java_math_MutableBigInteger_R_int)(jcontext ctx, jobject self, jint param0, jobject param1);
+#define VTABLE_java_math_MutableBigInteger_divide_java_math_MutableBigInteger_java_math_MutableBigInteger_R_java_math_MutableBigInteger 58
+typedef jobject (*func_java_math_MutableBigInteger_divide_java_math_MutableBigInteger_java_math_MutableBigInteger_R_java_math_MutableBigInteger)(jcontext ctx, jobject self, jobject param0, jobject param1);
+#define VTABLE_java_math_MutableBigInteger_divide_java_math_MutableBigInteger_java_math_MutableBigInteger_boolean_R_java_math_MutableBigInteger 59
+typedef jobject (*func_java_math_MutableBigInteger_divide_java_math_MutableBigInteger_java_math_MutableBigInteger_boolean_R_java_math_MutableBigInteger)(jcontext ctx, jobject self, jobject param0, jobject param1, jbool param2);
+#define VTABLE_java_math_MutableBigInteger_divideKnuth_java_math_MutableBigInteger_java_math_MutableBigInteger_R_java_math_MutableBigInteger 60
+typedef jobject (*func_java_math_MutableBigInteger_divideKnuth_java_math_MutableBigInteger_java_math_MutableBigInteger_R_java_math_MutableBigInteger)(jcontext ctx, jobject self, jobject param0, jobject param1);
+#define VTABLE_java_math_MutableBigInteger_divideKnuth_java_math_MutableBigInteger_java_math_MutableBigInteger_boolean_R_java_math_MutableBigInteger 61
+typedef jobject (*func_java_math_MutableBigInteger_divideKnuth_java_math_MutableBigInteger_java_math_MutableBigInteger_boolean_R_java_math_MutableBigInteger)(jcontext ctx, jobject self, jobject param0, jobject param1, jbool param2);
+#define VTABLE_java_math_MutableBigInteger_divideAndRemainderBurnikelZiegler_java_math_MutableBigInteger_java_math_MutableBigInteger_R_java_math_MutableBigInteger 62
+typedef jobject (*func_java_math_MutableBigInteger_divideAndRemainderBurnikelZiegler_java_math_MutableBigInteger_java_math_MutableBigInteger_R_java_math_MutableBigInteger)(jcontext ctx, jobject self, jobject param0, jobject param1);
+#define VTABLE_java_math_MutableBigInteger_divide2n1n_java_math_MutableBigInteger_java_math_MutableBigInteger_R_java_math_MutableBigInteger 63
+typedef jobject (*func_java_math_MutableBigInteger_divide2n1n_java_math_MutableBigInteger_java_math_MutableBigInteger_R_java_math_MutableBigInteger)(jcontext ctx, jobject self, jobject param0, jobject param1);
+#define VTABLE_java_math_MutableBigInteger_divide3n2n_java_math_MutableBigInteger_java_math_MutableBigInteger_R_java_math_MutableBigInteger 64
+typedef jobject (*func_java_math_MutableBigInteger_divide3n2n_java_math_MutableBigInteger_java_math_MutableBigInteger_R_java_math_MutableBigInteger)(jcontext ctx, jobject self, jobject param0, jobject param1);
+#define VTABLE_java_math_MutableBigInteger_getBlock_int_int_int_R_java_math_MutableBigInteger 65
+typedef jobject (*func_java_math_MutableBigInteger_getBlock_int_int_int_R_java_math_MutableBigInteger)(jcontext ctx, jobject self, jint param0, jint param1, jint param2);
+#define VTABLE_java_math_MutableBigInteger_bitLength_R_long 66
+typedef jlong (*func_java_math_MutableBigInteger_bitLength_R_long)(jcontext ctx, jobject self);
+#define VTABLE_java_math_MutableBigInteger_divide_long_java_math_MutableBigInteger_R_long 67
+typedef jlong (*func_java_math_MutableBigInteger_divide_long_java_math_MutableBigInteger_R_long)(jcontext ctx, jobject self, jlong param0, jobject param1);
+#define VTABLE_java_math_MutableBigInteger_divideMagnitude_java_math_MutableBigInteger_java_math_MutableBigInteger_boolean_R_java_math_MutableBigInteger 68
+typedef jobject (*func_java_math_MutableBigInteger_divideMagnitude_java_math_MutableBigInteger_java_math_MutableBigInteger_boolean_R_java_math_MutableBigInteger)(jcontext ctx, jobject self, jobject param0, jobject param1, jbool param2);
+#define VTABLE_java_math_MutableBigInteger_divideLongMagnitude_long_java_math_MutableBigInteger_R_java_math_MutableBigInteger 69
+typedef jobject (*func_java_math_MutableBigInteger_divideLongMagnitude_long_java_math_MutableBigInteger_R_java_math_MutableBigInteger)(jcontext ctx, jobject self, jlong param0, jobject param1);
+#define VTABLE_java_math_MutableBigInteger_divaddLong_int_int_Array1_int_int_R_int 70
+typedef jint (*func_java_math_MutableBigInteger_divaddLong_int_int_Array1_int_int_R_int)(jcontext ctx, jobject self, jint param0, jint param1, jobject param2, jint param3);
+#define VTABLE_java_math_MutableBigInteger_mulsubLong_Array1_int_int_int_int_int_R_int 71
+typedef jint (*func_java_math_MutableBigInteger_mulsubLong_Array1_int_int_int_int_int_R_int)(jcontext ctx, jobject self, jobject param0, jint param1, jint param2, jint param3, jint param4);
+#define VTABLE_java_math_MutableBigInteger_unsignedLongCompare_long_long_R_boolean 72
+typedef jbool (*func_java_math_MutableBigInteger_unsignedLongCompare_long_long_R_boolean)(jcontext ctx, jobject self, jlong param0, jlong param1);
+#define VTABLE_java_math_MutableBigInteger_hybridGCD_java_math_MutableBigInteger_R_java_math_MutableBigInteger 73
+typedef jobject (*func_java_math_MutableBigInteger_hybridGCD_java_math_MutableBigInteger_R_java_math_MutableBigInteger)(jcontext ctx, jobject self, jobject param0);
+#define VTABLE_java_math_MutableBigInteger_binaryGCD_java_math_MutableBigInteger_R_java_math_MutableBigInteger 74
+typedef jobject (*func_java_math_MutableBigInteger_binaryGCD_java_math_MutableBigInteger_R_java_math_MutableBigInteger)(jcontext ctx, jobject self, jobject param0);
+#define VTABLE_java_math_MutableBigInteger_mutableModInverse_java_math_MutableBigInteger_R_java_math_MutableBigInteger 75
+typedef jobject (*func_java_math_MutableBigInteger_mutableModInverse_java_math_MutableBigInteger_R_java_math_MutableBigInteger)(jcontext ctx, jobject self, jobject param0);
+#define VTABLE_java_math_MutableBigInteger_modInverseMP2_int_R_java_math_MutableBigInteger 76
+typedef jobject (*func_java_math_MutableBigInteger_modInverseMP2_int_R_java_math_MutableBigInteger)(jcontext ctx, jobject self, jint param0);
+#define VTABLE_java_math_MutableBigInteger_modInverse_java_math_MutableBigInteger_R_java_math_MutableBigInteger 77
+typedef jobject (*func_java_math_MutableBigInteger_modInverse_java_math_MutableBigInteger_R_java_math_MutableBigInteger)(jcontext ctx, jobject self, jobject param0);
+#define VTABLE_java_math_MutableBigInteger_euclidModInverse_int_R_java_math_MutableBigInteger 78
+typedef jobject (*func_java_math_MutableBigInteger_euclidModInverse_int_R_java_math_MutableBigInteger)(jcontext ctx, jobject self, jint param0);
+
+void mark_java_math_MutableBigInteger(jobject object, jint mark, jint depth);
+void clinit_java_math_MutableBigInteger(jcontext ctx);
+void init_java_math_MutableBigInteger(jcontext ctx, jobject self);
+void init_java_math_MutableBigInteger_int(jcontext ctx, jobject self, jint param0);
+void init_java_math_MutableBigInteger_Array1_int(jcontext ctx, jobject self, jobject param0);
+void init_java_math_MutableBigInteger_java_math_BigInteger(jcontext ctx, jobject self, jobject param0);
+void init_java_math_MutableBigInteger_java_math_MutableBigInteger(jcontext ctx, jobject self, jobject param0);
+void M_java_math_MutableBigInteger_ones_int(jcontext ctx, jobject self, jint param0);
+jobject M_java_math_MutableBigInteger_getMagnitudeArray_R_Array1_int(jcontext ctx, jobject self);
+jlong M_java_math_MutableBigInteger_toLong_R_long(jcontext ctx, jobject self);
+jobject M_java_math_MutableBigInteger_toBigInteger_int_R_java_math_BigInteger(jcontext ctx, jobject self, jint param0);
+jobject M_java_math_MutableBigInteger_toBigInteger_R_java_math_BigInteger(jcontext ctx, jobject self);
+jobject M_java_math_MutableBigInteger_toBigDecimal_int_int_R_java_math_BigDecimal(jcontext ctx, jobject self, jint param0, jint param1);
+jlong M_java_math_MutableBigInteger_toCompactValue_int_R_long(jcontext ctx, jobject self, jint param0);
+void M_java_math_MutableBigInteger_clear(jcontext ctx, jobject self);
+void M_java_math_MutableBigInteger_reset(jcontext ctx, jobject self);
+jint M_java_math_MutableBigInteger_compare_java_math_MutableBigInteger_R_int(jcontext ctx, jobject self, jobject param0);
+jint M_java_math_MutableBigInteger_compareShifted_java_math_MutableBigInteger_int_R_int(jcontext ctx, jobject self, jobject param0, jint param1);
+jint M_java_math_MutableBigInteger_compareHalf_java_math_MutableBigInteger_R_int(jcontext ctx, jobject self, jobject param0);
+jint M_java_math_MutableBigInteger_getLowestSetBit_R_int(jcontext ctx, jobject self);
+jint M_java_math_MutableBigInteger_getInt_int_R_int(jcontext ctx, jobject self, jint param0);
+jlong M_java_math_MutableBigInteger_getLong_int_R_long(jcontext ctx, jobject self, jint param0);
+void M_java_math_MutableBigInteger_normalize(jcontext ctx, jobject self);
+void M_java_math_MutableBigInteger_ensureCapacity_int(jcontext ctx, jobject self, jint param0);
+jobject M_java_math_MutableBigInteger_toIntArray_R_Array1_int(jcontext ctx, jobject self);
+void M_java_math_MutableBigInteger_setInt_int_int(jcontext ctx, jobject self, jint param0, jint param1);
+void M_java_math_MutableBigInteger_setValue_Array1_int_int(jcontext ctx, jobject self, jobject param0, jint param1);
+void M_java_math_MutableBigInteger_copyValue_java_math_MutableBigInteger(jcontext ctx, jobject self, jobject param0);
+void M_java_math_MutableBigInteger_copyValue_Array1_int(jcontext ctx, jobject self, jobject param0);
+jbool M_java_math_MutableBigInteger_isOne_R_boolean(jcontext ctx, jobject self);
+jbool M_java_math_MutableBigInteger_isZero_R_boolean(jcontext ctx, jobject self);
+jbool M_java_math_MutableBigInteger_isEven_R_boolean(jcontext ctx, jobject self);
+jbool M_java_math_MutableBigInteger_isOdd_R_boolean(jcontext ctx, jobject self);
+jbool M_java_math_MutableBigInteger_isNormal_R_boolean(jcontext ctx, jobject self);
+jobject M_java_math_MutableBigInteger_toString_R_java_lang_String(jcontext ctx, jobject self);
+void M_java_math_MutableBigInteger_safeRightShift_int(jcontext ctx, jobject self, jint param0);
+void M_java_math_MutableBigInteger_rightShift_int(jcontext ctx, jobject self, jint param0);
+void M_java_math_MutableBigInteger_safeLeftShift_int(jcontext ctx, jobject self, jint param0);
+void M_java_math_MutableBigInteger_leftShift_int(jcontext ctx, jobject self, jint param0);
+jint M_java_math_MutableBigInteger_divadd_Array1_int_Array1_int_int_R_int(jcontext ctx, jobject self, jobject param0, jobject param1, jint param2);
+jint M_java_math_MutableBigInteger_mulsub_Array1_int_Array1_int_int_int_int_R_int(jcontext ctx, jobject self, jobject param0, jobject param1, jint param2, jint param3, jint param4);
+jint M_java_math_MutableBigInteger_mulsubBorrow_Array1_int_Array1_int_int_int_int_R_int(jcontext ctx, jobject self, jobject param0, jobject param1, jint param2, jint param3, jint param4);
+void M_java_math_MutableBigInteger_primitiveRightShift_int(jcontext ctx, jobject self, jint param0);
+void M_java_math_MutableBigInteger_primitiveLeftShift_int(jcontext ctx, jobject self, jint param0);
+jobject M_java_math_MutableBigInteger_getLower_int_R_java_math_BigInteger(jcontext ctx, jobject self, jint param0);
+void M_java_math_MutableBigInteger_keepLower_int(jcontext ctx, jobject self, jint param0);
+void M_java_math_MutableBigInteger_add_java_math_MutableBigInteger(jcontext ctx, jobject self, jobject param0);
+void M_java_math_MutableBigInteger_addShifted_java_math_MutableBigInteger_int(jcontext ctx, jobject self, jobject param0, jint param1);
+void M_java_math_MutableBigInteger_addDisjoint_java_math_MutableBigInteger_int(jcontext ctx, jobject self, jobject param0, jint param1);
+void M_java_math_MutableBigInteger_addLower_java_math_MutableBigInteger_int(jcontext ctx, jobject self, jobject param0, jint param1);
+jint M_java_math_MutableBigInteger_subtract_java_math_MutableBigInteger_R_int(jcontext ctx, jobject self, jobject param0);
+jint M_java_math_MutableBigInteger_difference_java_math_MutableBigInteger_R_int(jcontext ctx, jobject self, jobject param0);
+void M_java_math_MutableBigInteger_multiply_java_math_MutableBigInteger_java_math_MutableBigInteger(jcontext ctx, jobject self, jobject param0, jobject param1);
+void M_java_math_MutableBigInteger_mul_int_java_math_MutableBigInteger(jcontext ctx, jobject self, jint param0, jobject param1);
+jint M_java_math_MutableBigInteger_divideOneWord_int_java_math_MutableBigInteger_R_int(jcontext ctx, jobject self, jint param0, jobject param1);
+jobject M_java_math_MutableBigInteger_divide_java_math_MutableBigInteger_java_math_MutableBigInteger_R_java_math_MutableBigInteger(jcontext ctx, jobject self, jobject param0, jobject param1);
+jobject M_java_math_MutableBigInteger_divide_java_math_MutableBigInteger_java_math_MutableBigInteger_boolean_R_java_math_MutableBigInteger(jcontext ctx, jobject self, jobject param0, jobject param1, jbool param2);
+jobject M_java_math_MutableBigInteger_divideKnuth_java_math_MutableBigInteger_java_math_MutableBigInteger_R_java_math_MutableBigInteger(jcontext ctx, jobject self, jobject param0, jobject param1);
+jobject M_java_math_MutableBigInteger_divideKnuth_java_math_MutableBigInteger_java_math_MutableBigInteger_boolean_R_java_math_MutableBigInteger(jcontext ctx, jobject self, jobject param0, jobject param1, jbool param2);
+jobject M_java_math_MutableBigInteger_divideAndRemainderBurnikelZiegler_java_math_MutableBigInteger_java_math_MutableBigInteger_R_java_math_MutableBigInteger(jcontext ctx, jobject self, jobject param0, jobject param1);
+jobject M_java_math_MutableBigInteger_divide2n1n_java_math_MutableBigInteger_java_math_MutableBigInteger_R_java_math_MutableBigInteger(jcontext ctx, jobject self, jobject param0, jobject param1);
+jobject M_java_math_MutableBigInteger_divide3n2n_java_math_MutableBigInteger_java_math_MutableBigInteger_R_java_math_MutableBigInteger(jcontext ctx, jobject self, jobject param0, jobject param1);
+jobject M_java_math_MutableBigInteger_getBlock_int_int_int_R_java_math_MutableBigInteger(jcontext ctx, jobject self, jint param0, jint param1, jint param2);
+jlong M_java_math_MutableBigInteger_bitLength_R_long(jcontext ctx, jobject self);
+jlong M_java_math_MutableBigInteger_divide_long_java_math_MutableBigInteger_R_long(jcontext ctx, jobject self, jlong param0, jobject param1);
+void SM_java_math_MutableBigInteger_copyAndShift_Array1_int_int_int_Array1_int_int_int(jcontext ctx, jobject param0, jint param1, jint param2, jobject param3, jint param4, jint param5);
+jobject M_java_math_MutableBigInteger_divideMagnitude_java_math_MutableBigInteger_java_math_MutableBigInteger_boolean_R_java_math_MutableBigInteger(jcontext ctx, jobject self, jobject param0, jobject param1, jbool param2);
+jobject M_java_math_MutableBigInteger_divideLongMagnitude_long_java_math_MutableBigInteger_R_java_math_MutableBigInteger(jcontext ctx, jobject self, jlong param0, jobject param1);
+jint M_java_math_MutableBigInteger_divaddLong_int_int_Array1_int_int_R_int(jcontext ctx, jobject self, jint param0, jint param1, jobject param2, jint param3);
+jint M_java_math_MutableBigInteger_mulsubLong_Array1_int_int_int_int_int_R_int(jcontext ctx, jobject self, jobject param0, jint param1, jint param2, jint param3, jint param4);
+jbool M_java_math_MutableBigInteger_unsignedLongCompare_long_long_R_boolean(jcontext ctx, jobject self, jlong param0, jlong param1);
+jlong SM_java_math_MutableBigInteger_divWord_long_int_R_long(jcontext ctx, jlong param0, jint param1);
+jobject M_java_math_MutableBigInteger_hybridGCD_java_math_MutableBigInteger_R_java_math_MutableBigInteger(jcontext ctx, jobject self, jobject param0);
+jobject M_java_math_MutableBigInteger_binaryGCD_java_math_MutableBigInteger_R_java_math_MutableBigInteger(jcontext ctx, jobject self, jobject param0);
+jint SM_java_math_MutableBigInteger_binaryGcd_int_int_R_int(jcontext ctx, jint param0, jint param1);
+jobject M_java_math_MutableBigInteger_mutableModInverse_java_math_MutableBigInteger_R_java_math_MutableBigInteger(jcontext ctx, jobject self, jobject param0);
+jobject M_java_math_MutableBigInteger_modInverseMP2_int_R_java_math_MutableBigInteger(jcontext ctx, jobject self, jint param0);
+jint SM_java_math_MutableBigInteger_inverseMod32_int_R_int(jcontext ctx, jint param0);
+jlong SM_java_math_MutableBigInteger_inverseMod64_long_R_long(jcontext ctx, jlong param0);
+jobject SM_java_math_MutableBigInteger_modInverseBP2_java_math_MutableBigInteger_int_R_java_math_MutableBigInteger(jcontext ctx, jobject param0, jint param1);
+jobject M_java_math_MutableBigInteger_modInverse_java_math_MutableBigInteger_R_java_math_MutableBigInteger(jcontext ctx, jobject self, jobject param0);
+jobject SM_java_math_MutableBigInteger_fixup_java_math_MutableBigInteger_java_math_MutableBigInteger_int_R_java_math_MutableBigInteger(jcontext ctx, jobject param0, jobject param1, jint param2);
+jobject M_java_math_MutableBigInteger_euclidModInverse_int_R_java_math_MutableBigInteger(jcontext ctx, jobject self, jint param0);
+
+#ifdef __cplusplus
+}
+#endif
+
+#endif

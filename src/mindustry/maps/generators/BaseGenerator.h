@@ -1,0 +1,82 @@
+#ifndef HEADER_mindustry_maps_generators_BaseGenerator
+#define HEADER_mindustry_maps_generators_BaseGenerator
+
+#include "Clearwing.h"
+#include "java/lang/Object.h"
+
+#ifdef __cplusplus
+extern "C" {
+#endif
+
+typedef struct mindustry_maps_generators_BaseGenerator {
+	java_lang_Object parent;
+	jref F_tiles;
+	jref F_cores;
+} mindustry_maps_generators_BaseGenerator;
+
+extern Class class_mindustry_maps_generators_BaseGenerator;
+
+extern jobject SF_mindustry_maps_generators_BaseGenerator_axis;
+extern jobject SF_mindustry_maps_generators_BaseGenerator_rotator;
+extern jint SF_mindustry_maps_generators_BaseGenerator_range;
+extern jbool SF_mindustry_maps_generators_BaseGenerator_insanity;
+
+#define VTABLE_mindustry_maps_generators_BaseGenerator_hashCode_R_int 0
+typedef jint (*func_mindustry_maps_generators_BaseGenerator_hashCode_R_int)(jcontext ctx, jobject self);
+#define VTABLE_mindustry_maps_generators_BaseGenerator_equals_java_lang_Object_R_boolean 1
+typedef jbool (*func_mindustry_maps_generators_BaseGenerator_equals_java_lang_Object_R_boolean)(jcontext ctx, jobject self, jobject param0);
+#define VTABLE_mindustry_maps_generators_BaseGenerator_clone_R_java_lang_Object 2
+typedef jobject (*func_mindustry_maps_generators_BaseGenerator_clone_R_java_lang_Object)(jcontext ctx, jobject self);
+#define VTABLE_mindustry_maps_generators_BaseGenerator_getClass_R_java_lang_Class 3
+typedef jobject (*func_mindustry_maps_generators_BaseGenerator_getClass_R_java_lang_Class)(jcontext ctx, jobject self);
+#define VTABLE_mindustry_maps_generators_BaseGenerator_toString_R_java_lang_String 4
+typedef jobject (*func_mindustry_maps_generators_BaseGenerator_toString_R_java_lang_String)(jcontext ctx, jobject self);
+#define VTABLE_mindustry_maps_generators_BaseGenerator_finalize 5
+typedef void (*func_mindustry_maps_generators_BaseGenerator_finalize)(jcontext ctx, jobject self);
+#define VTABLE_mindustry_maps_generators_BaseGenerator_notify 6
+typedef void (*func_mindustry_maps_generators_BaseGenerator_notify)(jcontext ctx, jobject self);
+#define VTABLE_mindustry_maps_generators_BaseGenerator_notifyAll 7
+typedef void (*func_mindustry_maps_generators_BaseGenerator_notifyAll)(jcontext ctx, jobject self);
+#define VTABLE_mindustry_maps_generators_BaseGenerator_wait 8
+typedef void (*func_mindustry_maps_generators_BaseGenerator_wait)(jcontext ctx, jobject self);
+#define VTABLE_mindustry_maps_generators_BaseGenerator_wait_long 9
+typedef void (*func_mindustry_maps_generators_BaseGenerator_wait_long)(jcontext ctx, jobject self, jlong param0);
+#define VTABLE_mindustry_maps_generators_BaseGenerator_wait_long_int 10
+typedef void (*func_mindustry_maps_generators_BaseGenerator_wait_long_int)(jcontext ctx, jobject self, jlong param0, jint param1);
+#define VTABLE_mindustry_maps_generators_BaseGenerator_generate_mindustry_world_Tiles_arc_struct_Seq_mindustry_world_Tile_mindustry_game_Team_mindustry_type_Sector_float 11
+typedef void (*func_mindustry_maps_generators_BaseGenerator_generate_mindustry_world_Tiles_arc_struct_Seq_mindustry_world_Tile_mindustry_game_Team_mindustry_type_Sector_float)(jcontext ctx, jobject self, jobject param0, jobject param1, jobject param2, jobject param3, jobject param4, jfloat param5);
+#define VTABLE_mindustry_maps_generators_BaseGenerator_postGenerate 12
+typedef void (*func_mindustry_maps_generators_BaseGenerator_postGenerate)(jcontext ctx, jobject self);
+#define VTABLE_mindustry_maps_generators_BaseGenerator_pass_arc_func_Cons 13
+typedef void (*func_mindustry_maps_generators_BaseGenerator_pass_arc_func_Cons)(jcontext ctx, jobject self, jobject param0);
+#define VTABLE_mindustry_maps_generators_BaseGenerator_lambda$pass$0_arc_func_Cons_int_int 14
+typedef void (*func_mindustry_maps_generators_BaseGenerator_lambda$pass$0_arc_func_Cons_int_int)(jcontext ctx, jobject self, jobject param0, jint param1, jint param2);
+
+void mark_mindustry_maps_generators_BaseGenerator(jobject object, jint mark, jint depth);
+void clinit_mindustry_maps_generators_BaseGenerator(jcontext ctx);
+void init_mindustry_maps_generators_BaseGenerator(jcontext ctx, jobject self);
+jobject SM_mindustry_maps_generators_BaseGenerator_getDifficultyWall_int_float_R_mindustry_world_Block(jcontext ctx, jint param0, jfloat param1);
+void M_mindustry_maps_generators_BaseGenerator_generate_mindustry_world_Tiles_arc_struct_Seq_mindustry_world_Tile_mindustry_game_Team_mindustry_type_Sector_float(jcontext ctx, jobject self, jobject param0, jobject param1, jobject param2, jobject param3, jobject param4, jfloat param5);
+void M_mindustry_maps_generators_BaseGenerator_postGenerate(jcontext ctx, jobject self);
+void M_mindustry_maps_generators_BaseGenerator_pass_arc_func_Cons(jcontext ctx, jobject self, jobject param0);
+jbool SM_mindustry_maps_generators_BaseGenerator_tryPlace_mindustry_ai_BaseRegistry$BasePart_int_int_mindustry_game_Team_arc_math_Rand_R_boolean(jcontext ctx, jobject param0, jint param1, jint param2, jobject param3, jobject param4);
+jbool SM_mindustry_maps_generators_BaseGenerator_tryPlace_mindustry_ai_BaseRegistry$BasePart_int_int_mindustry_game_Team_arc_math_Rand_arc_func_Intc2_R_boolean(jcontext ctx, jobject param0, jint param1, jint param2, jobject param3, jobject param4, jobject param5);
+void SM_mindustry_maps_generators_BaseGenerator_set_mindustry_world_Tile_mindustry_type_Item(jcontext ctx, jobject param0, jobject param1);
+jbool SM_mindustry_maps_generators_BaseGenerator_isTaken_mindustry_world_Block_int_int_R_boolean(jcontext ctx, jobject param0, jint param1, jint param2);
+jbool SM_mindustry_maps_generators_BaseGenerator_overlaps_int_int_R_boolean(jcontext ctx, jint param0, jint param1);
+void SM_mindustry_maps_generators_BaseGenerator_lambda$tryPlace$0_mindustry_type_Item_arc_math_Rand_int_int(jcontext ctx, jobject param0, jobject param1, jint param2, jint param3);
+void M_mindustry_maps_generators_BaseGenerator_lambda$pass$0_arc_func_Cons_int_int(jcontext ctx, jobject self, jobject param0, jint param1, jint param2);
+void SM_mindustry_maps_generators_BaseGenerator_lambda$generate$5_mindustry_world_Tile_float_mindustry_world_Tile(jcontext ctx, jobject param0, jfloat param1, jobject param2);
+jbool SM_mindustry_maps_generators_BaseGenerator_lambda$generate$4_mindustry_world_Tile_R_boolean(jcontext ctx, jobject param0);
+jfloat SM_mindustry_maps_generators_BaseGenerator_lambda$generate$3_mindustry_world_Tile_float_mindustry_world_Tile_R_float(jcontext ctx, jobject param0, jfloat param1, jobject param2);
+void SM_mindustry_maps_generators_BaseGenerator_lambda$generate$2_mindustry_world_Tiles_mindustry_world_Block_mindustry_world_Block_mindustry_game_Team_mindustry_world_Tile(jcontext ctx, jobject param0, jobject param1, jobject param2, jobject param3, jobject param4);
+void SM_mindustry_maps_generators_BaseGenerator_lambda$generate$1_mindustry_world_Tiles_mindustry_world_Tile_int_mindustry_game_Team_mindustry_world_Block_mindustry_world_Tile(jcontext ctx, jobject param0, jobject param1, jint param2, jobject param3, jobject param4, jobject param5);
+void SM_mindustry_maps_generators_BaseGenerator_lambda$generate$0_double_double_float_float_mindustry_game_Team_mindustry_world_Tile(jcontext ctx, jdouble param0, jdouble param1, jfloat param2, jfloat param3, jobject param4, jobject param5);
+jfloat SM_mindustry_maps_generators_BaseGenerator_lambda$getDifficultyWall$1_mindustry_world_Block_R_float(jcontext ctx, jobject param0);
+jbool SM_mindustry_maps_generators_BaseGenerator_lambda$getDifficultyWall$0_int_mindustry_world_Block_R_boolean(jcontext ctx, jint param0, jobject param1);
+
+#ifdef __cplusplus
+}
+#endif
+
+#endif

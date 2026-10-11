@@ -1,0 +1,380 @@
+#include "java/util/concurrent/CompletableFuture_AsyncSupply.h"
+#include "java/lang/Object.h"
+#include "java/util/concurrent/CompletableFuture_AsynchronousCompletionTask.h"
+#include "java/util/function/Supplier.h"
+#include "java/util/concurrent/CompletableFuture_AsyncSupply.h"
+#include "java/util/concurrent/ForkJoinTask.h"
+#include "java/util/concurrent/CompletableFuture.h"
+#include "java/lang/Void.h"
+#include "java/lang/Throwable.h"
+#include "java/lang/Runnable.h"
+
+extern "C" {
+
+
+void mark_java_util_concurrent_CompletableFuture$AsyncSupply(jobject object, jint mark, jint depth) {
+	if (!object) {
+		return;
+	}
+	if (depth > GC_DEPTH_ALWAYS && (object->gcMark < GC_MARK_START || object->gcMark == mark))
+		return;
+	if (depth > MAX_GC_MARK_DEPTH) {
+		markDeepObject(object);
+		return;
+	}
+	mark_java_util_concurrent_ForkJoinTask(object, mark, depth);
+	if (object->gcMark >= GC_MARK_START)
+		object->gcMark = mark;
+	auto self = (java_util_concurrent_CompletableFuture$AsyncSupply *) object;
+	if (self->F_dep)
+		((gc_mark_ptr) ((jclass) ((jobject) self->F_dep)->clazz)->markFunction)((jobject) self->F_dep, mark, depth + 1);
+	if (self->F_fn)
+		((gc_mark_ptr) ((jclass) ((jobject) self->F_fn)->clazz)->markFunction)((jobject) self->F_fn, mark, depth + 1);
+}
+
+void clinit_java_util_concurrent_CompletableFuture$AsyncSupply(jcontext ctx) {
+	static bool initialized;
+	if (initialized) return;
+	initialized = true;
+	clinit_java_util_concurrent_ForkJoinTask(ctx);
+}
+
+void init_java_util_concurrent_CompletableFuture$AsyncSupply_java_util_concurrent_CompletableFuture_java_util_function_Supplier(jcontext ctx, jobject self, jobject param0, jobject param1) {
+	NULL_CHECK(self);
+	jtype frame[5];
+	auto stack = &frame[3];
+	jtype *sp = stack;
+	FrameInfo frameInfo { "java/util/concurrent/CompletableFuture$AsyncSupply:<init>", 5 };
+	auto frameRef = pushStackFrame(ctx, &frameInfo, frame, nullptr);
+
+	clinit_java_util_concurrent_CompletableFuture$AsyncSupply(ctx);
+	frame[0].o = self;
+	frame[1].o = param0;
+	frame[2].o = param1;
+	{
+	LINE_NUMBER(1715);
+	init_java_util_concurrent_ForkJoinTask(ctx, (frame[0].o));
+	LINE_NUMBER(1716);
+	((java_util_concurrent_CompletableFuture$AsyncSupply *) NULL_CHECK((frame[0].o)))->F_dep = (jref) (frame[1].o);
+	((java_util_concurrent_CompletableFuture$AsyncSupply *) NULL_CHECK((frame[0].o)))->F_fn = (jref) (frame[2].o);
+	LINE_NUMBER(1717);
+	popStackFrame(ctx);
+	return;
+	}
+
+	popStackFrame(ctx);
+}
+
+jobject M_java_util_concurrent_CompletableFuture$AsyncSupply_getRawResult_R_java_lang_Void(jcontext ctx, jobject self) {
+	NULL_CHECK(self);
+	jtype frame[2];
+	auto stack = &frame[1];
+	jtype *sp = stack;
+	FrameInfo frameInfo { "java/util/concurrent/CompletableFuture$AsyncSupply:getRawResult", 2 };
+	auto frameRef = pushStackFrame(ctx, &frameInfo, frame, nullptr);
+
+	frame[0].o = self;
+	{
+	LINE_NUMBER(1719);
+	popStackFrame(ctx);
+	return (jobject(nullptr));
+	}
+
+	popStackFrame(ctx);
+}
+
+void M_java_util_concurrent_CompletableFuture$AsyncSupply_setRawResult_java_lang_Void(jcontext ctx, jobject self, jobject param0) {
+	NULL_CHECK(self);
+	jtype frame[2];
+	auto stack = &frame[2];
+	jtype *sp = stack;
+	FrameInfo frameInfo { "java/util/concurrent/CompletableFuture$AsyncSupply:setRawResult", 2 };
+	auto frameRef = pushStackFrame(ctx, &frameInfo, frame, nullptr);
+
+	frame[0].o = self;
+	frame[1].o = param0;
+	LINE_NUMBER(1720);
+	popStackFrame(ctx);
+	INST_RETURN();
+
+	popStackFrame(ctx);
+}
+
+jbool M_java_util_concurrent_CompletableFuture$AsyncSupply_exec_R_boolean(jcontext ctx, jobject self) {
+	NULL_CHECK(self);
+	jtype frame[2];
+	auto stack = &frame[1];
+	jtype *sp = stack;
+	FrameInfo frameInfo { "java/util/concurrent/CompletableFuture$AsyncSupply:exec", 2 };
+	auto frameRef = pushStackFrame(ctx, &frameInfo, frame, nullptr);
+
+	frame[0].o = self;
+	{
+	LINE_NUMBER(1721);
+	((func_java_util_concurrent_CompletableFuture$AsyncSupply_run) ((void **) nullCheck(ctx, (frame[0].o))->vtable)[VTABLE_java_util_concurrent_CompletableFuture$AsyncSupply_run])(ctx, (frame[0].o));
+	popStackFrame(ctx);
+	return (jint(0));
+	}
+
+	popStackFrame(ctx);
+}
+
+void M_java_util_concurrent_CompletableFuture$AsyncSupply_run(jcontext ctx, jobject self) {
+	NULL_CHECK(self);
+	jtype frame[6];
+	auto stack = &frame[4];
+	jtype *sp = stack;
+	FrameInfo frameInfo { "java/util/concurrent/CompletableFuture$AsyncSupply:run", 6 };
+	auto frameRef = pushStackFrame(ctx, &frameInfo, frame, nullptr);
+
+	frame[0].o = self;
+	{
+	LINE_NUMBER(1725);
+	sp[0].o = (jobject)((java_util_concurrent_CompletableFuture$AsyncSupply *) NULL_CHECK((frame[0].o)))->F_dep;
+	frame[1].o = sp[0].o;
+	if (sp[0].o == nullptr) goto label_6;
+	}
+	{
+	sp[0].o = (jobject)((java_util_concurrent_CompletableFuture$AsyncSupply *) NULL_CHECK((frame[0].o)))->F_fn;
+	frame[2].o = sp[0].o;
+	if (sp[0].o == nullptr) goto label_6;
+	}
+	{
+	LINE_NUMBER(1726);
+	((java_util_concurrent_CompletableFuture$AsyncSupply *) NULL_CHECK((frame[0].o)))->F_dep = (jref) (jobject(nullptr));
+	((java_util_concurrent_CompletableFuture$AsyncSupply *) NULL_CHECK((frame[0].o)))->F_fn = (jref) (jobject(nullptr));
+	LINE_NUMBER(1727);
+	sp[0].o = (jobject)((java_util_concurrent_CompletableFuture *) NULL_CHECK((frame[1].o)))->F_result;
+	if (sp[0].o != nullptr) goto label_10;
+	}
+label_3: if (setjmp(*pushExceptionFrame(frameRef, &class_java_lang_Throwable))) {
+		sp = stack; PUSH_OBJECT(clearCurrentException(frameRef)); { popExceptionFrames(frameRef, 1); goto label_2; }
+	}
+	{
+	LINE_NUMBER(1729);
+	sp[0].o = frame[1].o;
+	sp[1].o = (jobject)((func_java_util_function_Supplier_get_R_java_lang_Object) resolveInterfaceMethod(ctx, &class_java_util_function_Supplier, INDEX_java_util_function_Supplier_get_R_java_lang_Object, (frame[2].o)))(ctx, (frame[2].o));
+	jint temp0 = (jint)((func_java_util_concurrent_CompletableFuture_completeValue_java_lang_Object_R_boolean) ((void **) nullCheck(ctx, sp[0].o)->vtable)[VTABLE_java_util_concurrent_CompletableFuture_completeValue_java_lang_Object_R_boolean])(ctx, sp[0].o, sp[1].o);
+	}
+	popExceptionFrame(frameRef);
+	LINE_NUMBER(1732);
+	goto label_10;
+label_2:;
+	{
+	sp -= 1;
+	LINE_NUMBER(1730);
+	frame[3].o = sp[0].o;
+	LINE_NUMBER(1731);
+	jint temp0 = (jint)((func_java_util_concurrent_CompletableFuture_completeThrowable_java_lang_Throwable_R_boolean) ((void **) nullCheck(ctx, (frame[1].o))->vtable)[VTABLE_java_util_concurrent_CompletableFuture_completeThrowable_java_lang_Throwable_R_boolean])(ctx, (frame[1].o), (frame[3].o));
+	}
+label_10:;
+	{
+	LINE_NUMBER(1734);
+	((func_java_util_concurrent_CompletableFuture_postComplete) ((void **) nullCheck(ctx, (frame[1].o))->vtable)[VTABLE_java_util_concurrent_CompletableFuture_postComplete])(ctx, (frame[1].o));
+	}
+label_6:;
+	LINE_NUMBER(1736);
+	popStackFrame(ctx);
+	INST_RETURN();
+
+	popStackFrame(ctx);
+}
+
+void M_java_util_concurrent_CompletableFuture$AsyncSupply_setRawResult_java_lang_Object(jcontext ctx, jobject self, jobject param0) {
+	NULL_CHECK(self);
+	jtype frame[4];
+	auto stack = &frame[2];
+	jtype *sp = stack;
+	FrameInfo frameInfo { "java/util/concurrent/CompletableFuture$AsyncSupply:setRawResult", 4 };
+	auto frameRef = pushStackFrame(ctx, &frameInfo, frame, nullptr);
+
+	frame[0].o = self;
+	frame[1].o = param0;
+	{
+	LINE_NUMBER(1711);
+	((func_java_util_concurrent_CompletableFuture$AsyncSupply_setRawResult_java_lang_Void) ((void **) nullCheck(ctx, (frame[0].o))->vtable)[VTABLE_java_util_concurrent_CompletableFuture$AsyncSupply_setRawResult_java_lang_Void])(ctx, (frame[0].o), (checkCast(ctx, &class_java_lang_Void, (frame[1].o))));
+	popStackFrame(ctx);
+	return;
+	}
+
+	popStackFrame(ctx);
+}
+
+jobject M_java_util_concurrent_CompletableFuture$AsyncSupply_getRawResult_R_java_lang_Object(jcontext ctx, jobject self) {
+	NULL_CHECK(self);
+	jtype frame[2];
+	auto stack = &frame[1];
+	jtype *sp = stack;
+	FrameInfo frameInfo { "java/util/concurrent/CompletableFuture$AsyncSupply:getRawResult", 2 };
+	auto frameRef = pushStackFrame(ctx, &frameInfo, frame, nullptr);
+
+	frame[0].o = self;
+	{
+	LINE_NUMBER(1711);
+	sp[0].o = (jobject)((func_java_util_concurrent_CompletableFuture$AsyncSupply_getRawResult_R_java_lang_Void) ((void **) nullCheck(ctx, (frame[0].o))->vtable)[VTABLE_java_util_concurrent_CompletableFuture$AsyncSupply_getRawResult_R_java_lang_Void])(ctx, (frame[0].o));
+	popStackFrame(ctx);
+	return sp[0].o;
+	}
+
+	popStackFrame(ctx);
+}
+
+void *vtable_java_util_concurrent_CompletableFuture$AsyncSupply[] {
+	(void *) M_java_lang_Object_hashCode_R_int,
+	(void *) M_java_lang_Object_equals_java_lang_Object_R_boolean,
+	(void *) M_java_lang_Object_clone_R_java_lang_Object,
+	(void *) M_java_lang_Object_getClass_R_java_lang_Class,
+	(void *) M_java_lang_Object_toString_R_java_lang_String,
+	(void *) M_java_lang_Object_finalize,
+	(void *) M_java_lang_Object_notify,
+	(void *) M_java_lang_Object_notifyAll,
+	(void *) M_java_lang_Object_wait,
+	(void *) M_java_lang_Object_wait_long,
+	(void *) M_java_lang_Object_wait_long_int,
+	(void *) M_java_util_concurrent_ForkJoinTask_cancel_boolean_R_boolean,
+	(void *) M_java_util_concurrent_ForkJoinTask_isCancelled_R_boolean,
+	(void *) M_java_util_concurrent_ForkJoinTask_isDone_R_boolean,
+	(void *) M_java_util_concurrent_ForkJoinTask_get_R_java_lang_Object,
+	(void *) M_java_util_concurrent_ForkJoinTask_get_long_java_util_concurrent_TimeUnit_R_java_lang_Object,
+	(void *) M_java_util_concurrent_ForkJoinTask_setCompletion_int_R_int,
+	(void *) M_java_util_concurrent_ForkJoinTask_doExec_R_int,
+	(void *) M_java_util_concurrent_ForkJoinTask_internalWait_long,
+	(void *) M_java_util_concurrent_ForkJoinTask_externalAwaitDone_R_int,
+	(void *) M_java_util_concurrent_ForkJoinTask_externalInterruptibleAwaitDone_R_int,
+	(void *) M_java_util_concurrent_ForkJoinTask_doJoin_R_int,
+	(void *) M_java_util_concurrent_ForkJoinTask_doInvoke_R_int,
+	(void *) M_java_util_concurrent_ForkJoinTask_recordExceptionalCompletion_java_lang_Throwable_R_int,
+	(void *) M_java_util_concurrent_ForkJoinTask_setExceptionalCompletion_java_lang_Throwable_R_int,
+	(void *) M_java_util_concurrent_ForkJoinTask_internalPropagateException_java_lang_Throwable,
+	(void *) M_java_util_concurrent_ForkJoinTask_clearExceptionalCompletion,
+	(void *) M_java_util_concurrent_ForkJoinTask_getThrowableException_R_java_lang_Throwable,
+	(void *) M_java_util_concurrent_ForkJoinTask_reportException_int,
+	(void *) M_java_util_concurrent_ForkJoinTask_fork_R_java_util_concurrent_ForkJoinTask,
+	(void *) M_java_util_concurrent_ForkJoinTask_join_R_java_lang_Object,
+	(void *) M_java_util_concurrent_ForkJoinTask_invoke_R_java_lang_Object,
+	(void *) M_java_util_concurrent_ForkJoinTask_isCompletedAbnormally_R_boolean,
+	(void *) M_java_util_concurrent_ForkJoinTask_isCompletedNormally_R_boolean,
+	(void *) M_java_util_concurrent_ForkJoinTask_getException_R_java_lang_Throwable,
+	(void *) M_java_util_concurrent_ForkJoinTask_completeExceptionally_java_lang_Throwable,
+	(void *) M_java_util_concurrent_ForkJoinTask_complete_java_lang_Object,
+	(void *) M_java_util_concurrent_ForkJoinTask_quietlyComplete,
+	(void *) M_java_util_concurrent_ForkJoinTask_quietlyJoin,
+	(void *) M_java_util_concurrent_ForkJoinTask_quietlyInvoke,
+	(void *) M_java_util_concurrent_ForkJoinTask_reinitialize,
+	(void *) M_java_util_concurrent_ForkJoinTask_tryUnfork_R_boolean,
+	(void *) M_java_util_concurrent_CompletableFuture$AsyncSupply_getRawResult_R_java_lang_Object,
+	(void *) M_java_util_concurrent_CompletableFuture$AsyncSupply_setRawResult_java_lang_Object,
+	(void *) M_java_util_concurrent_CompletableFuture$AsyncSupply_exec_R_boolean,
+	(void *) M_java_util_concurrent_ForkJoinTask_getForkJoinTaskTag_R_short,
+	(void *) M_java_util_concurrent_ForkJoinTask_setForkJoinTaskTag_short_R_short,
+	(void *) M_java_util_concurrent_ForkJoinTask_compareAndSetForkJoinTaskTag_short_short_R_boolean,
+	(void *) M_java_util_concurrent_ForkJoinTask_writeObject_java_io_ObjectOutputStream,
+	(void *) M_java_util_concurrent_ForkJoinTask_readObject_java_io_ObjectInputStream,
+	(void *) M_java_util_concurrent_CompletableFuture$AsyncSupply_run,
+	(void *) M_java_util_concurrent_CompletableFuture$AsyncSupply_getRawResult_R_java_lang_Void,
+	(void *) M_java_util_concurrent_CompletableFuture$AsyncSupply_setRawResult_java_lang_Void,
+};
+
+static VtableEntry vtableEntries[] {
+	{ "hashCode", "()I" },
+	{ "equals", "(Ljava/lang/Object;)Z" },
+	{ "clone", "()Ljava/lang/Object;" },
+	{ "getClass", "()Ljava/lang/Class;" },
+	{ "toString", "()Ljava/lang/String;" },
+	{ "finalize", "()V" },
+	{ "notify", "()V" },
+	{ "notifyAll", "()V" },
+	{ "wait", "()V" },
+	{ "wait", "(J)V" },
+	{ "wait", "(JI)V" },
+	{ "cancel", "(Z)Z" },
+	{ "isCancelled", "()Z" },
+	{ "isDone", "()Z" },
+	{ "get", "()Ljava/lang/Object;" },
+	{ "get", "(JLjava/util/concurrent/TimeUnit;)Ljava/lang/Object;" },
+	{ "setCompletion", "(I)I" },
+	{ "doExec", "()I" },
+	{ "internalWait", "(J)V" },
+	{ "externalAwaitDone", "()I" },
+	{ "externalInterruptibleAwaitDone", "()I" },
+	{ "doJoin", "()I" },
+	{ "doInvoke", "()I" },
+	{ "recordExceptionalCompletion", "(Ljava/lang/Throwable;)I" },
+	{ "setExceptionalCompletion", "(Ljava/lang/Throwable;)I" },
+	{ "internalPropagateException", "(Ljava/lang/Throwable;)V" },
+	{ "clearExceptionalCompletion", "()V" },
+	{ "getThrowableException", "()Ljava/lang/Throwable;" },
+	{ "reportException", "(I)V" },
+	{ "fork", "()Ljava/util/concurrent/ForkJoinTask;" },
+	{ "join", "()Ljava/lang/Object;" },
+	{ "invoke", "()Ljava/lang/Object;" },
+	{ "isCompletedAbnormally", "()Z" },
+	{ "isCompletedNormally", "()Z" },
+	{ "getException", "()Ljava/lang/Throwable;" },
+	{ "completeExceptionally", "(Ljava/lang/Throwable;)V" },
+	{ "complete", "(Ljava/lang/Object;)V" },
+	{ "quietlyComplete", "()V" },
+	{ "quietlyJoin", "()V" },
+	{ "quietlyInvoke", "()V" },
+	{ "reinitialize", "()V" },
+	{ "tryUnfork", "()Z" },
+	{ "getRawResult", "()Ljava/lang/Object;" },
+	{ "setRawResult", "(Ljava/lang/Object;)V" },
+	{ "exec", "()Z" },
+	{ "getForkJoinTaskTag", "()S" },
+	{ "setForkJoinTaskTag", "(S)S" },
+	{ "compareAndSetForkJoinTaskTag", "(SS)Z" },
+	{ "writeObject", "(Ljava/io/ObjectOutputStream;)V" },
+	{ "readObject", "(Ljava/io/ObjectInputStream;)V" },
+	{ "run", "()V" },
+	{ "getRawResult", "()Ljava/lang/Void;" },
+	{ "setRawResult", "(Ljava/lang/Void;)V" },
+};
+
+static jclass interfaces[] { &class_java_lang_Runnable, &class_java_util_concurrent_CompletableFuture$AsynchronousCompletionTask, };
+
+static FieldMetadata fields[] {
+	{ "dep", &class_java_util_concurrent_CompletableFuture, offsetof(java_util_concurrent_CompletableFuture$AsyncSupply, F_dep), "Ljava/util/concurrent/CompletableFuture;", 0 },
+	{ "fn", &class_java_util_function_Supplier, offsetof(java_util_concurrent_CompletableFuture$AsyncSupply, F_fn), "Ljava/util/function/Supplier;", 0 },
+};
+
+static MethodMetadata methods[] {
+	{ "<init>", (intptr_t) init_java_util_concurrent_CompletableFuture$AsyncSupply_java_util_concurrent_CompletableFuture_java_util_function_Supplier, 0, "(Ljava/util/concurrent/CompletableFuture;Ljava/util/function/Supplier;)V", 0 },
+	{ "getRawResult", (intptr_t) M_java_util_concurrent_CompletableFuture$AsyncSupply_getRawResult_R_java_lang_Void, VTABLE_java_util_concurrent_CompletableFuture$AsyncSupply_getRawResult_R_java_lang_Void, "()Ljava/lang/Void;", 17 },
+	{ "setRawResult", (intptr_t) M_java_util_concurrent_CompletableFuture$AsyncSupply_setRawResult_java_lang_Void, VTABLE_java_util_concurrent_CompletableFuture$AsyncSupply_setRawResult_java_lang_Void, "(Ljava/lang/Void;)V", 17 },
+	{ "exec", (intptr_t) M_java_util_concurrent_CompletableFuture$AsyncSupply_exec_R_boolean, VTABLE_java_util_concurrent_CompletableFuture$AsyncSupply_exec_R_boolean, "()Z", 17 },
+	{ "run", (intptr_t) M_java_util_concurrent_CompletableFuture$AsyncSupply_run, VTABLE_java_util_concurrent_CompletableFuture$AsyncSupply_run, "()V", 1 },
+	{ "setRawResult", (intptr_t) M_java_util_concurrent_CompletableFuture$AsyncSupply_setRawResult_java_lang_Object, VTABLE_java_util_concurrent_CompletableFuture$AsyncSupply_setRawResult_java_lang_Object, "(Ljava/lang/Object;)V", 4161 },
+	{ "getRawResult", (intptr_t) M_java_util_concurrent_CompletableFuture$AsyncSupply_getRawResult_R_java_lang_Object, VTABLE_java_util_concurrent_CompletableFuture$AsyncSupply_getRawResult_R_java_lang_Object, "()Ljava/lang/Object;", 4161 },
+};
+
+Class class_java_util_concurrent_CompletableFuture$AsyncSupply{
+		.nativeName = (intptr_t) "java/util/concurrent/CompletableFuture$AsyncSupply",
+		.parentClass = (intptr_t) &class_java_util_concurrent_ForkJoinTask,
+		.size = sizeof(java_util_concurrent_CompletableFuture$AsyncSupply),
+		.classVtable = (intptr_t) vtable_java_util_concurrent_CompletableFuture$AsyncSupply,
+		.staticInitializer = (intptr_t) clinit_java_util_concurrent_CompletableFuture$AsyncSupply,
+		.annotationInitializer = (intptr_t) nullptr,
+		.markFunction = (intptr_t) mark_java_util_concurrent_CompletableFuture$AsyncSupply,
+		.primitive = false,
+		.arrayDimensions = 0,
+		.componentClass = (intptr_t) nullptr,
+		.outerClass = (intptr_t) &class_java_util_concurrent_CompletableFuture,
+		.innerClassCount = 0,
+		.nativeInnerClasses = (intptr_t) nullptr,
+		.access = 48,
+		.interfaceCount = 2,
+		.nativeInterfaces = (intptr_t) interfaces,
+		.fieldCount = 2,
+		.nativeFields = (intptr_t) fields,
+		.methodCount = 7,
+		.nativeMethods = (intptr_t) methods,
+		.vtableSize = 53,
+		.vtableEntries = (intptr_t) vtableEntries,
+		.anonymous = false,
+		.synthetic = false,
+};
+static bool registered_java_util_concurrent_CompletableFuture$AsyncSupply = registerClass(&class_java_util_concurrent_CompletableFuture$AsyncSupply);
+
+}
+

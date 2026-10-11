@@ -1,0 +1,154 @@
+#ifndef HEADER_mindustry_logic_LAccess
+#define HEADER_mindustry_logic_LAccess
+
+#include "Clearwing.h"
+#include "java/lang/Enum.h"
+
+#ifdef __cplusplus
+extern "C" {
+#endif
+
+typedef struct mindustry_logic_LAccess {
+	java_lang_Enum parent;
+	jref F_params;
+	jbool F_isObj;
+	jbool F_privileged;
+} mindustry_logic_LAccess;
+
+extern Class class_mindustry_logic_LAccess;
+
+extern jobject SF_mindustry_logic_LAccess_totalItems;
+extern jobject SF_mindustry_logic_LAccess_firstItem;
+extern jobject SF_mindustry_logic_LAccess_totalLiquids;
+extern jobject SF_mindustry_logic_LAccess_totalPower;
+extern jobject SF_mindustry_logic_LAccess_itemCapacity;
+extern jobject SF_mindustry_logic_LAccess_liquidCapacity;
+extern jobject SF_mindustry_logic_LAccess_powerCapacity;
+extern jobject SF_mindustry_logic_LAccess_powerNetStored;
+extern jobject SF_mindustry_logic_LAccess_powerNetCapacity;
+extern jobject SF_mindustry_logic_LAccess_powerNetIn;
+extern jobject SF_mindustry_logic_LAccess_powerNetOut;
+extern jobject SF_mindustry_logic_LAccess_ammo;
+extern jobject SF_mindustry_logic_LAccess_ammoCapacity;
+extern jobject SF_mindustry_logic_LAccess_currentAmmoType;
+extern jobject SF_mindustry_logic_LAccess_memoryCapacity;
+extern jobject SF_mindustry_logic_LAccess_health;
+extern jobject SF_mindustry_logic_LAccess_maxHealth;
+extern jobject SF_mindustry_logic_LAccess_heat;
+extern jobject SF_mindustry_logic_LAccess_shield;
+extern jobject SF_mindustry_logic_LAccess_armor;
+extern jobject SF_mindustry_logic_LAccess_efficiency;
+extern jobject SF_mindustry_logic_LAccess_progress;
+extern jobject SF_mindustry_logic_LAccess_timescale;
+extern jobject SF_mindustry_logic_LAccess_rotation;
+extern jobject SF_mindustry_logic_LAccess_x;
+extern jobject SF_mindustry_logic_LAccess_y;
+extern jobject SF_mindustry_logic_LAccess_velocityX;
+extern jobject SF_mindustry_logic_LAccess_velocityY;
+extern jobject SF_mindustry_logic_LAccess_shootX;
+extern jobject SF_mindustry_logic_LAccess_shootY;
+extern jobject SF_mindustry_logic_LAccess_cameraX;
+extern jobject SF_mindustry_logic_LAccess_cameraY;
+extern jobject SF_mindustry_logic_LAccess_cameraWidth;
+extern jobject SF_mindustry_logic_LAccess_cameraHeight;
+extern jobject SF_mindustry_logic_LAccess_displayWidth;
+extern jobject SF_mindustry_logic_LAccess_displayHeight;
+extern jobject SF_mindustry_logic_LAccess_bufferSize;
+extern jobject SF_mindustry_logic_LAccess_operations;
+extern jobject SF_mindustry_logic_LAccess_size;
+extern jobject SF_mindustry_logic_LAccess_solid;
+extern jobject SF_mindustry_logic_LAccess_dead;
+extern jobject SF_mindustry_logic_LAccess_range;
+extern jobject SF_mindustry_logic_LAccess_shooting;
+extern jobject SF_mindustry_logic_LAccess_boosting;
+extern jobject SF_mindustry_logic_LAccess_mineX;
+extern jobject SF_mindustry_logic_LAccess_mineY;
+extern jobject SF_mindustry_logic_LAccess_mining;
+extern jobject SF_mindustry_logic_LAccess_buildX;
+extern jobject SF_mindustry_logic_LAccess_buildY;
+extern jobject SF_mindustry_logic_LAccess_pingX;
+extern jobject SF_mindustry_logic_LAccess_pingY;
+extern jobject SF_mindustry_logic_LAccess_pingText;
+extern jobject SF_mindustry_logic_LAccess_building;
+extern jobject SF_mindustry_logic_LAccess_breaking;
+extern jobject SF_mindustry_logic_LAccess_speed;
+extern jobject SF_mindustry_logic_LAccess_team;
+extern jobject SF_mindustry_logic_LAccess_type;
+extern jobject SF_mindustry_logic_LAccess_flag;
+extern jobject SF_mindustry_logic_LAccess_flying;
+extern jobject SF_mindustry_logic_LAccess_controlled;
+extern jobject SF_mindustry_logic_LAccess_controller;
+extern jobject SF_mindustry_logic_LAccess_name;
+extern jobject SF_mindustry_logic_LAccess_payloadCount;
+extern jobject SF_mindustry_logic_LAccess_payloadType;
+extern jobject SF_mindustry_logic_LAccess_totalPayload;
+extern jobject SF_mindustry_logic_LAccess_payloadCapacity;
+extern jobject SF_mindustry_logic_LAccess_maxUnits;
+extern jobject SF_mindustry_logic_LAccess_id;
+extern jobject SF_mindustry_logic_LAccess_selectedBlock;
+extern jobject SF_mindustry_logic_LAccess_selectedRotation;
+extern jobject SF_mindustry_logic_LAccess_bulletLifetime;
+extern jobject SF_mindustry_logic_LAccess_bulletTime;
+extern jobject SF_mindustry_logic_LAccess_enabled;
+extern jobject SF_mindustry_logic_LAccess_shoot;
+extern jobject SF_mindustry_logic_LAccess_shootp;
+extern jobject SF_mindustry_logic_LAccess_config;
+extern jobject SF_mindustry_logic_LAccess_color;
+extern jobject SF_mindustry_logic_LAccess_privilegedAccess;
+extern jobject SF_mindustry_logic_LAccess_all;
+extern jobject SF_mindustry_logic_LAccess_senseable;
+extern jobject SF_mindustry_logic_LAccess_senseablePrivileged;
+extern jobject SF_mindustry_logic_LAccess_controls;
+extern jobject SF_mindustry_logic_LAccess_settable;
+extern jobject SF_mindustry_logic_LAccess_$VALUES;
+
+#define VTABLE_mindustry_logic_LAccess_hashCode_R_int 0
+typedef jint (*func_mindustry_logic_LAccess_hashCode_R_int)(jcontext ctx, jobject self);
+#define VTABLE_mindustry_logic_LAccess_equals_java_lang_Object_R_boolean 1
+typedef jbool (*func_mindustry_logic_LAccess_equals_java_lang_Object_R_boolean)(jcontext ctx, jobject self, jobject param0);
+#define VTABLE_mindustry_logic_LAccess_clone_R_java_lang_Object 2
+typedef jobject (*func_mindustry_logic_LAccess_clone_R_java_lang_Object)(jcontext ctx, jobject self);
+#define VTABLE_mindustry_logic_LAccess_getClass_R_java_lang_Class 3
+typedef jobject (*func_mindustry_logic_LAccess_getClass_R_java_lang_Class)(jcontext ctx, jobject self);
+#define VTABLE_mindustry_logic_LAccess_toString_R_java_lang_String 4
+typedef jobject (*func_mindustry_logic_LAccess_toString_R_java_lang_String)(jcontext ctx, jobject self);
+#define VTABLE_mindustry_logic_LAccess_finalize 5
+typedef void (*func_mindustry_logic_LAccess_finalize)(jcontext ctx, jobject self);
+#define VTABLE_mindustry_logic_LAccess_notify 6
+typedef void (*func_mindustry_logic_LAccess_notify)(jcontext ctx, jobject self);
+#define VTABLE_mindustry_logic_LAccess_notifyAll 7
+typedef void (*func_mindustry_logic_LAccess_notifyAll)(jcontext ctx, jobject self);
+#define VTABLE_mindustry_logic_LAccess_wait 8
+typedef void (*func_mindustry_logic_LAccess_wait)(jcontext ctx, jobject self);
+#define VTABLE_mindustry_logic_LAccess_wait_long 9
+typedef void (*func_mindustry_logic_LAccess_wait_long)(jcontext ctx, jobject self, jlong param0);
+#define VTABLE_mindustry_logic_LAccess_wait_long_int 10
+typedef void (*func_mindustry_logic_LAccess_wait_long_int)(jcontext ctx, jobject self, jlong param0, jint param1);
+#define VTABLE_mindustry_logic_LAccess_compareTo_java_lang_Object_R_int 11
+typedef jint (*func_mindustry_logic_LAccess_compareTo_java_lang_Object_R_int)(jcontext ctx, jobject self, jobject param0);
+#define VTABLE_mindustry_logic_LAccess_compareTo_java_lang_Enum_R_int 12
+typedef jint (*func_mindustry_logic_LAccess_compareTo_java_lang_Enum_R_int)(jcontext ctx, jobject self, jobject param0);
+#define VTABLE_mindustry_logic_LAccess_name_R_java_lang_String 13
+typedef jobject (*func_mindustry_logic_LAccess_name_R_java_lang_String)(jcontext ctx, jobject self);
+#define VTABLE_mindustry_logic_LAccess_ordinal_R_int 14
+typedef jint (*func_mindustry_logic_LAccess_ordinal_R_int)(jcontext ctx, jobject self);
+#define VTABLE_mindustry_logic_LAccess_getDeclaringClass_R_java_lang_Class 15
+typedef jobject (*func_mindustry_logic_LAccess_getDeclaringClass_R_java_lang_Class)(jcontext ctx, jobject self);
+
+void mark_mindustry_logic_LAccess(jobject object, jint mark, jint depth);
+void clinit_mindustry_logic_LAccess(jcontext ctx);
+jobject SM_mindustry_logic_LAccess_values_R_Array1_mindustry_logic_LAccess(jcontext ctx);
+jobject SM_mindustry_logic_LAccess_valueOf_java_lang_String_R_mindustry_logic_LAccess(jcontext ctx, jobject param0);
+void init_mindustry_logic_LAccess_java_lang_String_int_Array1_java_lang_String(jcontext ctx, jobject self, jobject param0, jint param1, jobject param2);
+void init_mindustry_logic_LAccess_java_lang_String_int_boolean_Array1_java_lang_String(jcontext ctx, jobject self, jobject param0, jint param1, jbool param2, jobject param3);
+jobject SM_mindustry_logic_LAccess_$values_R_Array1_mindustry_logic_LAccess(jcontext ctx);
+void SM_mindustry_logic_LAccess_lambda$static$3_mindustry_logic_LAccess(jcontext ctx, jobject param0);
+jbool SM_mindustry_logic_LAccess_lambda$static$2_mindustry_logic_LAccess_R_boolean(jcontext ctx, jobject param0);
+jbool SM_mindustry_logic_LAccess_lambda$static$1_mindustry_logic_LAccess_R_boolean(jcontext ctx, jobject param0);
+jbool SM_mindustry_logic_LAccess_lambda$static$0_mindustry_logic_LAccess_R_boolean(jcontext ctx, jobject param0);
+
+#ifdef __cplusplus
+}
+#endif
+
+#endif

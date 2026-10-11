@@ -1,0 +1,62 @@
+#ifndef HEADER_rhino_InterfaceAdapter
+#define HEADER_rhino_InterfaceAdapter
+
+#include "Clearwing.h"
+#include "java/lang/Object.h"
+
+#ifdef __cplusplus
+extern "C" {
+#endif
+
+typedef struct rhino_InterfaceAdapter {
+	java_lang_Object parent;
+	jref F_proxyHelper;
+} rhino_InterfaceAdapter;
+
+extern Class class_rhino_InterfaceAdapter;
+
+
+#define VTABLE_rhino_InterfaceAdapter_hashCode_R_int 0
+typedef jint (*func_rhino_InterfaceAdapter_hashCode_R_int)(jcontext ctx, jobject self);
+#define VTABLE_rhino_InterfaceAdapter_equals_java_lang_Object_R_boolean 1
+typedef jbool (*func_rhino_InterfaceAdapter_equals_java_lang_Object_R_boolean)(jcontext ctx, jobject self, jobject param0);
+#define VTABLE_rhino_InterfaceAdapter_clone_R_java_lang_Object 2
+typedef jobject (*func_rhino_InterfaceAdapter_clone_R_java_lang_Object)(jcontext ctx, jobject self);
+#define VTABLE_rhino_InterfaceAdapter_getClass_R_java_lang_Class 3
+typedef jobject (*func_rhino_InterfaceAdapter_getClass_R_java_lang_Class)(jcontext ctx, jobject self);
+#define VTABLE_rhino_InterfaceAdapter_toString_R_java_lang_String 4
+typedef jobject (*func_rhino_InterfaceAdapter_toString_R_java_lang_String)(jcontext ctx, jobject self);
+#define VTABLE_rhino_InterfaceAdapter_finalize 5
+typedef void (*func_rhino_InterfaceAdapter_finalize)(jcontext ctx, jobject self);
+#define VTABLE_rhino_InterfaceAdapter_notify 6
+typedef void (*func_rhino_InterfaceAdapter_notify)(jcontext ctx, jobject self);
+#define VTABLE_rhino_InterfaceAdapter_notifyAll 7
+typedef void (*func_rhino_InterfaceAdapter_notifyAll)(jcontext ctx, jobject self);
+#define VTABLE_rhino_InterfaceAdapter_wait 8
+typedef void (*func_rhino_InterfaceAdapter_wait)(jcontext ctx, jobject self);
+#define VTABLE_rhino_InterfaceAdapter_wait_long 9
+typedef void (*func_rhino_InterfaceAdapter_wait_long)(jcontext ctx, jobject self, jlong param0);
+#define VTABLE_rhino_InterfaceAdapter_wait_long_int 10
+typedef void (*func_rhino_InterfaceAdapter_wait_long_int)(jcontext ctx, jobject self, jlong param0, jint param1);
+#define VTABLE_rhino_InterfaceAdapter_invoke_rhino_ContextFactory_java_lang_Object_rhino_Scriptable_java_lang_Object_java_lang_reflect_Method_Array1_java_lang_Object_R_java_lang_Object 11
+typedef jobject (*func_rhino_InterfaceAdapter_invoke_rhino_ContextFactory_java_lang_Object_rhino_Scriptable_java_lang_Object_java_lang_reflect_Method_Array1_java_lang_Object_R_java_lang_Object)(jcontext ctx, jobject self, jobject param0, jobject param1, jobject param2, jobject param3, jobject param4, jobject param5);
+#define VTABLE_rhino_InterfaceAdapter_invokeImpl_rhino_Context_java_lang_Object_rhino_Scriptable_java_lang_Object_java_lang_reflect_Method_Array1_java_lang_Object_R_java_lang_Object 12
+typedef jobject (*func_rhino_InterfaceAdapter_invokeImpl_rhino_Context_java_lang_Object_rhino_Scriptable_java_lang_Object_java_lang_reflect_Method_Array1_java_lang_Object_R_java_lang_Object)(jcontext ctx, jobject self, jobject param0, jobject param1, jobject param2, jobject param3, jobject param4, jobject param5);
+#define VTABLE_rhino_InterfaceAdapter_lambda$invoke$0_java_lang_Object_rhino_Scriptable_java_lang_Object_java_lang_reflect_Method_Array1_java_lang_Object_rhino_Context_R_java_lang_Object 13
+typedef jobject (*func_rhino_InterfaceAdapter_lambda$invoke$0_java_lang_Object_rhino_Scriptable_java_lang_Object_java_lang_reflect_Method_Array1_java_lang_Object_rhino_Context_R_java_lang_Object)(jcontext ctx, jobject self, jobject param0, jobject param1, jobject param2, jobject param3, jobject param4, jobject param5);
+
+void mark_rhino_InterfaceAdapter(jobject object, jint mark, jint depth);
+void clinit_rhino_InterfaceAdapter(jcontext ctx);
+jobject SM_rhino_InterfaceAdapter_create_rhino_Context_java_lang_Class_rhino_ScriptableObject_R_java_lang_Object(jcontext ctx, jobject param0, jobject param1, jobject param2);
+jbool SM_rhino_InterfaceAdapter_isFunctionalMethodCandidate_java_lang_reflect_Method_R_boolean(jcontext ctx, jobject param0);
+void init_rhino_InterfaceAdapter_rhino_ContextFactory_java_lang_Class(jcontext ctx, jobject self, jobject param0, jobject param1);
+jobject M_rhino_InterfaceAdapter_invoke_rhino_ContextFactory_java_lang_Object_rhino_Scriptable_java_lang_Object_java_lang_reflect_Method_Array1_java_lang_Object_R_java_lang_Object(jcontext ctx, jobject self, jobject param0, jobject param1, jobject param2, jobject param3, jobject param4, jobject param5);
+jobject M_rhino_InterfaceAdapter_invokeImpl_rhino_Context_java_lang_Object_rhino_Scriptable_java_lang_Object_java_lang_reflect_Method_Array1_java_lang_Object_R_java_lang_Object(jcontext ctx, jobject self, jobject param0, jobject param1, jobject param2, jobject param3, jobject param4, jobject param5);
+jobject SM_rhino_InterfaceAdapter_defaultPrimitiveValue_java_lang_Class_R_java_lang_Object(jcontext ctx, jobject param0);
+jobject M_rhino_InterfaceAdapter_lambda$invoke$0_java_lang_Object_rhino_Scriptable_java_lang_Object_java_lang_reflect_Method_Array1_java_lang_Object_rhino_Context_R_java_lang_Object(jcontext ctx, jobject self, jobject param0, jobject param1, jobject param2, jobject param3, jobject param4, jobject param5);
+
+#ifdef __cplusplus
+}
+#endif
+
+#endif

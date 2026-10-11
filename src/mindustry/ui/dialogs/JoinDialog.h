@@ -1,0 +1,858 @@
+#ifndef HEADER_mindustry_ui_dialogs_JoinDialog
+#define HEADER_mindustry_ui_dialogs_JoinDialog
+
+#include "Clearwing.h"
+#include "mindustry/ui/dialogs/BaseDialog.h"
+
+#ifdef __cplusplus
+extern "C" {
+#endif
+
+typedef struct mindustry_ui_dialogs_JoinDialog {
+	mindustry_ui_dialogs_BaseDialog parent;
+	jref F_tmpServers;
+	jref F_servers;
+	jref F_add;
+	jref F_renaming;
+	jref F_local;
+	jref F_remote;
+	jref F_global;
+	jref F_hosts;
+	jint F_totalHosts;
+	jint F_refreshes;
+	jbool F_showHidden;
+	jref F_style;
+	jref F_fontIgnoreDirtyTask;
+	jref F_lastIp;
+	jint F_lastPort;
+	jint F_lastColumns;
+	jref F_ping;
+	jref F_serverSearch;
+	jbool F_sortPing;
+} mindustry_ui_dialogs_JoinDialog;
+
+extern Class class_mindustry_ui_dialogs_JoinDialog;
+
+extern jobject SF_mindustry_ui_dialogs_JoinDialog_tmpElements;
+extern jint SF_mindustry_ui_dialogs_JoinDialog_favoriteCountOffset;
+
+#define VTABLE_mindustry_ui_dialogs_JoinDialog_hashCode_R_int 0
+typedef jint (*func_mindustry_ui_dialogs_JoinDialog_hashCode_R_int)(jcontext ctx, jobject self);
+#define VTABLE_mindustry_ui_dialogs_JoinDialog_equals_java_lang_Object_R_boolean 1
+typedef jbool (*func_mindustry_ui_dialogs_JoinDialog_equals_java_lang_Object_R_boolean)(jcontext ctx, jobject self, jobject param0);
+#define VTABLE_mindustry_ui_dialogs_JoinDialog_clone_R_java_lang_Object 2
+typedef jobject (*func_mindustry_ui_dialogs_JoinDialog_clone_R_java_lang_Object)(jcontext ctx, jobject self);
+#define VTABLE_mindustry_ui_dialogs_JoinDialog_getClass_R_java_lang_Class 3
+typedef jobject (*func_mindustry_ui_dialogs_JoinDialog_getClass_R_java_lang_Class)(jcontext ctx, jobject self);
+#define VTABLE_mindustry_ui_dialogs_JoinDialog_toString_R_java_lang_String 4
+typedef jobject (*func_mindustry_ui_dialogs_JoinDialog_toString_R_java_lang_String)(jcontext ctx, jobject self);
+#define VTABLE_mindustry_ui_dialogs_JoinDialog_finalize 5
+typedef void (*func_mindustry_ui_dialogs_JoinDialog_finalize)(jcontext ctx, jobject self);
+#define VTABLE_mindustry_ui_dialogs_JoinDialog_notify 6
+typedef void (*func_mindustry_ui_dialogs_JoinDialog_notify)(jcontext ctx, jobject self);
+#define VTABLE_mindustry_ui_dialogs_JoinDialog_notifyAll 7
+typedef void (*func_mindustry_ui_dialogs_JoinDialog_notifyAll)(jcontext ctx, jobject self);
+#define VTABLE_mindustry_ui_dialogs_JoinDialog_wait 8
+typedef void (*func_mindustry_ui_dialogs_JoinDialog_wait)(jcontext ctx, jobject self);
+#define VTABLE_mindustry_ui_dialogs_JoinDialog_wait_long 9
+typedef void (*func_mindustry_ui_dialogs_JoinDialog_wait_long)(jcontext ctx, jobject self, jlong param0);
+#define VTABLE_mindustry_ui_dialogs_JoinDialog_wait_long_int 10
+typedef void (*func_mindustry_ui_dialogs_JoinDialog_wait_long_int)(jcontext ctx, jobject self, jlong param0, jint param1);
+#define VTABLE_mindustry_ui_dialogs_JoinDialog_draw 11
+typedef void (*func_mindustry_ui_dialogs_JoinDialog_draw)(jcontext ctx, jobject self);
+#define VTABLE_mindustry_ui_dialogs_JoinDialog_act_float 12
+typedef void (*func_mindustry_ui_dialogs_JoinDialog_act_float)(jcontext ctx, jobject self, jfloat param0);
+#define VTABLE_mindustry_ui_dialogs_JoinDialog_updateVisibility 13
+typedef void (*func_mindustry_ui_dialogs_JoinDialog_updateVisibility)(jcontext ctx, jobject self);
+#define VTABLE_mindustry_ui_dialogs_JoinDialog_hasMouse_R_boolean 14
+typedef jbool (*func_mindustry_ui_dialogs_JoinDialog_hasMouse_R_boolean)(jcontext ctx, jobject self);
+#define VTABLE_mindustry_ui_dialogs_JoinDialog_hasKeyboard_R_boolean 15
+typedef jbool (*func_mindustry_ui_dialogs_JoinDialog_hasKeyboard_R_boolean)(jcontext ctx, jobject self);
+#define VTABLE_mindustry_ui_dialogs_JoinDialog_hasScroll_R_boolean 16
+typedef jbool (*func_mindustry_ui_dialogs_JoinDialog_hasScroll_R_boolean)(jcontext ctx, jobject self);
+#define VTABLE_mindustry_ui_dialogs_JoinDialog_requestKeyboard 17
+typedef void (*func_mindustry_ui_dialogs_JoinDialog_requestKeyboard)(jcontext ctx, jobject self);
+#define VTABLE_mindustry_ui_dialogs_JoinDialog_requestScroll 18
+typedef void (*func_mindustry_ui_dialogs_JoinDialog_requestScroll)(jcontext ctx, jobject self);
+#define VTABLE_mindustry_ui_dialogs_JoinDialog_fire_arc_scene_event_SceneEvent_R_boolean 19
+typedef jbool (*func_mindustry_ui_dialogs_JoinDialog_fire_arc_scene_event_SceneEvent_R_boolean)(jcontext ctx, jobject self, jobject param0);
+#define VTABLE_mindustry_ui_dialogs_JoinDialog_notify_arc_scene_event_SceneEvent_boolean_R_boolean 20
+typedef jbool (*func_mindustry_ui_dialogs_JoinDialog_notify_arc_scene_event_SceneEvent_boolean_R_boolean)(jcontext ctx, jobject self, jobject param0, jbool param1);
+#define VTABLE_mindustry_ui_dialogs_JoinDialog_hit_float_float_boolean_R_arc_scene_Element 21
+typedef jobject (*func_mindustry_ui_dialogs_JoinDialog_hit_float_float_boolean_R_arc_scene_Element)(jcontext ctx, jobject self, jfloat param0, jfloat param1, jbool param2);
+#define VTABLE_mindustry_ui_dialogs_JoinDialog_remove_R_boolean 22
+typedef jbool (*func_mindustry_ui_dialogs_JoinDialog_remove_R_boolean)(jcontext ctx, jobject self);
+#define VTABLE_mindustry_ui_dialogs_JoinDialog_dragged_arc_func_Floatc2 23
+typedef void (*func_mindustry_ui_dialogs_JoinDialog_dragged_arc_func_Floatc2)(jcontext ctx, jobject self, jobject param0);
+#define VTABLE_mindustry_ui_dialogs_JoinDialog_scrolled_arc_func_Floatc 24
+typedef void (*func_mindustry_ui_dialogs_JoinDialog_scrolled_arc_func_Floatc)(jcontext ctx, jobject self, jobject param0);
+#define VTABLE_mindustry_ui_dialogs_JoinDialog_addListener_arc_scene_event_EventListener_R_boolean 25
+typedef jbool (*func_mindustry_ui_dialogs_JoinDialog_addListener_arc_scene_event_EventListener_R_boolean)(jcontext ctx, jobject self, jobject param0);
+#define VTABLE_mindustry_ui_dialogs_JoinDialog_removeListener_arc_scene_event_EventListener_R_boolean 26
+typedef jbool (*func_mindustry_ui_dialogs_JoinDialog_removeListener_arc_scene_event_EventListener_R_boolean)(jcontext ctx, jobject self, jobject param0);
+#define VTABLE_mindustry_ui_dialogs_JoinDialog_getListeners_R_arc_struct_Seq 27
+typedef jobject (*func_mindustry_ui_dialogs_JoinDialog_getListeners_R_arc_struct_Seq)(jcontext ctx, jobject self);
+#define VTABLE_mindustry_ui_dialogs_JoinDialog_addCaptureListener_arc_scene_event_EventListener_R_boolean 28
+typedef jbool (*func_mindustry_ui_dialogs_JoinDialog_addCaptureListener_arc_scene_event_EventListener_R_boolean)(jcontext ctx, jobject self, jobject param0);
+#define VTABLE_mindustry_ui_dialogs_JoinDialog_removeCaptureListener_arc_scene_event_EventListener_R_boolean 29
+typedef jbool (*func_mindustry_ui_dialogs_JoinDialog_removeCaptureListener_arc_scene_event_EventListener_R_boolean)(jcontext ctx, jobject self, jobject param0);
+#define VTABLE_mindustry_ui_dialogs_JoinDialog_getCaptureListeners_R_arc_struct_Seq 30
+typedef jobject (*func_mindustry_ui_dialogs_JoinDialog_getCaptureListeners_R_arc_struct_Seq)(jcontext ctx, jobject self);
+#define VTABLE_mindustry_ui_dialogs_JoinDialog_addAction_arc_scene_Action 31
+typedef void (*func_mindustry_ui_dialogs_JoinDialog_addAction_arc_scene_Action)(jcontext ctx, jobject self, jobject param0);
+#define VTABLE_mindustry_ui_dialogs_JoinDialog_actions_Array1_arc_scene_Action 32
+typedef void (*func_mindustry_ui_dialogs_JoinDialog_actions_Array1_arc_scene_Action)(jcontext ctx, jobject self, jobject param0);
+#define VTABLE_mindustry_ui_dialogs_JoinDialog_removeAction_arc_scene_Action 33
+typedef void (*func_mindustry_ui_dialogs_JoinDialog_removeAction_arc_scene_Action)(jcontext ctx, jobject self, jobject param0);
+#define VTABLE_mindustry_ui_dialogs_JoinDialog_getActions_R_arc_struct_Seq 34
+typedef jobject (*func_mindustry_ui_dialogs_JoinDialog_getActions_R_arc_struct_Seq)(jcontext ctx, jobject self);
+#define VTABLE_mindustry_ui_dialogs_JoinDialog_hasActions_R_boolean 35
+typedef jbool (*func_mindustry_ui_dialogs_JoinDialog_hasActions_R_boolean)(jcontext ctx, jobject self);
+#define VTABLE_mindustry_ui_dialogs_JoinDialog_clearActions 36
+typedef void (*func_mindustry_ui_dialogs_JoinDialog_clearActions)(jcontext ctx, jobject self);
+#define VTABLE_mindustry_ui_dialogs_JoinDialog_clearListeners 37
+typedef void (*func_mindustry_ui_dialogs_JoinDialog_clearListeners)(jcontext ctx, jobject self);
+#define VTABLE_mindustry_ui_dialogs_JoinDialog_clear 38
+typedef void (*func_mindustry_ui_dialogs_JoinDialog_clear)(jcontext ctx, jobject self);
+#define VTABLE_mindustry_ui_dialogs_JoinDialog_getScene_R_arc_scene_Scene 39
+typedef jobject (*func_mindustry_ui_dialogs_JoinDialog_getScene_R_arc_scene_Scene)(jcontext ctx, jobject self);
+#define VTABLE_mindustry_ui_dialogs_JoinDialog_setScene_arc_scene_Scene 40
+typedef void (*func_mindustry_ui_dialogs_JoinDialog_setScene_arc_scene_Scene)(jcontext ctx, jobject self, jobject param0);
+#define VTABLE_mindustry_ui_dialogs_JoinDialog_isDescendantOf_arc_func_Boolf_R_boolean 41
+typedef jbool (*func_mindustry_ui_dialogs_JoinDialog_isDescendantOf_arc_func_Boolf_R_boolean)(jcontext ctx, jobject self, jobject param0);
+#define VTABLE_mindustry_ui_dialogs_JoinDialog_isDescendantOf_arc_scene_Element_R_boolean 42
+typedef jbool (*func_mindustry_ui_dialogs_JoinDialog_isDescendantOf_arc_scene_Element_R_boolean)(jcontext ctx, jobject self, jobject param0);
+#define VTABLE_mindustry_ui_dialogs_JoinDialog_isAscendantOf_arc_scene_Element_R_boolean 43
+typedef jbool (*func_mindustry_ui_dialogs_JoinDialog_isAscendantOf_arc_scene_Element_R_boolean)(jcontext ctx, jobject self, jobject param0);
+#define VTABLE_mindustry_ui_dialogs_JoinDialog_hasParent_R_boolean 44
+typedef jbool (*func_mindustry_ui_dialogs_JoinDialog_hasParent_R_boolean)(jcontext ctx, jobject self);
+#define VTABLE_mindustry_ui_dialogs_JoinDialog_isTouchable_R_boolean 45
+typedef jbool (*func_mindustry_ui_dialogs_JoinDialog_isTouchable_R_boolean)(jcontext ctx, jobject self);
+#define VTABLE_mindustry_ui_dialogs_JoinDialog_getX_int_R_float 46
+typedef jfloat (*func_mindustry_ui_dialogs_JoinDialog_getX_int_R_float)(jcontext ctx, jobject self, jint param0);
+#define VTABLE_mindustry_ui_dialogs_JoinDialog_getY_int_R_float 47
+typedef jfloat (*func_mindustry_ui_dialogs_JoinDialog_getY_int_R_float)(jcontext ctx, jobject self, jint param0);
+#define VTABLE_mindustry_ui_dialogs_JoinDialog_setPosition_float_float 48
+typedef void (*func_mindustry_ui_dialogs_JoinDialog_setPosition_float_float)(jcontext ctx, jobject self, jfloat param0, jfloat param1);
+#define VTABLE_mindustry_ui_dialogs_JoinDialog_setPosition_float_float_int 49
+typedef void (*func_mindustry_ui_dialogs_JoinDialog_setPosition_float_float_int)(jcontext ctx, jobject self, jfloat param0, jfloat param1, jint param2);
+#define VTABLE_mindustry_ui_dialogs_JoinDialog_moveBy_float_float 50
+typedef void (*func_mindustry_ui_dialogs_JoinDialog_moveBy_float_float)(jcontext ctx, jobject self, jfloat param0, jfloat param1);
+#define VTABLE_mindustry_ui_dialogs_JoinDialog_getWidth_R_float 51
+typedef jfloat (*func_mindustry_ui_dialogs_JoinDialog_getWidth_R_float)(jcontext ctx, jobject self);
+#define VTABLE_mindustry_ui_dialogs_JoinDialog_setWidth_float 52
+typedef void (*func_mindustry_ui_dialogs_JoinDialog_setWidth_float)(jcontext ctx, jobject self, jfloat param0);
+#define VTABLE_mindustry_ui_dialogs_JoinDialog_getHeight_R_float 53
+typedef jfloat (*func_mindustry_ui_dialogs_JoinDialog_getHeight_R_float)(jcontext ctx, jobject self);
+#define VTABLE_mindustry_ui_dialogs_JoinDialog_setHeight_float 54
+typedef void (*func_mindustry_ui_dialogs_JoinDialog_setHeight_float)(jcontext ctx, jobject self, jfloat param0);
+#define VTABLE_mindustry_ui_dialogs_JoinDialog_getTop_R_float 55
+typedef jfloat (*func_mindustry_ui_dialogs_JoinDialog_getTop_R_float)(jcontext ctx, jobject self);
+#define VTABLE_mindustry_ui_dialogs_JoinDialog_getRight_R_float 56
+typedef jfloat (*func_mindustry_ui_dialogs_JoinDialog_getRight_R_float)(jcontext ctx, jobject self);
+#define VTABLE_mindustry_ui_dialogs_JoinDialog_sizeChanged 57
+typedef void (*func_mindustry_ui_dialogs_JoinDialog_sizeChanged)(jcontext ctx, jobject self);
+#define VTABLE_mindustry_ui_dialogs_JoinDialog_rotationChanged 58
+typedef void (*func_mindustry_ui_dialogs_JoinDialog_rotationChanged)(jcontext ctx, jobject self);
+#define VTABLE_mindustry_ui_dialogs_JoinDialog_setSize_float 59
+typedef void (*func_mindustry_ui_dialogs_JoinDialog_setSize_float)(jcontext ctx, jobject self, jfloat param0);
+#define VTABLE_mindustry_ui_dialogs_JoinDialog_setSize_float_float 60
+typedef void (*func_mindustry_ui_dialogs_JoinDialog_setSize_float_float)(jcontext ctx, jobject self, jfloat param0, jfloat param1);
+#define VTABLE_mindustry_ui_dialogs_JoinDialog_sizeBy_float 61
+typedef void (*func_mindustry_ui_dialogs_JoinDialog_sizeBy_float)(jcontext ctx, jobject self, jfloat param0);
+#define VTABLE_mindustry_ui_dialogs_JoinDialog_sizeBy_float_float 62
+typedef void (*func_mindustry_ui_dialogs_JoinDialog_sizeBy_float_float)(jcontext ctx, jobject self, jfloat param0, jfloat param1);
+#define VTABLE_mindustry_ui_dialogs_JoinDialog_setBounds_float_float_float_float 63
+typedef void (*func_mindustry_ui_dialogs_JoinDialog_setBounds_float_float_float_float)(jcontext ctx, jobject self, jfloat param0, jfloat param1, jfloat param2, jfloat param3);
+#define VTABLE_mindustry_ui_dialogs_JoinDialog_setOrigin_float_float 64
+typedef void (*func_mindustry_ui_dialogs_JoinDialog_setOrigin_float_float)(jcontext ctx, jobject self, jfloat param0, jfloat param1);
+#define VTABLE_mindustry_ui_dialogs_JoinDialog_setOrigin_int 65
+typedef void (*func_mindustry_ui_dialogs_JoinDialog_setOrigin_int)(jcontext ctx, jobject self, jint param0);
+#define VTABLE_mindustry_ui_dialogs_JoinDialog_setScale_float 66
+typedef void (*func_mindustry_ui_dialogs_JoinDialog_setScale_float)(jcontext ctx, jobject self, jfloat param0);
+#define VTABLE_mindustry_ui_dialogs_JoinDialog_setScale_float_float 67
+typedef void (*func_mindustry_ui_dialogs_JoinDialog_setScale_float_float)(jcontext ctx, jobject self, jfloat param0, jfloat param1);
+#define VTABLE_mindustry_ui_dialogs_JoinDialog_scaleBy_float 68
+typedef void (*func_mindustry_ui_dialogs_JoinDialog_scaleBy_float)(jcontext ctx, jobject self, jfloat param0);
+#define VTABLE_mindustry_ui_dialogs_JoinDialog_scaleBy_float_float 69
+typedef void (*func_mindustry_ui_dialogs_JoinDialog_scaleBy_float_float)(jcontext ctx, jobject self, jfloat param0, jfloat param1);
+#define VTABLE_mindustry_ui_dialogs_JoinDialog_getRotation_R_float 70
+typedef jfloat (*func_mindustry_ui_dialogs_JoinDialog_getRotation_R_float)(jcontext ctx, jobject self);
+#define VTABLE_mindustry_ui_dialogs_JoinDialog_setRotation_float 71
+typedef void (*func_mindustry_ui_dialogs_JoinDialog_setRotation_float)(jcontext ctx, jobject self, jfloat param0);
+#define VTABLE_mindustry_ui_dialogs_JoinDialog_setRotationOrigin_float_int 72
+typedef void (*func_mindustry_ui_dialogs_JoinDialog_setRotationOrigin_float_int)(jcontext ctx, jobject self, jfloat param0, jint param1);
+#define VTABLE_mindustry_ui_dialogs_JoinDialog_rotateBy_float 73
+typedef void (*func_mindustry_ui_dialogs_JoinDialog_rotateBy_float)(jcontext ctx, jobject self, jfloat param0);
+#define VTABLE_mindustry_ui_dialogs_JoinDialog_setColor_float_float_float_float 74
+typedef void (*func_mindustry_ui_dialogs_JoinDialog_setColor_float_float_float_float)(jcontext ctx, jobject self, jfloat param0, jfloat param1, jfloat param2, jfloat param3);
+#define VTABLE_mindustry_ui_dialogs_JoinDialog_setColor_arc_graphics_Color 75
+typedef void (*func_mindustry_ui_dialogs_JoinDialog_setColor_arc_graphics_Color)(jcontext ctx, jobject self, jobject param0);
+#define VTABLE_mindustry_ui_dialogs_JoinDialog_toFront 76
+typedef void (*func_mindustry_ui_dialogs_JoinDialog_toFront)(jcontext ctx, jobject self);
+#define VTABLE_mindustry_ui_dialogs_JoinDialog_toBack 77
+typedef void (*func_mindustry_ui_dialogs_JoinDialog_toBack)(jcontext ctx, jobject self);
+#define VTABLE_mindustry_ui_dialogs_JoinDialog_getZIndex_R_int 78
+typedef jint (*func_mindustry_ui_dialogs_JoinDialog_getZIndex_R_int)(jcontext ctx, jobject self);
+#define VTABLE_mindustry_ui_dialogs_JoinDialog_setZIndex_int 79
+typedef void (*func_mindustry_ui_dialogs_JoinDialog_setZIndex_int)(jcontext ctx, jobject self, jint param0);
+#define VTABLE_mindustry_ui_dialogs_JoinDialog_clipBegin_R_boolean 80
+typedef jbool (*func_mindustry_ui_dialogs_JoinDialog_clipBegin_R_boolean)(jcontext ctx, jobject self);
+#define VTABLE_mindustry_ui_dialogs_JoinDialog_clipBegin_float_float_float_float_R_boolean 81
+typedef jbool (*func_mindustry_ui_dialogs_JoinDialog_clipBegin_float_float_float_float_R_boolean)(jcontext ctx, jobject self, jfloat param0, jfloat param1, jfloat param2, jfloat param3);
+#define VTABLE_mindustry_ui_dialogs_JoinDialog_clipEnd 82
+typedef void (*func_mindustry_ui_dialogs_JoinDialog_clipEnd)(jcontext ctx, jobject self);
+#define VTABLE_mindustry_ui_dialogs_JoinDialog_screenToLocalCoordinates_arc_math_geom_Vec2_R_arc_math_geom_Vec2 83
+typedef jobject (*func_mindustry_ui_dialogs_JoinDialog_screenToLocalCoordinates_arc_math_geom_Vec2_R_arc_math_geom_Vec2)(jcontext ctx, jobject self, jobject param0);
+#define VTABLE_mindustry_ui_dialogs_JoinDialog_stageToLocalCoordinates_arc_math_geom_Vec2_R_arc_math_geom_Vec2 84
+typedef jobject (*func_mindustry_ui_dialogs_JoinDialog_stageToLocalCoordinates_arc_math_geom_Vec2_R_arc_math_geom_Vec2)(jcontext ctx, jobject self, jobject param0);
+#define VTABLE_mindustry_ui_dialogs_JoinDialog_localToStageCoordinates_arc_math_geom_Vec2_R_arc_math_geom_Vec2 85
+typedef jobject (*func_mindustry_ui_dialogs_JoinDialog_localToStageCoordinates_arc_math_geom_Vec2_R_arc_math_geom_Vec2)(jcontext ctx, jobject self, jobject param0);
+#define VTABLE_mindustry_ui_dialogs_JoinDialog_localToParentCoordinates_arc_math_geom_Vec2_R_arc_math_geom_Vec2 86
+typedef jobject (*func_mindustry_ui_dialogs_JoinDialog_localToParentCoordinates_arc_math_geom_Vec2_R_arc_math_geom_Vec2)(jcontext ctx, jobject self, jobject param0);
+#define VTABLE_mindustry_ui_dialogs_JoinDialog_localToAscendantCoordinates_arc_scene_Element_arc_math_geom_Vec2_R_arc_math_geom_Vec2 87
+typedef jobject (*func_mindustry_ui_dialogs_JoinDialog_localToAscendantCoordinates_arc_scene_Element_arc_math_geom_Vec2_R_arc_math_geom_Vec2)(jcontext ctx, jobject self, jobject param0, jobject param1);
+#define VTABLE_mindustry_ui_dialogs_JoinDialog_parentToLocalCoordinates_arc_math_geom_Vec2_R_arc_math_geom_Vec2 88
+typedef jobject (*func_mindustry_ui_dialogs_JoinDialog_parentToLocalCoordinates_arc_math_geom_Vec2_R_arc_math_geom_Vec2)(jcontext ctx, jobject self, jobject param0);
+#define VTABLE_mindustry_ui_dialogs_JoinDialog_getMinWidth_R_float 89
+typedef jfloat (*func_mindustry_ui_dialogs_JoinDialog_getMinWidth_R_float)(jcontext ctx, jobject self);
+#define VTABLE_mindustry_ui_dialogs_JoinDialog_getMinHeight_R_float 90
+typedef jfloat (*func_mindustry_ui_dialogs_JoinDialog_getMinHeight_R_float)(jcontext ctx, jobject self);
+#define VTABLE_mindustry_ui_dialogs_JoinDialog_getPrefWidth_R_float 91
+typedef jfloat (*func_mindustry_ui_dialogs_JoinDialog_getPrefWidth_R_float)(jcontext ctx, jobject self);
+#define VTABLE_mindustry_ui_dialogs_JoinDialog_getPrefHeight_R_float 92
+typedef jfloat (*func_mindustry_ui_dialogs_JoinDialog_getPrefHeight_R_float)(jcontext ctx, jobject self);
+#define VTABLE_mindustry_ui_dialogs_JoinDialog_getMaxWidth_R_float 93
+typedef jfloat (*func_mindustry_ui_dialogs_JoinDialog_getMaxWidth_R_float)(jcontext ctx, jobject self);
+#define VTABLE_mindustry_ui_dialogs_JoinDialog_getMaxHeight_R_float 94
+typedef jfloat (*func_mindustry_ui_dialogs_JoinDialog_getMaxHeight_R_float)(jcontext ctx, jobject self);
+#define VTABLE_mindustry_ui_dialogs_JoinDialog_setLayoutEnabled_boolean 95
+typedef void (*func_mindustry_ui_dialogs_JoinDialog_setLayoutEnabled_boolean)(jcontext ctx, jobject self, jbool param0);
+#define VTABLE_mindustry_ui_dialogs_JoinDialog_validate 96
+typedef void (*func_mindustry_ui_dialogs_JoinDialog_validate)(jcontext ctx, jobject self);
+#define VTABLE_mindustry_ui_dialogs_JoinDialog_needsLayout_R_boolean 97
+typedef jbool (*func_mindustry_ui_dialogs_JoinDialog_needsLayout_R_boolean)(jcontext ctx, jobject self);
+#define VTABLE_mindustry_ui_dialogs_JoinDialog_invalidate 98
+typedef void (*func_mindustry_ui_dialogs_JoinDialog_invalidate)(jcontext ctx, jobject self);
+#define VTABLE_mindustry_ui_dialogs_JoinDialog_invalidateHierarchy 99
+typedef void (*func_mindustry_ui_dialogs_JoinDialog_invalidateHierarchy)(jcontext ctx, jobject self);
+#define VTABLE_mindustry_ui_dialogs_JoinDialog_pack 100
+typedef void (*func_mindustry_ui_dialogs_JoinDialog_pack)(jcontext ctx, jobject self);
+#define VTABLE_mindustry_ui_dialogs_JoinDialog_setFillParent_boolean 101
+typedef void (*func_mindustry_ui_dialogs_JoinDialog_setFillParent_boolean)(jcontext ctx, jobject self, jbool param0);
+#define VTABLE_mindustry_ui_dialogs_JoinDialog_layout 102
+typedef void (*func_mindustry_ui_dialogs_JoinDialog_layout)(jcontext ctx, jobject self);
+#define VTABLE_mindustry_ui_dialogs_JoinDialog_keepInStage 103
+typedef void (*func_mindustry_ui_dialogs_JoinDialog_keepInStage)(jcontext ctx, jobject self);
+#define VTABLE_mindustry_ui_dialogs_JoinDialog_setTranslation_float_float 104
+typedef void (*func_mindustry_ui_dialogs_JoinDialog_setTranslation_float_float)(jcontext ctx, jobject self, jfloat param0, jfloat param1);
+#define VTABLE_mindustry_ui_dialogs_JoinDialog_keyDown_arc_input_KeyCode_java_lang_Runnable 105
+typedef void (*func_mindustry_ui_dialogs_JoinDialog_keyDown_arc_input_KeyCode_java_lang_Runnable)(jcontext ctx, jobject self, jobject param0, jobject param1);
+#define VTABLE_mindustry_ui_dialogs_JoinDialog_keyDown_arc_func_Cons 106
+typedef void (*func_mindustry_ui_dialogs_JoinDialog_keyDown_arc_func_Cons)(jcontext ctx, jobject self, jobject param0);
+#define VTABLE_mindustry_ui_dialogs_JoinDialog_fireClick 107
+typedef void (*func_mindustry_ui_dialogs_JoinDialog_fireClick)(jcontext ctx, jobject self);
+#define VTABLE_mindustry_ui_dialogs_JoinDialog_clicked_java_lang_Runnable_R_arc_scene_event_ClickListener 108
+typedef jobject (*func_mindustry_ui_dialogs_JoinDialog_clicked_java_lang_Runnable_R_arc_scene_event_ClickListener)(jcontext ctx, jobject self, jobject param0);
+#define VTABLE_mindustry_ui_dialogs_JoinDialog_clicked_arc_input_KeyCode_java_lang_Runnable_R_arc_scene_event_ClickListener 109
+typedef jobject (*func_mindustry_ui_dialogs_JoinDialog_clicked_arc_input_KeyCode_java_lang_Runnable_R_arc_scene_event_ClickListener)(jcontext ctx, jobject self, jobject param0, jobject param1);
+#define VTABLE_mindustry_ui_dialogs_JoinDialog_clicked_arc_func_Cons_java_lang_Runnable_R_arc_scene_event_ClickListener 110
+typedef jobject (*func_mindustry_ui_dialogs_JoinDialog_clicked_arc_func_Cons_java_lang_Runnable_R_arc_scene_event_ClickListener)(jcontext ctx, jobject self, jobject param0, jobject param1);
+#define VTABLE_mindustry_ui_dialogs_JoinDialog_clicked_arc_func_Cons_arc_func_Cons_R_arc_scene_event_ClickListener 111
+typedef jobject (*func_mindustry_ui_dialogs_JoinDialog_clicked_arc_func_Cons_arc_func_Cons_R_arc_scene_event_ClickListener)(jcontext ctx, jobject self, jobject param0, jobject param1);
+#define VTABLE_mindustry_ui_dialogs_JoinDialog_tapped_java_lang_Runnable_R_arc_scene_event_InputListener 112
+typedef jobject (*func_mindustry_ui_dialogs_JoinDialog_tapped_java_lang_Runnable_R_arc_scene_event_InputListener)(jcontext ctx, jobject self, jobject param0);
+#define VTABLE_mindustry_ui_dialogs_JoinDialog_hovered_java_lang_Runnable 113
+typedef void (*func_mindustry_ui_dialogs_JoinDialog_hovered_java_lang_Runnable)(jcontext ctx, jobject self, jobject param0);
+#define VTABLE_mindustry_ui_dialogs_JoinDialog_exited_java_lang_Runnable 114
+typedef void (*func_mindustry_ui_dialogs_JoinDialog_exited_java_lang_Runnable)(jcontext ctx, jobject self, jobject param0);
+#define VTABLE_mindustry_ui_dialogs_JoinDialog_released_java_lang_Runnable 115
+typedef void (*func_mindustry_ui_dialogs_JoinDialog_released_java_lang_Runnable)(jcontext ctx, jobject self, jobject param0);
+#define VTABLE_mindustry_ui_dialogs_JoinDialog_change 116
+typedef void (*func_mindustry_ui_dialogs_JoinDialog_change)(jcontext ctx, jobject self);
+#define VTABLE_mindustry_ui_dialogs_JoinDialog_changed_java_lang_Runnable 117
+typedef void (*func_mindustry_ui_dialogs_JoinDialog_changed_java_lang_Runnable)(jcontext ctx, jobject self, jobject param0);
+#define VTABLE_mindustry_ui_dialogs_JoinDialog_update_java_lang_Runnable_R_arc_scene_Element 118
+typedef jobject (*func_mindustry_ui_dialogs_JoinDialog_update_java_lang_Runnable_R_arc_scene_Element)(jcontext ctx, jobject self, jobject param0);
+#define VTABLE_mindustry_ui_dialogs_JoinDialog_visible_arc_func_Boolp_R_arc_scene_Element 119
+typedef jobject (*func_mindustry_ui_dialogs_JoinDialog_visible_arc_func_Boolp_R_arc_scene_Element)(jcontext ctx, jobject self, jobject param0);
+#define VTABLE_mindustry_ui_dialogs_JoinDialog_touchable_arc_func_Prov 120
+typedef void (*func_mindustry_ui_dialogs_JoinDialog_touchable_arc_func_Prov)(jcontext ctx, jobject self, jobject param0);
+#define VTABLE_mindustry_ui_dialogs_JoinDialog_setCullingArea_arc_math_geom_Rect 121
+typedef void (*func_mindustry_ui_dialogs_JoinDialog_setCullingArea_arc_math_geom_Rect)(jcontext ctx, jobject self, jobject param0);
+#define VTABLE_mindustry_ui_dialogs_JoinDialog_drawChildren 122
+typedef void (*func_mindustry_ui_dialogs_JoinDialog_drawChildren)(jcontext ctx, jobject self);
+#define VTABLE_mindustry_ui_dialogs_JoinDialog_computeTransform_R_arc_math_Mat 123
+typedef jobject (*func_mindustry_ui_dialogs_JoinDialog_computeTransform_R_arc_math_Mat)(jcontext ctx, jobject self);
+#define VTABLE_mindustry_ui_dialogs_JoinDialog_applyTransform_arc_math_Mat 124
+typedef void (*func_mindustry_ui_dialogs_JoinDialog_applyTransform_arc_math_Mat)(jcontext ctx, jobject self, jobject param0);
+#define VTABLE_mindustry_ui_dialogs_JoinDialog_resetTransform 125
+typedef void (*func_mindustry_ui_dialogs_JoinDialog_resetTransform)(jcontext ctx, jobject self);
+#define VTABLE_mindustry_ui_dialogs_JoinDialog_getCullingArea_R_arc_math_geom_Rect 126
+typedef jobject (*func_mindustry_ui_dialogs_JoinDialog_getCullingArea_R_arc_math_geom_Rect)(jcontext ctx, jobject self);
+#define VTABLE_mindustry_ui_dialogs_JoinDialog_childrenChanged 127
+typedef void (*func_mindustry_ui_dialogs_JoinDialog_childrenChanged)(jcontext ctx, jobject self);
+#define VTABLE_mindustry_ui_dialogs_JoinDialog_forEach_arc_func_Cons 128
+typedef void (*func_mindustry_ui_dialogs_JoinDialog_forEach_arc_func_Cons)(jcontext ctx, jobject self, jobject param0);
+#define VTABLE_mindustry_ui_dialogs_JoinDialog_fill_arc_scene_ui_layout_Table$DrawRect_R_arc_scene_Element 129
+typedef jobject (*func_mindustry_ui_dialogs_JoinDialog_fill_arc_scene_ui_layout_Table$DrawRect_R_arc_scene_Element)(jcontext ctx, jobject self, jobject param0);
+#define VTABLE_mindustry_ui_dialogs_JoinDialog_fill_arc_func_Cons 130
+typedef void (*func_mindustry_ui_dialogs_JoinDialog_fill_arc_func_Cons)(jcontext ctx, jobject self, jobject param0);
+#define VTABLE_mindustry_ui_dialogs_JoinDialog_fill_arc_scene_style_Drawable_arc_func_Cons 131
+typedef void (*func_mindustry_ui_dialogs_JoinDialog_fill_arc_scene_style_Drawable_arc_func_Cons)(jcontext ctx, jobject self, jobject param0, jobject param1);
+#define VTABLE_mindustry_ui_dialogs_JoinDialog_addChild_arc_scene_Element 132
+typedef void (*func_mindustry_ui_dialogs_JoinDialog_addChild_arc_scene_Element)(jcontext ctx, jobject self, jobject param0);
+#define VTABLE_mindustry_ui_dialogs_JoinDialog_addChildAt_int_arc_scene_Element 133
+typedef void (*func_mindustry_ui_dialogs_JoinDialog_addChildAt_int_arc_scene_Element)(jcontext ctx, jobject self, jint param0, jobject param1);
+#define VTABLE_mindustry_ui_dialogs_JoinDialog_addChildBefore_arc_scene_Element_arc_scene_Element 134
+typedef void (*func_mindustry_ui_dialogs_JoinDialog_addChildBefore_arc_scene_Element_arc_scene_Element)(jcontext ctx, jobject self, jobject param0, jobject param1);
+#define VTABLE_mindustry_ui_dialogs_JoinDialog_addChildAfter_arc_scene_Element_arc_scene_Element 135
+typedef void (*func_mindustry_ui_dialogs_JoinDialog_addChildAfter_arc_scene_Element_arc_scene_Element)(jcontext ctx, jobject self, jobject param0, jobject param1);
+#define VTABLE_mindustry_ui_dialogs_JoinDialog_removeChild_arc_scene_Element_R_boolean 136
+typedef jbool (*func_mindustry_ui_dialogs_JoinDialog_removeChild_arc_scene_Element_R_boolean)(jcontext ctx, jobject self, jobject param0);
+#define VTABLE_mindustry_ui_dialogs_JoinDialog_removeChild_arc_scene_Element_boolean_R_boolean 137
+typedef jbool (*func_mindustry_ui_dialogs_JoinDialog_removeChild_arc_scene_Element_boolean_R_boolean)(jcontext ctx, jobject self, jobject param0, jbool param1);
+#define VTABLE_mindustry_ui_dialogs_JoinDialog_clearChildren 138
+typedef void (*func_mindustry_ui_dialogs_JoinDialog_clearChildren)(jcontext ctx, jobject self);
+#define VTABLE_mindustry_ui_dialogs_JoinDialog_find_java_lang_String_R_arc_scene_Element 139
+typedef jobject (*func_mindustry_ui_dialogs_JoinDialog_find_java_lang_String_R_arc_scene_Element)(jcontext ctx, jobject self, jobject param0);
+#define VTABLE_mindustry_ui_dialogs_JoinDialog_findVisible_java_lang_String_R_arc_scene_Element 140
+typedef jobject (*func_mindustry_ui_dialogs_JoinDialog_findVisible_java_lang_String_R_arc_scene_Element)(jcontext ctx, jobject self, jobject param0);
+#define VTABLE_mindustry_ui_dialogs_JoinDialog_find_arc_func_Boolf_R_arc_scene_Element 141
+typedef jobject (*func_mindustry_ui_dialogs_JoinDialog_find_arc_func_Boolf_R_arc_scene_Element)(jcontext ctx, jobject self, jobject param0);
+#define VTABLE_mindustry_ui_dialogs_JoinDialog_swapActor_int_int_R_boolean 142
+typedef jbool (*func_mindustry_ui_dialogs_JoinDialog_swapActor_int_int_R_boolean)(jcontext ctx, jobject self, jint param0, jint param1);
+#define VTABLE_mindustry_ui_dialogs_JoinDialog_swapActor_arc_scene_Element_arc_scene_Element_R_boolean 143
+typedef jbool (*func_mindustry_ui_dialogs_JoinDialog_swapActor_arc_scene_Element_arc_scene_Element_R_boolean)(jcontext ctx, jobject self, jobject param0, jobject param1);
+#define VTABLE_mindustry_ui_dialogs_JoinDialog_getChildren_R_arc_struct_SnapshotSeq 144
+typedef jobject (*func_mindustry_ui_dialogs_JoinDialog_getChildren_R_arc_struct_SnapshotSeq)(jcontext ctx, jobject self);
+#define VTABLE_mindustry_ui_dialogs_JoinDialog_hasChildren_R_boolean 145
+typedef jbool (*func_mindustry_ui_dialogs_JoinDialog_hasChildren_R_boolean)(jcontext ctx, jobject self);
+#define VTABLE_mindustry_ui_dialogs_JoinDialog_isTransform_R_boolean 146
+typedef jbool (*func_mindustry_ui_dialogs_JoinDialog_isTransform_R_boolean)(jcontext ctx, jobject self);
+#define VTABLE_mindustry_ui_dialogs_JoinDialog_setTransform_boolean 147
+typedef void (*func_mindustry_ui_dialogs_JoinDialog_setTransform_boolean)(jcontext ctx, jobject self, jbool param0);
+#define VTABLE_mindustry_ui_dialogs_JoinDialog_localToDescendantCoordinates_arc_scene_Element_arc_math_geom_Vec2_R_arc_math_geom_Vec2 148
+typedef jobject (*func_mindustry_ui_dialogs_JoinDialog_localToDescendantCoordinates_arc_scene_Element_arc_math_geom_Vec2_R_arc_math_geom_Vec2)(jcontext ctx, jobject self, jobject param0, jobject param1);
+#define VTABLE_mindustry_ui_dialogs_JoinDialog_toString_java_lang_StringBuilder_int 149
+typedef void (*func_mindustry_ui_dialogs_JoinDialog_toString_java_lang_StringBuilder_int)(jcontext ctx, jobject self, jobject param0, jint param1);
+#define VTABLE_mindustry_ui_dialogs_JoinDialog_setLayoutEnabled_arc_scene_Group_boolean 150
+typedef void (*func_mindustry_ui_dialogs_JoinDialog_setLayoutEnabled_arc_scene_Group_boolean)(jcontext ctx, jobject self, jobject param0, jbool param1);
+#define VTABLE_mindustry_ui_dialogs_JoinDialog_obtainCell_R_arc_scene_ui_layout_Cell 151
+typedef jobject (*func_mindustry_ui_dialogs_JoinDialog_obtainCell_R_arc_scene_ui_layout_Cell)(jcontext ctx, jobject self);
+#define VTABLE_mindustry_ui_dialogs_JoinDialog_fill_R_arc_scene_ui_layout_Table 152
+typedef jobject (*func_mindustry_ui_dialogs_JoinDialog_fill_R_arc_scene_ui_layout_Table)(jcontext ctx, jobject self);
+#define VTABLE_mindustry_ui_dialogs_JoinDialog_drawBackground_float_float 153
+typedef void (*func_mindustry_ui_dialogs_JoinDialog_drawBackground_float_float)(jcontext ctx, jobject self, jfloat param0, jfloat param1);
+#define VTABLE_mindustry_ui_dialogs_JoinDialog_background_arc_scene_style_Drawable_R_arc_scene_ui_layout_Table 154
+typedef jobject (*func_mindustry_ui_dialogs_JoinDialog_background_arc_scene_style_Drawable_R_arc_scene_ui_layout_Table)(jcontext ctx, jobject self, jobject param0);
+#define VTABLE_mindustry_ui_dialogs_JoinDialog_getBackground_R_arc_scene_style_Drawable 155
+typedef jobject (*func_mindustry_ui_dialogs_JoinDialog_getBackground_R_arc_scene_style_Drawable)(jcontext ctx, jobject self);
+#define VTABLE_mindustry_ui_dialogs_JoinDialog_setBackground_arc_scene_style_Drawable 156
+typedef void (*func_mindustry_ui_dialogs_JoinDialog_setBackground_arc_scene_style_Drawable)(jcontext ctx, jobject self, jobject param0);
+#define VTABLE_mindustry_ui_dialogs_JoinDialog_getClip_R_boolean 157
+typedef jbool (*func_mindustry_ui_dialogs_JoinDialog_getClip_R_boolean)(jcontext ctx, jobject self);
+#define VTABLE_mindustry_ui_dialogs_JoinDialog_setClip_boolean 158
+typedef void (*func_mindustry_ui_dialogs_JoinDialog_setClip_boolean)(jcontext ctx, jobject self, jbool param0);
+#define VTABLE_mindustry_ui_dialogs_JoinDialog_add_arc_scene_Element_R_arc_scene_ui_layout_Cell 159
+typedef jobject (*func_mindustry_ui_dialogs_JoinDialog_add_arc_scene_Element_R_arc_scene_ui_layout_Cell)(jcontext ctx, jobject self, jobject param0);
+#define VTABLE_mindustry_ui_dialogs_JoinDialog_add_Array1_arc_scene_Element 160
+typedef void (*func_mindustry_ui_dialogs_JoinDialog_add_Array1_arc_scene_Element)(jcontext ctx, jobject self, jobject param0);
+#define VTABLE_mindustry_ui_dialogs_JoinDialog_collapser_arc_func_Cons_arc_func_Boolp_R_arc_scene_ui_layout_Cell 161
+typedef jobject (*func_mindustry_ui_dialogs_JoinDialog_collapser_arc_func_Cons_arc_func_Boolp_R_arc_scene_ui_layout_Cell)(jcontext ctx, jobject self, jobject param0, jobject param1);
+#define VTABLE_mindustry_ui_dialogs_JoinDialog_collapser_arc_scene_ui_layout_Table_arc_func_Boolp_R_arc_scene_ui_layout_Cell 162
+typedef jobject (*func_mindustry_ui_dialogs_JoinDialog_collapser_arc_scene_ui_layout_Table_arc_func_Boolp_R_arc_scene_ui_layout_Cell)(jcontext ctx, jobject self, jobject param0, jobject param1);
+#define VTABLE_mindustry_ui_dialogs_JoinDialog_collapser_arc_func_Cons_boolean_arc_func_Boolp_R_arc_scene_ui_layout_Cell 163
+typedef jobject (*func_mindustry_ui_dialogs_JoinDialog_collapser_arc_func_Cons_boolean_arc_func_Boolp_R_arc_scene_ui_layout_Cell)(jcontext ctx, jobject self, jobject param0, jbool param1, jobject param2);
+#define VTABLE_mindustry_ui_dialogs_JoinDialog_collapser_arc_scene_ui_layout_Table_boolean_arc_func_Boolp_R_arc_scene_ui_layout_Cell 164
+typedef jobject (*func_mindustry_ui_dialogs_JoinDialog_collapser_arc_scene_ui_layout_Table_boolean_arc_func_Boolp_R_arc_scene_ui_layout_Cell)(jcontext ctx, jobject self, jobject param0, jbool param1, jobject param2);
+#define VTABLE_mindustry_ui_dialogs_JoinDialog_table_R_arc_scene_ui_layout_Cell 165
+typedef jobject (*func_mindustry_ui_dialogs_JoinDialog_table_R_arc_scene_ui_layout_Cell)(jcontext ctx, jobject self);
+#define VTABLE_mindustry_ui_dialogs_JoinDialog_table_arc_scene_style_Drawable_R_arc_scene_ui_layout_Cell 166
+typedef jobject (*func_mindustry_ui_dialogs_JoinDialog_table_arc_scene_style_Drawable_R_arc_scene_ui_layout_Cell)(jcontext ctx, jobject self, jobject param0);
+#define VTABLE_mindustry_ui_dialogs_JoinDialog_table_arc_func_Cons_R_arc_scene_ui_layout_Cell 167
+typedef jobject (*func_mindustry_ui_dialogs_JoinDialog_table_arc_func_Cons_R_arc_scene_ui_layout_Cell)(jcontext ctx, jobject self, jobject param0);
+#define VTABLE_mindustry_ui_dialogs_JoinDialog_wrapTable_arc_func_Cons_R_arc_scene_ui_layout_Cell 168
+typedef jobject (*func_mindustry_ui_dialogs_JoinDialog_wrapTable_arc_func_Cons_R_arc_scene_ui_layout_Cell)(jcontext ctx, jobject self, jobject param0);
+#define VTABLE_mindustry_ui_dialogs_JoinDialog_table_arc_scene_style_Drawable_arc_func_Cons_R_arc_scene_ui_layout_Cell 169
+typedef jobject (*func_mindustry_ui_dialogs_JoinDialog_table_arc_scene_style_Drawable_arc_func_Cons_R_arc_scene_ui_layout_Cell)(jcontext ctx, jobject self, jobject param0, jobject param1);
+#define VTABLE_mindustry_ui_dialogs_JoinDialog_table_arc_scene_style_Drawable_int_arc_func_Cons_R_arc_scene_ui_layout_Cell 170
+typedef jobject (*func_mindustry_ui_dialogs_JoinDialog_table_arc_scene_style_Drawable_int_arc_func_Cons_R_arc_scene_ui_layout_Cell)(jcontext ctx, jobject self, jobject param0, jint param1, jobject param2);
+#define VTABLE_mindustry_ui_dialogs_JoinDialog_label_arc_func_Prov_R_arc_scene_ui_layout_Cell 171
+typedef jobject (*func_mindustry_ui_dialogs_JoinDialog_label_arc_func_Prov_R_arc_scene_ui_layout_Cell)(jcontext ctx, jobject self, jobject param0);
+#define VTABLE_mindustry_ui_dialogs_JoinDialog_labelWrap_arc_func_Prov_R_arc_scene_ui_layout_Cell 172
+typedef jobject (*func_mindustry_ui_dialogs_JoinDialog_labelWrap_arc_func_Prov_R_arc_scene_ui_layout_Cell)(jcontext ctx, jobject self, jobject param0);
+#define VTABLE_mindustry_ui_dialogs_JoinDialog_labelWrap_java_lang_String_R_arc_scene_ui_layout_Cell 173
+typedef jobject (*func_mindustry_ui_dialogs_JoinDialog_labelWrap_java_lang_String_R_arc_scene_ui_layout_Cell)(jcontext ctx, jobject self, jobject param0);
+#define VTABLE_mindustry_ui_dialogs_JoinDialog_pane_arc_func_Cons_R_arc_scene_ui_layout_Cell 174
+typedef jobject (*func_mindustry_ui_dialogs_JoinDialog_pane_arc_func_Cons_R_arc_scene_ui_layout_Cell)(jcontext ctx, jobject self, jobject param0);
+#define VTABLE_mindustry_ui_dialogs_JoinDialog_pane_arc_scene_ui_ScrollPane$ScrollPaneStyle_arc_func_Cons_R_arc_scene_ui_layout_Cell 175
+typedef jobject (*func_mindustry_ui_dialogs_JoinDialog_pane_arc_scene_ui_ScrollPane$ScrollPaneStyle_arc_func_Cons_R_arc_scene_ui_layout_Cell)(jcontext ctx, jobject self, jobject param0, jobject param1);
+#define VTABLE_mindustry_ui_dialogs_JoinDialog_pane_arc_scene_ui_ScrollPane$ScrollPaneStyle_arc_scene_Element_R_arc_scene_ui_layout_Cell 176
+typedef jobject (*func_mindustry_ui_dialogs_JoinDialog_pane_arc_scene_ui_ScrollPane$ScrollPaneStyle_arc_scene_Element_R_arc_scene_ui_layout_Cell)(jcontext ctx, jobject self, jobject param0, jobject param1);
+#define VTABLE_mindustry_ui_dialogs_JoinDialog_pane_arc_scene_Element_R_arc_scene_ui_layout_Cell 177
+typedef jobject (*func_mindustry_ui_dialogs_JoinDialog_pane_arc_scene_Element_R_arc_scene_ui_layout_Cell)(jcontext ctx, jobject self, jobject param0);
+#define VTABLE_mindustry_ui_dialogs_JoinDialog_add_java_lang_CharSequence_R_arc_scene_ui_layout_Cell 178
+typedef jobject (*func_mindustry_ui_dialogs_JoinDialog_add_java_lang_CharSequence_R_arc_scene_ui_layout_Cell)(jcontext ctx, jobject self, jobject param0);
+#define VTABLE_mindustry_ui_dialogs_JoinDialog_add_java_lang_CharSequence_float_R_arc_scene_ui_layout_Cell 179
+typedef jobject (*func_mindustry_ui_dialogs_JoinDialog_add_java_lang_CharSequence_float_R_arc_scene_ui_layout_Cell)(jcontext ctx, jobject self, jobject param0, jfloat param1);
+#define VTABLE_mindustry_ui_dialogs_JoinDialog_add_java_lang_CharSequence_arc_scene_ui_Label$LabelStyle_float_R_arc_scene_ui_layout_Cell 180
+typedef jobject (*func_mindustry_ui_dialogs_JoinDialog_add_java_lang_CharSequence_arc_scene_ui_Label$LabelStyle_float_R_arc_scene_ui_layout_Cell)(jcontext ctx, jobject self, jobject param0, jobject param1, jfloat param2);
+#define VTABLE_mindustry_ui_dialogs_JoinDialog_add_java_lang_CharSequence_arc_graphics_Color_float_R_arc_scene_ui_layout_Cell 181
+typedef jobject (*func_mindustry_ui_dialogs_JoinDialog_add_java_lang_CharSequence_arc_graphics_Color_float_R_arc_scene_ui_layout_Cell)(jcontext ctx, jobject self, jobject param0, jobject param1, jfloat param2);
+#define VTABLE_mindustry_ui_dialogs_JoinDialog_add_java_lang_CharSequence_arc_scene_ui_Label$LabelStyle_R_arc_scene_ui_layout_Cell 182
+typedef jobject (*func_mindustry_ui_dialogs_JoinDialog_add_java_lang_CharSequence_arc_scene_ui_Label$LabelStyle_R_arc_scene_ui_layout_Cell)(jcontext ctx, jobject self, jobject param0, jobject param1);
+#define VTABLE_mindustry_ui_dialogs_JoinDialog_add_java_lang_CharSequence_arc_graphics_Color_R_arc_scene_ui_layout_Cell 183
+typedef jobject (*func_mindustry_ui_dialogs_JoinDialog_add_java_lang_CharSequence_arc_graphics_Color_R_arc_scene_ui_layout_Cell)(jcontext ctx, jobject self, jobject param0, jobject param1);
+#define VTABLE_mindustry_ui_dialogs_JoinDialog_add_R_arc_scene_ui_layout_Cell 184
+typedef jobject (*func_mindustry_ui_dialogs_JoinDialog_add_R_arc_scene_ui_layout_Cell)(jcontext ctx, jobject self);
+#define VTABLE_mindustry_ui_dialogs_JoinDialog_stack_Array1_arc_scene_Element_R_arc_scene_ui_layout_Cell 185
+typedef jobject (*func_mindustry_ui_dialogs_JoinDialog_stack_Array1_arc_scene_Element_R_arc_scene_ui_layout_Cell)(jcontext ctx, jobject self, jobject param0);
+#define VTABLE_mindustry_ui_dialogs_JoinDialog_spacer_arc_func_Floatp_arc_func_Floatp_R_arc_scene_ui_layout_Cell 186
+typedef jobject (*func_mindustry_ui_dialogs_JoinDialog_spacer_arc_func_Floatp_arc_func_Floatp_R_arc_scene_ui_layout_Cell)(jcontext ctx, jobject self, jobject param0, jobject param1);
+#define VTABLE_mindustry_ui_dialogs_JoinDialog_spacerX_arc_func_Floatp_R_arc_scene_ui_layout_Cell 187
+typedef jobject (*func_mindustry_ui_dialogs_JoinDialog_spacerX_arc_func_Floatp_R_arc_scene_ui_layout_Cell)(jcontext ctx, jobject self, jobject param0);
+#define VTABLE_mindustry_ui_dialogs_JoinDialog_spacerY_arc_func_Floatp_R_arc_scene_ui_layout_Cell 188
+typedef jobject (*func_mindustry_ui_dialogs_JoinDialog_spacerY_arc_func_Floatp_R_arc_scene_ui_layout_Cell)(jcontext ctx, jobject self, jobject param0);
+#define VTABLE_mindustry_ui_dialogs_JoinDialog_image_arc_func_Prov_R_arc_scene_ui_layout_Cell 189
+typedef jobject (*func_mindustry_ui_dialogs_JoinDialog_image_arc_func_Prov_R_arc_scene_ui_layout_Cell)(jcontext ctx, jobject self, jobject param0);
+#define VTABLE_mindustry_ui_dialogs_JoinDialog_imageDraw_arc_func_Prov_R_arc_scene_ui_layout_Cell 190
+typedef jobject (*func_mindustry_ui_dialogs_JoinDialog_imageDraw_arc_func_Prov_R_arc_scene_ui_layout_Cell)(jcontext ctx, jobject self, jobject param0);
+#define VTABLE_mindustry_ui_dialogs_JoinDialog_image_R_arc_scene_ui_layout_Cell 191
+typedef jobject (*func_mindustry_ui_dialogs_JoinDialog_image_R_arc_scene_ui_layout_Cell)(jcontext ctx, jobject self);
+#define VTABLE_mindustry_ui_dialogs_JoinDialog_image_arc_scene_style_Drawable_R_arc_scene_ui_layout_Cell 192
+typedef jobject (*func_mindustry_ui_dialogs_JoinDialog_image_arc_scene_style_Drawable_R_arc_scene_ui_layout_Cell)(jcontext ctx, jobject self, jobject param0);
+#define VTABLE_mindustry_ui_dialogs_JoinDialog_image_arc_scene_style_Drawable_arc_graphics_Color_R_arc_scene_ui_layout_Cell 193
+typedef jobject (*func_mindustry_ui_dialogs_JoinDialog_image_arc_scene_style_Drawable_arc_graphics_Color_R_arc_scene_ui_layout_Cell)(jcontext ctx, jobject self, jobject param0, jobject param1);
+#define VTABLE_mindustry_ui_dialogs_JoinDialog_image_arc_graphics_g2d_TextureRegion_R_arc_scene_ui_layout_Cell 194
+typedef jobject (*func_mindustry_ui_dialogs_JoinDialog_image_arc_graphics_g2d_TextureRegion_R_arc_scene_ui_layout_Cell)(jcontext ctx, jobject self, jobject param0);
+#define VTABLE_mindustry_ui_dialogs_JoinDialog_check_java_lang_String_arc_func_Boolc_R_arc_scene_ui_layout_Cell 195
+typedef jobject (*func_mindustry_ui_dialogs_JoinDialog_check_java_lang_String_arc_func_Boolc_R_arc_scene_ui_layout_Cell)(jcontext ctx, jobject self, jobject param0, jobject param1);
+#define VTABLE_mindustry_ui_dialogs_JoinDialog_check_java_lang_String_boolean_arc_func_Boolc_R_arc_scene_ui_layout_Cell 196
+typedef jobject (*func_mindustry_ui_dialogs_JoinDialog_check_java_lang_String_boolean_arc_func_Boolc_R_arc_scene_ui_layout_Cell)(jcontext ctx, jobject self, jobject param0, jbool param1, jobject param2);
+#define VTABLE_mindustry_ui_dialogs_JoinDialog_check_java_lang_String_float_boolean_arc_func_Boolc_R_arc_scene_ui_layout_Cell 197
+typedef jobject (*func_mindustry_ui_dialogs_JoinDialog_check_java_lang_String_float_boolean_arc_func_Boolc_R_arc_scene_ui_layout_Cell)(jcontext ctx, jobject self, jobject param0, jfloat param1, jbool param2, jobject param3);
+#define VTABLE_mindustry_ui_dialogs_JoinDialog_button_arc_func_Cons_java_lang_Runnable_R_arc_scene_ui_layout_Cell 198
+typedef jobject (*func_mindustry_ui_dialogs_JoinDialog_button_arc_func_Cons_java_lang_Runnable_R_arc_scene_ui_layout_Cell)(jcontext ctx, jobject self, jobject param0, jobject param1);
+#define VTABLE_mindustry_ui_dialogs_JoinDialog_button_arc_func_Cons_arc_scene_ui_Button$ButtonStyle_java_lang_Runnable_R_arc_scene_ui_layout_Cell 199
+typedef jobject (*func_mindustry_ui_dialogs_JoinDialog_button_arc_func_Cons_arc_scene_ui_Button$ButtonStyle_java_lang_Runnable_R_arc_scene_ui_layout_Cell)(jcontext ctx, jobject self, jobject param0, jobject param1, jobject param2);
+#define VTABLE_mindustry_ui_dialogs_JoinDialog_button_java_lang_String_java_lang_Runnable_R_arc_scene_ui_layout_Cell 200
+typedef jobject (*func_mindustry_ui_dialogs_JoinDialog_button_java_lang_String_java_lang_Runnable_R_arc_scene_ui_layout_Cell)(jcontext ctx, jobject self, jobject param0, jobject param1);
+#define VTABLE_mindustry_ui_dialogs_JoinDialog_button_java_lang_String_arc_scene_ui_TextButton$TextButtonStyle_java_lang_Runnable_R_arc_scene_ui_layout_Cell 201
+typedef jobject (*func_mindustry_ui_dialogs_JoinDialog_button_java_lang_String_arc_scene_ui_TextButton$TextButtonStyle_java_lang_Runnable_R_arc_scene_ui_layout_Cell)(jcontext ctx, jobject self, jobject param0, jobject param1, jobject param2);
+#define VTABLE_mindustry_ui_dialogs_JoinDialog_button_arc_scene_style_Drawable_java_lang_Runnable_R_arc_scene_ui_layout_Cell 202
+typedef jobject (*func_mindustry_ui_dialogs_JoinDialog_button_arc_scene_style_Drawable_java_lang_Runnable_R_arc_scene_ui_layout_Cell)(jcontext ctx, jobject self, jobject param0, jobject param1);
+#define VTABLE_mindustry_ui_dialogs_JoinDialog_button_arc_scene_style_Drawable_float_java_lang_Runnable_R_arc_scene_ui_layout_Cell 203
+typedef jobject (*func_mindustry_ui_dialogs_JoinDialog_button_arc_scene_style_Drawable_float_java_lang_Runnable_R_arc_scene_ui_layout_Cell)(jcontext ctx, jobject self, jobject param0, jfloat param1, jobject param2);
+#define VTABLE_mindustry_ui_dialogs_JoinDialog_button_arc_scene_style_Drawable_arc_scene_ui_ImageButton$ImageButtonStyle_float_java_lang_Runnable_R_arc_scene_ui_layout_Cell 204
+typedef jobject (*func_mindustry_ui_dialogs_JoinDialog_button_arc_scene_style_Drawable_arc_scene_ui_ImageButton$ImageButtonStyle_float_java_lang_Runnable_R_arc_scene_ui_layout_Cell)(jcontext ctx, jobject self, jobject param0, jobject param1, jfloat param2, jobject param3);
+#define VTABLE_mindustry_ui_dialogs_JoinDialog_button_arc_scene_style_Drawable_arc_scene_ui_ImageButton$ImageButtonStyle_java_lang_Runnable_R_arc_scene_ui_layout_Cell 205
+typedef jobject (*func_mindustry_ui_dialogs_JoinDialog_button_arc_scene_style_Drawable_arc_scene_ui_ImageButton$ImageButtonStyle_java_lang_Runnable_R_arc_scene_ui_layout_Cell)(jcontext ctx, jobject self, jobject param0, jobject param1, jobject param2);
+#define VTABLE_mindustry_ui_dialogs_JoinDialog_field_java_lang_String_arc_func_Cons_R_arc_scene_ui_layout_Cell 206
+typedef jobject (*func_mindustry_ui_dialogs_JoinDialog_field_java_lang_String_arc_func_Cons_R_arc_scene_ui_layout_Cell)(jcontext ctx, jobject self, jobject param0, jobject param1);
+#define VTABLE_mindustry_ui_dialogs_JoinDialog_area_java_lang_String_arc_func_Cons_R_arc_scene_ui_layout_Cell 207
+typedef jobject (*func_mindustry_ui_dialogs_JoinDialog_area_java_lang_String_arc_func_Cons_R_arc_scene_ui_layout_Cell)(jcontext ctx, jobject self, jobject param0, jobject param1);
+#define VTABLE_mindustry_ui_dialogs_JoinDialog_area_java_lang_String_arc_scene_ui_TextField$TextFieldStyle_arc_func_Cons_R_arc_scene_ui_layout_Cell 208
+typedef jobject (*func_mindustry_ui_dialogs_JoinDialog_area_java_lang_String_arc_scene_ui_TextField$TextFieldStyle_arc_func_Cons_R_arc_scene_ui_layout_Cell)(jcontext ctx, jobject self, jobject param0, jobject param1, jobject param2);
+#define VTABLE_mindustry_ui_dialogs_JoinDialog_field_java_lang_String_arc_scene_ui_TextField$TextFieldFilter_arc_func_Cons_R_arc_scene_ui_layout_Cell 209
+typedef jobject (*func_mindustry_ui_dialogs_JoinDialog_field_java_lang_String_arc_scene_ui_TextField$TextFieldFilter_arc_func_Cons_R_arc_scene_ui_layout_Cell)(jcontext ctx, jobject self, jobject param0, jobject param1, jobject param2);
+#define VTABLE_mindustry_ui_dialogs_JoinDialog_field_java_lang_String_arc_scene_ui_TextField$TextFieldStyle_arc_func_Cons_R_arc_scene_ui_layout_Cell 210
+typedef jobject (*func_mindustry_ui_dialogs_JoinDialog_field_java_lang_String_arc_scene_ui_TextField$TextFieldStyle_arc_func_Cons_R_arc_scene_ui_layout_Cell)(jcontext ctx, jobject self, jobject param0, jobject param1, jobject param2);
+#define VTABLE_mindustry_ui_dialogs_JoinDialog_rect_arc_scene_ui_layout_Table$DrawRect_R_arc_scene_ui_layout_Cell 211
+typedef jobject (*func_mindustry_ui_dialogs_JoinDialog_rect_arc_scene_ui_layout_Table$DrawRect_R_arc_scene_ui_layout_Cell)(jcontext ctx, jobject self, jobject param0);
+#define VTABLE_mindustry_ui_dialogs_JoinDialog_buttonRow_java_lang_String_arc_scene_style_Drawable_java_lang_Runnable_R_arc_scene_ui_layout_Cell 212
+typedef jobject (*func_mindustry_ui_dialogs_JoinDialog_buttonRow_java_lang_String_arc_scene_style_Drawable_java_lang_Runnable_R_arc_scene_ui_layout_Cell)(jcontext ctx, jobject self, jobject param0, jobject param1, jobject param2);
+#define VTABLE_mindustry_ui_dialogs_JoinDialog_button_java_lang_String_arc_scene_style_Drawable_java_lang_Runnable_R_arc_scene_ui_layout_Cell 213
+typedef jobject (*func_mindustry_ui_dialogs_JoinDialog_button_java_lang_String_arc_scene_style_Drawable_java_lang_Runnable_R_arc_scene_ui_layout_Cell)(jcontext ctx, jobject self, jobject param0, jobject param1, jobject param2);
+#define VTABLE_mindustry_ui_dialogs_JoinDialog_button_java_lang_String_arc_scene_style_Drawable_float_java_lang_Runnable_R_arc_scene_ui_layout_Cell 214
+typedef jobject (*func_mindustry_ui_dialogs_JoinDialog_button_java_lang_String_arc_scene_style_Drawable_float_java_lang_Runnable_R_arc_scene_ui_layout_Cell)(jcontext ctx, jobject self, jobject param0, jobject param1, jfloat param2, jobject param3);
+#define VTABLE_mindustry_ui_dialogs_JoinDialog_button_java_lang_String_arc_scene_style_Drawable_arc_scene_ui_TextButton$TextButtonStyle_float_java_lang_Runnable_R_arc_scene_ui_layout_Cell 215
+typedef jobject (*func_mindustry_ui_dialogs_JoinDialog_button_java_lang_String_arc_scene_style_Drawable_arc_scene_ui_TextButton$TextButtonStyle_float_java_lang_Runnable_R_arc_scene_ui_layout_Cell)(jcontext ctx, jobject self, jobject param0, jobject param1, jobject param2, jfloat param3, jobject param4);
+#define VTABLE_mindustry_ui_dialogs_JoinDialog_button_java_lang_String_arc_scene_style_Drawable_arc_scene_ui_TextButton$TextButtonStyle_java_lang_Runnable_R_arc_scene_ui_layout_Cell 216
+typedef jobject (*func_mindustry_ui_dialogs_JoinDialog_button_java_lang_String_arc_scene_style_Drawable_arc_scene_ui_TextButton$TextButtonStyle_java_lang_Runnable_R_arc_scene_ui_layout_Cell)(jcontext ctx, jobject self, jobject param0, jobject param1, jobject param2, jobject param3);
+#define VTABLE_mindustry_ui_dialogs_JoinDialog_buttonCenter_java_lang_String_arc_scene_style_Drawable_float_java_lang_Runnable_R_arc_scene_ui_layout_Cell 217
+typedef jobject (*func_mindustry_ui_dialogs_JoinDialog_buttonCenter_java_lang_String_arc_scene_style_Drawable_float_java_lang_Runnable_R_arc_scene_ui_layout_Cell)(jcontext ctx, jobject self, jobject param0, jobject param1, jfloat param2, jobject param3);
+#define VTABLE_mindustry_ui_dialogs_JoinDialog_buttonCenter_java_lang_String_arc_scene_style_Drawable_java_lang_Runnable_R_arc_scene_ui_layout_Cell 218
+typedef jobject (*func_mindustry_ui_dialogs_JoinDialog_buttonCenter_java_lang_String_arc_scene_style_Drawable_java_lang_Runnable_R_arc_scene_ui_layout_Cell)(jcontext ctx, jobject self, jobject param0, jobject param1, jobject param2);
+#define VTABLE_mindustry_ui_dialogs_JoinDialog_buttonCenter_java_lang_String_arc_scene_style_Drawable_arc_scene_ui_TextButton$TextButtonStyle_float_java_lang_Runnable_R_arc_scene_ui_layout_Cell 219
+typedef jobject (*func_mindustry_ui_dialogs_JoinDialog_buttonCenter_java_lang_String_arc_scene_style_Drawable_arc_scene_ui_TextButton$TextButtonStyle_float_java_lang_Runnable_R_arc_scene_ui_layout_Cell)(jcontext ctx, jobject self, jobject param0, jobject param1, jobject param2, jfloat param3, jobject param4);
+#define VTABLE_mindustry_ui_dialogs_JoinDialog_slider_float_float_float_arc_func_Floatc_R_arc_scene_ui_layout_Cell 220
+typedef jobject (*func_mindustry_ui_dialogs_JoinDialog_slider_float_float_float_arc_func_Floatc_R_arc_scene_ui_layout_Cell)(jcontext ctx, jobject self, jfloat param0, jfloat param1, jfloat param2, jobject param3);
+#define VTABLE_mindustry_ui_dialogs_JoinDialog_slider_float_float_float_float_arc_func_Floatc_R_arc_scene_ui_layout_Cell 221
+typedef jobject (*func_mindustry_ui_dialogs_JoinDialog_slider_float_float_float_float_arc_func_Floatc_R_arc_scene_ui_layout_Cell)(jcontext ctx, jobject self, jfloat param0, jfloat param1, jfloat param2, jfloat param3, jobject param4);
+#define VTABLE_mindustry_ui_dialogs_JoinDialog_slider_float_float_float_float_boolean_arc_func_Floatc_R_arc_scene_ui_layout_Cell 222
+typedef jobject (*func_mindustry_ui_dialogs_JoinDialog_slider_float_float_float_float_boolean_arc_func_Floatc_R_arc_scene_ui_layout_Cell)(jcontext ctx, jobject self, jfloat param0, jfloat param1, jfloat param2, jfloat param3, jbool param4, jobject param5);
+#define VTABLE_mindustry_ui_dialogs_JoinDialog_reset 223
+typedef void (*func_mindustry_ui_dialogs_JoinDialog_reset)(jcontext ctx, jobject self);
+#define VTABLE_mindustry_ui_dialogs_JoinDialog_row_R_arc_scene_ui_layout_Table 224
+typedef jobject (*func_mindustry_ui_dialogs_JoinDialog_row_R_arc_scene_ui_layout_Table)(jcontext ctx, jobject self);
+#define VTABLE_mindustry_ui_dialogs_JoinDialog_endRow 225
+typedef void (*func_mindustry_ui_dialogs_JoinDialog_endRow)(jcontext ctx, jobject self);
+#define VTABLE_mindustry_ui_dialogs_JoinDialog_getCell_arc_scene_Element_R_arc_scene_ui_layout_Cell 226
+typedef jobject (*func_mindustry_ui_dialogs_JoinDialog_getCell_arc_scene_Element_R_arc_scene_ui_layout_Cell)(jcontext ctx, jobject self, jobject param0);
+#define VTABLE_mindustry_ui_dialogs_JoinDialog_getCells_R_arc_struct_Seq 227
+typedef jobject (*func_mindustry_ui_dialogs_JoinDialog_getCells_R_arc_struct_Seq)(jcontext ctx, jobject self);
+#define VTABLE_mindustry_ui_dialogs_JoinDialog_defaults_R_arc_scene_ui_layout_Cell 228
+typedef jobject (*func_mindustry_ui_dialogs_JoinDialog_defaults_R_arc_scene_ui_layout_Cell)(jcontext ctx, jobject self);
+#define VTABLE_mindustry_ui_dialogs_JoinDialog_margin_float_R_arc_scene_ui_layout_Table 229
+typedef jobject (*func_mindustry_ui_dialogs_JoinDialog_margin_float_R_arc_scene_ui_layout_Table)(jcontext ctx, jobject self, jfloat param0);
+#define VTABLE_mindustry_ui_dialogs_JoinDialog_margin_float_float_float_float_R_arc_scene_ui_layout_Table 230
+typedef jobject (*func_mindustry_ui_dialogs_JoinDialog_margin_float_float_float_float_R_arc_scene_ui_layout_Table)(jcontext ctx, jobject self, jfloat param0, jfloat param1, jfloat param2, jfloat param3);
+#define VTABLE_mindustry_ui_dialogs_JoinDialog_marginTop_float_R_arc_scene_ui_layout_Table 231
+typedef jobject (*func_mindustry_ui_dialogs_JoinDialog_marginTop_float_R_arc_scene_ui_layout_Table)(jcontext ctx, jobject self, jfloat param0);
+#define VTABLE_mindustry_ui_dialogs_JoinDialog_marginLeft_float_R_arc_scene_ui_layout_Table 232
+typedef jobject (*func_mindustry_ui_dialogs_JoinDialog_marginLeft_float_R_arc_scene_ui_layout_Table)(jcontext ctx, jobject self, jfloat param0);
+#define VTABLE_mindustry_ui_dialogs_JoinDialog_marginBottom_float_R_arc_scene_ui_layout_Table 233
+typedef jobject (*func_mindustry_ui_dialogs_JoinDialog_marginBottom_float_R_arc_scene_ui_layout_Table)(jcontext ctx, jobject self, jfloat param0);
+#define VTABLE_mindustry_ui_dialogs_JoinDialog_marginRight_float_R_arc_scene_ui_layout_Table 234
+typedef jobject (*func_mindustry_ui_dialogs_JoinDialog_marginRight_float_R_arc_scene_ui_layout_Table)(jcontext ctx, jobject self, jfloat param0);
+#define VTABLE_mindustry_ui_dialogs_JoinDialog_align_int_R_arc_scene_ui_layout_Table 235
+typedef jobject (*func_mindustry_ui_dialogs_JoinDialog_align_int_R_arc_scene_ui_layout_Table)(jcontext ctx, jobject self, jint param0);
+#define VTABLE_mindustry_ui_dialogs_JoinDialog_center_R_arc_scene_ui_layout_Table 236
+typedef jobject (*func_mindustry_ui_dialogs_JoinDialog_center_R_arc_scene_ui_layout_Table)(jcontext ctx, jobject self);
+#define VTABLE_mindustry_ui_dialogs_JoinDialog_top_R_arc_scene_ui_layout_Table 237
+typedef jobject (*func_mindustry_ui_dialogs_JoinDialog_top_R_arc_scene_ui_layout_Table)(jcontext ctx, jobject self);
+#define VTABLE_mindustry_ui_dialogs_JoinDialog_left_R_arc_scene_ui_layout_Table 238
+typedef jobject (*func_mindustry_ui_dialogs_JoinDialog_left_R_arc_scene_ui_layout_Table)(jcontext ctx, jobject self);
+#define VTABLE_mindustry_ui_dialogs_JoinDialog_bottom_R_arc_scene_ui_layout_Table 239
+typedef jobject (*func_mindustry_ui_dialogs_JoinDialog_bottom_R_arc_scene_ui_layout_Table)(jcontext ctx, jobject self);
+#define VTABLE_mindustry_ui_dialogs_JoinDialog_right_R_arc_scene_ui_layout_Table 240
+typedef jobject (*func_mindustry_ui_dialogs_JoinDialog_right_R_arc_scene_ui_layout_Table)(jcontext ctx, jobject self);
+#define VTABLE_mindustry_ui_dialogs_JoinDialog_getMarginTop_R_float 241
+typedef jfloat (*func_mindustry_ui_dialogs_JoinDialog_getMarginTop_R_float)(jcontext ctx, jobject self);
+#define VTABLE_mindustry_ui_dialogs_JoinDialog_getMarginLeft_R_float 242
+typedef jfloat (*func_mindustry_ui_dialogs_JoinDialog_getMarginLeft_R_float)(jcontext ctx, jobject self);
+#define VTABLE_mindustry_ui_dialogs_JoinDialog_getMarginBottom_R_float 243
+typedef jfloat (*func_mindustry_ui_dialogs_JoinDialog_getMarginBottom_R_float)(jcontext ctx, jobject self);
+#define VTABLE_mindustry_ui_dialogs_JoinDialog_getMarginRight_R_float 244
+typedef jfloat (*func_mindustry_ui_dialogs_JoinDialog_getMarginRight_R_float)(jcontext ctx, jobject self);
+#define VTABLE_mindustry_ui_dialogs_JoinDialog_getAlign_R_int 245
+typedef jint (*func_mindustry_ui_dialogs_JoinDialog_getAlign_R_int)(jcontext ctx, jobject self);
+#define VTABLE_mindustry_ui_dialogs_JoinDialog_getRow_float_R_int 246
+typedef jint (*func_mindustry_ui_dialogs_JoinDialog_getRow_float_R_int)(jcontext ctx, jobject self, jfloat param0);
+#define VTABLE_mindustry_ui_dialogs_JoinDialog_setRound_boolean 247
+typedef void (*func_mindustry_ui_dialogs_JoinDialog_setRound_boolean)(jcontext ctx, jobject self, jbool param0);
+#define VTABLE_mindustry_ui_dialogs_JoinDialog_getRows_R_int 248
+typedef jint (*func_mindustry_ui_dialogs_JoinDialog_getRows_R_int)(jcontext ctx, jobject self);
+#define VTABLE_mindustry_ui_dialogs_JoinDialog_getColumns_R_int 249
+typedef jint (*func_mindustry_ui_dialogs_JoinDialog_getColumns_R_int)(jcontext ctx, jobject self);
+#define VTABLE_mindustry_ui_dialogs_JoinDialog_getRowHeight_int_R_float 250
+typedef jfloat (*func_mindustry_ui_dialogs_JoinDialog_getRowHeight_int_R_float)(jcontext ctx, jobject self, jint param0);
+#define VTABLE_mindustry_ui_dialogs_JoinDialog_getColumnWidth_int_R_float 251
+typedef jfloat (*func_mindustry_ui_dialogs_JoinDialog_getColumnWidth_int_R_float)(jcontext ctx, jobject self, jint param0);
+#define VTABLE_mindustry_ui_dialogs_JoinDialog_ensureSize_Array1_float_int_R_Array1_float 252
+typedef jobject (*func_mindustry_ui_dialogs_JoinDialog_ensureSize_Array1_float_int_R_Array1_float)(jcontext ctx, jobject self, jobject param0, jint param1);
+#define VTABLE_mindustry_ui_dialogs_JoinDialog_computeSize 253
+typedef void (*func_mindustry_ui_dialogs_JoinDialog_computeSize)(jcontext ctx, jobject self);
+#define VTABLE_mindustry_ui_dialogs_JoinDialog_layout_float_float_float_float 254
+typedef void (*func_mindustry_ui_dialogs_JoinDialog_layout_float_float_float_float)(jcontext ctx, jobject self, jfloat param0, jfloat param1, jfloat param2, jfloat param3);
+#define VTABLE_mindustry_ui_dialogs_JoinDialog_getStyle_R_arc_scene_ui_Dialog$DialogStyle 255
+typedef jobject (*func_mindustry_ui_dialogs_JoinDialog_getStyle_R_arc_scene_ui_Dialog$DialogStyle)(jcontext ctx, jobject self);
+#define VTABLE_mindustry_ui_dialogs_JoinDialog_setStyle_arc_scene_ui_Dialog$DialogStyle 256
+typedef void (*func_mindustry_ui_dialogs_JoinDialog_setStyle_arc_scene_ui_Dialog$DialogStyle)(jcontext ctx, jobject self, jobject param0);
+#define VTABLE_mindustry_ui_dialogs_JoinDialog_keepWithinStage 257
+typedef void (*func_mindustry_ui_dialogs_JoinDialog_keepWithinStage)(jcontext ctx, jobject self);
+#define VTABLE_mindustry_ui_dialogs_JoinDialog_drawStageBackground_float_float_float_float 258
+typedef void (*func_mindustry_ui_dialogs_JoinDialog_drawStageBackground_float_float_float_float)(jcontext ctx, jobject self, jfloat param0, jfloat param1, jfloat param2, jfloat param3);
+#define VTABLE_mindustry_ui_dialogs_JoinDialog_centerWindow 259
+typedef void (*func_mindustry_ui_dialogs_JoinDialog_centerWindow)(jcontext ctx, jobject self);
+#define VTABLE_mindustry_ui_dialogs_JoinDialog_isMovable_R_boolean 260
+typedef jbool (*func_mindustry_ui_dialogs_JoinDialog_isMovable_R_boolean)(jcontext ctx, jobject self);
+#define VTABLE_mindustry_ui_dialogs_JoinDialog_setMovable_boolean 261
+typedef void (*func_mindustry_ui_dialogs_JoinDialog_setMovable_boolean)(jcontext ctx, jobject self, jbool param0);
+#define VTABLE_mindustry_ui_dialogs_JoinDialog_isModal_R_boolean 262
+typedef jbool (*func_mindustry_ui_dialogs_JoinDialog_isModal_R_boolean)(jcontext ctx, jobject self);
+#define VTABLE_mindustry_ui_dialogs_JoinDialog_setModal_boolean 263
+typedef void (*func_mindustry_ui_dialogs_JoinDialog_setModal_boolean)(jcontext ctx, jobject self, jbool param0);
+#define VTABLE_mindustry_ui_dialogs_JoinDialog_setKeepWithinStage_boolean 264
+typedef void (*func_mindustry_ui_dialogs_JoinDialog_setKeepWithinStage_boolean)(jcontext ctx, jobject self, jbool param0);
+#define VTABLE_mindustry_ui_dialogs_JoinDialog_isCentered_R_boolean 265
+typedef jbool (*func_mindustry_ui_dialogs_JoinDialog_isCentered_R_boolean)(jcontext ctx, jobject self);
+#define VTABLE_mindustry_ui_dialogs_JoinDialog_setCentered_boolean 266
+typedef void (*func_mindustry_ui_dialogs_JoinDialog_setCentered_boolean)(jcontext ctx, jobject self, jbool param0);
+#define VTABLE_mindustry_ui_dialogs_JoinDialog_isResizable_R_boolean 267
+typedef jbool (*func_mindustry_ui_dialogs_JoinDialog_isResizable_R_boolean)(jcontext ctx, jobject self);
+#define VTABLE_mindustry_ui_dialogs_JoinDialog_setResizable_boolean 268
+typedef void (*func_mindustry_ui_dialogs_JoinDialog_setResizable_boolean)(jcontext ctx, jobject self, jbool param0);
+#define VTABLE_mindustry_ui_dialogs_JoinDialog_setResizeBorder_int 269
+typedef void (*func_mindustry_ui_dialogs_JoinDialog_setResizeBorder_int)(jcontext ctx, jobject self, jint param0);
+#define VTABLE_mindustry_ui_dialogs_JoinDialog_isDragging_R_boolean 270
+typedef jbool (*func_mindustry_ui_dialogs_JoinDialog_isDragging_R_boolean)(jcontext ctx, jobject self);
+#define VTABLE_mindustry_ui_dialogs_JoinDialog_updateScrollFocus 271
+typedef void (*func_mindustry_ui_dialogs_JoinDialog_updateScrollFocus)(jcontext ctx, jobject self);
+#define VTABLE_mindustry_ui_dialogs_JoinDialog_shown_java_lang_Runnable 272
+typedef void (*func_mindustry_ui_dialogs_JoinDialog_shown_java_lang_Runnable)(jcontext ctx, jobject self, jobject param0);
+#define VTABLE_mindustry_ui_dialogs_JoinDialog_hidden_java_lang_Runnable 273
+typedef void (*func_mindustry_ui_dialogs_JoinDialog_hidden_java_lang_Runnable)(jcontext ctx, jobject self, jobject param0);
+#define VTABLE_mindustry_ui_dialogs_JoinDialog_resizedShown_java_lang_Runnable 274
+typedef void (*func_mindustry_ui_dialogs_JoinDialog_resizedShown_java_lang_Runnable)(jcontext ctx, jobject self, jobject param0);
+#define VTABLE_mindustry_ui_dialogs_JoinDialog_resized_java_lang_Runnable 275
+typedef void (*func_mindustry_ui_dialogs_JoinDialog_resized_java_lang_Runnable)(jcontext ctx, jobject self, jobject param0);
+#define VTABLE_mindustry_ui_dialogs_JoinDialog_resized_boolean_java_lang_Runnable 276
+typedef void (*func_mindustry_ui_dialogs_JoinDialog_resized_boolean_java_lang_Runnable)(jcontext ctx, jobject self, jbool param0, jobject param1);
+#define VTABLE_mindustry_ui_dialogs_JoinDialog_addCloseButton 277
+typedef void (*func_mindustry_ui_dialogs_JoinDialog_addCloseButton)(jcontext ctx, jobject self);
+#define VTABLE_mindustry_ui_dialogs_JoinDialog_closeOnBack 278
+typedef void (*func_mindustry_ui_dialogs_JoinDialog_closeOnBack)(jcontext ctx, jobject self);
+#define VTABLE_mindustry_ui_dialogs_JoinDialog_closeOnBack_java_lang_Runnable 279
+typedef void (*func_mindustry_ui_dialogs_JoinDialog_closeOnBack_java_lang_Runnable)(jcontext ctx, jobject self, jobject param0);
+#define VTABLE_mindustry_ui_dialogs_JoinDialog_isShown_R_boolean 280
+typedef jbool (*func_mindustry_ui_dialogs_JoinDialog_isShown_R_boolean)(jcontext ctx, jobject self);
+#define VTABLE_mindustry_ui_dialogs_JoinDialog_show_arc_scene_Scene_arc_scene_Action_R_arc_scene_ui_Dialog 281
+typedef jobject (*func_mindustry_ui_dialogs_JoinDialog_show_arc_scene_Scene_arc_scene_Action_R_arc_scene_ui_Dialog)(jcontext ctx, jobject self, jobject param0, jobject param1);
+#define VTABLE_mindustry_ui_dialogs_JoinDialog_toggle 282
+typedef void (*func_mindustry_ui_dialogs_JoinDialog_toggle)(jcontext ctx, jobject self);
+#define VTABLE_mindustry_ui_dialogs_JoinDialog_show_R_arc_scene_ui_Dialog 283
+typedef jobject (*func_mindustry_ui_dialogs_JoinDialog_show_R_arc_scene_ui_Dialog)(jcontext ctx, jobject self);
+#define VTABLE_mindustry_ui_dialogs_JoinDialog_show_arc_scene_Scene_R_arc_scene_ui_Dialog 284
+typedef jobject (*func_mindustry_ui_dialogs_JoinDialog_show_arc_scene_Scene_R_arc_scene_ui_Dialog)(jcontext ctx, jobject self, jobject param0);
+#define VTABLE_mindustry_ui_dialogs_JoinDialog_hide_arc_scene_Action 285
+typedef void (*func_mindustry_ui_dialogs_JoinDialog_hide_arc_scene_Action)(jcontext ctx, jobject self, jobject param0);
+#define VTABLE_mindustry_ui_dialogs_JoinDialog_hide 286
+typedef void (*func_mindustry_ui_dialogs_JoinDialog_hide)(jcontext ctx, jobject self);
+#define VTABLE_mindustry_ui_dialogs_JoinDialog_lambda$closeOnBack$1_java_lang_Runnable_arc_input_KeyCode 287
+typedef void (*func_mindustry_ui_dialogs_JoinDialog_lambda$closeOnBack$1_java_lang_Runnable_arc_input_KeyCode)(jcontext ctx, jobject self, jobject param0, jobject param1);
+#define VTABLE_mindustry_ui_dialogs_JoinDialog_lambda$updateScrollFocus$0_Array1_boolean 288
+typedef void (*func_mindustry_ui_dialogs_JoinDialog_lambda$updateScrollFocus$0_Array1_boolean)(jcontext ctx, jobject self, jobject param0);
+#define VTABLE_mindustry_ui_dialogs_JoinDialog_setTitleColor_arc_graphics_Color 289
+typedef void (*func_mindustry_ui_dialogs_JoinDialog_setTitleColor_arc_graphics_Color)(jcontext ctx, jobject self, jobject param0);
+#define VTABLE_mindustry_ui_dialogs_JoinDialog_makeButtonOverlay 290
+typedef void (*func_mindustry_ui_dialogs_JoinDialog_makeButtonOverlay)(jcontext ctx, jobject self);
+#define VTABLE_mindustry_ui_dialogs_JoinDialog_onResize_java_lang_Runnable 291
+typedef void (*func_mindustry_ui_dialogs_JoinDialog_onResize_java_lang_Runnable)(jcontext ctx, jobject self, jobject param0);
+#define VTABLE_mindustry_ui_dialogs_JoinDialog_addCloseListener 292
+typedef void (*func_mindustry_ui_dialogs_JoinDialog_addCloseListener)(jcontext ctx, jobject self);
+#define VTABLE_mindustry_ui_dialogs_JoinDialog_addCloseButton_float 293
+typedef void (*func_mindustry_ui_dialogs_JoinDialog_addCloseButton_float)(jcontext ctx, jobject self, jfloat param0);
+#define VTABLE_mindustry_ui_dialogs_JoinDialog_lambda$onResize$0_java_lang_Runnable_mindustry_game_EventType$ResizeEvent 294
+typedef void (*func_mindustry_ui_dialogs_JoinDialog_lambda$onResize$0_java_lang_Runnable_mindustry_game_EventType$ResizeEvent)(jcontext ctx, jobject self, jobject param0, jobject param1);
+#define VTABLE_mindustry_ui_dialogs_JoinDialog_lambda$new$1 295
+typedef void (*func_mindustry_ui_dialogs_JoinDialog_lambda$new$1)(jcontext ctx, jobject self);
+#define VTABLE_mindustry_ui_dialogs_JoinDialog_lambda$new$0 296
+typedef void (*func_mindustry_ui_dialogs_JoinDialog_lambda$new$0)(jcontext ctx, jobject self);
+#define VTABLE_mindustry_ui_dialogs_JoinDialog_refreshAll 297
+typedef void (*func_mindustry_ui_dialogs_JoinDialog_refreshAll)(jcontext ctx, jobject self);
+#define VTABLE_mindustry_ui_dialogs_JoinDialog_setupRemote 298
+typedef void (*func_mindustry_ui_dialogs_JoinDialog_setupRemote)(jcontext ctx, jobject self);
+#define VTABLE_mindustry_ui_dialogs_JoinDialog_moveRemote_mindustry_ui_dialogs_JoinDialog$Server_int 299
+typedef void (*func_mindustry_ui_dialogs_JoinDialog_moveRemote_mindustry_ui_dialogs_JoinDialog$Server_int)(jcontext ctx, jobject self, jobject param0, jint param1);
+#define VTABLE_mindustry_ui_dialogs_JoinDialog_refreshRemote 300
+typedef void (*func_mindustry_ui_dialogs_JoinDialog_refreshRemote)(jcontext ctx, jobject self);
+#define VTABLE_mindustry_ui_dialogs_JoinDialog_refreshServer_mindustry_ui_dialogs_JoinDialog$Server 301
+typedef void (*func_mindustry_ui_dialogs_JoinDialog_refreshServer_mindustry_ui_dialogs_JoinDialog$Server)(jcontext ctx, jobject self, jobject param0);
+#define VTABLE_mindustry_ui_dialogs_JoinDialog_setupServer_mindustry_ui_dialogs_JoinDialog$Server_mindustry_net_Host 302
+typedef void (*func_mindustry_ui_dialogs_JoinDialog_setupServer_mindustry_ui_dialogs_JoinDialog$Server_mindustry_net_Host)(jcontext ctx, jobject self, jobject param0, jobject param1);
+#define VTABLE_mindustry_ui_dialogs_JoinDialog_buildServer_mindustry_net_Host_arc_scene_ui_layout_Table_boolean_boolean 303
+typedef void (*func_mindustry_ui_dialogs_JoinDialog_buildServer_mindustry_net_Host_arc_scene_ui_layout_Table_boolean_boolean)(jcontext ctx, jobject self, jobject param0, jobject param1, jbool param2, jbool param3);
+#define VTABLE_mindustry_ui_dialogs_JoinDialog_setup 304
+typedef void (*func_mindustry_ui_dialogs_JoinDialog_setup)(jcontext ctx, jobject self);
+#define VTABLE_mindustry_ui_dialogs_JoinDialog_section_java_lang_String_arc_scene_ui_layout_Table_boolean 305
+typedef void (*func_mindustry_ui_dialogs_JoinDialog_section_java_lang_String_arc_scene_ui_layout_Table_boolean)(jcontext ctx, jobject self, jobject param0, jobject param1, jbool param2);
+#define VTABLE_mindustry_ui_dialogs_JoinDialog_refreshLocal 306
+typedef void (*func_mindustry_ui_dialogs_JoinDialog_refreshLocal)(jcontext ctx, jobject self);
+#define VTABLE_mindustry_ui_dialogs_JoinDialog_refreshCommunity 307
+typedef void (*func_mindustry_ui_dialogs_JoinDialog_refreshCommunity)(jcontext ctx, jobject self);
+#define VTABLE_mindustry_ui_dialogs_JoinDialog_addHeader_Array1_arc_scene_ui_layout_Table_mindustry_net_ServerGroup_boolean_boolean_boolean 308
+typedef void (*func_mindustry_ui_dialogs_JoinDialog_addHeader_Array1_arc_scene_ui_layout_Table_mindustry_net_ServerGroup_boolean_boolean_boolean)(jcontext ctx, jobject self, jobject param0, jobject param1, jbool param2, jbool param3, jbool param4);
+#define VTABLE_mindustry_ui_dialogs_JoinDialog_columns_R_int 309
+typedef jint (*func_mindustry_ui_dialogs_JoinDialog_columns_R_int)(jcontext ctx, jobject self);
+#define VTABLE_mindustry_ui_dialogs_JoinDialog_addCommunityHost_mindustry_net_Host_arc_scene_ui_layout_Table 310
+typedef void (*func_mindustry_ui_dialogs_JoinDialog_addCommunityHost_mindustry_net_Host_arc_scene_ui_layout_Table)(jcontext ctx, jobject self, jobject param0, jobject param1);
+#define VTABLE_mindustry_ui_dialogs_JoinDialog_finishLocalHosts 311
+typedef void (*func_mindustry_ui_dialogs_JoinDialog_finishLocalHosts)(jcontext ctx, jobject self);
+#define VTABLE_mindustry_ui_dialogs_JoinDialog_addLocalHost_mindustry_net_Host 312
+typedef void (*func_mindustry_ui_dialogs_JoinDialog_addLocalHost_mindustry_net_Host)(jcontext ctx, jobject self, jobject param0);
+#define VTABLE_mindustry_ui_dialogs_JoinDialog_connect_java_lang_String_int 313
+typedef void (*func_mindustry_ui_dialogs_JoinDialog_connect_java_lang_String_int)(jcontext ctx, jobject self, jobject param0, jint param1);
+#define VTABLE_mindustry_ui_dialogs_JoinDialog_reconnect 314
+typedef void (*func_mindustry_ui_dialogs_JoinDialog_reconnect)(jcontext ctx, jobject self);
+#define VTABLE_mindustry_ui_dialogs_JoinDialog_safeConnect_java_lang_String_int_int 315
+typedef void (*func_mindustry_ui_dialogs_JoinDialog_safeConnect_java_lang_String_int_int)(jcontext ctx, jobject self, jobject param0, jint param1, jint param2);
+#define VTABLE_mindustry_ui_dialogs_JoinDialog_targetWidth_R_float 316
+typedef jfloat (*func_mindustry_ui_dialogs_JoinDialog_targetWidth_R_float)(jcontext ctx, jobject self);
+#define VTABLE_mindustry_ui_dialogs_JoinDialog_loadServers 317
+typedef void (*func_mindustry_ui_dialogs_JoinDialog_loadServers)(jcontext ctx, jobject self);
+#define VTABLE_mindustry_ui_dialogs_JoinDialog_saveServers 318
+typedef void (*func_mindustry_ui_dialogs_JoinDialog_saveServers)(jcontext ctx, jobject self);
+#define VTABLE_mindustry_ui_dialogs_JoinDialog_getVersionString_mindustry_net_Host_R_java_lang_String 319
+typedef jobject (*func_mindustry_ui_dialogs_JoinDialog_getVersionString_mindustry_net_Host_R_java_lang_String)(jcontext ctx, jobject self, jobject param0);
+#define VTABLE_mindustry_ui_dialogs_JoinDialog_lambda$reconnect$3 320
+typedef void (*func_mindustry_ui_dialogs_JoinDialog_lambda$reconnect$3)(jcontext ctx, jobject self);
+#define VTABLE_mindustry_ui_dialogs_JoinDialog_lambda$reconnect$0 321
+typedef void (*func_mindustry_ui_dialogs_JoinDialog_lambda$reconnect$0)(jcontext ctx, jobject self);
+#define VTABLE_mindustry_ui_dialogs_JoinDialog_lambda$reconnect$1_mindustry_net_Host 322
+typedef void (*func_mindustry_ui_dialogs_JoinDialog_lambda$reconnect$1_mindustry_net_Host)(jcontext ctx, jobject self, jobject param0);
+#define VTABLE_mindustry_ui_dialogs_JoinDialog_lambda$connect$1_java_lang_String_int 323
+typedef void (*func_mindustry_ui_dialogs_JoinDialog_lambda$connect$1_java_lang_String_int)(jcontext ctx, jobject self, jobject param0, jint param1);
+#define VTABLE_mindustry_ui_dialogs_JoinDialog_lambda$connect$2 324
+typedef void (*func_mindustry_ui_dialogs_JoinDialog_lambda$connect$2)(jcontext ctx, jobject self);
+#define VTABLE_mindustry_ui_dialogs_JoinDialog_lambda$addLocalHost$1_mindustry_net_Host 325
+typedef void (*func_mindustry_ui_dialogs_JoinDialog_lambda$addLocalHost$1_mindustry_net_Host)(jcontext ctx, jobject self, jobject param0);
+#define VTABLE_mindustry_ui_dialogs_JoinDialog_lambda$addLocalHost$0_mindustry_net_Host_arc_scene_ui_Button 326
+typedef void (*func_mindustry_ui_dialogs_JoinDialog_lambda$addLocalHost$0_mindustry_net_Host_arc_scene_ui_Button)(jcontext ctx, jobject self, jobject param0, jobject param1);
+#define VTABLE_mindustry_ui_dialogs_JoinDialog_lambda$addCommunityHost$4_mindustry_net_Host 327
+typedef void (*func_mindustry_ui_dialogs_JoinDialog_lambda$addCommunityHost$4_mindustry_net_Host)(jcontext ctx, jobject self, jobject param0);
+#define VTABLE_mindustry_ui_dialogs_JoinDialog_lambda$addCommunityHost$1_Array1_arc_scene_ui_Button_mindustry_net_Host 328
+typedef void (*func_mindustry_ui_dialogs_JoinDialog_lambda$addCommunityHost$1_Array1_arc_scene_ui_Button_mindustry_net_Host)(jcontext ctx, jobject self, jobject param0, jobject param1);
+#define VTABLE_mindustry_ui_dialogs_JoinDialog_lambda$addCommunityHost$2_mindustry_net_Host 329
+typedef void (*func_mindustry_ui_dialogs_JoinDialog_lambda$addCommunityHost$2_mindustry_net_Host)(jcontext ctx, jobject self, jobject param0);
+#define VTABLE_mindustry_ui_dialogs_JoinDialog_lambda$addHeader$3_mindustry_net_ServerGroup_boolean_boolean_Array1_arc_scene_ui_layout_Table_arc_scene_ui_layout_Table 330
+typedef void (*func_mindustry_ui_dialogs_JoinDialog_lambda$addHeader$3_mindustry_net_ServerGroup_boolean_boolean_Array1_arc_scene_ui_layout_Table_arc_scene_ui_layout_Table)(jcontext ctx, jobject self, jobject param0, jbool param1, jbool param2, jobject param3, jobject param4);
+#define VTABLE_mindustry_ui_dialogs_JoinDialog_lambda$addHeader$5_mindustry_net_ServerGroup_Array1_arc_scene_ui_ImageButton_Array1_arc_scene_ui_layout_Table 331
+typedef void (*func_mindustry_ui_dialogs_JoinDialog_lambda$addHeader$5_mindustry_net_ServerGroup_Array1_arc_scene_ui_ImageButton_Array1_arc_scene_ui_layout_Table)(jcontext ctx, jobject self, jobject param0, jobject param1, jobject param2);
+#define VTABLE_mindustry_ui_dialogs_JoinDialog_lambda$refreshCommunity$0_int_mindustry_net_ServerGroup_Array1_arc_scene_ui_layout_Table_boolean_boolean_mindustry_net_Host 332
+typedef void (*func_mindustry_ui_dialogs_JoinDialog_lambda$refreshCommunity$0_int_mindustry_net_ServerGroup_Array1_arc_scene_ui_layout_Table_boolean_boolean_mindustry_net_Host)(jcontext ctx, jobject self, jint param0, jobject param1, jobject param2, jbool param3, jbool param4, jobject param5);
+#define VTABLE_mindustry_ui_dialogs_JoinDialog_lambda$refreshCommunity$1 333
+typedef void (*func_mindustry_ui_dialogs_JoinDialog_lambda$refreshCommunity$1)(jcontext ctx, jobject self);
+#define VTABLE_mindustry_ui_dialogs_JoinDialog_lambda$section$9_arc_scene_ui_layout_Table 334
+typedef void (*func_mindustry_ui_dialogs_JoinDialog_lambda$section$9_arc_scene_ui_layout_Table)(jcontext ctx, jobject self, jobject param0);
+#define VTABLE_mindustry_ui_dialogs_JoinDialog_lambda$section$10_java_lang_String 335
+typedef void (*func_mindustry_ui_dialogs_JoinDialog_lambda$section$10_java_lang_String)(jcontext ctx, jobject self, jobject param0);
+#define VTABLE_mindustry_ui_dialogs_JoinDialog_lambda$section$0_java_lang_String_boolean_arc_scene_ui_layout_Collapser_arc_scene_ui_layout_Table 336
+typedef void (*func_mindustry_ui_dialogs_JoinDialog_lambda$section$0_java_lang_String_boolean_arc_scene_ui_layout_Collapser_arc_scene_ui_layout_Table)(jcontext ctx, jobject self, jobject param0, jbool param1, jobject param2, jobject param3);
+#define VTABLE_mindustry_ui_dialogs_JoinDialog_lambda$section$6_arc_scene_ui_ImageButton 337
+typedef void (*func_mindustry_ui_dialogs_JoinDialog_lambda$section$6_arc_scene_ui_ImageButton)(jcontext ctx, jobject self, jobject param0);
+#define VTABLE_mindustry_ui_dialogs_JoinDialog_lambda$section$5 338
+typedef void (*func_mindustry_ui_dialogs_JoinDialog_lambda$section$5)(jcontext ctx, jobject self);
+#define VTABLE_mindustry_ui_dialogs_JoinDialog_lambda$section$3_arc_scene_ui_layout_Table 339
+typedef void (*func_mindustry_ui_dialogs_JoinDialog_lambda$section$3_arc_scene_ui_layout_Table)(jcontext ctx, jobject self, jobject param0);
+#define VTABLE_mindustry_ui_dialogs_JoinDialog_lambda$section$4_R_java_lang_CharSequence 340
+typedef jobject (*func_mindustry_ui_dialogs_JoinDialog_lambda$section$4_R_java_lang_CharSequence)(jcontext ctx, jobject self);
+#define VTABLE_mindustry_ui_dialogs_JoinDialog_lambda$section$2_arc_scene_ui_ImageButton 341
+typedef void (*func_mindustry_ui_dialogs_JoinDialog_lambda$section$2_arc_scene_ui_ImageButton)(jcontext ctx, jobject self, jobject param0);
+#define VTABLE_mindustry_ui_dialogs_JoinDialog_lambda$section$1 342
+typedef void (*func_mindustry_ui_dialogs_JoinDialog_lambda$section$1)(jcontext ctx, jobject self);
+#define VTABLE_mindustry_ui_dialogs_JoinDialog_lambda$refreshServer$1_mindustry_ui_dialogs_JoinDialog$Server_mindustry_net_Host 343
+typedef void (*func_mindustry_ui_dialogs_JoinDialog_lambda$refreshServer$1_mindustry_ui_dialogs_JoinDialog$Server_mindustry_net_Host)(jcontext ctx, jobject self, jobject param0, jobject param1);
+#define VTABLE_mindustry_ui_dialogs_JoinDialog_lambda$setupRemote$6_mindustry_ui_dialogs_JoinDialog$Server 344
+typedef void (*func_mindustry_ui_dialogs_JoinDialog_lambda$setupRemote$6_mindustry_ui_dialogs_JoinDialog$Server)(jcontext ctx, jobject self, jobject param0);
+#define VTABLE_mindustry_ui_dialogs_JoinDialog_lambda$setupRemote$7_mindustry_ui_dialogs_JoinDialog$Server 345
+typedef void (*func_mindustry_ui_dialogs_JoinDialog_lambda$setupRemote$7_mindustry_ui_dialogs_JoinDialog$Server)(jcontext ctx, jobject self, jobject param0);
+#define VTABLE_mindustry_ui_dialogs_JoinDialog_lambda$setupRemote$5_mindustry_ui_dialogs_JoinDialog$Server 346
+typedef void (*func_mindustry_ui_dialogs_JoinDialog_lambda$setupRemote$5_mindustry_ui_dialogs_JoinDialog$Server)(jcontext ctx, jobject self, jobject param0);
+#define VTABLE_mindustry_ui_dialogs_JoinDialog_lambda$setupRemote$4_mindustry_ui_dialogs_JoinDialog$Server 347
+typedef void (*func_mindustry_ui_dialogs_JoinDialog_lambda$setupRemote$4_mindustry_ui_dialogs_JoinDialog$Server)(jcontext ctx, jobject self, jobject param0);
+#define VTABLE_mindustry_ui_dialogs_JoinDialog_lambda$setupRemote$3_mindustry_ui_dialogs_JoinDialog$Server 348
+typedef void (*func_mindustry_ui_dialogs_JoinDialog_lambda$setupRemote$3_mindustry_ui_dialogs_JoinDialog$Server)(jcontext ctx, jobject self, jobject param0);
+#define VTABLE_mindustry_ui_dialogs_JoinDialog_lambda$setupRemote$2_mindustry_ui_dialogs_JoinDialog$Server 349
+typedef void (*func_mindustry_ui_dialogs_JoinDialog_lambda$setupRemote$2_mindustry_ui_dialogs_JoinDialog$Server)(jcontext ctx, jobject self, jobject param0);
+#define VTABLE_mindustry_ui_dialogs_JoinDialog_lambda$setupRemote$1_Array1_arc_scene_ui_Button_mindustry_ui_dialogs_JoinDialog$Server 350
+typedef void (*func_mindustry_ui_dialogs_JoinDialog_lambda$setupRemote$1_Array1_arc_scene_ui_Button_mindustry_ui_dialogs_JoinDialog$Server)(jcontext ctx, jobject self, jobject param0, jobject param1);
+#define VTABLE_mindustry_ui_dialogs_JoinDialog_lambda$new$9 351
+typedef void (*func_mindustry_ui_dialogs_JoinDialog_lambda$new$9)(jcontext ctx, jobject self);
+#define VTABLE_mindustry_ui_dialogs_JoinDialog_lambda$new$6 352
+typedef void (*func_mindustry_ui_dialogs_JoinDialog_lambda$new$6)(jcontext ctx, jobject self);
+#define VTABLE_mindustry_ui_dialogs_JoinDialog_lambda$new$5_arc_scene_ui_TextField 353
+typedef void (*func_mindustry_ui_dialogs_JoinDialog_lambda$new$5_arc_scene_ui_TextField)(jcontext ctx, jobject self, jobject param0);
+#define VTABLE_mindustry_ui_dialogs_JoinDialog_lambda$new$3 354
+typedef void (*func_mindustry_ui_dialogs_JoinDialog_lambda$new$3)(jcontext ctx, jobject self);
+
+void mark_mindustry_ui_dialogs_JoinDialog(jobject object, jint mark, jint depth);
+void clinit_mindustry_ui_dialogs_JoinDialog(jcontext ctx);
+void init_mindustry_ui_dialogs_JoinDialog(jcontext ctx, jobject self);
+void M_mindustry_ui_dialogs_JoinDialog_refreshAll(jcontext ctx, jobject self);
+void M_mindustry_ui_dialogs_JoinDialog_setupRemote(jcontext ctx, jobject self);
+void M_mindustry_ui_dialogs_JoinDialog_moveRemote_mindustry_ui_dialogs_JoinDialog$Server_int(jcontext ctx, jobject self, jobject param0, jint param1);
+void M_mindustry_ui_dialogs_JoinDialog_refreshRemote(jcontext ctx, jobject self);
+void M_mindustry_ui_dialogs_JoinDialog_refreshServer_mindustry_ui_dialogs_JoinDialog$Server(jcontext ctx, jobject self, jobject param0);
+void M_mindustry_ui_dialogs_JoinDialog_setupServer_mindustry_ui_dialogs_JoinDialog$Server_mindustry_net_Host(jcontext ctx, jobject self, jobject param0, jobject param1);
+void M_mindustry_ui_dialogs_JoinDialog_buildServer_mindustry_net_Host_arc_scene_ui_layout_Table_boolean_boolean(jcontext ctx, jobject self, jobject param0, jobject param1, jbool param2, jbool param3);
+void M_mindustry_ui_dialogs_JoinDialog_setup(jcontext ctx, jobject self);
+void M_mindustry_ui_dialogs_JoinDialog_section_java_lang_String_arc_scene_ui_layout_Table_boolean(jcontext ctx, jobject self, jobject param0, jobject param1, jbool param2);
+void M_mindustry_ui_dialogs_JoinDialog_refreshLocal(jcontext ctx, jobject self);
+void M_mindustry_ui_dialogs_JoinDialog_refreshCommunity(jcontext ctx, jobject self);
+void M_mindustry_ui_dialogs_JoinDialog_addHeader_Array1_arc_scene_ui_layout_Table_mindustry_net_ServerGroup_boolean_boolean_boolean(jcontext ctx, jobject self, jobject param0, jobject param1, jbool param2, jbool param3, jbool param4);
+jint M_mindustry_ui_dialogs_JoinDialog_columns_R_int(jcontext ctx, jobject self);
+void M_mindustry_ui_dialogs_JoinDialog_addCommunityHost_mindustry_net_Host_arc_scene_ui_layout_Table(jcontext ctx, jobject self, jobject param0, jobject param1);
+void M_mindustry_ui_dialogs_JoinDialog_finishLocalHosts(jcontext ctx, jobject self);
+void M_mindustry_ui_dialogs_JoinDialog_addLocalHost_mindustry_net_Host(jcontext ctx, jobject self, jobject param0);
+void M_mindustry_ui_dialogs_JoinDialog_connect_java_lang_String_int(jcontext ctx, jobject self, jobject param0, jint param1);
+void M_mindustry_ui_dialogs_JoinDialog_reconnect(jcontext ctx, jobject self);
+void M_mindustry_ui_dialogs_JoinDialog_safeConnect_java_lang_String_int_int(jcontext ctx, jobject self, jobject param0, jint param1, jint param2);
+jfloat M_mindustry_ui_dialogs_JoinDialog_targetWidth_R_float(jcontext ctx, jobject self);
+void M_mindustry_ui_dialogs_JoinDialog_loadServers(jcontext ctx, jobject self);
+void SM_mindustry_ui_dialogs_JoinDialog_fetchServers(jcontext ctx);
+void SM_mindustry_ui_dialogs_JoinDialog_fetchServers_Array1_java_lang_String_int(jcontext ctx, jobject param0, jint param1);
+jobject SM_mindustry_ui_dialogs_JoinDialog_parseServerString_java_lang_String_R_arc_struct_Seq(jcontext ctx, jobject param0);
+void M_mindustry_ui_dialogs_JoinDialog_saveServers(jcontext ctx, jobject self);
+jobject M_mindustry_ui_dialogs_JoinDialog_getVersionString_mindustry_net_Host_R_java_lang_String(jcontext ctx, jobject self, jobject param0);
+void SM_mindustry_ui_dialogs_JoinDialog_lambda$parseServerString$0_arc_struct_Seq_arc_util_serialization_Jval(jcontext ctx, jobject param0, jobject param1);
+void SM_mindustry_ui_dialogs_JoinDialog_lambda$fetchServers$1_arc_util_Http$HttpResponse(jcontext ctx, jobject param0);
+void SM_mindustry_ui_dialogs_JoinDialog_lambda$fetchServers$2_java_lang_String_arc_struct_Seq(jcontext ctx, jobject param0, jobject param1);
+jint SM_mindustry_ui_dialogs_JoinDialog_lambda$fetchServers$3_mindustry_net_ServerGroup_R_int(jcontext ctx, jobject param0);
+void SM_mindustry_ui_dialogs_JoinDialog_lambda$fetchServers$0_int_Array1_java_lang_String_java_lang_Throwable(jcontext ctx, jint param0, jobject param1, jobject param2);
+void M_mindustry_ui_dialogs_JoinDialog_lambda$reconnect$3(jcontext ctx, jobject self);
+void M_mindustry_ui_dialogs_JoinDialog_lambda$reconnect$0(jcontext ctx, jobject self);
+void SM_mindustry_ui_dialogs_JoinDialog_lambda$reconnect$2_java_lang_Exception(jcontext ctx, jobject param0);
+void M_mindustry_ui_dialogs_JoinDialog_lambda$reconnect$1_mindustry_net_Host(jcontext ctx, jobject self, jobject param0);
+void M_mindustry_ui_dialogs_JoinDialog_lambda$connect$1_java_lang_String_int(jcontext ctx, jobject self, jobject param0, jint param1);
+void M_mindustry_ui_dialogs_JoinDialog_lambda$connect$2(jcontext ctx, jobject self);
+void SM_mindustry_ui_dialogs_JoinDialog_lambda$connect$0(jcontext ctx);
+void M_mindustry_ui_dialogs_JoinDialog_lambda$addLocalHost$1_mindustry_net_Host(jcontext ctx, jobject self, jobject param0);
+void M_mindustry_ui_dialogs_JoinDialog_lambda$addLocalHost$0_mindustry_net_Host_arc_scene_ui_Button(jcontext ctx, jobject self, jobject param0, jobject param1);
+void SM_mindustry_ui_dialogs_JoinDialog_lambda$addCommunityHost$5_arc_scene_ui_layout_Table(jcontext ctx, jobject param0);
+void M_mindustry_ui_dialogs_JoinDialog_lambda$addCommunityHost$4_mindustry_net_Host(jcontext ctx, jobject self, jobject param0);
+void M_mindustry_ui_dialogs_JoinDialog_lambda$addCommunityHost$1_Array1_arc_scene_ui_Button_mindustry_net_Host(jcontext ctx, jobject self, jobject param0, jobject param1);
+void SM_mindustry_ui_dialogs_JoinDialog_lambda$addCommunityHost$3(jcontext ctx);
+void M_mindustry_ui_dialogs_JoinDialog_lambda$addCommunityHost$2_mindustry_net_Host(jcontext ctx, jobject self, jobject param0);
+void SM_mindustry_ui_dialogs_JoinDialog_lambda$addCommunityHost$0_arc_scene_ui_Button(jcontext ctx, jobject param0);
+void M_mindustry_ui_dialogs_JoinDialog_lambda$addHeader$3_mindustry_net_ServerGroup_boolean_boolean_Array1_arc_scene_ui_layout_Table_arc_scene_ui_layout_Table(jcontext ctx, jobject self, jobject param0, jbool param1, jbool param2, jobject param3, jobject param4);
+void SM_mindustry_ui_dialogs_JoinDialog_lambda$addHeader$6_mindustry_net_ServerGroup_arc_scene_ui_layout_Table(jcontext ctx, jobject param0, jobject param1);
+jobject SM_mindustry_ui_dialogs_JoinDialog_lambda$addHeader$7_mindustry_net_ServerGroup_R_java_lang_CharSequence(jcontext ctx, jobject param0);
+void M_mindustry_ui_dialogs_JoinDialog_lambda$addHeader$5_mindustry_net_ServerGroup_Array1_arc_scene_ui_ImageButton_Array1_arc_scene_ui_layout_Table(jcontext ctx, jobject self, jobject param0, jobject param1, jobject param2);
+void SM_mindustry_ui_dialogs_JoinDialog_lambda$addHeader$4_mindustry_net_ServerGroup_Array1_arc_scene_ui_ImageButton(jcontext ctx, jobject param0, jobject param1);
+jbool SM_mindustry_ui_dialogs_JoinDialog_lambda$addHeader$2_boolean_R_boolean(jcontext ctx, jbool param0);
+void SM_mindustry_ui_dialogs_JoinDialog_lambda$addHeader$1_boolean_arc_scene_ui_layout_Table(jcontext ctx, jbool param0, jobject param1);
+void SM_mindustry_ui_dialogs_JoinDialog_lambda$addHeader$0_Array1_arc_scene_ui_layout_Table_arc_scene_ui_layout_Table(jcontext ctx, jobject param0, jobject param1);
+void SM_mindustry_ui_dialogs_JoinDialog_lambda$refreshCommunity$3_java_lang_Exception(jcontext ctx, jobject param0);
+void M_mindustry_ui_dialogs_JoinDialog_lambda$refreshCommunity$0_int_mindustry_net_ServerGroup_Array1_arc_scene_ui_layout_Table_boolean_boolean_mindustry_net_Host(jcontext ctx, jobject self, jint param0, jobject param1, jobject param2, jbool param3, jbool param4, jobject param5);
+jfloat SM_mindustry_ui_dialogs_JoinDialog_lambda$refreshCommunity$2_arc_scene_Element_R_float(jcontext ctx, jobject param0);
+void M_mindustry_ui_dialogs_JoinDialog_lambda$refreshCommunity$1(jcontext ctx, jobject self);
+void SM_mindustry_ui_dialogs_JoinDialog_lambda$refreshLocal$0_arc_scene_ui_layout_Table(jcontext ctx, jobject param0);
+jobject SM_mindustry_ui_dialogs_JoinDialog_lambda$refreshLocal$1_R_java_lang_CharSequence(jcontext ctx);
+void M_mindustry_ui_dialogs_JoinDialog_lambda$section$9_arc_scene_ui_layout_Table(jcontext ctx, jobject self, jobject param0);
+void M_mindustry_ui_dialogs_JoinDialog_lambda$section$10_java_lang_String(jcontext ctx, jobject self, jobject param0);
+void M_mindustry_ui_dialogs_JoinDialog_lambda$section$0_java_lang_String_boolean_arc_scene_ui_layout_Collapser_arc_scene_ui_layout_Table(jcontext ctx, jobject self, jobject param0, jbool param1, jobject param2, jobject param3);
+void SM_mindustry_ui_dialogs_JoinDialog_lambda$section$8_arc_scene_ui_layout_Collapser_arc_scene_ui_ImageButton(jcontext ctx, jobject param0, jobject param1);
+void SM_mindustry_ui_dialogs_JoinDialog_lambda$section$7_arc_scene_ui_layout_Collapser_java_lang_String(jcontext ctx, jobject param0, jobject param1);
+void M_mindustry_ui_dialogs_JoinDialog_lambda$section$6_arc_scene_ui_ImageButton(jcontext ctx, jobject self, jobject param0);
+void M_mindustry_ui_dialogs_JoinDialog_lambda$section$5(jcontext ctx, jobject self);
+void M_mindustry_ui_dialogs_JoinDialog_lambda$section$3_arc_scene_ui_layout_Table(jcontext ctx, jobject self, jobject param0);
+jobject M_mindustry_ui_dialogs_JoinDialog_lambda$section$4_R_java_lang_CharSequence(jcontext ctx, jobject self);
+void M_mindustry_ui_dialogs_JoinDialog_lambda$section$2_arc_scene_ui_ImageButton(jcontext ctx, jobject self, jobject param0);
+void M_mindustry_ui_dialogs_JoinDialog_lambda$section$1(jcontext ctx, jobject self);
+void SM_mindustry_ui_dialogs_JoinDialog_lambda$setup$0_arc_scene_ui_layout_Table(jcontext ctx, jobject param0);
+void SM_mindustry_ui_dialogs_JoinDialog_lambda$setup$4_arc_scene_ui_ImageButton(jcontext ctx, jobject param0);
+void SM_mindustry_ui_dialogs_JoinDialog_lambda$setup$2(jcontext ctx);
+void SM_mindustry_ui_dialogs_JoinDialog_lambda$setup$3_arc_graphics_Color(jcontext ctx, jobject param0);
+void SM_mindustry_ui_dialogs_JoinDialog_lambda$setup$1_java_lang_String(jcontext ctx, jobject param0);
+void SM_mindustry_ui_dialogs_JoinDialog_lambda$buildServer$1_arc_graphics_Color_mindustry_net_Host_boolean_float_arc_scene_ui_layout_Table(jcontext ctx, jobject param0, jobject param1, jbool param2, jfloat param3, jobject param4);
+void SM_mindustry_ui_dialogs_JoinDialog_lambda$buildServer$0_arc_graphics_Color_mindustry_net_Host_java_lang_String_float_arc_scene_ui_layout_Table(jcontext ctx, jobject param0, jobject param1, jobject param2, jfloat param3, jobject param4);
+void SM_mindustry_ui_dialogs_JoinDialog_lambda$refreshServer$2_mindustry_ui_dialogs_JoinDialog$Server_java_lang_Exception(jcontext ctx, jobject param0, jobject param1);
+void M_mindustry_ui_dialogs_JoinDialog_lambda$refreshServer$1_mindustry_ui_dialogs_JoinDialog$Server_mindustry_net_Host(jcontext ctx, jobject self, jobject param0, jobject param1);
+jobject SM_mindustry_ui_dialogs_JoinDialog_lambda$refreshServer$0_R_java_lang_CharSequence(jcontext ctx);
+void SM_mindustry_ui_dialogs_JoinDialog_lambda$setupRemote$8_arc_scene_ui_layout_Table(jcontext ctx, jobject param0);
+void M_mindustry_ui_dialogs_JoinDialog_lambda$setupRemote$6_mindustry_ui_dialogs_JoinDialog$Server(jcontext ctx, jobject self, jobject param0);
+void M_mindustry_ui_dialogs_JoinDialog_lambda$setupRemote$7_mindustry_ui_dialogs_JoinDialog$Server(jcontext ctx, jobject self, jobject param0);
+void M_mindustry_ui_dialogs_JoinDialog_lambda$setupRemote$5_mindustry_ui_dialogs_JoinDialog$Server(jcontext ctx, jobject self, jobject param0);
+void M_mindustry_ui_dialogs_JoinDialog_lambda$setupRemote$4_mindustry_ui_dialogs_JoinDialog$Server(jcontext ctx, jobject self, jobject param0);
+void M_mindustry_ui_dialogs_JoinDialog_lambda$setupRemote$3_mindustry_ui_dialogs_JoinDialog$Server(jcontext ctx, jobject self, jobject param0);
+void M_mindustry_ui_dialogs_JoinDialog_lambda$setupRemote$2_mindustry_ui_dialogs_JoinDialog$Server(jcontext ctx, jobject self, jobject param0);
+void M_mindustry_ui_dialogs_JoinDialog_lambda$setupRemote$1_Array1_arc_scene_ui_Button_mindustry_ui_dialogs_JoinDialog$Server(jcontext ctx, jobject self, jobject param0, jobject param1);
+void SM_mindustry_ui_dialogs_JoinDialog_lambda$setupRemote$0_arc_scene_ui_Button(jcontext ctx, jobject param0);
+void M_mindustry_ui_dialogs_JoinDialog_lambda$new$9(jcontext ctx, jobject self);
+void M_mindustry_ui_dialogs_JoinDialog_lambda$new$6(jcontext ctx, jobject self);
+void SM_mindustry_ui_dialogs_JoinDialog_lambda$new$7(jcontext ctx);
+void SM_mindustry_ui_dialogs_JoinDialog_lambda$new$8(jcontext ctx);
+void M_mindustry_ui_dialogs_JoinDialog_lambda$new$5_arc_scene_ui_TextField(jcontext ctx, jobject self, jobject param0);
+jbool SM_mindustry_ui_dialogs_JoinDialog_lambda$new$4_arc_scene_ui_TextButton_R_boolean(jcontext ctx, jobject param0);
+void M_mindustry_ui_dialogs_JoinDialog_lambda$new$3(jcontext ctx, jobject self);
+void SM_mindustry_ui_dialogs_JoinDialog_lambda$new$2_java_lang_String(jcontext ctx, jobject param0);
+void SM_mindustry_ui_dialogs_JoinDialog_lambda$new$1(jcontext ctx);
+void M_mindustry_ui_dialogs_JoinDialog_lambda$new$0(jcontext ctx, jobject self);
+
+#ifdef __cplusplus
+}
+#endif
+
+#endif

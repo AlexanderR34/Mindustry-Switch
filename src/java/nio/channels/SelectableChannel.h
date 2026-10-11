@@ -1,0 +1,77 @@
+#ifndef HEADER_java_nio_channels_SelectableChannel
+#define HEADER_java_nio_channels_SelectableChannel
+
+#include "Clearwing.h"
+#include "java/nio/channels/spi/AbstractInterruptibleChannel.h"
+#include "java/nio/channels/Channel.h"
+
+#ifdef __cplusplus
+extern "C" {
+#endif
+
+typedef struct java_nio_channels_SelectableChannel {
+	java_nio_channels_spi_AbstractInterruptibleChannel parent;
+} java_nio_channels_SelectableChannel;
+
+extern Class class_java_nio_channels_SelectableChannel;
+
+
+#define VTABLE_java_nio_channels_SelectableChannel_hashCode_R_int 0
+typedef jint (*func_java_nio_channels_SelectableChannel_hashCode_R_int)(jcontext ctx, jobject self);
+#define VTABLE_java_nio_channels_SelectableChannel_equals_java_lang_Object_R_boolean 1
+typedef jbool (*func_java_nio_channels_SelectableChannel_equals_java_lang_Object_R_boolean)(jcontext ctx, jobject self, jobject param0);
+#define VTABLE_java_nio_channels_SelectableChannel_clone_R_java_lang_Object 2
+typedef jobject (*func_java_nio_channels_SelectableChannel_clone_R_java_lang_Object)(jcontext ctx, jobject self);
+#define VTABLE_java_nio_channels_SelectableChannel_getClass_R_java_lang_Class 3
+typedef jobject (*func_java_nio_channels_SelectableChannel_getClass_R_java_lang_Class)(jcontext ctx, jobject self);
+#define VTABLE_java_nio_channels_SelectableChannel_toString_R_java_lang_String 4
+typedef jobject (*func_java_nio_channels_SelectableChannel_toString_R_java_lang_String)(jcontext ctx, jobject self);
+#define VTABLE_java_nio_channels_SelectableChannel_finalize 5
+typedef void (*func_java_nio_channels_SelectableChannel_finalize)(jcontext ctx, jobject self);
+#define VTABLE_java_nio_channels_SelectableChannel_notify 6
+typedef void (*func_java_nio_channels_SelectableChannel_notify)(jcontext ctx, jobject self);
+#define VTABLE_java_nio_channels_SelectableChannel_notifyAll 7
+typedef void (*func_java_nio_channels_SelectableChannel_notifyAll)(jcontext ctx, jobject self);
+#define VTABLE_java_nio_channels_SelectableChannel_wait 8
+typedef void (*func_java_nio_channels_SelectableChannel_wait)(jcontext ctx, jobject self);
+#define VTABLE_java_nio_channels_SelectableChannel_wait_long 9
+typedef void (*func_java_nio_channels_SelectableChannel_wait_long)(jcontext ctx, jobject self, jlong param0);
+#define VTABLE_java_nio_channels_SelectableChannel_wait_long_int 10
+typedef void (*func_java_nio_channels_SelectableChannel_wait_long_int)(jcontext ctx, jobject self, jlong param0, jint param1);
+#define VTABLE_java_nio_channels_SelectableChannel_close 11
+typedef void (*func_java_nio_channels_SelectableChannel_close)(jcontext ctx, jobject self);
+#define VTABLE_java_nio_channels_SelectableChannel_isOpen_R_boolean 12
+typedef jbool (*func_java_nio_channels_SelectableChannel_isOpen_R_boolean)(jcontext ctx, jobject self);
+#define VTABLE_java_nio_channels_SelectableChannel_begin 13
+typedef void (*func_java_nio_channels_SelectableChannel_begin)(jcontext ctx, jobject self);
+#define VTABLE_java_nio_channels_SelectableChannel_end_boolean 14
+typedef void (*func_java_nio_channels_SelectableChannel_end_boolean)(jcontext ctx, jobject self, jbool param0);
+#define VTABLE_java_nio_channels_SelectableChannel_provider_R_java_nio_channels_spi_SelectorProvider 15
+typedef jobject (*func_java_nio_channels_SelectableChannel_provider_R_java_nio_channels_spi_SelectorProvider)(jcontext ctx, jobject self);
+#define VTABLE_java_nio_channels_SelectableChannel_validOps_R_int 16
+typedef jint (*func_java_nio_channels_SelectableChannel_validOps_R_int)(jcontext ctx, jobject self);
+#define VTABLE_java_nio_channels_SelectableChannel_isRegistered_R_boolean 17
+typedef jbool (*func_java_nio_channels_SelectableChannel_isRegistered_R_boolean)(jcontext ctx, jobject self);
+#define VTABLE_java_nio_channels_SelectableChannel_keyFor_java_nio_channels_Selector_R_java_nio_channels_SelectionKey 18
+typedef jobject (*func_java_nio_channels_SelectableChannel_keyFor_java_nio_channels_Selector_R_java_nio_channels_SelectionKey)(jcontext ctx, jobject self, jobject param0);
+#define VTABLE_java_nio_channels_SelectableChannel_register_java_nio_channels_Selector_int_java_lang_Object_R_java_nio_channels_SelectionKey 19
+typedef jobject (*func_java_nio_channels_SelectableChannel_register_java_nio_channels_Selector_int_java_lang_Object_R_java_nio_channels_SelectionKey)(jcontext ctx, jobject self, jobject param0, jint param1, jobject param2);
+#define VTABLE_java_nio_channels_SelectableChannel_register_java_nio_channels_Selector_int_R_java_nio_channels_SelectionKey 20
+typedef jobject (*func_java_nio_channels_SelectableChannel_register_java_nio_channels_Selector_int_R_java_nio_channels_SelectionKey)(jcontext ctx, jobject self, jobject param0, jint param1);
+#define VTABLE_java_nio_channels_SelectableChannel_configureBlocking_boolean_R_java_nio_channels_SelectableChannel 21
+typedef jobject (*func_java_nio_channels_SelectableChannel_configureBlocking_boolean_R_java_nio_channels_SelectableChannel)(jcontext ctx, jobject self, jbool param0);
+#define VTABLE_java_nio_channels_SelectableChannel_isBlocking_R_boolean 22
+typedef jbool (*func_java_nio_channels_SelectableChannel_isBlocking_R_boolean)(jcontext ctx, jobject self);
+#define VTABLE_java_nio_channels_SelectableChannel_blockingLock_R_java_lang_Object 23
+typedef jobject (*func_java_nio_channels_SelectableChannel_blockingLock_R_java_lang_Object)(jcontext ctx, jobject self);
+
+void mark_java_nio_channels_SelectableChannel(jobject object, jint mark, jint depth);
+void clinit_java_nio_channels_SelectableChannel(jcontext ctx);
+void init_java_nio_channels_SelectableChannel(jcontext ctx, jobject self);
+jobject M_java_nio_channels_SelectableChannel_register_java_nio_channels_Selector_int_R_java_nio_channels_SelectionKey(jcontext ctx, jobject self, jobject param0, jint param1);
+
+#ifdef __cplusplus
+}
+#endif
+
+#endif

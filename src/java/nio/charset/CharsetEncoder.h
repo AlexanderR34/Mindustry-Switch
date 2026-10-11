@@ -1,0 +1,61 @@
+#ifndef HEADER_java_nio_charset_CharsetEncoder
+#define HEADER_java_nio_charset_CharsetEncoder
+
+#include "Clearwing.h"
+#include "java/lang/Object.h"
+
+#ifdef __cplusplus
+extern "C" {
+#endif
+
+typedef struct java_nio_charset_CharsetEncoder {
+	java_lang_Object parent;
+} java_nio_charset_CharsetEncoder;
+
+extern Class class_java_nio_charset_CharsetEncoder;
+
+
+#define VTABLE_java_nio_charset_CharsetEncoder_hashCode_R_int 0
+typedef jint (*func_java_nio_charset_CharsetEncoder_hashCode_R_int)(jcontext ctx, jobject self);
+#define VTABLE_java_nio_charset_CharsetEncoder_equals_java_lang_Object_R_boolean 1
+typedef jbool (*func_java_nio_charset_CharsetEncoder_equals_java_lang_Object_R_boolean)(jcontext ctx, jobject self, jobject param0);
+#define VTABLE_java_nio_charset_CharsetEncoder_clone_R_java_lang_Object 2
+typedef jobject (*func_java_nio_charset_CharsetEncoder_clone_R_java_lang_Object)(jcontext ctx, jobject self);
+#define VTABLE_java_nio_charset_CharsetEncoder_getClass_R_java_lang_Class 3
+typedef jobject (*func_java_nio_charset_CharsetEncoder_getClass_R_java_lang_Class)(jcontext ctx, jobject self);
+#define VTABLE_java_nio_charset_CharsetEncoder_toString_R_java_lang_String 4
+typedef jobject (*func_java_nio_charset_CharsetEncoder_toString_R_java_lang_String)(jcontext ctx, jobject self);
+#define VTABLE_java_nio_charset_CharsetEncoder_finalize 5
+typedef void (*func_java_nio_charset_CharsetEncoder_finalize)(jcontext ctx, jobject self);
+#define VTABLE_java_nio_charset_CharsetEncoder_notify 6
+typedef void (*func_java_nio_charset_CharsetEncoder_notify)(jcontext ctx, jobject self);
+#define VTABLE_java_nio_charset_CharsetEncoder_notifyAll 7
+typedef void (*func_java_nio_charset_CharsetEncoder_notifyAll)(jcontext ctx, jobject self);
+#define VTABLE_java_nio_charset_CharsetEncoder_wait 8
+typedef void (*func_java_nio_charset_CharsetEncoder_wait)(jcontext ctx, jobject self);
+#define VTABLE_java_nio_charset_CharsetEncoder_wait_long 9
+typedef void (*func_java_nio_charset_CharsetEncoder_wait_long)(jcontext ctx, jobject self, jlong param0);
+#define VTABLE_java_nio_charset_CharsetEncoder_wait_long_int 10
+typedef void (*func_java_nio_charset_CharsetEncoder_wait_long_int)(jcontext ctx, jobject self, jlong param0, jint param1);
+#define VTABLE_java_nio_charset_CharsetEncoder_onMalformedInput_java_nio_charset_CodingErrorAction_R_java_nio_charset_CharsetEncoder 11
+typedef jobject (*func_java_nio_charset_CharsetEncoder_onMalformedInput_java_nio_charset_CodingErrorAction_R_java_nio_charset_CharsetEncoder)(jcontext ctx, jobject self, jobject param0);
+#define VTABLE_java_nio_charset_CharsetEncoder_onUnmappableCharacter_java_nio_charset_CodingErrorAction_R_java_nio_charset_CharsetEncoder 12
+typedef jobject (*func_java_nio_charset_CharsetEncoder_onUnmappableCharacter_java_nio_charset_CodingErrorAction_R_java_nio_charset_CharsetEncoder)(jcontext ctx, jobject self, jobject param0);
+#define VTABLE_java_nio_charset_CharsetEncoder_encode_java_nio_CharBuffer_java_nio_ByteBuffer_boolean_R_java_nio_charset_CoderResult 13
+typedef jobject (*func_java_nio_charset_CharsetEncoder_encode_java_nio_CharBuffer_java_nio_ByteBuffer_boolean_R_java_nio_charset_CoderResult)(jcontext ctx, jobject self, jobject param0, jobject param1, jbool param2);
+#define VTABLE_java_nio_charset_CharsetEncoder_encode_java_nio_CharBuffer_R_java_nio_ByteBuffer 14
+typedef jobject (*func_java_nio_charset_CharsetEncoder_encode_java_nio_CharBuffer_R_java_nio_ByteBuffer)(jcontext ctx, jobject self, jobject param0);
+
+void mark_java_nio_charset_CharsetEncoder(jobject object, jint mark, jint depth);
+void clinit_java_nio_charset_CharsetEncoder(jcontext ctx);
+void init_java_nio_charset_CharsetEncoder(jcontext ctx, jobject self);
+jobject M_java_nio_charset_CharsetEncoder_onMalformedInput_java_nio_charset_CodingErrorAction_R_java_nio_charset_CharsetEncoder(jcontext ctx, jobject self, jobject param0);
+jobject M_java_nio_charset_CharsetEncoder_onUnmappableCharacter_java_nio_charset_CodingErrorAction_R_java_nio_charset_CharsetEncoder(jcontext ctx, jobject self, jobject param0);
+jobject M_java_nio_charset_CharsetEncoder_encode_java_nio_CharBuffer_java_nio_ByteBuffer_boolean_R_java_nio_charset_CoderResult(jcontext ctx, jobject self, jobject param0, jobject param1, jbool param2);
+jobject M_java_nio_charset_CharsetEncoder_encode_java_nio_CharBuffer_R_java_nio_ByteBuffer(jcontext ctx, jobject self, jobject param0);
+
+#ifdef __cplusplus
+}
+#endif
+
+#endif

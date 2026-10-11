@@ -1,0 +1,662 @@
+#ifndef HEADER_mindustry_world_blocks_defense_Wall$WallBuild
+#define HEADER_mindustry_world_blocks_defense_Wall$WallBuild
+
+#include "Clearwing.h"
+#include "mindustry/gen/Building.h"
+
+#ifdef __cplusplus
+extern "C" {
+#endif
+
+typedef struct mindustry_world_blocks_defense_Wall$WallBuild {
+	mindustry_gen_Building parent;
+	jint F_autotileBits;
+	jfloat F_hit;
+	jref F_this$0;
+} mindustry_world_blocks_defense_Wall$WallBuild;
+
+extern Class class_mindustry_world_blocks_defense_Wall$WallBuild;
+
+
+#define VTABLE_mindustry_world_blocks_defense_Wall$WallBuild_hashCode_R_int 0
+typedef jint (*func_mindustry_world_blocks_defense_Wall$WallBuild_hashCode_R_int)(jcontext ctx, jobject self);
+#define VTABLE_mindustry_world_blocks_defense_Wall$WallBuild_equals_java_lang_Object_R_boolean 1
+typedef jbool (*func_mindustry_world_blocks_defense_Wall$WallBuild_equals_java_lang_Object_R_boolean)(jcontext ctx, jobject self, jobject param0);
+#define VTABLE_mindustry_world_blocks_defense_Wall$WallBuild_clone_R_java_lang_Object 2
+typedef jobject (*func_mindustry_world_blocks_defense_Wall$WallBuild_clone_R_java_lang_Object)(jcontext ctx, jobject self);
+#define VTABLE_mindustry_world_blocks_defense_Wall$WallBuild_getClass_R_java_lang_Class 3
+typedef jobject (*func_mindustry_world_blocks_defense_Wall$WallBuild_getClass_R_java_lang_Class)(jcontext ctx, jobject self);
+#define VTABLE_mindustry_world_blocks_defense_Wall$WallBuild_toString_R_java_lang_String 4
+typedef jobject (*func_mindustry_world_blocks_defense_Wall$WallBuild_toString_R_java_lang_String)(jcontext ctx, jobject self);
+#define VTABLE_mindustry_world_blocks_defense_Wall$WallBuild_finalize 5
+typedef void (*func_mindustry_world_blocks_defense_Wall$WallBuild_finalize)(jcontext ctx, jobject self);
+#define VTABLE_mindustry_world_blocks_defense_Wall$WallBuild_notify 6
+typedef void (*func_mindustry_world_blocks_defense_Wall$WallBuild_notify)(jcontext ctx, jobject self);
+#define VTABLE_mindustry_world_blocks_defense_Wall$WallBuild_notifyAll 7
+typedef void (*func_mindustry_world_blocks_defense_Wall$WallBuild_notifyAll)(jcontext ctx, jobject self);
+#define VTABLE_mindustry_world_blocks_defense_Wall$WallBuild_wait 8
+typedef void (*func_mindustry_world_blocks_defense_Wall$WallBuild_wait)(jcontext ctx, jobject self);
+#define VTABLE_mindustry_world_blocks_defense_Wall$WallBuild_wait_long 9
+typedef void (*func_mindustry_world_blocks_defense_Wall$WallBuild_wait_long)(jcontext ctx, jobject self, jlong param0);
+#define VTABLE_mindustry_world_blocks_defense_Wall$WallBuild_wait_long_int 10
+typedef void (*func_mindustry_world_blocks_defense_Wall$WallBuild_wait_long_int)(jcontext ctx, jobject self, jlong param0, jint param1);
+#define VTABLE_mindustry_world_blocks_defense_Wall$WallBuild_hitbox_arc_math_geom_Rect 11
+typedef void (*func_mindustry_world_blocks_defense_Wall$WallBuild_hitbox_arc_math_geom_Rect)(jcontext ctx, jobject self, jobject param0);
+#define VTABLE_mindustry_world_blocks_defense_Wall$WallBuild_getX_R_float 12
+typedef jfloat (*func_mindustry_world_blocks_defense_Wall$WallBuild_getX_R_float)(jcontext ctx, jobject self);
+#define VTABLE_mindustry_world_blocks_defense_Wall$WallBuild_getY_R_float 13
+typedef jfloat (*func_mindustry_world_blocks_defense_Wall$WallBuild_getY_R_float)(jcontext ctx, jobject self);
+#define VTABLE_mindustry_world_blocks_defense_Wall$WallBuild_angleTo_arc_math_geom_Position_R_float 14
+typedef jfloat (*func_mindustry_world_blocks_defense_Wall$WallBuild_angleTo_arc_math_geom_Position_R_float)(jcontext ctx, jobject self, jobject param0);
+#define VTABLE_mindustry_world_blocks_defense_Wall$WallBuild_angleTo_float_float_R_float 15
+typedef jfloat (*func_mindustry_world_blocks_defense_Wall$WallBuild_angleTo_float_float_R_float)(jcontext ctx, jobject self, jfloat param0, jfloat param1);
+#define VTABLE_mindustry_world_blocks_defense_Wall$WallBuild_dst2_arc_math_geom_Position_R_float 16
+typedef jfloat (*func_mindustry_world_blocks_defense_Wall$WallBuild_dst2_arc_math_geom_Position_R_float)(jcontext ctx, jobject self, jobject param0);
+#define VTABLE_mindustry_world_blocks_defense_Wall$WallBuild_dst_arc_math_geom_Position_R_float 17
+typedef jfloat (*func_mindustry_world_blocks_defense_Wall$WallBuild_dst_arc_math_geom_Position_R_float)(jcontext ctx, jobject self, jobject param0);
+#define VTABLE_mindustry_world_blocks_defense_Wall$WallBuild_dst_float_float_R_float 18
+typedef jfloat (*func_mindustry_world_blocks_defense_Wall$WallBuild_dst_float_float_R_float)(jcontext ctx, jobject self, jfloat param0, jfloat param1);
+#define VTABLE_mindustry_world_blocks_defense_Wall$WallBuild_dst2_float_float_R_float 19
+typedef jfloat (*func_mindustry_world_blocks_defense_Wall$WallBuild_dst2_float_float_R_float)(jcontext ctx, jobject self, jfloat param0, jfloat param1);
+#define VTABLE_mindustry_world_blocks_defense_Wall$WallBuild_within_arc_math_geom_Position_float_R_boolean 20
+typedef jbool (*func_mindustry_world_blocks_defense_Wall$WallBuild_within_arc_math_geom_Position_float_R_boolean)(jcontext ctx, jobject self, jobject param0, jfloat param1);
+#define VTABLE_mindustry_world_blocks_defense_Wall$WallBuild_within_float_float_float_R_boolean 21
+typedef jbool (*func_mindustry_world_blocks_defense_Wall$WallBuild_within_float_float_float_R_boolean)(jcontext ctx, jobject self, jfloat param0, jfloat param1, jfloat param2);
+#define VTABLE_mindustry_world_blocks_defense_Wall$WallBuild_isValid_R_boolean 22
+typedef jbool (*func_mindustry_world_blocks_defense_Wall$WallBuild_isValid_R_boolean)(jcontext ctx, jobject self);
+#define VTABLE_mindustry_world_blocks_defense_Wall$WallBuild_shouldAmbientSound_R_boolean 23
+typedef jbool (*func_mindustry_world_blocks_defense_Wall$WallBuild_shouldAmbientSound_R_boolean)(jcontext ctx, jobject self);
+#define VTABLE_mindustry_world_blocks_defense_Wall$WallBuild_getAmbientVolume_R_float 24
+typedef jfloat (*func_mindustry_world_blocks_defense_Wall$WallBuild_getAmbientVolume_R_float)(jcontext ctx, jobject self);
+#define VTABLE_mindustry_world_blocks_defense_Wall$WallBuild_getAmbientSound_R_arc_audio_Sound 25
+typedef jobject (*func_mindustry_world_blocks_defense_Wall$WallBuild_getAmbientSound_R_arc_audio_Sound)(jcontext ctx, jobject self);
+#define VTABLE_mindustry_world_blocks_defense_Wall$WallBuild_hitSize_R_float 26
+typedef jfloat (*func_mindustry_world_blocks_defense_Wall$WallBuild_hitSize_R_float)(jcontext ctx, jobject self);
+#define VTABLE_mindustry_world_blocks_defense_Wall$WallBuild_self_R_mindustry_gen_Entityc 27
+typedef jobject (*func_mindustry_world_blocks_defense_Wall$WallBuild_self_R_mindustry_gen_Entityc)(jcontext ctx, jobject self);
+#define VTABLE_mindustry_world_blocks_defense_Wall$WallBuild_as_R_java_lang_Object 28
+typedef jobject (*func_mindustry_world_blocks_defense_Wall$WallBuild_as_R_java_lang_Object)(jcontext ctx, jobject self);
+#define VTABLE_mindustry_world_blocks_defense_Wall$WallBuild_isAdded_R_boolean 29
+typedef jbool (*func_mindustry_world_blocks_defense_Wall$WallBuild_isAdded_R_boolean)(jcontext ctx, jobject self);
+#define VTABLE_mindustry_world_blocks_defense_Wall$WallBuild_isLocal_R_boolean 30
+typedef jbool (*func_mindustry_world_blocks_defense_Wall$WallBuild_isLocal_R_boolean)(jcontext ctx, jobject self);
+#define VTABLE_mindustry_world_blocks_defense_Wall$WallBuild_isRemote_R_boolean 31
+typedef jbool (*func_mindustry_world_blocks_defense_Wall$WallBuild_isRemote_R_boolean)(jcontext ctx, jobject self);
+#define VTABLE_mindustry_world_blocks_defense_Wall$WallBuild_serialize_R_boolean 32
+typedef jbool (*func_mindustry_world_blocks_defense_Wall$WallBuild_serialize_R_boolean)(jcontext ctx, jobject self);
+#define VTABLE_mindustry_world_blocks_defense_Wall$WallBuild_classId_R_int 33
+typedef jint (*func_mindustry_world_blocks_defense_Wall$WallBuild_classId_R_int)(jcontext ctx, jobject self);
+#define VTABLE_mindustry_world_blocks_defense_Wall$WallBuild_id_R_int 34
+typedef jint (*func_mindustry_world_blocks_defense_Wall$WallBuild_id_R_int)(jcontext ctx, jobject self);
+#define VTABLE_mindustry_world_blocks_defense_Wall$WallBuild_add 35
+typedef void (*func_mindustry_world_blocks_defense_Wall$WallBuild_add)(jcontext ctx, jobject self);
+#define VTABLE_mindustry_world_blocks_defense_Wall$WallBuild_afterRead 36
+typedef void (*func_mindustry_world_blocks_defense_Wall$WallBuild_afterRead)(jcontext ctx, jobject self);
+#define VTABLE_mindustry_world_blocks_defense_Wall$WallBuild_afterReadAll 37
+typedef void (*func_mindustry_world_blocks_defense_Wall$WallBuild_afterReadAll)(jcontext ctx, jobject self);
+#define VTABLE_mindustry_world_blocks_defense_Wall$WallBuild_beforeWrite 38
+typedef void (*func_mindustry_world_blocks_defense_Wall$WallBuild_beforeWrite)(jcontext ctx, jobject self);
+#define VTABLE_mindustry_world_blocks_defense_Wall$WallBuild_id_int 39
+typedef void (*func_mindustry_world_blocks_defense_Wall$WallBuild_id_int)(jcontext ctx, jobject self, jint param0);
+#define VTABLE_mindustry_world_blocks_defense_Wall$WallBuild_read_arc_util_io_Reads 40
+typedef void (*func_mindustry_world_blocks_defense_Wall$WallBuild_read_arc_util_io_Reads)(jcontext ctx, jobject self, jobject param0);
+#define VTABLE_mindustry_world_blocks_defense_Wall$WallBuild_remove 41
+typedef void (*func_mindustry_world_blocks_defense_Wall$WallBuild_remove)(jcontext ctx, jobject self);
+#define VTABLE_mindustry_world_blocks_defense_Wall$WallBuild_update 42
+typedef void (*func_mindustry_world_blocks_defense_Wall$WallBuild_update)(jcontext ctx, jobject self);
+#define VTABLE_mindustry_world_blocks_defense_Wall$WallBuild_write_arc_util_io_Writes 43
+typedef void (*func_mindustry_world_blocks_defense_Wall$WallBuild_write_arc_util_io_Writes)(jcontext ctx, jobject self, jobject param0);
+#define VTABLE_mindustry_world_blocks_defense_Wall$WallBuild_floorOn_R_mindustry_world_blocks_environment_Floor 44
+typedef jobject (*func_mindustry_world_blocks_defense_Wall$WallBuild_floorOn_R_mindustry_world_blocks_environment_Floor)(jcontext ctx, jobject self);
+#define VTABLE_mindustry_world_blocks_defense_Wall$WallBuild_buildOn_R_mindustry_gen_Building 45
+typedef jobject (*func_mindustry_world_blocks_defense_Wall$WallBuild_buildOn_R_mindustry_gen_Building)(jcontext ctx, jobject self);
+#define VTABLE_mindustry_world_blocks_defense_Wall$WallBuild_onSolid_R_boolean 46
+typedef jbool (*func_mindustry_world_blocks_defense_Wall$WallBuild_onSolid_R_boolean)(jcontext ctx, jobject self);
+#define VTABLE_mindustry_world_blocks_defense_Wall$WallBuild_x_R_float 47
+typedef jfloat (*func_mindustry_world_blocks_defense_Wall$WallBuild_x_R_float)(jcontext ctx, jobject self);
+#define VTABLE_mindustry_world_blocks_defense_Wall$WallBuild_y_R_float 48
+typedef jfloat (*func_mindustry_world_blocks_defense_Wall$WallBuild_y_R_float)(jcontext ctx, jobject self);
+#define VTABLE_mindustry_world_blocks_defense_Wall$WallBuild_tileX_R_int 49
+typedef jint (*func_mindustry_world_blocks_defense_Wall$WallBuild_tileX_R_int)(jcontext ctx, jobject self);
+#define VTABLE_mindustry_world_blocks_defense_Wall$WallBuild_tileY_R_int 50
+typedef jint (*func_mindustry_world_blocks_defense_Wall$WallBuild_tileY_R_int)(jcontext ctx, jobject self);
+#define VTABLE_mindustry_world_blocks_defense_Wall$WallBuild_blockOn_R_mindustry_world_Block 51
+typedef jobject (*func_mindustry_world_blocks_defense_Wall$WallBuild_blockOn_R_mindustry_world_Block)(jcontext ctx, jobject self);
+#define VTABLE_mindustry_world_blocks_defense_Wall$WallBuild_tileOn_R_mindustry_world_Tile 52
+typedef jobject (*func_mindustry_world_blocks_defense_Wall$WallBuild_tileOn_R_mindustry_world_Tile)(jcontext ctx, jobject self);
+#define VTABLE_mindustry_world_blocks_defense_Wall$WallBuild_set_arc_math_geom_Position 53
+typedef void (*func_mindustry_world_blocks_defense_Wall$WallBuild_set_arc_math_geom_Position)(jcontext ctx, jobject self, jobject param0);
+#define VTABLE_mindustry_world_blocks_defense_Wall$WallBuild_set_float_float 54
+typedef void (*func_mindustry_world_blocks_defense_Wall$WallBuild_set_float_float)(jcontext ctx, jobject self, jfloat param0, jfloat param1);
+#define VTABLE_mindustry_world_blocks_defense_Wall$WallBuild_trns_arc_math_geom_Position 55
+typedef void (*func_mindustry_world_blocks_defense_Wall$WallBuild_trns_arc_math_geom_Position)(jcontext ctx, jobject self, jobject param0);
+#define VTABLE_mindustry_world_blocks_defense_Wall$WallBuild_trns_float_float 56
+typedef void (*func_mindustry_world_blocks_defense_Wall$WallBuild_trns_float_float)(jcontext ctx, jobject self, jfloat param0, jfloat param1);
+#define VTABLE_mindustry_world_blocks_defense_Wall$WallBuild_x_float 57
+typedef void (*func_mindustry_world_blocks_defense_Wall$WallBuild_x_float)(jcontext ctx, jobject self, jfloat param0);
+#define VTABLE_mindustry_world_blocks_defense_Wall$WallBuild_y_float 58
+typedef void (*func_mindustry_world_blocks_defense_Wall$WallBuild_y_float)(jcontext ctx, jobject self, jfloat param0);
+#define VTABLE_mindustry_world_blocks_defense_Wall$WallBuild_damageArmorMult_float_float 59
+typedef void (*func_mindustry_world_blocks_defense_Wall$WallBuild_damageArmorMult_float_float)(jcontext ctx, jobject self, jfloat param0, jfloat param1);
+#define VTABLE_mindustry_world_blocks_defense_Wall$WallBuild_damageArmorMult_float_float_boolean 60
+typedef void (*func_mindustry_world_blocks_defense_Wall$WallBuild_damageArmorMult_float_float_boolean)(jcontext ctx, jobject self, jfloat param0, jfloat param1, jbool param2);
+#define VTABLE_mindustry_world_blocks_defense_Wall$WallBuild_damagePierce_float 61
+typedef void (*func_mindustry_world_blocks_defense_Wall$WallBuild_damagePierce_float)(jcontext ctx, jobject self, jfloat param0);
+#define VTABLE_mindustry_world_blocks_defense_Wall$WallBuild_damagePierce_float_boolean 62
+typedef void (*func_mindustry_world_blocks_defense_Wall$WallBuild_damagePierce_float_boolean)(jcontext ctx, jobject self, jfloat param0, jbool param1);
+#define VTABLE_mindustry_world_blocks_defense_Wall$WallBuild_healFract_float 63
+typedef void (*func_mindustry_world_blocks_defense_Wall$WallBuild_healFract_float)(jcontext ctx, jobject self, jfloat param0);
+#define VTABLE_mindustry_world_blocks_defense_Wall$WallBuild_heal_float 64
+typedef void (*func_mindustry_world_blocks_defense_Wall$WallBuild_heal_float)(jcontext ctx, jobject self, jfloat param0);
+#define VTABLE_mindustry_world_blocks_defense_Wall$WallBuild_damaged_R_boolean 65
+typedef jbool (*func_mindustry_world_blocks_defense_Wall$WallBuild_damaged_R_boolean)(jcontext ctx, jobject self);
+#define VTABLE_mindustry_world_blocks_defense_Wall$WallBuild_dead_R_boolean 66
+typedef jbool (*func_mindustry_world_blocks_defense_Wall$WallBuild_dead_R_boolean)(jcontext ctx, jobject self);
+#define VTABLE_mindustry_world_blocks_defense_Wall$WallBuild_health_R_float 67
+typedef jfloat (*func_mindustry_world_blocks_defense_Wall$WallBuild_health_R_float)(jcontext ctx, jobject self);
+#define VTABLE_mindustry_world_blocks_defense_Wall$WallBuild_healthf_R_float 68
+typedef jfloat (*func_mindustry_world_blocks_defense_Wall$WallBuild_healthf_R_float)(jcontext ctx, jobject self);
+#define VTABLE_mindustry_world_blocks_defense_Wall$WallBuild_hitTime_R_float 69
+typedef jfloat (*func_mindustry_world_blocks_defense_Wall$WallBuild_hitTime_R_float)(jcontext ctx, jobject self);
+#define VTABLE_mindustry_world_blocks_defense_Wall$WallBuild_maxHealth_R_float 70
+typedef jfloat (*func_mindustry_world_blocks_defense_Wall$WallBuild_maxHealth_R_float)(jcontext ctx, jobject self);
+#define VTABLE_mindustry_world_blocks_defense_Wall$WallBuild_clampHealth 71
+typedef void (*func_mindustry_world_blocks_defense_Wall$WallBuild_clampHealth)(jcontext ctx, jobject self);
+#define VTABLE_mindustry_world_blocks_defense_Wall$WallBuild_damage_float 72
+typedef void (*func_mindustry_world_blocks_defense_Wall$WallBuild_damage_float)(jcontext ctx, jobject self, jfloat param0);
+#define VTABLE_mindustry_world_blocks_defense_Wall$WallBuild_damage_float_boolean 73
+typedef void (*func_mindustry_world_blocks_defense_Wall$WallBuild_damage_float_boolean)(jcontext ctx, jobject self, jfloat param0, jbool param1);
+#define VTABLE_mindustry_world_blocks_defense_Wall$WallBuild_damageContinuous_float 74
+typedef void (*func_mindustry_world_blocks_defense_Wall$WallBuild_damageContinuous_float)(jcontext ctx, jobject self, jfloat param0);
+#define VTABLE_mindustry_world_blocks_defense_Wall$WallBuild_damageContinuousArmorMult_float_float 75
+typedef void (*func_mindustry_world_blocks_defense_Wall$WallBuild_damageContinuousArmorMult_float_float)(jcontext ctx, jobject self, jfloat param0, jfloat param1);
+#define VTABLE_mindustry_world_blocks_defense_Wall$WallBuild_damageContinuousPierce_float 76
+typedef void (*func_mindustry_world_blocks_defense_Wall$WallBuild_damageContinuousPierce_float)(jcontext ctx, jobject self, jfloat param0);
+#define VTABLE_mindustry_world_blocks_defense_Wall$WallBuild_dead_boolean 77
+typedef void (*func_mindustry_world_blocks_defense_Wall$WallBuild_dead_boolean)(jcontext ctx, jobject self, jbool param0);
+#define VTABLE_mindustry_world_blocks_defense_Wall$WallBuild_heal 78
+typedef void (*func_mindustry_world_blocks_defense_Wall$WallBuild_heal)(jcontext ctx, jobject self);
+#define VTABLE_mindustry_world_blocks_defense_Wall$WallBuild_health_float 79
+typedef void (*func_mindustry_world_blocks_defense_Wall$WallBuild_health_float)(jcontext ctx, jobject self, jfloat param0);
+#define VTABLE_mindustry_world_blocks_defense_Wall$WallBuild_hitTime_float 80
+typedef void (*func_mindustry_world_blocks_defense_Wall$WallBuild_hitTime_float)(jcontext ctx, jobject self, jfloat param0);
+#define VTABLE_mindustry_world_blocks_defense_Wall$WallBuild_kill 81
+typedef void (*func_mindustry_world_blocks_defense_Wall$WallBuild_kill)(jcontext ctx, jobject self);
+#define VTABLE_mindustry_world_blocks_defense_Wall$WallBuild_killed 82
+typedef void (*func_mindustry_world_blocks_defense_Wall$WallBuild_killed)(jcontext ctx, jobject self);
+#define VTABLE_mindustry_world_blocks_defense_Wall$WallBuild_maxHealth_float 83
+typedef void (*func_mindustry_world_blocks_defense_Wall$WallBuild_maxHealth_float)(jcontext ctx, jobject self, jfloat param0);
+#define VTABLE_mindustry_world_blocks_defense_Wall$WallBuild_inFogTo_mindustry_game_Team_R_boolean 84
+typedef jbool (*func_mindustry_world_blocks_defense_Wall$WallBuild_inFogTo_mindustry_game_Team_R_boolean)(jcontext ctx, jobject self, jobject param0);
+#define VTABLE_mindustry_world_blocks_defense_Wall$WallBuild_cheating_R_boolean 85
+typedef jbool (*func_mindustry_world_blocks_defense_Wall$WallBuild_cheating_R_boolean)(jcontext ctx, jobject self);
+#define VTABLE_mindustry_world_blocks_defense_Wall$WallBuild_team_R_mindustry_game_Team 86
+typedef jobject (*func_mindustry_world_blocks_defense_Wall$WallBuild_team_R_mindustry_game_Team)(jcontext ctx, jobject self);
+#define VTABLE_mindustry_world_blocks_defense_Wall$WallBuild_closestCore_R_mindustry_world_blocks_storage_CoreBlock$CoreBuild 87
+typedef jobject (*func_mindustry_world_blocks_defense_Wall$WallBuild_closestCore_R_mindustry_world_blocks_storage_CoreBlock$CoreBuild)(jcontext ctx, jobject self);
+#define VTABLE_mindustry_world_blocks_defense_Wall$WallBuild_closestEnemyCore_R_mindustry_world_blocks_storage_CoreBlock$CoreBuild 88
+typedef jobject (*func_mindustry_world_blocks_defense_Wall$WallBuild_closestEnemyCore_R_mindustry_world_blocks_storage_CoreBlock$CoreBuild)(jcontext ctx, jobject self);
+#define VTABLE_mindustry_world_blocks_defense_Wall$WallBuild_core_R_mindustry_world_blocks_storage_CoreBlock$CoreBuild 89
+typedef jobject (*func_mindustry_world_blocks_defense_Wall$WallBuild_core_R_mindustry_world_blocks_storage_CoreBlock$CoreBuild)(jcontext ctx, jobject self);
+#define VTABLE_mindustry_world_blocks_defense_Wall$WallBuild_team_mindustry_game_Team 90
+typedef void (*func_mindustry_world_blocks_defense_Wall$WallBuild_team_mindustry_game_Team)(jcontext ctx, jobject self, jobject param0);
+#define VTABLE_mindustry_world_blocks_defense_Wall$WallBuild_timer_R_arc_util_Interval 91
+typedef jobject (*func_mindustry_world_blocks_defense_Wall$WallBuild_timer_R_arc_util_Interval)(jcontext ctx, jobject self);
+#define VTABLE_mindustry_world_blocks_defense_Wall$WallBuild_timer_int_float_R_boolean 92
+typedef jbool (*func_mindustry_world_blocks_defense_Wall$WallBuild_timer_int_float_R_boolean)(jcontext ctx, jobject self, jint param0, jfloat param1);
+#define VTABLE_mindustry_world_blocks_defense_Wall$WallBuild_timer_arc_util_Interval 93
+typedef void (*func_mindustry_world_blocks_defense_Wall$WallBuild_timer_arc_util_Interval)(jcontext ctx, jobject self, jobject param0);
+#define VTABLE_mindustry_world_blocks_defense_Wall$WallBuild_control_mindustry_logic_LAccess_double_double_double_double 94
+typedef void (*func_mindustry_world_blocks_defense_Wall$WallBuild_control_mindustry_logic_LAccess_double_double_double_double)(jcontext ctx, jobject self, jobject param0, jdouble param1, jdouble param2, jdouble param3, jdouble param4);
+#define VTABLE_mindustry_world_blocks_defense_Wall$WallBuild_control_mindustry_logic_LAccess_java_lang_Object_double_double_double 95
+typedef void (*func_mindustry_world_blocks_defense_Wall$WallBuild_control_mindustry_logic_LAccess_java_lang_Object_double_double_double)(jcontext ctx, jobject self, jobject param0, jobject param1, jdouble param2, jdouble param3, jdouble param4);
+#define VTABLE_mindustry_world_blocks_defense_Wall$WallBuild_sense_mindustry_logic_LAccess_R_double 96
+typedef jdouble (*func_mindustry_world_blocks_defense_Wall$WallBuild_sense_mindustry_logic_LAccess_R_double)(jcontext ctx, jobject self, jobject param0);
+#define VTABLE_mindustry_world_blocks_defense_Wall$WallBuild_sense_mindustry_ctype_Content_R_double 97
+typedef jdouble (*func_mindustry_world_blocks_defense_Wall$WallBuild_sense_mindustry_ctype_Content_R_double)(jcontext ctx, jobject self, jobject param0);
+#define VTABLE_mindustry_world_blocks_defense_Wall$WallBuild_senseObject_mindustry_logic_LAccess_R_java_lang_Object 98
+typedef jobject (*func_mindustry_world_blocks_defense_Wall$WallBuild_senseObject_mindustry_logic_LAccess_R_java_lang_Object)(jcontext ctx, jobject self, jobject param0);
+#define VTABLE_mindustry_world_blocks_defense_Wall$WallBuild_setProp_mindustry_logic_LAccess_double 99
+typedef void (*func_mindustry_world_blocks_defense_Wall$WallBuild_setProp_mindustry_logic_LAccess_double)(jcontext ctx, jobject self, jobject param0, jdouble param1);
+#define VTABLE_mindustry_world_blocks_defense_Wall$WallBuild_setProp_mindustry_logic_LAccess_java_lang_Object 100
+typedef void (*func_mindustry_world_blocks_defense_Wall$WallBuild_setProp_mindustry_logic_LAccess_java_lang_Object)(jcontext ctx, jobject self, jobject param0, jobject param1);
+#define VTABLE_mindustry_world_blocks_defense_Wall$WallBuild_setProp_mindustry_ctype_UnlockableContent_double 101
+typedef void (*func_mindustry_world_blocks_defense_Wall$WallBuild_setProp_mindustry_ctype_UnlockableContent_double)(jcontext ctx, jobject self, jobject param0, jdouble param1);
+#define VTABLE_mindustry_world_blocks_defense_Wall$WallBuild_displayable_R_boolean 102
+typedef jbool (*func_mindustry_world_blocks_defense_Wall$WallBuild_displayable_R_boolean)(jcontext ctx, jobject self);
+#define VTABLE_mindustry_world_blocks_defense_Wall$WallBuild_display_arc_scene_ui_layout_Table 103
+typedef void (*func_mindustry_world_blocks_defense_Wall$WallBuild_display_arc_scene_ui_layout_Table)(jcontext ctx, jobject self, jobject param0);
+#define VTABLE_mindustry_world_blocks_defense_Wall$WallBuild_setIndex__build_int 104
+typedef void (*func_mindustry_world_blocks_defense_Wall$WallBuild_setIndex__build_int)(jcontext ctx, jobject self, jint param0);
+#define VTABLE_mindustry_world_blocks_defense_Wall$WallBuild_back_R_mindustry_gen_Building 105
+typedef jobject (*func_mindustry_world_blocks_defense_Wall$WallBuild_back_R_mindustry_gen_Building)(jcontext ctx, jobject self);
+#define VTABLE_mindustry_world_blocks_defense_Wall$WallBuild_front_R_mindustry_gen_Building 106
+typedef jobject (*func_mindustry_world_blocks_defense_Wall$WallBuild_front_R_mindustry_gen_Building)(jcontext ctx, jobject self);
+#define VTABLE_mindustry_world_blocks_defense_Wall$WallBuild_left_R_mindustry_gen_Building 107
+typedef jobject (*func_mindustry_world_blocks_defense_Wall$WallBuild_left_R_mindustry_gen_Building)(jcontext ctx, jobject self);
+#define VTABLE_mindustry_world_blocks_defense_Wall$WallBuild_right_R_mindustry_gen_Building 108
+typedef jobject (*func_mindustry_world_blocks_defense_Wall$WallBuild_right_R_mindustry_gen_Building)(jcontext ctx, jobject self);
+#define VTABLE_mindustry_world_blocks_defense_Wall$WallBuild_getCommandPosition_R_arc_math_geom_Vec2 109
+typedef jobject (*func_mindustry_world_blocks_defense_Wall$WallBuild_getCommandPosition_R_arc_math_geom_Vec2)(jcontext ctx, jobject self);
+#define VTABLE_mindustry_world_blocks_defense_Wall$WallBuild_config_R_java_lang_Object 110
+typedef jobject (*func_mindustry_world_blocks_defense_Wall$WallBuild_config_R_java_lang_Object)(jcontext ctx, jobject self);
+#define VTABLE_mindustry_world_blocks_defense_Wall$WallBuild_getPayloads_R_mindustry_type_PayloadSeq 111
+typedef jobject (*func_mindustry_world_blocks_defense_Wall$WallBuild_getPayloads_R_mindustry_type_PayloadSeq)(jcontext ctx, jobject self);
+#define VTABLE_mindustry_world_blocks_defense_Wall$WallBuild_findClosestEdge_arc_math_geom_Position_arc_func_Boolf_R_mindustry_world_Tile 112
+typedef jobject (*func_mindustry_world_blocks_defense_Wall$WallBuild_findClosestEdge_arc_math_geom_Position_arc_func_Boolf_R_mindustry_world_Tile)(jcontext ctx, jobject self, jobject param0, jobject param1);
+#define VTABLE_mindustry_world_blocks_defense_Wall$WallBuild_getPayload_R_mindustry_world_blocks_payloads_Payload 113
+typedef jobject (*func_mindustry_world_blocks_defense_Wall$WallBuild_getPayload_R_mindustry_world_blocks_payloads_Payload)(jcontext ctx, jobject self);
+#define VTABLE_mindustry_world_blocks_defense_Wall$WallBuild_takePayload_R_mindustry_world_blocks_payloads_Payload 114
+typedef jobject (*func_mindustry_world_blocks_defense_Wall$WallBuild_takePayload_R_mindustry_world_blocks_payloads_Payload)(jcontext ctx, jobject self);
+#define VTABLE_mindustry_world_blocks_defense_Wall$WallBuild_onRepaired 115
+typedef void (*func_mindustry_world_blocks_defense_Wall$WallBuild_onRepaired)(jcontext ctx, jobject self);
+#define VTABLE_mindustry_world_blocks_defense_Wall$WallBuild_placed 116
+typedef void (*func_mindustry_world_blocks_defense_Wall$WallBuild_placed)(jcontext ctx, jobject self);
+#define VTABLE_mindustry_world_blocks_defense_Wall$WallBuild_playerPlaced_java_lang_Object 117
+typedef void (*func_mindustry_world_blocks_defense_Wall$WallBuild_playerPlaced_java_lang_Object)(jcontext ctx, jobject self, jobject param0);
+#define VTABLE_mindustry_world_blocks_defense_Wall$WallBuild_read_arc_util_io_Reads_byte 118
+typedef void (*func_mindustry_world_blocks_defense_Wall$WallBuild_read_arc_util_io_Reads_byte)(jcontext ctx, jobject self, jobject param0, jbyte param1);
+#define VTABLE_mindustry_world_blocks_defense_Wall$WallBuild_create_mindustry_world_Block_mindustry_game_Team_R_mindustry_gen_Building 119
+typedef jobject (*func_mindustry_world_blocks_defense_Wall$WallBuild_create_mindustry_world_Block_mindustry_game_Team_R_mindustry_gen_Building)(jcontext ctx, jobject self, jobject param0, jobject param1);
+#define VTABLE_mindustry_world_blocks_defense_Wall$WallBuild_getLiquidDestination_mindustry_gen_Building_mindustry_type_Liquid_R_mindustry_gen_Building 120
+typedef jobject (*func_mindustry_world_blocks_defense_Wall$WallBuild_getLiquidDestination_mindustry_gen_Building_mindustry_type_Liquid_R_mindustry_gen_Building)(jcontext ctx, jobject self, jobject param0, jobject param1);
+#define VTABLE_mindustry_world_blocks_defense_Wall$WallBuild_init_mindustry_world_Tile_mindustry_game_Team_boolean_int_R_mindustry_gen_Building 121
+typedef jobject (*func_mindustry_world_blocks_defense_Wall$WallBuild_init_mindustry_world_Tile_mindustry_game_Team_boolean_int_R_mindustry_gen_Building)(jcontext ctx, jobject self, jobject param0, jobject param1, jbool param2, jint param3);
+#define VTABLE_mindustry_world_blocks_defense_Wall$WallBuild_nearby_int_int_R_mindustry_gen_Building 122
+typedef jobject (*func_mindustry_world_blocks_defense_Wall$WallBuild_nearby_int_int_R_mindustry_gen_Building)(jcontext ctx, jobject self, jint param0, jint param1);
+#define VTABLE_mindustry_world_blocks_defense_Wall$WallBuild_nearby_int_R_mindustry_gen_Building 123
+typedef jobject (*func_mindustry_world_blocks_defense_Wall$WallBuild_nearby_int_R_mindustry_gen_Building)(jcontext ctx, jobject self, jint param0);
+#define VTABLE_mindustry_world_blocks_defense_Wall$WallBuild_getCursor_R_arc_Graphics$Cursor 124
+typedef jobject (*func_mindustry_world_blocks_defense_Wall$WallBuild_getCursor_R_arc_Graphics$Cursor)(jcontext ctx, jobject self);
+#define VTABLE_mindustry_world_blocks_defense_Wall$WallBuild_getDisplayIcon_R_arc_graphics_g2d_TextureRegion 125
+typedef jobject (*func_mindustry_world_blocks_defense_Wall$WallBuild_getDisplayIcon_R_arc_graphics_g2d_TextureRegion)(jcontext ctx, jobject self);
+#define VTABLE_mindustry_world_blocks_defense_Wall$WallBuild_getPowerConnections_arc_struct_Seq_R_arc_struct_Seq 126
+typedef jobject (*func_mindustry_world_blocks_defense_Wall$WallBuild_getPowerConnections_arc_struct_Seq_R_arc_struct_Seq)(jcontext ctx, jobject self, jobject param0);
+#define VTABLE_mindustry_world_blocks_defense_Wall$WallBuild_absorbLasers_R_boolean 127
+typedef jbool (*func_mindustry_world_blocks_defense_Wall$WallBuild_absorbLasers_R_boolean)(jcontext ctx, jobject self);
+#define VTABLE_mindustry_world_blocks_defense_Wall$WallBuild_acceptItem_mindustry_gen_Building_mindustry_type_Item_R_boolean 128
+typedef jbool (*func_mindustry_world_blocks_defense_Wall$WallBuild_acceptItem_mindustry_gen_Building_mindustry_type_Item_R_boolean)(jcontext ctx, jobject self, jobject param0, jobject param1);
+#define VTABLE_mindustry_world_blocks_defense_Wall$WallBuild_acceptLiquid_mindustry_gen_Building_mindustry_type_Liquid_R_boolean 129
+typedef jbool (*func_mindustry_world_blocks_defense_Wall$WallBuild_acceptLiquid_mindustry_gen_Building_mindustry_type_Liquid_R_boolean)(jcontext ctx, jobject self, jobject param0, jobject param1);
+#define VTABLE_mindustry_world_blocks_defense_Wall$WallBuild_acceptPayload_mindustry_gen_Building_mindustry_world_blocks_payloads_Payload_R_boolean 130
+typedef jbool (*func_mindustry_world_blocks_defense_Wall$WallBuild_acceptPayload_mindustry_gen_Building_mindustry_world_blocks_payloads_Payload_R_boolean)(jcontext ctx, jobject self, jobject param0, jobject param1);
+#define VTABLE_mindustry_world_blocks_defense_Wall$WallBuild_allowDeposit_R_boolean 131
+typedef jbool (*func_mindustry_world_blocks_defense_Wall$WallBuild_allowDeposit_R_boolean)(jcontext ctx, jobject self);
+#define VTABLE_mindustry_world_blocks_defense_Wall$WallBuild_allowUpdate_R_boolean 132
+typedef jbool (*func_mindustry_world_blocks_defense_Wall$WallBuild_allowUpdate_R_boolean)(jcontext ctx, jobject self);
+#define VTABLE_mindustry_world_blocks_defense_Wall$WallBuild_canBeReplaced_mindustry_world_Block_R_boolean 133
+typedef jbool (*func_mindustry_world_blocks_defense_Wall$WallBuild_canBeReplaced_mindustry_world_Block_R_boolean)(jcontext ctx, jobject self, jobject param0);
+#define VTABLE_mindustry_world_blocks_defense_Wall$WallBuild_canConsume_R_boolean 134
+typedef jbool (*func_mindustry_world_blocks_defense_Wall$WallBuild_canConsume_R_boolean)(jcontext ctx, jobject self);
+#define VTABLE_mindustry_world_blocks_defense_Wall$WallBuild_canControlSelect_mindustry_gen_Unit_R_boolean 135
+typedef jbool (*func_mindustry_world_blocks_defense_Wall$WallBuild_canControlSelect_mindustry_gen_Unit_R_boolean)(jcontext ctx, jobject self, jobject param0);
+#define VTABLE_mindustry_world_blocks_defense_Wall$WallBuild_canDump_mindustry_gen_Building_mindustry_type_Item_R_boolean 136
+typedef jbool (*func_mindustry_world_blocks_defense_Wall$WallBuild_canDump_mindustry_gen_Building_mindustry_type_Item_R_boolean)(jcontext ctx, jobject self, jobject param0, jobject param1);
+#define VTABLE_mindustry_world_blocks_defense_Wall$WallBuild_canDumpLiquid_mindustry_gen_Building_mindustry_type_Liquid_R_boolean 137
+typedef jbool (*func_mindustry_world_blocks_defense_Wall$WallBuild_canDumpLiquid_mindustry_gen_Building_mindustry_type_Liquid_R_boolean)(jcontext ctx, jobject self, jobject param0, jobject param1);
+#define VTABLE_mindustry_world_blocks_defense_Wall$WallBuild_canPickup_R_boolean 138
+typedef jbool (*func_mindustry_world_blocks_defense_Wall$WallBuild_canPickup_R_boolean)(jcontext ctx, jobject self);
+#define VTABLE_mindustry_world_blocks_defense_Wall$WallBuild_canResupply_R_boolean 139
+typedef jbool (*func_mindustry_world_blocks_defense_Wall$WallBuild_canResupply_R_boolean)(jcontext ctx, jobject self);
+#define VTABLE_mindustry_world_blocks_defense_Wall$WallBuild_canUnload_R_boolean 140
+typedef jbool (*func_mindustry_world_blocks_defense_Wall$WallBuild_canUnload_R_boolean)(jcontext ctx, jobject self);
+#define VTABLE_mindustry_world_blocks_defense_Wall$WallBuild_canWithdraw_R_boolean 141
+typedef jbool (*func_mindustry_world_blocks_defense_Wall$WallBuild_canWithdraw_R_boolean)(jcontext ctx, jobject self);
+#define VTABLE_mindustry_world_blocks_defense_Wall$WallBuild_checkSolid_R_boolean 142
+typedef jbool (*func_mindustry_world_blocks_defense_Wall$WallBuild_checkSolid_R_boolean)(jcontext ctx, jobject self);
+#define VTABLE_mindustry_world_blocks_defense_Wall$WallBuild_checkSuppression_R_boolean 143
+typedef jbool (*func_mindustry_world_blocks_defense_Wall$WallBuild_checkSuppression_R_boolean)(jcontext ctx, jobject self);
+#define VTABLE_mindustry_world_blocks_defense_Wall$WallBuild_collide_mindustry_gen_Bullet_R_boolean 144
+typedef jbool (*func_mindustry_world_blocks_defense_Wall$WallBuild_collide_mindustry_gen_Bullet_R_boolean)(jcontext ctx, jobject self, jobject param0);
+#define VTABLE_mindustry_world_blocks_defense_Wall$WallBuild_collision_mindustry_gen_Bullet_R_boolean 145
+typedef jbool (*func_mindustry_world_blocks_defense_Wall$WallBuild_collision_mindustry_gen_Bullet_R_boolean)(jcontext ctx, jobject self, jobject param0);
+#define VTABLE_mindustry_world_blocks_defense_Wall$WallBuild_conductsTo_mindustry_gen_Building_R_boolean 146
+typedef jbool (*func_mindustry_world_blocks_defense_Wall$WallBuild_conductsTo_mindustry_gen_Building_R_boolean)(jcontext ctx, jobject self, jobject param0);
+#define VTABLE_mindustry_world_blocks_defense_Wall$WallBuild_configTapped_R_boolean 147
+typedef jbool (*func_mindustry_world_blocks_defense_Wall$WallBuild_configTapped_R_boolean)(jcontext ctx, jobject self);
+#define VTABLE_mindustry_world_blocks_defense_Wall$WallBuild_consumeTriggerValid_R_boolean 148
+typedef jbool (*func_mindustry_world_blocks_defense_Wall$WallBuild_consumeTriggerValid_R_boolean)(jcontext ctx, jobject self);
+#define VTABLE_mindustry_world_blocks_defense_Wall$WallBuild_dump_R_boolean 149
+typedef jbool (*func_mindustry_world_blocks_defense_Wall$WallBuild_dump_R_boolean)(jcontext ctx, jobject self);
+#define VTABLE_mindustry_world_blocks_defense_Wall$WallBuild_dump_mindustry_type_Item_R_boolean 150
+typedef jbool (*func_mindustry_world_blocks_defense_Wall$WallBuild_dump_mindustry_type_Item_R_boolean)(jcontext ctx, jobject self, jobject param0);
+#define VTABLE_mindustry_world_blocks_defense_Wall$WallBuild_dumpAccumulate_R_boolean 151
+typedef jbool (*func_mindustry_world_blocks_defense_Wall$WallBuild_dumpAccumulate_R_boolean)(jcontext ctx, jobject self);
+#define VTABLE_mindustry_world_blocks_defense_Wall$WallBuild_dumpAccumulate_mindustry_type_Item_R_boolean 152
+typedef jbool (*func_mindustry_world_blocks_defense_Wall$WallBuild_dumpAccumulate_mindustry_type_Item_R_boolean)(jcontext ctx, jobject self, jobject param0);
+#define VTABLE_mindustry_world_blocks_defense_Wall$WallBuild_dumpPayload_mindustry_world_blocks_payloads_Payload_R_boolean 153
+typedef jbool (*func_mindustry_world_blocks_defense_Wall$WallBuild_dumpPayload_mindustry_world_blocks_payloads_Payload_R_boolean)(jcontext ctx, jobject self, jobject param0);
+#define VTABLE_mindustry_world_blocks_defense_Wall$WallBuild_inMapArea_R_boolean 154
+typedef jbool (*func_mindustry_world_blocks_defense_Wall$WallBuild_inMapArea_R_boolean)(jcontext ctx, jobject self);
+#define VTABLE_mindustry_world_blocks_defense_Wall$WallBuild_interactable_mindustry_game_Team_R_boolean 155
+typedef jbool (*func_mindustry_world_blocks_defense_Wall$WallBuild_interactable_mindustry_game_Team_R_boolean)(jcontext ctx, jobject self, jobject param0);
+#define VTABLE_mindustry_world_blocks_defense_Wall$WallBuild_isCommandable_R_boolean 156
+typedef jbool (*func_mindustry_world_blocks_defense_Wall$WallBuild_isCommandable_R_boolean)(jcontext ctx, jobject self);
+#define VTABLE_mindustry_world_blocks_defense_Wall$WallBuild_isDiscovered_mindustry_game_Team_R_boolean 157
+typedef jbool (*func_mindustry_world_blocks_defense_Wall$WallBuild_isDiscovered_mindustry_game_Team_R_boolean)(jcontext ctx, jobject self, jobject param0);
+#define VTABLE_mindustry_world_blocks_defense_Wall$WallBuild_isHealSuppressed_R_boolean 158
+typedef jbool (*func_mindustry_world_blocks_defense_Wall$WallBuild_isHealSuppressed_R_boolean)(jcontext ctx, jobject self);
+#define VTABLE_mindustry_world_blocks_defense_Wall$WallBuild_isInsulated_R_boolean 159
+typedef jbool (*func_mindustry_world_blocks_defense_Wall$WallBuild_isInsulated_R_boolean)(jcontext ctx, jobject self);
+#define VTABLE_mindustry_world_blocks_defense_Wall$WallBuild_isPayload_R_boolean 160
+typedef jbool (*func_mindustry_world_blocks_defense_Wall$WallBuild_isPayload_R_boolean)(jcontext ctx, jobject self);
+#define VTABLE_mindustry_world_blocks_defense_Wall$WallBuild_moveForward_mindustry_type_Item_R_boolean 161
+typedef jbool (*func_mindustry_world_blocks_defense_Wall$WallBuild_moveForward_mindustry_type_Item_R_boolean)(jcontext ctx, jobject self, jobject param0);
+#define VTABLE_mindustry_world_blocks_defense_Wall$WallBuild_movePayload_mindustry_world_blocks_payloads_Payload_R_boolean 162
+typedef jbool (*func_mindustry_world_blocks_defense_Wall$WallBuild_movePayload_mindustry_world_blocks_payloads_Payload_R_boolean)(jcontext ctx, jobject self, jobject param0);
+#define VTABLE_mindustry_world_blocks_defense_Wall$WallBuild_onConfigureBuildTapped_mindustry_gen_Building_R_boolean 163
+typedef jbool (*func_mindustry_world_blocks_defense_Wall$WallBuild_onConfigureBuildTapped_mindustry_gen_Building_R_boolean)(jcontext ctx, jobject self, jobject param0);
+#define VTABLE_mindustry_world_blocks_defense_Wall$WallBuild_onConfigureTapped_float_float_R_boolean 164
+typedef jbool (*func_mindustry_world_blocks_defense_Wall$WallBuild_onConfigureTapped_float_float_R_boolean)(jcontext ctx, jobject self, jfloat param0, jfloat param1);
+#define VTABLE_mindustry_world_blocks_defense_Wall$WallBuild_payloadCheck_int_R_boolean 165
+typedef jbool (*func_mindustry_world_blocks_defense_Wall$WallBuild_payloadCheck_int_R_boolean)(jcontext ctx, jobject self, jint param0);
+#define VTABLE_mindustry_world_blocks_defense_Wall$WallBuild_productionValid_R_boolean 166
+typedef jbool (*func_mindustry_world_blocks_defense_Wall$WallBuild_productionValid_R_boolean)(jcontext ctx, jobject self);
+#define VTABLE_mindustry_world_blocks_defense_Wall$WallBuild_put_mindustry_type_Item_R_boolean 167
+typedef jbool (*func_mindustry_world_blocks_defense_Wall$WallBuild_put_mindustry_type_Item_R_boolean)(jcontext ctx, jobject self, jobject param0);
+#define VTABLE_mindustry_world_blocks_defense_Wall$WallBuild_shouldConsume_R_boolean 168
+typedef jbool (*func_mindustry_world_blocks_defense_Wall$WallBuild_shouldConsume_R_boolean)(jcontext ctx, jobject self);
+#define VTABLE_mindustry_world_blocks_defense_Wall$WallBuild_shouldHideConfigure_mindustry_gen_Player_R_boolean 169
+typedef jbool (*func_mindustry_world_blocks_defense_Wall$WallBuild_shouldHideConfigure_mindustry_gen_Player_R_boolean)(jcontext ctx, jobject self, jobject param0);
+#define VTABLE_mindustry_world_blocks_defense_Wall$WallBuild_shouldShowConfigure_mindustry_gen_Player_R_boolean 170
+typedef jbool (*func_mindustry_world_blocks_defense_Wall$WallBuild_shouldShowConfigure_mindustry_gen_Player_R_boolean)(jcontext ctx, jobject self, jobject param0);
+#define VTABLE_mindustry_world_blocks_defense_Wall$WallBuild_wasRecentlyDamaged_R_boolean 171
+typedef jbool (*func_mindustry_world_blocks_defense_Wall$WallBuild_wasRecentlyDamaged_R_boolean)(jcontext ctx, jobject self);
+#define VTABLE_mindustry_world_blocks_defense_Wall$WallBuild_wasRecentlyHealed_float_R_boolean 172
+typedef jbool (*func_mindustry_world_blocks_defense_Wall$WallBuild_wasRecentlyHealed_float_R_boolean)(jcontext ctx, jobject self, jfloat param0);
+#define VTABLE_mindustry_world_blocks_defense_Wall$WallBuild_relativeTo_mindustry_gen_Building_R_byte 173
+typedef jbyte (*func_mindustry_world_blocks_defense_Wall$WallBuild_relativeTo_mindustry_gen_Building_R_byte)(jcontext ctx, jobject self, jobject param0);
+#define VTABLE_mindustry_world_blocks_defense_Wall$WallBuild_relativeTo_int_int_R_byte 174
+typedef jbyte (*func_mindustry_world_blocks_defense_Wall$WallBuild_relativeTo_int_int_R_byte)(jcontext ctx, jobject self, jint param0, jint param1);
+#define VTABLE_mindustry_world_blocks_defense_Wall$WallBuild_relativeTo_mindustry_world_Tile_R_byte 175
+typedef jbyte (*func_mindustry_world_blocks_defense_Wall$WallBuild_relativeTo_mindustry_world_Tile_R_byte)(jcontext ctx, jobject self, jobject param0);
+#define VTABLE_mindustry_world_blocks_defense_Wall$WallBuild_relativeToEdge_mindustry_world_Tile_R_byte 176
+typedef jbyte (*func_mindustry_world_blocks_defense_Wall$WallBuild_relativeToEdge_mindustry_world_Tile_R_byte)(jcontext ctx, jobject self, jobject param0);
+#define VTABLE_mindustry_world_blocks_defense_Wall$WallBuild_version_R_byte 177
+typedef jbyte (*func_mindustry_world_blocks_defense_Wall$WallBuild_version_R_byte)(jcontext ctx, jobject self);
+#define VTABLE_mindustry_world_blocks_defense_Wall$WallBuild_ambientVolume_R_float 178
+typedef jfloat (*func_mindustry_world_blocks_defense_Wall$WallBuild_ambientVolume_R_float)(jcontext ctx, jobject self);
+#define VTABLE_mindustry_world_blocks_defense_Wall$WallBuild_calculateHeat_Array1_float_R_float 179
+typedef jfloat (*func_mindustry_world_blocks_defense_Wall$WallBuild_calculateHeat_Array1_float_R_float)(jcontext ctx, jobject self, jobject param0);
+#define VTABLE_mindustry_world_blocks_defense_Wall$WallBuild_calculateHeat_Array1_float_arc_struct_IntSet_R_float 180
+typedef jfloat (*func_mindustry_world_blocks_defense_Wall$WallBuild_calculateHeat_Array1_float_arc_struct_IntSet_R_float)(jcontext ctx, jobject self, jobject param0, jobject param1);
+#define VTABLE_mindustry_world_blocks_defense_Wall$WallBuild_delta_R_float 181
+typedef jfloat (*func_mindustry_world_blocks_defense_Wall$WallBuild_delta_R_float)(jcontext ctx, jobject self);
+#define VTABLE_mindustry_world_blocks_defense_Wall$WallBuild_drawrot_R_float 182
+typedef jfloat (*func_mindustry_world_blocks_defense_Wall$WallBuild_drawrot_R_float)(jcontext ctx, jobject self);
+#define VTABLE_mindustry_world_blocks_defense_Wall$WallBuild_edelta_R_float 183
+typedef jfloat (*func_mindustry_world_blocks_defense_Wall$WallBuild_edelta_R_float)(jcontext ctx, jobject self);
+#define VTABLE_mindustry_world_blocks_defense_Wall$WallBuild_efficiencyScale_R_float 184
+typedef jfloat (*func_mindustry_world_blocks_defense_Wall$WallBuild_efficiencyScale_R_float)(jcontext ctx, jobject self);
+#define VTABLE_mindustry_world_blocks_defense_Wall$WallBuild_fogRadius_R_float 185
+typedef jfloat (*func_mindustry_world_blocks_defense_Wall$WallBuild_fogRadius_R_float)(jcontext ctx, jobject self);
+#define VTABLE_mindustry_world_blocks_defense_Wall$WallBuild_getDisplayEfficiency_R_float 186
+typedef jfloat (*func_mindustry_world_blocks_defense_Wall$WallBuild_getDisplayEfficiency_R_float)(jcontext ctx, jobject self);
+#define VTABLE_mindustry_world_blocks_defense_Wall$WallBuild_getPowerProduction_R_float 187
+typedef jfloat (*func_mindustry_world_blocks_defense_Wall$WallBuild_getPowerProduction_R_float)(jcontext ctx, jobject self);
+#define VTABLE_mindustry_world_blocks_defense_Wall$WallBuild_getProgressIncrease_float_R_float 188
+typedef jfloat (*func_mindustry_world_blocks_defense_Wall$WallBuild_getProgressIncrease_float_R_float)(jcontext ctx, jobject self, jfloat param0);
+#define VTABLE_mindustry_world_blocks_defense_Wall$WallBuild_handleDamage_float_R_float 189
+typedef jfloat (*func_mindustry_world_blocks_defense_Wall$WallBuild_handleDamage_float_R_float)(jcontext ctx, jobject self, jfloat param0);
+#define VTABLE_mindustry_world_blocks_defense_Wall$WallBuild_moveLiquid_mindustry_gen_Building_mindustry_type_Liquid_R_float 190
+typedef jfloat (*func_mindustry_world_blocks_defense_Wall$WallBuild_moveLiquid_mindustry_gen_Building_mindustry_type_Liquid_R_float)(jcontext ctx, jobject self, jobject param0, jobject param1);
+#define VTABLE_mindustry_world_blocks_defense_Wall$WallBuild_moveLiquidForward_boolean_mindustry_type_Liquid_R_float 191
+typedef jfloat (*func_mindustry_world_blocks_defense_Wall$WallBuild_moveLiquidForward_boolean_mindustry_type_Liquid_R_float)(jcontext ctx, jobject self, jbool param0, jobject param1);
+#define VTABLE_mindustry_world_blocks_defense_Wall$WallBuild_progress_R_float 192
+typedef jfloat (*func_mindustry_world_blocks_defense_Wall$WallBuild_progress_R_float)(jcontext ctx, jobject self);
+#define VTABLE_mindustry_world_blocks_defense_Wall$WallBuild_rotdeg_R_float 193
+typedef jfloat (*func_mindustry_world_blocks_defense_Wall$WallBuild_rotdeg_R_float)(jcontext ctx, jobject self);
+#define VTABLE_mindustry_world_blocks_defense_Wall$WallBuild_timeScale_R_float 194
+typedef jfloat (*func_mindustry_world_blocks_defense_Wall$WallBuild_timeScale_R_float)(jcontext ctx, jobject self);
+#define VTABLE_mindustry_world_blocks_defense_Wall$WallBuild_totalProgress_R_float 195
+typedef jfloat (*func_mindustry_world_blocks_defense_Wall$WallBuild_totalProgress_R_float)(jcontext ctx, jobject self);
+#define VTABLE_mindustry_world_blocks_defense_Wall$WallBuild_warmup_R_float 196
+typedef jfloat (*func_mindustry_world_blocks_defense_Wall$WallBuild_warmup_R_float)(jcontext ctx, jobject self);
+#define VTABLE_mindustry_world_blocks_defense_Wall$WallBuild_acceptStack_mindustry_type_Item_int_mindustry_gen_Teamc_R_int 197
+typedef jint (*func_mindustry_world_blocks_defense_Wall$WallBuild_acceptStack_mindustry_type_Item_int_mindustry_gen_Teamc_R_int)(jcontext ctx, jobject self, jobject param0, jint param1, jobject param2);
+#define VTABLE_mindustry_world_blocks_defense_Wall$WallBuild_explosionItemCap_R_int 198
+typedef jint (*func_mindustry_world_blocks_defense_Wall$WallBuild_explosionItemCap_R_int)(jcontext ctx, jobject self);
+#define VTABLE_mindustry_world_blocks_defense_Wall$WallBuild_getMaximumAccepted_mindustry_type_Item_R_int 199
+typedef jint (*func_mindustry_world_blocks_defense_Wall$WallBuild_getMaximumAccepted_mindustry_type_Item_R_int)(jcontext ctx, jobject self, jobject param0);
+#define VTABLE_mindustry_world_blocks_defense_Wall$WallBuild_moduleBitmask_R_int 200
+typedef jint (*func_mindustry_world_blocks_defense_Wall$WallBuild_moduleBitmask_R_int)(jcontext ctx, jobject self);
+#define VTABLE_mindustry_world_blocks_defense_Wall$WallBuild_pos_R_int 201
+typedef jint (*func_mindustry_world_blocks_defense_Wall$WallBuild_pos_R_int)(jcontext ctx, jobject self);
+#define VTABLE_mindustry_world_blocks_defense_Wall$WallBuild_removeStack_mindustry_type_Item_int_R_int 202
+typedef jint (*func_mindustry_world_blocks_defense_Wall$WallBuild_removeStack_mindustry_type_Item_int_R_int)(jcontext ctx, jobject self, jobject param0, jint param1);
+#define VTABLE_mindustry_world_blocks_defense_Wall$WallBuild_getDisplayName_R_java_lang_String 203
+typedef jobject (*func_mindustry_world_blocks_defense_Wall$WallBuild_getDisplayName_R_java_lang_String)(jcontext ctx, jobject self);
+#define VTABLE_mindustry_world_blocks_defense_Wall$WallBuild_floor_R_mindustry_world_blocks_environment_Floor 204
+typedef jobject (*func_mindustry_world_blocks_defense_Wall$WallBuild_floor_R_mindustry_world_blocks_environment_Floor)(jcontext ctx, jobject self);
+#define VTABLE_mindustry_world_blocks_defense_Wall$WallBuild_status_R_mindustry_world_meta_BlockStatus 205
+typedef jobject (*func_mindustry_world_blocks_defense_Wall$WallBuild_status_R_mindustry_world_meta_BlockStatus)(jcontext ctx, jobject self);
+#define VTABLE_mindustry_world_blocks_defense_Wall$WallBuild_flowItems_R_mindustry_world_modules_ItemModule 206
+typedef jobject (*func_mindustry_world_blocks_defense_Wall$WallBuild_flowItems_R_mindustry_world_modules_ItemModule)(jcontext ctx, jobject self);
+#define VTABLE_mindustry_world_blocks_defense_Wall$WallBuild_addPlan_boolean 207
+typedef void (*func_mindustry_world_blocks_defense_Wall$WallBuild_addPlan_boolean)(jcontext ctx, jobject self, jbool param0);
+#define VTABLE_mindustry_world_blocks_defense_Wall$WallBuild_addPlan_boolean_boolean 208
+typedef void (*func_mindustry_world_blocks_defense_Wall$WallBuild_addPlan_boolean_boolean)(jcontext ctx, jobject self, jbool param0, jbool param1);
+#define VTABLE_mindustry_world_blocks_defense_Wall$WallBuild_afterDestroyed 209
+typedef void (*func_mindustry_world_blocks_defense_Wall$WallBuild_afterDestroyed)(jcontext ctx, jobject self);
+#define VTABLE_mindustry_world_blocks_defense_Wall$WallBuild_afterPickedUp 210
+typedef void (*func_mindustry_world_blocks_defense_Wall$WallBuild_afterPickedUp)(jcontext ctx, jobject self);
+#define VTABLE_mindustry_world_blocks_defense_Wall$WallBuild_applyBoost_float_float 211
+typedef void (*func_mindustry_world_blocks_defense_Wall$WallBuild_applyBoost_float_float)(jcontext ctx, jobject self, jfloat param0, jfloat param1);
+#define VTABLE_mindustry_world_blocks_defense_Wall$WallBuild_applyHealSuppression_float 212
+typedef void (*func_mindustry_world_blocks_defense_Wall$WallBuild_applyHealSuppression_float)(jcontext ctx, jobject self, jfloat param0);
+#define VTABLE_mindustry_world_blocks_defense_Wall$WallBuild_applyHealSuppression_float_arc_graphics_Color 213
+typedef void (*func_mindustry_world_blocks_defense_Wall$WallBuild_applyHealSuppression_float_arc_graphics_Color)(jcontext ctx, jobject self, jfloat param0, jobject param1);
+#define VTABLE_mindustry_world_blocks_defense_Wall$WallBuild_applySlowdown_float_float 214
+typedef void (*func_mindustry_world_blocks_defense_Wall$WallBuild_applySlowdown_float_float)(jcontext ctx, jobject self, jfloat param0, jfloat param1);
+#define VTABLE_mindustry_world_blocks_defense_Wall$WallBuild_buildConfiguration_arc_scene_ui_layout_Table 215
+typedef void (*func_mindustry_world_blocks_defense_Wall$WallBuild_buildConfiguration_arc_scene_ui_layout_Table)(jcontext ctx, jobject self, jobject param0);
+#define VTABLE_mindustry_world_blocks_defense_Wall$WallBuild_changeTeam_mindustry_game_Team 216
+typedef void (*func_mindustry_world_blocks_defense_Wall$WallBuild_changeTeam_mindustry_game_Team)(jcontext ctx, jobject self, jobject param0);
+#define VTABLE_mindustry_world_blocks_defense_Wall$WallBuild_changeTeam_mindustry_game_Team_boolean 217
+typedef void (*func_mindustry_world_blocks_defense_Wall$WallBuild_changeTeam_mindustry_game_Team_boolean)(jcontext ctx, jobject self, jobject param0, jbool param1);
+#define VTABLE_mindustry_world_blocks_defense_Wall$WallBuild_checkAllowUpdate 218
+typedef void (*func_mindustry_world_blocks_defense_Wall$WallBuild_checkAllowUpdate)(jcontext ctx, jobject self);
+#define VTABLE_mindustry_world_blocks_defense_Wall$WallBuild_configure_java_lang_Object 219
+typedef void (*func_mindustry_world_blocks_defense_Wall$WallBuild_configure_java_lang_Object)(jcontext ctx, jobject self, jobject param0);
+#define VTABLE_mindustry_world_blocks_defense_Wall$WallBuild_configureAny_java_lang_Object 220
+typedef void (*func_mindustry_world_blocks_defense_Wall$WallBuild_configureAny_java_lang_Object)(jcontext ctx, jobject self, jobject param0);
+#define VTABLE_mindustry_world_blocks_defense_Wall$WallBuild_configured_mindustry_gen_Unit_java_lang_Object 221
+typedef void (*func_mindustry_world_blocks_defense_Wall$WallBuild_configured_mindustry_gen_Unit_java_lang_Object)(jcontext ctx, jobject self, jobject param0, jobject param1);
+#define VTABLE_mindustry_world_blocks_defense_Wall$WallBuild_consume 222
+typedef void (*func_mindustry_world_blocks_defense_Wall$WallBuild_consume)(jcontext ctx, jobject self);
+#define VTABLE_mindustry_world_blocks_defense_Wall$WallBuild_created 223
+typedef void (*func_mindustry_world_blocks_defense_Wall$WallBuild_created)(jcontext ctx, jobject self);
+#define VTABLE_mindustry_world_blocks_defense_Wall$WallBuild_damage_mindustry_gen_Bullet_mindustry_game_Team_float 224
+typedef void (*func_mindustry_world_blocks_defense_Wall$WallBuild_damage_mindustry_gen_Bullet_mindustry_game_Team_float)(jcontext ctx, jobject self, jobject param0, jobject param1, jfloat param2);
+#define VTABLE_mindustry_world_blocks_defense_Wall$WallBuild_damage_mindustry_game_Team_float 225
+typedef void (*func_mindustry_world_blocks_defense_Wall$WallBuild_damage_mindustry_game_Team_float)(jcontext ctx, jobject self, jobject param0, jfloat param1);
+#define VTABLE_mindustry_world_blocks_defense_Wall$WallBuild_deselect 226
+typedef void (*func_mindustry_world_blocks_defense_Wall$WallBuild_deselect)(jcontext ctx, jobject self);
+#define VTABLE_mindustry_world_blocks_defense_Wall$WallBuild_displayBars_arc_scene_ui_layout_Table 227
+typedef void (*func_mindustry_world_blocks_defense_Wall$WallBuild_displayBars_arc_scene_ui_layout_Table)(jcontext ctx, jobject self, jobject param0);
+#define VTABLE_mindustry_world_blocks_defense_Wall$WallBuild_displayConsumption_arc_scene_ui_layout_Table 228
+typedef void (*func_mindustry_world_blocks_defense_Wall$WallBuild_displayConsumption_arc_scene_ui_layout_Table)(jcontext ctx, jobject self, jobject param0);
+#define VTABLE_mindustry_world_blocks_defense_Wall$WallBuild_draw 229
+typedef void (*func_mindustry_world_blocks_defense_Wall$WallBuild_draw)(jcontext ctx, jobject self);
+#define VTABLE_mindustry_world_blocks_defense_Wall$WallBuild_drawCached 230
+typedef void (*func_mindustry_world_blocks_defense_Wall$WallBuild_drawCached)(jcontext ctx, jobject self);
+#define VTABLE_mindustry_world_blocks_defense_Wall$WallBuild_drawConfigure 231
+typedef void (*func_mindustry_world_blocks_defense_Wall$WallBuild_drawConfigure)(jcontext ctx, jobject self);
+#define VTABLE_mindustry_world_blocks_defense_Wall$WallBuild_drawCracks 232
+typedef void (*func_mindustry_world_blocks_defense_Wall$WallBuild_drawCracks)(jcontext ctx, jobject self);
+#define VTABLE_mindustry_world_blocks_defense_Wall$WallBuild_drawDisabled 233
+typedef void (*func_mindustry_world_blocks_defense_Wall$WallBuild_drawDisabled)(jcontext ctx, jobject self);
+#define VTABLE_mindustry_world_blocks_defense_Wall$WallBuild_drawItemSelection_mindustry_ctype_UnlockableContent 234
+typedef void (*func_mindustry_world_blocks_defense_Wall$WallBuild_drawItemSelection_mindustry_ctype_UnlockableContent)(jcontext ctx, jobject self, jobject param0);
+#define VTABLE_mindustry_world_blocks_defense_Wall$WallBuild_drawLight 235
+typedef void (*func_mindustry_world_blocks_defense_Wall$WallBuild_drawLight)(jcontext ctx, jobject self);
+#define VTABLE_mindustry_world_blocks_defense_Wall$WallBuild_drawLiquidLight_mindustry_type_Liquid_float 236
+typedef void (*func_mindustry_world_blocks_defense_Wall$WallBuild_drawLiquidLight_mindustry_type_Liquid_float)(jcontext ctx, jobject self, jobject param0, jfloat param1);
+#define VTABLE_mindustry_world_blocks_defense_Wall$WallBuild_drawSelect 237
+typedef void (*func_mindustry_world_blocks_defense_Wall$WallBuild_drawSelect)(jcontext ctx, jobject self);
+#define VTABLE_mindustry_world_blocks_defense_Wall$WallBuild_drawStatus 238
+typedef void (*func_mindustry_world_blocks_defense_Wall$WallBuild_drawStatus)(jcontext ctx, jobject self);
+#define VTABLE_mindustry_world_blocks_defense_Wall$WallBuild_drawTeam 239
+typedef void (*func_mindustry_world_blocks_defense_Wall$WallBuild_drawTeam)(jcontext ctx, jobject self);
+#define VTABLE_mindustry_world_blocks_defense_Wall$WallBuild_drawTeamTop 240
+typedef void (*func_mindustry_world_blocks_defense_Wall$WallBuild_drawTeamTop)(jcontext ctx, jobject self);
+#define VTABLE_mindustry_world_blocks_defense_Wall$WallBuild_dropped 241
+typedef void (*func_mindustry_world_blocks_defense_Wall$WallBuild_dropped)(jcontext ctx, jobject self);
+#define VTABLE_mindustry_world_blocks_defense_Wall$WallBuild_dumpLiquid_mindustry_type_Liquid 242
+typedef void (*func_mindustry_world_blocks_defense_Wall$WallBuild_dumpLiquid_mindustry_type_Liquid)(jcontext ctx, jobject self, jobject param0);
+#define VTABLE_mindustry_world_blocks_defense_Wall$WallBuild_dumpLiquid_mindustry_type_Liquid_float 243
+typedef void (*func_mindustry_world_blocks_defense_Wall$WallBuild_dumpLiquid_mindustry_type_Liquid_float)(jcontext ctx, jobject self, jobject param0, jfloat param1);
+#define VTABLE_mindustry_world_blocks_defense_Wall$WallBuild_dumpLiquid_mindustry_type_Liquid_float_int 244
+typedef void (*func_mindustry_world_blocks_defense_Wall$WallBuild_dumpLiquid_mindustry_type_Liquid_float_int)(jcontext ctx, jobject self, jobject param0, jfloat param1, jint param2);
+#define VTABLE_mindustry_world_blocks_defense_Wall$WallBuild_eachEdge_arc_func_Cons 245
+typedef void (*func_mindustry_world_blocks_defense_Wall$WallBuild_eachEdge_arc_func_Cons)(jcontext ctx, jobject self, jobject param0);
+#define VTABLE_mindustry_world_blocks_defense_Wall$WallBuild_getStackOffset_mindustry_type_Item_arc_math_geom_Vec2 246
+typedef void (*func_mindustry_world_blocks_defense_Wall$WallBuild_getStackOffset_mindustry_type_Item_arc_math_geom_Vec2)(jcontext ctx, jobject self, jobject param0, jobject param1);
+#define VTABLE_mindustry_world_blocks_defense_Wall$WallBuild_handleItem_mindustry_gen_Building_mindustry_type_Item 247
+typedef void (*func_mindustry_world_blocks_defense_Wall$WallBuild_handleItem_mindustry_gen_Building_mindustry_type_Item)(jcontext ctx, jobject self, jobject param0, jobject param1);
+#define VTABLE_mindustry_world_blocks_defense_Wall$WallBuild_handleLiquid_mindustry_gen_Building_mindustry_type_Liquid_float 248
+typedef void (*func_mindustry_world_blocks_defense_Wall$WallBuild_handleLiquid_mindustry_gen_Building_mindustry_type_Liquid_float)(jcontext ctx, jobject self, jobject param0, jobject param1, jfloat param2);
+#define VTABLE_mindustry_world_blocks_defense_Wall$WallBuild_handlePayload_mindustry_gen_Building_mindustry_world_blocks_payloads_Payload 249
+typedef void (*func_mindustry_world_blocks_defense_Wall$WallBuild_handlePayload_mindustry_gen_Building_mindustry_world_blocks_payloads_Payload)(jcontext ctx, jobject self, jobject param0, jobject param1);
+#define VTABLE_mindustry_world_blocks_defense_Wall$WallBuild_handleStack_mindustry_type_Item_int_mindustry_gen_Teamc 250
+typedef void (*func_mindustry_world_blocks_defense_Wall$WallBuild_handleStack_mindustry_type_Item_int_mindustry_gen_Teamc)(jcontext ctx, jobject self, jobject param0, jint param1, jobject param2);
+#define VTABLE_mindustry_world_blocks_defense_Wall$WallBuild_handleString_java_lang_Object 251
+typedef void (*func_mindustry_world_blocks_defense_Wall$WallBuild_handleString_java_lang_Object)(jcontext ctx, jobject self, jobject param0);
+#define VTABLE_mindustry_world_blocks_defense_Wall$WallBuild_handleUnitPayload_mindustry_gen_Unit_arc_func_Cons 252
+typedef void (*func_mindustry_world_blocks_defense_Wall$WallBuild_handleUnitPayload_mindustry_gen_Unit_arc_func_Cons)(jcontext ctx, jobject self, jobject param0, jobject param1);
+#define VTABLE_mindustry_world_blocks_defense_Wall$WallBuild_healthChanged 253
+typedef void (*func_mindustry_world_blocks_defense_Wall$WallBuild_healthChanged)(jcontext ctx, jobject self);
+#define VTABLE_mindustry_world_blocks_defense_Wall$WallBuild_incrementDump_int 254
+typedef void (*func_mindustry_world_blocks_defense_Wall$WallBuild_incrementDump_int)(jcontext ctx, jobject self, jint param0);
+#define VTABLE_mindustry_world_blocks_defense_Wall$WallBuild_itemTaken_mindustry_type_Item 255
+typedef void (*func_mindustry_world_blocks_defense_Wall$WallBuild_itemTaken_mindustry_type_Item)(jcontext ctx, jobject self, jobject param0);
+#define VTABLE_mindustry_world_blocks_defense_Wall$WallBuild_noSleep 256
+typedef void (*func_mindustry_world_blocks_defense_Wall$WallBuild_noSleep)(jcontext ctx, jobject self);
+#define VTABLE_mindustry_world_blocks_defense_Wall$WallBuild_offload_mindustry_type_Item 257
+typedef void (*func_mindustry_world_blocks_defense_Wall$WallBuild_offload_mindustry_type_Item)(jcontext ctx, jobject self, jobject param0);
+#define VTABLE_mindustry_world_blocks_defense_Wall$WallBuild_onCommand_arc_math_geom_Vec2 258
+typedef void (*func_mindustry_world_blocks_defense_Wall$WallBuild_onCommand_arc_math_geom_Vec2)(jcontext ctx, jobject self, jobject param0);
+#define VTABLE_mindustry_world_blocks_defense_Wall$WallBuild_onConfigureClosed 259
+typedef void (*func_mindustry_world_blocks_defense_Wall$WallBuild_onConfigureClosed)(jcontext ctx, jobject self);
+#define VTABLE_mindustry_world_blocks_defense_Wall$WallBuild_onControlSelect_mindustry_gen_Unit 260
+typedef void (*func_mindustry_world_blocks_defense_Wall$WallBuild_onControlSelect_mindustry_gen_Unit)(jcontext ctx, jobject self, jobject param0);
+#define VTABLE_mindustry_world_blocks_defense_Wall$WallBuild_onDeconstructed_mindustry_gen_Unit 261
+typedef void (*func_mindustry_world_blocks_defense_Wall$WallBuild_onDeconstructed_mindustry_gen_Unit)(jcontext ctx, jobject self, jobject param0);
+#define VTABLE_mindustry_world_blocks_defense_Wall$WallBuild_onDestroyed 262
+typedef void (*func_mindustry_world_blocks_defense_Wall$WallBuild_onDestroyed)(jcontext ctx, jobject self);
+#define VTABLE_mindustry_world_blocks_defense_Wall$WallBuild_onNearbyBuildAdded_mindustry_gen_Building 263
+typedef void (*func_mindustry_world_blocks_defense_Wall$WallBuild_onNearbyBuildAdded_mindustry_gen_Building)(jcontext ctx, jobject self, jobject param0);
+#define VTABLE_mindustry_world_blocks_defense_Wall$WallBuild_onProximityAdded 264
+typedef void (*func_mindustry_world_blocks_defense_Wall$WallBuild_onProximityAdded)(jcontext ctx, jobject self);
+#define VTABLE_mindustry_world_blocks_defense_Wall$WallBuild_onProximityRemoved 265
+typedef void (*func_mindustry_world_blocks_defense_Wall$WallBuild_onProximityRemoved)(jcontext ctx, jobject self);
+#define VTABLE_mindustry_world_blocks_defense_Wall$WallBuild_onProximityUpdate 266
+typedef void (*func_mindustry_world_blocks_defense_Wall$WallBuild_onProximityUpdate)(jcontext ctx, jobject self);
+#define VTABLE_mindustry_world_blocks_defense_Wall$WallBuild_onRemoved 267
+typedef void (*func_mindustry_world_blocks_defense_Wall$WallBuild_onRemoved)(jcontext ctx, jobject self);
+#define VTABLE_mindustry_world_blocks_defense_Wall$WallBuild_overwrote_arc_struct_Seq 268
+typedef void (*func_mindustry_world_blocks_defense_Wall$WallBuild_overwrote_arc_struct_Seq)(jcontext ctx, jobject self, jobject param0);
+#define VTABLE_mindustry_world_blocks_defense_Wall$WallBuild_payloadDraw 269
+typedef void (*func_mindustry_world_blocks_defense_Wall$WallBuild_payloadDraw)(jcontext ctx, jobject self);
+#define VTABLE_mindustry_world_blocks_defense_Wall$WallBuild_pickedUp 270
+typedef void (*func_mindustry_world_blocks_defense_Wall$WallBuild_pickedUp)(jcontext ctx, jobject self);
+#define VTABLE_mindustry_world_blocks_defense_Wall$WallBuild_playDestroySound 271
+typedef void (*func_mindustry_world_blocks_defense_Wall$WallBuild_playDestroySound)(jcontext ctx, jobject self);
+#define VTABLE_mindustry_world_blocks_defense_Wall$WallBuild_powerGraphRemoved 272
+typedef void (*func_mindustry_world_blocks_defense_Wall$WallBuild_powerGraphRemoved)(jcontext ctx, jobject self);
+#define VTABLE_mindustry_world_blocks_defense_Wall$WallBuild_produced_mindustry_type_Item 273
+typedef void (*func_mindustry_world_blocks_defense_Wall$WallBuild_produced_mindustry_type_Item)(jcontext ctx, jobject self, jobject param0);
+#define VTABLE_mindustry_world_blocks_defense_Wall$WallBuild_produced_mindustry_type_Item_int 274
+typedef void (*func_mindustry_world_blocks_defense_Wall$WallBuild_produced_mindustry_type_Item_int)(jcontext ctx, jobject self, jobject param0, jint param1);
+#define VTABLE_mindustry_world_blocks_defense_Wall$WallBuild_puddleOn_mindustry_gen_Puddle 275
+typedef void (*func_mindustry_world_blocks_defense_Wall$WallBuild_puddleOn_mindustry_gen_Puddle)(jcontext ctx, jobject self, jobject param0);
+#define VTABLE_mindustry_world_blocks_defense_Wall$WallBuild_readAll_arc_util_io_Reads_byte 276
+typedef void (*func_mindustry_world_blocks_defense_Wall$WallBuild_readAll_arc_util_io_Reads_byte)(jcontext ctx, jobject self, jobject param0, jbyte param1);
+#define VTABLE_mindustry_world_blocks_defense_Wall$WallBuild_readBase_arc_util_io_Reads 277
+typedef void (*func_mindustry_world_blocks_defense_Wall$WallBuild_readBase_arc_util_io_Reads)(jcontext ctx, jobject self, jobject param0);
+#define VTABLE_mindustry_world_blocks_defense_Wall$WallBuild_readSync_arc_util_io_Reads_byte 278
+typedef void (*func_mindustry_world_blocks_defense_Wall$WallBuild_readSync_arc_util_io_Reads_byte)(jcontext ctx, jobject self, jobject param0, jbyte param1);
+#define VTABLE_mindustry_world_blocks_defense_Wall$WallBuild_recache 279
+typedef void (*func_mindustry_world_blocks_defense_Wall$WallBuild_recache)(jcontext ctx, jobject self);
+#define VTABLE_mindustry_world_blocks_defense_Wall$WallBuild_recentlyHealed 280
+typedef void (*func_mindustry_world_blocks_defense_Wall$WallBuild_recentlyHealed)(jcontext ctx, jobject self);
+#define VTABLE_mindustry_world_blocks_defense_Wall$WallBuild_removeFromProximity 281
+typedef void (*func_mindustry_world_blocks_defense_Wall$WallBuild_removeFromProximity)(jcontext ctx, jobject self);
+#define VTABLE_mindustry_world_blocks_defense_Wall$WallBuild_sleep 282
+typedef void (*func_mindustry_world_blocks_defense_Wall$WallBuild_sleep)(jcontext ctx, jobject self);
+#define VTABLE_mindustry_world_blocks_defense_Wall$WallBuild_splashLiquid_mindustry_type_Liquid_float 283
+typedef void (*func_mindustry_world_blocks_defense_Wall$WallBuild_splashLiquid_mindustry_type_Liquid_float)(jcontext ctx, jobject self, jobject param0, jfloat param1);
+#define VTABLE_mindustry_world_blocks_defense_Wall$WallBuild_tapped 284
+typedef void (*func_mindustry_world_blocks_defense_Wall$WallBuild_tapped)(jcontext ctx, jobject self);
+#define VTABLE_mindustry_world_blocks_defense_Wall$WallBuild_transferLiquid_mindustry_gen_Building_float_mindustry_type_Liquid 285
+typedef void (*func_mindustry_world_blocks_defense_Wall$WallBuild_transferLiquid_mindustry_gen_Building_float_mindustry_type_Liquid)(jcontext ctx, jobject self, jobject param0, jfloat param1, jobject param2);
+#define VTABLE_mindustry_world_blocks_defense_Wall$WallBuild_unitOn_mindustry_gen_Unit 286
+typedef void (*func_mindustry_world_blocks_defense_Wall$WallBuild_unitOn_mindustry_gen_Unit)(jcontext ctx, jobject self, jobject param0);
+#define VTABLE_mindustry_world_blocks_defense_Wall$WallBuild_unitOnAny_mindustry_gen_Unit 287
+typedef void (*func_mindustry_world_blocks_defense_Wall$WallBuild_unitOnAny_mindustry_gen_Unit)(jcontext ctx, jobject self, jobject param0);
+#define VTABLE_mindustry_world_blocks_defense_Wall$WallBuild_unitRemoved_mindustry_gen_Unit 288
+typedef void (*func_mindustry_world_blocks_defense_Wall$WallBuild_unitRemoved_mindustry_gen_Unit)(jcontext ctx, jobject self, jobject param0);
+#define VTABLE_mindustry_world_blocks_defense_Wall$WallBuild_updateConsumption 289
+typedef void (*func_mindustry_world_blocks_defense_Wall$WallBuild_updateConsumption)(jcontext ctx, jobject self);
+#define VTABLE_mindustry_world_blocks_defense_Wall$WallBuild_updateEfficiencyMultiplier 290
+typedef void (*func_mindustry_world_blocks_defense_Wall$WallBuild_updateEfficiencyMultiplier)(jcontext ctx, jobject self);
+#define VTABLE_mindustry_world_blocks_defense_Wall$WallBuild_updateFogVisibility 291
+typedef void (*func_mindustry_world_blocks_defense_Wall$WallBuild_updateFogVisibility)(jcontext ctx, jobject self);
+#define VTABLE_mindustry_world_blocks_defense_Wall$WallBuild_updateLastAccess_mindustry_gen_Player 292
+typedef void (*func_mindustry_world_blocks_defense_Wall$WallBuild_updateLastAccess_mindustry_gen_Player)(jcontext ctx, jobject self, jobject param0);
+#define VTABLE_mindustry_world_blocks_defense_Wall$WallBuild_updatePayload_mindustry_gen_Unit_mindustry_gen_Building 293
+typedef void (*func_mindustry_world_blocks_defense_Wall$WallBuild_updatePayload_mindustry_gen_Unit_mindustry_gen_Building)(jcontext ctx, jobject self, jobject param0, jobject param1);
+#define VTABLE_mindustry_world_blocks_defense_Wall$WallBuild_updatePowerGraph 294
+typedef void (*func_mindustry_world_blocks_defense_Wall$WallBuild_updatePowerGraph)(jcontext ctx, jobject self);
+#define VTABLE_mindustry_world_blocks_defense_Wall$WallBuild_updateProximity 295
+typedef void (*func_mindustry_world_blocks_defense_Wall$WallBuild_updateProximity)(jcontext ctx, jobject self);
+#define VTABLE_mindustry_world_blocks_defense_Wall$WallBuild_updateTableAlign_arc_scene_ui_layout_Table 296
+typedef void (*func_mindustry_world_blocks_defense_Wall$WallBuild_updateTableAlign_arc_scene_ui_layout_Table)(jcontext ctx, jobject self, jobject param0);
+#define VTABLE_mindustry_world_blocks_defense_Wall$WallBuild_updateTile 297
+typedef void (*func_mindustry_world_blocks_defense_Wall$WallBuild_updateTile)(jcontext ctx, jobject self);
+#define VTABLE_mindustry_world_blocks_defense_Wall$WallBuild_writeAll_arc_util_io_Writes 298
+typedef void (*func_mindustry_world_blocks_defense_Wall$WallBuild_writeAll_arc_util_io_Writes)(jcontext ctx, jobject self, jobject param0);
+#define VTABLE_mindustry_world_blocks_defense_Wall$WallBuild_writeBase_arc_util_io_Writes 299
+typedef void (*func_mindustry_world_blocks_defense_Wall$WallBuild_writeBase_arc_util_io_Writes)(jcontext ctx, jobject self, jobject param0);
+#define VTABLE_mindustry_world_blocks_defense_Wall$WallBuild_writeSync_arc_util_io_Writes 300
+typedef void (*func_mindustry_world_blocks_defense_Wall$WallBuild_writeSync_arc_util_io_Writes)(jcontext ctx, jobject self, jobject param0);
+#define VTABLE_mindustry_world_blocks_defense_Wall$WallBuild_lambda$splashLiquid$0_mindustry_type_Liquid_float 301
+typedef void (*func_mindustry_world_blocks_defense_Wall$WallBuild_lambda$splashLiquid$0_mindustry_type_Liquid_float)(jcontext ctx, jobject self, jobject param0, jfloat param1);
+#define VTABLE_mindustry_world_blocks_defense_Wall$WallBuild_lambda$onDeconstructed$0_float_mindustry_world_Tile 302
+typedef void (*func_mindustry_world_blocks_defense_Wall$WallBuild_lambda$onDeconstructed$0_float_mindustry_world_Tile)(jcontext ctx, jobject self, jfloat param0, jobject param1);
+#define VTABLE_mindustry_world_blocks_defense_Wall$WallBuild_lambda$display$6_java_lang_String_arc_scene_ui_layout_Table 303
+typedef void (*func_mindustry_world_blocks_defense_Wall$WallBuild_lambda$display$6_java_lang_String_arc_scene_ui_layout_Table)(jcontext ctx, jobject self, jobject param0, jobject param1);
+#define VTABLE_mindustry_world_blocks_defense_Wall$WallBuild_lambda$display$9_arc_struct_Bits_java_lang_Runnable 304
+typedef void (*func_mindustry_world_blocks_defense_Wall$WallBuild_lambda$display$9_arc_struct_Bits_java_lang_Runnable)(jcontext ctx, jobject self, jobject param0, jobject param1);
+#define VTABLE_mindustry_world_blocks_defense_Wall$WallBuild_lambda$display$7_arc_scene_ui_layout_Table_java_lang_String 305
+typedef void (*func_mindustry_world_blocks_defense_Wall$WallBuild_lambda$display$7_arc_scene_ui_layout_Table_java_lang_String)(jcontext ctx, jobject self, jobject param0, jobject param1);
+#define VTABLE_mindustry_world_blocks_defense_Wall$WallBuild_lambda$display$8_mindustry_type_Liquid_java_lang_String_R_java_lang_CharSequence 306
+typedef jobject (*func_mindustry_world_blocks_defense_Wall$WallBuild_lambda$display$8_mindustry_type_Liquid_java_lang_String_R_java_lang_CharSequence)(jcontext ctx, jobject self, jobject param0, jobject param1);
+#define VTABLE_mindustry_world_blocks_defense_Wall$WallBuild_lambda$display$1_arc_scene_ui_layout_Table 307
+typedef void (*func_mindustry_world_blocks_defense_Wall$WallBuild_lambda$display$1_arc_scene_ui_layout_Table)(jcontext ctx, jobject self, jobject param0);
+#define VTABLE_mindustry_world_blocks_defense_Wall$WallBuild_lambda$display$0_arc_scene_ui_layout_Table 308
+typedef void (*func_mindustry_world_blocks_defense_Wall$WallBuild_lambda$display$0_arc_scene_ui_layout_Table)(jcontext ctx, jobject self, jobject param0);
+#define VTABLE_mindustry_world_blocks_defense_Wall$WallBuild_lambda$placed$0_mindustry_gen_Building 309
+typedef void (*func_mindustry_world_blocks_defense_Wall$WallBuild_lambda$placed$0_mindustry_gen_Building)(jcontext ctx, jobject self, jobject param0);
+#define VTABLE_mindustry_world_blocks_defense_Wall$WallBuild_updateAutotileBits 310
+typedef void (*func_mindustry_world_blocks_defense_Wall$WallBuild_updateAutotileBits)(jcontext ctx, jobject self);
+#define VTABLE_mindustry_world_blocks_defense_Wall$WallBuild_updateOtherBits 311
+typedef void (*func_mindustry_world_blocks_defense_Wall$WallBuild_updateOtherBits)(jcontext ctx, jobject self);
+
+void mark_mindustry_world_blocks_defense_Wall$WallBuild(jobject object, jint mark, jint depth);
+void clinit_mindustry_world_blocks_defense_Wall$WallBuild(jcontext ctx);
+void init_mindustry_world_blocks_defense_Wall$WallBuild_mindustry_world_blocks_defense_Wall(jcontext ctx, jobject self, jobject param0);
+void M_mindustry_world_blocks_defense_Wall$WallBuild_updateAutotileBits(jcontext ctx, jobject self);
+void M_mindustry_world_blocks_defense_Wall$WallBuild_updateOtherBits(jcontext ctx, jobject self);
+void M_mindustry_world_blocks_defense_Wall$WallBuild_onProximityUpdate(jcontext ctx, jobject self);
+void M_mindustry_world_blocks_defense_Wall$WallBuild_onProximityRemoved(jcontext ctx, jobject self);
+void M_mindustry_world_blocks_defense_Wall$WallBuild_onProximityAdded(jcontext ctx, jobject self);
+void M_mindustry_world_blocks_defense_Wall$WallBuild_drawCached(jcontext ctx, jobject self);
+void M_mindustry_world_blocks_defense_Wall$WallBuild_draw(jcontext ctx, jobject self);
+jbool M_mindustry_world_blocks_defense_Wall$WallBuild_collision_mindustry_gen_Bullet_R_boolean(jcontext ctx, jobject self, jobject param0);
+
+#ifdef __cplusplus
+}
+#endif
+
+#endif

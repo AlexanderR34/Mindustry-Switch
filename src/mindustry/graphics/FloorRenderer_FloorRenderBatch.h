@@ -1,0 +1,105 @@
+#ifndef HEADER_mindustry_graphics_FloorRenderer$FloorRenderBatch
+#define HEADER_mindustry_graphics_FloorRenderer$FloorRenderBatch
+
+#include "Clearwing.h"
+#include "arc/graphics/g2d/Batch.h"
+
+#ifdef __cplusplus
+extern "C" {
+#endif
+
+typedef struct mindustry_graphics_FloorRenderer$FloorRenderBatch {
+	arc_graphics_g2d_Batch parent;
+	jref F_this$0;
+} mindustry_graphics_FloorRenderer$FloorRenderBatch;
+
+extern Class class_mindustry_graphics_FloorRenderer$FloorRenderBatch;
+
+
+#define VTABLE_mindustry_graphics_FloorRenderer$FloorRenderBatch_hashCode_R_int 0
+typedef jint (*func_mindustry_graphics_FloorRenderer$FloorRenderBatch_hashCode_R_int)(jcontext ctx, jobject self);
+#define VTABLE_mindustry_graphics_FloorRenderer$FloorRenderBatch_equals_java_lang_Object_R_boolean 1
+typedef jbool (*func_mindustry_graphics_FloorRenderer$FloorRenderBatch_equals_java_lang_Object_R_boolean)(jcontext ctx, jobject self, jobject param0);
+#define VTABLE_mindustry_graphics_FloorRenderer$FloorRenderBatch_clone_R_java_lang_Object 2
+typedef jobject (*func_mindustry_graphics_FloorRenderer$FloorRenderBatch_clone_R_java_lang_Object)(jcontext ctx, jobject self);
+#define VTABLE_mindustry_graphics_FloorRenderer$FloorRenderBatch_getClass_R_java_lang_Class 3
+typedef jobject (*func_mindustry_graphics_FloorRenderer$FloorRenderBatch_getClass_R_java_lang_Class)(jcontext ctx, jobject self);
+#define VTABLE_mindustry_graphics_FloorRenderer$FloorRenderBatch_toString_R_java_lang_String 4
+typedef jobject (*func_mindustry_graphics_FloorRenderer$FloorRenderBatch_toString_R_java_lang_String)(jcontext ctx, jobject self);
+#define VTABLE_mindustry_graphics_FloorRenderer$FloorRenderBatch_finalize 5
+typedef void (*func_mindustry_graphics_FloorRenderer$FloorRenderBatch_finalize)(jcontext ctx, jobject self);
+#define VTABLE_mindustry_graphics_FloorRenderer$FloorRenderBatch_notify 6
+typedef void (*func_mindustry_graphics_FloorRenderer$FloorRenderBatch_notify)(jcontext ctx, jobject self);
+#define VTABLE_mindustry_graphics_FloorRenderer$FloorRenderBatch_notifyAll 7
+typedef void (*func_mindustry_graphics_FloorRenderer$FloorRenderBatch_notifyAll)(jcontext ctx, jobject self);
+#define VTABLE_mindustry_graphics_FloorRenderer$FloorRenderBatch_wait 8
+typedef void (*func_mindustry_graphics_FloorRenderer$FloorRenderBatch_wait)(jcontext ctx, jobject self);
+#define VTABLE_mindustry_graphics_FloorRenderer$FloorRenderBatch_wait_long 9
+typedef void (*func_mindustry_graphics_FloorRenderer$FloorRenderBatch_wait_long)(jcontext ctx, jobject self, jlong param0);
+#define VTABLE_mindustry_graphics_FloorRenderer$FloorRenderBatch_wait_long_int 10
+typedef void (*func_mindustry_graphics_FloorRenderer$FloorRenderBatch_wait_long_int)(jcontext ctx, jobject self, jlong param0, jint param1);
+#define VTABLE_mindustry_graphics_FloorRenderer$FloorRenderBatch_dispose 11
+typedef void (*func_mindustry_graphics_FloorRenderer$FloorRenderBatch_dispose)(jcontext ctx, jobject self);
+#define VTABLE_mindustry_graphics_FloorRenderer$FloorRenderBatch_isDisposed_R_boolean 12
+typedef jbool (*func_mindustry_graphics_FloorRenderer$FloorRenderBatch_isDisposed_R_boolean)(jcontext ctx, jobject self);
+#define VTABLE_mindustry_graphics_FloorRenderer$FloorRenderBatch_z_float 13
+typedef void (*func_mindustry_graphics_FloorRenderer$FloorRenderBatch_z_float)(jcontext ctx, jobject self, jfloat param0);
+#define VTABLE_mindustry_graphics_FloorRenderer$FloorRenderBatch_setSort_boolean 14
+typedef void (*func_mindustry_graphics_FloorRenderer$FloorRenderBatch_setSort_boolean)(jcontext ctx, jobject self, jbool param0);
+#define VTABLE_mindustry_graphics_FloorRenderer$FloorRenderBatch_setPackedColor_float 15
+typedef void (*func_mindustry_graphics_FloorRenderer$FloorRenderBatch_setPackedColor_float)(jcontext ctx, jobject self, jfloat param0);
+#define VTABLE_mindustry_graphics_FloorRenderer$FloorRenderBatch_getPackedColor_R_float 16
+typedef jfloat (*func_mindustry_graphics_FloorRenderer$FloorRenderBatch_getPackedColor_R_float)(jcontext ctx, jobject self);
+#define VTABLE_mindustry_graphics_FloorRenderer$FloorRenderBatch_setPackedMixColor_float 17
+typedef void (*func_mindustry_graphics_FloorRenderer$FloorRenderBatch_setPackedMixColor_float)(jcontext ctx, jobject self, jfloat param0);
+#define VTABLE_mindustry_graphics_FloorRenderer$FloorRenderBatch_getPackedMixColor_R_float 18
+typedef jfloat (*func_mindustry_graphics_FloorRenderer$FloorRenderBatch_getPackedMixColor_R_float)(jcontext ctx, jobject self);
+#define VTABLE_mindustry_graphics_FloorRenderer$FloorRenderBatch_draw_arc_graphics_Texture_Array1_float_int_int 19
+typedef void (*func_mindustry_graphics_FloorRenderer$FloorRenderBatch_draw_arc_graphics_Texture_Array1_float_int_int)(jcontext ctx, jobject self, jobject param0, jobject param1, jint param2, jint param3);
+#define VTABLE_mindustry_graphics_FloorRenderer$FloorRenderBatch_draw_arc_graphics_g2d_TextureRegion_float_float_float_float_float_float_float 20
+typedef void (*func_mindustry_graphics_FloorRenderer$FloorRenderBatch_draw_arc_graphics_g2d_TextureRegion_float_float_float_float_float_float_float)(jcontext ctx, jobject self, jobject param0, jfloat param1, jfloat param2, jfloat param3, jfloat param4, jfloat param5, jfloat param6, jfloat param7);
+#define VTABLE_mindustry_graphics_FloorRenderer$FloorRenderBatch_draw_java_lang_Runnable 21
+typedef void (*func_mindustry_graphics_FloorRenderer$FloorRenderBatch_draw_java_lang_Runnable)(jcontext ctx, jobject self, jobject param0);
+#define VTABLE_mindustry_graphics_FloorRenderer$FloorRenderBatch_flush 22
+typedef void (*func_mindustry_graphics_FloorRenderer$FloorRenderBatch_flush)(jcontext ctx, jobject self);
+#define VTABLE_mindustry_graphics_FloorRenderer$FloorRenderBatch_discard 23
+typedef void (*func_mindustry_graphics_FloorRenderer$FloorRenderBatch_discard)(jcontext ctx, jobject self);
+#define VTABLE_mindustry_graphics_FloorRenderer$FloorRenderBatch_setBlending_arc_graphics_Blending 24
+typedef void (*func_mindustry_graphics_FloorRenderer$FloorRenderBatch_setBlending_arc_graphics_Blending)(jcontext ctx, jobject self, jobject param0);
+#define VTABLE_mindustry_graphics_FloorRenderer$FloorRenderBatch_getBlending_R_arc_graphics_Blending 25
+typedef jobject (*func_mindustry_graphics_FloorRenderer$FloorRenderBatch_getBlending_R_arc_graphics_Blending)(jcontext ctx, jobject self);
+#define VTABLE_mindustry_graphics_FloorRenderer$FloorRenderBatch_getProjection_R_arc_math_Mat 26
+typedef jobject (*func_mindustry_graphics_FloorRenderer$FloorRenderBatch_getProjection_R_arc_math_Mat)(jcontext ctx, jobject self);
+#define VTABLE_mindustry_graphics_FloorRenderer$FloorRenderBatch_getTransform_R_arc_math_Mat 27
+typedef jobject (*func_mindustry_graphics_FloorRenderer$FloorRenderBatch_getTransform_R_arc_math_Mat)(jcontext ctx, jobject self);
+#define VTABLE_mindustry_graphics_FloorRenderer$FloorRenderBatch_setProjection_arc_math_Mat 28
+typedef void (*func_mindustry_graphics_FloorRenderer$FloorRenderBatch_setProjection_arc_math_Mat)(jcontext ctx, jobject self, jobject param0);
+#define VTABLE_mindustry_graphics_FloorRenderer$FloorRenderBatch_setTransform_arc_math_Mat 29
+typedef void (*func_mindustry_graphics_FloorRenderer$FloorRenderBatch_setTransform_arc_math_Mat)(jcontext ctx, jobject self, jobject param0);
+#define VTABLE_mindustry_graphics_FloorRenderer$FloorRenderBatch_setupMatrices 30
+typedef void (*func_mindustry_graphics_FloorRenderer$FloorRenderBatch_setupMatrices)(jcontext ctx, jobject self);
+#define VTABLE_mindustry_graphics_FloorRenderer$FloorRenderBatch_switchTexture_arc_graphics_Texture 31
+typedef void (*func_mindustry_graphics_FloorRenderer$FloorRenderBatch_switchTexture_arc_graphics_Texture)(jcontext ctx, jobject self, jobject param0);
+#define VTABLE_mindustry_graphics_FloorRenderer$FloorRenderBatch_setShader_arc_graphics_gl_Shader 32
+typedef void (*func_mindustry_graphics_FloorRenderer$FloorRenderBatch_setShader_arc_graphics_gl_Shader)(jcontext ctx, jobject self, jobject param0);
+#define VTABLE_mindustry_graphics_FloorRenderer$FloorRenderBatch_setShader_arc_graphics_gl_Shader_boolean 33
+typedef void (*func_mindustry_graphics_FloorRenderer$FloorRenderBatch_setShader_arc_graphics_gl_Shader_boolean)(jcontext ctx, jobject self, jobject param0, jbool param1);
+#define VTABLE_mindustry_graphics_FloorRenderer$FloorRenderBatch_getShader_R_arc_graphics_gl_Shader 34
+typedef jobject (*func_mindustry_graphics_FloorRenderer$FloorRenderBatch_getShader_R_arc_graphics_gl_Shader)(jcontext ctx, jobject self);
+#define VTABLE_mindustry_graphics_FloorRenderer$FloorRenderBatch_pack_float_float_R_float 35
+typedef jfloat (*func_mindustry_graphics_FloorRenderer$FloorRenderBatch_pack_float_float_R_float)(jcontext ctx, jobject self, jfloat param0, jfloat param1);
+
+void mark_mindustry_graphics_FloorRenderer$FloorRenderBatch(jobject object, jint mark, jint depth);
+void clinit_mindustry_graphics_FloorRenderer$FloorRenderBatch(jcontext ctx);
+void init_mindustry_graphics_FloorRenderer$FloorRenderBatch_mindustry_graphics_FloorRenderer(jcontext ctx, jobject self, jobject param0);
+void M_mindustry_graphics_FloorRenderer$FloorRenderBatch_draw_arc_graphics_g2d_TextureRegion_float_float_float_float_float_float_float(jcontext ctx, jobject self, jobject param0, jfloat param1, jfloat param2, jfloat param3, jfloat param4, jfloat param5, jfloat param6, jfloat param7);
+jfloat M_mindustry_graphics_FloorRenderer$FloorRenderBatch_pack_float_float_R_float(jcontext ctx, jobject self, jfloat param0, jfloat param1);
+void M_mindustry_graphics_FloorRenderer$FloorRenderBatch_flush(jcontext ctx, jobject self);
+void M_mindustry_graphics_FloorRenderer$FloorRenderBatch_setShader_arc_graphics_gl_Shader_boolean(jcontext ctx, jobject self, jobject param0, jbool param1);
+void M_mindustry_graphics_FloorRenderer$FloorRenderBatch_draw_arc_graphics_Texture_Array1_float_int_int(jcontext ctx, jobject self, jobject param0, jobject param1, jint param2, jint param3);
+
+#ifdef __cplusplus
+}
+#endif
+
+#endif

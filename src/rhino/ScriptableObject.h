@@ -1,0 +1,337 @@
+#ifndef HEADER_rhino_ScriptableObject
+#define HEADER_rhino_ScriptableObject
+
+#include "Clearwing.h"
+#include "java/lang/Object.h"
+#include "rhino/Scriptable.h"
+#include "rhino/SymbolScriptable.h"
+#include "rhino/debug/DebuggableObject.h"
+#include "rhino/ConstProperties.h"
+
+#ifdef __cplusplus
+extern "C" {
+#endif
+
+typedef struct rhino_ScriptableObject {
+	java_lang_Object parent;
+	jref F_prototypeObject;
+	jref F_parentScopeObject;
+	jref F_slotMap;
+	jref F_externalData;
+	volatile jref F_associatedValues;
+	jbool F_isExtensible;
+	jbool F_isSealed;
+} rhino_ScriptableObject;
+
+extern Class class_rhino_ScriptableObject;
+
+extern jint SF_rhino_ScriptableObject_EMPTY;
+extern jint SF_rhino_ScriptableObject_READONLY;
+extern jint SF_rhino_ScriptableObject_DONTENUM;
+extern jint SF_rhino_ScriptableObject_PERMANENT;
+extern jint SF_rhino_ScriptableObject_UNINITIALIZED_CONST;
+extern jint SF_rhino_ScriptableObject_CONST;
+extern jobject SF_rhino_ScriptableObject_GET_ARRAY_LENGTH;
+extern jobject SF_rhino_ScriptableObject_KEY_COMPARATOR;
+extern jbool SF_rhino_ScriptableObject_$assertionsDisabled;
+
+#define VTABLE_rhino_ScriptableObject_hashCode_R_int 0
+typedef jint (*func_rhino_ScriptableObject_hashCode_R_int)(jcontext ctx, jobject self);
+#define VTABLE_rhino_ScriptableObject_equals_java_lang_Object_R_boolean 1
+typedef jbool (*func_rhino_ScriptableObject_equals_java_lang_Object_R_boolean)(jcontext ctx, jobject self, jobject param0);
+#define VTABLE_rhino_ScriptableObject_clone_R_java_lang_Object 2
+typedef jobject (*func_rhino_ScriptableObject_clone_R_java_lang_Object)(jcontext ctx, jobject self);
+#define VTABLE_rhino_ScriptableObject_getClass_R_java_lang_Class 3
+typedef jobject (*func_rhino_ScriptableObject_getClass_R_java_lang_Class)(jcontext ctx, jobject self);
+#define VTABLE_rhino_ScriptableObject_toString_R_java_lang_String 4
+typedef jobject (*func_rhino_ScriptableObject_toString_R_java_lang_String)(jcontext ctx, jobject self);
+#define VTABLE_rhino_ScriptableObject_finalize 5
+typedef void (*func_rhino_ScriptableObject_finalize)(jcontext ctx, jobject self);
+#define VTABLE_rhino_ScriptableObject_notify 6
+typedef void (*func_rhino_ScriptableObject_notify)(jcontext ctx, jobject self);
+#define VTABLE_rhino_ScriptableObject_notifyAll 7
+typedef void (*func_rhino_ScriptableObject_notifyAll)(jcontext ctx, jobject self);
+#define VTABLE_rhino_ScriptableObject_wait 8
+typedef void (*func_rhino_ScriptableObject_wait)(jcontext ctx, jobject self);
+#define VTABLE_rhino_ScriptableObject_wait_long 9
+typedef void (*func_rhino_ScriptableObject_wait_long)(jcontext ctx, jobject self, jlong param0);
+#define VTABLE_rhino_ScriptableObject_wait_long_int 10
+typedef void (*func_rhino_ScriptableObject_wait_long_int)(jcontext ctx, jobject self, jlong param0, jint param1);
+#define VTABLE_rhino_ScriptableObject_getClassName_R_java_lang_String 11
+typedef jobject (*func_rhino_ScriptableObject_getClassName_R_java_lang_String)(jcontext ctx, jobject self);
+#define VTABLE_rhino_ScriptableObject_get_java_lang_String_rhino_Scriptable_R_java_lang_Object 12
+typedef jobject (*func_rhino_ScriptableObject_get_java_lang_String_rhino_Scriptable_R_java_lang_Object)(jcontext ctx, jobject self, jobject param0, jobject param1);
+#define VTABLE_rhino_ScriptableObject_get_int_rhino_Scriptable_R_java_lang_Object 13
+typedef jobject (*func_rhino_ScriptableObject_get_int_rhino_Scriptable_R_java_lang_Object)(jcontext ctx, jobject self, jint param0, jobject param1);
+#define VTABLE_rhino_ScriptableObject_has_java_lang_String_rhino_Scriptable_R_boolean 14
+typedef jbool (*func_rhino_ScriptableObject_has_java_lang_String_rhino_Scriptable_R_boolean)(jcontext ctx, jobject self, jobject param0, jobject param1);
+#define VTABLE_rhino_ScriptableObject_has_int_rhino_Scriptable_R_boolean 15
+typedef jbool (*func_rhino_ScriptableObject_has_int_rhino_Scriptable_R_boolean)(jcontext ctx, jobject self, jint param0, jobject param1);
+#define VTABLE_rhino_ScriptableObject_put_java_lang_String_rhino_Scriptable_java_lang_Object 16
+typedef void (*func_rhino_ScriptableObject_put_java_lang_String_rhino_Scriptable_java_lang_Object)(jcontext ctx, jobject self, jobject param0, jobject param1, jobject param2);
+#define VTABLE_rhino_ScriptableObject_put_int_rhino_Scriptable_java_lang_Object 17
+typedef void (*func_rhino_ScriptableObject_put_int_rhino_Scriptable_java_lang_Object)(jcontext ctx, jobject self, jint param0, jobject param1, jobject param2);
+#define VTABLE_rhino_ScriptableObject_delete_java_lang_String 18
+typedef void (*func_rhino_ScriptableObject_delete_java_lang_String)(jcontext ctx, jobject self, jobject param0);
+#define VTABLE_rhino_ScriptableObject_delete_int 19
+typedef void (*func_rhino_ScriptableObject_delete_int)(jcontext ctx, jobject self, jint param0);
+#define VTABLE_rhino_ScriptableObject_getPrototype_R_rhino_Scriptable 20
+typedef jobject (*func_rhino_ScriptableObject_getPrototype_R_rhino_Scriptable)(jcontext ctx, jobject self);
+#define VTABLE_rhino_ScriptableObject_setPrototype_rhino_Scriptable 21
+typedef void (*func_rhino_ScriptableObject_setPrototype_rhino_Scriptable)(jcontext ctx, jobject self, jobject param0);
+#define VTABLE_rhino_ScriptableObject_getParentScope_R_rhino_Scriptable 22
+typedef jobject (*func_rhino_ScriptableObject_getParentScope_R_rhino_Scriptable)(jcontext ctx, jobject self);
+#define VTABLE_rhino_ScriptableObject_setParentScope_rhino_Scriptable 23
+typedef void (*func_rhino_ScriptableObject_setParentScope_rhino_Scriptable)(jcontext ctx, jobject self, jobject param0);
+#define VTABLE_rhino_ScriptableObject_getIds_R_Array1_java_lang_Object 24
+typedef jobject (*func_rhino_ScriptableObject_getIds_R_Array1_java_lang_Object)(jcontext ctx, jobject self);
+#define VTABLE_rhino_ScriptableObject_getDefaultValue_java_lang_Class_R_java_lang_Object 25
+typedef jobject (*func_rhino_ScriptableObject_getDefaultValue_java_lang_Class_R_java_lang_Object)(jcontext ctx, jobject self, jobject param0);
+#define VTABLE_rhino_ScriptableObject_hasInstance_rhino_Scriptable_R_boolean 26
+typedef jbool (*func_rhino_ScriptableObject_hasInstance_rhino_Scriptable_R_boolean)(jcontext ctx, jobject self, jobject param0);
+#define VTABLE_rhino_ScriptableObject_get_rhino_Symbol_rhino_Scriptable_R_java_lang_Object 27
+typedef jobject (*func_rhino_ScriptableObject_get_rhino_Symbol_rhino_Scriptable_R_java_lang_Object)(jcontext ctx, jobject self, jobject param0, jobject param1);
+#define VTABLE_rhino_ScriptableObject_has_rhino_Symbol_rhino_Scriptable_R_boolean 28
+typedef jbool (*func_rhino_ScriptableObject_has_rhino_Symbol_rhino_Scriptable_R_boolean)(jcontext ctx, jobject self, jobject param0, jobject param1);
+#define VTABLE_rhino_ScriptableObject_put_rhino_Symbol_rhino_Scriptable_java_lang_Object 29
+typedef void (*func_rhino_ScriptableObject_put_rhino_Symbol_rhino_Scriptable_java_lang_Object)(jcontext ctx, jobject self, jobject param0, jobject param1, jobject param2);
+#define VTABLE_rhino_ScriptableObject_delete_rhino_Symbol 30
+typedef void (*func_rhino_ScriptableObject_delete_rhino_Symbol)(jcontext ctx, jobject self, jobject param0);
+#define VTABLE_rhino_ScriptableObject_getAllIds_R_Array1_java_lang_Object 31
+typedef jobject (*func_rhino_ScriptableObject_getAllIds_R_Array1_java_lang_Object)(jcontext ctx, jobject self);
+#define VTABLE_rhino_ScriptableObject_putConst_java_lang_String_rhino_Scriptable_java_lang_Object 32
+typedef void (*func_rhino_ScriptableObject_putConst_java_lang_String_rhino_Scriptable_java_lang_Object)(jcontext ctx, jobject self, jobject param0, jobject param1, jobject param2);
+#define VTABLE_rhino_ScriptableObject_defineConst_java_lang_String_rhino_Scriptable 33
+typedef void (*func_rhino_ScriptableObject_defineConst_java_lang_String_rhino_Scriptable)(jcontext ctx, jobject self, jobject param0, jobject param1);
+#define VTABLE_rhino_ScriptableObject_isConst_java_lang_String_R_boolean 34
+typedef jbool (*func_rhino_ScriptableObject_isConst_java_lang_String_R_boolean)(jcontext ctx, jobject self, jobject param0);
+#define VTABLE_rhino_ScriptableObject_createSlotMap_int_R_rhino_SlotMapContainer 35
+typedef jobject (*func_rhino_ScriptableObject_createSlotMap_int_R_rhino_SlotMapContainer)(jcontext ctx, jobject self, jint param0);
+#define VTABLE_rhino_ScriptableObject_getTypeOf_R_java_lang_String 36
+typedef jobject (*func_rhino_ScriptableObject_getTypeOf_R_java_lang_String)(jcontext ctx, jobject self);
+#define VTABLE_rhino_ScriptableObject_getAttributes_java_lang_String_R_int 37
+typedef jint (*func_rhino_ScriptableObject_getAttributes_java_lang_String_R_int)(jcontext ctx, jobject self, jobject param0);
+#define VTABLE_rhino_ScriptableObject_getAttributes_int_R_int 38
+typedef jint (*func_rhino_ScriptableObject_getAttributes_int_R_int)(jcontext ctx, jobject self, jint param0);
+#define VTABLE_rhino_ScriptableObject_getAttributes_rhino_Symbol_R_int 39
+typedef jint (*func_rhino_ScriptableObject_getAttributes_rhino_Symbol_R_int)(jcontext ctx, jobject self, jobject param0);
+#define VTABLE_rhino_ScriptableObject_setAttributes_java_lang_String_int 40
+typedef void (*func_rhino_ScriptableObject_setAttributes_java_lang_String_int)(jcontext ctx, jobject self, jobject param0, jint param1);
+#define VTABLE_rhino_ScriptableObject_setAttributes_int_int 41
+typedef void (*func_rhino_ScriptableObject_setAttributes_int_int)(jcontext ctx, jobject self, jint param0, jint param1);
+#define VTABLE_rhino_ScriptableObject_setAttributes_rhino_Symbol_int 42
+typedef void (*func_rhino_ScriptableObject_setAttributes_rhino_Symbol_int)(jcontext ctx, jobject self, jobject param0, jint param1);
+#define VTABLE_rhino_ScriptableObject_setGetterOrSetter_java_lang_String_int_rhino_Callable_boolean 43
+typedef void (*func_rhino_ScriptableObject_setGetterOrSetter_java_lang_String_int_rhino_Callable_boolean)(jcontext ctx, jobject self, jobject param0, jint param1, jobject param2, jbool param3);
+#define VTABLE_rhino_ScriptableObject_setGetterOrSetter_java_lang_String_int_rhino_Callable_boolean_boolean 44
+typedef void (*func_rhino_ScriptableObject_setGetterOrSetter_java_lang_String_int_rhino_Callable_boolean_boolean)(jcontext ctx, jobject self, jobject param0, jint param1, jobject param2, jbool param3, jbool param4);
+#define VTABLE_rhino_ScriptableObject_getGetterOrSetter_java_lang_String_int_boolean_R_java_lang_Object 45
+typedef jobject (*func_rhino_ScriptableObject_getGetterOrSetter_java_lang_String_int_boolean_R_java_lang_Object)(jcontext ctx, jobject self, jobject param0, jint param1, jbool param2);
+#define VTABLE_rhino_ScriptableObject_isGetterOrSetter_java_lang_String_int_boolean_R_boolean 46
+typedef jbool (*func_rhino_ScriptableObject_isGetterOrSetter_java_lang_String_int_boolean_R_boolean)(jcontext ctx, jobject self, jobject param0, jint param1, jbool param2);
+#define VTABLE_rhino_ScriptableObject_addLazilyInitializedValue_java_lang_String_int_rhino_LazilyLoadedCtor_int 47
+typedef void (*func_rhino_ScriptableObject_addLazilyInitializedValue_java_lang_String_int_rhino_LazilyLoadedCtor_int)(jcontext ctx, jobject self, jobject param0, jint param1, jobject param2, jint param3);
+#define VTABLE_rhino_ScriptableObject_setExternalArrayData_rhino_ExternalArrayData 48
+typedef void (*func_rhino_ScriptableObject_setExternalArrayData_rhino_ExternalArrayData)(jcontext ctx, jobject self, jobject param0);
+#define VTABLE_rhino_ScriptableObject_getExternalArrayData_R_rhino_ExternalArrayData 49
+typedef jobject (*func_rhino_ScriptableObject_getExternalArrayData_R_rhino_ExternalArrayData)(jcontext ctx, jobject self);
+#define VTABLE_rhino_ScriptableObject_getExternalArrayLength_R_java_lang_Object 50
+typedef jobject (*func_rhino_ScriptableObject_getExternalArrayLength_R_java_lang_Object)(jcontext ctx, jobject self);
+#define VTABLE_rhino_ScriptableObject_avoidObjectDetection_R_boolean 51
+typedef jbool (*func_rhino_ScriptableObject_avoidObjectDetection_R_boolean)(jcontext ctx, jobject self);
+#define VTABLE_rhino_ScriptableObject_equivalentValues_java_lang_Object_R_java_lang_Object 52
+typedef jobject (*func_rhino_ScriptableObject_equivalentValues_java_lang_Object_R_java_lang_Object)(jcontext ctx, jobject self, jobject param0);
+#define VTABLE_rhino_ScriptableObject_defineProperty_java_lang_String_java_lang_Object_int 53
+typedef void (*func_rhino_ScriptableObject_defineProperty_java_lang_String_java_lang_Object_int)(jcontext ctx, jobject self, jobject param0, jobject param1, jint param2);
+#define VTABLE_rhino_ScriptableObject_defineProperty_rhino_Symbol_java_lang_Object_int 54
+typedef void (*func_rhino_ScriptableObject_defineProperty_rhino_Symbol_java_lang_Object_int)(jcontext ctx, jobject self, jobject param0, jobject param1, jint param2);
+#define VTABLE_rhino_ScriptableObject_defineProperty_java_lang_String_java_lang_Class_int 55
+typedef void (*func_rhino_ScriptableObject_defineProperty_java_lang_String_java_lang_Class_int)(jcontext ctx, jobject self, jobject param0, jobject param1, jint param2);
+#define VTABLE_rhino_ScriptableObject_defineProperty_java_lang_String_java_lang_Object_java_lang_reflect_Method_java_lang_reflect_Method_int 56
+typedef void (*func_rhino_ScriptableObject_defineProperty_java_lang_String_java_lang_Object_java_lang_reflect_Method_java_lang_reflect_Method_int)(jcontext ctx, jobject self, jobject param0, jobject param1, jobject param2, jobject param3, jint param4);
+#define VTABLE_rhino_ScriptableObject_defineOwnProperties_rhino_Context_rhino_ScriptableObject 57
+typedef void (*func_rhino_ScriptableObject_defineOwnProperties_rhino_Context_rhino_ScriptableObject)(jcontext ctx, jobject self, jobject param0, jobject param1);
+#define VTABLE_rhino_ScriptableObject_defineOwnProperty_rhino_Context_java_lang_Object_rhino_ScriptableObject 58
+typedef void (*func_rhino_ScriptableObject_defineOwnProperty_rhino_Context_java_lang_Object_rhino_ScriptableObject)(jcontext ctx, jobject self, jobject param0, jobject param1, jobject param2);
+#define VTABLE_rhino_ScriptableObject_defineOwnProperty_rhino_Context_java_lang_Object_rhino_ScriptableObject_boolean 59
+typedef void (*func_rhino_ScriptableObject_defineOwnProperty_rhino_Context_java_lang_Object_rhino_ScriptableObject_boolean)(jcontext ctx, jobject self, jobject param0, jobject param1, jobject param2, jbool param3);
+#define VTABLE_rhino_ScriptableObject_checkPropertyDefinition_rhino_ScriptableObject 60
+typedef void (*func_rhino_ScriptableObject_checkPropertyDefinition_rhino_ScriptableObject)(jcontext ctx, jobject self, jobject param0);
+#define VTABLE_rhino_ScriptableObject_checkPropertyChange_java_lang_Object_rhino_ScriptableObject_rhino_ScriptableObject 61
+typedef void (*func_rhino_ScriptableObject_checkPropertyChange_java_lang_Object_rhino_ScriptableObject_rhino_ScriptableObject)(jcontext ctx, jobject self, jobject param0, jobject param1, jobject param2);
+#define VTABLE_rhino_ScriptableObject_sameValue_java_lang_Object_java_lang_Object_R_boolean 62
+typedef jbool (*func_rhino_ScriptableObject_sameValue_java_lang_Object_java_lang_Object_R_boolean)(jcontext ctx, jobject self, jobject param0, jobject param1);
+#define VTABLE_rhino_ScriptableObject_applyDescriptorToAttributeBitset_int_rhino_ScriptableObject_R_int 63
+typedef jint (*func_rhino_ScriptableObject_applyDescriptorToAttributeBitset_int_rhino_ScriptableObject_R_int)(jcontext ctx, jobject self, jint param0, jobject param1);
+#define VTABLE_rhino_ScriptableObject_isDataDescriptor_rhino_ScriptableObject_R_boolean 64
+typedef jbool (*func_rhino_ScriptableObject_isDataDescriptor_rhino_ScriptableObject_R_boolean)(jcontext ctx, jobject self, jobject param0);
+#define VTABLE_rhino_ScriptableObject_isAccessorDescriptor_rhino_ScriptableObject_R_boolean 65
+typedef jbool (*func_rhino_ScriptableObject_isAccessorDescriptor_rhino_ScriptableObject_R_boolean)(jcontext ctx, jobject self, jobject param0);
+#define VTABLE_rhino_ScriptableObject_isGenericDescriptor_rhino_ScriptableObject_R_boolean 66
+typedef jbool (*func_rhino_ScriptableObject_isGenericDescriptor_rhino_ScriptableObject_R_boolean)(jcontext ctx, jobject self, jobject param0);
+#define VTABLE_rhino_ScriptableObject_defineFunctionProperties_Array1_java_lang_String_java_lang_Class_int 67
+typedef void (*func_rhino_ScriptableObject_defineFunctionProperties_Array1_java_lang_String_java_lang_Class_int)(jcontext ctx, jobject self, jobject param0, jobject param1, jint param2);
+#define VTABLE_rhino_ScriptableObject_isExtensible_R_boolean 68
+typedef jbool (*func_rhino_ScriptableObject_isExtensible_R_boolean)(jcontext ctx, jobject self);
+#define VTABLE_rhino_ScriptableObject_preventExtensions 69
+typedef void (*func_rhino_ScriptableObject_preventExtensions)(jcontext ctx, jobject self);
+#define VTABLE_rhino_ScriptableObject_sealObject 70
+typedef void (*func_rhino_ScriptableObject_sealObject)(jcontext ctx, jobject self);
+#define VTABLE_rhino_ScriptableObject_isSealed_R_boolean 71
+typedef jbool (*func_rhino_ScriptableObject_isSealed_R_boolean)(jcontext ctx, jobject self);
+#define VTABLE_rhino_ScriptableObject_checkNotSealed_java_lang_Object_int 72
+typedef void (*func_rhino_ScriptableObject_checkNotSealed_java_lang_Object_int)(jcontext ctx, jobject self, jobject param0, jint param1);
+#define VTABLE_rhino_ScriptableObject_getAssociatedValue_java_lang_Object_R_java_lang_Object 73
+typedef jobject (*func_rhino_ScriptableObject_getAssociatedValue_java_lang_Object_R_java_lang_Object)(jcontext ctx, jobject self, jobject param0);
+#define VTABLE_rhino_ScriptableObject_associateValue_java_lang_Object_java_lang_Object_R_java_lang_Object 74
+typedef jobject (*func_rhino_ScriptableObject_associateValue_java_lang_Object_java_lang_Object_R_java_lang_Object)(jcontext ctx, jobject self, jobject param0, jobject param1);
+#define VTABLE_rhino_ScriptableObject_putImpl_java_lang_Object_int_rhino_Scriptable_java_lang_Object_R_boolean 75
+typedef jbool (*func_rhino_ScriptableObject_putImpl_java_lang_Object_int_rhino_Scriptable_java_lang_Object_R_boolean)(jcontext ctx, jobject self, jobject param0, jint param1, jobject param2, jobject param3);
+#define VTABLE_rhino_ScriptableObject_putConstImpl_java_lang_String_int_rhino_Scriptable_java_lang_Object_int_R_boolean 76
+typedef jbool (*func_rhino_ScriptableObject_putConstImpl_java_lang_String_int_rhino_Scriptable_java_lang_Object_int_R_boolean)(jcontext ctx, jobject self, jobject param0, jint param1, jobject param2, jobject param3, jint param4);
+#define VTABLE_rhino_ScriptableObject_findAttributeSlot_java_lang_String_int_rhino_ScriptableObject$SlotAccess_R_rhino_ScriptableObject$Slot 77
+typedef jobject (*func_rhino_ScriptableObject_findAttributeSlot_java_lang_String_int_rhino_ScriptableObject$SlotAccess_R_rhino_ScriptableObject$Slot)(jcontext ctx, jobject self, jobject param0, jint param1, jobject param2);
+#define VTABLE_rhino_ScriptableObject_findAttributeSlot_rhino_Symbol_rhino_ScriptableObject$SlotAccess_R_rhino_ScriptableObject$Slot 78
+typedef jobject (*func_rhino_ScriptableObject_findAttributeSlot_rhino_Symbol_rhino_ScriptableObject$SlotAccess_R_rhino_ScriptableObject$Slot)(jcontext ctx, jobject self, jobject param0, jobject param1);
+#define VTABLE_rhino_ScriptableObject_getIds_boolean_boolean_R_Array1_java_lang_Object 79
+typedef jobject (*func_rhino_ScriptableObject_getIds_boolean_boolean_R_Array1_java_lang_Object)(jcontext ctx, jobject self, jbool param0, jbool param1);
+#define VTABLE_rhino_ScriptableObject_getOwnPropertyDescriptor_rhino_Context_java_lang_Object_R_rhino_ScriptableObject 80
+typedef jobject (*func_rhino_ScriptableObject_getOwnPropertyDescriptor_rhino_Context_java_lang_Object_R_rhino_ScriptableObject)(jcontext ctx, jobject self, jobject param0, jobject param1);
+#define VTABLE_rhino_ScriptableObject_getSlot_rhino_Context_java_lang_Object_rhino_ScriptableObject$SlotAccess_R_rhino_ScriptableObject$Slot 81
+typedef jobject (*func_rhino_ScriptableObject_getSlot_rhino_Context_java_lang_Object_rhino_ScriptableObject$SlotAccess_R_rhino_ScriptableObject$Slot)(jcontext ctx, jobject self, jobject param0, jobject param1, jobject param2);
+#define VTABLE_rhino_ScriptableObject_size_R_int 82
+typedef jint (*func_rhino_ScriptableObject_size_R_int)(jcontext ctx, jobject self);
+#define VTABLE_rhino_ScriptableObject_isEmpty_R_boolean 83
+typedef jbool (*func_rhino_ScriptableObject_isEmpty_R_boolean)(jcontext ctx, jobject self);
+#define VTABLE_rhino_ScriptableObject_get_java_lang_Object_R_java_lang_Object 84
+typedef jobject (*func_rhino_ScriptableObject_get_java_lang_Object_R_java_lang_Object)(jcontext ctx, jobject self, jobject param0);
+
+void mark_rhino_ScriptableObject(jobject object, jint mark, jint depth);
+void clinit_rhino_ScriptableObject(jcontext ctx);
+jobject SM_rhino_ScriptableObject_buildDataDescriptor_rhino_Scriptable_java_lang_Object_int_R_rhino_ScriptableObject(jcontext ctx, jobject param0, jobject param1, jint param2);
+void SM_rhino_ScriptableObject_checkValidAttributes_int(jcontext ctx, jint param0);
+jobject M_rhino_ScriptableObject_createSlotMap_int_R_rhino_SlotMapContainer(jcontext ctx, jobject self, jint param0);
+void init_rhino_ScriptableObject(jcontext ctx, jobject self);
+void init_rhino_ScriptableObject_rhino_Scriptable_rhino_Scriptable(jcontext ctx, jobject self, jobject param0, jobject param1);
+jobject M_rhino_ScriptableObject_getTypeOf_R_java_lang_String(jcontext ctx, jobject self);
+jbool M_rhino_ScriptableObject_has_java_lang_String_rhino_Scriptable_R_boolean(jcontext ctx, jobject self, jobject param0, jobject param1);
+jbool M_rhino_ScriptableObject_has_int_rhino_Scriptable_R_boolean(jcontext ctx, jobject self, jint param0, jobject param1);
+jbool M_rhino_ScriptableObject_has_rhino_Symbol_rhino_Scriptable_R_boolean(jcontext ctx, jobject self, jobject param0, jobject param1);
+jobject M_rhino_ScriptableObject_get_java_lang_String_rhino_Scriptable_R_java_lang_Object(jcontext ctx, jobject self, jobject param0, jobject param1);
+jobject M_rhino_ScriptableObject_get_int_rhino_Scriptable_R_java_lang_Object(jcontext ctx, jobject self, jint param0, jobject param1);
+jobject M_rhino_ScriptableObject_get_rhino_Symbol_rhino_Scriptable_R_java_lang_Object(jcontext ctx, jobject self, jobject param0, jobject param1);
+void M_rhino_ScriptableObject_put_java_lang_String_rhino_Scriptable_java_lang_Object(jcontext ctx, jobject self, jobject param0, jobject param1, jobject param2);
+void M_rhino_ScriptableObject_put_int_rhino_Scriptable_java_lang_Object(jcontext ctx, jobject self, jint param0, jobject param1, jobject param2);
+void M_rhino_ScriptableObject_put_rhino_Symbol_rhino_Scriptable_java_lang_Object(jcontext ctx, jobject self, jobject param0, jobject param1, jobject param2);
+void M_rhino_ScriptableObject_delete_java_lang_String(jcontext ctx, jobject self, jobject param0);
+void M_rhino_ScriptableObject_delete_int(jcontext ctx, jobject self, jint param0);
+void M_rhino_ScriptableObject_delete_rhino_Symbol(jcontext ctx, jobject self, jobject param0);
+void M_rhino_ScriptableObject_putConst_java_lang_String_rhino_Scriptable_java_lang_Object(jcontext ctx, jobject self, jobject param0, jobject param1, jobject param2);
+void M_rhino_ScriptableObject_defineConst_java_lang_String_rhino_Scriptable(jcontext ctx, jobject self, jobject param0, jobject param1);
+jbool M_rhino_ScriptableObject_isConst_java_lang_String_R_boolean(jcontext ctx, jobject self, jobject param0);
+jint M_rhino_ScriptableObject_getAttributes_java_lang_String_R_int(jcontext ctx, jobject self, jobject param0);
+jint M_rhino_ScriptableObject_getAttributes_int_R_int(jcontext ctx, jobject self, jint param0);
+jint M_rhino_ScriptableObject_getAttributes_rhino_Symbol_R_int(jcontext ctx, jobject self, jobject param0);
+void M_rhino_ScriptableObject_setAttributes_java_lang_String_int(jcontext ctx, jobject self, jobject param0, jint param1);
+void M_rhino_ScriptableObject_setAttributes_int_int(jcontext ctx, jobject self, jint param0, jint param1);
+void M_rhino_ScriptableObject_setAttributes_rhino_Symbol_int(jcontext ctx, jobject self, jobject param0, jint param1);
+void M_rhino_ScriptableObject_setGetterOrSetter_java_lang_String_int_rhino_Callable_boolean(jcontext ctx, jobject self, jobject param0, jint param1, jobject param2, jbool param3);
+void M_rhino_ScriptableObject_setGetterOrSetter_java_lang_String_int_rhino_Callable_boolean_boolean(jcontext ctx, jobject self, jobject param0, jint param1, jobject param2, jbool param3, jbool param4);
+jobject M_rhino_ScriptableObject_getGetterOrSetter_java_lang_String_int_boolean_R_java_lang_Object(jcontext ctx, jobject self, jobject param0, jint param1, jbool param2);
+jbool M_rhino_ScriptableObject_isGetterOrSetter_java_lang_String_int_boolean_R_boolean(jcontext ctx, jobject self, jobject param0, jint param1, jbool param2);
+void M_rhino_ScriptableObject_addLazilyInitializedValue_java_lang_String_int_rhino_LazilyLoadedCtor_int(jcontext ctx, jobject self, jobject param0, jint param1, jobject param2, jint param3);
+void M_rhino_ScriptableObject_setExternalArrayData_rhino_ExternalArrayData(jcontext ctx, jobject self, jobject param0);
+jobject M_rhino_ScriptableObject_getExternalArrayData_R_rhino_ExternalArrayData(jcontext ctx, jobject self);
+jobject M_rhino_ScriptableObject_getExternalArrayLength_R_java_lang_Object(jcontext ctx, jobject self);
+jobject M_rhino_ScriptableObject_getPrototype_R_rhino_Scriptable(jcontext ctx, jobject self);
+void M_rhino_ScriptableObject_setPrototype_rhino_Scriptable(jcontext ctx, jobject self, jobject param0);
+jobject M_rhino_ScriptableObject_getParentScope_R_rhino_Scriptable(jcontext ctx, jobject self);
+void M_rhino_ScriptableObject_setParentScope_rhino_Scriptable(jcontext ctx, jobject self, jobject param0);
+jobject M_rhino_ScriptableObject_getIds_R_Array1_java_lang_Object(jcontext ctx, jobject self);
+jobject M_rhino_ScriptableObject_getAllIds_R_Array1_java_lang_Object(jcontext ctx, jobject self);
+jobject M_rhino_ScriptableObject_getDefaultValue_java_lang_Class_R_java_lang_Object(jcontext ctx, jobject self, jobject param0);
+jobject SM_rhino_ScriptableObject_getDefaultValue_rhino_Scriptable_java_lang_Class_R_java_lang_Object(jcontext ctx, jobject param0, jobject param1);
+jbool M_rhino_ScriptableObject_hasInstance_rhino_Scriptable_R_boolean(jcontext ctx, jobject self, jobject param0);
+jbool M_rhino_ScriptableObject_avoidObjectDetection_R_boolean(jcontext ctx, jobject self);
+jobject M_rhino_ScriptableObject_equivalentValues_java_lang_Object_R_java_lang_Object(jcontext ctx, jobject self, jobject param0);
+void SM_rhino_ScriptableObject_defineClass_rhino_Scriptable_java_lang_Class(jcontext ctx, jobject param0, jobject param1);
+void SM_rhino_ScriptableObject_defineClass_rhino_Scriptable_java_lang_Class_boolean(jcontext ctx, jobject param0, jobject param1, jbool param2);
+jobject SM_rhino_ScriptableObject_defineClass_rhino_Scriptable_java_lang_Class_boolean_boolean_R_java_lang_String(jcontext ctx, jobject param0, jobject param1, jbool param2, jbool param3);
+jobject SM_rhino_ScriptableObject_buildClassCtor_rhino_Scriptable_java_lang_Class_boolean_boolean_R_rhino_BaseFunction(jcontext ctx, jobject param0, jobject param1, jbool param2, jbool param3);
+jobject SM_rhino_ScriptableObject_findAnnotatedMember_Array1_java_lang_reflect_AccessibleObject_java_lang_Class_R_java_lang_reflect_Member(jcontext ctx, jobject param0, jobject param1);
+jobject SM_rhino_ScriptableObject_findSetterMethod_Array1_java_lang_reflect_Method_java_lang_String_java_lang_String_R_java_lang_reflect_Method(jcontext ctx, jobject param0, jobject param1, jobject param2);
+jobject SM_rhino_ScriptableObject_getPropertyName_java_lang_String_java_lang_String_java_lang_annotation_Annotation_R_java_lang_String(jcontext ctx, jobject param0, jobject param1, jobject param2);
+jobject SM_rhino_ScriptableObject_extendsScriptable_java_lang_Class_R_java_lang_Class(jcontext ctx, jobject param0);
+void M_rhino_ScriptableObject_defineProperty_java_lang_String_java_lang_Object_int(jcontext ctx, jobject self, jobject param0, jobject param1, jint param2);
+void M_rhino_ScriptableObject_defineProperty_rhino_Symbol_java_lang_Object_int(jcontext ctx, jobject self, jobject param0, jobject param1, jint param2);
+void SM_rhino_ScriptableObject_defineProperty_rhino_Scriptable_java_lang_String_java_lang_Object_int(jcontext ctx, jobject param0, jobject param1, jobject param2, jint param3);
+void SM_rhino_ScriptableObject_defineConstProperty_rhino_Scriptable_java_lang_String(jcontext ctx, jobject param0, jobject param1);
+void M_rhino_ScriptableObject_defineProperty_java_lang_String_java_lang_Class_int(jcontext ctx, jobject self, jobject param0, jobject param1, jint param2);
+void M_rhino_ScriptableObject_defineProperty_java_lang_String_java_lang_Object_java_lang_reflect_Method_java_lang_reflect_Method_int(jcontext ctx, jobject self, jobject param0, jobject param1, jobject param2, jobject param3, jint param4);
+void M_rhino_ScriptableObject_defineOwnProperties_rhino_Context_rhino_ScriptableObject(jcontext ctx, jobject self, jobject param0, jobject param1);
+void M_rhino_ScriptableObject_defineOwnProperty_rhino_Context_java_lang_Object_rhino_ScriptableObject(jcontext ctx, jobject self, jobject param0, jobject param1, jobject param2);
+void M_rhino_ScriptableObject_defineOwnProperty_rhino_Context_java_lang_Object_rhino_ScriptableObject_boolean(jcontext ctx, jobject self, jobject param0, jobject param1, jobject param2, jbool param3);
+void M_rhino_ScriptableObject_checkPropertyDefinition_rhino_ScriptableObject(jcontext ctx, jobject self, jobject param0);
+void M_rhino_ScriptableObject_checkPropertyChange_java_lang_Object_rhino_ScriptableObject_rhino_ScriptableObject(jcontext ctx, jobject self, jobject param0, jobject param1, jobject param2);
+jbool SM_rhino_ScriptableObject_isTrue_java_lang_Object_R_boolean(jcontext ctx, jobject param0);
+jbool SM_rhino_ScriptableObject_isFalse_java_lang_Object_R_boolean(jcontext ctx, jobject param0);
+jbool M_rhino_ScriptableObject_sameValue_java_lang_Object_java_lang_Object_R_boolean(jcontext ctx, jobject self, jobject param0, jobject param1);
+jint M_rhino_ScriptableObject_applyDescriptorToAttributeBitset_int_rhino_ScriptableObject_R_int(jcontext ctx, jobject self, jint param0, jobject param1);
+jbool M_rhino_ScriptableObject_isDataDescriptor_rhino_ScriptableObject_R_boolean(jcontext ctx, jobject self, jobject param0);
+jbool M_rhino_ScriptableObject_isAccessorDescriptor_rhino_ScriptableObject_R_boolean(jcontext ctx, jobject self, jobject param0);
+jbool M_rhino_ScriptableObject_isGenericDescriptor_rhino_ScriptableObject_R_boolean(jcontext ctx, jobject self, jobject param0);
+jobject SM_rhino_ScriptableObject_ensureScriptable_java_lang_Object_R_rhino_Scriptable(jcontext ctx, jobject param0);
+jobject SM_rhino_ScriptableObject_ensureSymbolScriptable_java_lang_Object_R_rhino_SymbolScriptable(jcontext ctx, jobject param0);
+jobject SM_rhino_ScriptableObject_ensureScriptableObject_java_lang_Object_R_rhino_ScriptableObject(jcontext ctx, jobject param0);
+void M_rhino_ScriptableObject_defineFunctionProperties_Array1_java_lang_String_java_lang_Class_int(jcontext ctx, jobject self, jobject param0, jobject param1, jint param2);
+jobject SM_rhino_ScriptableObject_getObjectPrototype_rhino_Scriptable_R_rhino_Scriptable(jcontext ctx, jobject param0);
+jobject SM_rhino_ScriptableObject_getFunctionPrototype_rhino_Scriptable_R_rhino_Scriptable(jcontext ctx, jobject param0);
+jobject SM_rhino_ScriptableObject_getGeneratorFunctionPrototype_rhino_Scriptable_R_rhino_Scriptable(jcontext ctx, jobject param0);
+jobject SM_rhino_ScriptableObject_getArrayPrototype_rhino_Scriptable_R_rhino_Scriptable(jcontext ctx, jobject param0);
+jobject SM_rhino_ScriptableObject_getClassPrototype_rhino_Scriptable_java_lang_String_R_rhino_Scriptable(jcontext ctx, jobject param0, jobject param1);
+jobject SM_rhino_ScriptableObject_getTopLevelScope_rhino_Scriptable_R_rhino_Scriptable(jcontext ctx, jobject param0);
+jbool M_rhino_ScriptableObject_isExtensible_R_boolean(jcontext ctx, jobject self);
+void M_rhino_ScriptableObject_preventExtensions(jcontext ctx, jobject self);
+void M_rhino_ScriptableObject_sealObject(jcontext ctx, jobject self);
+jbool M_rhino_ScriptableObject_isSealed_R_boolean(jcontext ctx, jobject self);
+void M_rhino_ScriptableObject_checkNotSealed_java_lang_Object_int(jcontext ctx, jobject self, jobject param0, jint param1);
+jobject SM_rhino_ScriptableObject_getProperty_rhino_Scriptable_java_lang_String_R_java_lang_Object(jcontext ctx, jobject param0, jobject param1);
+jobject SM_rhino_ScriptableObject_getProperty_rhino_Scriptable_rhino_Symbol_R_java_lang_Object(jcontext ctx, jobject param0, jobject param1);
+jobject SM_rhino_ScriptableObject_getTypedProperty_rhino_Scriptable_int_java_lang_Class_R_java_lang_Object(jcontext ctx, jobject param0, jint param1, jobject param2);
+jobject SM_rhino_ScriptableObject_getProperty_rhino_Scriptable_int_R_java_lang_Object(jcontext ctx, jobject param0, jint param1);
+jobject SM_rhino_ScriptableObject_getTypedProperty_rhino_Scriptable_java_lang_String_java_lang_Class_R_java_lang_Object(jcontext ctx, jobject param0, jobject param1, jobject param2);
+jbool SM_rhino_ScriptableObject_hasProperty_rhino_Scriptable_java_lang_String_R_boolean(jcontext ctx, jobject param0, jobject param1);
+void SM_rhino_ScriptableObject_redefineProperty_rhino_Scriptable_java_lang_String_boolean(jcontext ctx, jobject param0, jobject param1, jbool param2);
+jbool SM_rhino_ScriptableObject_hasProperty_rhino_Scriptable_int_R_boolean(jcontext ctx, jobject param0, jint param1);
+jbool SM_rhino_ScriptableObject_hasProperty_rhino_Scriptable_rhino_Symbol_R_boolean(jcontext ctx, jobject param0, jobject param1);
+void SM_rhino_ScriptableObject_putProperty_rhino_Scriptable_java_lang_String_java_lang_Object(jcontext ctx, jobject param0, jobject param1, jobject param2);
+void SM_rhino_ScriptableObject_putProperty_rhino_Scriptable_rhino_Symbol_java_lang_Object(jcontext ctx, jobject param0, jobject param1, jobject param2);
+void SM_rhino_ScriptableObject_putConstProperty_rhino_Scriptable_java_lang_String_java_lang_Object(jcontext ctx, jobject param0, jobject param1, jobject param2);
+void SM_rhino_ScriptableObject_putProperty_rhino_Scriptable_int_java_lang_Object(jcontext ctx, jobject param0, jint param1, jobject param2);
+jbool SM_rhino_ScriptableObject_deleteProperty_rhino_Scriptable_java_lang_String_R_boolean(jcontext ctx, jobject param0, jobject param1);
+jbool SM_rhino_ScriptableObject_deleteProperty_rhino_Scriptable_int_R_boolean(jcontext ctx, jobject param0, jint param1);
+jobject SM_rhino_ScriptableObject_getPropertyIds_rhino_Scriptable_R_Array1_java_lang_Object(jcontext ctx, jobject param0);
+jobject SM_rhino_ScriptableObject_callMethod_rhino_Scriptable_java_lang_String_Array1_java_lang_Object_R_java_lang_Object(jcontext ctx, jobject param0, jobject param1, jobject param2);
+jobject SM_rhino_ScriptableObject_callMethod_rhino_Context_rhino_Scriptable_java_lang_String_Array1_java_lang_Object_R_java_lang_Object(jcontext ctx, jobject param0, jobject param1, jobject param2, jobject param3);
+jobject SM_rhino_ScriptableObject_getBase_rhino_Scriptable_java_lang_String_R_rhino_Scriptable(jcontext ctx, jobject param0, jobject param1);
+jobject SM_rhino_ScriptableObject_getBase_rhino_Scriptable_int_R_rhino_Scriptable(jcontext ctx, jobject param0, jint param1);
+jobject SM_rhino_ScriptableObject_getBase_rhino_Scriptable_rhino_Symbol_R_rhino_Scriptable(jcontext ctx, jobject param0, jobject param1);
+jobject M_rhino_ScriptableObject_getAssociatedValue_java_lang_Object_R_java_lang_Object(jcontext ctx, jobject self, jobject param0);
+jobject SM_rhino_ScriptableObject_getTopScopeValue_rhino_Scriptable_java_lang_Object_R_java_lang_Object(jcontext ctx, jobject param0, jobject param1);
+jobject M_rhino_ScriptableObject_associateValue_java_lang_Object_java_lang_Object_R_java_lang_Object(jcontext ctx, jobject self, jobject param0, jobject param1);
+jbool M_rhino_ScriptableObject_putImpl_java_lang_Object_int_rhino_Scriptable_java_lang_Object_R_boolean(jcontext ctx, jobject self, jobject param0, jint param1, jobject param2, jobject param3);
+jbool M_rhino_ScriptableObject_putConstImpl_java_lang_String_int_rhino_Scriptable_java_lang_Object_int_R_boolean(jcontext ctx, jobject self, jobject param0, jint param1, jobject param2, jobject param3, jint param4);
+jobject M_rhino_ScriptableObject_findAttributeSlot_java_lang_String_int_rhino_ScriptableObject$SlotAccess_R_rhino_ScriptableObject$Slot(jcontext ctx, jobject self, jobject param0, jint param1, jobject param2);
+jobject M_rhino_ScriptableObject_findAttributeSlot_rhino_Symbol_rhino_ScriptableObject$SlotAccess_R_rhino_ScriptableObject$Slot(jcontext ctx, jobject self, jobject param0, jobject param1);
+jobject M_rhino_ScriptableObject_getIds_boolean_boolean_R_Array1_java_lang_Object(jcontext ctx, jobject self, jbool param0, jbool param1);
+jobject M_rhino_ScriptableObject_getOwnPropertyDescriptor_rhino_Context_java_lang_Object_R_rhino_ScriptableObject(jcontext ctx, jobject self, jobject param0, jobject param1);
+jobject M_rhino_ScriptableObject_getSlot_rhino_Context_java_lang_Object_rhino_ScriptableObject$SlotAccess_R_rhino_ScriptableObject$Slot(jcontext ctx, jobject self, jobject param0, jobject param1, jobject param2);
+jint M_rhino_ScriptableObject_size_R_int(jcontext ctx, jobject self);
+jbool M_rhino_ScriptableObject_isEmpty_R_boolean(jcontext ctx, jobject self);
+jobject M_rhino_ScriptableObject_get_java_lang_Object_R_java_lang_Object(jcontext ctx, jobject self, jobject param0);
+
+#ifdef __cplusplus
+}
+#endif
+
+#endif

@@ -1,0 +1,33 @@
+#ifndef HEADER_mindustry_graphics_g3d_PlanetRenderer$PlanetInterfaceRenderer
+#define HEADER_mindustry_graphics_g3d_PlanetRenderer$PlanetInterfaceRenderer
+
+#include "Clearwing.h"
+#include "java/lang/Object.h"
+
+#ifdef __cplusplus
+extern "C" {
+#endif
+
+typedef struct mindustry_graphics_g3d_PlanetRenderer$PlanetInterfaceRenderer {
+	java_lang_Object parent;
+} mindustry_graphics_g3d_PlanetRenderer$PlanetInterfaceRenderer;
+
+extern Class class_mindustry_graphics_g3d_PlanetRenderer$PlanetInterfaceRenderer;
+
+
+#define INDEX_mindustry_graphics_g3d_PlanetRenderer$PlanetInterfaceRenderer_renderSectors_mindustry_type_Planet 0
+typedef void (*func_mindustry_graphics_g3d_PlanetRenderer$PlanetInterfaceRenderer_renderSectors_mindustry_type_Planet)(jcontext ctx, jobject self, jobject param0);
+#define INDEX_mindustry_graphics_g3d_PlanetRenderer$PlanetInterfaceRenderer_renderProjections_mindustry_type_Planet 1
+typedef void (*func_mindustry_graphics_g3d_PlanetRenderer$PlanetInterfaceRenderer_renderProjections_mindustry_type_Planet)(jcontext ctx, jobject self, jobject param0);
+#define INDEX_mindustry_graphics_g3d_PlanetRenderer$PlanetInterfaceRenderer_renderOverProjections_mindustry_type_Planet 2
+typedef void (*func_mindustry_graphics_g3d_PlanetRenderer$PlanetInterfaceRenderer_renderOverProjections_mindustry_type_Planet)(jcontext ctx, jobject self, jobject param0);
+
+void mark_mindustry_graphics_g3d_PlanetRenderer$PlanetInterfaceRenderer(jobject object, jint mark, jint depth);
+void clinit_mindustry_graphics_g3d_PlanetRenderer$PlanetInterfaceRenderer(jcontext ctx);
+void M_mindustry_graphics_g3d_PlanetRenderer$PlanetInterfaceRenderer_renderOverProjections_mindustry_type_Planet(jcontext ctx, jobject self, jobject param0);
+
+#ifdef __cplusplus
+}
+#endif
+
+#endif

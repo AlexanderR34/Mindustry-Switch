@@ -1,0 +1,106 @@
+#ifndef HEADER_java_text_MessageFormat
+#define HEADER_java_text_MessageFormat
+
+#include "Clearwing.h"
+#include "java/text/Format.h"
+
+#ifdef __cplusplus
+extern "C" {
+#endif
+
+typedef struct java_text_MessageFormat {
+	java_text_Format parent;
+	jref F_pattern;
+} java_text_MessageFormat;
+
+extern Class class_java_text_MessageFormat;
+
+
+#define VTABLE_java_text_MessageFormat_hashCode_R_int 0
+typedef jint (*func_java_text_MessageFormat_hashCode_R_int)(jcontext ctx, jobject self);
+#define VTABLE_java_text_MessageFormat_equals_java_lang_Object_R_boolean 1
+typedef jbool (*func_java_text_MessageFormat_equals_java_lang_Object_R_boolean)(jcontext ctx, jobject self, jobject param0);
+#define VTABLE_java_text_MessageFormat_clone_R_java_lang_Object 2
+typedef jobject (*func_java_text_MessageFormat_clone_R_java_lang_Object)(jcontext ctx, jobject self);
+#define VTABLE_java_text_MessageFormat_getClass_R_java_lang_Class 3
+typedef jobject (*func_java_text_MessageFormat_getClass_R_java_lang_Class)(jcontext ctx, jobject self);
+#define VTABLE_java_text_MessageFormat_toString_R_java_lang_String 4
+typedef jobject (*func_java_text_MessageFormat_toString_R_java_lang_String)(jcontext ctx, jobject self);
+#define VTABLE_java_text_MessageFormat_finalize 5
+typedef void (*func_java_text_MessageFormat_finalize)(jcontext ctx, jobject self);
+#define VTABLE_java_text_MessageFormat_notify 6
+typedef void (*func_java_text_MessageFormat_notify)(jcontext ctx, jobject self);
+#define VTABLE_java_text_MessageFormat_notifyAll 7
+typedef void (*func_java_text_MessageFormat_notifyAll)(jcontext ctx, jobject self);
+#define VTABLE_java_text_MessageFormat_wait 8
+typedef void (*func_java_text_MessageFormat_wait)(jcontext ctx, jobject self);
+#define VTABLE_java_text_MessageFormat_wait_long 9
+typedef void (*func_java_text_MessageFormat_wait_long)(jcontext ctx, jobject self, jlong param0);
+#define VTABLE_java_text_MessageFormat_wait_long_int 10
+typedef void (*func_java_text_MessageFormat_wait_long_int)(jcontext ctx, jobject self, jlong param0, jint param1);
+#define VTABLE_java_text_MessageFormat_format_java_lang_Object_R_java_lang_String 11
+typedef jobject (*func_java_text_MessageFormat_format_java_lang_Object_R_java_lang_String)(jcontext ctx, jobject self, jobject param0);
+#define VTABLE_java_text_MessageFormat_parseObject_java_lang_String_R_java_lang_Object 12
+typedef jobject (*func_java_text_MessageFormat_parseObject_java_lang_String_R_java_lang_Object)(jcontext ctx, jobject self, jobject param0);
+#define VTABLE_java_text_MessageFormat_setLocale_java_util_Locale 13
+typedef void (*func_java_text_MessageFormat_setLocale_java_util_Locale)(jcontext ctx, jobject self, jobject param0);
+#define VTABLE_java_text_MessageFormat_getLocale_R_java_util_Locale 14
+typedef jobject (*func_java_text_MessageFormat_getLocale_R_java_util_Locale)(jcontext ctx, jobject self);
+#define VTABLE_java_text_MessageFormat_applyPattern_java_lang_String 15
+typedef void (*func_java_text_MessageFormat_applyPattern_java_lang_String)(jcontext ctx, jobject self, jobject param0);
+#define VTABLE_java_text_MessageFormat_toPattern_R_java_lang_String 16
+typedef jobject (*func_java_text_MessageFormat_toPattern_R_java_lang_String)(jcontext ctx, jobject self);
+#define VTABLE_java_text_MessageFormat_setFormatsByArgumentIndex_Array1_java_text_Format 17
+typedef void (*func_java_text_MessageFormat_setFormatsByArgumentIndex_Array1_java_text_Format)(jcontext ctx, jobject self, jobject param0);
+#define VTABLE_java_text_MessageFormat_setFormats_Array1_java_text_Format 18
+typedef void (*func_java_text_MessageFormat_setFormats_Array1_java_text_Format)(jcontext ctx, jobject self, jobject param0);
+#define VTABLE_java_text_MessageFormat_setFormatByArgumentIndex_int_java_text_Format 19
+typedef void (*func_java_text_MessageFormat_setFormatByArgumentIndex_int_java_text_Format)(jcontext ctx, jobject self, jint param0, jobject param1);
+#define VTABLE_java_text_MessageFormat_setFormat_int_java_text_Format 20
+typedef void (*func_java_text_MessageFormat_setFormat_int_java_text_Format)(jcontext ctx, jobject self, jint param0, jobject param1);
+#define VTABLE_java_text_MessageFormat_getFormatsByArgumentIndex_R_Array1_java_text_Format 21
+typedef jobject (*func_java_text_MessageFormat_getFormatsByArgumentIndex_R_Array1_java_text_Format)(jcontext ctx, jobject self);
+#define VTABLE_java_text_MessageFormat_getFormats_R_Array1_java_text_Format 22
+typedef jobject (*func_java_text_MessageFormat_getFormats_R_Array1_java_text_Format)(jcontext ctx, jobject self);
+#define VTABLE_java_text_MessageFormat_format_Array1_java_lang_Object_java_lang_StringBuffer_java_text_FieldPosition_R_java_lang_StringBuffer 23
+typedef jobject (*func_java_text_MessageFormat_format_Array1_java_lang_Object_java_lang_StringBuffer_java_text_FieldPosition_R_java_lang_StringBuffer)(jcontext ctx, jobject self, jobject param0, jobject param1, jobject param2);
+#define VTABLE_java_text_MessageFormat_format_java_lang_Object_java_lang_StringBuffer_java_text_FieldPosition_R_java_lang_StringBuffer 24
+typedef jobject (*func_java_text_MessageFormat_format_java_lang_Object_java_lang_StringBuffer_java_text_FieldPosition_R_java_lang_StringBuffer)(jcontext ctx, jobject self, jobject param0, jobject param1, jobject param2);
+#define VTABLE_java_text_MessageFormat_formatToCharacterIterator_java_lang_Object_R_java_text_AttributedCharacterIterator 25
+typedef jobject (*func_java_text_MessageFormat_formatToCharacterIterator_java_lang_Object_R_java_text_AttributedCharacterIterator)(jcontext ctx, jobject self, jobject param0);
+#define VTABLE_java_text_MessageFormat_parse_java_lang_String_java_text_ParsePosition_R_Array1_java_lang_Object 26
+typedef jobject (*func_java_text_MessageFormat_parse_java_lang_String_java_text_ParsePosition_R_Array1_java_lang_Object)(jcontext ctx, jobject self, jobject param0, jobject param1);
+#define VTABLE_java_text_MessageFormat_parse_java_lang_String_R_Array1_java_lang_Object 27
+typedef jobject (*func_java_text_MessageFormat_parse_java_lang_String_R_Array1_java_lang_Object)(jcontext ctx, jobject self, jobject param0);
+#define VTABLE_java_text_MessageFormat_parseObject_java_lang_String_java_text_ParsePosition_R_java_lang_Object 28
+typedef jobject (*func_java_text_MessageFormat_parseObject_java_lang_String_java_text_ParsePosition_R_java_lang_Object)(jcontext ctx, jobject self, jobject param0, jobject param1);
+
+void mark_java_text_MessageFormat(jobject object, jint mark, jint depth);
+void clinit_java_text_MessageFormat(jcontext ctx);
+void init_java_text_MessageFormat_java_lang_String(jcontext ctx, jobject self, jobject param0);
+void init_java_text_MessageFormat_java_lang_String_java_util_Locale(jcontext ctx, jobject self, jobject param0, jobject param1);
+void M_java_text_MessageFormat_setLocale_java_util_Locale(jcontext ctx, jobject self, jobject param0);
+jobject M_java_text_MessageFormat_getLocale_R_java_util_Locale(jcontext ctx, jobject self);
+void M_java_text_MessageFormat_applyPattern_java_lang_String(jcontext ctx, jobject self, jobject param0);
+jobject M_java_text_MessageFormat_toPattern_R_java_lang_String(jcontext ctx, jobject self);
+void M_java_text_MessageFormat_setFormatsByArgumentIndex_Array1_java_text_Format(jcontext ctx, jobject self, jobject param0);
+void M_java_text_MessageFormat_setFormats_Array1_java_text_Format(jcontext ctx, jobject self, jobject param0);
+void M_java_text_MessageFormat_setFormatByArgumentIndex_int_java_text_Format(jcontext ctx, jobject self, jint param0, jobject param1);
+void M_java_text_MessageFormat_setFormat_int_java_text_Format(jcontext ctx, jobject self, jint param0, jobject param1);
+jobject M_java_text_MessageFormat_getFormatsByArgumentIndex_R_Array1_java_text_Format(jcontext ctx, jobject self);
+jobject M_java_text_MessageFormat_getFormats_R_Array1_java_text_Format(jcontext ctx, jobject self);
+jobject M_java_text_MessageFormat_format_Array1_java_lang_Object_java_lang_StringBuffer_java_text_FieldPosition_R_java_lang_StringBuffer(jcontext ctx, jobject self, jobject param0, jobject param1, jobject param2);
+jobject SM_java_text_MessageFormat_format_java_lang_String_Array1_java_lang_Object_R_java_lang_String(jcontext ctx, jobject param0, jobject param1);
+jobject M_java_text_MessageFormat_format_java_lang_Object_R_java_lang_String(jcontext ctx, jobject self, jobject param0);
+jobject M_java_text_MessageFormat_format_java_lang_Object_java_lang_StringBuffer_java_text_FieldPosition_R_java_lang_StringBuffer(jcontext ctx, jobject self, jobject param0, jobject param1, jobject param2);
+jobject M_java_text_MessageFormat_formatToCharacterIterator_java_lang_Object_R_java_text_AttributedCharacterIterator(jcontext ctx, jobject self, jobject param0);
+jobject M_java_text_MessageFormat_parse_java_lang_String_java_text_ParsePosition_R_Array1_java_lang_Object(jcontext ctx, jobject self, jobject param0, jobject param1);
+jobject M_java_text_MessageFormat_parse_java_lang_String_R_Array1_java_lang_Object(jcontext ctx, jobject self, jobject param0);
+jobject M_java_text_MessageFormat_parseObject_java_lang_String_R_java_lang_Object(jcontext ctx, jobject self, jobject param0);
+jobject M_java_text_MessageFormat_parseObject_java_lang_String_java_text_ParsePosition_R_java_lang_Object(jcontext ctx, jobject self, jobject param0, jobject param1);
+
+#ifdef __cplusplus
+}
+#endif
+
+#endif

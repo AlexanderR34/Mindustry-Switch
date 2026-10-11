@@ -1,0 +1,271 @@
+#ifndef HEADER_rhino_NativeArrayIterator
+#define HEADER_rhino_NativeArrayIterator
+
+#include "Clearwing.h"
+#include "rhino/ES6Iterator.h"
+
+#ifdef __cplusplus
+extern "C" {
+#endif
+
+typedef struct rhino_NativeArrayIterator {
+	rhino_ES6Iterator parent;
+	jref F_type;
+	jref F_arrayLike;
+	jint F_index;
+} rhino_NativeArrayIterator;
+
+extern Class class_rhino_NativeArrayIterator;
+
+extern jobject SF_rhino_NativeArrayIterator_ITERATOR_TAG;
+
+#define VTABLE_rhino_NativeArrayIterator_hashCode_R_int 0
+typedef jint (*func_rhino_NativeArrayIterator_hashCode_R_int)(jcontext ctx, jobject self);
+#define VTABLE_rhino_NativeArrayIterator_equals_java_lang_Object_R_boolean 1
+typedef jbool (*func_rhino_NativeArrayIterator_equals_java_lang_Object_R_boolean)(jcontext ctx, jobject self, jobject param0);
+#define VTABLE_rhino_NativeArrayIterator_clone_R_java_lang_Object 2
+typedef jobject (*func_rhino_NativeArrayIterator_clone_R_java_lang_Object)(jcontext ctx, jobject self);
+#define VTABLE_rhino_NativeArrayIterator_getClass_R_java_lang_Class 3
+typedef jobject (*func_rhino_NativeArrayIterator_getClass_R_java_lang_Class)(jcontext ctx, jobject self);
+#define VTABLE_rhino_NativeArrayIterator_toString_R_java_lang_String 4
+typedef jobject (*func_rhino_NativeArrayIterator_toString_R_java_lang_String)(jcontext ctx, jobject self);
+#define VTABLE_rhino_NativeArrayIterator_finalize 5
+typedef void (*func_rhino_NativeArrayIterator_finalize)(jcontext ctx, jobject self);
+#define VTABLE_rhino_NativeArrayIterator_notify 6
+typedef void (*func_rhino_NativeArrayIterator_notify)(jcontext ctx, jobject self);
+#define VTABLE_rhino_NativeArrayIterator_notifyAll 7
+typedef void (*func_rhino_NativeArrayIterator_notifyAll)(jcontext ctx, jobject self);
+#define VTABLE_rhino_NativeArrayIterator_wait 8
+typedef void (*func_rhino_NativeArrayIterator_wait)(jcontext ctx, jobject self);
+#define VTABLE_rhino_NativeArrayIterator_wait_long 9
+typedef void (*func_rhino_NativeArrayIterator_wait_long)(jcontext ctx, jobject self, jlong param0);
+#define VTABLE_rhino_NativeArrayIterator_wait_long_int 10
+typedef void (*func_rhino_NativeArrayIterator_wait_long_int)(jcontext ctx, jobject self, jlong param0, jint param1);
+#define VTABLE_rhino_NativeArrayIterator_getClassName_R_java_lang_String 11
+typedef jobject (*func_rhino_NativeArrayIterator_getClassName_R_java_lang_String)(jcontext ctx, jobject self);
+#define VTABLE_rhino_NativeArrayIterator_get_java_lang_String_rhino_Scriptable_R_java_lang_Object 12
+typedef jobject (*func_rhino_NativeArrayIterator_get_java_lang_String_rhino_Scriptable_R_java_lang_Object)(jcontext ctx, jobject self, jobject param0, jobject param1);
+#define VTABLE_rhino_NativeArrayIterator_get_int_rhino_Scriptable_R_java_lang_Object 13
+typedef jobject (*func_rhino_NativeArrayIterator_get_int_rhino_Scriptable_R_java_lang_Object)(jcontext ctx, jobject self, jint param0, jobject param1);
+#define VTABLE_rhino_NativeArrayIterator_has_java_lang_String_rhino_Scriptable_R_boolean 14
+typedef jbool (*func_rhino_NativeArrayIterator_has_java_lang_String_rhino_Scriptable_R_boolean)(jcontext ctx, jobject self, jobject param0, jobject param1);
+#define VTABLE_rhino_NativeArrayIterator_has_int_rhino_Scriptable_R_boolean 15
+typedef jbool (*func_rhino_NativeArrayIterator_has_int_rhino_Scriptable_R_boolean)(jcontext ctx, jobject self, jint param0, jobject param1);
+#define VTABLE_rhino_NativeArrayIterator_put_java_lang_String_rhino_Scriptable_java_lang_Object 16
+typedef void (*func_rhino_NativeArrayIterator_put_java_lang_String_rhino_Scriptable_java_lang_Object)(jcontext ctx, jobject self, jobject param0, jobject param1, jobject param2);
+#define VTABLE_rhino_NativeArrayIterator_put_int_rhino_Scriptable_java_lang_Object 17
+typedef void (*func_rhino_NativeArrayIterator_put_int_rhino_Scriptable_java_lang_Object)(jcontext ctx, jobject self, jint param0, jobject param1, jobject param2);
+#define VTABLE_rhino_NativeArrayIterator_delete_java_lang_String 18
+typedef void (*func_rhino_NativeArrayIterator_delete_java_lang_String)(jcontext ctx, jobject self, jobject param0);
+#define VTABLE_rhino_NativeArrayIterator_delete_int 19
+typedef void (*func_rhino_NativeArrayIterator_delete_int)(jcontext ctx, jobject self, jint param0);
+#define VTABLE_rhino_NativeArrayIterator_getPrototype_R_rhino_Scriptable 20
+typedef jobject (*func_rhino_NativeArrayIterator_getPrototype_R_rhino_Scriptable)(jcontext ctx, jobject self);
+#define VTABLE_rhino_NativeArrayIterator_setPrototype_rhino_Scriptable 21
+typedef void (*func_rhino_NativeArrayIterator_setPrototype_rhino_Scriptable)(jcontext ctx, jobject self, jobject param0);
+#define VTABLE_rhino_NativeArrayIterator_getParentScope_R_rhino_Scriptable 22
+typedef jobject (*func_rhino_NativeArrayIterator_getParentScope_R_rhino_Scriptable)(jcontext ctx, jobject self);
+#define VTABLE_rhino_NativeArrayIterator_setParentScope_rhino_Scriptable 23
+typedef void (*func_rhino_NativeArrayIterator_setParentScope_rhino_Scriptable)(jcontext ctx, jobject self, jobject param0);
+#define VTABLE_rhino_NativeArrayIterator_getIds_R_Array1_java_lang_Object 24
+typedef jobject (*func_rhino_NativeArrayIterator_getIds_R_Array1_java_lang_Object)(jcontext ctx, jobject self);
+#define VTABLE_rhino_NativeArrayIterator_getDefaultValue_java_lang_Class_R_java_lang_Object 25
+typedef jobject (*func_rhino_NativeArrayIterator_getDefaultValue_java_lang_Class_R_java_lang_Object)(jcontext ctx, jobject self, jobject param0);
+#define VTABLE_rhino_NativeArrayIterator_hasInstance_rhino_Scriptable_R_boolean 26
+typedef jbool (*func_rhino_NativeArrayIterator_hasInstance_rhino_Scriptable_R_boolean)(jcontext ctx, jobject self, jobject param0);
+#define VTABLE_rhino_NativeArrayIterator_get_rhino_Symbol_rhino_Scriptable_R_java_lang_Object 27
+typedef jobject (*func_rhino_NativeArrayIterator_get_rhino_Symbol_rhino_Scriptable_R_java_lang_Object)(jcontext ctx, jobject self, jobject param0, jobject param1);
+#define VTABLE_rhino_NativeArrayIterator_has_rhino_Symbol_rhino_Scriptable_R_boolean 28
+typedef jbool (*func_rhino_NativeArrayIterator_has_rhino_Symbol_rhino_Scriptable_R_boolean)(jcontext ctx, jobject self, jobject param0, jobject param1);
+#define VTABLE_rhino_NativeArrayIterator_put_rhino_Symbol_rhino_Scriptable_java_lang_Object 29
+typedef void (*func_rhino_NativeArrayIterator_put_rhino_Symbol_rhino_Scriptable_java_lang_Object)(jcontext ctx, jobject self, jobject param0, jobject param1, jobject param2);
+#define VTABLE_rhino_NativeArrayIterator_delete_rhino_Symbol 30
+typedef void (*func_rhino_NativeArrayIterator_delete_rhino_Symbol)(jcontext ctx, jobject self, jobject param0);
+#define VTABLE_rhino_NativeArrayIterator_getAllIds_R_Array1_java_lang_Object 31
+typedef jobject (*func_rhino_NativeArrayIterator_getAllIds_R_Array1_java_lang_Object)(jcontext ctx, jobject self);
+#define VTABLE_rhino_NativeArrayIterator_putConst_java_lang_String_rhino_Scriptable_java_lang_Object 32
+typedef void (*func_rhino_NativeArrayIterator_putConst_java_lang_String_rhino_Scriptable_java_lang_Object)(jcontext ctx, jobject self, jobject param0, jobject param1, jobject param2);
+#define VTABLE_rhino_NativeArrayIterator_defineConst_java_lang_String_rhino_Scriptable 33
+typedef void (*func_rhino_NativeArrayIterator_defineConst_java_lang_String_rhino_Scriptable)(jcontext ctx, jobject self, jobject param0, jobject param1);
+#define VTABLE_rhino_NativeArrayIterator_isConst_java_lang_String_R_boolean 34
+typedef jbool (*func_rhino_NativeArrayIterator_isConst_java_lang_String_R_boolean)(jcontext ctx, jobject self, jobject param0);
+#define VTABLE_rhino_NativeArrayIterator_createSlotMap_int_R_rhino_SlotMapContainer 35
+typedef jobject (*func_rhino_NativeArrayIterator_createSlotMap_int_R_rhino_SlotMapContainer)(jcontext ctx, jobject self, jint param0);
+#define VTABLE_rhino_NativeArrayIterator_getTypeOf_R_java_lang_String 36
+typedef jobject (*func_rhino_NativeArrayIterator_getTypeOf_R_java_lang_String)(jcontext ctx, jobject self);
+#define VTABLE_rhino_NativeArrayIterator_getAttributes_java_lang_String_R_int 37
+typedef jint (*func_rhino_NativeArrayIterator_getAttributes_java_lang_String_R_int)(jcontext ctx, jobject self, jobject param0);
+#define VTABLE_rhino_NativeArrayIterator_getAttributes_int_R_int 38
+typedef jint (*func_rhino_NativeArrayIterator_getAttributes_int_R_int)(jcontext ctx, jobject self, jint param0);
+#define VTABLE_rhino_NativeArrayIterator_getAttributes_rhino_Symbol_R_int 39
+typedef jint (*func_rhino_NativeArrayIterator_getAttributes_rhino_Symbol_R_int)(jcontext ctx, jobject self, jobject param0);
+#define VTABLE_rhino_NativeArrayIterator_setAttributes_java_lang_String_int 40
+typedef void (*func_rhino_NativeArrayIterator_setAttributes_java_lang_String_int)(jcontext ctx, jobject self, jobject param0, jint param1);
+#define VTABLE_rhino_NativeArrayIterator_setAttributes_int_int 41
+typedef void (*func_rhino_NativeArrayIterator_setAttributes_int_int)(jcontext ctx, jobject self, jint param0, jint param1);
+#define VTABLE_rhino_NativeArrayIterator_setAttributes_rhino_Symbol_int 42
+typedef void (*func_rhino_NativeArrayIterator_setAttributes_rhino_Symbol_int)(jcontext ctx, jobject self, jobject param0, jint param1);
+#define VTABLE_rhino_NativeArrayIterator_setGetterOrSetter_java_lang_String_int_rhino_Callable_boolean 43
+typedef void (*func_rhino_NativeArrayIterator_setGetterOrSetter_java_lang_String_int_rhino_Callable_boolean)(jcontext ctx, jobject self, jobject param0, jint param1, jobject param2, jbool param3);
+#define VTABLE_rhino_NativeArrayIterator_setGetterOrSetter_java_lang_String_int_rhino_Callable_boolean_boolean 44
+typedef void (*func_rhino_NativeArrayIterator_setGetterOrSetter_java_lang_String_int_rhino_Callable_boolean_boolean)(jcontext ctx, jobject self, jobject param0, jint param1, jobject param2, jbool param3, jbool param4);
+#define VTABLE_rhino_NativeArrayIterator_getGetterOrSetter_java_lang_String_int_boolean_R_java_lang_Object 45
+typedef jobject (*func_rhino_NativeArrayIterator_getGetterOrSetter_java_lang_String_int_boolean_R_java_lang_Object)(jcontext ctx, jobject self, jobject param0, jint param1, jbool param2);
+#define VTABLE_rhino_NativeArrayIterator_isGetterOrSetter_java_lang_String_int_boolean_R_boolean 46
+typedef jbool (*func_rhino_NativeArrayIterator_isGetterOrSetter_java_lang_String_int_boolean_R_boolean)(jcontext ctx, jobject self, jobject param0, jint param1, jbool param2);
+#define VTABLE_rhino_NativeArrayIterator_addLazilyInitializedValue_java_lang_String_int_rhino_LazilyLoadedCtor_int 47
+typedef void (*func_rhino_NativeArrayIterator_addLazilyInitializedValue_java_lang_String_int_rhino_LazilyLoadedCtor_int)(jcontext ctx, jobject self, jobject param0, jint param1, jobject param2, jint param3);
+#define VTABLE_rhino_NativeArrayIterator_setExternalArrayData_rhino_ExternalArrayData 48
+typedef void (*func_rhino_NativeArrayIterator_setExternalArrayData_rhino_ExternalArrayData)(jcontext ctx, jobject self, jobject param0);
+#define VTABLE_rhino_NativeArrayIterator_getExternalArrayData_R_rhino_ExternalArrayData 49
+typedef jobject (*func_rhino_NativeArrayIterator_getExternalArrayData_R_rhino_ExternalArrayData)(jcontext ctx, jobject self);
+#define VTABLE_rhino_NativeArrayIterator_getExternalArrayLength_R_java_lang_Object 50
+typedef jobject (*func_rhino_NativeArrayIterator_getExternalArrayLength_R_java_lang_Object)(jcontext ctx, jobject self);
+#define VTABLE_rhino_NativeArrayIterator_avoidObjectDetection_R_boolean 51
+typedef jbool (*func_rhino_NativeArrayIterator_avoidObjectDetection_R_boolean)(jcontext ctx, jobject self);
+#define VTABLE_rhino_NativeArrayIterator_equivalentValues_java_lang_Object_R_java_lang_Object 52
+typedef jobject (*func_rhino_NativeArrayIterator_equivalentValues_java_lang_Object_R_java_lang_Object)(jcontext ctx, jobject self, jobject param0);
+#define VTABLE_rhino_NativeArrayIterator_defineProperty_java_lang_String_java_lang_Object_int 53
+typedef void (*func_rhino_NativeArrayIterator_defineProperty_java_lang_String_java_lang_Object_int)(jcontext ctx, jobject self, jobject param0, jobject param1, jint param2);
+#define VTABLE_rhino_NativeArrayIterator_defineProperty_rhino_Symbol_java_lang_Object_int 54
+typedef void (*func_rhino_NativeArrayIterator_defineProperty_rhino_Symbol_java_lang_Object_int)(jcontext ctx, jobject self, jobject param0, jobject param1, jint param2);
+#define VTABLE_rhino_NativeArrayIterator_defineProperty_java_lang_String_java_lang_Class_int 55
+typedef void (*func_rhino_NativeArrayIterator_defineProperty_java_lang_String_java_lang_Class_int)(jcontext ctx, jobject self, jobject param0, jobject param1, jint param2);
+#define VTABLE_rhino_NativeArrayIterator_defineProperty_java_lang_String_java_lang_Object_java_lang_reflect_Method_java_lang_reflect_Method_int 56
+typedef void (*func_rhino_NativeArrayIterator_defineProperty_java_lang_String_java_lang_Object_java_lang_reflect_Method_java_lang_reflect_Method_int)(jcontext ctx, jobject self, jobject param0, jobject param1, jobject param2, jobject param3, jint param4);
+#define VTABLE_rhino_NativeArrayIterator_defineOwnProperties_rhino_Context_rhino_ScriptableObject 57
+typedef void (*func_rhino_NativeArrayIterator_defineOwnProperties_rhino_Context_rhino_ScriptableObject)(jcontext ctx, jobject self, jobject param0, jobject param1);
+#define VTABLE_rhino_NativeArrayIterator_defineOwnProperty_rhino_Context_java_lang_Object_rhino_ScriptableObject 58
+typedef void (*func_rhino_NativeArrayIterator_defineOwnProperty_rhino_Context_java_lang_Object_rhino_ScriptableObject)(jcontext ctx, jobject self, jobject param0, jobject param1, jobject param2);
+#define VTABLE_rhino_NativeArrayIterator_defineOwnProperty_rhino_Context_java_lang_Object_rhino_ScriptableObject_boolean 59
+typedef void (*func_rhino_NativeArrayIterator_defineOwnProperty_rhino_Context_java_lang_Object_rhino_ScriptableObject_boolean)(jcontext ctx, jobject self, jobject param0, jobject param1, jobject param2, jbool param3);
+#define VTABLE_rhino_NativeArrayIterator_checkPropertyDefinition_rhino_ScriptableObject 60
+typedef void (*func_rhino_NativeArrayIterator_checkPropertyDefinition_rhino_ScriptableObject)(jcontext ctx, jobject self, jobject param0);
+#define VTABLE_rhino_NativeArrayIterator_checkPropertyChange_java_lang_Object_rhino_ScriptableObject_rhino_ScriptableObject 61
+typedef void (*func_rhino_NativeArrayIterator_checkPropertyChange_java_lang_Object_rhino_ScriptableObject_rhino_ScriptableObject)(jcontext ctx, jobject self, jobject param0, jobject param1, jobject param2);
+#define VTABLE_rhino_NativeArrayIterator_sameValue_java_lang_Object_java_lang_Object_R_boolean 62
+typedef jbool (*func_rhino_NativeArrayIterator_sameValue_java_lang_Object_java_lang_Object_R_boolean)(jcontext ctx, jobject self, jobject param0, jobject param1);
+#define VTABLE_rhino_NativeArrayIterator_applyDescriptorToAttributeBitset_int_rhino_ScriptableObject_R_int 63
+typedef jint (*func_rhino_NativeArrayIterator_applyDescriptorToAttributeBitset_int_rhino_ScriptableObject_R_int)(jcontext ctx, jobject self, jint param0, jobject param1);
+#define VTABLE_rhino_NativeArrayIterator_isDataDescriptor_rhino_ScriptableObject_R_boolean 64
+typedef jbool (*func_rhino_NativeArrayIterator_isDataDescriptor_rhino_ScriptableObject_R_boolean)(jcontext ctx, jobject self, jobject param0);
+#define VTABLE_rhino_NativeArrayIterator_isAccessorDescriptor_rhino_ScriptableObject_R_boolean 65
+typedef jbool (*func_rhino_NativeArrayIterator_isAccessorDescriptor_rhino_ScriptableObject_R_boolean)(jcontext ctx, jobject self, jobject param0);
+#define VTABLE_rhino_NativeArrayIterator_isGenericDescriptor_rhino_ScriptableObject_R_boolean 66
+typedef jbool (*func_rhino_NativeArrayIterator_isGenericDescriptor_rhino_ScriptableObject_R_boolean)(jcontext ctx, jobject self, jobject param0);
+#define VTABLE_rhino_NativeArrayIterator_defineFunctionProperties_Array1_java_lang_String_java_lang_Class_int 67
+typedef void (*func_rhino_NativeArrayIterator_defineFunctionProperties_Array1_java_lang_String_java_lang_Class_int)(jcontext ctx, jobject self, jobject param0, jobject param1, jint param2);
+#define VTABLE_rhino_NativeArrayIterator_isExtensible_R_boolean 68
+typedef jbool (*func_rhino_NativeArrayIterator_isExtensible_R_boolean)(jcontext ctx, jobject self);
+#define VTABLE_rhino_NativeArrayIterator_preventExtensions 69
+typedef void (*func_rhino_NativeArrayIterator_preventExtensions)(jcontext ctx, jobject self);
+#define VTABLE_rhino_NativeArrayIterator_sealObject 70
+typedef void (*func_rhino_NativeArrayIterator_sealObject)(jcontext ctx, jobject self);
+#define VTABLE_rhino_NativeArrayIterator_isSealed_R_boolean 71
+typedef jbool (*func_rhino_NativeArrayIterator_isSealed_R_boolean)(jcontext ctx, jobject self);
+#define VTABLE_rhino_NativeArrayIterator_checkNotSealed_java_lang_Object_int 72
+typedef void (*func_rhino_NativeArrayIterator_checkNotSealed_java_lang_Object_int)(jcontext ctx, jobject self, jobject param0, jint param1);
+#define VTABLE_rhino_NativeArrayIterator_getAssociatedValue_java_lang_Object_R_java_lang_Object 73
+typedef jobject (*func_rhino_NativeArrayIterator_getAssociatedValue_java_lang_Object_R_java_lang_Object)(jcontext ctx, jobject self, jobject param0);
+#define VTABLE_rhino_NativeArrayIterator_associateValue_java_lang_Object_java_lang_Object_R_java_lang_Object 74
+typedef jobject (*func_rhino_NativeArrayIterator_associateValue_java_lang_Object_java_lang_Object_R_java_lang_Object)(jcontext ctx, jobject self, jobject param0, jobject param1);
+#define VTABLE_rhino_NativeArrayIterator_putImpl_java_lang_Object_int_rhino_Scriptable_java_lang_Object_R_boolean 75
+typedef jbool (*func_rhino_NativeArrayIterator_putImpl_java_lang_Object_int_rhino_Scriptable_java_lang_Object_R_boolean)(jcontext ctx, jobject self, jobject param0, jint param1, jobject param2, jobject param3);
+#define VTABLE_rhino_NativeArrayIterator_putConstImpl_java_lang_String_int_rhino_Scriptable_java_lang_Object_int_R_boolean 76
+typedef jbool (*func_rhino_NativeArrayIterator_putConstImpl_java_lang_String_int_rhino_Scriptable_java_lang_Object_int_R_boolean)(jcontext ctx, jobject self, jobject param0, jint param1, jobject param2, jobject param3, jint param4);
+#define VTABLE_rhino_NativeArrayIterator_findAttributeSlot_java_lang_String_int_rhino_ScriptableObject$SlotAccess_R_rhino_ScriptableObject$Slot 77
+typedef jobject (*func_rhino_NativeArrayIterator_findAttributeSlot_java_lang_String_int_rhino_ScriptableObject$SlotAccess_R_rhino_ScriptableObject$Slot)(jcontext ctx, jobject self, jobject param0, jint param1, jobject param2);
+#define VTABLE_rhino_NativeArrayIterator_findAttributeSlot_rhino_Symbol_rhino_ScriptableObject$SlotAccess_R_rhino_ScriptableObject$Slot 78
+typedef jobject (*func_rhino_NativeArrayIterator_findAttributeSlot_rhino_Symbol_rhino_ScriptableObject$SlotAccess_R_rhino_ScriptableObject$Slot)(jcontext ctx, jobject self, jobject param0, jobject param1);
+#define VTABLE_rhino_NativeArrayIterator_getIds_boolean_boolean_R_Array1_java_lang_Object 79
+typedef jobject (*func_rhino_NativeArrayIterator_getIds_boolean_boolean_R_Array1_java_lang_Object)(jcontext ctx, jobject self, jbool param0, jbool param1);
+#define VTABLE_rhino_NativeArrayIterator_getOwnPropertyDescriptor_rhino_Context_java_lang_Object_R_rhino_ScriptableObject 80
+typedef jobject (*func_rhino_NativeArrayIterator_getOwnPropertyDescriptor_rhino_Context_java_lang_Object_R_rhino_ScriptableObject)(jcontext ctx, jobject self, jobject param0, jobject param1);
+#define VTABLE_rhino_NativeArrayIterator_getSlot_rhino_Context_java_lang_Object_rhino_ScriptableObject$SlotAccess_R_rhino_ScriptableObject$Slot 81
+typedef jobject (*func_rhino_NativeArrayIterator_getSlot_rhino_Context_java_lang_Object_rhino_ScriptableObject$SlotAccess_R_rhino_ScriptableObject$Slot)(jcontext ctx, jobject self, jobject param0, jobject param1, jobject param2);
+#define VTABLE_rhino_NativeArrayIterator_size_R_int 82
+typedef jint (*func_rhino_NativeArrayIterator_size_R_int)(jcontext ctx, jobject self);
+#define VTABLE_rhino_NativeArrayIterator_isEmpty_R_boolean 83
+typedef jbool (*func_rhino_NativeArrayIterator_isEmpty_R_boolean)(jcontext ctx, jobject self);
+#define VTABLE_rhino_NativeArrayIterator_get_java_lang_Object_R_java_lang_Object 84
+typedef jobject (*func_rhino_NativeArrayIterator_get_java_lang_Object_R_java_lang_Object)(jcontext ctx, jobject self, jobject param0);
+#define VTABLE_rhino_NativeArrayIterator_execIdCall_rhino_IdFunctionObject_rhino_Context_rhino_Scriptable_rhino_Scriptable_Array1_java_lang_Object_R_java_lang_Object 85
+typedef jobject (*func_rhino_NativeArrayIterator_execIdCall_rhino_IdFunctionObject_rhino_Context_rhino_Scriptable_rhino_Scriptable_Array1_java_lang_Object_R_java_lang_Object)(jcontext ctx, jobject self, jobject param0, jobject param1, jobject param2, jobject param3, jobject param4);
+#define VTABLE_rhino_NativeArrayIterator_defaultHas_java_lang_String_R_boolean 86
+typedef jbool (*func_rhino_NativeArrayIterator_defaultHas_java_lang_String_R_boolean)(jcontext ctx, jobject self, jobject param0);
+#define VTABLE_rhino_NativeArrayIterator_defaultGet_java_lang_String_R_java_lang_Object 87
+typedef jobject (*func_rhino_NativeArrayIterator_defaultGet_java_lang_String_R_java_lang_Object)(jcontext ctx, jobject self, jobject param0);
+#define VTABLE_rhino_NativeArrayIterator_defaultPut_java_lang_String_java_lang_Object 88
+typedef void (*func_rhino_NativeArrayIterator_defaultPut_java_lang_String_java_lang_Object)(jcontext ctx, jobject self, jobject param0, jobject param1);
+#define VTABLE_rhino_NativeArrayIterator_getMaxInstanceId_R_int 89
+typedef jint (*func_rhino_NativeArrayIterator_getMaxInstanceId_R_int)(jcontext ctx, jobject self);
+#define VTABLE_rhino_NativeArrayIterator_findInstanceIdInfo_java_lang_String_R_int 90
+typedef jint (*func_rhino_NativeArrayIterator_findInstanceIdInfo_java_lang_String_R_int)(jcontext ctx, jobject self, jobject param0);
+#define VTABLE_rhino_NativeArrayIterator_findInstanceIdInfo_rhino_Symbol_R_int 91
+typedef jint (*func_rhino_NativeArrayIterator_findInstanceIdInfo_rhino_Symbol_R_int)(jcontext ctx, jobject self, jobject param0);
+#define VTABLE_rhino_NativeArrayIterator_getInstanceIdName_int_R_java_lang_String 92
+typedef jobject (*func_rhino_NativeArrayIterator_getInstanceIdName_int_R_java_lang_String)(jcontext ctx, jobject self, jint param0);
+#define VTABLE_rhino_NativeArrayIterator_getInstanceIdValue_int_R_java_lang_Object 93
+typedef jobject (*func_rhino_NativeArrayIterator_getInstanceIdValue_int_R_java_lang_Object)(jcontext ctx, jobject self, jint param0);
+#define VTABLE_rhino_NativeArrayIterator_setInstanceIdValue_int_java_lang_Object 94
+typedef void (*func_rhino_NativeArrayIterator_setInstanceIdValue_int_java_lang_Object)(jcontext ctx, jobject self, jint param0, jobject param1);
+#define VTABLE_rhino_NativeArrayIterator_setInstanceIdAttributes_int_int 95
+typedef void (*func_rhino_NativeArrayIterator_setInstanceIdAttributes_int_int)(jcontext ctx, jobject self, jint param0, jint param1);
+#define VTABLE_rhino_NativeArrayIterator_exportAsJSClass_int_rhino_Scriptable_boolean_R_rhino_IdFunctionObject 96
+typedef jobject (*func_rhino_NativeArrayIterator_exportAsJSClass_int_rhino_Scriptable_boolean_R_rhino_IdFunctionObject)(jcontext ctx, jobject self, jint param0, jobject param1, jbool param2);
+#define VTABLE_rhino_NativeArrayIterator_hasPrototypeMap_R_boolean 97
+typedef jbool (*func_rhino_NativeArrayIterator_hasPrototypeMap_R_boolean)(jcontext ctx, jobject self);
+#define VTABLE_rhino_NativeArrayIterator_activatePrototypeMap_int 98
+typedef void (*func_rhino_NativeArrayIterator_activatePrototypeMap_int)(jcontext ctx, jobject self, jint param0);
+#define VTABLE_rhino_NativeArrayIterator_initPrototypeMethod_java_lang_Object_int_java_lang_String_int_R_rhino_IdFunctionObject 99
+typedef jobject (*func_rhino_NativeArrayIterator_initPrototypeMethod_java_lang_Object_int_java_lang_String_int_R_rhino_IdFunctionObject)(jcontext ctx, jobject self, jobject param0, jint param1, jobject param2, jint param3);
+#define VTABLE_rhino_NativeArrayIterator_initPrototypeMethod_java_lang_Object_int_java_lang_String_java_lang_String_int_R_rhino_IdFunctionObject 100
+typedef jobject (*func_rhino_NativeArrayIterator_initPrototypeMethod_java_lang_Object_int_java_lang_String_java_lang_String_int_R_rhino_IdFunctionObject)(jcontext ctx, jobject self, jobject param0, jint param1, jobject param2, jobject param3, jint param4);
+#define VTABLE_rhino_NativeArrayIterator_initPrototypeMethod_java_lang_Object_int_rhino_Symbol_java_lang_String_int_R_rhino_IdFunctionObject 101
+typedef jobject (*func_rhino_NativeArrayIterator_initPrototypeMethod_java_lang_Object_int_rhino_Symbol_java_lang_String_int_R_rhino_IdFunctionObject)(jcontext ctx, jobject self, jobject param0, jint param1, jobject param2, jobject param3, jint param4);
+#define VTABLE_rhino_NativeArrayIterator_initPrototypeConstructor_rhino_IdFunctionObject 102
+typedef void (*func_rhino_NativeArrayIterator_initPrototypeConstructor_rhino_IdFunctionObject)(jcontext ctx, jobject self, jobject param0);
+#define VTABLE_rhino_NativeArrayIterator_initPrototypeValue_int_java_lang_String_java_lang_Object_int 103
+typedef void (*func_rhino_NativeArrayIterator_initPrototypeValue_int_java_lang_String_java_lang_Object_int)(jcontext ctx, jobject self, jint param0, jobject param1, jobject param2, jint param3);
+#define VTABLE_rhino_NativeArrayIterator_initPrototypeValue_int_rhino_Symbol_java_lang_Object_int 104
+typedef void (*func_rhino_NativeArrayIterator_initPrototypeValue_int_rhino_Symbol_java_lang_Object_int)(jcontext ctx, jobject self, jint param0, jobject param1, jobject param2, jint param3);
+#define VTABLE_rhino_NativeArrayIterator_initPrototypeId_int 105
+typedef void (*func_rhino_NativeArrayIterator_initPrototypeId_int)(jcontext ctx, jobject self, jint param0);
+#define VTABLE_rhino_NativeArrayIterator_findPrototypeId_java_lang_String_R_int 106
+typedef jint (*func_rhino_NativeArrayIterator_findPrototypeId_java_lang_String_R_int)(jcontext ctx, jobject self, jobject param0);
+#define VTABLE_rhino_NativeArrayIterator_findPrototypeId_rhino_Symbol_R_int 107
+typedef jint (*func_rhino_NativeArrayIterator_findPrototypeId_rhino_Symbol_R_int)(jcontext ctx, jobject self, jobject param0);
+#define VTABLE_rhino_NativeArrayIterator_fillConstructorProperties_rhino_IdFunctionObject 108
+typedef void (*func_rhino_NativeArrayIterator_fillConstructorProperties_rhino_IdFunctionObject)(jcontext ctx, jobject self, jobject param0);
+#define VTABLE_rhino_NativeArrayIterator_addIdFunctionProperty_rhino_Scriptable_java_lang_Object_int_java_lang_String_int 109
+typedef void (*func_rhino_NativeArrayIterator_addIdFunctionProperty_rhino_Scriptable_java_lang_Object_int_java_lang_String_int)(jcontext ctx, jobject self, jobject param0, jobject param1, jint param2, jobject param3, jint param4);
+#define VTABLE_rhino_NativeArrayIterator_newIdFunction_java_lang_Object_int_java_lang_String_int_rhino_Scriptable_R_rhino_IdFunctionObject 110
+typedef jobject (*func_rhino_NativeArrayIterator_newIdFunction_java_lang_Object_int_java_lang_String_int_rhino_Scriptable_R_rhino_IdFunctionObject)(jcontext ctx, jobject self, jobject param0, jint param1, jobject param2, jint param3, jobject param4);
+#define VTABLE_rhino_NativeArrayIterator_getBuiltInDescriptor_java_lang_String_R_rhino_ScriptableObject 111
+typedef jobject (*func_rhino_NativeArrayIterator_getBuiltInDescriptor_java_lang_String_R_rhino_ScriptableObject)(jcontext ctx, jobject self, jobject param0);
+#define VTABLE_rhino_NativeArrayIterator_getBuiltInDescriptor_rhino_Symbol_R_rhino_ScriptableObject 112
+typedef jobject (*func_rhino_NativeArrayIterator_getBuiltInDescriptor_rhino_Symbol_R_rhino_ScriptableObject)(jcontext ctx, jobject self, jobject param0);
+#define VTABLE_rhino_NativeArrayIterator_isDone_rhino_Context_rhino_Scriptable_R_boolean 113
+typedef jbool (*func_rhino_NativeArrayIterator_isDone_rhino_Context_rhino_Scriptable_R_boolean)(jcontext ctx, jobject self, jobject param0, jobject param1);
+#define VTABLE_rhino_NativeArrayIterator_nextValue_rhino_Context_rhino_Scriptable_R_java_lang_Object 114
+typedef jobject (*func_rhino_NativeArrayIterator_nextValue_rhino_Context_rhino_Scriptable_R_java_lang_Object)(jcontext ctx, jobject self, jobject param0, jobject param1);
+#define VTABLE_rhino_NativeArrayIterator_next_rhino_Context_rhino_Scriptable_R_java_lang_Object 115
+typedef jobject (*func_rhino_NativeArrayIterator_next_rhino_Context_rhino_Scriptable_R_java_lang_Object)(jcontext ctx, jobject self, jobject param0, jobject param1);
+#define VTABLE_rhino_NativeArrayIterator_getTag_R_java_lang_String 116
+typedef jobject (*func_rhino_NativeArrayIterator_getTag_R_java_lang_String)(jcontext ctx, jobject self);
+
+void mark_rhino_NativeArrayIterator(jobject object, jint mark, jint depth);
+void clinit_rhino_NativeArrayIterator(jcontext ctx);
+void SM_rhino_NativeArrayIterator_init_rhino_ScriptableObject_boolean(jcontext ctx, jobject param0, jbool param1);
+void init_rhino_NativeArrayIterator(jcontext ctx, jobject self);
+void init_rhino_NativeArrayIterator_rhino_Scriptable_rhino_Scriptable_rhino_NativeArrayIterator$ARRAY_ITERATOR_TYPE(jcontext ctx, jobject self, jobject param0, jobject param1, jobject param2);
+jobject M_rhino_NativeArrayIterator_getClassName_R_java_lang_String(jcontext ctx, jobject self);
+jbool M_rhino_NativeArrayIterator_isDone_rhino_Context_rhino_Scriptable_R_boolean(jcontext ctx, jobject self, jobject param0, jobject param1);
+jobject M_rhino_NativeArrayIterator_nextValue_rhino_Context_rhino_Scriptable_R_java_lang_Object(jcontext ctx, jobject self, jobject param0, jobject param1);
+jobject M_rhino_NativeArrayIterator_getTag_R_java_lang_String(jcontext ctx, jobject self);
+
+#ifdef __cplusplus
+}
+#endif
+
+#endif

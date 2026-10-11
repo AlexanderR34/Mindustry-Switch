@@ -1,0 +1,248 @@
+#ifndef HEADER_mindustry_ui_fragments_PlacementFragment
+#define HEADER_mindustry_ui_fragments_PlacementFragment
+
+#include "Clearwing.h"
+#include "java/lang/Object.h"
+
+#ifdef __cplusplus
+extern "C" {
+#endif
+
+typedef struct mindustry_ui_fragments_PlacementFragment {
+	java_lang_Object parent;
+	jint F_rowWidth;
+	jref F_currentCategory;
+	jref F_returnArray;
+	jref F_returnArray2;
+	jref F_returnCatArray;
+	jref F_categoryEmpty;
+	jref F_selectedBlocks;
+	jref F_scrollPositions;
+	jref F_menuHoverBlock;
+	jref F_hover;
+	jref F_lastFlowBuild;
+	jref F_nextFlowBuild;
+	jref F_lastDisplayState;
+	jref F_lastTeam;
+	jbool F_wasHovered;
+	jref F_blockTable;
+	jref F_toggler;
+	jref F_topTable;
+	jref F_blockCatTable;
+	jref F_commandTable;
+	jref F_mainStack;
+	jref F_blockPane;
+	jref F_rebuildCommand;
+	jbool F_blockSelectEnd;
+	jbool F_wasCommandMode;
+	jint F_blockSelectSeq;
+	jlong F_blockSelectSeqMillis;
+	jref F_blockSelect;
+} mindustry_ui_fragments_PlacementFragment;
+
+extern Class class_mindustry_ui_fragments_PlacementFragment;
+
+
+#define VTABLE_mindustry_ui_fragments_PlacementFragment_hashCode_R_int 0
+typedef jint (*func_mindustry_ui_fragments_PlacementFragment_hashCode_R_int)(jcontext ctx, jobject self);
+#define VTABLE_mindustry_ui_fragments_PlacementFragment_equals_java_lang_Object_R_boolean 1
+typedef jbool (*func_mindustry_ui_fragments_PlacementFragment_equals_java_lang_Object_R_boolean)(jcontext ctx, jobject self, jobject param0);
+#define VTABLE_mindustry_ui_fragments_PlacementFragment_clone_R_java_lang_Object 2
+typedef jobject (*func_mindustry_ui_fragments_PlacementFragment_clone_R_java_lang_Object)(jcontext ctx, jobject self);
+#define VTABLE_mindustry_ui_fragments_PlacementFragment_getClass_R_java_lang_Class 3
+typedef jobject (*func_mindustry_ui_fragments_PlacementFragment_getClass_R_java_lang_Class)(jcontext ctx, jobject self);
+#define VTABLE_mindustry_ui_fragments_PlacementFragment_toString_R_java_lang_String 4
+typedef jobject (*func_mindustry_ui_fragments_PlacementFragment_toString_R_java_lang_String)(jcontext ctx, jobject self);
+#define VTABLE_mindustry_ui_fragments_PlacementFragment_finalize 5
+typedef void (*func_mindustry_ui_fragments_PlacementFragment_finalize)(jcontext ctx, jobject self);
+#define VTABLE_mindustry_ui_fragments_PlacementFragment_notify 6
+typedef void (*func_mindustry_ui_fragments_PlacementFragment_notify)(jcontext ctx, jobject self);
+#define VTABLE_mindustry_ui_fragments_PlacementFragment_notifyAll 7
+typedef void (*func_mindustry_ui_fragments_PlacementFragment_notifyAll)(jcontext ctx, jobject self);
+#define VTABLE_mindustry_ui_fragments_PlacementFragment_wait 8
+typedef void (*func_mindustry_ui_fragments_PlacementFragment_wait)(jcontext ctx, jobject self);
+#define VTABLE_mindustry_ui_fragments_PlacementFragment_wait_long 9
+typedef void (*func_mindustry_ui_fragments_PlacementFragment_wait_long)(jcontext ctx, jobject self, jlong param0);
+#define VTABLE_mindustry_ui_fragments_PlacementFragment_wait_long_int 10
+typedef void (*func_mindustry_ui_fragments_PlacementFragment_wait_long_int)(jcontext ctx, jobject self, jlong param0, jint param1);
+#define VTABLE_mindustry_ui_fragments_PlacementFragment_hover_R_mindustry_ui_Displayable 11
+typedef jobject (*func_mindustry_ui_fragments_PlacementFragment_hover_R_mindustry_ui_Displayable)(jcontext ctx, jobject self);
+#define VTABLE_mindustry_ui_fragments_PlacementFragment_rebuild 12
+typedef void (*func_mindustry_ui_fragments_PlacementFragment_rebuild)(jcontext ctx, jobject self);
+#define VTABLE_mindustry_ui_fragments_PlacementFragment_updatePick_mindustry_input_InputHandler_R_boolean 13
+typedef jbool (*func_mindustry_ui_fragments_PlacementFragment_updatePick_mindustry_input_InputHandler_R_boolean)(jcontext ctx, jobject self, jobject param0);
+#define VTABLE_mindustry_ui_fragments_PlacementFragment_gridUpdate_mindustry_input_InputHandler_R_boolean 14
+typedef jbool (*func_mindustry_ui_fragments_PlacementFragment_gridUpdate_mindustry_input_InputHandler_R_boolean)(jcontext ctx, jobject self, jobject param0);
+#define VTABLE_mindustry_ui_fragments_PlacementFragment_build_arc_scene_Group 15
+typedef void (*func_mindustry_ui_fragments_PlacementFragment_build_arc_scene_Group)(jcontext ctx, jobject self, jobject param0);
+#define VTABLE_mindustry_ui_fragments_PlacementFragment_getUnplaceableReason_mindustry_world_Block_R_java_lang_String 16
+typedef jobject (*func_mindustry_ui_fragments_PlacementFragment_getUnplaceableReason_mindustry_world_Block_R_java_lang_String)(jcontext ctx, jobject self, jobject param0);
+#define VTABLE_mindustry_ui_fragments_PlacementFragment_getCategories_R_arc_struct_Seq 17
+typedef jobject (*func_mindustry_ui_fragments_PlacementFragment_getCategories_R_arc_struct_Seq)(jcontext ctx, jobject self);
+#define VTABLE_mindustry_ui_fragments_PlacementFragment_getByCategory_mindustry_type_Category_R_arc_struct_Seq 18
+typedef jobject (*func_mindustry_ui_fragments_PlacementFragment_getByCategory_mindustry_type_Category_R_arc_struct_Seq)(jcontext ctx, jobject self, jobject param0);
+#define VTABLE_mindustry_ui_fragments_PlacementFragment_getUnlockedByCategory_mindustry_type_Category_R_arc_struct_Seq 19
+typedef jobject (*func_mindustry_ui_fragments_PlacementFragment_getUnlockedByCategory_mindustry_type_Category_R_arc_struct_Seq)(jcontext ctx, jobject self, jobject param0);
+#define VTABLE_mindustry_ui_fragments_PlacementFragment_getSelectedBlock_mindustry_type_Category_R_mindustry_world_Block 20
+typedef jobject (*func_mindustry_ui_fragments_PlacementFragment_getSelectedBlock_mindustry_type_Category_R_mindustry_world_Block)(jcontext ctx, jobject self, jobject param0);
+#define VTABLE_mindustry_ui_fragments_PlacementFragment_unlocked_mindustry_world_Block_R_boolean 21
+typedef jbool (*func_mindustry_ui_fragments_PlacementFragment_unlocked_mindustry_world_Block_R_boolean)(jcontext ctx, jobject self, jobject param0);
+#define VTABLE_mindustry_ui_fragments_PlacementFragment_hasInfoBox_R_boolean 22
+typedef jbool (*func_mindustry_ui_fragments_PlacementFragment_hasInfoBox_R_boolean)(jcontext ctx, jobject self);
+#define VTABLE_mindustry_ui_fragments_PlacementFragment_hovered_R_mindustry_ui_Displayable 23
+typedef jobject (*func_mindustry_ui_fragments_PlacementFragment_hovered_R_mindustry_ui_Displayable)(jcontext ctx, jobject self);
+#define VTABLE_mindustry_ui_fragments_PlacementFragment_lambda$getSelectedBlock$0_mindustry_type_Category_R_mindustry_world_Block 24
+typedef jobject (*func_mindustry_ui_fragments_PlacementFragment_lambda$getSelectedBlock$0_mindustry_type_Category_R_mindustry_world_Block)(jcontext ctx, jobject self, jobject param0);
+#define VTABLE_mindustry_ui_fragments_PlacementFragment_lambda$getUnlockedByCategory$0_mindustry_type_Category_mindustry_world_Block_R_boolean 25
+typedef jbool (*func_mindustry_ui_fragments_PlacementFragment_lambda$getUnlockedByCategory$0_mindustry_type_Category_mindustry_world_Block_R_boolean)(jcontext ctx, jobject self, jobject param0, jobject param1);
+#define VTABLE_mindustry_ui_fragments_PlacementFragment_lambda$getCategories$0_mindustry_type_Category_mindustry_type_Category_R_int 26
+typedef jint (*func_mindustry_ui_fragments_PlacementFragment_lambda$getCategories$0_mindustry_type_Category_mindustry_type_Category_R_int)(jcontext ctx, jobject self, jobject param0, jobject param1);
+#define VTABLE_mindustry_ui_fragments_PlacementFragment_lambda$build$0_arc_scene_ui_layout_Table 27
+typedef void (*func_mindustry_ui_fragments_PlacementFragment_lambda$build$0_arc_scene_ui_layout_Table)(jcontext ctx, jobject self, jobject param0);
+#define VTABLE_mindustry_ui_fragments_PlacementFragment_lambda$build$2_arc_scene_ui_layout_Table 28
+typedef void (*func_mindustry_ui_fragments_PlacementFragment_lambda$build$2_arc_scene_ui_layout_Table)(jcontext ctx, jobject self, jobject param0);
+#define VTABLE_mindustry_ui_fragments_PlacementFragment_lambda$build$55_java_lang_Runnable 29
+typedef void (*func_mindustry_ui_fragments_PlacementFragment_lambda$build$55_java_lang_Runnable)(jcontext ctx, jobject self, jobject param0);
+#define VTABLE_mindustry_ui_fragments_PlacementFragment_lambda$build$52_java_lang_Runnable_arc_scene_ui_layout_Table 30
+typedef void (*func_mindustry_ui_fragments_PlacementFragment_lambda$build$52_java_lang_Runnable_arc_scene_ui_layout_Table)(jcontext ctx, jobject self, jobject param0, jobject param1);
+#define VTABLE_mindustry_ui_fragments_PlacementFragment_lambda$build$54_mindustry_type_Category_arc_scene_ui_ImageButton 31
+typedef void (*func_mindustry_ui_fragments_PlacementFragment_lambda$build$54_mindustry_type_Category_arc_scene_ui_ImageButton)(jcontext ctx, jobject self, jobject param0, jobject param1);
+#define VTABLE_mindustry_ui_fragments_PlacementFragment_lambda$build$53_mindustry_type_Category_java_lang_Runnable 32
+typedef void (*func_mindustry_ui_fragments_PlacementFragment_lambda$build$53_mindustry_type_Category_java_lang_Runnable)(jcontext ctx, jobject self, jobject param0, jobject param1);
+#define VTABLE_mindustry_ui_fragments_PlacementFragment_lambda$build$48_arc_scene_ui_layout_Table 33
+typedef void (*func_mindustry_ui_fragments_PlacementFragment_lambda$build$48_arc_scene_ui_layout_Table)(jcontext ctx, jobject self, jobject param0);
+#define VTABLE_mindustry_ui_fragments_PlacementFragment_lambda$build$49_arc_scene_ui_layout_Table 34
+typedef void (*func_mindustry_ui_fragments_PlacementFragment_lambda$build$49_arc_scene_ui_layout_Table)(jcontext ctx, jobject self, jobject param0);
+#define VTABLE_mindustry_ui_fragments_PlacementFragment_lambda$build$24_arc_scene_ui_layout_Table 35
+typedef void (*func_mindustry_ui_fragments_PlacementFragment_lambda$build$24_arc_scene_ui_layout_Table)(jcontext ctx, jobject self, jobject param0);
+#define VTABLE_mindustry_ui_fragments_PlacementFragment_lambda$build$43_Array2_int_arc_struct_Bits_arc_struct_Bits_arc_struct_Bits_arc_struct_Bits_arc_struct_Bits_arc_struct_Seq_arc_struct_Bits_arc_struct_Bits_arc_struct_Bits_arc_struct_Seq_arc_struct_Seq 36
+typedef void (*func_mindustry_ui_fragments_PlacementFragment_lambda$build$43_Array2_int_arc_struct_Bits_arc_struct_Bits_arc_struct_Bits_arc_struct_Bits_arc_struct_Bits_arc_struct_Seq_arc_struct_Bits_arc_struct_Bits_arc_struct_Bits_arc_struct_Seq_arc_struct_Seq)(jcontext ctx, jobject self, jobject param0, jobject param1, jobject param2, jobject param3, jobject param4, jobject param5, jobject param6, jobject param7, jobject param8, jobject param9, jobject param10, jobject param11);
+#define VTABLE_mindustry_ui_fragments_PlacementFragment_lambda$build$22 37
+typedef void (*func_mindustry_ui_fragments_PlacementFragment_lambda$build$22)(jcontext ctx, jobject self);
+#define VTABLE_mindustry_ui_fragments_PlacementFragment_lambda$build$11_arc_scene_ui_layout_Table 38
+typedef void (*func_mindustry_ui_fragments_PlacementFragment_lambda$build$11_arc_scene_ui_layout_Table)(jcontext ctx, jobject self, jobject param0);
+#define VTABLE_mindustry_ui_fragments_PlacementFragment_lambda$build$12_arc_scene_ui_layout_Table 39
+typedef void (*func_mindustry_ui_fragments_PlacementFragment_lambda$build$12_arc_scene_ui_layout_Table)(jcontext ctx, jobject self, jobject param0);
+#define VTABLE_mindustry_ui_fragments_PlacementFragment_lambda$build$21_mindustry_world_Block_R_boolean 40
+typedef jbool (*func_mindustry_ui_fragments_PlacementFragment_lambda$build$21_mindustry_world_Block_R_boolean)(jcontext ctx, jobject self, jobject param0);
+#define VTABLE_mindustry_ui_fragments_PlacementFragment_lambda$build$19_mindustry_world_Block_arc_scene_ui_layout_Table 41
+typedef void (*func_mindustry_ui_fragments_PlacementFragment_lambda$build$19_mindustry_world_Block_arc_scene_ui_layout_Table)(jcontext ctx, jobject self, jobject param0, jobject param1);
+#define VTABLE_mindustry_ui_fragments_PlacementFragment_lambda$build$20_mindustry_world_Block_R_java_lang_CharSequence 42
+typedef jobject (*func_mindustry_ui_fragments_PlacementFragment_lambda$build$20_mindustry_world_Block_R_java_lang_CharSequence)(jcontext ctx, jobject self, jobject param0);
+#define VTABLE_mindustry_ui_fragments_PlacementFragment_lambda$build$13_mindustry_world_Block_arc_scene_ui_layout_Table 43
+typedef void (*func_mindustry_ui_fragments_PlacementFragment_lambda$build$13_mindustry_world_Block_arc_scene_ui_layout_Table)(jcontext ctx, jobject self, jobject param0, jobject param1);
+#define VTABLE_mindustry_ui_fragments_PlacementFragment_lambda$build$14_mindustry_world_Block_java_lang_String_R_java_lang_CharSequence 44
+typedef jobject (*func_mindustry_ui_fragments_PlacementFragment_lambda$build$14_mindustry_world_Block_java_lang_String_R_java_lang_CharSequence)(jcontext ctx, jobject self, jobject param0, jobject param1);
+#define VTABLE_mindustry_ui_fragments_PlacementFragment_lambda$build$3 45
+typedef void (*func_mindustry_ui_fragments_PlacementFragment_lambda$build$3)(jcontext ctx, jobject self);
+#define VTABLE_mindustry_ui_fragments_PlacementFragment_lambda$build$10 46
+typedef void (*func_mindustry_ui_fragments_PlacementFragment_lambda$build$10)(jcontext ctx, jobject self);
+#define VTABLE_mindustry_ui_fragments_PlacementFragment_lambda$build$9_mindustry_world_Block 47
+typedef void (*func_mindustry_ui_fragments_PlacementFragment_lambda$build$9_mindustry_world_Block)(jcontext ctx, jobject self, jobject param0);
+#define VTABLE_mindustry_ui_fragments_PlacementFragment_lambda$build$8_mindustry_world_Block 48
+typedef void (*func_mindustry_ui_fragments_PlacementFragment_lambda$build$8_mindustry_world_Block)(jcontext ctx, jobject self, jobject param0);
+#define VTABLE_mindustry_ui_fragments_PlacementFragment_lambda$build$4_mindustry_world_Block 49
+typedef void (*func_mindustry_ui_fragments_PlacementFragment_lambda$build$4_mindustry_world_Block)(jcontext ctx, jobject self, jobject param0);
+#define VTABLE_mindustry_ui_fragments_PlacementFragment_lambda$new$5 50
+typedef void (*func_mindustry_ui_fragments_PlacementFragment_lambda$new$5)(jcontext ctx, jobject self);
+#define VTABLE_mindustry_ui_fragments_PlacementFragment_lambda$new$4_mindustry_game_EventType$ResetEvent 51
+typedef void (*func_mindustry_ui_fragments_PlacementFragment_lambda$new$4_mindustry_game_EventType$ResetEvent)(jcontext ctx, jobject self, jobject param0);
+#define VTABLE_mindustry_ui_fragments_PlacementFragment_lambda$new$3_mindustry_game_EventType$UnlockEvent 52
+typedef void (*func_mindustry_ui_fragments_PlacementFragment_lambda$new$3_mindustry_game_EventType$UnlockEvent)(jcontext ctx, jobject self, jobject param0);
+#define VTABLE_mindustry_ui_fragments_PlacementFragment_lambda$new$2 53
+typedef void (*func_mindustry_ui_fragments_PlacementFragment_lambda$new$2)(jcontext ctx, jobject self);
+#define VTABLE_mindustry_ui_fragments_PlacementFragment_lambda$new$0_mindustry_game_EventType$WorldLoadEvent 54
+typedef void (*func_mindustry_ui_fragments_PlacementFragment_lambda$new$0_mindustry_game_EventType$WorldLoadEvent)(jcontext ctx, jobject self, jobject param0);
+#define VTABLE_mindustry_ui_fragments_PlacementFragment_lambda$new$1 55
+typedef void (*func_mindustry_ui_fragments_PlacementFragment_lambda$new$1)(jcontext ctx, jobject self);
+
+void mark_mindustry_ui_fragments_PlacementFragment(jobject object, jint mark, jint depth);
+void clinit_mindustry_ui_fragments_PlacementFragment(jcontext ctx);
+void init_mindustry_ui_fragments_PlacementFragment(jcontext ctx, jobject self);
+jobject M_mindustry_ui_fragments_PlacementFragment_hover_R_mindustry_ui_Displayable(jcontext ctx, jobject self);
+void M_mindustry_ui_fragments_PlacementFragment_rebuild(jcontext ctx, jobject self);
+jbool M_mindustry_ui_fragments_PlacementFragment_updatePick_mindustry_input_InputHandler_R_boolean(jcontext ctx, jobject self, jobject param0);
+jbool M_mindustry_ui_fragments_PlacementFragment_gridUpdate_mindustry_input_InputHandler_R_boolean(jcontext ctx, jobject self, jobject param0);
+void M_mindustry_ui_fragments_PlacementFragment_build_arc_scene_Group(jcontext ctx, jobject self, jobject param0);
+jobject M_mindustry_ui_fragments_PlacementFragment_getUnplaceableReason_mindustry_world_Block_R_java_lang_String(jcontext ctx, jobject self, jobject param0);
+jobject M_mindustry_ui_fragments_PlacementFragment_getCategories_R_arc_struct_Seq(jcontext ctx, jobject self);
+jobject M_mindustry_ui_fragments_PlacementFragment_getByCategory_mindustry_type_Category_R_arc_struct_Seq(jcontext ctx, jobject self, jobject param0);
+jobject M_mindustry_ui_fragments_PlacementFragment_getUnlockedByCategory_mindustry_type_Category_R_arc_struct_Seq(jcontext ctx, jobject self, jobject param0);
+jobject M_mindustry_ui_fragments_PlacementFragment_getSelectedBlock_mindustry_type_Category_R_mindustry_world_Block(jcontext ctx, jobject self, jobject param0);
+jbool M_mindustry_ui_fragments_PlacementFragment_unlocked_mindustry_world_Block_R_boolean(jcontext ctx, jobject self, jobject param0);
+jbool M_mindustry_ui_fragments_PlacementFragment_hasInfoBox_R_boolean(jcontext ctx, jobject self);
+jobject M_mindustry_ui_fragments_PlacementFragment_hovered_R_mindustry_ui_Displayable(jcontext ctx, jobject self);
+jbool SM_mindustry_ui_fragments_PlacementFragment_lambda$hovered$0_mindustry_gen_Unit_R_boolean(jcontext ctx, jobject param0);
+jobject M_mindustry_ui_fragments_PlacementFragment_lambda$getSelectedBlock$0_mindustry_type_Category_R_mindustry_world_Block(jcontext ctx, jobject self, jobject param0);
+jint SM_mindustry_ui_fragments_PlacementFragment_lambda$getUnlockedByCategory$1_mindustry_world_Block_mindustry_world_Block_R_int(jcontext ctx, jobject param0, jobject param1);
+jbool M_mindustry_ui_fragments_PlacementFragment_lambda$getUnlockedByCategory$0_mindustry_type_Category_mindustry_world_Block_R_boolean(jcontext ctx, jobject self, jobject param0, jobject param1);
+jbool SM_mindustry_ui_fragments_PlacementFragment_lambda$getByCategory$0_mindustry_type_Category_mindustry_world_Block_R_boolean(jcontext ctx, jobject param0, jobject param1);
+jint M_mindustry_ui_fragments_PlacementFragment_lambda$getCategories$0_mindustry_type_Category_mindustry_type_Category_R_int(jcontext ctx, jobject self, jobject param0, jobject param1);
+void M_mindustry_ui_fragments_PlacementFragment_lambda$build$0_arc_scene_ui_layout_Table(jcontext ctx, jobject self, jobject param0);
+void M_mindustry_ui_fragments_PlacementFragment_lambda$build$2_arc_scene_ui_layout_Table(jcontext ctx, jobject self, jobject param0);
+void M_mindustry_ui_fragments_PlacementFragment_lambda$build$55_java_lang_Runnable(jcontext ctx, jobject self, jobject param0);
+void M_mindustry_ui_fragments_PlacementFragment_lambda$build$52_java_lang_Runnable_arc_scene_ui_layout_Table(jcontext ctx, jobject self, jobject param0, jobject param1);
+void M_mindustry_ui_fragments_PlacementFragment_lambda$build$54_mindustry_type_Category_arc_scene_ui_ImageButton(jcontext ctx, jobject self, jobject param0, jobject param1);
+void M_mindustry_ui_fragments_PlacementFragment_lambda$build$53_mindustry_type_Category_java_lang_Runnable(jcontext ctx, jobject self, jobject param0, jobject param1);
+void M_mindustry_ui_fragments_PlacementFragment_lambda$build$48_arc_scene_ui_layout_Table(jcontext ctx, jobject self, jobject param0);
+void SM_mindustry_ui_fragments_PlacementFragment_lambda$build$51_arc_scene_ui_layout_Table(jcontext ctx, jobject param0);
+void SM_mindustry_ui_fragments_PlacementFragment_lambda$build$50_arc_scene_ui_ScrollPane(jcontext ctx, jobject param0);
+void M_mindustry_ui_fragments_PlacementFragment_lambda$build$49_arc_scene_ui_layout_Table(jcontext ctx, jobject self, jobject param0);
+void M_mindustry_ui_fragments_PlacementFragment_lambda$build$24_arc_scene_ui_layout_Table(jcontext ctx, jobject self, jobject param0);
+void M_mindustry_ui_fragments_PlacementFragment_lambda$build$43_Array2_int_arc_struct_Bits_arc_struct_Bits_arc_struct_Bits_arc_struct_Bits_arc_struct_Bits_arc_struct_Seq_arc_struct_Bits_arc_struct_Bits_arc_struct_Bits_arc_struct_Seq_arc_struct_Seq(jcontext ctx, jobject self, jobject param0, jobject param1, jobject param2, jobject param3, jobject param4, jobject param5, jobject param6, jobject param7, jobject param8, jobject param9, jobject param10, jobject param11);
+jbool SM_mindustry_ui_fragments_PlacementFragment_lambda$build$47_mindustry_ai_UnitCommand_mindustry_gen_Unit_R_boolean(jcontext ctx, jobject param0, jobject param1);
+jint SM_mindustry_ui_fragments_PlacementFragment_lambda$build$46_mindustry_gen_Unit_R_int(jcontext ctx, jobject param0);
+jbool SM_mindustry_ui_fragments_PlacementFragment_lambda$build$45_mindustry_ai_UnitStance_mindustry_gen_Unit_R_boolean(jcontext ctx, jobject param0, jobject param1);
+jint SM_mindustry_ui_fragments_PlacementFragment_lambda$build$44_mindustry_gen_Unit_R_int(jcontext ctx, jobject param0);
+void SM_mindustry_ui_fragments_PlacementFragment_lambda$build$25_Array2_int_arc_scene_ui_layout_Table_arc_struct_Bits_arc_struct_Bits_arc_struct_Seq_arc_struct_Seq_arc_struct_Seq_arc_struct_Bits_arc_struct_Bits(jcontext ctx, jobject param0, jobject param1, jobject param2, jobject param3, jobject param4, jobject param5, jobject param6, jobject param7, jobject param8);
+void SM_mindustry_ui_fragments_PlacementFragment_lambda$build$38_arc_struct_Seq_arc_struct_Seq_arc_struct_Bits_arc_scene_ui_layout_Table(jcontext ctx, jobject param0, jobject param1, jobject param2, jobject param3);
+jbool SM_mindustry_ui_fragments_PlacementFragment_lambda$build$42_arc_struct_Bits_mindustry_ai_UnitStance_arc_scene_ui_ImageButton_R_boolean(jcontext ctx, jobject param0, jobject param1, jobject param2);
+void SM_mindustry_ui_fragments_PlacementFragment_lambda$build$39_arc_struct_Seq_mindustry_ai_UnitStance_arc_struct_Bits(jcontext ctx, jobject param0, jobject param1, jobject param2);
+jbool SM_mindustry_ui_fragments_PlacementFragment_lambda$build$41_mindustry_ai_UnitStance_mindustry_gen_Unit_R_boolean(jcontext ctx, jobject param0, jobject param1);
+jint SM_mindustry_ui_fragments_PlacementFragment_lambda$build$40_mindustry_gen_Unit_R_int(jcontext ctx, jobject param0);
+void SM_mindustry_ui_fragments_PlacementFragment_lambda$build$33_arc_struct_Seq_arc_struct_Seq_arc_struct_Bits_arc_scene_ui_layout_Table(jcontext ctx, jobject param0, jobject param1, jobject param2, jobject param3);
+jbool SM_mindustry_ui_fragments_PlacementFragment_lambda$build$37_arc_struct_Bits_mindustry_ai_UnitCommand_arc_scene_ui_ImageButton_R_boolean(jcontext ctx, jobject param0, jobject param1, jobject param2);
+void SM_mindustry_ui_fragments_PlacementFragment_lambda$build$34_arc_struct_Seq_mindustry_ai_UnitCommand(jcontext ctx, jobject param0, jobject param1);
+jbool SM_mindustry_ui_fragments_PlacementFragment_lambda$build$36_mindustry_ai_UnitCommand_mindustry_gen_Unit_R_boolean(jcontext ctx, jobject param0, jobject param1);
+jint SM_mindustry_ui_fragments_PlacementFragment_lambda$build$35_mindustry_gen_Unit_R_int(jcontext ctx, jobject param0);
+void SM_mindustry_ui_fragments_PlacementFragment_lambda$build$26_mindustry_type_UnitType_Array1_int_int_arc_scene_ui_layout_Stack(jcontext ctx, jobject param0, jobject param1, jint param2, jobject param3);
+void SM_mindustry_ui_fragments_PlacementFragment_lambda$build$32_arc_scene_ui_layout_Stack_arc_scene_event_ClickListener(jcontext ctx, jobject param0, jobject param1);
+void SM_mindustry_ui_fragments_PlacementFragment_lambda$build$30_mindustry_type_UnitType(jcontext ctx, jobject param0);
+jbool SM_mindustry_ui_fragments_PlacementFragment_lambda$build$31_mindustry_type_UnitType_mindustry_gen_Unit_R_boolean(jcontext ctx, jobject param0, jobject param1);
+void SM_mindustry_ui_fragments_PlacementFragment_lambda$build$28_mindustry_type_UnitType(jcontext ctx, jobject param0);
+jbool SM_mindustry_ui_fragments_PlacementFragment_lambda$build$29_mindustry_type_UnitType_mindustry_gen_Unit_R_boolean(jcontext ctx, jobject param0, jobject param1);
+jobject SM_mindustry_ui_fragments_PlacementFragment_lambda$build$27_Array1_int_int_R_java_lang_CharSequence(jcontext ctx, jobject param0, jint param1);
+void SM_mindustry_ui_fragments_PlacementFragment_lambda$build$23_float_float_float_float(jcontext ctx, jfloat param0, jfloat param1, jfloat param2, jfloat param3);
+void M_mindustry_ui_fragments_PlacementFragment_lambda$build$22(jcontext ctx, jobject self);
+void M_mindustry_ui_fragments_PlacementFragment_lambda$build$11_arc_scene_ui_layout_Table(jcontext ctx, jobject self, jobject param0);
+void M_mindustry_ui_fragments_PlacementFragment_lambda$build$12_arc_scene_ui_layout_Table(jcontext ctx, jobject self, jobject param0);
+jbool M_mindustry_ui_fragments_PlacementFragment_lambda$build$21_mindustry_world_Block_R_boolean(jcontext ctx, jobject self, jobject param0);
+void M_mindustry_ui_fragments_PlacementFragment_lambda$build$19_mindustry_world_Block_arc_scene_ui_layout_Table(jcontext ctx, jobject self, jobject param0, jobject param1);
+jobject M_mindustry_ui_fragments_PlacementFragment_lambda$build$20_mindustry_world_Block_R_java_lang_CharSequence(jcontext ctx, jobject self, jobject param0);
+void SM_mindustry_ui_fragments_PlacementFragment_lambda$build$16_mindustry_world_Block_arc_scene_ui_layout_Table(jcontext ctx, jobject param0, jobject param1);
+void SM_mindustry_ui_fragments_PlacementFragment_lambda$build$17_mindustry_type_ItemStack_arc_scene_ui_layout_Table(jcontext ctx, jobject param0, jobject param1);
+jobject SM_mindustry_ui_fragments_PlacementFragment_lambda$build$18_mindustry_type_ItemStack_R_java_lang_CharSequence(jcontext ctx, jobject param0);
+void M_mindustry_ui_fragments_PlacementFragment_lambda$build$13_mindustry_world_Block_arc_scene_ui_layout_Table(jcontext ctx, jobject self, jobject param0, jobject param1);
+void SM_mindustry_ui_fragments_PlacementFragment_lambda$build$15_mindustry_world_Block(jcontext ctx, jobject param0);
+jobject M_mindustry_ui_fragments_PlacementFragment_lambda$build$14_mindustry_world_Block_java_lang_String_R_java_lang_CharSequence(jcontext ctx, jobject self, jobject param0, jobject param1);
+void M_mindustry_ui_fragments_PlacementFragment_lambda$build$3(jcontext ctx, jobject self);
+void M_mindustry_ui_fragments_PlacementFragment_lambda$build$10(jcontext ctx, jobject self);
+void M_mindustry_ui_fragments_PlacementFragment_lambda$build$9_mindustry_world_Block(jcontext ctx, jobject self, jobject param0);
+void M_mindustry_ui_fragments_PlacementFragment_lambda$build$8_mindustry_world_Block(jcontext ctx, jobject self, jobject param0);
+void SM_mindustry_ui_fragments_PlacementFragment_lambda$build$5_mindustry_world_Block_arc_scene_ui_ImageButton(jcontext ctx, jobject param0, jobject param1);
+void SM_mindustry_ui_fragments_PlacementFragment_lambda$build$7_arc_scene_Element(jcontext ctx, jobject param0);
+void SM_mindustry_ui_fragments_PlacementFragment_lambda$build$6_arc_graphics_Color_arc_scene_Element(jcontext ctx, jobject param0, jobject param1);
+void M_mindustry_ui_fragments_PlacementFragment_lambda$build$4_mindustry_world_Block(jcontext ctx, jobject self, jobject param0);
+jbool SM_mindustry_ui_fragments_PlacementFragment_lambda$build$1_R_boolean(jcontext ctx);
+void M_mindustry_ui_fragments_PlacementFragment_lambda$new$5(jcontext ctx, jobject self);
+void M_mindustry_ui_fragments_PlacementFragment_lambda$new$4_mindustry_game_EventType$ResetEvent(jcontext ctx, jobject self, jobject param0);
+void M_mindustry_ui_fragments_PlacementFragment_lambda$new$3_mindustry_game_EventType$UnlockEvent(jcontext ctx, jobject self, jobject param0);
+void M_mindustry_ui_fragments_PlacementFragment_lambda$new$2(jcontext ctx, jobject self);
+void M_mindustry_ui_fragments_PlacementFragment_lambda$new$0_mindustry_game_EventType$WorldLoadEvent(jcontext ctx, jobject self, jobject param0);
+void M_mindustry_ui_fragments_PlacementFragment_lambda$new$1(jcontext ctx, jobject self);
+
+#ifdef __cplusplus
+}
+#endif
+
+#endif

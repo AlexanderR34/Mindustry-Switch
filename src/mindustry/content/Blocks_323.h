@@ -1,0 +1,417 @@
+#ifndef HEADER_mindustry_content_Blocks$323
+#define HEADER_mindustry_content_Blocks$323
+
+#include "Clearwing.h"
+#include "mindustry/world/blocks/units/UnitFactory.h"
+
+#ifdef __cplusplus
+extern "C" {
+#endif
+
+typedef struct mindustry_content_Blocks$323 {
+	mindustry_world_blocks_units_UnitFactory parent;
+} mindustry_content_Blocks$323;
+
+extern Class class_mindustry_content_Blocks$323;
+
+
+#define VTABLE_mindustry_content_Blocks$323_hashCode_R_int 0
+typedef jint (*func_mindustry_content_Blocks$323_hashCode_R_int)(jcontext ctx, jobject self);
+#define VTABLE_mindustry_content_Blocks$323_equals_java_lang_Object_R_boolean 1
+typedef jbool (*func_mindustry_content_Blocks$323_equals_java_lang_Object_R_boolean)(jcontext ctx, jobject self, jobject param0);
+#define VTABLE_mindustry_content_Blocks$323_clone_R_java_lang_Object 2
+typedef jobject (*func_mindustry_content_Blocks$323_clone_R_java_lang_Object)(jcontext ctx, jobject self);
+#define VTABLE_mindustry_content_Blocks$323_getClass_R_java_lang_Class 3
+typedef jobject (*func_mindustry_content_Blocks$323_getClass_R_java_lang_Class)(jcontext ctx, jobject self);
+#define VTABLE_mindustry_content_Blocks$323_toString_R_java_lang_String 4
+typedef jobject (*func_mindustry_content_Blocks$323_toString_R_java_lang_String)(jcontext ctx, jobject self);
+#define VTABLE_mindustry_content_Blocks$323_finalize 5
+typedef void (*func_mindustry_content_Blocks$323_finalize)(jcontext ctx, jobject self);
+#define VTABLE_mindustry_content_Blocks$323_notify 6
+typedef void (*func_mindustry_content_Blocks$323_notify)(jcontext ctx, jobject self);
+#define VTABLE_mindustry_content_Blocks$323_notifyAll 7
+typedef void (*func_mindustry_content_Blocks$323_notifyAll)(jcontext ctx, jobject self);
+#define VTABLE_mindustry_content_Blocks$323_wait 8
+typedef void (*func_mindustry_content_Blocks$323_wait)(jcontext ctx, jobject self);
+#define VTABLE_mindustry_content_Blocks$323_wait_long 9
+typedef void (*func_mindustry_content_Blocks$323_wait_long)(jcontext ctx, jobject self, jlong param0);
+#define VTABLE_mindustry_content_Blocks$323_wait_long_int 10
+typedef void (*func_mindustry_content_Blocks$323_wait_long_int)(jcontext ctx, jobject self, jlong param0, jint param1);
+#define VTABLE_mindustry_content_Blocks$323_compareTo_java_lang_Object_R_int 11
+typedef jint (*func_mindustry_content_Blocks$323_compareTo_java_lang_Object_R_int)(jcontext ctx, jobject self, jobject param0);
+#define VTABLE_mindustry_content_Blocks$323_getContentType_R_mindustry_ctype_ContentType 12
+typedef jobject (*func_mindustry_content_Blocks$323_getContentType_R_mindustry_ctype_ContentType)(jcontext ctx, jobject self);
+#define VTABLE_mindustry_content_Blocks$323_removeContent 13
+typedef void (*func_mindustry_content_Blocks$323_removeContent)(jcontext ctx, jobject self);
+#define VTABLE_mindustry_content_Blocks$323_init 14
+typedef void (*func_mindustry_content_Blocks$323_init)(jcontext ctx, jobject self);
+#define VTABLE_mindustry_content_Blocks$323_postInit 15
+typedef void (*func_mindustry_content_Blocks$323_postInit)(jcontext ctx, jobject self);
+#define VTABLE_mindustry_content_Blocks$323_afterPatch 16
+typedef void (*func_mindustry_content_Blocks$323_afterPatch)(jcontext ctx, jobject self);
+#define VTABLE_mindustry_content_Blocks$323_load 17
+typedef void (*func_mindustry_content_Blocks$323_load)(jcontext ctx, jobject self);
+#define VTABLE_mindustry_content_Blocks$323_loadIcon 18
+typedef void (*func_mindustry_content_Blocks$323_loadIcon)(jcontext ctx, jobject self);
+#define VTABLE_mindustry_content_Blocks$323_hasErrored_R_boolean 19
+typedef jbool (*func_mindustry_content_Blocks$323_hasErrored_R_boolean)(jcontext ctx, jobject self);
+#define VTABLE_mindustry_content_Blocks$323_isVanilla_R_boolean 20
+typedef jbool (*func_mindustry_content_Blocks$323_isVanilla_R_boolean)(jcontext ctx, jobject self);
+#define VTABLE_mindustry_content_Blocks$323_isModded_R_boolean 21
+typedef jbool (*func_mindustry_content_Blocks$323_isModded_R_boolean)(jcontext ctx, jobject self);
+#define VTABLE_mindustry_content_Blocks$323_isPatchContent_R_boolean 22
+typedef jbool (*func_mindustry_content_Blocks$323_isPatchContent_R_boolean)(jcontext ctx, jobject self);
+#define VTABLE_mindustry_content_Blocks$323_compareTo_mindustry_ctype_Content_R_int 23
+typedef jint (*func_mindustry_content_Blocks$323_compareTo_mindustry_ctype_Content_R_int)(jcontext ctx, jobject self, jobject param0);
+#define VTABLE_mindustry_content_Blocks$323_isBanned_R_boolean 24
+typedef jbool (*func_mindustry_content_Blocks$323_isBanned_R_boolean)(jcontext ctx, jobject self);
+#define VTABLE_mindustry_content_Blocks$323_isOnPlanet_mindustry_type_Planet_R_boolean 25
+typedef jbool (*func_mindustry_content_Blocks$323_isOnPlanet_mindustry_type_Planet_R_boolean)(jcontext ctx, jobject self, jobject param0);
+#define VTABLE_mindustry_content_Blocks$323_getLogicId_R_int 26
+typedef jint (*func_mindustry_content_Blocks$323_getLogicId_R_int)(jcontext ctx, jobject self);
+#define VTABLE_mindustry_content_Blocks$323_displayDescription_R_java_lang_String 27
+typedef jobject (*func_mindustry_content_Blocks$323_displayDescription_R_java_lang_String)(jcontext ctx, jobject self);
+#define VTABLE_mindustry_content_Blocks$323_checkStats 28
+typedef void (*func_mindustry_content_Blocks$323_checkStats)(jcontext ctx, jobject self);
+#define VTABLE_mindustry_content_Blocks$323_setStats 29
+typedef void (*func_mindustry_content_Blocks$323_setStats)(jcontext ctx, jobject self);
+#define VTABLE_mindustry_content_Blocks$323_computeStats_R_mindustry_world_meta_Stats 30
+typedef jobject (*func_mindustry_content_Blocks$323_computeStats_R_mindustry_world_meta_Stats)(jcontext ctx, jobject self);
+#define VTABLE_mindustry_content_Blocks$323_displayExtra_arc_scene_ui_layout_Table 31
+typedef void (*func_mindustry_content_Blocks$323_displayExtra_arc_scene_ui_layout_Table)(jcontext ctx, jobject self, jobject param0);
+#define VTABLE_mindustry_content_Blocks$323_createIcons_mindustry_graphics_MultiPacker 32
+typedef void (*func_mindustry_content_Blocks$323_createIcons_mindustry_graphics_MultiPacker)(jcontext ctx, jobject self, jobject param0);
+#define VTABLE_mindustry_content_Blocks$323_makeOutline_mindustry_graphics_MultiPacker$PageType_mindustry_graphics_MultiPacker_arc_graphics_g2d_TextureRegion_boolean_arc_graphics_Color_int 33
+typedef void (*func_mindustry_content_Blocks$323_makeOutline_mindustry_graphics_MultiPacker$PageType_mindustry_graphics_MultiPacker_arc_graphics_g2d_TextureRegion_boolean_arc_graphics_Color_int)(jcontext ctx, jobject self, jobject param0, jobject param1, jobject param2, jbool param3, jobject param4, jint param5);
+#define VTABLE_mindustry_content_Blocks$323_makeOutline_mindustry_graphics_MultiPacker$PageType_mindustry_graphics_MultiPacker_arc_graphics_g2d_TextureRegion_boolean_arc_graphics_Color_int_int 34
+typedef void (*func_mindustry_content_Blocks$323_makeOutline_mindustry_graphics_MultiPacker$PageType_mindustry_graphics_MultiPacker_arc_graphics_g2d_TextureRegion_boolean_arc_graphics_Color_int_int)(jcontext ctx, jobject self, jobject param0, jobject param1, jobject param2, jbool param3, jobject param4, jint param5, jint param6);
+#define VTABLE_mindustry_content_Blocks$323_makeOutline_mindustry_graphics_MultiPacker_arc_graphics_g2d_TextureRegion_java_lang_String_arc_graphics_Color_int 35
+typedef void (*func_mindustry_content_Blocks$323_makeOutline_mindustry_graphics_MultiPacker_arc_graphics_g2d_TextureRegion_java_lang_String_arc_graphics_Color_int)(jcontext ctx, jobject self, jobject param0, jobject param1, jobject param2, jobject param3, jint param4);
+#define VTABLE_mindustry_content_Blocks$323_makeOutline_mindustry_graphics_MultiPacker_arc_graphics_g2d_TextureRegion_java_lang_String_arc_graphics_Color 36
+typedef void (*func_mindustry_content_Blocks$323_makeOutline_mindustry_graphics_MultiPacker_arc_graphics_g2d_TextureRegion_java_lang_String_arc_graphics_Color)(jcontext ctx, jobject self, jobject param0, jobject param1, jobject param2, jobject param3);
+#define VTABLE_mindustry_content_Blocks$323_researchRequirements_R_Array1_mindustry_type_ItemStack 37
+typedef jobject (*func_mindustry_content_Blocks$323_researchRequirements_R_Array1_mindustry_type_ItemStack)(jcontext ctx, jobject self);
+#define VTABLE_mindustry_content_Blocks$323_emoji_R_java_lang_String 38
+typedef jobject (*func_mindustry_content_Blocks$323_emoji_R_java_lang_String)(jcontext ctx, jobject self);
+#define VTABLE_mindustry_content_Blocks$323_emojiChar_R_int 39
+typedef jint (*func_mindustry_content_Blocks$323_emojiChar_R_int)(jcontext ctx, jobject self);
+#define VTABLE_mindustry_content_Blocks$323_hasEmoji_R_boolean 40
+typedef jbool (*func_mindustry_content_Blocks$323_hasEmoji_R_boolean)(jcontext ctx, jobject self);
+#define VTABLE_mindustry_content_Blocks$323_getDependencies_arc_func_Cons 41
+typedef void (*func_mindustry_content_Blocks$323_getDependencies_arc_func_Cons)(jcontext ctx, jobject self, jobject param0);
+#define VTABLE_mindustry_content_Blocks$323_onUnlock 42
+typedef void (*func_mindustry_content_Blocks$323_onUnlock)(jcontext ctx, jobject self);
+#define VTABLE_mindustry_content_Blocks$323_isHidden_R_boolean 43
+typedef jbool (*func_mindustry_content_Blocks$323_isHidden_R_boolean)(jcontext ctx, jobject self);
+#define VTABLE_mindustry_content_Blocks$323_showUnlock_R_boolean 44
+typedef jbool (*func_mindustry_content_Blocks$323_showUnlock_R_boolean)(jcontext ctx, jobject self);
+#define VTABLE_mindustry_content_Blocks$323_logicVisible_R_boolean 45
+typedef jbool (*func_mindustry_content_Blocks$323_logicVisible_R_boolean)(jcontext ctx, jobject self);
+#define VTABLE_mindustry_content_Blocks$323_unlock 46
+typedef void (*func_mindustry_content_Blocks$323_unlock)(jcontext ctx, jobject self);
+#define VTABLE_mindustry_content_Blocks$323_quietUnlock 47
+typedef void (*func_mindustry_content_Blocks$323_quietUnlock)(jcontext ctx, jobject self);
+#define VTABLE_mindustry_content_Blocks$323_unlockedNowHost_R_boolean 48
+typedef jbool (*func_mindustry_content_Blocks$323_unlockedNowHost_R_boolean)(jcontext ctx, jobject self);
+#define VTABLE_mindustry_content_Blocks$323_unlockedHost_R_boolean 49
+typedef jbool (*func_mindustry_content_Blocks$323_unlockedHost_R_boolean)(jcontext ctx, jobject self);
+#define VTABLE_mindustry_content_Blocks$323_unlockedNow_R_boolean 50
+typedef jbool (*func_mindustry_content_Blocks$323_unlockedNow_R_boolean)(jcontext ctx, jobject self);
+#define VTABLE_mindustry_content_Blocks$323_unlocked_R_boolean 51
+typedef jbool (*func_mindustry_content_Blocks$323_unlocked_R_boolean)(jcontext ctx, jobject self);
+#define VTABLE_mindustry_content_Blocks$323_clearUnlock 52
+typedef void (*func_mindustry_content_Blocks$323_clearUnlock)(jcontext ctx, jobject self);
+#define VTABLE_mindustry_content_Blocks$323_locked_R_boolean 53
+typedef jbool (*func_mindustry_content_Blocks$323_locked_R_boolean)(jcontext ctx, jobject self);
+#define VTABLE_mindustry_content_Blocks$323_sense_mindustry_logic_LAccess_R_double 54
+typedef jdouble (*func_mindustry_content_Blocks$323_sense_mindustry_logic_LAccess_R_double)(jcontext ctx, jobject self, jobject param0);
+#define VTABLE_mindustry_content_Blocks$323_sense_mindustry_ctype_Content_R_double 55
+typedef jdouble (*func_mindustry_content_Blocks$323_sense_mindustry_ctype_Content_R_double)(jcontext ctx, jobject self, jobject param0);
+#define VTABLE_mindustry_content_Blocks$323_senseObject_mindustry_logic_LAccess_R_java_lang_Object 56
+typedef jobject (*func_mindustry_content_Blocks$323_senseObject_mindustry_logic_LAccess_R_java_lang_Object)(jcontext ctx, jobject self, jobject param0);
+#define VTABLE_mindustry_content_Blocks$323_drawBase_mindustry_world_Tile 57
+typedef void (*func_mindustry_content_Blocks$323_drawBase_mindustry_world_Tile)(jcontext ctx, jobject self, jobject param0);
+#define VTABLE_mindustry_content_Blocks$323_drawBaseCached_mindustry_world_Tile 58
+typedef void (*func_mindustry_content_Blocks$323_drawBaseCached_mindustry_world_Tile)(jcontext ctx, jobject self, jobject param0);
+#define VTABLE_mindustry_content_Blocks$323_drawShadow_mindustry_world_Tile 59
+typedef void (*func_mindustry_content_Blocks$323_drawShadow_mindustry_world_Tile)(jcontext ctx, jobject self, jobject param0);
+#define VTABLE_mindustry_content_Blocks$323_percentSolid_int_int_R_float 60
+typedef jfloat (*func_mindustry_content_Blocks$323_percentSolid_int_int_R_float)(jcontext ctx, jobject self, jint param0, jint param1);
+#define VTABLE_mindustry_content_Blocks$323_drawEnvironmentLight_mindustry_world_Tile 61
+typedef void (*func_mindustry_content_Blocks$323_drawEnvironmentLight_mindustry_world_Tile)(jcontext ctx, jobject self, jobject param0);
+#define VTABLE_mindustry_content_Blocks$323_drawPlace_int_int_int_boolean 62
+typedef void (*func_mindustry_content_Blocks$323_drawPlace_int_int_int_boolean)(jcontext ctx, jobject self, jint param0, jint param1, jint param2, jbool param3);
+#define VTABLE_mindustry_content_Blocks$323_drawSideRegion_arc_graphics_g2d_TextureRegion_float_float_int 63
+typedef void (*func_mindustry_content_Blocks$323_drawSideRegion_arc_graphics_g2d_TextureRegion_float_float_int)(jcontext ctx, jobject self, jobject param0, jfloat param1, jfloat param2, jint param3);
+#define VTABLE_mindustry_content_Blocks$323_drawPotentialLinks_int_int 64
+typedef void (*func_mindustry_content_Blocks$323_drawPotentialLinks_int_int)(jcontext ctx, jobject self, jint param0, jint param1);
+#define VTABLE_mindustry_content_Blocks$323_drawPlaceText_java_lang_String_int_int_boolean_R_float 65
+typedef jfloat (*func_mindustry_content_Blocks$323_drawPlaceText_java_lang_String_int_int_boolean_R_float)(jcontext ctx, jobject self, jobject param0, jint param1, jint param2, jbool param3);
+#define VTABLE_mindustry_content_Blocks$323_drawPlaceText_java_lang_String_int_int_arc_graphics_Color_boolean_R_float 66
+typedef jfloat (*func_mindustry_content_Blocks$323_drawPlaceText_java_lang_String_int_int_arc_graphics_Color_boolean_R_float)(jcontext ctx, jobject self, jobject param0, jint param1, jint param2, jobject param3, jbool param4);
+#define VTABLE_mindustry_content_Blocks$323_drawOverlay_float_float_int 67
+typedef void (*func_mindustry_content_Blocks$323_drawOverlay_float_float_int)(jcontext ctx, jobject self, jfloat param0, jfloat param1, jint param2);
+#define VTABLE_mindustry_content_Blocks$323_displayShadow_mindustry_world_Tile_R_boolean 68
+typedef jbool (*func_mindustry_content_Blocks$323_displayShadow_mindustry_world_Tile_R_boolean)(jcontext ctx, jobject self, jobject param0);
+#define VTABLE_mindustry_content_Blocks$323_sumAttribute_mindustry_world_meta_Attribute_int_int_R_float 69
+typedef jfloat (*func_mindustry_content_Blocks$323_sumAttribute_mindustry_world_meta_Attribute_int_int_R_float)(jcontext ctx, jobject self, jobject param0, jint param1, jint param2);
+#define VTABLE_mindustry_content_Blocks$323_getDisplayIcon_mindustry_world_Tile_R_arc_graphics_g2d_TextureRegion 70
+typedef jobject (*func_mindustry_content_Blocks$323_getDisplayIcon_mindustry_world_Tile_R_arc_graphics_g2d_TextureRegion)(jcontext ctx, jobject self, jobject param0);
+#define VTABLE_mindustry_content_Blocks$323_getDisplayName_mindustry_world_Tile_R_java_lang_String 71
+typedef jobject (*func_mindustry_content_Blocks$323_getDisplayName_mindustry_world_Tile_R_java_lang_String)(jcontext ctx, jobject self, jobject param0);
+#define VTABLE_mindustry_content_Blocks$323_minimapColor_mindustry_world_Tile_R_int 72
+typedef jint (*func_mindustry_content_Blocks$323_minimapColor_mindustry_world_Tile_R_int)(jcontext ctx, jobject self, jobject param0);
+#define VTABLE_mindustry_content_Blocks$323_getColor_mindustry_world_Tile_R_arc_graphics_Color 73
+typedef jobject (*func_mindustry_content_Blocks$323_getColor_mindustry_world_Tile_R_arc_graphics_Color)(jcontext ctx, jobject self, jobject param0);
+#define VTABLE_mindustry_content_Blocks$323_outputsItems_R_boolean 74
+typedef jbool (*func_mindustry_content_Blocks$323_outputsItems_R_boolean)(jcontext ctx, jobject self);
+#define VTABLE_mindustry_content_Blocks$323_canPlaceOn_mindustry_world_Tile_mindustry_game_Team_int_R_boolean 75
+typedef jbool (*func_mindustry_content_Blocks$323_canPlaceOn_mindustry_world_Tile_mindustry_game_Team_int_R_boolean)(jcontext ctx, jobject self, jobject param0, jobject param1, jint param2);
+#define VTABLE_mindustry_content_Blocks$323_canBreak_mindustry_world_Tile_R_boolean 76
+typedef jbool (*func_mindustry_content_Blocks$323_canBreak_mindustry_world_Tile_R_boolean)(jcontext ctx, jobject self, jobject param0);
+#define VTABLE_mindustry_content_Blocks$323_rotatedOutput_int_int_R_boolean 77
+typedef jbool (*func_mindustry_content_Blocks$323_rotatedOutput_int_int_R_boolean)(jcontext ctx, jobject self, jint param0, jint param1);
+#define VTABLE_mindustry_content_Blocks$323_rotatedOutput_int_int_mindustry_world_Tile_R_boolean 78
+typedef jbool (*func_mindustry_content_Blocks$323_rotatedOutput_int_int_mindustry_world_Tile_R_boolean)(jcontext ctx, jobject self, jint param0, jint param1, jobject param2);
+#define VTABLE_mindustry_content_Blocks$323_synthetic_R_boolean 79
+typedef jbool (*func_mindustry_content_Blocks$323_synthetic_R_boolean)(jcontext ctx, jobject self);
+#define VTABLE_mindustry_content_Blocks$323_checkForceDark_mindustry_world_Tile_R_boolean 80
+typedef jbool (*func_mindustry_content_Blocks$323_checkForceDark_mindustry_world_Tile_R_boolean)(jcontext ctx, jobject self, jobject param0);
+#define VTABLE_mindustry_content_Blocks$323_isDarkened_mindustry_world_Tile_R_boolean 81
+typedef jbool (*func_mindustry_content_Blocks$323_isDarkened_mindustry_world_Tile_R_boolean)(jcontext ctx, jobject self, jobject param0);
+#define VTABLE_mindustry_content_Blocks$323_addBar_java_lang_String_arc_func_Func 82
+typedef void (*func_mindustry_content_Blocks$323_addBar_java_lang_String_arc_func_Func)(jcontext ctx, jobject self, jobject param0, jobject param1);
+#define VTABLE_mindustry_content_Blocks$323_removeBar_java_lang_String 83
+typedef void (*func_mindustry_content_Blocks$323_removeBar_java_lang_String)(jcontext ctx, jobject self, jobject param0);
+#define VTABLE_mindustry_content_Blocks$323_listBars_R_java_lang_Iterable 84
+typedef jobject (*func_mindustry_content_Blocks$323_listBars_R_java_lang_Iterable)(jcontext ctx, jobject self);
+#define VTABLE_mindustry_content_Blocks$323_addLiquidBar_mindustry_type_Liquid 85
+typedef void (*func_mindustry_content_Blocks$323_addLiquidBar_mindustry_type_Liquid)(jcontext ctx, jobject self, jobject param0);
+#define VTABLE_mindustry_content_Blocks$323_addLiquidBar_arc_func_Func 86
+typedef void (*func_mindustry_content_Blocks$323_addLiquidBar_arc_func_Func)(jcontext ctx, jobject self, jobject param0);
+#define VTABLE_mindustry_content_Blocks$323_setBars 87
+typedef void (*func_mindustry_content_Blocks$323_setBars)(jcontext ctx, jobject self);
+#define VTABLE_mindustry_content_Blocks$323_consumesItem_mindustry_type_Item_R_boolean 88
+typedef jbool (*func_mindustry_content_Blocks$323_consumesItem_mindustry_type_Item_R_boolean)(jcontext ctx, jobject self, jobject param0);
+#define VTABLE_mindustry_content_Blocks$323_consumesLiquid_mindustry_type_Liquid_R_boolean 89
+typedef jbool (*func_mindustry_content_Blocks$323_consumesLiquid_mindustry_type_Liquid_R_boolean)(jcontext ctx, jobject self, jobject param0);
+#define VTABLE_mindustry_content_Blocks$323_canReplace_mindustry_world_Block_R_boolean 90
+typedef jbool (*func_mindustry_content_Blocks$323_canReplace_mindustry_world_Block_R_boolean)(jcontext ctx, jobject self, jobject param0);
+#define VTABLE_mindustry_content_Blocks$323_getReplacement_mindustry_entities_units_BuildPlan_arc_struct_Seq_R_mindustry_world_Block 91
+typedef jobject (*func_mindustry_content_Blocks$323_getReplacement_mindustry_entities_units_BuildPlan_arc_struct_Seq_R_mindustry_world_Block)(jcontext ctx, jobject self, jobject param0, jobject param1);
+#define VTABLE_mindustry_content_Blocks$323_changePlacementPath_arc_struct_Seq_int_boolean 92
+typedef void (*func_mindustry_content_Blocks$323_changePlacementPath_arc_struct_Seq_int_boolean)(jcontext ctx, jobject self, jobject param0, jint param1, jbool param2);
+#define VTABLE_mindustry_content_Blocks$323_changePlacementPath_arc_struct_Seq_int 93
+typedef void (*func_mindustry_content_Blocks$323_changePlacementPath_arc_struct_Seq_int)(jcontext ctx, jobject self, jobject param0, jint param1);
+#define VTABLE_mindustry_content_Blocks$323_handlePlacementLine_arc_struct_Seq 94
+typedef void (*func_mindustry_content_Blocks$323_handlePlacementLine_arc_struct_Seq)(jcontext ctx, jobject self, jobject param0);
+#define VTABLE_mindustry_content_Blocks$323_configSenseable_R_boolean 95
+typedef jbool (*func_mindustry_content_Blocks$323_configSenseable_R_boolean)(jcontext ctx, jobject self);
+#define VTABLE_mindustry_content_Blocks$323_nextConfig_R_java_lang_Object 96
+typedef jobject (*func_mindustry_content_Blocks$323_nextConfig_R_java_lang_Object)(jcontext ctx, jobject self);
+#define VTABLE_mindustry_content_Blocks$323_onNewPlan_mindustry_entities_units_BuildPlan 97
+typedef void (*func_mindustry_content_Blocks$323_onNewPlan_mindustry_entities_units_BuildPlan)(jcontext ctx, jobject self, jobject param0);
+#define VTABLE_mindustry_content_Blocks$323_drawPlan_mindustry_entities_units_BuildPlan_arc_util_Eachable_boolean 98
+typedef void (*func_mindustry_content_Blocks$323_drawPlan_mindustry_entities_units_BuildPlan_arc_util_Eachable_boolean)(jcontext ctx, jobject self, jobject param0, jobject param1, jbool param2);
+#define VTABLE_mindustry_content_Blocks$323_drawPlan_mindustry_entities_units_BuildPlan_arc_util_Eachable_boolean_float 99
+typedef void (*func_mindustry_content_Blocks$323_drawPlan_mindustry_entities_units_BuildPlan_arc_util_Eachable_boolean_float)(jcontext ctx, jobject self, jobject param0, jobject param1, jbool param2, jfloat param3);
+#define VTABLE_mindustry_content_Blocks$323_drawOtherPlayerPlan_mindustry_entities_units_BuildPlan_arc_util_Eachable_float 100
+typedef void (*func_mindustry_content_Blocks$323_drawOtherPlayerPlan_mindustry_entities_units_BuildPlan_arc_util_Eachable_float)(jcontext ctx, jobject self, jobject param0, jobject param1, jfloat param2);
+#define VTABLE_mindustry_content_Blocks$323_drawPlanRegion_mindustry_entities_units_BuildPlan_arc_util_Eachable 101
+typedef void (*func_mindustry_content_Blocks$323_drawPlanRegion_mindustry_entities_units_BuildPlan_arc_util_Eachable)(jcontext ctx, jobject self, jobject param0, jobject param1);
+#define VTABLE_mindustry_content_Blocks$323_drawDefaultPlanRegion_mindustry_entities_units_BuildPlan_arc_util_Eachable 102
+typedef void (*func_mindustry_content_Blocks$323_drawDefaultPlanRegion_mindustry_entities_units_BuildPlan_arc_util_Eachable)(jcontext ctx, jobject self, jobject param0, jobject param1);
+#define VTABLE_mindustry_content_Blocks$323_getPlanRegion_mindustry_entities_units_BuildPlan_arc_util_Eachable_R_arc_graphics_g2d_TextureRegion 103
+typedef jobject (*func_mindustry_content_Blocks$323_getPlanRegion_mindustry_entities_units_BuildPlan_arc_util_Eachable_R_arc_graphics_g2d_TextureRegion)(jcontext ctx, jobject self, jobject param0, jobject param1);
+#define VTABLE_mindustry_content_Blocks$323_drawPlanConfig_mindustry_entities_units_BuildPlan_arc_util_Eachable 104
+typedef void (*func_mindustry_content_Blocks$323_drawPlanConfig_mindustry_entities_units_BuildPlan_arc_util_Eachable)(jcontext ctx, jobject self, jobject param0, jobject param1);
+#define VTABLE_mindustry_content_Blocks$323_drawPlanConfigCenter_mindustry_entities_units_BuildPlan_java_lang_Object_java_lang_String_boolean 105
+typedef void (*func_mindustry_content_Blocks$323_drawPlanConfigCenter_mindustry_entities_units_BuildPlan_java_lang_Object_java_lang_String_boolean)(jcontext ctx, jobject self, jobject param0, jobject param1, jobject param2, jbool param3);
+#define VTABLE_mindustry_content_Blocks$323_drawPlanConfigCenter_mindustry_entities_units_BuildPlan_java_lang_Object_java_lang_String 106
+typedef void (*func_mindustry_content_Blocks$323_drawPlanConfigCenter_mindustry_entities_units_BuildPlan_java_lang_Object_java_lang_String)(jcontext ctx, jobject self, jobject param0, jobject param1, jobject param2);
+#define VTABLE_mindustry_content_Blocks$323_drawPlanConfigTop_mindustry_entities_units_BuildPlan_arc_util_Eachable 107
+typedef void (*func_mindustry_content_Blocks$323_drawPlanConfigTop_mindustry_entities_units_BuildPlan_arc_util_Eachable)(jcontext ctx, jobject self, jobject param0, jobject param1);
+#define VTABLE_mindustry_content_Blocks$323_planConfigClipSize_R_float 108
+typedef jfloat (*func_mindustry_content_Blocks$323_planConfigClipSize_R_float)(jcontext ctx, jobject self);
+#define VTABLE_mindustry_content_Blocks$323_pointConfig_java_lang_Object_arc_func_Cons_R_java_lang_Object 109
+typedef jobject (*func_mindustry_content_Blocks$323_pointConfig_java_lang_Object_arc_func_Cons_R_java_lang_Object)(jcontext ctx, jobject self, jobject param0, jobject param1);
+#define VTABLE_mindustry_content_Blocks$323_configClear_arc_func_Cons 110
+typedef void (*func_mindustry_content_Blocks$323_configClear_arc_func_Cons)(jcontext ctx, jobject self, jobject param0);
+#define VTABLE_mindustry_content_Blocks$323_config_java_lang_Class_arc_func_Cons2 111
+typedef void (*func_mindustry_content_Blocks$323_config_java_lang_Class_arc_func_Cons2)(jcontext ctx, jobject self, jobject param0, jobject param1);
+#define VTABLE_mindustry_content_Blocks$323_isAccessible_R_boolean 112
+typedef jbool (*func_mindustry_content_Blocks$323_isAccessible_R_boolean)(jcontext ctx, jobject self);
+#define VTABLE_mindustry_content_Blocks$323_nearbySide_int_int_int_int_arc_math_geom_Point2 113
+typedef void (*func_mindustry_content_Blocks$323_nearbySide_int_int_int_int_arc_math_geom_Point2)(jcontext ctx, jobject self, jint param0, jint param1, jint param2, jint param3, jobject param4);
+#define VTABLE_mindustry_content_Blocks$323_getEdges_R_Array1_arc_math_geom_Point2 114
+typedef jobject (*func_mindustry_content_Blocks$323_getEdges_R_Array1_arc_math_geom_Point2)(jcontext ctx, jobject self);
+#define VTABLE_mindustry_content_Blocks$323_getInsideEdges_R_Array1_arc_math_geom_Point2 115
+typedef jobject (*func_mindustry_content_Blocks$323_getInsideEdges_R_Array1_arc_math_geom_Point2)(jcontext ctx, jobject self);
+#define VTABLE_mindustry_content_Blocks$323_iterateTaken_int_int_arc_func_Intc2 116
+typedef void (*func_mindustry_content_Blocks$323_iterateTaken_int_int_arc_func_Intc2)(jcontext ctx, jobject self, jint param0, jint param1, jobject param2);
+#define VTABLE_mindustry_content_Blocks$323_makeIconRegions_R_Array1_arc_graphics_g2d_TextureRegion 117
+typedef jobject (*func_mindustry_content_Blocks$323_makeIconRegions_R_Array1_arc_graphics_g2d_TextureRegion)(jcontext ctx, jobject self);
+#define VTABLE_mindustry_content_Blocks$323_icons_R_Array1_arc_graphics_g2d_TextureRegion 118
+typedef jobject (*func_mindustry_content_Blocks$323_icons_R_Array1_arc_graphics_g2d_TextureRegion)(jcontext ctx, jobject self);
+#define VTABLE_mindustry_content_Blocks$323_getRegionsToOutline_arc_struct_Seq 119
+typedef void (*func_mindustry_content_Blocks$323_getRegionsToOutline_arc_struct_Seq)(jcontext ctx, jobject self, jobject param0);
+#define VTABLE_mindustry_content_Blocks$323_getGeneratedIcons_R_Array1_arc_graphics_g2d_TextureRegion 120
+typedef jobject (*func_mindustry_content_Blocks$323_getGeneratedIcons_R_Array1_arc_graphics_g2d_TextureRegion)(jcontext ctx, jobject self);
+#define VTABLE_mindustry_content_Blocks$323_resetGeneratedIcons 121
+typedef void (*func_mindustry_content_Blocks$323_resetGeneratedIcons)(jcontext ctx, jobject self);
+#define VTABLE_mindustry_content_Blocks$323_variantRegions_R_Array1_arc_graphics_g2d_TextureRegion 122
+typedef jobject (*func_mindustry_content_Blocks$323_variantRegions_R_Array1_arc_graphics_g2d_TextureRegion)(jcontext ctx, jobject self);
+#define VTABLE_mindustry_content_Blocks$323_hasBuilding_R_boolean 123
+typedef jbool (*func_mindustry_content_Blocks$323_hasBuilding_R_boolean)(jcontext ctx, jobject self);
+#define VTABLE_mindustry_content_Blocks$323_newBuilding_R_mindustry_gen_Building 124
+typedef jobject (*func_mindustry_content_Blocks$323_newBuilding_R_mindustry_gen_Building)(jcontext ctx, jobject self);
+#define VTABLE_mindustry_content_Blocks$323_updateClipRadius_float 125
+typedef void (*func_mindustry_content_Blocks$323_updateClipRadius_float)(jcontext ctx, jobject self, jfloat param0);
+#define VTABLE_mindustry_content_Blocks$323_bounds_int_int_arc_math_geom_Rect_R_arc_math_geom_Rect 126
+typedef jobject (*func_mindustry_content_Blocks$323_bounds_int_int_arc_math_geom_Rect_R_arc_math_geom_Rect)(jcontext ctx, jobject self, jint param0, jint param1, jobject param2);
+#define VTABLE_mindustry_content_Blocks$323_isMultiblock_R_boolean 127
+typedef jbool (*func_mindustry_content_Blocks$323_isMultiblock_R_boolean)(jcontext ctx, jobject self);
+#define VTABLE_mindustry_content_Blocks$323_isVisible_R_boolean 128
+typedef jbool (*func_mindustry_content_Blocks$323_isVisible_R_boolean)(jcontext ctx, jobject self);
+#define VTABLE_mindustry_content_Blocks$323_isPlaceable_R_boolean 129
+typedef jbool (*func_mindustry_content_Blocks$323_isPlaceable_R_boolean)(jcontext ctx, jobject self);
+#define VTABLE_mindustry_content_Blocks$323_isOverPlacementLimit_mindustry_game_Team_R_boolean 130
+typedef jbool (*func_mindustry_content_Blocks$323_isOverPlacementLimit_mindustry_game_Team_R_boolean)(jcontext ctx, jobject self, jobject param0);
+#define VTABLE_mindustry_content_Blocks$323_supportsEnv_int_R_boolean 131
+typedef jbool (*func_mindustry_content_Blocks$323_supportsEnv_int_R_boolean)(jcontext ctx, jobject self, jint param0);
+#define VTABLE_mindustry_content_Blocks$323_buildEditorConfig_arc_scene_ui_layout_Table 132
+typedef void (*func_mindustry_content_Blocks$323_buildEditorConfig_arc_scene_ui_layout_Table)(jcontext ctx, jobject self, jobject param0);
+#define VTABLE_mindustry_content_Blocks$323_onPicked_mindustry_world_Tile 133
+typedef void (*func_mindustry_content_Blocks$323_onPicked_mindustry_world_Tile)(jcontext ctx, jobject self, jobject param0);
+#define VTABLE_mindustry_content_Blocks$323_getConfig_mindustry_world_Tile_R_java_lang_Object 134
+typedef jobject (*func_mindustry_content_Blocks$323_getConfig_mindustry_world_Tile_R_java_lang_Object)(jcontext ctx, jobject self, jobject param0);
+#define VTABLE_mindustry_content_Blocks$323_blockChanged_mindustry_world_Tile 135
+typedef void (*func_mindustry_content_Blocks$323_blockChanged_mindustry_world_Tile)(jcontext ctx, jobject self, jobject param0);
+#define VTABLE_mindustry_content_Blocks$323_placeBegan_mindustry_world_Tile_mindustry_world_Block 136
+typedef void (*func_mindustry_content_Blocks$323_placeBegan_mindustry_world_Tile_mindustry_world_Block)(jcontext ctx, jobject self, jobject param0, jobject param1);
+#define VTABLE_mindustry_content_Blocks$323_placeBegan_mindustry_world_Tile_mindustry_world_Block_mindustry_gen_Unit 137
+typedef void (*func_mindustry_content_Blocks$323_placeBegan_mindustry_world_Tile_mindustry_world_Block_mindustry_gen_Unit)(jcontext ctx, jobject self, jobject param0, jobject param1, jobject param2);
+#define VTABLE_mindustry_content_Blocks$323_placeEnded_mindustry_world_Tile_mindustry_gen_Unit_int_java_lang_Object 138
+typedef void (*func_mindustry_content_Blocks$323_placeEnded_mindustry_world_Tile_mindustry_gen_Unit_int_java_lang_Object)(jcontext ctx, jobject self, jobject param0, jobject param1, jint param2, jobject param3);
+#define VTABLE_mindustry_content_Blocks$323_beforePlaceBegan_mindustry_world_Tile_mindustry_world_Block 139
+typedef void (*func_mindustry_content_Blocks$323_beforePlaceBegan_mindustry_world_Tile_mindustry_world_Block)(jcontext ctx, jobject self, jobject param0, jobject param1);
+#define VTABLE_mindustry_content_Blocks$323_editorPicked_mindustry_world_Tile 140
+typedef void (*func_mindustry_content_Blocks$323_editorPicked_mindustry_world_Tile)(jcontext ctx, jobject self, jobject param0);
+#define VTABLE_mindustry_content_Blocks$323_isFloor_R_boolean 141
+typedef jbool (*func_mindustry_content_Blocks$323_isFloor_R_boolean)(jcontext ctx, jobject self);
+#define VTABLE_mindustry_content_Blocks$323_isOverlay_R_boolean 142
+typedef jbool (*func_mindustry_content_Blocks$323_isOverlay_R_boolean)(jcontext ctx, jobject self);
+#define VTABLE_mindustry_content_Blocks$323_asFloor_R_mindustry_world_blocks_environment_Floor 143
+typedef jobject (*func_mindustry_content_Blocks$323_asFloor_R_mindustry_world_blocks_environment_Floor)(jcontext ctx, jobject self);
+#define VTABLE_mindustry_content_Blocks$323_isAir_R_boolean 144
+typedef jbool (*func_mindustry_content_Blocks$323_isAir_R_boolean)(jcontext ctx, jobject self);
+#define VTABLE_mindustry_content_Blocks$323_canBeBuilt_R_boolean 145
+typedef jbool (*func_mindustry_content_Blocks$323_canBeBuilt_R_boolean)(jcontext ctx, jobject self);
+#define VTABLE_mindustry_content_Blocks$323_environmentBuildable_R_boolean 146
+typedef jbool (*func_mindustry_content_Blocks$323_environmentBuildable_R_boolean)(jcontext ctx, jobject self);
+#define VTABLE_mindustry_content_Blocks$323_isStatic_R_boolean 147
+typedef jbool (*func_mindustry_content_Blocks$323_isStatic_R_boolean)(jcontext ctx, jobject self);
+#define VTABLE_mindustry_content_Blocks$323_findConsumer_arc_func_Boolf_R_mindustry_world_consumers_Consume 148
+typedef jobject (*func_mindustry_content_Blocks$323_findConsumer_arc_func_Boolf_R_mindustry_world_consumers_Consume)(jcontext ctx, jobject self, jobject param0);
+#define VTABLE_mindustry_content_Blocks$323_hasConsumer_mindustry_world_consumers_Consume_R_boolean 149
+typedef jbool (*func_mindustry_content_Blocks$323_hasConsumer_mindustry_world_consumers_Consume_R_boolean)(jcontext ctx, jobject self, jobject param0);
+#define VTABLE_mindustry_content_Blocks$323_removeConsumer_mindustry_world_consumers_Consume 150
+typedef void (*func_mindustry_content_Blocks$323_removeConsumer_mindustry_world_consumers_Consume)(jcontext ctx, jobject self, jobject param0);
+#define VTABLE_mindustry_content_Blocks$323_removeConsumers_arc_func_Boolf 151
+typedef void (*func_mindustry_content_Blocks$323_removeConsumers_arc_func_Boolf)(jcontext ctx, jobject self, jobject param0);
+#define VTABLE_mindustry_content_Blocks$323_consumeLiquid_mindustry_type_Liquid_float_R_mindustry_world_consumers_ConsumeLiquid 152
+typedef jobject (*func_mindustry_content_Blocks$323_consumeLiquid_mindustry_type_Liquid_float_R_mindustry_world_consumers_ConsumeLiquid)(jcontext ctx, jobject self, jobject param0, jfloat param1);
+#define VTABLE_mindustry_content_Blocks$323_consumeLiquids_Array1_mindustry_type_LiquidStack_R_mindustry_world_consumers_ConsumeLiquids 153
+typedef jobject (*func_mindustry_content_Blocks$323_consumeLiquids_Array1_mindustry_type_LiquidStack_R_mindustry_world_consumers_ConsumeLiquids)(jcontext ctx, jobject self, jobject param0);
+#define VTABLE_mindustry_content_Blocks$323_consumePower_float_R_mindustry_world_consumers_ConsumePower 154
+typedef jobject (*func_mindustry_content_Blocks$323_consumePower_float_R_mindustry_world_consumers_ConsumePower)(jcontext ctx, jobject self, jfloat param0);
+#define VTABLE_mindustry_content_Blocks$323_consumePowerCond_float_arc_func_Boolf_R_mindustry_world_consumers_ConsumePower 155
+typedef jobject (*func_mindustry_content_Blocks$323_consumePowerCond_float_arc_func_Boolf_R_mindustry_world_consumers_ConsumePower)(jcontext ctx, jobject self, jfloat param0, jobject param1);
+#define VTABLE_mindustry_content_Blocks$323_consumePowerDynamic_arc_func_Floatf_R_mindustry_world_consumers_ConsumePower 156
+typedef jobject (*func_mindustry_content_Blocks$323_consumePowerDynamic_arc_func_Floatf_R_mindustry_world_consumers_ConsumePower)(jcontext ctx, jobject self, jobject param0);
+#define VTABLE_mindustry_content_Blocks$323_consumePowerDynamic_float_arc_func_Floatf_R_mindustry_world_consumers_ConsumePower 157
+typedef jobject (*func_mindustry_content_Blocks$323_consumePowerDynamic_float_arc_func_Floatf_R_mindustry_world_consumers_ConsumePower)(jcontext ctx, jobject self, jfloat param0, jobject param1);
+#define VTABLE_mindustry_content_Blocks$323_consumePowerBuffered_float_R_mindustry_world_consumers_ConsumePower 158
+typedef jobject (*func_mindustry_content_Blocks$323_consumePowerBuffered_float_R_mindustry_world_consumers_ConsumePower)(jcontext ctx, jobject self, jfloat param0);
+#define VTABLE_mindustry_content_Blocks$323_consumeItem_mindustry_type_Item_R_mindustry_world_consumers_ConsumeItems 159
+typedef jobject (*func_mindustry_content_Blocks$323_consumeItem_mindustry_type_Item_R_mindustry_world_consumers_ConsumeItems)(jcontext ctx, jobject self, jobject param0);
+#define VTABLE_mindustry_content_Blocks$323_consumeItem_mindustry_type_Item_int_R_mindustry_world_consumers_ConsumeItems 160
+typedef jobject (*func_mindustry_content_Blocks$323_consumeItem_mindustry_type_Item_int_R_mindustry_world_consumers_ConsumeItems)(jcontext ctx, jobject self, jobject param0, jint param1);
+#define VTABLE_mindustry_content_Blocks$323_consumeItems_Array1_mindustry_type_ItemStack_R_mindustry_world_consumers_ConsumeItems 161
+typedef jobject (*func_mindustry_content_Blocks$323_consumeItems_Array1_mindustry_type_ItemStack_R_mindustry_world_consumers_ConsumeItems)(jcontext ctx, jobject self, jobject param0);
+#define VTABLE_mindustry_content_Blocks$323_consumeCoolant_float_R_mindustry_world_consumers_ConsumeCoolant 162
+typedef jobject (*func_mindustry_content_Blocks$323_consumeCoolant_float_R_mindustry_world_consumers_ConsumeCoolant)(jcontext ctx, jobject self, jfloat param0);
+#define VTABLE_mindustry_content_Blocks$323_consumeCoolant_float_boolean_boolean_R_mindustry_world_consumers_ConsumeCoolant 163
+typedef jobject (*func_mindustry_content_Blocks$323_consumeCoolant_float_boolean_boolean_R_mindustry_world_consumers_ConsumeCoolant)(jcontext ctx, jobject self, jfloat param0, jbool param1, jbool param2);
+#define VTABLE_mindustry_content_Blocks$323_consume_mindustry_world_consumers_Consume_R_mindustry_world_consumers_Consume 164
+typedef jobject (*func_mindustry_content_Blocks$323_consume_mindustry_world_consumers_Consume_R_mindustry_world_consumers_Consume)(jcontext ctx, jobject self, jobject param0);
+#define VTABLE_mindustry_content_Blocks$323_setupRequirements_mindustry_type_Category_Array1_mindustry_type_ItemStack 165
+typedef void (*func_mindustry_content_Blocks$323_setupRequirements_mindustry_type_Category_Array1_mindustry_type_ItemStack)(jcontext ctx, jobject self, jobject param0, jobject param1);
+#define VTABLE_mindustry_content_Blocks$323_setupRequirements_mindustry_type_Category_mindustry_world_meta_BuildVisibility_Array1_mindustry_type_ItemStack 166
+typedef void (*func_mindustry_content_Blocks$323_setupRequirements_mindustry_type_Category_mindustry_world_meta_BuildVisibility_Array1_mindustry_type_ItemStack)(jcontext ctx, jobject self, jobject param0, jobject param1, jobject param2);
+#define VTABLE_mindustry_content_Blocks$323_requirements_mindustry_type_Category_Array1_mindustry_type_ItemStack_boolean 167
+typedef void (*func_mindustry_content_Blocks$323_requirements_mindustry_type_Category_Array1_mindustry_type_ItemStack_boolean)(jcontext ctx, jobject self, jobject param0, jobject param1, jbool param2);
+#define VTABLE_mindustry_content_Blocks$323_requirements_mindustry_type_Category_Array1_mindustry_type_ItemStack 168
+typedef void (*func_mindustry_content_Blocks$323_requirements_mindustry_type_Category_Array1_mindustry_type_ItemStack)(jcontext ctx, jobject self, jobject param0, jobject param1);
+#define VTABLE_mindustry_content_Blocks$323_requirements_mindustry_type_Category_mindustry_world_meta_BuildVisibility_Array1_mindustry_type_ItemStack 169
+typedef void (*func_mindustry_content_Blocks$323_requirements_mindustry_type_Category_mindustry_world_meta_BuildVisibility_Array1_mindustry_type_ItemStack)(jcontext ctx, jobject self, jobject param0, jobject param1, jobject param2);
+#define VTABLE_mindustry_content_Blocks$323_initBuilding 170
+typedef void (*func_mindustry_content_Blocks$323_initBuilding)(jcontext ctx, jobject self);
+#define VTABLE_mindustry_content_Blocks$323_reinitializeConsumers 171
+typedef void (*func_mindustry_content_Blocks$323_reinitializeConsumers)(jcontext ctx, jobject self);
+#define VTABLE_mindustry_content_Blocks$323_checkContentArrayCapacity_int_int 172
+typedef void (*func_mindustry_content_Blocks$323_checkContentArrayCapacity_int_int)(jcontext ctx, jobject self, jint param0, jint param1);
+#define VTABLE_mindustry_content_Blocks$323_planRotation_int_R_int 173
+typedef jint (*func_mindustry_content_Blocks$323_planRotation_int_R_int)(jcontext ctx, jobject self, jint param0);
+#define VTABLE_mindustry_content_Blocks$323_flipRotation_mindustry_entities_units_BuildPlan_boolean 174
+typedef void (*func_mindustry_content_Blocks$323_flipRotation_mindustry_entities_units_BuildPlan_boolean)(jcontext ctx, jobject self, jobject param0, jbool param1);
+#define VTABLE_mindustry_content_Blocks$323_getPlanConfigs_arc_struct_Seq 175
+typedef void (*func_mindustry_content_Blocks$323_getPlanConfigs_arc_struct_Seq)(jcontext ctx, jobject self, jobject param0);
+#define VTABLE_mindustry_content_Blocks$323_lambda$init$3_java_lang_Class_arc_func_Cons2 176
+typedef void (*func_mindustry_content_Blocks$323_lambda$init$3_java_lang_Class_arc_func_Cons2)(jcontext ctx, jobject self, jobject param0, jobject param1);
+#define VTABLE_mindustry_content_Blocks$323_lambda$initBuilding$1_java_lang_reflect_Constructor_R_mindustry_gen_Building 177
+typedef jobject (*func_mindustry_content_Blocks$323_lambda$initBuilding$1_java_lang_reflect_Constructor_R_mindustry_gen_Building)(jcontext ctx, jobject self, jobject param0);
+#define VTABLE_mindustry_content_Blocks$323_lambda$setBars$5_mindustry_gen_Building_R_mindustry_ui_Bar 178
+typedef jobject (*func_mindustry_content_Blocks$323_lambda$setBars$5_mindustry_gen_Building_R_mindustry_ui_Bar)(jcontext ctx, jobject self, jobject param0);
+#define VTABLE_mindustry_content_Blocks$323_lambda$setBars$8_mindustry_gen_Building_R_float 179
+typedef jfloat (*func_mindustry_content_Blocks$323_lambda$setBars$8_mindustry_gen_Building_R_float)(jcontext ctx, jobject self, jobject param0);
+#define VTABLE_mindustry_content_Blocks$323_lambda$setBars$1_boolean_float_mindustry_gen_Building_R_mindustry_ui_Bar 180
+typedef jobject (*func_mindustry_content_Blocks$323_lambda$setBars$1_boolean_float_mindustry_gen_Building_R_mindustry_ui_Bar)(jcontext ctx, jobject self, jbool param0, jfloat param1, jobject param2);
+#define VTABLE_mindustry_content_Blocks$323_lambda$setBars$4_mindustry_gen_Building_R_float 181
+typedef jfloat (*func_mindustry_content_Blocks$323_lambda$setBars$4_mindustry_gen_Building_R_float)(jcontext ctx, jobject self, jobject param0);
+#define VTABLE_mindustry_content_Blocks$323_lambda$addLiquidBar$3_arc_func_Func_mindustry_gen_Building_R_mindustry_ui_Bar 182
+typedef jobject (*func_mindustry_content_Blocks$323_lambda$addLiquidBar$3_arc_func_Func_mindustry_gen_Building_R_mindustry_ui_Bar)(jcontext ctx, jobject self, jobject param0, jobject param1);
+#define VTABLE_mindustry_content_Blocks$323_lambda$addLiquidBar$6_arc_func_Func_mindustry_gen_Building_R_float 183
+typedef jfloat (*func_mindustry_content_Blocks$323_lambda$addLiquidBar$6_arc_func_Func_mindustry_gen_Building_R_float)(jcontext ctx, jobject self, jobject param0, jobject param1);
+#define VTABLE_mindustry_content_Blocks$323_lambda$addLiquidBar$0_mindustry_type_Liquid_mindustry_gen_Building_R_mindustry_ui_Bar 184
+typedef jobject (*func_mindustry_content_Blocks$323_lambda$addLiquidBar$0_mindustry_type_Liquid_mindustry_gen_Building_R_mindustry_ui_Bar)(jcontext ctx, jobject self, jobject param0, jobject param1);
+#define VTABLE_mindustry_content_Blocks$323_lambda$addLiquidBar$2_mindustry_gen_Building_mindustry_type_Liquid_R_float 185
+typedef jfloat (*func_mindustry_content_Blocks$323_lambda$addLiquidBar$2_mindustry_gen_Building_mindustry_type_Liquid_R_float)(jcontext ctx, jobject self, jobject param0, jobject param1);
+#define VTABLE_mindustry_content_Blocks$323_lambda$sumAttribute$0_mindustry_world_meta_Attribute_mindustry_world_Tile_R_float 186
+typedef jfloat (*func_mindustry_content_Blocks$323_lambda$sumAttribute$0_mindustry_world_meta_Attribute_mindustry_world_Tile_R_float)(jcontext ctx, jobject self, jobject param0, jobject param1);
+#define VTABLE_mindustry_content_Blocks$323_lambda$drawPotentialLinks$1_int_int_mindustry_gen_Building 187
+typedef void (*func_mindustry_content_Blocks$323_lambda$drawPotentialLinks$1_int_int_mindustry_gen_Building)(jcontext ctx, jobject self, jint param0, jint param1, jobject param2);
+#define VTABLE_mindustry_content_Blocks$323_lambda$drawPotentialLinks$0_int_int_mindustry_gen_Building 188
+typedef void (*func_mindustry_content_Blocks$323_lambda$drawPotentialLinks$0_int_int_mindustry_gen_Building)(jcontext ctx, jobject self, jint param0, jint param1, jobject param2);
+#define VTABLE_mindustry_content_Blocks$323_findFactoryRegion_java_lang_String_R_arc_graphics_g2d_TextureRegion 189
+typedef jobject (*func_mindustry_content_Blocks$323_findFactoryRegion_java_lang_String_R_arc_graphics_g2d_TextureRegion)(jcontext ctx, jobject self, jobject param0);
+#define VTABLE_mindustry_content_Blocks$323_initCapacities 190
+typedef void (*func_mindustry_content_Blocks$323_initCapacities)(jcontext ctx, jobject self);
+#define VTABLE_mindustry_content_Blocks$323_lambda$setStats$0_arc_scene_ui_layout_Table 191
+typedef void (*func_mindustry_content_Blocks$323_lambda$setStats$0_arc_scene_ui_layout_Table)(jcontext ctx, jobject self, jobject param0);
+#define VTABLE_mindustry_content_Blocks$323_lambda$new$5_mindustry_world_blocks_units_UnitFactory$UnitFactoryBuild_R_Array1_mindustry_type_ItemStack 192
+typedef jobject (*func_mindustry_content_Blocks$323_lambda$new$5_mindustry_world_blocks_units_UnitFactory$UnitFactoryBuild_R_Array1_mindustry_type_ItemStack)(jcontext ctx, jobject self, jobject param0);
+#define VTABLE_mindustry_content_Blocks$323_lambda$new$1_mindustry_world_blocks_units_UnitFactory$UnitFactoryBuild_mindustry_type_UnitType 193
+typedef void (*func_mindustry_content_Blocks$323_lambda$new$1_mindustry_world_blocks_units_UnitFactory$UnitFactoryBuild_mindustry_type_UnitType)(jcontext ctx, jobject self, jobject param0, jobject param1);
+#define VTABLE_mindustry_content_Blocks$323_lambda$new$0_mindustry_world_blocks_units_UnitFactory$UnitFactoryBuild_java_lang_Integer 194
+typedef void (*func_mindustry_content_Blocks$323_lambda$new$0_mindustry_world_blocks_units_UnitFactory$UnitFactoryBuild_java_lang_Integer)(jcontext ctx, jobject self, jobject param0, jobject param1);
+
+void mark_mindustry_content_Blocks$323(jobject object, jint mark, jint depth);
+void clinit_mindustry_content_Blocks$323(jcontext ctx);
+void init_mindustry_content_Blocks$323_java_lang_String(jcontext ctx, jobject self, jobject param0);
+
+#ifdef __cplusplus
+}
+#endif
+
+#endif

@@ -1,0 +1,872 @@
+#ifndef HEADER_mindustry_ui_dialogs_ModsDialog
+#define HEADER_mindustry_ui_dialogs_ModsDialog
+
+#include "Clearwing.h"
+#include "mindustry/ui/dialogs/BaseDialog.h"
+
+#ifdef __cplusplus
+extern "C" {
+#endif
+
+typedef struct mindustry_ui_dialogs_ModsDialog {
+	mindustry_ui_dialogs_BaseDialog parent;
+	jref F_browser;
+	jfloat F_modImportProgress;
+	jbool F_cancelledImport;
+	jref F_currentContent;
+	jref F_downloads;
+	jref F_modDetails;
+	jfloat F_scroll;
+	jref F_modToListing;
+	jref F_withUpdates;
+	jref F_updaterElement;
+} mindustry_ui_dialogs_ModsDialog;
+
+extern Class class_mindustry_ui_dialogs_ModsDialog;
+
+extern jobject SF_mindustry_ui_dialogs_ModsDialog_modVersionPattern;
+
+#define VTABLE_mindustry_ui_dialogs_ModsDialog_hashCode_R_int 0
+typedef jint (*func_mindustry_ui_dialogs_ModsDialog_hashCode_R_int)(jcontext ctx, jobject self);
+#define VTABLE_mindustry_ui_dialogs_ModsDialog_equals_java_lang_Object_R_boolean 1
+typedef jbool (*func_mindustry_ui_dialogs_ModsDialog_equals_java_lang_Object_R_boolean)(jcontext ctx, jobject self, jobject param0);
+#define VTABLE_mindustry_ui_dialogs_ModsDialog_clone_R_java_lang_Object 2
+typedef jobject (*func_mindustry_ui_dialogs_ModsDialog_clone_R_java_lang_Object)(jcontext ctx, jobject self);
+#define VTABLE_mindustry_ui_dialogs_ModsDialog_getClass_R_java_lang_Class 3
+typedef jobject (*func_mindustry_ui_dialogs_ModsDialog_getClass_R_java_lang_Class)(jcontext ctx, jobject self);
+#define VTABLE_mindustry_ui_dialogs_ModsDialog_toString_R_java_lang_String 4
+typedef jobject (*func_mindustry_ui_dialogs_ModsDialog_toString_R_java_lang_String)(jcontext ctx, jobject self);
+#define VTABLE_mindustry_ui_dialogs_ModsDialog_finalize 5
+typedef void (*func_mindustry_ui_dialogs_ModsDialog_finalize)(jcontext ctx, jobject self);
+#define VTABLE_mindustry_ui_dialogs_ModsDialog_notify 6
+typedef void (*func_mindustry_ui_dialogs_ModsDialog_notify)(jcontext ctx, jobject self);
+#define VTABLE_mindustry_ui_dialogs_ModsDialog_notifyAll 7
+typedef void (*func_mindustry_ui_dialogs_ModsDialog_notifyAll)(jcontext ctx, jobject self);
+#define VTABLE_mindustry_ui_dialogs_ModsDialog_wait 8
+typedef void (*func_mindustry_ui_dialogs_ModsDialog_wait)(jcontext ctx, jobject self);
+#define VTABLE_mindustry_ui_dialogs_ModsDialog_wait_long 9
+typedef void (*func_mindustry_ui_dialogs_ModsDialog_wait_long)(jcontext ctx, jobject self, jlong param0);
+#define VTABLE_mindustry_ui_dialogs_ModsDialog_wait_long_int 10
+typedef void (*func_mindustry_ui_dialogs_ModsDialog_wait_long_int)(jcontext ctx, jobject self, jlong param0, jint param1);
+#define VTABLE_mindustry_ui_dialogs_ModsDialog_draw 11
+typedef void (*func_mindustry_ui_dialogs_ModsDialog_draw)(jcontext ctx, jobject self);
+#define VTABLE_mindustry_ui_dialogs_ModsDialog_act_float 12
+typedef void (*func_mindustry_ui_dialogs_ModsDialog_act_float)(jcontext ctx, jobject self, jfloat param0);
+#define VTABLE_mindustry_ui_dialogs_ModsDialog_updateVisibility 13
+typedef void (*func_mindustry_ui_dialogs_ModsDialog_updateVisibility)(jcontext ctx, jobject self);
+#define VTABLE_mindustry_ui_dialogs_ModsDialog_hasMouse_R_boolean 14
+typedef jbool (*func_mindustry_ui_dialogs_ModsDialog_hasMouse_R_boolean)(jcontext ctx, jobject self);
+#define VTABLE_mindustry_ui_dialogs_ModsDialog_hasKeyboard_R_boolean 15
+typedef jbool (*func_mindustry_ui_dialogs_ModsDialog_hasKeyboard_R_boolean)(jcontext ctx, jobject self);
+#define VTABLE_mindustry_ui_dialogs_ModsDialog_hasScroll_R_boolean 16
+typedef jbool (*func_mindustry_ui_dialogs_ModsDialog_hasScroll_R_boolean)(jcontext ctx, jobject self);
+#define VTABLE_mindustry_ui_dialogs_ModsDialog_requestKeyboard 17
+typedef void (*func_mindustry_ui_dialogs_ModsDialog_requestKeyboard)(jcontext ctx, jobject self);
+#define VTABLE_mindustry_ui_dialogs_ModsDialog_requestScroll 18
+typedef void (*func_mindustry_ui_dialogs_ModsDialog_requestScroll)(jcontext ctx, jobject self);
+#define VTABLE_mindustry_ui_dialogs_ModsDialog_fire_arc_scene_event_SceneEvent_R_boolean 19
+typedef jbool (*func_mindustry_ui_dialogs_ModsDialog_fire_arc_scene_event_SceneEvent_R_boolean)(jcontext ctx, jobject self, jobject param0);
+#define VTABLE_mindustry_ui_dialogs_ModsDialog_notify_arc_scene_event_SceneEvent_boolean_R_boolean 20
+typedef jbool (*func_mindustry_ui_dialogs_ModsDialog_notify_arc_scene_event_SceneEvent_boolean_R_boolean)(jcontext ctx, jobject self, jobject param0, jbool param1);
+#define VTABLE_mindustry_ui_dialogs_ModsDialog_hit_float_float_boolean_R_arc_scene_Element 21
+typedef jobject (*func_mindustry_ui_dialogs_ModsDialog_hit_float_float_boolean_R_arc_scene_Element)(jcontext ctx, jobject self, jfloat param0, jfloat param1, jbool param2);
+#define VTABLE_mindustry_ui_dialogs_ModsDialog_remove_R_boolean 22
+typedef jbool (*func_mindustry_ui_dialogs_ModsDialog_remove_R_boolean)(jcontext ctx, jobject self);
+#define VTABLE_mindustry_ui_dialogs_ModsDialog_dragged_arc_func_Floatc2 23
+typedef void (*func_mindustry_ui_dialogs_ModsDialog_dragged_arc_func_Floatc2)(jcontext ctx, jobject self, jobject param0);
+#define VTABLE_mindustry_ui_dialogs_ModsDialog_scrolled_arc_func_Floatc 24
+typedef void (*func_mindustry_ui_dialogs_ModsDialog_scrolled_arc_func_Floatc)(jcontext ctx, jobject self, jobject param0);
+#define VTABLE_mindustry_ui_dialogs_ModsDialog_addListener_arc_scene_event_EventListener_R_boolean 25
+typedef jbool (*func_mindustry_ui_dialogs_ModsDialog_addListener_arc_scene_event_EventListener_R_boolean)(jcontext ctx, jobject self, jobject param0);
+#define VTABLE_mindustry_ui_dialogs_ModsDialog_removeListener_arc_scene_event_EventListener_R_boolean 26
+typedef jbool (*func_mindustry_ui_dialogs_ModsDialog_removeListener_arc_scene_event_EventListener_R_boolean)(jcontext ctx, jobject self, jobject param0);
+#define VTABLE_mindustry_ui_dialogs_ModsDialog_getListeners_R_arc_struct_Seq 27
+typedef jobject (*func_mindustry_ui_dialogs_ModsDialog_getListeners_R_arc_struct_Seq)(jcontext ctx, jobject self);
+#define VTABLE_mindustry_ui_dialogs_ModsDialog_addCaptureListener_arc_scene_event_EventListener_R_boolean 28
+typedef jbool (*func_mindustry_ui_dialogs_ModsDialog_addCaptureListener_arc_scene_event_EventListener_R_boolean)(jcontext ctx, jobject self, jobject param0);
+#define VTABLE_mindustry_ui_dialogs_ModsDialog_removeCaptureListener_arc_scene_event_EventListener_R_boolean 29
+typedef jbool (*func_mindustry_ui_dialogs_ModsDialog_removeCaptureListener_arc_scene_event_EventListener_R_boolean)(jcontext ctx, jobject self, jobject param0);
+#define VTABLE_mindustry_ui_dialogs_ModsDialog_getCaptureListeners_R_arc_struct_Seq 30
+typedef jobject (*func_mindustry_ui_dialogs_ModsDialog_getCaptureListeners_R_arc_struct_Seq)(jcontext ctx, jobject self);
+#define VTABLE_mindustry_ui_dialogs_ModsDialog_addAction_arc_scene_Action 31
+typedef void (*func_mindustry_ui_dialogs_ModsDialog_addAction_arc_scene_Action)(jcontext ctx, jobject self, jobject param0);
+#define VTABLE_mindustry_ui_dialogs_ModsDialog_actions_Array1_arc_scene_Action 32
+typedef void (*func_mindustry_ui_dialogs_ModsDialog_actions_Array1_arc_scene_Action)(jcontext ctx, jobject self, jobject param0);
+#define VTABLE_mindustry_ui_dialogs_ModsDialog_removeAction_arc_scene_Action 33
+typedef void (*func_mindustry_ui_dialogs_ModsDialog_removeAction_arc_scene_Action)(jcontext ctx, jobject self, jobject param0);
+#define VTABLE_mindustry_ui_dialogs_ModsDialog_getActions_R_arc_struct_Seq 34
+typedef jobject (*func_mindustry_ui_dialogs_ModsDialog_getActions_R_arc_struct_Seq)(jcontext ctx, jobject self);
+#define VTABLE_mindustry_ui_dialogs_ModsDialog_hasActions_R_boolean 35
+typedef jbool (*func_mindustry_ui_dialogs_ModsDialog_hasActions_R_boolean)(jcontext ctx, jobject self);
+#define VTABLE_mindustry_ui_dialogs_ModsDialog_clearActions 36
+typedef void (*func_mindustry_ui_dialogs_ModsDialog_clearActions)(jcontext ctx, jobject self);
+#define VTABLE_mindustry_ui_dialogs_ModsDialog_clearListeners 37
+typedef void (*func_mindustry_ui_dialogs_ModsDialog_clearListeners)(jcontext ctx, jobject self);
+#define VTABLE_mindustry_ui_dialogs_ModsDialog_clear 38
+typedef void (*func_mindustry_ui_dialogs_ModsDialog_clear)(jcontext ctx, jobject self);
+#define VTABLE_mindustry_ui_dialogs_ModsDialog_getScene_R_arc_scene_Scene 39
+typedef jobject (*func_mindustry_ui_dialogs_ModsDialog_getScene_R_arc_scene_Scene)(jcontext ctx, jobject self);
+#define VTABLE_mindustry_ui_dialogs_ModsDialog_setScene_arc_scene_Scene 40
+typedef void (*func_mindustry_ui_dialogs_ModsDialog_setScene_arc_scene_Scene)(jcontext ctx, jobject self, jobject param0);
+#define VTABLE_mindustry_ui_dialogs_ModsDialog_isDescendantOf_arc_func_Boolf_R_boolean 41
+typedef jbool (*func_mindustry_ui_dialogs_ModsDialog_isDescendantOf_arc_func_Boolf_R_boolean)(jcontext ctx, jobject self, jobject param0);
+#define VTABLE_mindustry_ui_dialogs_ModsDialog_isDescendantOf_arc_scene_Element_R_boolean 42
+typedef jbool (*func_mindustry_ui_dialogs_ModsDialog_isDescendantOf_arc_scene_Element_R_boolean)(jcontext ctx, jobject self, jobject param0);
+#define VTABLE_mindustry_ui_dialogs_ModsDialog_isAscendantOf_arc_scene_Element_R_boolean 43
+typedef jbool (*func_mindustry_ui_dialogs_ModsDialog_isAscendantOf_arc_scene_Element_R_boolean)(jcontext ctx, jobject self, jobject param0);
+#define VTABLE_mindustry_ui_dialogs_ModsDialog_hasParent_R_boolean 44
+typedef jbool (*func_mindustry_ui_dialogs_ModsDialog_hasParent_R_boolean)(jcontext ctx, jobject self);
+#define VTABLE_mindustry_ui_dialogs_ModsDialog_isTouchable_R_boolean 45
+typedef jbool (*func_mindustry_ui_dialogs_ModsDialog_isTouchable_R_boolean)(jcontext ctx, jobject self);
+#define VTABLE_mindustry_ui_dialogs_ModsDialog_getX_int_R_float 46
+typedef jfloat (*func_mindustry_ui_dialogs_ModsDialog_getX_int_R_float)(jcontext ctx, jobject self, jint param0);
+#define VTABLE_mindustry_ui_dialogs_ModsDialog_getY_int_R_float 47
+typedef jfloat (*func_mindustry_ui_dialogs_ModsDialog_getY_int_R_float)(jcontext ctx, jobject self, jint param0);
+#define VTABLE_mindustry_ui_dialogs_ModsDialog_setPosition_float_float 48
+typedef void (*func_mindustry_ui_dialogs_ModsDialog_setPosition_float_float)(jcontext ctx, jobject self, jfloat param0, jfloat param1);
+#define VTABLE_mindustry_ui_dialogs_ModsDialog_setPosition_float_float_int 49
+typedef void (*func_mindustry_ui_dialogs_ModsDialog_setPosition_float_float_int)(jcontext ctx, jobject self, jfloat param0, jfloat param1, jint param2);
+#define VTABLE_mindustry_ui_dialogs_ModsDialog_moveBy_float_float 50
+typedef void (*func_mindustry_ui_dialogs_ModsDialog_moveBy_float_float)(jcontext ctx, jobject self, jfloat param0, jfloat param1);
+#define VTABLE_mindustry_ui_dialogs_ModsDialog_getWidth_R_float 51
+typedef jfloat (*func_mindustry_ui_dialogs_ModsDialog_getWidth_R_float)(jcontext ctx, jobject self);
+#define VTABLE_mindustry_ui_dialogs_ModsDialog_setWidth_float 52
+typedef void (*func_mindustry_ui_dialogs_ModsDialog_setWidth_float)(jcontext ctx, jobject self, jfloat param0);
+#define VTABLE_mindustry_ui_dialogs_ModsDialog_getHeight_R_float 53
+typedef jfloat (*func_mindustry_ui_dialogs_ModsDialog_getHeight_R_float)(jcontext ctx, jobject self);
+#define VTABLE_mindustry_ui_dialogs_ModsDialog_setHeight_float 54
+typedef void (*func_mindustry_ui_dialogs_ModsDialog_setHeight_float)(jcontext ctx, jobject self, jfloat param0);
+#define VTABLE_mindustry_ui_dialogs_ModsDialog_getTop_R_float 55
+typedef jfloat (*func_mindustry_ui_dialogs_ModsDialog_getTop_R_float)(jcontext ctx, jobject self);
+#define VTABLE_mindustry_ui_dialogs_ModsDialog_getRight_R_float 56
+typedef jfloat (*func_mindustry_ui_dialogs_ModsDialog_getRight_R_float)(jcontext ctx, jobject self);
+#define VTABLE_mindustry_ui_dialogs_ModsDialog_sizeChanged 57
+typedef void (*func_mindustry_ui_dialogs_ModsDialog_sizeChanged)(jcontext ctx, jobject self);
+#define VTABLE_mindustry_ui_dialogs_ModsDialog_rotationChanged 58
+typedef void (*func_mindustry_ui_dialogs_ModsDialog_rotationChanged)(jcontext ctx, jobject self);
+#define VTABLE_mindustry_ui_dialogs_ModsDialog_setSize_float 59
+typedef void (*func_mindustry_ui_dialogs_ModsDialog_setSize_float)(jcontext ctx, jobject self, jfloat param0);
+#define VTABLE_mindustry_ui_dialogs_ModsDialog_setSize_float_float 60
+typedef void (*func_mindustry_ui_dialogs_ModsDialog_setSize_float_float)(jcontext ctx, jobject self, jfloat param0, jfloat param1);
+#define VTABLE_mindustry_ui_dialogs_ModsDialog_sizeBy_float 61
+typedef void (*func_mindustry_ui_dialogs_ModsDialog_sizeBy_float)(jcontext ctx, jobject self, jfloat param0);
+#define VTABLE_mindustry_ui_dialogs_ModsDialog_sizeBy_float_float 62
+typedef void (*func_mindustry_ui_dialogs_ModsDialog_sizeBy_float_float)(jcontext ctx, jobject self, jfloat param0, jfloat param1);
+#define VTABLE_mindustry_ui_dialogs_ModsDialog_setBounds_float_float_float_float 63
+typedef void (*func_mindustry_ui_dialogs_ModsDialog_setBounds_float_float_float_float)(jcontext ctx, jobject self, jfloat param0, jfloat param1, jfloat param2, jfloat param3);
+#define VTABLE_mindustry_ui_dialogs_ModsDialog_setOrigin_float_float 64
+typedef void (*func_mindustry_ui_dialogs_ModsDialog_setOrigin_float_float)(jcontext ctx, jobject self, jfloat param0, jfloat param1);
+#define VTABLE_mindustry_ui_dialogs_ModsDialog_setOrigin_int 65
+typedef void (*func_mindustry_ui_dialogs_ModsDialog_setOrigin_int)(jcontext ctx, jobject self, jint param0);
+#define VTABLE_mindustry_ui_dialogs_ModsDialog_setScale_float 66
+typedef void (*func_mindustry_ui_dialogs_ModsDialog_setScale_float)(jcontext ctx, jobject self, jfloat param0);
+#define VTABLE_mindustry_ui_dialogs_ModsDialog_setScale_float_float 67
+typedef void (*func_mindustry_ui_dialogs_ModsDialog_setScale_float_float)(jcontext ctx, jobject self, jfloat param0, jfloat param1);
+#define VTABLE_mindustry_ui_dialogs_ModsDialog_scaleBy_float 68
+typedef void (*func_mindustry_ui_dialogs_ModsDialog_scaleBy_float)(jcontext ctx, jobject self, jfloat param0);
+#define VTABLE_mindustry_ui_dialogs_ModsDialog_scaleBy_float_float 69
+typedef void (*func_mindustry_ui_dialogs_ModsDialog_scaleBy_float_float)(jcontext ctx, jobject self, jfloat param0, jfloat param1);
+#define VTABLE_mindustry_ui_dialogs_ModsDialog_getRotation_R_float 70
+typedef jfloat (*func_mindustry_ui_dialogs_ModsDialog_getRotation_R_float)(jcontext ctx, jobject self);
+#define VTABLE_mindustry_ui_dialogs_ModsDialog_setRotation_float 71
+typedef void (*func_mindustry_ui_dialogs_ModsDialog_setRotation_float)(jcontext ctx, jobject self, jfloat param0);
+#define VTABLE_mindustry_ui_dialogs_ModsDialog_setRotationOrigin_float_int 72
+typedef void (*func_mindustry_ui_dialogs_ModsDialog_setRotationOrigin_float_int)(jcontext ctx, jobject self, jfloat param0, jint param1);
+#define VTABLE_mindustry_ui_dialogs_ModsDialog_rotateBy_float 73
+typedef void (*func_mindustry_ui_dialogs_ModsDialog_rotateBy_float)(jcontext ctx, jobject self, jfloat param0);
+#define VTABLE_mindustry_ui_dialogs_ModsDialog_setColor_float_float_float_float 74
+typedef void (*func_mindustry_ui_dialogs_ModsDialog_setColor_float_float_float_float)(jcontext ctx, jobject self, jfloat param0, jfloat param1, jfloat param2, jfloat param3);
+#define VTABLE_mindustry_ui_dialogs_ModsDialog_setColor_arc_graphics_Color 75
+typedef void (*func_mindustry_ui_dialogs_ModsDialog_setColor_arc_graphics_Color)(jcontext ctx, jobject self, jobject param0);
+#define VTABLE_mindustry_ui_dialogs_ModsDialog_toFront 76
+typedef void (*func_mindustry_ui_dialogs_ModsDialog_toFront)(jcontext ctx, jobject self);
+#define VTABLE_mindustry_ui_dialogs_ModsDialog_toBack 77
+typedef void (*func_mindustry_ui_dialogs_ModsDialog_toBack)(jcontext ctx, jobject self);
+#define VTABLE_mindustry_ui_dialogs_ModsDialog_getZIndex_R_int 78
+typedef jint (*func_mindustry_ui_dialogs_ModsDialog_getZIndex_R_int)(jcontext ctx, jobject self);
+#define VTABLE_mindustry_ui_dialogs_ModsDialog_setZIndex_int 79
+typedef void (*func_mindustry_ui_dialogs_ModsDialog_setZIndex_int)(jcontext ctx, jobject self, jint param0);
+#define VTABLE_mindustry_ui_dialogs_ModsDialog_clipBegin_R_boolean 80
+typedef jbool (*func_mindustry_ui_dialogs_ModsDialog_clipBegin_R_boolean)(jcontext ctx, jobject self);
+#define VTABLE_mindustry_ui_dialogs_ModsDialog_clipBegin_float_float_float_float_R_boolean 81
+typedef jbool (*func_mindustry_ui_dialogs_ModsDialog_clipBegin_float_float_float_float_R_boolean)(jcontext ctx, jobject self, jfloat param0, jfloat param1, jfloat param2, jfloat param3);
+#define VTABLE_mindustry_ui_dialogs_ModsDialog_clipEnd 82
+typedef void (*func_mindustry_ui_dialogs_ModsDialog_clipEnd)(jcontext ctx, jobject self);
+#define VTABLE_mindustry_ui_dialogs_ModsDialog_screenToLocalCoordinates_arc_math_geom_Vec2_R_arc_math_geom_Vec2 83
+typedef jobject (*func_mindustry_ui_dialogs_ModsDialog_screenToLocalCoordinates_arc_math_geom_Vec2_R_arc_math_geom_Vec2)(jcontext ctx, jobject self, jobject param0);
+#define VTABLE_mindustry_ui_dialogs_ModsDialog_stageToLocalCoordinates_arc_math_geom_Vec2_R_arc_math_geom_Vec2 84
+typedef jobject (*func_mindustry_ui_dialogs_ModsDialog_stageToLocalCoordinates_arc_math_geom_Vec2_R_arc_math_geom_Vec2)(jcontext ctx, jobject self, jobject param0);
+#define VTABLE_mindustry_ui_dialogs_ModsDialog_localToStageCoordinates_arc_math_geom_Vec2_R_arc_math_geom_Vec2 85
+typedef jobject (*func_mindustry_ui_dialogs_ModsDialog_localToStageCoordinates_arc_math_geom_Vec2_R_arc_math_geom_Vec2)(jcontext ctx, jobject self, jobject param0);
+#define VTABLE_mindustry_ui_dialogs_ModsDialog_localToParentCoordinates_arc_math_geom_Vec2_R_arc_math_geom_Vec2 86
+typedef jobject (*func_mindustry_ui_dialogs_ModsDialog_localToParentCoordinates_arc_math_geom_Vec2_R_arc_math_geom_Vec2)(jcontext ctx, jobject self, jobject param0);
+#define VTABLE_mindustry_ui_dialogs_ModsDialog_localToAscendantCoordinates_arc_scene_Element_arc_math_geom_Vec2_R_arc_math_geom_Vec2 87
+typedef jobject (*func_mindustry_ui_dialogs_ModsDialog_localToAscendantCoordinates_arc_scene_Element_arc_math_geom_Vec2_R_arc_math_geom_Vec2)(jcontext ctx, jobject self, jobject param0, jobject param1);
+#define VTABLE_mindustry_ui_dialogs_ModsDialog_parentToLocalCoordinates_arc_math_geom_Vec2_R_arc_math_geom_Vec2 88
+typedef jobject (*func_mindustry_ui_dialogs_ModsDialog_parentToLocalCoordinates_arc_math_geom_Vec2_R_arc_math_geom_Vec2)(jcontext ctx, jobject self, jobject param0);
+#define VTABLE_mindustry_ui_dialogs_ModsDialog_getMinWidth_R_float 89
+typedef jfloat (*func_mindustry_ui_dialogs_ModsDialog_getMinWidth_R_float)(jcontext ctx, jobject self);
+#define VTABLE_mindustry_ui_dialogs_ModsDialog_getMinHeight_R_float 90
+typedef jfloat (*func_mindustry_ui_dialogs_ModsDialog_getMinHeight_R_float)(jcontext ctx, jobject self);
+#define VTABLE_mindustry_ui_dialogs_ModsDialog_getPrefWidth_R_float 91
+typedef jfloat (*func_mindustry_ui_dialogs_ModsDialog_getPrefWidth_R_float)(jcontext ctx, jobject self);
+#define VTABLE_mindustry_ui_dialogs_ModsDialog_getPrefHeight_R_float 92
+typedef jfloat (*func_mindustry_ui_dialogs_ModsDialog_getPrefHeight_R_float)(jcontext ctx, jobject self);
+#define VTABLE_mindustry_ui_dialogs_ModsDialog_getMaxWidth_R_float 93
+typedef jfloat (*func_mindustry_ui_dialogs_ModsDialog_getMaxWidth_R_float)(jcontext ctx, jobject self);
+#define VTABLE_mindustry_ui_dialogs_ModsDialog_getMaxHeight_R_float 94
+typedef jfloat (*func_mindustry_ui_dialogs_ModsDialog_getMaxHeight_R_float)(jcontext ctx, jobject self);
+#define VTABLE_mindustry_ui_dialogs_ModsDialog_setLayoutEnabled_boolean 95
+typedef void (*func_mindustry_ui_dialogs_ModsDialog_setLayoutEnabled_boolean)(jcontext ctx, jobject self, jbool param0);
+#define VTABLE_mindustry_ui_dialogs_ModsDialog_validate 96
+typedef void (*func_mindustry_ui_dialogs_ModsDialog_validate)(jcontext ctx, jobject self);
+#define VTABLE_mindustry_ui_dialogs_ModsDialog_needsLayout_R_boolean 97
+typedef jbool (*func_mindustry_ui_dialogs_ModsDialog_needsLayout_R_boolean)(jcontext ctx, jobject self);
+#define VTABLE_mindustry_ui_dialogs_ModsDialog_invalidate 98
+typedef void (*func_mindustry_ui_dialogs_ModsDialog_invalidate)(jcontext ctx, jobject self);
+#define VTABLE_mindustry_ui_dialogs_ModsDialog_invalidateHierarchy 99
+typedef void (*func_mindustry_ui_dialogs_ModsDialog_invalidateHierarchy)(jcontext ctx, jobject self);
+#define VTABLE_mindustry_ui_dialogs_ModsDialog_pack 100
+typedef void (*func_mindustry_ui_dialogs_ModsDialog_pack)(jcontext ctx, jobject self);
+#define VTABLE_mindustry_ui_dialogs_ModsDialog_setFillParent_boolean 101
+typedef void (*func_mindustry_ui_dialogs_ModsDialog_setFillParent_boolean)(jcontext ctx, jobject self, jbool param0);
+#define VTABLE_mindustry_ui_dialogs_ModsDialog_layout 102
+typedef void (*func_mindustry_ui_dialogs_ModsDialog_layout)(jcontext ctx, jobject self);
+#define VTABLE_mindustry_ui_dialogs_ModsDialog_keepInStage 103
+typedef void (*func_mindustry_ui_dialogs_ModsDialog_keepInStage)(jcontext ctx, jobject self);
+#define VTABLE_mindustry_ui_dialogs_ModsDialog_setTranslation_float_float 104
+typedef void (*func_mindustry_ui_dialogs_ModsDialog_setTranslation_float_float)(jcontext ctx, jobject self, jfloat param0, jfloat param1);
+#define VTABLE_mindustry_ui_dialogs_ModsDialog_keyDown_arc_input_KeyCode_java_lang_Runnable 105
+typedef void (*func_mindustry_ui_dialogs_ModsDialog_keyDown_arc_input_KeyCode_java_lang_Runnable)(jcontext ctx, jobject self, jobject param0, jobject param1);
+#define VTABLE_mindustry_ui_dialogs_ModsDialog_keyDown_arc_func_Cons 106
+typedef void (*func_mindustry_ui_dialogs_ModsDialog_keyDown_arc_func_Cons)(jcontext ctx, jobject self, jobject param0);
+#define VTABLE_mindustry_ui_dialogs_ModsDialog_fireClick 107
+typedef void (*func_mindustry_ui_dialogs_ModsDialog_fireClick)(jcontext ctx, jobject self);
+#define VTABLE_mindustry_ui_dialogs_ModsDialog_clicked_java_lang_Runnable_R_arc_scene_event_ClickListener 108
+typedef jobject (*func_mindustry_ui_dialogs_ModsDialog_clicked_java_lang_Runnable_R_arc_scene_event_ClickListener)(jcontext ctx, jobject self, jobject param0);
+#define VTABLE_mindustry_ui_dialogs_ModsDialog_clicked_arc_input_KeyCode_java_lang_Runnable_R_arc_scene_event_ClickListener 109
+typedef jobject (*func_mindustry_ui_dialogs_ModsDialog_clicked_arc_input_KeyCode_java_lang_Runnable_R_arc_scene_event_ClickListener)(jcontext ctx, jobject self, jobject param0, jobject param1);
+#define VTABLE_mindustry_ui_dialogs_ModsDialog_clicked_arc_func_Cons_java_lang_Runnable_R_arc_scene_event_ClickListener 110
+typedef jobject (*func_mindustry_ui_dialogs_ModsDialog_clicked_arc_func_Cons_java_lang_Runnable_R_arc_scene_event_ClickListener)(jcontext ctx, jobject self, jobject param0, jobject param1);
+#define VTABLE_mindustry_ui_dialogs_ModsDialog_clicked_arc_func_Cons_arc_func_Cons_R_arc_scene_event_ClickListener 111
+typedef jobject (*func_mindustry_ui_dialogs_ModsDialog_clicked_arc_func_Cons_arc_func_Cons_R_arc_scene_event_ClickListener)(jcontext ctx, jobject self, jobject param0, jobject param1);
+#define VTABLE_mindustry_ui_dialogs_ModsDialog_tapped_java_lang_Runnable_R_arc_scene_event_InputListener 112
+typedef jobject (*func_mindustry_ui_dialogs_ModsDialog_tapped_java_lang_Runnable_R_arc_scene_event_InputListener)(jcontext ctx, jobject self, jobject param0);
+#define VTABLE_mindustry_ui_dialogs_ModsDialog_hovered_java_lang_Runnable 113
+typedef void (*func_mindustry_ui_dialogs_ModsDialog_hovered_java_lang_Runnable)(jcontext ctx, jobject self, jobject param0);
+#define VTABLE_mindustry_ui_dialogs_ModsDialog_exited_java_lang_Runnable 114
+typedef void (*func_mindustry_ui_dialogs_ModsDialog_exited_java_lang_Runnable)(jcontext ctx, jobject self, jobject param0);
+#define VTABLE_mindustry_ui_dialogs_ModsDialog_released_java_lang_Runnable 115
+typedef void (*func_mindustry_ui_dialogs_ModsDialog_released_java_lang_Runnable)(jcontext ctx, jobject self, jobject param0);
+#define VTABLE_mindustry_ui_dialogs_ModsDialog_change 116
+typedef void (*func_mindustry_ui_dialogs_ModsDialog_change)(jcontext ctx, jobject self);
+#define VTABLE_mindustry_ui_dialogs_ModsDialog_changed_java_lang_Runnable 117
+typedef void (*func_mindustry_ui_dialogs_ModsDialog_changed_java_lang_Runnable)(jcontext ctx, jobject self, jobject param0);
+#define VTABLE_mindustry_ui_dialogs_ModsDialog_update_java_lang_Runnable_R_arc_scene_Element 118
+typedef jobject (*func_mindustry_ui_dialogs_ModsDialog_update_java_lang_Runnable_R_arc_scene_Element)(jcontext ctx, jobject self, jobject param0);
+#define VTABLE_mindustry_ui_dialogs_ModsDialog_visible_arc_func_Boolp_R_arc_scene_Element 119
+typedef jobject (*func_mindustry_ui_dialogs_ModsDialog_visible_arc_func_Boolp_R_arc_scene_Element)(jcontext ctx, jobject self, jobject param0);
+#define VTABLE_mindustry_ui_dialogs_ModsDialog_touchable_arc_func_Prov 120
+typedef void (*func_mindustry_ui_dialogs_ModsDialog_touchable_arc_func_Prov)(jcontext ctx, jobject self, jobject param0);
+#define VTABLE_mindustry_ui_dialogs_ModsDialog_setCullingArea_arc_math_geom_Rect 121
+typedef void (*func_mindustry_ui_dialogs_ModsDialog_setCullingArea_arc_math_geom_Rect)(jcontext ctx, jobject self, jobject param0);
+#define VTABLE_mindustry_ui_dialogs_ModsDialog_drawChildren 122
+typedef void (*func_mindustry_ui_dialogs_ModsDialog_drawChildren)(jcontext ctx, jobject self);
+#define VTABLE_mindustry_ui_dialogs_ModsDialog_computeTransform_R_arc_math_Mat 123
+typedef jobject (*func_mindustry_ui_dialogs_ModsDialog_computeTransform_R_arc_math_Mat)(jcontext ctx, jobject self);
+#define VTABLE_mindustry_ui_dialogs_ModsDialog_applyTransform_arc_math_Mat 124
+typedef void (*func_mindustry_ui_dialogs_ModsDialog_applyTransform_arc_math_Mat)(jcontext ctx, jobject self, jobject param0);
+#define VTABLE_mindustry_ui_dialogs_ModsDialog_resetTransform 125
+typedef void (*func_mindustry_ui_dialogs_ModsDialog_resetTransform)(jcontext ctx, jobject self);
+#define VTABLE_mindustry_ui_dialogs_ModsDialog_getCullingArea_R_arc_math_geom_Rect 126
+typedef jobject (*func_mindustry_ui_dialogs_ModsDialog_getCullingArea_R_arc_math_geom_Rect)(jcontext ctx, jobject self);
+#define VTABLE_mindustry_ui_dialogs_ModsDialog_childrenChanged 127
+typedef void (*func_mindustry_ui_dialogs_ModsDialog_childrenChanged)(jcontext ctx, jobject self);
+#define VTABLE_mindustry_ui_dialogs_ModsDialog_forEach_arc_func_Cons 128
+typedef void (*func_mindustry_ui_dialogs_ModsDialog_forEach_arc_func_Cons)(jcontext ctx, jobject self, jobject param0);
+#define VTABLE_mindustry_ui_dialogs_ModsDialog_fill_arc_scene_ui_layout_Table$DrawRect_R_arc_scene_Element 129
+typedef jobject (*func_mindustry_ui_dialogs_ModsDialog_fill_arc_scene_ui_layout_Table$DrawRect_R_arc_scene_Element)(jcontext ctx, jobject self, jobject param0);
+#define VTABLE_mindustry_ui_dialogs_ModsDialog_fill_arc_func_Cons 130
+typedef void (*func_mindustry_ui_dialogs_ModsDialog_fill_arc_func_Cons)(jcontext ctx, jobject self, jobject param0);
+#define VTABLE_mindustry_ui_dialogs_ModsDialog_fill_arc_scene_style_Drawable_arc_func_Cons 131
+typedef void (*func_mindustry_ui_dialogs_ModsDialog_fill_arc_scene_style_Drawable_arc_func_Cons)(jcontext ctx, jobject self, jobject param0, jobject param1);
+#define VTABLE_mindustry_ui_dialogs_ModsDialog_addChild_arc_scene_Element 132
+typedef void (*func_mindustry_ui_dialogs_ModsDialog_addChild_arc_scene_Element)(jcontext ctx, jobject self, jobject param0);
+#define VTABLE_mindustry_ui_dialogs_ModsDialog_addChildAt_int_arc_scene_Element 133
+typedef void (*func_mindustry_ui_dialogs_ModsDialog_addChildAt_int_arc_scene_Element)(jcontext ctx, jobject self, jint param0, jobject param1);
+#define VTABLE_mindustry_ui_dialogs_ModsDialog_addChildBefore_arc_scene_Element_arc_scene_Element 134
+typedef void (*func_mindustry_ui_dialogs_ModsDialog_addChildBefore_arc_scene_Element_arc_scene_Element)(jcontext ctx, jobject self, jobject param0, jobject param1);
+#define VTABLE_mindustry_ui_dialogs_ModsDialog_addChildAfter_arc_scene_Element_arc_scene_Element 135
+typedef void (*func_mindustry_ui_dialogs_ModsDialog_addChildAfter_arc_scene_Element_arc_scene_Element)(jcontext ctx, jobject self, jobject param0, jobject param1);
+#define VTABLE_mindustry_ui_dialogs_ModsDialog_removeChild_arc_scene_Element_R_boolean 136
+typedef jbool (*func_mindustry_ui_dialogs_ModsDialog_removeChild_arc_scene_Element_R_boolean)(jcontext ctx, jobject self, jobject param0);
+#define VTABLE_mindustry_ui_dialogs_ModsDialog_removeChild_arc_scene_Element_boolean_R_boolean 137
+typedef jbool (*func_mindustry_ui_dialogs_ModsDialog_removeChild_arc_scene_Element_boolean_R_boolean)(jcontext ctx, jobject self, jobject param0, jbool param1);
+#define VTABLE_mindustry_ui_dialogs_ModsDialog_clearChildren 138
+typedef void (*func_mindustry_ui_dialogs_ModsDialog_clearChildren)(jcontext ctx, jobject self);
+#define VTABLE_mindustry_ui_dialogs_ModsDialog_find_java_lang_String_R_arc_scene_Element 139
+typedef jobject (*func_mindustry_ui_dialogs_ModsDialog_find_java_lang_String_R_arc_scene_Element)(jcontext ctx, jobject self, jobject param0);
+#define VTABLE_mindustry_ui_dialogs_ModsDialog_findVisible_java_lang_String_R_arc_scene_Element 140
+typedef jobject (*func_mindustry_ui_dialogs_ModsDialog_findVisible_java_lang_String_R_arc_scene_Element)(jcontext ctx, jobject self, jobject param0);
+#define VTABLE_mindustry_ui_dialogs_ModsDialog_find_arc_func_Boolf_R_arc_scene_Element 141
+typedef jobject (*func_mindustry_ui_dialogs_ModsDialog_find_arc_func_Boolf_R_arc_scene_Element)(jcontext ctx, jobject self, jobject param0);
+#define VTABLE_mindustry_ui_dialogs_ModsDialog_swapActor_int_int_R_boolean 142
+typedef jbool (*func_mindustry_ui_dialogs_ModsDialog_swapActor_int_int_R_boolean)(jcontext ctx, jobject self, jint param0, jint param1);
+#define VTABLE_mindustry_ui_dialogs_ModsDialog_swapActor_arc_scene_Element_arc_scene_Element_R_boolean 143
+typedef jbool (*func_mindustry_ui_dialogs_ModsDialog_swapActor_arc_scene_Element_arc_scene_Element_R_boolean)(jcontext ctx, jobject self, jobject param0, jobject param1);
+#define VTABLE_mindustry_ui_dialogs_ModsDialog_getChildren_R_arc_struct_SnapshotSeq 144
+typedef jobject (*func_mindustry_ui_dialogs_ModsDialog_getChildren_R_arc_struct_SnapshotSeq)(jcontext ctx, jobject self);
+#define VTABLE_mindustry_ui_dialogs_ModsDialog_hasChildren_R_boolean 145
+typedef jbool (*func_mindustry_ui_dialogs_ModsDialog_hasChildren_R_boolean)(jcontext ctx, jobject self);
+#define VTABLE_mindustry_ui_dialogs_ModsDialog_isTransform_R_boolean 146
+typedef jbool (*func_mindustry_ui_dialogs_ModsDialog_isTransform_R_boolean)(jcontext ctx, jobject self);
+#define VTABLE_mindustry_ui_dialogs_ModsDialog_setTransform_boolean 147
+typedef void (*func_mindustry_ui_dialogs_ModsDialog_setTransform_boolean)(jcontext ctx, jobject self, jbool param0);
+#define VTABLE_mindustry_ui_dialogs_ModsDialog_localToDescendantCoordinates_arc_scene_Element_arc_math_geom_Vec2_R_arc_math_geom_Vec2 148
+typedef jobject (*func_mindustry_ui_dialogs_ModsDialog_localToDescendantCoordinates_arc_scene_Element_arc_math_geom_Vec2_R_arc_math_geom_Vec2)(jcontext ctx, jobject self, jobject param0, jobject param1);
+#define VTABLE_mindustry_ui_dialogs_ModsDialog_toString_java_lang_StringBuilder_int 149
+typedef void (*func_mindustry_ui_dialogs_ModsDialog_toString_java_lang_StringBuilder_int)(jcontext ctx, jobject self, jobject param0, jint param1);
+#define VTABLE_mindustry_ui_dialogs_ModsDialog_setLayoutEnabled_arc_scene_Group_boolean 150
+typedef void (*func_mindustry_ui_dialogs_ModsDialog_setLayoutEnabled_arc_scene_Group_boolean)(jcontext ctx, jobject self, jobject param0, jbool param1);
+#define VTABLE_mindustry_ui_dialogs_ModsDialog_obtainCell_R_arc_scene_ui_layout_Cell 151
+typedef jobject (*func_mindustry_ui_dialogs_ModsDialog_obtainCell_R_arc_scene_ui_layout_Cell)(jcontext ctx, jobject self);
+#define VTABLE_mindustry_ui_dialogs_ModsDialog_fill_R_arc_scene_ui_layout_Table 152
+typedef jobject (*func_mindustry_ui_dialogs_ModsDialog_fill_R_arc_scene_ui_layout_Table)(jcontext ctx, jobject self);
+#define VTABLE_mindustry_ui_dialogs_ModsDialog_drawBackground_float_float 153
+typedef void (*func_mindustry_ui_dialogs_ModsDialog_drawBackground_float_float)(jcontext ctx, jobject self, jfloat param0, jfloat param1);
+#define VTABLE_mindustry_ui_dialogs_ModsDialog_background_arc_scene_style_Drawable_R_arc_scene_ui_layout_Table 154
+typedef jobject (*func_mindustry_ui_dialogs_ModsDialog_background_arc_scene_style_Drawable_R_arc_scene_ui_layout_Table)(jcontext ctx, jobject self, jobject param0);
+#define VTABLE_mindustry_ui_dialogs_ModsDialog_getBackground_R_arc_scene_style_Drawable 155
+typedef jobject (*func_mindustry_ui_dialogs_ModsDialog_getBackground_R_arc_scene_style_Drawable)(jcontext ctx, jobject self);
+#define VTABLE_mindustry_ui_dialogs_ModsDialog_setBackground_arc_scene_style_Drawable 156
+typedef void (*func_mindustry_ui_dialogs_ModsDialog_setBackground_arc_scene_style_Drawable)(jcontext ctx, jobject self, jobject param0);
+#define VTABLE_mindustry_ui_dialogs_ModsDialog_getClip_R_boolean 157
+typedef jbool (*func_mindustry_ui_dialogs_ModsDialog_getClip_R_boolean)(jcontext ctx, jobject self);
+#define VTABLE_mindustry_ui_dialogs_ModsDialog_setClip_boolean 158
+typedef void (*func_mindustry_ui_dialogs_ModsDialog_setClip_boolean)(jcontext ctx, jobject self, jbool param0);
+#define VTABLE_mindustry_ui_dialogs_ModsDialog_add_arc_scene_Element_R_arc_scene_ui_layout_Cell 159
+typedef jobject (*func_mindustry_ui_dialogs_ModsDialog_add_arc_scene_Element_R_arc_scene_ui_layout_Cell)(jcontext ctx, jobject self, jobject param0);
+#define VTABLE_mindustry_ui_dialogs_ModsDialog_add_Array1_arc_scene_Element 160
+typedef void (*func_mindustry_ui_dialogs_ModsDialog_add_Array1_arc_scene_Element)(jcontext ctx, jobject self, jobject param0);
+#define VTABLE_mindustry_ui_dialogs_ModsDialog_collapser_arc_func_Cons_arc_func_Boolp_R_arc_scene_ui_layout_Cell 161
+typedef jobject (*func_mindustry_ui_dialogs_ModsDialog_collapser_arc_func_Cons_arc_func_Boolp_R_arc_scene_ui_layout_Cell)(jcontext ctx, jobject self, jobject param0, jobject param1);
+#define VTABLE_mindustry_ui_dialogs_ModsDialog_collapser_arc_scene_ui_layout_Table_arc_func_Boolp_R_arc_scene_ui_layout_Cell 162
+typedef jobject (*func_mindustry_ui_dialogs_ModsDialog_collapser_arc_scene_ui_layout_Table_arc_func_Boolp_R_arc_scene_ui_layout_Cell)(jcontext ctx, jobject self, jobject param0, jobject param1);
+#define VTABLE_mindustry_ui_dialogs_ModsDialog_collapser_arc_func_Cons_boolean_arc_func_Boolp_R_arc_scene_ui_layout_Cell 163
+typedef jobject (*func_mindustry_ui_dialogs_ModsDialog_collapser_arc_func_Cons_boolean_arc_func_Boolp_R_arc_scene_ui_layout_Cell)(jcontext ctx, jobject self, jobject param0, jbool param1, jobject param2);
+#define VTABLE_mindustry_ui_dialogs_ModsDialog_collapser_arc_scene_ui_layout_Table_boolean_arc_func_Boolp_R_arc_scene_ui_layout_Cell 164
+typedef jobject (*func_mindustry_ui_dialogs_ModsDialog_collapser_arc_scene_ui_layout_Table_boolean_arc_func_Boolp_R_arc_scene_ui_layout_Cell)(jcontext ctx, jobject self, jobject param0, jbool param1, jobject param2);
+#define VTABLE_mindustry_ui_dialogs_ModsDialog_table_R_arc_scene_ui_layout_Cell 165
+typedef jobject (*func_mindustry_ui_dialogs_ModsDialog_table_R_arc_scene_ui_layout_Cell)(jcontext ctx, jobject self);
+#define VTABLE_mindustry_ui_dialogs_ModsDialog_table_arc_scene_style_Drawable_R_arc_scene_ui_layout_Cell 166
+typedef jobject (*func_mindustry_ui_dialogs_ModsDialog_table_arc_scene_style_Drawable_R_arc_scene_ui_layout_Cell)(jcontext ctx, jobject self, jobject param0);
+#define VTABLE_mindustry_ui_dialogs_ModsDialog_table_arc_func_Cons_R_arc_scene_ui_layout_Cell 167
+typedef jobject (*func_mindustry_ui_dialogs_ModsDialog_table_arc_func_Cons_R_arc_scene_ui_layout_Cell)(jcontext ctx, jobject self, jobject param0);
+#define VTABLE_mindustry_ui_dialogs_ModsDialog_wrapTable_arc_func_Cons_R_arc_scene_ui_layout_Cell 168
+typedef jobject (*func_mindustry_ui_dialogs_ModsDialog_wrapTable_arc_func_Cons_R_arc_scene_ui_layout_Cell)(jcontext ctx, jobject self, jobject param0);
+#define VTABLE_mindustry_ui_dialogs_ModsDialog_table_arc_scene_style_Drawable_arc_func_Cons_R_arc_scene_ui_layout_Cell 169
+typedef jobject (*func_mindustry_ui_dialogs_ModsDialog_table_arc_scene_style_Drawable_arc_func_Cons_R_arc_scene_ui_layout_Cell)(jcontext ctx, jobject self, jobject param0, jobject param1);
+#define VTABLE_mindustry_ui_dialogs_ModsDialog_table_arc_scene_style_Drawable_int_arc_func_Cons_R_arc_scene_ui_layout_Cell 170
+typedef jobject (*func_mindustry_ui_dialogs_ModsDialog_table_arc_scene_style_Drawable_int_arc_func_Cons_R_arc_scene_ui_layout_Cell)(jcontext ctx, jobject self, jobject param0, jint param1, jobject param2);
+#define VTABLE_mindustry_ui_dialogs_ModsDialog_label_arc_func_Prov_R_arc_scene_ui_layout_Cell 171
+typedef jobject (*func_mindustry_ui_dialogs_ModsDialog_label_arc_func_Prov_R_arc_scene_ui_layout_Cell)(jcontext ctx, jobject self, jobject param0);
+#define VTABLE_mindustry_ui_dialogs_ModsDialog_labelWrap_arc_func_Prov_R_arc_scene_ui_layout_Cell 172
+typedef jobject (*func_mindustry_ui_dialogs_ModsDialog_labelWrap_arc_func_Prov_R_arc_scene_ui_layout_Cell)(jcontext ctx, jobject self, jobject param0);
+#define VTABLE_mindustry_ui_dialogs_ModsDialog_labelWrap_java_lang_String_R_arc_scene_ui_layout_Cell 173
+typedef jobject (*func_mindustry_ui_dialogs_ModsDialog_labelWrap_java_lang_String_R_arc_scene_ui_layout_Cell)(jcontext ctx, jobject self, jobject param0);
+#define VTABLE_mindustry_ui_dialogs_ModsDialog_pane_arc_func_Cons_R_arc_scene_ui_layout_Cell 174
+typedef jobject (*func_mindustry_ui_dialogs_ModsDialog_pane_arc_func_Cons_R_arc_scene_ui_layout_Cell)(jcontext ctx, jobject self, jobject param0);
+#define VTABLE_mindustry_ui_dialogs_ModsDialog_pane_arc_scene_ui_ScrollPane$ScrollPaneStyle_arc_func_Cons_R_arc_scene_ui_layout_Cell 175
+typedef jobject (*func_mindustry_ui_dialogs_ModsDialog_pane_arc_scene_ui_ScrollPane$ScrollPaneStyle_arc_func_Cons_R_arc_scene_ui_layout_Cell)(jcontext ctx, jobject self, jobject param0, jobject param1);
+#define VTABLE_mindustry_ui_dialogs_ModsDialog_pane_arc_scene_ui_ScrollPane$ScrollPaneStyle_arc_scene_Element_R_arc_scene_ui_layout_Cell 176
+typedef jobject (*func_mindustry_ui_dialogs_ModsDialog_pane_arc_scene_ui_ScrollPane$ScrollPaneStyle_arc_scene_Element_R_arc_scene_ui_layout_Cell)(jcontext ctx, jobject self, jobject param0, jobject param1);
+#define VTABLE_mindustry_ui_dialogs_ModsDialog_pane_arc_scene_Element_R_arc_scene_ui_layout_Cell 177
+typedef jobject (*func_mindustry_ui_dialogs_ModsDialog_pane_arc_scene_Element_R_arc_scene_ui_layout_Cell)(jcontext ctx, jobject self, jobject param0);
+#define VTABLE_mindustry_ui_dialogs_ModsDialog_add_java_lang_CharSequence_R_arc_scene_ui_layout_Cell 178
+typedef jobject (*func_mindustry_ui_dialogs_ModsDialog_add_java_lang_CharSequence_R_arc_scene_ui_layout_Cell)(jcontext ctx, jobject self, jobject param0);
+#define VTABLE_mindustry_ui_dialogs_ModsDialog_add_java_lang_CharSequence_float_R_arc_scene_ui_layout_Cell 179
+typedef jobject (*func_mindustry_ui_dialogs_ModsDialog_add_java_lang_CharSequence_float_R_arc_scene_ui_layout_Cell)(jcontext ctx, jobject self, jobject param0, jfloat param1);
+#define VTABLE_mindustry_ui_dialogs_ModsDialog_add_java_lang_CharSequence_arc_scene_ui_Label$LabelStyle_float_R_arc_scene_ui_layout_Cell 180
+typedef jobject (*func_mindustry_ui_dialogs_ModsDialog_add_java_lang_CharSequence_arc_scene_ui_Label$LabelStyle_float_R_arc_scene_ui_layout_Cell)(jcontext ctx, jobject self, jobject param0, jobject param1, jfloat param2);
+#define VTABLE_mindustry_ui_dialogs_ModsDialog_add_java_lang_CharSequence_arc_graphics_Color_float_R_arc_scene_ui_layout_Cell 181
+typedef jobject (*func_mindustry_ui_dialogs_ModsDialog_add_java_lang_CharSequence_arc_graphics_Color_float_R_arc_scene_ui_layout_Cell)(jcontext ctx, jobject self, jobject param0, jobject param1, jfloat param2);
+#define VTABLE_mindustry_ui_dialogs_ModsDialog_add_java_lang_CharSequence_arc_scene_ui_Label$LabelStyle_R_arc_scene_ui_layout_Cell 182
+typedef jobject (*func_mindustry_ui_dialogs_ModsDialog_add_java_lang_CharSequence_arc_scene_ui_Label$LabelStyle_R_arc_scene_ui_layout_Cell)(jcontext ctx, jobject self, jobject param0, jobject param1);
+#define VTABLE_mindustry_ui_dialogs_ModsDialog_add_java_lang_CharSequence_arc_graphics_Color_R_arc_scene_ui_layout_Cell 183
+typedef jobject (*func_mindustry_ui_dialogs_ModsDialog_add_java_lang_CharSequence_arc_graphics_Color_R_arc_scene_ui_layout_Cell)(jcontext ctx, jobject self, jobject param0, jobject param1);
+#define VTABLE_mindustry_ui_dialogs_ModsDialog_add_R_arc_scene_ui_layout_Cell 184
+typedef jobject (*func_mindustry_ui_dialogs_ModsDialog_add_R_arc_scene_ui_layout_Cell)(jcontext ctx, jobject self);
+#define VTABLE_mindustry_ui_dialogs_ModsDialog_stack_Array1_arc_scene_Element_R_arc_scene_ui_layout_Cell 185
+typedef jobject (*func_mindustry_ui_dialogs_ModsDialog_stack_Array1_arc_scene_Element_R_arc_scene_ui_layout_Cell)(jcontext ctx, jobject self, jobject param0);
+#define VTABLE_mindustry_ui_dialogs_ModsDialog_spacer_arc_func_Floatp_arc_func_Floatp_R_arc_scene_ui_layout_Cell 186
+typedef jobject (*func_mindustry_ui_dialogs_ModsDialog_spacer_arc_func_Floatp_arc_func_Floatp_R_arc_scene_ui_layout_Cell)(jcontext ctx, jobject self, jobject param0, jobject param1);
+#define VTABLE_mindustry_ui_dialogs_ModsDialog_spacerX_arc_func_Floatp_R_arc_scene_ui_layout_Cell 187
+typedef jobject (*func_mindustry_ui_dialogs_ModsDialog_spacerX_arc_func_Floatp_R_arc_scene_ui_layout_Cell)(jcontext ctx, jobject self, jobject param0);
+#define VTABLE_mindustry_ui_dialogs_ModsDialog_spacerY_arc_func_Floatp_R_arc_scene_ui_layout_Cell 188
+typedef jobject (*func_mindustry_ui_dialogs_ModsDialog_spacerY_arc_func_Floatp_R_arc_scene_ui_layout_Cell)(jcontext ctx, jobject self, jobject param0);
+#define VTABLE_mindustry_ui_dialogs_ModsDialog_image_arc_func_Prov_R_arc_scene_ui_layout_Cell 189
+typedef jobject (*func_mindustry_ui_dialogs_ModsDialog_image_arc_func_Prov_R_arc_scene_ui_layout_Cell)(jcontext ctx, jobject self, jobject param0);
+#define VTABLE_mindustry_ui_dialogs_ModsDialog_imageDraw_arc_func_Prov_R_arc_scene_ui_layout_Cell 190
+typedef jobject (*func_mindustry_ui_dialogs_ModsDialog_imageDraw_arc_func_Prov_R_arc_scene_ui_layout_Cell)(jcontext ctx, jobject self, jobject param0);
+#define VTABLE_mindustry_ui_dialogs_ModsDialog_image_R_arc_scene_ui_layout_Cell 191
+typedef jobject (*func_mindustry_ui_dialogs_ModsDialog_image_R_arc_scene_ui_layout_Cell)(jcontext ctx, jobject self);
+#define VTABLE_mindustry_ui_dialogs_ModsDialog_image_arc_scene_style_Drawable_R_arc_scene_ui_layout_Cell 192
+typedef jobject (*func_mindustry_ui_dialogs_ModsDialog_image_arc_scene_style_Drawable_R_arc_scene_ui_layout_Cell)(jcontext ctx, jobject self, jobject param0);
+#define VTABLE_mindustry_ui_dialogs_ModsDialog_image_arc_scene_style_Drawable_arc_graphics_Color_R_arc_scene_ui_layout_Cell 193
+typedef jobject (*func_mindustry_ui_dialogs_ModsDialog_image_arc_scene_style_Drawable_arc_graphics_Color_R_arc_scene_ui_layout_Cell)(jcontext ctx, jobject self, jobject param0, jobject param1);
+#define VTABLE_mindustry_ui_dialogs_ModsDialog_image_arc_graphics_g2d_TextureRegion_R_arc_scene_ui_layout_Cell 194
+typedef jobject (*func_mindustry_ui_dialogs_ModsDialog_image_arc_graphics_g2d_TextureRegion_R_arc_scene_ui_layout_Cell)(jcontext ctx, jobject self, jobject param0);
+#define VTABLE_mindustry_ui_dialogs_ModsDialog_check_java_lang_String_arc_func_Boolc_R_arc_scene_ui_layout_Cell 195
+typedef jobject (*func_mindustry_ui_dialogs_ModsDialog_check_java_lang_String_arc_func_Boolc_R_arc_scene_ui_layout_Cell)(jcontext ctx, jobject self, jobject param0, jobject param1);
+#define VTABLE_mindustry_ui_dialogs_ModsDialog_check_java_lang_String_boolean_arc_func_Boolc_R_arc_scene_ui_layout_Cell 196
+typedef jobject (*func_mindustry_ui_dialogs_ModsDialog_check_java_lang_String_boolean_arc_func_Boolc_R_arc_scene_ui_layout_Cell)(jcontext ctx, jobject self, jobject param0, jbool param1, jobject param2);
+#define VTABLE_mindustry_ui_dialogs_ModsDialog_check_java_lang_String_float_boolean_arc_func_Boolc_R_arc_scene_ui_layout_Cell 197
+typedef jobject (*func_mindustry_ui_dialogs_ModsDialog_check_java_lang_String_float_boolean_arc_func_Boolc_R_arc_scene_ui_layout_Cell)(jcontext ctx, jobject self, jobject param0, jfloat param1, jbool param2, jobject param3);
+#define VTABLE_mindustry_ui_dialogs_ModsDialog_button_arc_func_Cons_java_lang_Runnable_R_arc_scene_ui_layout_Cell 198
+typedef jobject (*func_mindustry_ui_dialogs_ModsDialog_button_arc_func_Cons_java_lang_Runnable_R_arc_scene_ui_layout_Cell)(jcontext ctx, jobject self, jobject param0, jobject param1);
+#define VTABLE_mindustry_ui_dialogs_ModsDialog_button_arc_func_Cons_arc_scene_ui_Button$ButtonStyle_java_lang_Runnable_R_arc_scene_ui_layout_Cell 199
+typedef jobject (*func_mindustry_ui_dialogs_ModsDialog_button_arc_func_Cons_arc_scene_ui_Button$ButtonStyle_java_lang_Runnable_R_arc_scene_ui_layout_Cell)(jcontext ctx, jobject self, jobject param0, jobject param1, jobject param2);
+#define VTABLE_mindustry_ui_dialogs_ModsDialog_button_java_lang_String_java_lang_Runnable_R_arc_scene_ui_layout_Cell 200
+typedef jobject (*func_mindustry_ui_dialogs_ModsDialog_button_java_lang_String_java_lang_Runnable_R_arc_scene_ui_layout_Cell)(jcontext ctx, jobject self, jobject param0, jobject param1);
+#define VTABLE_mindustry_ui_dialogs_ModsDialog_button_java_lang_String_arc_scene_ui_TextButton$TextButtonStyle_java_lang_Runnable_R_arc_scene_ui_layout_Cell 201
+typedef jobject (*func_mindustry_ui_dialogs_ModsDialog_button_java_lang_String_arc_scene_ui_TextButton$TextButtonStyle_java_lang_Runnable_R_arc_scene_ui_layout_Cell)(jcontext ctx, jobject self, jobject param0, jobject param1, jobject param2);
+#define VTABLE_mindustry_ui_dialogs_ModsDialog_button_arc_scene_style_Drawable_java_lang_Runnable_R_arc_scene_ui_layout_Cell 202
+typedef jobject (*func_mindustry_ui_dialogs_ModsDialog_button_arc_scene_style_Drawable_java_lang_Runnable_R_arc_scene_ui_layout_Cell)(jcontext ctx, jobject self, jobject param0, jobject param1);
+#define VTABLE_mindustry_ui_dialogs_ModsDialog_button_arc_scene_style_Drawable_float_java_lang_Runnable_R_arc_scene_ui_layout_Cell 203
+typedef jobject (*func_mindustry_ui_dialogs_ModsDialog_button_arc_scene_style_Drawable_float_java_lang_Runnable_R_arc_scene_ui_layout_Cell)(jcontext ctx, jobject self, jobject param0, jfloat param1, jobject param2);
+#define VTABLE_mindustry_ui_dialogs_ModsDialog_button_arc_scene_style_Drawable_arc_scene_ui_ImageButton$ImageButtonStyle_float_java_lang_Runnable_R_arc_scene_ui_layout_Cell 204
+typedef jobject (*func_mindustry_ui_dialogs_ModsDialog_button_arc_scene_style_Drawable_arc_scene_ui_ImageButton$ImageButtonStyle_float_java_lang_Runnable_R_arc_scene_ui_layout_Cell)(jcontext ctx, jobject self, jobject param0, jobject param1, jfloat param2, jobject param3);
+#define VTABLE_mindustry_ui_dialogs_ModsDialog_button_arc_scene_style_Drawable_arc_scene_ui_ImageButton$ImageButtonStyle_java_lang_Runnable_R_arc_scene_ui_layout_Cell 205
+typedef jobject (*func_mindustry_ui_dialogs_ModsDialog_button_arc_scene_style_Drawable_arc_scene_ui_ImageButton$ImageButtonStyle_java_lang_Runnable_R_arc_scene_ui_layout_Cell)(jcontext ctx, jobject self, jobject param0, jobject param1, jobject param2);
+#define VTABLE_mindustry_ui_dialogs_ModsDialog_field_java_lang_String_arc_func_Cons_R_arc_scene_ui_layout_Cell 206
+typedef jobject (*func_mindustry_ui_dialogs_ModsDialog_field_java_lang_String_arc_func_Cons_R_arc_scene_ui_layout_Cell)(jcontext ctx, jobject self, jobject param0, jobject param1);
+#define VTABLE_mindustry_ui_dialogs_ModsDialog_area_java_lang_String_arc_func_Cons_R_arc_scene_ui_layout_Cell 207
+typedef jobject (*func_mindustry_ui_dialogs_ModsDialog_area_java_lang_String_arc_func_Cons_R_arc_scene_ui_layout_Cell)(jcontext ctx, jobject self, jobject param0, jobject param1);
+#define VTABLE_mindustry_ui_dialogs_ModsDialog_area_java_lang_String_arc_scene_ui_TextField$TextFieldStyle_arc_func_Cons_R_arc_scene_ui_layout_Cell 208
+typedef jobject (*func_mindustry_ui_dialogs_ModsDialog_area_java_lang_String_arc_scene_ui_TextField$TextFieldStyle_arc_func_Cons_R_arc_scene_ui_layout_Cell)(jcontext ctx, jobject self, jobject param0, jobject param1, jobject param2);
+#define VTABLE_mindustry_ui_dialogs_ModsDialog_field_java_lang_String_arc_scene_ui_TextField$TextFieldFilter_arc_func_Cons_R_arc_scene_ui_layout_Cell 209
+typedef jobject (*func_mindustry_ui_dialogs_ModsDialog_field_java_lang_String_arc_scene_ui_TextField$TextFieldFilter_arc_func_Cons_R_arc_scene_ui_layout_Cell)(jcontext ctx, jobject self, jobject param0, jobject param1, jobject param2);
+#define VTABLE_mindustry_ui_dialogs_ModsDialog_field_java_lang_String_arc_scene_ui_TextField$TextFieldStyle_arc_func_Cons_R_arc_scene_ui_layout_Cell 210
+typedef jobject (*func_mindustry_ui_dialogs_ModsDialog_field_java_lang_String_arc_scene_ui_TextField$TextFieldStyle_arc_func_Cons_R_arc_scene_ui_layout_Cell)(jcontext ctx, jobject self, jobject param0, jobject param1, jobject param2);
+#define VTABLE_mindustry_ui_dialogs_ModsDialog_rect_arc_scene_ui_layout_Table$DrawRect_R_arc_scene_ui_layout_Cell 211
+typedef jobject (*func_mindustry_ui_dialogs_ModsDialog_rect_arc_scene_ui_layout_Table$DrawRect_R_arc_scene_ui_layout_Cell)(jcontext ctx, jobject self, jobject param0);
+#define VTABLE_mindustry_ui_dialogs_ModsDialog_buttonRow_java_lang_String_arc_scene_style_Drawable_java_lang_Runnable_R_arc_scene_ui_layout_Cell 212
+typedef jobject (*func_mindustry_ui_dialogs_ModsDialog_buttonRow_java_lang_String_arc_scene_style_Drawable_java_lang_Runnable_R_arc_scene_ui_layout_Cell)(jcontext ctx, jobject self, jobject param0, jobject param1, jobject param2);
+#define VTABLE_mindustry_ui_dialogs_ModsDialog_button_java_lang_String_arc_scene_style_Drawable_java_lang_Runnable_R_arc_scene_ui_layout_Cell 213
+typedef jobject (*func_mindustry_ui_dialogs_ModsDialog_button_java_lang_String_arc_scene_style_Drawable_java_lang_Runnable_R_arc_scene_ui_layout_Cell)(jcontext ctx, jobject self, jobject param0, jobject param1, jobject param2);
+#define VTABLE_mindustry_ui_dialogs_ModsDialog_button_java_lang_String_arc_scene_style_Drawable_float_java_lang_Runnable_R_arc_scene_ui_layout_Cell 214
+typedef jobject (*func_mindustry_ui_dialogs_ModsDialog_button_java_lang_String_arc_scene_style_Drawable_float_java_lang_Runnable_R_arc_scene_ui_layout_Cell)(jcontext ctx, jobject self, jobject param0, jobject param1, jfloat param2, jobject param3);
+#define VTABLE_mindustry_ui_dialogs_ModsDialog_button_java_lang_String_arc_scene_style_Drawable_arc_scene_ui_TextButton$TextButtonStyle_float_java_lang_Runnable_R_arc_scene_ui_layout_Cell 215
+typedef jobject (*func_mindustry_ui_dialogs_ModsDialog_button_java_lang_String_arc_scene_style_Drawable_arc_scene_ui_TextButton$TextButtonStyle_float_java_lang_Runnable_R_arc_scene_ui_layout_Cell)(jcontext ctx, jobject self, jobject param0, jobject param1, jobject param2, jfloat param3, jobject param4);
+#define VTABLE_mindustry_ui_dialogs_ModsDialog_button_java_lang_String_arc_scene_style_Drawable_arc_scene_ui_TextButton$TextButtonStyle_java_lang_Runnable_R_arc_scene_ui_layout_Cell 216
+typedef jobject (*func_mindustry_ui_dialogs_ModsDialog_button_java_lang_String_arc_scene_style_Drawable_arc_scene_ui_TextButton$TextButtonStyle_java_lang_Runnable_R_arc_scene_ui_layout_Cell)(jcontext ctx, jobject self, jobject param0, jobject param1, jobject param2, jobject param3);
+#define VTABLE_mindustry_ui_dialogs_ModsDialog_buttonCenter_java_lang_String_arc_scene_style_Drawable_float_java_lang_Runnable_R_arc_scene_ui_layout_Cell 217
+typedef jobject (*func_mindustry_ui_dialogs_ModsDialog_buttonCenter_java_lang_String_arc_scene_style_Drawable_float_java_lang_Runnable_R_arc_scene_ui_layout_Cell)(jcontext ctx, jobject self, jobject param0, jobject param1, jfloat param2, jobject param3);
+#define VTABLE_mindustry_ui_dialogs_ModsDialog_buttonCenter_java_lang_String_arc_scene_style_Drawable_java_lang_Runnable_R_arc_scene_ui_layout_Cell 218
+typedef jobject (*func_mindustry_ui_dialogs_ModsDialog_buttonCenter_java_lang_String_arc_scene_style_Drawable_java_lang_Runnable_R_arc_scene_ui_layout_Cell)(jcontext ctx, jobject self, jobject param0, jobject param1, jobject param2);
+#define VTABLE_mindustry_ui_dialogs_ModsDialog_buttonCenter_java_lang_String_arc_scene_style_Drawable_arc_scene_ui_TextButton$TextButtonStyle_float_java_lang_Runnable_R_arc_scene_ui_layout_Cell 219
+typedef jobject (*func_mindustry_ui_dialogs_ModsDialog_buttonCenter_java_lang_String_arc_scene_style_Drawable_arc_scene_ui_TextButton$TextButtonStyle_float_java_lang_Runnable_R_arc_scene_ui_layout_Cell)(jcontext ctx, jobject self, jobject param0, jobject param1, jobject param2, jfloat param3, jobject param4);
+#define VTABLE_mindustry_ui_dialogs_ModsDialog_slider_float_float_float_arc_func_Floatc_R_arc_scene_ui_layout_Cell 220
+typedef jobject (*func_mindustry_ui_dialogs_ModsDialog_slider_float_float_float_arc_func_Floatc_R_arc_scene_ui_layout_Cell)(jcontext ctx, jobject self, jfloat param0, jfloat param1, jfloat param2, jobject param3);
+#define VTABLE_mindustry_ui_dialogs_ModsDialog_slider_float_float_float_float_arc_func_Floatc_R_arc_scene_ui_layout_Cell 221
+typedef jobject (*func_mindustry_ui_dialogs_ModsDialog_slider_float_float_float_float_arc_func_Floatc_R_arc_scene_ui_layout_Cell)(jcontext ctx, jobject self, jfloat param0, jfloat param1, jfloat param2, jfloat param3, jobject param4);
+#define VTABLE_mindustry_ui_dialogs_ModsDialog_slider_float_float_float_float_boolean_arc_func_Floatc_R_arc_scene_ui_layout_Cell 222
+typedef jobject (*func_mindustry_ui_dialogs_ModsDialog_slider_float_float_float_float_boolean_arc_func_Floatc_R_arc_scene_ui_layout_Cell)(jcontext ctx, jobject self, jfloat param0, jfloat param1, jfloat param2, jfloat param3, jbool param4, jobject param5);
+#define VTABLE_mindustry_ui_dialogs_ModsDialog_reset 223
+typedef void (*func_mindustry_ui_dialogs_ModsDialog_reset)(jcontext ctx, jobject self);
+#define VTABLE_mindustry_ui_dialogs_ModsDialog_row_R_arc_scene_ui_layout_Table 224
+typedef jobject (*func_mindustry_ui_dialogs_ModsDialog_row_R_arc_scene_ui_layout_Table)(jcontext ctx, jobject self);
+#define VTABLE_mindustry_ui_dialogs_ModsDialog_endRow 225
+typedef void (*func_mindustry_ui_dialogs_ModsDialog_endRow)(jcontext ctx, jobject self);
+#define VTABLE_mindustry_ui_dialogs_ModsDialog_getCell_arc_scene_Element_R_arc_scene_ui_layout_Cell 226
+typedef jobject (*func_mindustry_ui_dialogs_ModsDialog_getCell_arc_scene_Element_R_arc_scene_ui_layout_Cell)(jcontext ctx, jobject self, jobject param0);
+#define VTABLE_mindustry_ui_dialogs_ModsDialog_getCells_R_arc_struct_Seq 227
+typedef jobject (*func_mindustry_ui_dialogs_ModsDialog_getCells_R_arc_struct_Seq)(jcontext ctx, jobject self);
+#define VTABLE_mindustry_ui_dialogs_ModsDialog_defaults_R_arc_scene_ui_layout_Cell 228
+typedef jobject (*func_mindustry_ui_dialogs_ModsDialog_defaults_R_arc_scene_ui_layout_Cell)(jcontext ctx, jobject self);
+#define VTABLE_mindustry_ui_dialogs_ModsDialog_margin_float_R_arc_scene_ui_layout_Table 229
+typedef jobject (*func_mindustry_ui_dialogs_ModsDialog_margin_float_R_arc_scene_ui_layout_Table)(jcontext ctx, jobject self, jfloat param0);
+#define VTABLE_mindustry_ui_dialogs_ModsDialog_margin_float_float_float_float_R_arc_scene_ui_layout_Table 230
+typedef jobject (*func_mindustry_ui_dialogs_ModsDialog_margin_float_float_float_float_R_arc_scene_ui_layout_Table)(jcontext ctx, jobject self, jfloat param0, jfloat param1, jfloat param2, jfloat param3);
+#define VTABLE_mindustry_ui_dialogs_ModsDialog_marginTop_float_R_arc_scene_ui_layout_Table 231
+typedef jobject (*func_mindustry_ui_dialogs_ModsDialog_marginTop_float_R_arc_scene_ui_layout_Table)(jcontext ctx, jobject self, jfloat param0);
+#define VTABLE_mindustry_ui_dialogs_ModsDialog_marginLeft_float_R_arc_scene_ui_layout_Table 232
+typedef jobject (*func_mindustry_ui_dialogs_ModsDialog_marginLeft_float_R_arc_scene_ui_layout_Table)(jcontext ctx, jobject self, jfloat param0);
+#define VTABLE_mindustry_ui_dialogs_ModsDialog_marginBottom_float_R_arc_scene_ui_layout_Table 233
+typedef jobject (*func_mindustry_ui_dialogs_ModsDialog_marginBottom_float_R_arc_scene_ui_layout_Table)(jcontext ctx, jobject self, jfloat param0);
+#define VTABLE_mindustry_ui_dialogs_ModsDialog_marginRight_float_R_arc_scene_ui_layout_Table 234
+typedef jobject (*func_mindustry_ui_dialogs_ModsDialog_marginRight_float_R_arc_scene_ui_layout_Table)(jcontext ctx, jobject self, jfloat param0);
+#define VTABLE_mindustry_ui_dialogs_ModsDialog_align_int_R_arc_scene_ui_layout_Table 235
+typedef jobject (*func_mindustry_ui_dialogs_ModsDialog_align_int_R_arc_scene_ui_layout_Table)(jcontext ctx, jobject self, jint param0);
+#define VTABLE_mindustry_ui_dialogs_ModsDialog_center_R_arc_scene_ui_layout_Table 236
+typedef jobject (*func_mindustry_ui_dialogs_ModsDialog_center_R_arc_scene_ui_layout_Table)(jcontext ctx, jobject self);
+#define VTABLE_mindustry_ui_dialogs_ModsDialog_top_R_arc_scene_ui_layout_Table 237
+typedef jobject (*func_mindustry_ui_dialogs_ModsDialog_top_R_arc_scene_ui_layout_Table)(jcontext ctx, jobject self);
+#define VTABLE_mindustry_ui_dialogs_ModsDialog_left_R_arc_scene_ui_layout_Table 238
+typedef jobject (*func_mindustry_ui_dialogs_ModsDialog_left_R_arc_scene_ui_layout_Table)(jcontext ctx, jobject self);
+#define VTABLE_mindustry_ui_dialogs_ModsDialog_bottom_R_arc_scene_ui_layout_Table 239
+typedef jobject (*func_mindustry_ui_dialogs_ModsDialog_bottom_R_arc_scene_ui_layout_Table)(jcontext ctx, jobject self);
+#define VTABLE_mindustry_ui_dialogs_ModsDialog_right_R_arc_scene_ui_layout_Table 240
+typedef jobject (*func_mindustry_ui_dialogs_ModsDialog_right_R_arc_scene_ui_layout_Table)(jcontext ctx, jobject self);
+#define VTABLE_mindustry_ui_dialogs_ModsDialog_getMarginTop_R_float 241
+typedef jfloat (*func_mindustry_ui_dialogs_ModsDialog_getMarginTop_R_float)(jcontext ctx, jobject self);
+#define VTABLE_mindustry_ui_dialogs_ModsDialog_getMarginLeft_R_float 242
+typedef jfloat (*func_mindustry_ui_dialogs_ModsDialog_getMarginLeft_R_float)(jcontext ctx, jobject self);
+#define VTABLE_mindustry_ui_dialogs_ModsDialog_getMarginBottom_R_float 243
+typedef jfloat (*func_mindustry_ui_dialogs_ModsDialog_getMarginBottom_R_float)(jcontext ctx, jobject self);
+#define VTABLE_mindustry_ui_dialogs_ModsDialog_getMarginRight_R_float 244
+typedef jfloat (*func_mindustry_ui_dialogs_ModsDialog_getMarginRight_R_float)(jcontext ctx, jobject self);
+#define VTABLE_mindustry_ui_dialogs_ModsDialog_getAlign_R_int 245
+typedef jint (*func_mindustry_ui_dialogs_ModsDialog_getAlign_R_int)(jcontext ctx, jobject self);
+#define VTABLE_mindustry_ui_dialogs_ModsDialog_getRow_float_R_int 246
+typedef jint (*func_mindustry_ui_dialogs_ModsDialog_getRow_float_R_int)(jcontext ctx, jobject self, jfloat param0);
+#define VTABLE_mindustry_ui_dialogs_ModsDialog_setRound_boolean 247
+typedef void (*func_mindustry_ui_dialogs_ModsDialog_setRound_boolean)(jcontext ctx, jobject self, jbool param0);
+#define VTABLE_mindustry_ui_dialogs_ModsDialog_getRows_R_int 248
+typedef jint (*func_mindustry_ui_dialogs_ModsDialog_getRows_R_int)(jcontext ctx, jobject self);
+#define VTABLE_mindustry_ui_dialogs_ModsDialog_getColumns_R_int 249
+typedef jint (*func_mindustry_ui_dialogs_ModsDialog_getColumns_R_int)(jcontext ctx, jobject self);
+#define VTABLE_mindustry_ui_dialogs_ModsDialog_getRowHeight_int_R_float 250
+typedef jfloat (*func_mindustry_ui_dialogs_ModsDialog_getRowHeight_int_R_float)(jcontext ctx, jobject self, jint param0);
+#define VTABLE_mindustry_ui_dialogs_ModsDialog_getColumnWidth_int_R_float 251
+typedef jfloat (*func_mindustry_ui_dialogs_ModsDialog_getColumnWidth_int_R_float)(jcontext ctx, jobject self, jint param0);
+#define VTABLE_mindustry_ui_dialogs_ModsDialog_ensureSize_Array1_float_int_R_Array1_float 252
+typedef jobject (*func_mindustry_ui_dialogs_ModsDialog_ensureSize_Array1_float_int_R_Array1_float)(jcontext ctx, jobject self, jobject param0, jint param1);
+#define VTABLE_mindustry_ui_dialogs_ModsDialog_computeSize 253
+typedef void (*func_mindustry_ui_dialogs_ModsDialog_computeSize)(jcontext ctx, jobject self);
+#define VTABLE_mindustry_ui_dialogs_ModsDialog_layout_float_float_float_float 254
+typedef void (*func_mindustry_ui_dialogs_ModsDialog_layout_float_float_float_float)(jcontext ctx, jobject self, jfloat param0, jfloat param1, jfloat param2, jfloat param3);
+#define VTABLE_mindustry_ui_dialogs_ModsDialog_getStyle_R_arc_scene_ui_Dialog$DialogStyle 255
+typedef jobject (*func_mindustry_ui_dialogs_ModsDialog_getStyle_R_arc_scene_ui_Dialog$DialogStyle)(jcontext ctx, jobject self);
+#define VTABLE_mindustry_ui_dialogs_ModsDialog_setStyle_arc_scene_ui_Dialog$DialogStyle 256
+typedef void (*func_mindustry_ui_dialogs_ModsDialog_setStyle_arc_scene_ui_Dialog$DialogStyle)(jcontext ctx, jobject self, jobject param0);
+#define VTABLE_mindustry_ui_dialogs_ModsDialog_keepWithinStage 257
+typedef void (*func_mindustry_ui_dialogs_ModsDialog_keepWithinStage)(jcontext ctx, jobject self);
+#define VTABLE_mindustry_ui_dialogs_ModsDialog_drawStageBackground_float_float_float_float 258
+typedef void (*func_mindustry_ui_dialogs_ModsDialog_drawStageBackground_float_float_float_float)(jcontext ctx, jobject self, jfloat param0, jfloat param1, jfloat param2, jfloat param3);
+#define VTABLE_mindustry_ui_dialogs_ModsDialog_centerWindow 259
+typedef void (*func_mindustry_ui_dialogs_ModsDialog_centerWindow)(jcontext ctx, jobject self);
+#define VTABLE_mindustry_ui_dialogs_ModsDialog_isMovable_R_boolean 260
+typedef jbool (*func_mindustry_ui_dialogs_ModsDialog_isMovable_R_boolean)(jcontext ctx, jobject self);
+#define VTABLE_mindustry_ui_dialogs_ModsDialog_setMovable_boolean 261
+typedef void (*func_mindustry_ui_dialogs_ModsDialog_setMovable_boolean)(jcontext ctx, jobject self, jbool param0);
+#define VTABLE_mindustry_ui_dialogs_ModsDialog_isModal_R_boolean 262
+typedef jbool (*func_mindustry_ui_dialogs_ModsDialog_isModal_R_boolean)(jcontext ctx, jobject self);
+#define VTABLE_mindustry_ui_dialogs_ModsDialog_setModal_boolean 263
+typedef void (*func_mindustry_ui_dialogs_ModsDialog_setModal_boolean)(jcontext ctx, jobject self, jbool param0);
+#define VTABLE_mindustry_ui_dialogs_ModsDialog_setKeepWithinStage_boolean 264
+typedef void (*func_mindustry_ui_dialogs_ModsDialog_setKeepWithinStage_boolean)(jcontext ctx, jobject self, jbool param0);
+#define VTABLE_mindustry_ui_dialogs_ModsDialog_isCentered_R_boolean 265
+typedef jbool (*func_mindustry_ui_dialogs_ModsDialog_isCentered_R_boolean)(jcontext ctx, jobject self);
+#define VTABLE_mindustry_ui_dialogs_ModsDialog_setCentered_boolean 266
+typedef void (*func_mindustry_ui_dialogs_ModsDialog_setCentered_boolean)(jcontext ctx, jobject self, jbool param0);
+#define VTABLE_mindustry_ui_dialogs_ModsDialog_isResizable_R_boolean 267
+typedef jbool (*func_mindustry_ui_dialogs_ModsDialog_isResizable_R_boolean)(jcontext ctx, jobject self);
+#define VTABLE_mindustry_ui_dialogs_ModsDialog_setResizable_boolean 268
+typedef void (*func_mindustry_ui_dialogs_ModsDialog_setResizable_boolean)(jcontext ctx, jobject self, jbool param0);
+#define VTABLE_mindustry_ui_dialogs_ModsDialog_setResizeBorder_int 269
+typedef void (*func_mindustry_ui_dialogs_ModsDialog_setResizeBorder_int)(jcontext ctx, jobject self, jint param0);
+#define VTABLE_mindustry_ui_dialogs_ModsDialog_isDragging_R_boolean 270
+typedef jbool (*func_mindustry_ui_dialogs_ModsDialog_isDragging_R_boolean)(jcontext ctx, jobject self);
+#define VTABLE_mindustry_ui_dialogs_ModsDialog_updateScrollFocus 271
+typedef void (*func_mindustry_ui_dialogs_ModsDialog_updateScrollFocus)(jcontext ctx, jobject self);
+#define VTABLE_mindustry_ui_dialogs_ModsDialog_shown_java_lang_Runnable 272
+typedef void (*func_mindustry_ui_dialogs_ModsDialog_shown_java_lang_Runnable)(jcontext ctx, jobject self, jobject param0);
+#define VTABLE_mindustry_ui_dialogs_ModsDialog_hidden_java_lang_Runnable 273
+typedef void (*func_mindustry_ui_dialogs_ModsDialog_hidden_java_lang_Runnable)(jcontext ctx, jobject self, jobject param0);
+#define VTABLE_mindustry_ui_dialogs_ModsDialog_resizedShown_java_lang_Runnable 274
+typedef void (*func_mindustry_ui_dialogs_ModsDialog_resizedShown_java_lang_Runnable)(jcontext ctx, jobject self, jobject param0);
+#define VTABLE_mindustry_ui_dialogs_ModsDialog_resized_java_lang_Runnable 275
+typedef void (*func_mindustry_ui_dialogs_ModsDialog_resized_java_lang_Runnable)(jcontext ctx, jobject self, jobject param0);
+#define VTABLE_mindustry_ui_dialogs_ModsDialog_resized_boolean_java_lang_Runnable 276
+typedef void (*func_mindustry_ui_dialogs_ModsDialog_resized_boolean_java_lang_Runnable)(jcontext ctx, jobject self, jbool param0, jobject param1);
+#define VTABLE_mindustry_ui_dialogs_ModsDialog_addCloseButton 277
+typedef void (*func_mindustry_ui_dialogs_ModsDialog_addCloseButton)(jcontext ctx, jobject self);
+#define VTABLE_mindustry_ui_dialogs_ModsDialog_closeOnBack 278
+typedef void (*func_mindustry_ui_dialogs_ModsDialog_closeOnBack)(jcontext ctx, jobject self);
+#define VTABLE_mindustry_ui_dialogs_ModsDialog_closeOnBack_java_lang_Runnable 279
+typedef void (*func_mindustry_ui_dialogs_ModsDialog_closeOnBack_java_lang_Runnable)(jcontext ctx, jobject self, jobject param0);
+#define VTABLE_mindustry_ui_dialogs_ModsDialog_isShown_R_boolean 280
+typedef jbool (*func_mindustry_ui_dialogs_ModsDialog_isShown_R_boolean)(jcontext ctx, jobject self);
+#define VTABLE_mindustry_ui_dialogs_ModsDialog_show_arc_scene_Scene_arc_scene_Action_R_arc_scene_ui_Dialog 281
+typedef jobject (*func_mindustry_ui_dialogs_ModsDialog_show_arc_scene_Scene_arc_scene_Action_R_arc_scene_ui_Dialog)(jcontext ctx, jobject self, jobject param0, jobject param1);
+#define VTABLE_mindustry_ui_dialogs_ModsDialog_toggle 282
+typedef void (*func_mindustry_ui_dialogs_ModsDialog_toggle)(jcontext ctx, jobject self);
+#define VTABLE_mindustry_ui_dialogs_ModsDialog_show_R_arc_scene_ui_Dialog 283
+typedef jobject (*func_mindustry_ui_dialogs_ModsDialog_show_R_arc_scene_ui_Dialog)(jcontext ctx, jobject self);
+#define VTABLE_mindustry_ui_dialogs_ModsDialog_show_arc_scene_Scene_R_arc_scene_ui_Dialog 284
+typedef jobject (*func_mindustry_ui_dialogs_ModsDialog_show_arc_scene_Scene_R_arc_scene_ui_Dialog)(jcontext ctx, jobject self, jobject param0);
+#define VTABLE_mindustry_ui_dialogs_ModsDialog_hide_arc_scene_Action 285
+typedef void (*func_mindustry_ui_dialogs_ModsDialog_hide_arc_scene_Action)(jcontext ctx, jobject self, jobject param0);
+#define VTABLE_mindustry_ui_dialogs_ModsDialog_hide 286
+typedef void (*func_mindustry_ui_dialogs_ModsDialog_hide)(jcontext ctx, jobject self);
+#define VTABLE_mindustry_ui_dialogs_ModsDialog_lambda$closeOnBack$1_java_lang_Runnable_arc_input_KeyCode 287
+typedef void (*func_mindustry_ui_dialogs_ModsDialog_lambda$closeOnBack$1_java_lang_Runnable_arc_input_KeyCode)(jcontext ctx, jobject self, jobject param0, jobject param1);
+#define VTABLE_mindustry_ui_dialogs_ModsDialog_lambda$updateScrollFocus$0_Array1_boolean 288
+typedef void (*func_mindustry_ui_dialogs_ModsDialog_lambda$updateScrollFocus$0_Array1_boolean)(jcontext ctx, jobject self, jobject param0);
+#define VTABLE_mindustry_ui_dialogs_ModsDialog_setTitleColor_arc_graphics_Color 289
+typedef void (*func_mindustry_ui_dialogs_ModsDialog_setTitleColor_arc_graphics_Color)(jcontext ctx, jobject self, jobject param0);
+#define VTABLE_mindustry_ui_dialogs_ModsDialog_makeButtonOverlay 290
+typedef void (*func_mindustry_ui_dialogs_ModsDialog_makeButtonOverlay)(jcontext ctx, jobject self);
+#define VTABLE_mindustry_ui_dialogs_ModsDialog_onResize_java_lang_Runnable 291
+typedef void (*func_mindustry_ui_dialogs_ModsDialog_onResize_java_lang_Runnable)(jcontext ctx, jobject self, jobject param0);
+#define VTABLE_mindustry_ui_dialogs_ModsDialog_addCloseListener 292
+typedef void (*func_mindustry_ui_dialogs_ModsDialog_addCloseListener)(jcontext ctx, jobject self);
+#define VTABLE_mindustry_ui_dialogs_ModsDialog_addCloseButton_float 293
+typedef void (*func_mindustry_ui_dialogs_ModsDialog_addCloseButton_float)(jcontext ctx, jobject self, jfloat param0);
+#define VTABLE_mindustry_ui_dialogs_ModsDialog_lambda$onResize$0_java_lang_Runnable_mindustry_game_EventType$ResizeEvent 294
+typedef void (*func_mindustry_ui_dialogs_ModsDialog_lambda$onResize$0_java_lang_Runnable_mindustry_game_EventType$ResizeEvent)(jcontext ctx, jobject self, jobject param0, jobject param1);
+#define VTABLE_mindustry_ui_dialogs_ModsDialog_lambda$new$1 295
+typedef void (*func_mindustry_ui_dialogs_ModsDialog_lambda$new$1)(jcontext ctx, jobject self);
+#define VTABLE_mindustry_ui_dialogs_ModsDialog_lambda$new$0 296
+typedef void (*func_mindustry_ui_dialogs_ModsDialog_lambda$new$0)(jcontext ctx, jobject self);
+#define VTABLE_mindustry_ui_dialogs_ModsDialog_refreshModUpdates 297
+typedef void (*func_mindustry_ui_dialogs_ModsDialog_refreshModUpdates)(jcontext ctx, jobject self);
+#define VTABLE_mindustry_ui_dialogs_ModsDialog_hasUpdate_mindustry_mod_Mods$LoadedMod_R_boolean 298
+typedef jbool (*func_mindustry_ui_dialogs_ModsDialog_hasUpdate_mindustry_mod_Mods$LoadedMod_R_boolean)(jcontext ctx, jobject self, jobject param0);
+#define VTABLE_mindustry_ui_dialogs_ModsDialog_setup 299
+typedef void (*func_mindustry_ui_dialogs_ModsDialog_setup)(jcontext ctx, jobject self);
+#define VTABLE_mindustry_ui_dialogs_ModsDialog_getStateText_mindustry_mod_Mods$LoadedMod_R_java_lang_String 300
+typedef jobject (*func_mindustry_ui_dialogs_ModsDialog_getStateText_mindustry_mod_Mods$LoadedMod_R_java_lang_String)(jcontext ctx, jobject self, jobject param0);
+#define VTABLE_mindustry_ui_dialogs_ModsDialog_getStateDetails_mindustry_mod_Mods$LoadedMod_R_java_lang_String 301
+typedef jobject (*func_mindustry_ui_dialogs_ModsDialog_getStateDetails_mindustry_mod_Mods$LoadedMod_R_java_lang_String)(jcontext ctx, jobject self, jobject param0);
+#define VTABLE_mindustry_ui_dialogs_ModsDialog_showMod_mindustry_mod_Mods$LoadedMod 302
+typedef void (*func_mindustry_ui_dialogs_ModsDialog_showMod_mindustry_mod_Mods$LoadedMod)(jcontext ctx, jobject self, jobject param0);
+#define VTABLE_mindustry_ui_dialogs_ModsDialog_handleMod_java_lang_String_arc_util_Http$HttpResponse_boolean 303
+typedef void (*func_mindustry_ui_dialogs_ModsDialog_handleMod_java_lang_String_arc_util_Http$HttpResponse_boolean)(jcontext ctx, jobject self, jobject param0, jobject param1, jbool param2);
+#define VTABLE_mindustry_ui_dialogs_ModsDialog_importFail_java_lang_Throwable 304
+typedef void (*func_mindustry_ui_dialogs_ModsDialog_importFail_java_lang_Throwable)(jcontext ctx, jobject self, jobject param0);
+#define VTABLE_mindustry_ui_dialogs_ModsDialog_showModError_java_lang_Throwable 305
+typedef void (*func_mindustry_ui_dialogs_ModsDialog_showModError_java_lang_Throwable)(jcontext ctx, jobject self, jobject param0);
+#define VTABLE_mindustry_ui_dialogs_ModsDialog_viewReleases_java_lang_String_boolean_boolean 306
+typedef void (*func_mindustry_ui_dialogs_ModsDialog_viewReleases_java_lang_String_boolean_boolean)(jcontext ctx, jobject self, jobject param0, jbool param1, jbool param2);
+#define VTABLE_mindustry_ui_dialogs_ModsDialog_githubImportMod_mindustry_mod_ModListing 307
+typedef void (*func_mindustry_ui_dialogs_ModsDialog_githubImportMod_mindustry_mod_ModListing)(jcontext ctx, jobject self, jobject param0);
+#define VTABLE_mindustry_ui_dialogs_ModsDialog_githubImportMod_java_lang_String_boolean_boolean 308
+typedef void (*func_mindustry_ui_dialogs_ModsDialog_githubImportMod_java_lang_String_boolean_boolean)(jcontext ctx, jobject self, jobject param0, jbool param1, jbool param2);
+#define VTABLE_mindustry_ui_dialogs_ModsDialog_githubImportMod_java_lang_String_boolean_java_lang_String_boolean 309
+typedef void (*func_mindustry_ui_dialogs_ModsDialog_githubImportMod_java_lang_String_boolean_java_lang_String_boolean)(jcontext ctx, jobject self, jobject param0, jbool param1, jobject param2, jbool param3);
+#define VTABLE_mindustry_ui_dialogs_ModsDialog_githubImportJavaMod_java_lang_String_java_lang_String_boolean 310
+typedef void (*func_mindustry_ui_dialogs_ModsDialog_githubImportJavaMod_java_lang_String_java_lang_String_boolean)(jcontext ctx, jobject self, jobject param0, jobject param1, jbool param2);
+#define VTABLE_mindustry_ui_dialogs_ModsDialog_githubImportBranch_java_lang_String_java_lang_String_java_lang_String_boolean 311
+typedef void (*func_mindustry_ui_dialogs_ModsDialog_githubImportBranch_java_lang_String_java_lang_String_java_lang_String_boolean)(jcontext ctx, jobject self, jobject param0, jobject param1, jobject param2, jbool param3);
+#define VTABLE_mindustry_ui_dialogs_ModsDialog_lambda$githubImportBranch$3_java_lang_String_boolean_arc_util_Http$HttpResponse 312
+typedef void (*func_mindustry_ui_dialogs_ModsDialog_lambda$githubImportBranch$3_java_lang_String_boolean_arc_util_Http$HttpResponse)(jcontext ctx, jobject self, jobject param0, jbool param1, jobject param2);
+#define VTABLE_mindustry_ui_dialogs_ModsDialog_lambda$githubImportBranch$4_java_lang_String_boolean_arc_util_Http$HttpResponse 313
+typedef void (*func_mindustry_ui_dialogs_ModsDialog_lambda$githubImportBranch$4_java_lang_String_boolean_arc_util_Http$HttpResponse)(jcontext ctx, jobject self, jobject param0, jbool param1, jobject param2);
+#define VTABLE_mindustry_ui_dialogs_ModsDialog_lambda$githubImportBranch$0_java_lang_String_boolean_arc_util_Http$HttpResponse 314
+typedef void (*func_mindustry_ui_dialogs_ModsDialog_lambda$githubImportBranch$0_java_lang_String_boolean_arc_util_Http$HttpResponse)(jcontext ctx, jobject self, jobject param0, jbool param1, jobject param2);
+#define VTABLE_mindustry_ui_dialogs_ModsDialog_lambda$githubImportBranch$1_java_lang_String_boolean_arc_util_Http$HttpResponse 315
+typedef void (*func_mindustry_ui_dialogs_ModsDialog_lambda$githubImportBranch$1_java_lang_String_boolean_arc_util_Http$HttpResponse)(jcontext ctx, jobject self, jobject param0, jbool param1, jobject param2);
+#define VTABLE_mindustry_ui_dialogs_ModsDialog_lambda$githubImportBranch$2_java_lang_String_boolean_arc_util_Http$HttpResponse 316
+typedef void (*func_mindustry_ui_dialogs_ModsDialog_lambda$githubImportBranch$2_java_lang_String_boolean_arc_util_Http$HttpResponse)(jcontext ctx, jobject self, jobject param0, jbool param1, jobject param2);
+#define VTABLE_mindustry_ui_dialogs_ModsDialog_lambda$githubImportJavaMod$0_java_lang_String_boolean_arc_util_Http$HttpResponse 317
+typedef void (*func_mindustry_ui_dialogs_ModsDialog_lambda$githubImportJavaMod$0_java_lang_String_boolean_arc_util_Http$HttpResponse)(jcontext ctx, jobject self, jobject param0, jbool param1, jobject param2);
+#define VTABLE_mindustry_ui_dialogs_ModsDialog_lambda$githubImportJavaMod$3_java_lang_String_boolean_arc_util_Http$HttpResponse 318
+typedef void (*func_mindustry_ui_dialogs_ModsDialog_lambda$githubImportJavaMod$3_java_lang_String_boolean_arc_util_Http$HttpResponse)(jcontext ctx, jobject self, jobject param0, jbool param1, jobject param2);
+#define VTABLE_mindustry_ui_dialogs_ModsDialog_lambda$githubImportMod$2_java_lang_String_java_lang_String_boolean_arc_util_Http$HttpResponse 319
+typedef void (*func_mindustry_ui_dialogs_ModsDialog_lambda$githubImportMod$2_java_lang_String_java_lang_String_boolean_arc_util_Http$HttpResponse)(jcontext ctx, jobject self, jobject param0, jobject param1, jbool param2, jobject param3);
+#define VTABLE_mindustry_ui_dialogs_ModsDialog_lambda$githubImportMod$1 320
+typedef void (*func_mindustry_ui_dialogs_ModsDialog_lambda$githubImportMod$1)(jcontext ctx, jobject self);
+#define VTABLE_mindustry_ui_dialogs_ModsDialog_lambda$githubImportMod$0_R_float 321
+typedef jfloat (*func_mindustry_ui_dialogs_ModsDialog_lambda$githubImportMod$0_R_float)(jcontext ctx, jobject self);
+#define VTABLE_mindustry_ui_dialogs_ModsDialog_lambda$viewReleases$12_mindustry_ui_dialogs_BaseDialog_java_lang_Throwable 322
+typedef void (*func_mindustry_ui_dialogs_ModsDialog_lambda$viewReleases$12_mindustry_ui_dialogs_BaseDialog_java_lang_Throwable)(jcontext ctx, jobject self, jobject param0, jobject param1);
+#define VTABLE_mindustry_ui_dialogs_ModsDialog_lambda$viewReleases$13_java_lang_Throwable_mindustry_ui_dialogs_BaseDialog 323
+typedef void (*func_mindustry_ui_dialogs_ModsDialog_lambda$viewReleases$13_java_lang_Throwable_mindustry_ui_dialogs_BaseDialog)(jcontext ctx, jobject self, jobject param0, jobject param1);
+#define VTABLE_mindustry_ui_dialogs_ModsDialog_lambda$viewReleases$0_mindustry_ui_dialogs_BaseDialog_boolean_boolean_java_lang_String_arc_util_Http$HttpResponse 324
+typedef void (*func_mindustry_ui_dialogs_ModsDialog_lambda$viewReleases$0_mindustry_ui_dialogs_BaseDialog_boolean_boolean_java_lang_String_arc_util_Http$HttpResponse)(jcontext ctx, jobject self, jobject param0, jbool param1, jbool param2, jobject param3, jobject param4);
+#define VTABLE_mindustry_ui_dialogs_ModsDialog_lambda$viewReleases$1_mindustry_ui_dialogs_BaseDialog_arc_util_serialization_Jval$JsonArray_boolean_boolean_java_lang_String 325
+typedef void (*func_mindustry_ui_dialogs_ModsDialog_lambda$viewReleases$1_mindustry_ui_dialogs_BaseDialog_arc_util_serialization_Jval$JsonArray_boolean_boolean_java_lang_String)(jcontext ctx, jobject self, jobject param0, jobject param1, jbool param2, jbool param3, jobject param4);
+#define VTABLE_mindustry_ui_dialogs_ModsDialog_lambda$viewReleases$11 326
+typedef void (*func_mindustry_ui_dialogs_ModsDialog_lambda$viewReleases$11)(jcontext ctx, jobject self);
+#define VTABLE_mindustry_ui_dialogs_ModsDialog_lambda$viewReleases$2_boolean_boolean_java_lang_String_arc_util_serialization_Jval$JsonArray_arc_scene_ui_layout_Table 327
+typedef void (*func_mindustry_ui_dialogs_ModsDialog_lambda$viewReleases$2_boolean_boolean_java_lang_String_arc_util_serialization_Jval$JsonArray_arc_scene_ui_layout_Table)(jcontext ctx, jobject self, jbool param0, jbool param1, jobject param2, jobject param3, jobject param4);
+#define VTABLE_mindustry_ui_dialogs_ModsDialog_lambda$viewReleases$7_arc_util_serialization_Jval_int_java_lang_String_boolean_arc_scene_ui_layout_Table 328
+typedef void (*func_mindustry_ui_dialogs_ModsDialog_lambda$viewReleases$7_arc_util_serialization_Jval_int_java_lang_String_boolean_arc_scene_ui_layout_Table)(jcontext ctx, jobject self, jobject param0, jint param1, jobject param2, jbool param3, jobject param4);
+#define VTABLE_mindustry_ui_dialogs_ModsDialog_lambda$viewReleases$8_arc_util_serialization_Jval_java_lang_String_boolean_arc_scene_ui_layout_Table 329
+typedef void (*func_mindustry_ui_dialogs_ModsDialog_lambda$viewReleases$8_arc_util_serialization_Jval_java_lang_String_boolean_arc_scene_ui_layout_Table)(jcontext ctx, jobject self, jobject param0, jobject param1, jbool param2, jobject param3);
+#define VTABLE_mindustry_ui_dialogs_ModsDialog_lambda$viewReleases$10_arc_util_serialization_Jval_java_lang_String_boolean 330
+typedef void (*func_mindustry_ui_dialogs_ModsDialog_lambda$viewReleases$10_arc_util_serialization_Jval_java_lang_String_boolean)(jcontext ctx, jobject self, jobject param0, jobject param1, jbool param2);
+#define VTABLE_mindustry_ui_dialogs_ModsDialog_lambda$viewReleases$3_java_lang_String_boolean_arc_scene_ui_layout_Table 331
+typedef void (*func_mindustry_ui_dialogs_ModsDialog_lambda$viewReleases$3_java_lang_String_boolean_arc_scene_ui_layout_Table)(jcontext ctx, jobject self, jobject param0, jbool param1, jobject param2);
+#define VTABLE_mindustry_ui_dialogs_ModsDialog_lambda$viewReleases$4_java_lang_String_boolean_arc_scene_ui_layout_Table 332
+typedef void (*func_mindustry_ui_dialogs_ModsDialog_lambda$viewReleases$4_java_lang_String_boolean_arc_scene_ui_layout_Table)(jcontext ctx, jobject self, jobject param0, jbool param1, jobject param2);
+#define VTABLE_mindustry_ui_dialogs_ModsDialog_lambda$viewReleases$6_java_lang_String_boolean 333
+typedef void (*func_mindustry_ui_dialogs_ModsDialog_lambda$viewReleases$6_java_lang_String_boolean)(jcontext ctx, jobject self, jobject param0, jbool param1);
+#define VTABLE_mindustry_ui_dialogs_ModsDialog_lambda$importFail$0_java_lang_Throwable 334
+typedef void (*func_mindustry_ui_dialogs_ModsDialog_lambda$importFail$0_java_lang_Throwable)(jcontext ctx, jobject self, jobject param0);
+#define VTABLE_mindustry_ui_dialogs_ModsDialog_lambda$handleMod$3_java_lang_String 335
+typedef void (*func_mindustry_ui_dialogs_ModsDialog_lambda$handleMod$3_java_lang_String)(jcontext ctx, jobject self, jobject param0);
+#define VTABLE_mindustry_ui_dialogs_ModsDialog_lambda$handleMod$2_arc_func_Floatc_float 336
+typedef void (*func_mindustry_ui_dialogs_ModsDialog_lambda$handleMod$2_arc_func_Floatc_float)(jcontext ctx, jobject self, jobject param0, jfloat param1);
+#define VTABLE_mindustry_ui_dialogs_ModsDialog_lambda$handleMod$1_float 337
+typedef void (*func_mindustry_ui_dialogs_ModsDialog_lambda$handleMod$1_float)(jcontext ctx, jobject self, jfloat param0);
+#define VTABLE_mindustry_ui_dialogs_ModsDialog_lambda$showMod$5_mindustry_mod_Mods$LoadedMod_arc_struct_Seq 338
+typedef void (*func_mindustry_ui_dialogs_ModsDialog_lambda$showMod$5_mindustry_mod_Mods$LoadedMod_arc_struct_Seq)(jcontext ctx, jobject self, jobject param0, jobject param1);
+#define VTABLE_mindustry_ui_dialogs_ModsDialog_lambda$showMod$3_mindustry_mod_Mods$LoadedMod_arc_scene_ui_layout_Table 339
+typedef void (*func_mindustry_ui_dialogs_ModsDialog_lambda$showMod$3_mindustry_mod_Mods$LoadedMod_arc_scene_ui_layout_Table)(jcontext ctx, jobject self, jobject param0, jobject param1);
+#define VTABLE_mindustry_ui_dialogs_ModsDialog_lambda$showMod$2_mindustry_mod_Mods$LoadedMod 340
+typedef void (*func_mindustry_ui_dialogs_ModsDialog_lambda$showMod$2_mindustry_mod_Mods$LoadedMod)(jcontext ctx, jobject self, jobject param0);
+#define VTABLE_mindustry_ui_dialogs_ModsDialog_lambda$setup$27 341
+typedef void (*func_mindustry_ui_dialogs_ModsDialog_lambda$setup$27)(jcontext ctx, jobject self);
+#define VTABLE_mindustry_ui_dialogs_ModsDialog_lambda$setup$28_Array1_int_arc_struct_Seq 342
+typedef void (*func_mindustry_ui_dialogs_ModsDialog_lambda$setup$28_Array1_int_arc_struct_Seq)(jcontext ctx, jobject self, jobject param0, jobject param1);
+#define VTABLE_mindustry_ui_dialogs_ModsDialog_lambda$setup$25_arc_scene_ui_ScrollPane 343
+typedef void (*func_mindustry_ui_dialogs_ModsDialog_lambda$setup$25_arc_scene_ui_ScrollPane)(jcontext ctx, jobject self, jobject param0);
+#define VTABLE_mindustry_ui_dialogs_ModsDialog_lambda$setup$8_Array1_arc_scene_ui_layout_Table_Array1_boolean_float_float_java_lang_String 344
+typedef void (*func_mindustry_ui_dialogs_ModsDialog_lambda$setup$8_Array1_arc_scene_ui_layout_Table_Array1_boolean_float_float_java_lang_String)(jcontext ctx, jobject self, jobject param0, jobject param1, jfloat param2, jfloat param3, jobject param4);
+#define VTABLE_mindustry_ui_dialogs_ModsDialog_lambda$setup$22_mindustry_mod_Mods$LoadedMod 345
+typedef void (*func_mindustry_ui_dialogs_ModsDialog_lambda$setup$22_mindustry_mod_Mods$LoadedMod)(jcontext ctx, jobject self, jobject param0);
+#define VTABLE_mindustry_ui_dialogs_ModsDialog_lambda$setup$21_mindustry_mod_Mods$LoadedMod_arc_scene_ui_Button 346
+typedef void (*func_mindustry_ui_dialogs_ModsDialog_lambda$setup$21_mindustry_mod_Mods$LoadedMod_arc_scene_ui_Button)(jcontext ctx, jobject self, jobject param0, jobject param1);
+#define VTABLE_mindustry_ui_dialogs_ModsDialog_lambda$setup$20_mindustry_mod_Mods$LoadedMod 347
+typedef void (*func_mindustry_ui_dialogs_ModsDialog_lambda$setup$20_mindustry_mod_Mods$LoadedMod)(jcontext ctx, jobject self, jobject param0);
+#define VTABLE_mindustry_ui_dialogs_ModsDialog_lambda$setup$9_mindustry_mod_Mods$LoadedMod_float_arc_scene_ui_Button 348
+typedef void (*func_mindustry_ui_dialogs_ModsDialog_lambda$setup$9_mindustry_mod_Mods$LoadedMod_float_arc_scene_ui_Button)(jcontext ctx, jobject self, jobject param0, jfloat param1, jobject param2);
+#define VTABLE_mindustry_ui_dialogs_ModsDialog_lambda$setup$15_mindustry_mod_Mods$LoadedMod_arc_scene_ui_layout_Table 349
+typedef void (*func_mindustry_ui_dialogs_ModsDialog_lambda$setup$15_mindustry_mod_Mods$LoadedMod_arc_scene_ui_layout_Table)(jcontext ctx, jobject self, jobject param0, jobject param1);
+#define VTABLE_mindustry_ui_dialogs_ModsDialog_lambda$setup$17_mindustry_mod_Mods$LoadedMod 350
+typedef void (*func_mindustry_ui_dialogs_ModsDialog_lambda$setup$17_mindustry_mod_Mods$LoadedMod)(jcontext ctx, jobject self, jobject param0);
+#define VTABLE_mindustry_ui_dialogs_ModsDialog_lambda$setup$18_mindustry_mod_Mods$LoadedMod 351
+typedef void (*func_mindustry_ui_dialogs_ModsDialog_lambda$setup$18_mindustry_mod_Mods$LoadedMod)(jcontext ctx, jobject self, jobject param0);
+#define VTABLE_mindustry_ui_dialogs_ModsDialog_lambda$setup$16_mindustry_mod_Mods$LoadedMod 352
+typedef void (*func_mindustry_ui_dialogs_ModsDialog_lambda$setup$16_mindustry_mod_Mods$LoadedMod)(jcontext ctx, jobject self, jobject param0);
+#define VTABLE_mindustry_ui_dialogs_ModsDialog_lambda$setup$11_float_mindustry_mod_Mods$LoadedMod_arc_scene_ui_layout_Table 353
+typedef void (*func_mindustry_ui_dialogs_ModsDialog_lambda$setup$11_float_mindustry_mod_Mods$LoadedMod_arc_scene_ui_layout_Table)(jcontext ctx, jobject self, jfloat param0, jobject param1, jobject param2);
+#define VTABLE_mindustry_ui_dialogs_ModsDialog_lambda$setup$14_mindustry_mod_Mods$LoadedMod_arc_scene_ui_layout_Table 354
+typedef void (*func_mindustry_ui_dialogs_ModsDialog_lambda$setup$14_mindustry_mod_Mods$LoadedMod_arc_scene_ui_layout_Table)(jcontext ctx, jobject self, jobject param0, jobject param1);
+#define VTABLE_mindustry_ui_dialogs_ModsDialog_lambda$setup$0_arc_scene_ui_layout_Table 355
+typedef void (*func_mindustry_ui_dialogs_ModsDialog_lambda$setup$0_arc_scene_ui_layout_Table)(jcontext ctx, jobject self, jobject param0);
+#define VTABLE_mindustry_ui_dialogs_ModsDialog_lambda$setup$7 356
+typedef void (*func_mindustry_ui_dialogs_ModsDialog_lambda$setup$7)(jcontext ctx, jobject self);
+#define VTABLE_mindustry_ui_dialogs_ModsDialog_lambda$setup$1 357
+typedef void (*func_mindustry_ui_dialogs_ModsDialog_lambda$setup$1)(jcontext ctx, jobject self);
+#define VTABLE_mindustry_ui_dialogs_ModsDialog_lambda$setup$2_arc_scene_ui_TextButton$TextButtonStyle_mindustry_ui_dialogs_BaseDialog_arc_scene_ui_layout_Table 358
+typedef void (*func_mindustry_ui_dialogs_ModsDialog_lambda$setup$2_arc_scene_ui_TextButton$TextButtonStyle_mindustry_ui_dialogs_BaseDialog_arc_scene_ui_layout_Table)(jcontext ctx, jobject self, jobject param0, jobject param1, jobject param2);
+#define VTABLE_mindustry_ui_dialogs_ModsDialog_lambda$setup$5_mindustry_ui_dialogs_BaseDialog 359
+typedef void (*func_mindustry_ui_dialogs_ModsDialog_lambda$setup$5_mindustry_ui_dialogs_BaseDialog)(jcontext ctx, jobject self, jobject param0);
+#define VTABLE_mindustry_ui_dialogs_ModsDialog_lambda$setup$6_java_lang_String 360
+typedef void (*func_mindustry_ui_dialogs_ModsDialog_lambda$setup$6_java_lang_String)(jcontext ctx, jobject self, jobject param0);
+#define VTABLE_mindustry_ui_dialogs_ModsDialog_lambda$setup$3_mindustry_ui_dialogs_BaseDialog 361
+typedef void (*func_mindustry_ui_dialogs_ModsDialog_lambda$setup$3_mindustry_ui_dialogs_BaseDialog)(jcontext ctx, jobject self, jobject param0);
+#define VTABLE_mindustry_ui_dialogs_ModsDialog_lambda$setup$4_Array1_arc_files_Fi 362
+typedef void (*func_mindustry_ui_dialogs_ModsDialog_lambda$setup$4_Array1_arc_files_Fi)(jcontext ctx, jobject self, jobject param0);
+#define VTABLE_mindustry_ui_dialogs_ModsDialog_lambda$refreshModUpdates$0_arc_struct_ObjectMap_arc_struct_Seq 363
+typedef void (*func_mindustry_ui_dialogs_ModsDialog_lambda$refreshModUpdates$0_arc_struct_ObjectMap_arc_struct_Seq)(jcontext ctx, jobject self, jobject param0, jobject param1);
+#define VTABLE_mindustry_ui_dialogs_ModsDialog_lambda$new$6 364
+typedef void (*func_mindustry_ui_dialogs_ModsDialog_lambda$new$6)(jcontext ctx, jobject self);
+#define VTABLE_mindustry_ui_dialogs_ModsDialog_lambda$new$5_mindustry_game_EventType$ResizeEvent 365
+typedef void (*func_mindustry_ui_dialogs_ModsDialog_lambda$new$5_mindustry_game_EventType$ResizeEvent)(jcontext ctx, jobject self, jobject param0);
+#define VTABLE_mindustry_ui_dialogs_ModsDialog_lambda$new$4 366
+typedef void (*func_mindustry_ui_dialogs_ModsDialog_lambda$new$4)(jcontext ctx, jobject self);
+
+void mark_mindustry_ui_dialogs_ModsDialog(jobject object, jint mark, jint depth);
+void clinit_mindustry_ui_dialogs_ModsDialog(jcontext ctx);
+void init_mindustry_ui_dialogs_ModsDialog(jcontext ctx, jobject self);
+void M_mindustry_ui_dialogs_ModsDialog_refreshModUpdates(jcontext ctx, jobject self);
+jbool M_mindustry_ui_dialogs_ModsDialog_hasUpdate_mindustry_mod_Mods$LoadedMod_R_boolean(jcontext ctx, jobject self, jobject param0);
+void M_mindustry_ui_dialogs_ModsDialog_setup(jcontext ctx, jobject self);
+jobject M_mindustry_ui_dialogs_ModsDialog_getStateText_mindustry_mod_Mods$LoadedMod_R_java_lang_String(jcontext ctx, jobject self, jobject param0);
+jobject M_mindustry_ui_dialogs_ModsDialog_getStateDetails_mindustry_mod_Mods$LoadedMod_R_java_lang_String(jcontext ctx, jobject self, jobject param0);
+void M_mindustry_ui_dialogs_ModsDialog_showMod_mindustry_mod_Mods$LoadedMod(jcontext ctx, jobject self, jobject param0);
+void M_mindustry_ui_dialogs_ModsDialog_handleMod_java_lang_String_arc_util_Http$HttpResponse_boolean(jcontext ctx, jobject self, jobject param0, jobject param1, jbool param2);
+void M_mindustry_ui_dialogs_ModsDialog_importFail_java_lang_Throwable(jcontext ctx, jobject self, jobject param0);
+void M_mindustry_ui_dialogs_ModsDialog_showModError_java_lang_Throwable(jcontext ctx, jobject self, jobject param0);
+void M_mindustry_ui_dialogs_ModsDialog_viewReleases_java_lang_String_boolean_boolean(jcontext ctx, jobject self, jobject param0, jbool param1, jbool param2);
+void M_mindustry_ui_dialogs_ModsDialog_githubImportMod_mindustry_mod_ModListing(jcontext ctx, jobject self, jobject param0);
+void M_mindustry_ui_dialogs_ModsDialog_githubImportMod_java_lang_String_boolean_boolean(jcontext ctx, jobject self, jobject param0, jbool param1, jbool param2);
+void M_mindustry_ui_dialogs_ModsDialog_githubImportMod_java_lang_String_boolean_java_lang_String_boolean(jcontext ctx, jobject self, jobject param0, jbool param1, jobject param2, jbool param3);
+void M_mindustry_ui_dialogs_ModsDialog_githubImportJavaMod_java_lang_String_java_lang_String_boolean(jcontext ctx, jobject self, jobject param0, jobject param1, jbool param2);
+void M_mindustry_ui_dialogs_ModsDialog_githubImportBranch_java_lang_String_java_lang_String_java_lang_String_boolean(jcontext ctx, jobject self, jobject param0, jobject param1, jobject param2, jbool param3);
+jobject SM_mindustry_ui_dialogs_ModsDialog_parseVersionTag_java_lang_String_R_Array1_int(jcontext ctx, jobject param0);
+jobject SM_mindustry_ui_dialogs_ModsDialog_parseVersion_java_lang_String_R_Array1_int(jcontext ctx, jobject param0);
+jbool SM_mindustry_ui_dialogs_ModsDialog_matchesGameVersion_java_lang_String_R_boolean(jcontext ctx, jobject param0);
+jbool SM_mindustry_ui_dialogs_ModsDialog_matchesGameVersion_Array1_int_R_boolean(jcontext ctx, jobject param0);
+void M_mindustry_ui_dialogs_ModsDialog_lambda$githubImportBranch$3_java_lang_String_boolean_arc_util_Http$HttpResponse(jcontext ctx, jobject self, jobject param0, jbool param1, jobject param2);
+void M_mindustry_ui_dialogs_ModsDialog_lambda$githubImportBranch$4_java_lang_String_boolean_arc_util_Http$HttpResponse(jcontext ctx, jobject self, jobject param0, jbool param1, jobject param2);
+void M_mindustry_ui_dialogs_ModsDialog_lambda$githubImportBranch$0_java_lang_String_boolean_arc_util_Http$HttpResponse(jcontext ctx, jobject self, jobject param0, jbool param1, jobject param2);
+void M_mindustry_ui_dialogs_ModsDialog_lambda$githubImportBranch$1_java_lang_String_boolean_arc_util_Http$HttpResponse(jcontext ctx, jobject self, jobject param0, jbool param1, jobject param2);
+void M_mindustry_ui_dialogs_ModsDialog_lambda$githubImportBranch$2_java_lang_String_boolean_arc_util_Http$HttpResponse(jcontext ctx, jobject self, jobject param0, jbool param1, jobject param2);
+void M_mindustry_ui_dialogs_ModsDialog_lambda$githubImportJavaMod$0_java_lang_String_boolean_arc_util_Http$HttpResponse(jcontext ctx, jobject self, jobject param0, jbool param1, jobject param2);
+void M_mindustry_ui_dialogs_ModsDialog_lambda$githubImportJavaMod$3_java_lang_String_boolean_arc_util_Http$HttpResponse(jcontext ctx, jobject self, jobject param0, jbool param1, jobject param2);
+jbool SM_mindustry_ui_dialogs_ModsDialog_lambda$githubImportJavaMod$2_arc_util_serialization_Jval_R_boolean(jcontext ctx, jobject param0);
+jbool SM_mindustry_ui_dialogs_ModsDialog_lambda$githubImportJavaMod$1_arc_util_serialization_Jval_R_boolean(jcontext ctx, jobject param0);
+void M_mindustry_ui_dialogs_ModsDialog_lambda$githubImportMod$2_java_lang_String_java_lang_String_boolean_arc_util_Http$HttpResponse(jcontext ctx, jobject self, jobject param0, jobject param1, jbool param2, jobject param3);
+void M_mindustry_ui_dialogs_ModsDialog_lambda$githubImportMod$1(jcontext ctx, jobject self);
+jfloat M_mindustry_ui_dialogs_ModsDialog_lambda$githubImportMod$0_R_float(jcontext ctx, jobject self);
+void M_mindustry_ui_dialogs_ModsDialog_lambda$viewReleases$12_mindustry_ui_dialogs_BaseDialog_java_lang_Throwable(jcontext ctx, jobject self, jobject param0, jobject param1);
+void M_mindustry_ui_dialogs_ModsDialog_lambda$viewReleases$13_java_lang_Throwable_mindustry_ui_dialogs_BaseDialog(jcontext ctx, jobject self, jobject param0, jobject param1);
+void M_mindustry_ui_dialogs_ModsDialog_lambda$viewReleases$0_mindustry_ui_dialogs_BaseDialog_boolean_boolean_java_lang_String_arc_util_Http$HttpResponse(jcontext ctx, jobject self, jobject param0, jbool param1, jbool param2, jobject param3, jobject param4);
+void M_mindustry_ui_dialogs_ModsDialog_lambda$viewReleases$1_mindustry_ui_dialogs_BaseDialog_arc_util_serialization_Jval$JsonArray_boolean_boolean_java_lang_String(jcontext ctx, jobject self, jobject param0, jobject param1, jbool param2, jbool param3, jobject param4);
+void M_mindustry_ui_dialogs_ModsDialog_lambda$viewReleases$11(jcontext ctx, jobject self);
+void M_mindustry_ui_dialogs_ModsDialog_lambda$viewReleases$2_boolean_boolean_java_lang_String_arc_util_serialization_Jval$JsonArray_arc_scene_ui_layout_Table(jcontext ctx, jobject self, jbool param0, jbool param1, jobject param2, jobject param3, jobject param4);
+void M_mindustry_ui_dialogs_ModsDialog_lambda$viewReleases$7_arc_util_serialization_Jval_int_java_lang_String_boolean_arc_scene_ui_layout_Table(jcontext ctx, jobject self, jobject param0, jint param1, jobject param2, jbool param3, jobject param4);
+void M_mindustry_ui_dialogs_ModsDialog_lambda$viewReleases$8_arc_util_serialization_Jval_java_lang_String_boolean_arc_scene_ui_layout_Table(jcontext ctx, jobject self, jobject param0, jobject param1, jbool param2, jobject param3);
+void M_mindustry_ui_dialogs_ModsDialog_lambda$viewReleases$10_arc_util_serialization_Jval_java_lang_String_boolean(jcontext ctx, jobject self, jobject param0, jobject param1, jbool param2);
+void SM_mindustry_ui_dialogs_ModsDialog_lambda$viewReleases$9_arc_util_serialization_Jval(jcontext ctx, jobject param0);
+void M_mindustry_ui_dialogs_ModsDialog_lambda$viewReleases$3_java_lang_String_boolean_arc_scene_ui_layout_Table(jcontext ctx, jobject self, jobject param0, jbool param1, jobject param2);
+void M_mindustry_ui_dialogs_ModsDialog_lambda$viewReleases$4_java_lang_String_boolean_arc_scene_ui_layout_Table(jcontext ctx, jobject self, jobject param0, jbool param1, jobject param2);
+void M_mindustry_ui_dialogs_ModsDialog_lambda$viewReleases$6_java_lang_String_boolean(jcontext ctx, jobject self, jobject param0, jbool param1);
+void SM_mindustry_ui_dialogs_ModsDialog_lambda$viewReleases$5_java_lang_String(jcontext ctx, jobject param0);
+jbool SM_mindustry_ui_dialogs_ModsDialog_lambda$showModError$0_java_lang_Throwable_R_boolean(jcontext ctx, jobject param0);
+void M_mindustry_ui_dialogs_ModsDialog_lambda$importFail$0_java_lang_Throwable(jcontext ctx, jobject self, jobject param0);
+void M_mindustry_ui_dialogs_ModsDialog_lambda$handleMod$3_java_lang_String(jcontext ctx, jobject self, jobject param0);
+jbool SM_mindustry_ui_dialogs_ModsDialog_lambda$handleMod$4_java_lang_String_mindustry_mod_Mods$LoadedMod_R_boolean(jcontext ctx, jobject param0, jobject param1);
+void M_mindustry_ui_dialogs_ModsDialog_lambda$handleMod$2_arc_func_Floatc_float(jcontext ctx, jobject self, jobject param0, jfloat param1);
+void M_mindustry_ui_dialogs_ModsDialog_lambda$handleMod$1_float(jcontext ctx, jobject self, jfloat param0);
+void SM_mindustry_ui_dialogs_ModsDialog_lambda$handleMod$0_float(jcontext ctx, jfloat param0);
+void M_mindustry_ui_dialogs_ModsDialog_lambda$showMod$5_mindustry_mod_Mods$LoadedMod_arc_struct_Seq(jcontext ctx, jobject self, jobject param0, jobject param1);
+void SM_mindustry_ui_dialogs_ModsDialog_lambda$showMod$6_arc_struct_Seq_arc_scene_ui_layout_Table(jcontext ctx, jobject param0, jobject param1);
+void SM_mindustry_ui_dialogs_ModsDialog_lambda$showMod$8_arc_scene_ui_ImageButton(jcontext ctx, jobject param0);
+void SM_mindustry_ui_dialogs_ModsDialog_lambda$showMod$9_arc_scene_ui_ImageButton_arc_scene_event_ClickListener(jcontext ctx, jobject param0, jobject param1);
+void SM_mindustry_ui_dialogs_ModsDialog_lambda$showMod$7_mindustry_ctype_UnlockableContent(jcontext ctx, jobject param0);
+jbool SM_mindustry_ui_dialogs_ModsDialog_lambda$showMod$4_mindustry_mod_Mods$LoadedMod_mindustry_ctype_Content_R_boolean(jcontext ctx, jobject param0, jobject param1);
+void M_mindustry_ui_dialogs_ModsDialog_lambda$showMod$3_mindustry_mod_Mods$LoadedMod_arc_scene_ui_layout_Table(jcontext ctx, jobject self, jobject param0, jobject param1);
+void M_mindustry_ui_dialogs_ModsDialog_lambda$showMod$2_mindustry_mod_Mods$LoadedMod(jcontext ctx, jobject self, jobject param0);
+void SM_mindustry_ui_dialogs_ModsDialog_lambda$showMod$1_mindustry_mod_Mods$LoadedMod(jcontext ctx, jobject param0);
+void SM_mindustry_ui_dialogs_ModsDialog_lambda$showMod$0_mindustry_mod_Mods$LoadedMod(jcontext ctx, jobject param0);
+void SM_mindustry_ui_dialogs_ModsDialog_lambda$setup$29_arc_scene_ui_layout_Table(jcontext ctx, jobject param0);
+void M_mindustry_ui_dialogs_ModsDialog_lambda$setup$27(jcontext ctx, jobject self);
+void M_mindustry_ui_dialogs_ModsDialog_lambda$setup$28_Array1_int_arc_struct_Seq(jcontext ctx, jobject self, jobject param0, jobject param1);
+void SM_mindustry_ui_dialogs_ModsDialog_lambda$setup$26_arc_scene_ui_Button(jcontext ctx, jobject param0);
+void M_mindustry_ui_dialogs_ModsDialog_lambda$setup$25_arc_scene_ui_ScrollPane(jcontext ctx, jobject self, jobject param0);
+void SM_mindustry_ui_dialogs_ModsDialog_lambda$setup$24_Array1_arc_scene_ui_layout_Table_arc_func_Cons_arc_scene_ui_layout_Table(jcontext ctx, jobject param0, jobject param1, jobject param2);
+void SM_mindustry_ui_dialogs_ModsDialog_lambda$setup$23_arc_func_Cons_arc_scene_ui_layout_Table(jcontext ctx, jobject param0, jobject param1);
+void M_mindustry_ui_dialogs_ModsDialog_lambda$setup$8_Array1_arc_scene_ui_layout_Table_Array1_boolean_float_float_java_lang_String(jcontext ctx, jobject self, jobject param0, jobject param1, jfloat param2, jfloat param3, jobject param4);
+void M_mindustry_ui_dialogs_ModsDialog_lambda$setup$22_mindustry_mod_Mods$LoadedMod(jcontext ctx, jobject self, jobject param0);
+void M_mindustry_ui_dialogs_ModsDialog_lambda$setup$21_mindustry_mod_Mods$LoadedMod_arc_scene_ui_Button(jcontext ctx, jobject self, jobject param0, jobject param1);
+void M_mindustry_ui_dialogs_ModsDialog_lambda$setup$20_mindustry_mod_Mods$LoadedMod(jcontext ctx, jobject self, jobject param0);
+void M_mindustry_ui_dialogs_ModsDialog_lambda$setup$9_mindustry_mod_Mods$LoadedMod_float_arc_scene_ui_Button(jcontext ctx, jobject self, jobject param0, jfloat param1, jobject param2);
+void M_mindustry_ui_dialogs_ModsDialog_lambda$setup$15_mindustry_mod_Mods$LoadedMod_arc_scene_ui_layout_Table(jcontext ctx, jobject self, jobject param0, jobject param1);
+void SM_mindustry_ui_dialogs_ModsDialog_lambda$setup$19_mindustry_mod_Mods$LoadedMod(jcontext ctx, jobject param0);
+void M_mindustry_ui_dialogs_ModsDialog_lambda$setup$17_mindustry_mod_Mods$LoadedMod(jcontext ctx, jobject self, jobject param0);
+void M_mindustry_ui_dialogs_ModsDialog_lambda$setup$18_mindustry_mod_Mods$LoadedMod(jcontext ctx, jobject self, jobject param0);
+void M_mindustry_ui_dialogs_ModsDialog_lambda$setup$16_mindustry_mod_Mods$LoadedMod(jcontext ctx, jobject self, jobject param0);
+void M_mindustry_ui_dialogs_ModsDialog_lambda$setup$11_float_mindustry_mod_Mods$LoadedMod_arc_scene_ui_layout_Table(jcontext ctx, jobject self, jfloat param0, jobject param1, jobject param2);
+void M_mindustry_ui_dialogs_ModsDialog_lambda$setup$14_mindustry_mod_Mods$LoadedMod_arc_scene_ui_layout_Table(jcontext ctx, jobject self, jobject param0, jobject param1);
+void SM_mindustry_ui_dialogs_ModsDialog_lambda$setup$12_mindustry_mod_Mods$LoadedMod_mindustry_ui_BorderImage(jcontext ctx, jobject param0, jobject param1);
+void SM_mindustry_ui_dialogs_ModsDialog_lambda$setup$13_mindustry_mod_Mods$LoadedMod_mindustry_ui_BorderImage(jcontext ctx, jobject param0, jobject param1);
+void SM_mindustry_ui_dialogs_ModsDialog_lambda$setup$10_java_lang_String_arc_scene_ui_layout_Table(jcontext ctx, jobject param0, jobject param1);
+void M_mindustry_ui_dialogs_ModsDialog_lambda$setup$0_arc_scene_ui_layout_Table(jcontext ctx, jobject self, jobject param0);
+void M_mindustry_ui_dialogs_ModsDialog_lambda$setup$7(jcontext ctx, jobject self);
+void M_mindustry_ui_dialogs_ModsDialog_lambda$setup$1(jcontext ctx, jobject self);
+void M_mindustry_ui_dialogs_ModsDialog_lambda$setup$2_arc_scene_ui_TextButton$TextButtonStyle_mindustry_ui_dialogs_BaseDialog_arc_scene_ui_layout_Table(jcontext ctx, jobject self, jobject param0, jobject param1, jobject param2);
+void M_mindustry_ui_dialogs_ModsDialog_lambda$setup$5_mindustry_ui_dialogs_BaseDialog(jcontext ctx, jobject self, jobject param0);
+void M_mindustry_ui_dialogs_ModsDialog_lambda$setup$6_java_lang_String(jcontext ctx, jobject self, jobject param0);
+void M_mindustry_ui_dialogs_ModsDialog_lambda$setup$3_mindustry_ui_dialogs_BaseDialog(jcontext ctx, jobject self, jobject param0);
+void M_mindustry_ui_dialogs_ModsDialog_lambda$setup$4_Array1_arc_files_Fi(jcontext ctx, jobject self, jobject param0);
+void M_mindustry_ui_dialogs_ModsDialog_lambda$refreshModUpdates$0_arc_struct_ObjectMap_arc_struct_Seq(jcontext ctx, jobject self, jobject param0, jobject param1);
+void M_mindustry_ui_dialogs_ModsDialog_lambda$new$6(jcontext ctx, jobject self);
+void M_mindustry_ui_dialogs_ModsDialog_lambda$new$5_mindustry_game_EventType$ResizeEvent(jcontext ctx, jobject self, jobject param0);
+void M_mindustry_ui_dialogs_ModsDialog_lambda$new$4(jcontext ctx, jobject self);
+void SM_mindustry_ui_dialogs_ModsDialog_lambda$new$3(jcontext ctx);
+void SM_mindustry_ui_dialogs_ModsDialog_lambda$new$2(jcontext ctx);
+void M_mindustry_ui_dialogs_ModsDialog_lambda$new$0(jcontext ctx, jobject self);
+void SM_mindustry_ui_dialogs_ModsDialog_lambda$new$1_mindustry_mod_Mods$LoadedMod(jcontext ctx, jobject param0);
+
+#ifdef __cplusplus
+}
+#endif
+
+#endif
